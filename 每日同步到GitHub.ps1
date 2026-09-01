@@ -30,11 +30,27 @@ if (-not $Date) {
 
 function Invoke-GitText {
   param([Parameter(Mandatory)][string[]]$CommandArgs)
-  $result = & git @gitPrefix @CommandArgs 2>&1
-  if ($LASTEXITCODE -ne 0) {
-    throw "git $($CommandArgs -join ' ') 失败：$($result -join [Environment]::NewLine)"
+  $native = Invoke-Native { & git @gitPrefix @CommandArgs }
+  if ($native.ExitCode -ne 0) {
+    throw "git $($CommandArgs -join ' ') 失败：$($native.Output -join [Environment]::NewLine)"
   }
-  return @($result)
+  return @($native.Output)
+}
+
+function Invoke-Native {
+  param([Parameter(Mandatory)][scriptblock]$Command)
+  $previousPreference = $ErrorActionPreference
+  try {
+    $ErrorActionPreference = 'Continue'
+    $capturedOutput = @(& $Command 2>&1)
+    $capturedExitCode = $LASTEXITCODE
+  } finally {
+    $ErrorActionPreference = $previousPreference
+  }
+  return [pscustomobject]@{
+    ExitCode = $capturedExitCode
+    Output = $capturedOutput
+  }
 }
 
 if (-not (Test-Path -LiteralPath $syncScript)) {
@@ -56,17 +72,20 @@ if ($remoteUrl -notin $acceptedRemotes) {
 }
 
 if ($CheckOnly) {
-  $checkOutput = & node $syncScript $Date '--check' 2>&1
-  if ($LASTEXITCODE -ne 0) {
+  $checkResult = Invoke-Native { & node $syncScript $Date '--check' }
+  $checkOutput = $checkResult.Output
+  if ($checkResult.ExitCode -ne 0) {
     throw "本地课程检查未通过：$($checkOutput -join [Environment]::NewLine)"
   }
 } else {
-  $syncOutput = & node $syncScript $Date 2>&1
-  if ($LASTEXITCODE -ne 0) {
+  $syncResult = Invoke-Native { & node $syncScript $Date }
+  $syncOutput = $syncResult.Output
+  if ($syncResult.ExitCode -ne 0) {
     throw "本地课程同步未通过，不会提交到 GitHub：$($syncOutput -join [Environment]::NewLine)"
   }
-  $checkOutput = & node $syncScript $Date '--check' 2>&1
-  if ($LASTEXITCODE -ne 0) {
+  $checkResult = Invoke-Native { & node $syncScript $Date '--check' }
+  $checkOutput = $checkResult.Output
+  if ($checkResult.ExitCode -ne 0) {
     throw "同步后的复核未通过，不会提交到 GitHub：$($checkOutput -join [Environment]::NewLine)"
   }
 }
@@ -94,27 +113,27 @@ if ($CheckOnly) {
   exit 0
 }
 
-& git @gitPrefix add -- @allowedPaths
-if ($LASTEXITCODE -ne 0) {
+$addResult = Invoke-Native { & git @gitPrefix add -- @allowedPaths }
+if ($addResult.ExitCode -ne 0) {
   throw '无法暂存每日课程文件。'
 }
 
-& git @gitPrefix diff --cached --quiet -- @allowedPaths
-$diffExit = $LASTEXITCODE
+$diffResult = Invoke-Native { & git @gitPrefix diff --cached --quiet -- @allowedPaths }
+$diffExit = $diffResult.ExitCode
 $committed = $false
 if ($diffExit -eq 1) {
-  $commitOutput = & git @gitPrefix commit -m "Daily study update $Date" 2>&1
-  if ($LASTEXITCODE -ne 0) {
-    throw "创建每日提交失败：$($commitOutput -join [Environment]::NewLine)"
+  $commitResult = Invoke-Native { & git @gitPrefix commit -m "Daily study update $Date" }
+  if ($commitResult.ExitCode -ne 0) {
+    throw "创建每日提交失败：$($commitResult.Output -join [Environment]::NewLine)"
   }
   $committed = $true
 } elseif ($diffExit -ne 0) {
   throw '检查每日课程差异失败。'
 }
 
-$pushOutput = & git @gitPrefix push origin main 2>&1
-if ($LASTEXITCODE -ne 0) {
-  throw "GitHub 推送失败；本地提交会保留，稍后可重试：$($pushOutput -join [Environment]::NewLine)"
+$pushResult = Invoke-Native { & git @gitPrefix push origin main }
+if ($pushResult.ExitCode -ne 0) {
+  throw "GitHub 推送失败；本地提交会保留，稍后可重试：$($pushResult.Output -join [Environment]::NewLine)"
 }
 
 $localHead = (Invoke-GitText @('rev-parse', 'HEAD') | Select-Object -First 1).Trim()
