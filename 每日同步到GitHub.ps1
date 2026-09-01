@@ -1,4 +1,4 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param(
   [Parameter(Position = 0)]
   [ValidatePattern('^\d{4}-\d{2}-\d{2}$')]
@@ -134,4 +134,3 @@ if ($localHead -ne $remoteHead) {
   preparedThrough = $checkReport.preparedThrough
   repository = 'https://github.com/htlacs25/CET6-500-Study-Tool'
 } | ConvertTo-Json -Depth 4
-
