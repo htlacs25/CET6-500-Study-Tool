@@ -1,47 +1,9 @@
 {
   "version": "2026-08-30.3",
-  "buildId": "024b4db28e98",
-  "verifiedOn": "2026-09-02",
+  "buildId": "28cc12187ec4",
+  "verifiedOn": "2026-09-04",
   "preparedThrough": "2026-09-10",
   "days": [
-    {
-      "date": "2026-08-30",
-      "title": "过去与现在：动词原形",
-      "reading": "An Early Bus",
-      "listening": "A Changed Time",
-      "readingHash": "87b71c8c7b892534",
-      "listeningHash": "836d886886546f06",
-      "newWords": [
-        "time",
-        "early",
-        "late",
-        "today",
-        "yesterday",
-        "tomorrow",
-        "usually",
-        "often"
-      ],
-      "prepared": true
-    },
-    {
-      "date": "2026-08-31",
-      "title": "主语与修饰部分",
-      "reading": "A Quiet Place",
-      "listening": "Finding the Library",
-      "readingHash": "a8387268c12cd0de",
-      "listeningHash": "991a3b558e3d59eb",
-      "newWords": [
-        "class",
-        "course",
-        "teacher",
-        "student",
-        "library",
-        "quiet",
-        "place",
-        "between"
-      ],
-      "prepared": true
-    },
     {
       "date": "2026-09-01",
       "title": "提问与完整回答",
@@ -125,6 +87,44 @@
         "money",
         "price",
         "save"
+      ],
+      "prepared": true
+    },
+    {
+      "date": "2026-09-06",
+      "title": "合作与独立学习",
+      "reading": "A Small Study Group",
+      "listening": "Meeting after Class",
+      "readingHash": "3017b050d2cc7240",
+      "listeningHash": "08ffb53b32883e5e",
+      "newWords": [
+        "busy",
+        "free",
+        "meet",
+        "friend",
+        "group",
+        "share",
+        "together",
+        "alone"
+      ],
+      "prepared": true
+    },
+    {
+      "date": "2026-09-07",
+      "title": "注意力与词形纠错",
+      "reading": "Putting the Phone Away",
+      "listening": "Twenty Quiet Minutes",
+      "readingHash": "5533c766a4335899",
+      "listeningHash": "6ec9687fd15bc5e4",
+      "newWords": [
+        "phone",
+        "message",
+        "turn",
+        "open",
+        "close",
+        "stop",
+        "continue",
+        "attention"
       ],
       "prepared": true
     }
