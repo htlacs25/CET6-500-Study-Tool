@@ -12,7 +12,24 @@ export const ROADMAP = [
 export function courseDay(k){return Math.floor((Date.parse(k+'T00:00:00Z')-Date.parse(RECOVERY_DATE+'T00:00:00Z'))/86400000)}
 export function dateGap(a,b){return Math.round((Date.parse(a+'T00:00:00Z')-Date.parse(b+'T00:00:00Z'))/86400000)}
 export function phaseFor(k){return ROADMAP.find(x=>k>=x.from&&k<=x.to)||ROADMAP[k<RECOVERY_DATE?0:ROADMAP.length-1]}
-export function blankProgress(){return {completed:[],wordCorrect:0,wordTotal:0,listeningCorrect:0,listeningTotal:0,listeningChoiceCorrect:0,listeningChoiceTotal:0,quizCorrect:0,quizTotal:0,grammarCorrect:0,grammarTotal:0,readingCorrect:0,readingTotal:0,sentenceCorrect:0,sentenceTotal:0,translationCorrect:0,translationTotal:0,wordErrors:[],listeningErrors:[],quizErrors:[],notes:'',attempts:{},errorDetails:[],draft:null,lessonSnapshot:null}}
+function hashText(value){
+  let hash=2166136261;
+  for(const char of String(value)){hash^=char.charCodeAt(0);hash=Math.imul(hash,16777619)}
+  return (hash>>>0).toString(16).padStart(8,'0');
+}
+export function lessonDate(lesson={}){
+  return lesson.date||String(lesson.id||'').match(/\d{4}-\d{2}-\d{2}$/)?.[0]||'';
+}
+export function lessonFingerprint(lesson={}){
+  const sourceWords=lesson.sourceWords||lesson.nw||[];
+  const core={
+    date:lessonDate(lesson),title:lesson.title||'',grammarTip:lesson.grammarTip||'',
+    sourceWords:sourceWords.map(w=>typeof w==='string'?{word:w}:w),grammar:lesson.grammar||[],
+    reading:lesson.reading||null,listening:lesson.listening||null,sent:lesson.sent||[],trans:lesson.trans||[]
+  };
+  return hashText(JSON.stringify(core));
+}
+export function blankProgress(){return {completed:[],wordCorrect:0,wordTotal:0,listeningCorrect:0,listeningTotal:0,listeningChoiceCorrect:0,listeningChoiceTotal:0,quizCorrect:0,quizTotal:0,grammarCorrect:0,grammarTotal:0,readingCorrect:0,readingTotal:0,sentenceCorrect:0,sentenceTotal:0,translationCorrect:0,translationTotal:0,wordErrors:[],listeningErrors:[],quizErrors:[],notes:'',attempts:{},errorDetails:[],draft:null,lessonSnapshot:null,snapshotArchive:[]}}
 export function normEnglish(s){return String(s||'').toLowerCase().replace(/[’‘]/g,"'").replace(/[^a-z0-9' ]/g,' ').replace(/\s+/g,' ').trim()}
 export function mergeLegacyStores(read){
   const out={};
@@ -79,37 +96,54 @@ function mixOptions(questions,seed){
 }
 export function buildRecoveryLesson(data,recovery,date,history={}){
   const di=courseDay(date);if(di<0)return null;
-  const index=di%recovery.lessons.length,dated=recovery.datedLessons?.[date],seed=dated||recovery.lessons[index],gate=readiness(history,date);
+  const index=di%recovery.lessons.length,dated=recovery.datedLessons?.[date],gate=readiness(history,date);
+  if(di>=recovery.lessons.length&&!dated){
+    const phase=phaseFor(date),pending={id:'pending:'+date,date,unprepared:true,freshMaterial:false,recovery:true,foundation:true,weekly:(di+1)%7===0,index,di:Math.floor((Date.parse(date)-Date.parse('2026-08-22'))/864e5),recoveryDay:di+1,title:'课程尚未生成或同步',phase,gate,trainingName:'等待课程更新',grammarTip:'为防止把旧题冒充新题，本日练习暂不开放。',nw:[],rev:[],quizWords:[],all:[],priorityErrors:[],reading:{title:'Pending lesson',titleZh:'阅读材料待生成',passage:'',passageZh:'',questions:[],level:'待更新',topic:'课程完整性保护'},listening:{title:'Pending lesson',titleZh:'听力材料待生成',passage:'',passageZh:'',dictation:[],dictationZh:[],questions:[],level:'待更新',tip:'同步完成后再开始。'},sent:[],trans:[],grammar:[],taskCount:0,tasks:[],wordReviewRule:'课程同步后再安排固定复习量。',sourceNote:'系统已阻止循环旧题；已有成绩、错题和草稿不会删除。'};
+    const contentSignature=lessonFingerprint(pending);
+    return {...pending,contentSignature,contentRevision:'pending-'+contentSignature};
+  }
+  const seed=dated||recovery.lessons[index];
   const foundation=di<14||!gate.advance,weekly=(di+1)%7===0;
   const pool=[...recovery.words,...data.WORDS].filter((w,i,a)=>a.findIndex(x=>x.word===w.word)===i);
   const find=n=>pool.find(w=>w.word.toLowerCase()===String(n).toLowerCase());
   const past=Object.entries(history).filter(([k])=>k<date).sort(([a],[b])=>b.localeCompare(a));
-  const latestWordResult=new Map();
-  for(const [,p] of past){
-    for(const a of Object.values(p.attempts||{}))if(a.group==='word'&&a.targetWord&&!latestWordResult.has(a.targetWord))latestWordResult.set(a.targetWord,a.correct);
-    for(const n of p.wordErrors||[])if(!latestWordResult.has(n))latestWordResult.set(n,false);
+  const latestWordResult=new Map(),latestWordDate=new Map();
+  for(const [k,p] of past){
+    const packDate=k;
+    const runs=[p,...(Array.isArray(p.snapshotArchive)?[...p.snapshotArchive].reverse().map(x=>x.progress).filter(Boolean):[])];
+    for(const run of runs){
+      for(const a of Object.values(run.attempts||{}))if(a.group==='word'&&a.targetWord&&!latestWordResult.has(a.targetWord)){
+        latestWordResult.set(a.targetWord,a.correct);latestWordDate.set(a.targetWord,packDate);
+      }
+      for(const n of run.wordErrors||[])if(!latestWordResult.has(n)){
+        latestWordResult.set(n,false);latestWordDate.set(n,packDate);
+      }
+    }
   }
-  const unresolved=n=>latestWordResult.get(n)!==true;
-  const dueNames=[],dueWords=[],olderNames=[];
+  const reviewGaps=[1,3,7,14],dueWords=[];
   for(const [k,p] of past){
     const age=dateGap(date,k);
-    if([1,3,7,14].includes(age)){
-      dueNames.push(...(p.wordErrors||[]).filter(unresolved));
+    if(reviewGaps.includes(age)){
       dueWords.push(...(p.lessonSnapshot?.nw||[]).map(w=>w.word));
-    }else if(age>0)olderNames.push(...(p.wordErrors||[]).filter(unresolved));
+    }
   }
   // Reviews not yet attempted still follow the prepared D1/D3/D7/D14 packs.
-  for(const gap of [1,3,7,14])if(di>=gap)dueWords.push(...recovery.lessons[(di-gap)%14].words.map(w=>w.word));
+  for(const gap of reviewGaps)if(di>=gap)dueWords.push(...recovery.lessons[(di-gap)%14].words.map(w=>w.word));
   const nw=weekly?[]:dated?seed.words.slice(0,foundation?8:12):foundation?seed.words.slice(0,8):Array.from({length:12},(_,i)=>data.WORDS[((di-14)*12+i+data.WORDS.length*3)%data.WORDS.length]);
   const priorPacks=recovery.lessons.slice(0,Math.min(index,14)).flatMap(x=>x.words).map(w=>w.word).reverse();
   const baseline=['improve','think','decide','enough','remember','read','write','understand','forget','begin','finish','time','help','question','answer','friend','practice','review'];
-  const pendingErrors=[...new Set([...dueNames,...olderNames])].filter(n=>find(n)&&!nw.some(w=>w.word===n));
-  const dueSet=new Set(dueNames),overdue=pendingErrors.filter(n=>!dueSet.has(n));
-  const offset=overdue.length?(di*4)%overdue.length:0;
-  const rotatingErrors=[...pendingErrors.filter(n=>dueSet.has(n)),...overdue.slice(offset),...overdue.slice(0,offset)];
+  const pendingErrors=[...latestWordResult.entries()].filter(([,correct])=>correct!==true).map(([n])=>n).filter(n=>find(n)&&!nw.some(w=>w.word===n));
+  const scheduledErrors=pendingErrors.filter(n=>{
+    const age=dateGap(date,latestWordDate.get(n));
+    return reviewGaps.includes(age)||(age>14&&age%14===0);
+  });
+  // A word is prioritised only when its spaced-review date arrives. Rotate the
+  // due group by calendar day so one persistent error cannot stay first daily.
+  const errorOffset=scheduledErrors.length?di%scheduledErrors.length:0;
+  const rotatingErrors=[...scheduledErrors.slice(errorOffset),...scheduledErrors.slice(0,errorOffset)];
   const priorityErrors=rotatingErrors.slice(0,4),errorSet=new Set(pendingErrors);
   const ordinaryNames=[...dueWords,...priorPacks,...baseline,...recovery.words.map(w=>w.word)].filter(n=>!errorSet.has(n));
-  const candidateNames=[...priorityErrors,...ordinaryNames,...rotatingErrors.slice(4)];
+  const candidateNames=[...priorityErrors,...ordinaryNames];
   const rev=candidateNames.map(find).filter(Boolean).filter((w,i,a)=>!nw.some(n=>n.word===w.word)&&a.findIndex(n=>n.word===w.word)===i).slice(0,12);
   const quizNew=[...nw.filter(w=>['improve','think'].includes(w.word)),...nw.filter(w=>!['improve','think'].includes(w.word))];
   const quizWords=nw.length?[...rev.slice(0,3),...quizNew.slice(0,3),...rev.slice(3,6),...quizNew.slice(3,6)]:rev.slice(0,12);
@@ -129,18 +163,23 @@ export function buildRecoveryLesson(data,recovery,date,history={}){
   const minutes=weekend?[40,35,25,40,30,10]:[30,25,20,25,10,10];
   const labels=[weekly?'12词周测与错词复习':nw.length+'个新/激活词＋12个复习词','短听力理解＋'+listening.dictation.length+'句听写','1个语法点＋6题','阅读1篇＋'+reading.questions.length+'题','句子主干'+sent.length+'句＋表达2句','错题复盘＋共同记录难点'];
   const targets=['words','listening','grammar','reading','sentences','review'],tabs=['words','listening','practice','practice','practice','records'];
-  return {id:'recovery-v1:'+date,date,contentRevision:'2026-08-30-sync',freshMaterial:di<recovery.lessons.length||Boolean(dated),recovery:true,foundation,weekly,index,di:Math.floor((Date.parse(date)-Date.parse('2026-08-22'))/864e5),recoveryDay:di+1,title:seed.title,phase,gate,trainingName:foundation?'基础恢复':advanced?'六级专项模拟':'基础衔接',grammarTip:seed.grammarTip,nw,rev,quizWords,all:[...rev,...nw],priorityErrors,reading,listening,sent,trans,grammar,taskCount:6,tasks:labels.map((label,i)=>({id:targets[i],tab:tabs[i],label,minutes:minutes[i]})),wordReviewRule:'12个复习位：最多4个优先错词＋其余间隔旧词。错词轮换，参考D1/D3/D7/D14；未轮到的保留，不天天重复整组，不加量。',sourceNote:'本地题库为原创模拟；听力为浏览器合成朗读，不冒充历年真题录音。'};
+  const lesson={id:'recovery-v1:'+date,date,freshMaterial:di<recovery.lessons.length||Boolean(dated),recovery:true,foundation,weekly,index,di:Math.floor((Date.parse(date)-Date.parse('2026-08-22'))/864e5),recoveryDay:di+1,title:seed.title,phase,gate,trainingName:foundation?'基础恢复':advanced?'六级专项模拟':'基础衔接',grammarTip:seed.grammarTip,sourceWords:seed.words||[],nw,rev,quizWords,all:[...rev,...nw],priorityErrors,reading,listening,sent,trans,grammar,taskCount:6,tasks:labels.map((label,i)=>({id:targets[i],tab:tabs[i],label,minutes:minutes[i]})),wordReviewRule:'12个复习位：最多4个到期错词＋其余间隔旧词。错词按D1/D3/D7/D14到期复习；同日多个错词按日期轮换顺序，不额外加量。',sourceNote:'本地题库为原创模拟；听力为浏览器合成朗读，不冒充历年真题录音。'};
+  const contentSignature=lessonFingerprint(lesson);
+  return {...lesson,contentSignature,contentRevision:'course-'+contentSignature};
 }
 export function hasAnswerWork(p={}){
-  if(Object.keys(p.attempts||{}).length||['wordTotal','listeningTotal','listeningChoiceTotal','quizTotal','sentenceTotal','translationTotal'].some(k=>p[k]>0))return true;
+  if((p.completed||[]).length||Object.keys(p.attempts||{}).length||['wordTotal','listeningTotal','listeningChoiceTotal','quizTotal','sentenceTotal','translationTotal'].some(k=>p[k]>0))return true;
   const d=p.draft||{};
   return Boolean(d.ws?.input||d.ws?.meaningInput||d.ws?.i||d.ls?.input||d.ls?.i||Object.keys(d.ls?.answers||{}).length||Object.keys(d.ps?.answers||{}).length||Object.values(d.ps?.sent||{}).some(x=>x.main||x.trans)||Object.values(d.ps?.trans||{}).some(x=>x.input));
 }
 export function chooseDailyLesson(date,p,fresh){
   const old=p?.lessonSnapshot;
   if(!old||!hasAnswerWork(p))return fresh;
-  const oldDate=old.date||String(old.id||'').match(/\d{4}-\d{2}-\d{2}$/)?.[0];
-  return oldDate===date?old:{...old,cacheDateMismatch:true}; // Never attach existing answers to a different question set.
+  const oldDate=lessonDate(old);
+  if(oldDate!==date)return {...fresh,cacheDateMismatch:true,staleSnapshotDate:oldDate||'未知日期'};
+  const oldSignature=old.contentSignature||lessonFingerprint(old),freshSignature=fresh.contentSignature||lessonFingerprint(fresh);
+  if(oldSignature!==freshSignature)return {...fresh,cacheContentMismatch:true,staleContentSignature:oldSignature};
+  return old; // Only reuse answers when the snapshot belongs to this date and this exact question set.
 }
 export function difficultiesFor(p,diagnostic){
   const a=[],tags=new Set((p.errorDetails||[]).map(x=>x.tag));

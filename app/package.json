@@ -10,7 +10,8 @@
     "build": "vinext build",
     "standalone": "node scripts/generate-standalone.mjs",
     "start": "vinext start",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
+    "test": "node --test scripts/test-recovery.mjs",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern public/study-release.js"
   },
   "dependencies": {
     "next": "16.2.6",
