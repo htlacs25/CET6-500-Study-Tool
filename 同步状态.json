@@ -1,57 +1,9 @@
 {
   "version": "2026-08-30.3",
-  "buildId": "28cc12187ec4",
-  "verifiedOn": "2026-09-04",
+  "buildId": "42986e55061e",
+  "verifiedOn": "2026-09-07",
   "preparedThrough": "2026-09-10",
   "days": [
-    {
-      "date": "2026-09-01",
-      "title": "提问与完整回答",
-      "reading": "Asking for Help",
-      "listening": "One Question",
-      "readingHash": "1f11301581d3dbbd",
-      "listeningHash": "abb6ff9b5f4d6136",
-      "newWords": [
-        "need",
-        "want",
-        "help",
-        "ask",
-        "answer",
-        "question",
-        "problem",
-        "try"
-      ],
-      "prepared": true
-    },
-    {
-      "date": "2026-09-02",
-      "title": "形容词前的be动词",
-      "reading": "Rest and Study",
-      "listening": "A Short Break",
-      "readingHash": "58b1c0b8cf3f295a",
-      "listeningHash": "a729b2b81fe74f04",
-      "newWords": [
-        "work",
-        "rest",
-        "sleep",
-        "tired",
-        "healthy",
-        "exercise",
-        "enough",
-        "energy"
-      ],
-      "prepared": true
-    },
-    {
-      "date": "2026-09-03",
-      "title": "第一周小测：回忆与迁移",
-      "reading": "A Week of Practice",
-      "listening": "A New Meeting Place",
-      "readingHash": "990b2ecc0a962954",
-      "listeningHash": "9a25d5863badaac1",
-      "newWords": [],
-      "prepared": true
-    },
     {
       "date": "2026-09-04",
       "title": "计划与正在进行的动作",
@@ -126,6 +78,54 @@
         "continue",
         "attention"
       ],
+      "prepared": true
+    },
+    {
+      "date": "2026-09-08",
+      "title": "旅行信息与时间顺序",
+      "reading": "A Trip to the Village",
+      "listening": "At the Station",
+      "readingHash": "15d664d0938b6bac",
+      "listeningHash": "979c5a8fe8165582",
+      "newWords": [
+        "city",
+        "village",
+        "travel",
+        "arrive",
+        "leave",
+        "near",
+        "far",
+        "station"
+      ],
+      "prepared": true
+    },
+    {
+      "date": "2026-09-09",
+      "title": "习惯、原因与结果",
+      "reading": "Checking Progress",
+      "listening": "Reviewing Old Words",
+      "readingHash": "3300a42a20341ef0",
+      "listeningHash": "665187f218583e5c",
+      "newWords": [
+        "habit",
+        "practice",
+        "review",
+        "progress",
+        "goal",
+        "reason",
+        "result",
+        "example"
+      ],
+      "prepared": true
+    },
+    {
+      "date": "2026-09-10",
+      "title": "第二周小测：准备衔接",
+      "reading": "Choosing the Next Step",
+      "listening": "A Review Meeting",
+      "readingHash": "310d40177137cecb",
+      "listeningHash": "fcf2506759e86ec9",
+      "newWords": [],
       "prepared": true
     }
   ],
