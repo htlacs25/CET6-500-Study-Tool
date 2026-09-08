@@ -1,31 +1,9 @@
 {
   "version": "2026-09-07.2",
-  "buildId": "f748fd496149",
-  "verifiedOn": "2026-09-07",
+  "buildId": "9deb2054780f",
+  "verifiedOn": "2026-09-08",
   "preparedThrough": "2026-09-30",
   "days": [
-    {
-      "date": "2026-09-04",
-      "lessonDate": "2026-09-04",
-      "lessonId": "recovery-v1:2026-09-04",
-      "title": "计划与正在进行的动作",
-      "reading": "Making a Useful Plan",
-      "listening": "Checking a Plan",
-      "readingHash": "fceaae439de84c6b",
-      "listeningHash": "9de8b194f83364f2",
-      "courseHash": "e92e8cc3cf0a6de3",
-      "newWords": [
-        "plan",
-        "choose",
-        "decide",
-        "change",
-        "follow",
-        "check",
-        "ready",
-        "important"
-      ],
-      "prepared": true
-    },
     {
       "date": "2026-09-05",
       "lessonDate": "2026-09-05",
@@ -147,6 +125,28 @@
       "listeningHash": "fcf2506759e86ec9",
       "courseHash": "ddd9ae4d842ead64",
       "newWords": [],
+      "prepared": true
+    },
+    {
+      "date": "2026-09-11",
+      "lessonDate": "2026-09-11",
+      "lessonId": "recovery-v1:2026-09-11",
+      "title": "校园导览与方位表达",
+      "reading": "Finding the Right Classroom",
+      "listening": "A Change of Classroom",
+      "readingHash": "9aea7216ade38052",
+      "listeningHash": "f9402572d7521cf1",
+      "courseHash": "463ce6de59a74b3a",
+      "newWords": [
+        "campus",
+        "attend",
+        "locate",
+        "building",
+        "entrance",
+        "map",
+        "direction",
+        "available"
+      ],
       "prepared": true
     }
   ],
