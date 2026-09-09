@@ -1,31 +1,9 @@
 {
   "version": "2026-09-07.2",
-  "buildId": "9deb2054780f",
-  "verifiedOn": "2026-09-08",
+  "buildId": "d738236b5f55",
+  "verifiedOn": "2026-09-09",
   "preparedThrough": "2026-09-30",
   "days": [
-    {
-      "date": "2026-09-05",
-      "lessonDate": "2026-09-05",
-      "lessonId": "recovery-v1:2026-09-05",
-      "title": "购物语境与时态",
-      "reading": "Choosing a Dictionary",
-      "listening": "At the Bookshop",
-      "readingHash": "ebd1a8e22ea0e798",
-      "listeningHash": "baf8ed375a8a0f02",
-      "courseHash": "ab7f90b5513c634f",
-      "newWords": [
-        "buy",
-        "pay",
-        "cost",
-        "cheap",
-        "expensive",
-        "money",
-        "price",
-        "save"
-      ],
-      "prepared": true
-    },
     {
       "date": "2026-09-06",
       "lessonDate": "2026-09-06",
@@ -146,6 +124,28 @@
         "map",
         "direction",
         "available"
+      ],
+      "prepared": true
+    },
+    {
+      "date": "2026-09-12",
+      "lessonDate": "2026-09-12",
+      "lessonId": "recovery-v1:2026-09-12",
+      "title": "时间管理与任务优先级",
+      "reading": "A Realistic Weekly Schedule",
+      "listening": "Planning a Group Report",
+      "readingHash": "c81c8932319bfe64",
+      "listeningHash": "29583c7afbd4584d",
+      "courseHash": "4181c71befdfc0a7",
+      "newWords": [
+        "schedule",
+        "organize",
+        "task",
+        "deadline",
+        "complete",
+        "priority",
+        "break",
+        "efficient"
       ],
       "prepared": true
     }
