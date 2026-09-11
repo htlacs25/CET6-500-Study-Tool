@@ -1,53 +1,9 @@
 {
   "version": "2026-09-07.2",
-  "buildId": "d738236b5f55",
-  "verifiedOn": "2026-09-09",
+  "buildId": "44ac60c4ebcf",
+  "verifiedOn": "2026-09-11",
   "preparedThrough": "2026-09-30",
   "days": [
-    {
-      "date": "2026-09-06",
-      "lessonDate": "2026-09-06",
-      "lessonId": "recovery-v1:2026-09-06",
-      "title": "合作与独立学习",
-      "reading": "A Small Study Group",
-      "listening": "Meeting after Class",
-      "readingHash": "3017b050d2cc7240",
-      "listeningHash": "08ffb53b32883e5e",
-      "courseHash": "8ee0825a6be79f30",
-      "newWords": [
-        "busy",
-        "free",
-        "meet",
-        "friend",
-        "group",
-        "share",
-        "together",
-        "alone"
-      ],
-      "prepared": true
-    },
-    {
-      "date": "2026-09-07",
-      "lessonDate": "2026-09-07",
-      "lessonId": "recovery-v1:2026-09-07",
-      "title": "注意力与词形纠错",
-      "reading": "Putting the Phone Away",
-      "listening": "Twenty Quiet Minutes",
-      "readingHash": "5533c766a4335899",
-      "listeningHash": "6ec9687fd15bc5e4",
-      "courseHash": "a4eb701e9d7f26bb",
-      "newWords": [
-        "phone",
-        "message",
-        "turn",
-        "open",
-        "close",
-        "stop",
-        "continue",
-        "attention"
-      ],
-      "prepared": true
-    },
     {
       "date": "2026-09-08",
       "lessonDate": "2026-09-08",
@@ -146,6 +102,50 @@
         "priority",
         "break",
         "efficient"
+      ],
+      "prepared": true
+    },
+    {
+      "date": "2026-09-13",
+      "lessonDate": "2026-09-13",
+      "lessonId": "recovery-v1:2026-09-13",
+      "title": "图书馆检索与可靠信息",
+      "reading": "More Than the First Search Result",
+      "listening": "Asking a Librarian",
+      "readingHash": "fc34fddd9bb3ad91",
+      "listeningHash": "89f976dbdd707343",
+      "courseHash": "c6a9934555fb52b8",
+      "newWords": [
+        "resource",
+        "borrow",
+        "return",
+        "search",
+        "source",
+        "reliable",
+        "information",
+        "note"
+      ],
+      "prepared": true
+    },
+    {
+      "date": "2026-09-14",
+      "lessonDate": "2026-09-14",
+      "lessonId": "recovery-v1:2026-09-14",
+      "title": "睡眠习惯与学习状态",
+      "reading": "Changing One Evening Habit",
+      "listening": "Advice Before an Early Exam",
+      "readingHash": "727fc019f7664cc5",
+      "listeningHash": "15954cd00a14745b",
+      "courseHash": "b616eca91d7e44d8",
+      "newWords": [
+        "regular",
+        "balance",
+        "reduce",
+        "stress",
+        "concentrate",
+        "benefit",
+        "routine",
+        "quality"
       ],
       "prepared": true
     }
