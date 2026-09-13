@@ -1,17 +1,67 @@
 // Pure curriculum and scoring logic, shared with offline HTML and node tests.
 export const RECOVERY_STORAGE_KEY = 'cet6-500-recovery-v1';
+export const USER_VOCAB_STORAGE_KEY = 'cet6-500-user-vocab-v1';
+export const MAX_USER_VOCABULARY = 1200;
 export const OLD_PROGRESS_KEYS = ['cet6-500-offline-v2','cet6-500-study-progress-v2','cet6-500-study-progress-v1'];
 export const RECOVERY_DATE = '2026-08-28';
 export const ROADMAP = [
   {from:'2026-08-28',to:'2026-09-10',name:'两周基础恢复',goal:'常用词、主句谓语、be动词、短听力'},
-  {from:'2026-09-11',to:'2026-09-30',name:'基础衔接',goal:'逐步加入四级常见语境和稍长材料'},
-  {from:'2026-10-01',to:'2026-10-31',name:'六级专项',goal:'听读译写专项，逐步限时'},
-  {from:'2026-11-01',to:'2026-11-30',name:'真题与限时训练',goal:'核验真题来源，分套练习并复盘'},
+  {from:'2026-09-11',to:'2026-09-30',name:'四级550衔接',goal:'扩大四级核心词汇，增加泛读、影子跟读和复述'},
+  {from:'2026-10-01',to:'2026-10-31',name:'四级专项',goal:'按四级听读译写题型训练并逐步限时'},
+  {from:'2026-11-01',to:'2026-11-30',name:'四级真题与限时训练',goal:'核验真题来源，分套练习并复盘'},
   {from:'2026-12-01',to:'2026-12-31',name:'模考与查漏补缺',goal:'根据实际考试日期安排整套练习与考前节奏'}
 ];
 export function courseDay(k){return Math.floor((Date.parse(k+'T00:00:00Z')-Date.parse(RECOVERY_DATE+'T00:00:00Z'))/86400000)}
 export function dateGap(a,b){return Math.round((Date.parse(a+'T00:00:00Z')-Date.parse(b+'T00:00:00Z'))/86400000)}
 export function phaseFor(k){return ROADMAP.find(x=>k>=x.from&&k<=x.to)||ROADMAP[k<RECOVERY_DATE?0:ROADMAP.length-1]}
+const validDate=k=>/^\d{4}-\d{2}-\d{2}$/.test(String(k))&&!Number.isNaN(Date.parse(k+'T00:00:00Z'));
+const addDate=(k,n)=>new Date(Date.parse(k+'T00:00:00Z')+n*86400000).toISOString().slice(0,10);
+const cleanWord=value=>(String(value||'').toLowerCase().replace(/[’‘]/g,"'").match(/[a-z]+(?:[-'][a-z]+)*/)||[''])[0];
+export function splitListeningPassage(text){
+  return (String(text||'').match(/[^.!?]+(?:[.!?]+|$)/g)||[]).map(x=>x.trim()).filter(Boolean);
+}
+export function fullDictationItems(listening={}){
+  const authored=Array.isArray(listening.fullDictation)?listening.fullDictation.filter(x=>x&&String(x.text||'').trim()):[];
+  if(authored.length)return authored.map(x=>({text:String(x.text).trim(),zh:String(x.zh||'').trim()}));
+  const old=Array.isArray(listening.dictation)?listening.dictation:[],oldZh=Array.isArray(listening.dictationZh)?listening.dictationZh:[];
+  return splitListeningPassage(listening.passage).map(text=>{
+    const i=old.findIndex(x=>normEnglish(x)===normEnglish(text));
+    return {text,zh:i>=0?String(oldZh[i]||''):''};
+  });
+}
+export function blankUserVocabulary(){return {version:1,items:{}}}
+export function normalizeUserVocabulary(value={}){
+  const source=value&&typeof value==='object'&&!Array.isArray(value)?value:{},normalized=new Map();
+  for(const raw of Object.values(source.items&&typeof source.items==='object'&&!Array.isArray(source.items)?source.items:{})){
+    const word=cleanWord(raw?.word),meaning=String(raw?.meaning||'').trim().slice(0,240);
+    if(!word||!meaning)continue;
+    normalized.set(word,{word,surface:String(raw.surface||word).slice(0,80),phonetic:String(raw.phonetic||'').slice(0,80),meaning,phrase:String(raw.phrase||'').slice(0,240),active:raw.active!==false,stage:Math.max(0,Math.min(4,Number.isInteger(raw.stage)?raw.stage:0)),dueDate:validDate(raw.dueDate)?raw.dueDate:'',addedAt:String(raw.addedAt||'').slice(0,40),lastReviewed:String(raw.lastReviewed||'').slice(0,10),lastResult:typeof raw.lastResult==='boolean'?raw.lastResult:null,sourceRefs:[...new Set((Array.isArray(raw.sourceRefs)?raw.sourceRefs:[]).map(x=>String(x).slice(0,160)))].slice(-20)});
+  }
+  const keep=[...normalized.values()].sort((a,b)=>Number(b.active)-Number(a.active)||(b.addedAt||'').localeCompare(a.addedAt||'')||a.word.localeCompare(b.word)).slice(0,MAX_USER_VOCABULARY),items=Object.fromEntries(keep.map(x=>[x.word,x]));
+  return {version:1,items};
+}
+export function addUserVocabulary(previous,entry,date,source='article'){
+  const vocab=normalizeUserVocabulary(previous),word=cleanWord(entry?.word||entry?.base||entry?.surface),meaning=String(entry?.meaning||'').trim().slice(0,240);
+  if(!word||!meaning||!validDate(date))return vocab;
+  const old=Object.hasOwn(vocab.items,word)?vocab.items[word]:null,ref=`${date}|${String(source).slice(0,40)}|${String(entry.surface||word).slice(0,80)}`;
+  vocab.items[word]={word,surface:String(entry.surface||old?.surface||word).slice(0,80),phonetic:String(entry.phonetic||old?.phonetic||'').slice(0,80),meaning,phrase:String(entry.phrase||old?.phrase||'').slice(0,240),active:true,stage:old?.active?old.stage:0,dueDate:old?.active&&validDate(old.dueDate)?old.dueDate:addDate(date,1),addedAt:old?.active&&old.addedAt?old.addedAt:new Date().toISOString(),lastReviewed:old?.lastReviewed||'',lastResult:typeof old?.lastResult==='boolean'?old.lastResult:null,sourceRefs:[...new Set([...(old?.sourceRefs||[]),ref])].slice(-20)};
+  return normalizeUserVocabulary(vocab);
+}
+export function removeUserVocabulary(previous,word){
+  const vocab=normalizeUserVocabulary(previous),key=cleanWord(word);if(!Object.hasOwn(vocab.items,key))return vocab;
+  vocab.items[key]={...vocab.items[key],active:false};return vocab;
+}
+export function dueUserVocabulary(previous,date,limit=4){
+  if(!validDate(date))return[];
+  return Object.values(normalizeUserVocabulary(previous).items).filter(x=>x.active&&validDate(x.dueDate)&&x.dueDate<=date).sort((a,b)=>a.dueDate.localeCompare(b.dueDate)||a.addedAt.localeCompare(b.addedAt)||a.word.localeCompare(b.word)).slice(0,Math.max(0,limit));
+}
+export function reviewUserVocabulary(previous,word,date,correct){
+  const vocab=normalizeUserVocabulary(previous),key=cleanWord(word),old=Object.hasOwn(vocab.items,key)?vocab.items[key]:null;
+  if(!old||!old.active||!validDate(date)||!validDate(old.dueDate)||old.dueDate>date||old.lastReviewed===date)return vocab;
+  const increments=[2,4,7,14,14],stage=correct?Math.min(4,old.stage+1):old.stage;
+  vocab.items[key]={...old,stage,dueDate:addDate(date,correct?increments[old.stage]||14:1),lastReviewed:date,lastResult:Boolean(correct)};
+  return vocab;
+}
 function hashText(value){
   let hash=2166136261;
   for(const char of String(value)){hash^=char.charCodeAt(0);hash=Math.imul(hash,16777619)}
@@ -25,11 +75,11 @@ export function lessonFingerprint(lesson={}){
   const core={
     date:lessonDate(lesson),title:lesson.title||'',grammarTip:lesson.grammarTip||'',
     sourceWords:sourceWords.map(w=>typeof w==='string'?{word:w}:w),grammar:lesson.grammar||[],
-    reading:lesson.reading||null,listening:lesson.listening||null,sent:lesson.sent||[],trans:lesson.trans||[]
+    reading:lesson.reading||null,listening:lesson.listening||null,extensive:lesson.extensive||null,sent:lesson.sent||[],trans:lesson.trans||[]
   };
   return hashText(JSON.stringify(core));
 }
-export function blankProgress(){return {completed:[],wordCorrect:0,wordTotal:0,listeningCorrect:0,listeningTotal:0,listeningChoiceCorrect:0,listeningChoiceTotal:0,quizCorrect:0,quizTotal:0,grammarCorrect:0,grammarTotal:0,readingCorrect:0,readingTotal:0,sentenceCorrect:0,sentenceTotal:0,translationCorrect:0,translationTotal:0,wordErrors:[],listeningErrors:[],quizErrors:[],notes:'',attempts:{},errorDetails:[],draft:null,lessonSnapshot:null,snapshotArchive:[]}}
+export function blankProgress(){return {completed:[],wordCorrect:0,wordTotal:0,listeningCorrect:0,listeningTotal:0,listeningChoiceCorrect:0,listeningChoiceTotal:0,quizCorrect:0,quizTotal:0,grammarCorrect:0,grammarTotal:0,readingCorrect:0,readingTotal:0,extensiveCorrect:0,extensiveTotal:0,sentenceCorrect:0,sentenceTotal:0,translationCorrect:0,translationTotal:0,wordErrors:[],listeningErrors:[],quizErrors:[],notes:'',attempts:{},errorDetails:[],draft:null,lessonSnapshot:null,snapshotArchive:[]}}
 export function normEnglish(s){return String(s||'').toLowerCase().replace(/[’‘]/g,"'").replace(/[^a-z0-9' ]/g,' ').replace(/\s+/g,' ').trim()}
 export function mergeLegacyStores(read){
   const out={};
@@ -41,7 +91,7 @@ export function mergeLegacyStores(read){
   }
   return out;
 }
-const scoreFields={word:['wordCorrect','wordTotal'],dictation:['listeningCorrect','listeningTotal'],listeningChoice:['listeningChoiceCorrect','listeningChoiceTotal'],grammar:['grammarCorrect','grammarTotal'],reading:['readingCorrect','readingTotal'],vocab:['vocabCorrect','vocabTotal'],sentence:['sentenceCorrect','sentenceTotal'],translation:['translationCorrect','translationTotal']};
+const scoreFields={word:['wordCorrect','wordTotal'],dictation:['listeningCorrect','listeningTotal'],listeningChoice:['listeningChoiceCorrect','listeningChoiceTotal'],grammar:['grammarCorrect','grammarTotal'],reading:['readingCorrect','readingTotal'],extensive:['extensiveCorrect','extensiveTotal'],vocab:['vocabCorrect','vocabTotal'],sentence:['sentenceCorrect','sentenceTotal'],translation:['translationCorrect','translationTotal']};
 export function recordFirstAttempt(previous,group,id,correct,detail={}){
   if(!scoreFields[group])throw new Error('Unknown group: '+group);
   const p={...blankProgress(),...previous},key=group+':'+id;
@@ -77,7 +127,7 @@ export function assessTranslation(x,input){
 }
 export function readiness(history,date){
   const days=Object.entries(history).filter(([k,p])=>k<date&&dateGap(date,k)<=7&&p.lessonSnapshot?.recovery);
-  const complete=days.filter(([,p])=>p.wordTotal>=12&&p.listeningChoiceTotal>=2&&p.grammarTotal>=6&&p.readingTotal>=3);
+  const complete=days.filter(([,p])=>p.wordTotal>=Math.max(1,p.lessonSnapshot?.quizWords?.length||12)&&p.listeningChoiceTotal>=2&&p.grammarTotal>=6&&p.readingTotal>=3);
   const rates={};
   for(const group of ['word','listeningChoice','grammar','reading']){
     const [c,t]=scoreFields[group];const total=days.reduce((n,[,p])=>n+(p[t]||0),0),correct=days.reduce((n,[,p])=>n+(p[c]||0),0);
@@ -94,17 +144,18 @@ function mixOptions(questions,seed){
     return {...q,options:order.map(i=>q.options[i]),optionsZh:q.optionsZh?order.map(i=>q.optionsZh[i]):undefined,answer:order.indexOf(q.answer)};
   });
 }
-export function buildRecoveryLesson(data,recovery,date,history={}){
+export function buildRecoveryLesson(data,recovery,date,history={},userVocabulary={}){
   const di=courseDay(date);if(di<0)return null;
   const index=di%recovery.lessons.length,dated=recovery.datedLessons?.[date],gate=readiness(history,date);
   if(di>=recovery.lessons.length&&!dated){
-    const phase=phaseFor(date),pending={id:'pending:'+date,date,unprepared:true,freshMaterial:false,recovery:true,foundation:true,weekly:(di+1)%7===0,index,di:Math.floor((Date.parse(date)-Date.parse('2026-08-22'))/864e5),recoveryDay:di+1,title:'课程尚未生成或同步',phase,gate,trainingName:'等待课程更新',grammarTip:'为防止把旧题冒充新题，本日练习暂不开放。',nw:[],rev:[],quizWords:[],all:[],priorityErrors:[],reading:{title:'Pending lesson',titleZh:'阅读材料待生成',passage:'',passageZh:'',questions:[],level:'待更新',topic:'课程完整性保护'},listening:{title:'Pending lesson',titleZh:'听力材料待生成',passage:'',passageZh:'',dictation:[],dictationZh:[],questions:[],level:'待更新',tip:'同步完成后再开始。'},sent:[],trans:[],grammar:[],taskCount:0,tasks:[],wordReviewRule:'课程同步后再安排固定复习量。',sourceNote:'系统已阻止循环旧题；已有成绩、错题和草稿不会删除。'};
+    const phase=phaseFor(date),pending={id:'pending:'+date,date,unprepared:true,freshMaterial:false,recovery:true,foundation:true,weekly:(di+1)%7===0,index,di:Math.floor((Date.parse(date)-Date.parse('2026-08-22'))/864e5),recoveryDay:di+1,title:'课程尚未生成或同步',phase,gate,trainingName:'等待课程更新',grammarTip:'为防止把旧题冒充新题，本日练习暂不开放。',nw:[],rev:[],quizWords:[],all:[],priorityErrors:[],reading:{title:'Pending lesson',titleZh:'阅读材料待生成',passage:'',passageZh:'',questions:[],level:'待更新',topic:'课程完整性保护'},listening:{title:'Pending lesson',titleZh:'听力材料待生成',passage:'',passageZh:'',dictation:[],dictationZh:[],questions:[],level:'待更新',tip:'同步完成后再开始。'},extensive:{title:'Pending article',titleZh:'每日泛读待生成',text:'',textZh:'',questions:[],keyPhrases:[]},sent:[],trans:[],grammar:[],taskCount:0,tasks:[],wordReviewRule:'课程同步后再安排固定复习量。',sourceNote:'系统已阻止循环旧题；已有成绩、错题和草稿不会删除。'};
     const contentSignature=lessonFingerprint(pending);
     return {...pending,contentSignature,contentRevision:'pending-'+contentSignature};
   }
   const seed=dated||recovery.lessons[index];
   const foundation=di<14||!gate.advance,weekly=(di+1)%7===0;
-  const pool=[...recovery.words,...data.WORDS].filter((w,i,a)=>a.findIndex(x=>x.word===w.word)===i);
+  const dueManual=dueUserVocabulary(userVocabulary,date,6);
+  const pool=[...dueManual,...recovery.words,...data.WORDS].filter((w,i,a)=>a.findIndex(x=>x.word===w.word)===i);
   const find=n=>pool.find(w=>w.word.toLowerCase()===String(n).toLowerCase());
   const past=Object.entries(history).filter(([k])=>k<date).sort(([a],[b])=>b.localeCompare(a));
   const latestWordResult=new Map(),latestWordDate=new Map();
@@ -129,7 +180,10 @@ export function buildRecoveryLesson(data,recovery,date,history={}){
   }
   // Reviews not yet attempted still follow the prepared D1/D3/D7/D14 packs.
   for(const gap of reviewGaps)if(di>=gap)dueWords.push(...recovery.lessons[(di-gap)%14].words.map(w=>w.word));
-  const nw=weekly?[]:dated?seed.words.slice(0,foundation?8:12):foundation?seed.words.slice(0,8):Array.from({length:12},(_,i)=>data.WORDS[((di-14)*12+i+data.WORDS.length*3)%data.WORDS.length]);
+  const authoredWords=Array.isArray(seed.words)?seed.words:[],authoredSet=new Set(recovery.words.map(w=>w.word.toLowerCase()));
+  const extraBank=data.WORDS.filter(w=>!authoredSet.has(w.word.toLowerCase()));
+  const extraStart=(di*4)%Math.max(1,extraBank.length),extraWords=Array.from({length:12},(_,i)=>extraBank[(extraStart+i)%extraBank.length]);
+  const nw=weekly?[]:[...authoredWords,...extraWords].filter((w,i,a)=>w&&a.findIndex(x=>x.word.toLowerCase()===w.word.toLowerCase())===i).slice(0,12);
   const priorPacks=recovery.lessons.slice(0,Math.min(index,14)).flatMap(x=>x.words).map(w=>w.word).reverse();
   const baseline=['improve','think','decide','enough','remember','read','write','understand','forget','begin','finish','time','help','question','answer','friend','practice','review'];
   const pendingErrors=[...latestWordResult.entries()].filter(([,correct])=>correct!==true).map(([n])=>n).filter(n=>find(n)&&!nw.some(w=>w.word===n));
@@ -141,14 +195,17 @@ export function buildRecoveryLesson(data,recovery,date,history={}){
   // due group by calendar day so one persistent error cannot stay first daily.
   const errorOffset=scheduledErrors.length?di%scheduledErrors.length:0;
   const rotatingErrors=[...scheduledErrors.slice(errorOffset),...scheduledErrors.slice(0,errorOffset)];
-  const priorityErrors=rotatingErrors.slice(0,4),errorSet=new Set(pendingErrors);
+  const priorityErrors=rotatingErrors.slice(0,6),priorityUserWords=dueManual.map(x=>x.word).filter(n=>!nw.some(w=>w.word===n)),errorSet=new Set(pendingErrors);
   const ordinaryNames=[...dueWords,...priorPacks,...baseline,...recovery.words.map(w=>w.word)].filter(n=>!errorSet.has(n));
-  const candidateNames=[...priorityErrors,...ordinaryNames];
-  const rev=candidateNames.map(find).filter(Boolean).filter((w,i,a)=>!nw.some(n=>n.word===w.word)&&a.findIndex(n=>n.word===w.word)===i).slice(0,12);
+  const priorityNames=[];
+  for(let i=0;i<Math.max(priorityErrors.length,priorityUserWords.length);i++){if(priorityErrors[i])priorityNames.push(priorityErrors[i]);if(priorityUserWords[i])priorityNames.push(priorityUserWords[i])}
+  const candidateNames=[...priorityNames,...ordinaryNames];
+  const reviewTarget=weekly?20:18;
+  const rev=candidateNames.map(find).filter(Boolean).filter((w,i,a)=>!nw.some(n=>n.word===w.word)&&a.findIndex(n=>n.word===w.word)===i).slice(0,reviewTarget);
   const quizNew=[...nw.filter(w=>['improve','think'].includes(w.word)),...nw.filter(w=>!['improve','think'].includes(w.word))];
-  const quizWords=nw.length?[...rev.slice(0,3),...quizNew.slice(0,3),...rev.slice(3,6),...quizNew.slice(3,6)]:rev.slice(0,12);
+  const quizWords=nw.length?[...rev.slice(0,5),...quizNew.slice(0,5),...rev.slice(5,10),...quizNew.slice(5,10)]:rev.slice(0,20);
   const phase=phaseFor(date),advanced=!foundation&&date>='2026-10-01';
-  let reading=seed.reading,listening=seed.listening,sent=[seed.sent],trans=seed.trans;
+  let reading=seed.reading,listening=seed.listening,extensive=seed.extensive,sent=[seed.sent],trans=seed.trans;
   if(!foundation&&!dated){
     reading=data.CET_READINGS[di%data.CET_READINGS.length];
     const li=di%data.LISTENINGS.length,x=data.LISTENINGS[li],support=data.LISTENING_SUPPORT[li];
@@ -157,20 +214,20 @@ export function buildRecoveryLesson(data,recovery,date,history={}){
     trans=Array.from({length:2},(_,i)=>data.CET_TRANSLATIONS[(di*2+i)%data.CET_TRANSLATIONS.length]);
   }
   reading={...reading,questions:mixOptions(reading.questions,di+1)};
-  listening={...listening,questions:mixOptions(listening.questions,di+101)};
+  listening={...listening,fullDictation:fullDictationItems(listening),questions:mixOptions(listening.questions,di+101)};
   const grammar=mixOptions(seed.grammar,di+201);
   const weekend=[0,6].includes(new Date(date+'T00:00:00Z').getUTCDay());
-  const minutes=weekend?[40,35,25,40,30,10]:[30,25,20,25,10,10];
-  const labels=[weekly?'12词周测与错词复习':nw.length+'个新/激活词＋12个复习词','短听力理解＋'+listening.dictation.length+'句听写','1个语法点＋6题','阅读1篇＋'+reading.questions.length+'题','句子主干'+sent.length+'句＋表达2句','错题复盘＋共同记录难点'];
-  const targets=['words','listening','grammar','reading','sentences','review'],tabs=['words','listening','practice','practice','practice','records'];
-  const lesson={id:'recovery-v1:'+date,date,freshMaterial:di<recovery.lessons.length||Boolean(dated),recovery:true,foundation,weekly,index,di:Math.floor((Date.parse(date)-Date.parse('2026-08-22'))/864e5),recoveryDay:di+1,title:seed.title,phase,gate,trainingName:foundation?'基础恢复':advanced?'六级专项模拟':'基础衔接',grammarTip:seed.grammarTip,sourceWords:seed.words||[],nw,rev,quizWords,all:[...rev,...nw],priorityErrors,reading,listening,sent,trans,grammar,taskCount:6,tasks:labels.map((label,i)=>({id:targets[i],tab:tabs[i],label,minutes:minutes[i]})),wordReviewRule:'12个复习位：最多4个到期错词＋其余间隔旧词。错词按D1/D3/D7/D14到期复习；同日多个错词按日期轮换顺序，不额外加量。',sourceNote:'本地题库为原创模拟；听力为浏览器合成朗读，不冒充历年真题录音。'};
+  const minutes=weekend?[45,35,20,30,25,40,15]:[35,25,15,20,15,30,10];
+  const labels=[weekly?'20词周测与错词复习':nw.length+'个新/激活词＋'+rev.length+'个复习词','短听力理解＋'+listening.fullDictation.length+'段全文听写','1个语法点＋6题','阅读1篇＋'+reading.questions.length+'题','句子主干'+sent.length+'句＋表达2句','每日泛读＋影子跟读＋60秒复述','错题复盘＋共同记录难点'];
+  const targets=['words','listening','grammar','reading','sentences','extensive','review'],tabs=['words','listening','practice','practice','practice','extensive','records'];
+  const lesson={id:'recovery-v2:'+date,date,freshMaterial:di<recovery.lessons.length||Boolean(dated),recovery:true,foundation,weekly,index,di:Math.floor((Date.parse(date)-Date.parse('2026-08-22'))/864e5),recoveryDay:di+1,title:seed.title,phase,gate,trainingName:di<14?'基础恢复':advanced?'四级专项模拟':'四级550衔接',grammarTip:seed.grammarTip,sourceWords:nw,nw,rev,quizWords,all:[...rev,...nw],priorityErrors,priorityUserWords,reading,listening,extensive,sent,trans,grammar,taskCount:7,tasks:labels.map((label,i)=>({id:targets[i],tab:tabs[i],label,minutes:minutes[i]})),wordReviewRule:'固定18个复习位（周测20个）：到期错词、自主加入的文章词和间隔旧词共同安排。只有你点“加入后续背诵”的文章词才进入队列；到期词按固定容量顺延，不额外加量。',sourceNote:'目标为2026年12月四级550分。课程文章与题目为原创分级模拟或注明来源的公版名著改写；浏览器合成朗读不冒充真题录音。文章点词释义来自离线词典，查看词义不会自动加入复习。'};
   const contentSignature=lessonFingerprint(lesson);
   return {...lesson,contentSignature,contentRevision:'course-'+contentSignature};
 }
 export function hasAnswerWork(p={}){
-  if((p.completed||[]).length||Object.keys(p.attempts||{}).length||['wordTotal','listeningTotal','listeningChoiceTotal','quizTotal','sentenceTotal','translationTotal'].some(k=>p[k]>0))return true;
+  if((p.completed||[]).length||Object.keys(p.attempts||{}).length||['wordTotal','listeningTotal','listeningChoiceTotal','quizTotal','extensiveTotal','sentenceTotal','translationTotal'].some(k=>p[k]>0))return true;
   const d=p.draft||{};
-  return Boolean(d.ws?.input||d.ws?.meaningInput||d.ws?.i||d.ls?.input||d.ls?.i||Object.keys(d.ls?.answers||{}).length||Object.keys(d.ps?.answers||{}).length||Object.values(d.ps?.sent||{}).some(x=>x.main||x.trans)||Object.values(d.ps?.trans||{}).some(x=>x.input));
+  return Boolean(d.ws?.input||d.ws?.meaningInput||d.ws?.i||d.ls?.input||d.ls?.i||Object.keys(d.ls?.answers||{}).length||Object.keys(d.ps?.answers||{}).length||Object.values(d.ps?.sent||{}).some(x=>x.main||x.trans)||Object.values(d.ps?.trans||{}).some(x=>x.input)||Object.keys(d.er?.answers||{}).length||d.er?.submitted||d.er?.shadowDone||d.er?.retellDone);
 }
 export function chooseDailyLesson(date,p,fresh){
   const old=p?.lessonSnapshot;
@@ -190,6 +247,7 @@ export function difficultiesFor(p,diagnostic){
   if(p.listeningErrors?.length)a.push('句子听写：'+p.listeningErrors.length+'句需重听，区分不认识与没有辨出声音。');
   if(p.listeningChoiceTotal&&p.listeningChoiceCorrect/p.listeningChoiceTotal<.7)a.push('听力理解：本次细节或顺序题需要复盘。');
   if(p.readingTotal&&p.readingCorrect/p.readingTotal<.75)a.push('阅读定位：每题回到原文指出依据。');
+  if(p.extensiveTotal&&p.extensiveCorrect/p.extensiveTotal<.7)a.push('泛读理解：先用每段首尾句概括主旨，再定位题目依据。');
   if(p.sentenceTotal&&p.sentenceCorrect/p.sentenceTotal<.7)a.push('句子分析规则初判未达标；可能有合理同义表达，请共同复核。');
   if(p.translationTotal&&p.translationCorrect/p.translationTotal<.7)a.push('表达规则初判未达标；检查谓语、词形，保留合理同义表达。');
   return a.length?a:['当天暂无足够错题证据。对话起点关注：'+diagnostic.focus.slice(0,3).join('；')+'。'];

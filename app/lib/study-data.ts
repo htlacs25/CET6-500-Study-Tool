@@ -824,7 +824,7 @@ export const LISTENING_QUESTION_ZH = [
   ],
 ];
 
-// 四六级常考主题原创模拟材料：保留真题常见结构与话题，但不冒充历年原题。
+// 四级常考主题原创模拟材料：保留真题常见结构与话题，但不冒充历年原题。
 export const CET_LONG_SENTENCES = [
   { level: '四级常考', topic: '教育 · 在线学习', text: 'Although online courses make high-quality resources available to more students, those who lack self-discipline may find it difficult to turn easy access into steady progress.', main: 'those may find it difficult to turn easy access into steady progress', translation: '尽管网络课程让更多学生能够获得优质资源，但缺乏自律的学生可能会发现，很难把便利的获取途径转化为稳定的进步。', keywords: ['尽管', '优质资源', '缺乏自律', '转化为', '稳定的进步'], structure: 'Although引导让步状语从句；主句主语是those；who从句修饰those。', grammar: ['make + 宾语 + 形容词：使……处于某种状态', 'find it difficult to do：发现做某事很困难', 'turn A into B：把A转化为B'], examTip: '先找主句those may find，再处理although和who两个从句。' },
   { level: '六级常考', topic: '环境 · 行为激励', text: 'Policies that encourage consumers to reduce waste are most effective when environmentally responsible choices are not only affordable but also easy to identify.', main: 'Policies are most effective', translation: '鼓励消费者减少浪费的政策，在环保选择不仅价格可承受而且容易识别时最为有效。', keywords: ['政策', '鼓励消费者', '减少浪费', '不仅', '而且', '最为有效'], structure: '主干是Policies are most effective；that修饰policies；when引导条件/时间状语从句。', grammar: ['encourage somebody to do', 'not only A but also B', 'environmentally responsible是副词修饰形容词'], examTip: '六级常把主干夹在定语从句与状语从句之间，先划出Policies...are。' },

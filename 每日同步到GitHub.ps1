@@ -15,6 +15,9 @@ $safeDirectory = ($repoRoot -replace '\\', '/')
 $gitPrefix = @('-c', "safe.directory=$safeDirectory", '-C', $repoRoot)
 $allowedPaths = @(
   'app/content/daily-lessons.json',
+  'app/content/full-dictation.json',
+  'app/content/article-glossary.json',
+  'app/content/extensive-reading.json',
   '六级学习工具.html',
   'app/public/六级学习工具.html',
   'study-release.js',

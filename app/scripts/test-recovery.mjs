@@ -3,16 +3,33 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import test from 'node:test';
+import { spawnSync } from 'node:child_process';
 import { RECOVERY } from '../lib/recovery-data.mjs';
 import { loadCurriculum } from '../lib/load-curriculum.mjs';
-import { buildRecoveryLesson, blankProgress, recordFirstAttempt, mergeLegacyStores, assessSentence, assessTranslation, readiness, courseDay, phaseFor, chooseDailyLesson, hasAnswerWork, lessonFingerprint, RECOVERY_STORAGE_KEY, OLD_PROGRESS_KEYS } from '../lib/study-engine.mjs';
+import { buildRecoveryLesson, blankProgress, recordFirstAttempt, mergeLegacyStores, assessSentence, assessTranslation, readiness, courseDay, phaseFor, chooseDailyLesson, hasAnswerWork, lessonFingerprint, fullDictationItems, normEnglish, blankUserVocabulary, addUserVocabulary, removeUserVocabulary, dueUserVocabulary, reviewUserVocabulary, normalizeUserVocabulary, USER_VOCAB_STORAGE_KEY, MAX_USER_VOCABULARY, RECOVERY_STORAGE_KEY, OLD_PROGRESS_KEYS } from '../lib/study-engine.mjs';
 import { prepareStandalone } from './generate-standalone.mjs';
 
 const root=path.resolve(import.meta.dirname,'..');
 const html=fs.readFileSync(path.join(root,'public','六级学习工具.html'),'utf8');
 const DATA=JSON.parse(html.match(/const DATA=([\s\S]*?); const RECOVERY=/)[1]);
+const CURRICULUM=loadCurriculum();
 const dateAt=n=>new Date(Date.UTC(2026,7,28+n)).toISOString().slice(0,10);
 const clone=x=>JSON.parse(JSON.stringify(x));
+const assertFullDictation=(L,label)=>{
+  const items=fullDictationItems(L.listening);
+  assert.ok(items.length>2,`${label}: expected more than the old two excerpts`);
+  assert.equal(normEnglish(items.map(x=>x.text).join(' ')),normEnglish(L.listening.passage),`${label}: dictation must cover the passage`);
+  assert.ok(items.every(x=>x.text&&x.zh),`${label}: every segment needs hidden Chinese`);
+};
+
+test('sync report stays ASCII-safe for Windows PowerShell JSON parsing',()=>{
+  const result=spawnSync(process.execPath,[path.join(root,'scripts','sync-daily-content.mjs'),'2026-09-13','--check'],{encoding:'utf8'});
+  assert.equal(result.status,0,result.stderr||result.stdout);
+  assert.match(result.stdout,/^[\x00-\x7F]*$/);
+  const report=JSON.parse(result.stdout);
+  assert.equal(report.synced,true);
+  assert.match(report.note,/浏览器成绩/);
+});
 
 test('14 complete lessons have bilingual material, IPA and valid answers',()=>{
   assert.equal(RECOVERY.lessons.length,14);
@@ -21,14 +38,16 @@ test('14 complete lessons have bilingual material, IPA and valid answers',()=>{
   for(const w of RECOVERY.words){assert.match(w.phonetic,/^\/.+\/$/);assert.ok(w.meaning&&w.example&&w.exampleZh)}
   const titles=new Set();
   for(let i=0;i<14;i++){
-    const L=buildRecoveryLesson(DATA,RECOVERY,dateAt(i));titles.add(L.reading.title);
-    assert.equal(L.nw.length,[6,13].includes(i)?0:8);
-    assert.equal(L.rev.length,12);assert.equal(L.quizWords.length,12);
+    const L=buildRecoveryLesson(DATA,CURRICULUM,dateAt(i));titles.add(L.reading.title);
+    assert.equal(L.nw.length,[6,13].includes(i)?0:12);
+    assert.equal(L.rev.length,L.weekly?20:18);assert.equal(L.quizWords.length,20);
     assert.equal(new Set(L.all.map(w=>w.word)).size,L.all.length);
-    assert.equal(new Set(L.quizWords.map(w=>w.word)).size,12);
+    assert.equal(new Set(L.quizWords.map(w=>w.word)).size,20);
     assert.equal(L.grammar.length,6);assert.equal(L.reading.questions.length,4);
-    assert.equal(L.listening.questions.length,2);assert.equal(L.listening.dictation.length,2);
-    assert.equal(L.sent.length,1);assert.equal(L.trans.length,2);
+    assert.equal(L.listening.questions.length,2);assertFullDictation(L,`recovery day ${i+1}`);
+    assert.equal(L.sent.length,1);assert.equal(L.trans.length,2);assert.equal(L.tasks.length,7);
+    assert.ok(L.extensive.text&&L.extensive.textZh);assert.equal(L.extensive.questions.length,2);assert.equal(L.extensive.keyPhrases.length,3);
+    const ec=(L.extensive.text.match(/[A-Za-z]+(?:[’'][A-Za-z]+)?/g)||[]).length;assert.ok(ec>=180&&ec<=240);
     const wc=L.reading.passage.split(/\s+/).length;assert.ok(wc>=80&&wc<=150,`reading day ${i+1}: ${wc}`);
     const lc=L.listening.passage.split(/\s+/).length;assert.ok(lc>=35&&lc<=90,`listening day ${i+1}: ${lc}`);
     for(const q of [...L.grammar,...L.reading.questions,...L.listening.questions]){
@@ -40,37 +59,39 @@ test('14 complete lessons have bilingual material, IPA and valid answers',()=>{
     for(const x of L.trans)for(const a of x.acceptedAnswers)assert.equal(assessTranslation(x,a).ok,true);
   }
   assert.equal(titles.size,14);
-  assert.ok(buildRecoveryLesson(DATA,RECOVERY,dateAt(0)).quizWords.some(w=>w.word==='improve'));
-  assert.ok(buildRecoveryLesson(DATA,RECOVERY,dateAt(0)).quizWords.some(w=>w.word==='think'));
+  assert.ok(buildRecoveryLesson(DATA,CURRICULUM,dateAt(0)).quizWords.some(w=>w.word==='improve'));
+  assert.ok(buildRecoveryLesson(DATA,CURRICULUM,dateAt(0)).quizWords.some(w=>w.word==='think'));
 });
 
 test('weekday/weekend budget, weekly tests, dates and roadmap',()=>{
   assert.equal(courseDay('2026-08-28'),0);assert.equal(courseDay('2026-09-10'),13);
   assert.equal(buildRecoveryLesson(DATA,RECOVERY,'2026-08-27'),null);
   for(let i=0;i<14;i++){
-    const k=dateAt(i),L=buildRecoveryLesson(DATA,RECOVERY,k),wk=[0,6].includes(new Date(k).getUTCDay());
-    assert.equal(L.tasks.reduce((s,t)=>s+t.minutes,0),wk?180:120);
-    assert.equal(L.tasks.at(-1).minutes,10);
+    const k=dateAt(i),L=buildRecoveryLesson(DATA,CURRICULUM,k),wk=[0,6].includes(new Date(k).getUTCDay());
+    assert.equal(L.tasks.reduce((s,t)=>s+t.minutes,0),wk?210:150);
+    assert.equal(L.tasks.at(-1).minutes,wk?15:10);
     assert.equal(L.weekly,(i+1)%7===0);
     if(L.weekly)assert.equal(L.nw.length,0);
-    assert.equal(L.rev.length,12);
+    assert.equal(L.rev.length,L.weekly?20:18);assert.equal(L.quizWords.length,20);
   }
   const pending=buildRecoveryLesson(DATA,RECOVERY,'2026-09-11');
   assert.equal(pending.unprepared,true);assert.equal(pending.freshMaterial,false);
   assert.equal(pending.reading.passage,'');assert.equal(pending.listening.passage,'');
-  assert.equal(phaseFor('2026-10-01').name,'六级专项');
+  assert.equal(phaseFor('2026-10-01').name,'四级专项');
   assert.equal(phaseFor('2026-12-01').name,'模考与查漏补缺');
 });
 
-test('a seven-day window has different actual reading/listening passages and matching local copies',async()=>{
+test('a seven-day window has different reading, listening and extensive passages with matching local copies',async()=>{
   const p=await prepareStandalone('2026-08-30');
   assert.equal(p.release.days.length,7);
   assert.equal(new Set(p.release.days.map(d=>d.readingHash)).size,7);
   assert.equal(new Set(p.release.days.map(d=>d.listeningHash)).size,7);
+  assert.equal(new Set(p.release.days.map(d=>d.extensiveHash)).size,7);
   assert.equal(new Set(p.release.days.map(d=>d.courseHash)).size,7);
   assert.deepEqual(p.release.duplicateCourse,[]);
   assert.deepEqual(p.release.dateMismatches,[]);
   assert.deepEqual(p.release.missingDates,[]);
+  assert.deepEqual(p.release.duplicateExtensive,[]);assert.deepEqual(p.release.missingExtensive,[]);
   assert.equal(fs.readFileSync(path.join(root,'../六级学习工具.html'),'utf8'),html);
   const dist=path.join(root,'dist','client','六级学习工具.html');
   if(fs.existsSync(dist))assert.equal(fs.readFileSync(dist,'utf8'),html);
@@ -79,8 +100,11 @@ test('a seven-day window has different actual reading/listening passages and mat
 });
 
 test('every rolling seven-day window through September is complete and fully distinct',async()=>{
-  const curriculum=loadCurriculum();
+  const curriculum=CURRICULUM;
   const dated=Object.values(curriculum.datedLessons),datedWords=dated.flatMap(x=>x.words);
+  const extensive=Object.values(curriculum.extensiveReadings);
+  assert.equal(extensive.length,34);assert.equal(new Set(extensive.map(x=>x.date)).size,34);assert.equal(new Set(extensive.map(x=>x.text)).size,34);
+  assert.ok(extensive.some(x=>x.sourceType==='public-domain adaptation'));assert.ok(extensive.some(x=>x.sourceType==='original news-style'));
   assert.equal(dated.length,20);assert.equal(new Set(datedWords.map(w=>w.word)).size,datedWords.length);
   assert.equal(new Set(dated.map(x=>x.title)).size,dated.length);
   assert.equal(new Set(dated.map(x=>x.reading.passage)).size,dated.length);
@@ -88,14 +112,16 @@ test('every rolling seven-day window through September is complete and fully dis
   for(let day=11;day<=30;day++){
     const date=`2026-09-${String(day).padStart(2,'0')}`,L=buildRecoveryLesson(DATA,curriculum,date);
     assert.equal(L.unprepared,undefined);assert.equal(L.freshMaterial,true);
-    assert.equal(L.nw.length,[17,24].includes(day)?0:8);
-    assert.equal(L.rev.length,12);assert.equal(L.grammar.length,6);
+    assert.equal(L.nw.length,[17,24].includes(day)?0:12);
+    assert.equal(L.rev.length,L.weekly?20:18);assert.equal(L.quizWords.length,20);assert.equal(L.grammar.length,6);
     assert.equal(L.reading.questions.length,4);assert.equal(L.listening.questions.length,2);
-    assert.equal(L.listening.dictation.length,2);assert.equal(L.sent.length,1);assert.equal(L.trans.length,2);
+    assertFullDictation(L,date);assert.equal(L.sent.length,1);assert.equal(L.trans.length,2);assert.equal(L.tasks.length,7);
+    assert.ok(L.extensive.text&&L.extensive.textZh);assert.equal(L.extensive.questions.length,2);assert.equal(L.extensive.keyPhrases.length,3);
+    const ec=(L.extensive.text.match(/[A-Za-z]+(?:[’'][A-Za-z]+)?/g)||[]).length;assert.ok(ec>=180&&ec<=240,`${date} extensive: ${ec}`);
     assert.ok(L.reading.passage.split(/\s+/).length>=110&&L.reading.passage.split(/\s+/).length<=170);
     assert.ok(L.listening.passage.split(/\s+/).length>=45&&L.listening.passage.split(/\s+/).length<=90);
-    for(const w of L.nw){assert.match(w.phonetic,/^\/.+\/$/);assert.ok(w.meaning&&w.example&&w.exampleZh)}
-    for(const q of [...L.grammar,...L.reading.questions,...L.listening.questions]){
+    for(const w of L.nw){assert.match(w.phonetic,/^\/.+\/$/);assert.ok(w.meaning&&w.phrase)}
+    for(const q of [...L.grammar,...L.reading.questions,...L.listening.questions,...L.extensive.questions]){
       assert.ok(q.prompt&&q.promptZh&&q.explanation);assert.equal(q.options.length,q.optionsZh.length);
       assert.ok(q.answer>=0&&q.answer<q.options.length);
     }
@@ -107,8 +133,12 @@ test('every rolling seven-day window through September is complete and fully dis
     assert.deepEqual(p.release.missingDates,[],date);
     assert.deepEqual(p.release.duplicateReading,[],date);
     assert.deepEqual(p.release.duplicateListening,[],date);
+    assert.deepEqual(p.release.duplicateExtensive,[],date);
     assert.deepEqual(p.release.duplicateCourse,[],date);
     assert.deepEqual(p.release.dateMismatches,[],date);
+    assert.deepEqual(p.release.incompleteDictation,[],date);
+    assert.deepEqual(p.release.missingExtensive,[],date);
+    assert.deepEqual(p.release.missingGlosses,[],date);
   }
 });
 
@@ -153,10 +183,10 @@ test('unresolved errors use spaced dates and rotate the first priority word',()=
   const errors=['organize','information','difficulty','discipline','diverse','domestic','assess'];
   const a=buildRecoveryLesson(DATA,RECOVERY,'2026-08-30',{'2026-08-29':{...blankProgress(),wordErrors:errors}});
   const b=buildRecoveryLesson(DATA,RECOVERY,'2026-08-31',{'2026-08-30':{...blankProgress(),wordErrors:errors}});
-  assert.equal(a.priorityErrors.length,4);assert.equal(b.priorityErrors.length,4);
+  assert.equal(a.priorityErrors.length,6);assert.equal(b.priorityErrors.length,6);
   assert.notDeepEqual(a.priorityErrors,b.priorityErrors);
   assert.notEqual(a.rev[0].word,b.rev[0].word);
-  assert.equal(a.rev.length,12);assert.equal(a.rev.filter(w=>errors.includes(w.word)).length,4);
+  assert.equal(a.rev.length,18);assert.equal(a.rev.filter(w=>errors.includes(w.word)).length,6);
   const notDue=buildRecoveryLesson(DATA,RECOVERY,'2026-09-01',{'2026-08-30':{...blankProgress(),wordErrors:errors}});
   assert.deepEqual(notDue.priorityErrors,[]);
   assert.notDeepEqual(a.nw.map(w=>w.word),b.nw.map(w=>w.word));
@@ -202,7 +232,7 @@ test('wrong words return on D1/D3/D7/D14; later first-try success resolves prior
   const before=JSON.stringify(history);
   const next=buildRecoveryLesson(DATA,RECOVERY,'2026-08-29',history);
   assert.deepEqual(new Set(next.rev.slice(0,2).map(x=>x.word)),new Set(['improve','enough']));
-  assert.equal(next.rev.length,12);assert.equal(next.nw.length,8);
+  assert.equal(next.rev.length,18);assert.equal(next.nw.length,12);
   const between=buildRecoveryLesson(DATA,RECOVERY,'2026-08-30',history);
   assert.deepEqual(between.priorityErrors,[]);
   const later=buildRecoveryLesson(DATA,RECOVERY,'2026-08-31',history);
@@ -235,9 +265,47 @@ test('sentence and translation rules catch current gaps and accept supplied alte
   assert.equal(assessTranslation(x,'I think practice is important.').ok,true);
 });
 
+test('every prepared passage token has a Chinese gloss and reviewable IPA, and every lesson has full dictation',()=>{
+  const entries=CURRICULUM.articleGlossary.entries,tokenPattern=/[a-z]+(?:'[a-z]+)?/g,seen=new Set();
+  const lessons=[...CURRICULUM.lessons,...Object.values(CURRICULUM.datedLessons)];
+  for(const L of lessons){
+    assertFullDictation({listening:L.listening},L.date||L.title);
+    for(const passage of [L.reading.passage,L.listening.passage,L.extensive.text])for(const token of passage.toLowerCase().match(tokenPattern)||[]){
+      const base=token.endsWith("'s")?token.slice(0,-2):token,entry=entries[token]||entries[base];
+      assert.ok(entry?.meaning,`${L.date||L.title}: missing ${token}`);assert.match(entry.meaning,/[\u3400-\u9fff]/,`${token}: meaning needs Chinese`);
+      const review=entry.base?entries[entry.base]:entry;assert.ok(review?.phonetic||entry.phonetic,`${token}: learner-selected word needs IPA`);seen.add(token);
+    }
+  }
+  assert.ok(seen.size>1000);
+  assert.match(html,/全文分段听写/);
+  assert.match(html,/data-lookup-word/);
+  assert.doesNotMatch(html,/const typed=new Set\(norm\(ls\.input\)/);
+});
+
+test('only explicitly added article words enter a fixed-size spaced review queue',()=>{
+  const empty=blankUserVocabulary(),before=JSON.stringify(empty);
+  let vocab=addUserVocabulary(empty,{surface:'zebras',word:'zebra',phonetic:'/ˈziːbrə/',meaning:'斑马',phrase:'two zebras'},'2026-09-10','reading');
+  assert.equal(JSON.stringify(empty),before);
+  assert.deepEqual(dueUserVocabulary(vocab,'2026-09-10'),[]);
+  assert.deepEqual(dueUserVocabulary(vocab,'2026-09-11').map(x=>x.word),['zebra']);
+  vocab=addUserVocabulary(vocab,{surface:'zebra',word:'zebra',meaning:'斑马'},'2026-09-10','listening');
+  assert.equal(Object.keys(vocab.items).length,1);
+  const L=buildRecoveryLesson(DATA,CURRICULUM,'2026-09-11',{},vocab);
+  assert.equal(L.rev.length,18);assert.equal(L.quizWords.length,20);assert.ok(L.rev.some(x=>x.word==='zebra'));
+  vocab=reviewUserVocabulary(vocab,'zebra','2026-09-11',true);
+  assert.equal(vocab.items.zebra.dueDate,'2026-09-13');
+  vocab=reviewUserVocabulary(vocab,'zebra','2026-09-13',true);
+  assert.equal(vocab.items.zebra.dueDate,'2026-09-17');
+  vocab=reviewUserVocabulary(vocab,'zebra','2026-09-17',true);
+  assert.equal(vocab.items.zebra.dueDate,'2026-09-24');
+  vocab=removeUserVocabulary(vocab,'zebra');assert.equal(vocab.items.zebra.active,false);
+  assert.deepEqual(dueUserVocabulary(vocab,'2026-09-30'),[]);
+  assert.deepEqual(normalizeUserVocabulary({items:{broken:{word:'',meaning:''}}}),blankUserVocabulary());
+});
+
 function runtime(initial={},browserMode=false){
   const saved=new Map(Object.entries(initial)),elements=new Map(),spoken=[],timers=[];
-  const session=new Map(),events={},beacons=[];let reloadCount=0;
+  const session=new Map(),events={},beacons=[],audioEvents=[];let reloadCount=0;
   let now=Date.parse('2026-08-28T15:59:30Z');
   class TestDate extends Date {constructor(...args){super(...(args.length?args:[now]))}static now(){return now}}
   const element=id=>{if(!elements.has(id))elements.set(id,{id,innerHTML:'',textContent:'',value:'',disabled:false,dataset:{}});return elements.get(id)};
@@ -245,12 +313,13 @@ function runtime(initial={},browserMode=false){
   const location={href:'file:///D:/CET6-500-Study-Tool/六级学习工具.html',protocol:'file:',hostname:'',reload:()=>reloadCount++};
   location.replace=url=>{location.href=url;reloadCount++};
   const window={location,addEventListener:(name,fn)=>events[name]=fn};
-  const context=vm.createContext({...(browserMode?{window,sessionStorage:{getItem:k=>session.get(k)||null,setItem:(k,v)=>session.set(k,v),removeItem:k=>session.delete(k)}}:{}),Date:TestDate,document,app:element('app'),checkListen:element('checkListen'),listenRateLabel:element('listenRateLabel'),localStorage:{getItem:k=>saved.get(k)||null,setItem:(k,v)=>saved.set(k,v)},alert:m=>{throw new Error(m)},setInterval:fn=>timers.push(fn),setTimeout(){},speechSynthesis:{cancel(){},getVoices(){return[]},speak:u=>spoken.push(u)},SpeechSynthesisUtterance:function(t){this.text=t},Blob,URL,console});
+  const speechSynthesis={speaking:false,paused:false,cancel(){this.speaking=false;this.paused=false;audioEvents.push('cancel')},getVoices(){return[]},speak(u){spoken.push(u);this.speaking=true;this.paused=false;audioEvents.push('speak')},pause(){if(this.speaking){this.paused=true;audioEvents.push('pause')}},resume(){if(this.paused){this.paused=false;audioEvents.push('resume')}}};
+  const context=vm.createContext({...(browserMode?{window,sessionStorage:{getItem:k=>session.get(k)||null,setItem:(k,v)=>session.set(k,v),removeItem:k=>session.delete(k)}}:{}),Date:TestDate,document,app:element('app'),checkListen:element('checkListen'),listenRateLabel:element('listenRateLabel'),localStorage:{getItem:k=>saved.get(k)||null,setItem:(k,v)=>saved.set(k,v)},alert:m=>{throw new Error(m)},setInterval:fn=>timers.push(fn),setTimeout(){},speechSynthesis,SpeechSynthesisUtterance:function(t){this.text=t},Blob,URL,console});
   let code=[...html.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)].map(x=>x[1]).join('\n');
   const marker='reset();render();setInterval';assert.ok(code.includes(marker));
-  code=code.replace(marker,'globalThis.studyTest={lesson,progress,rawProgress,courseKey,record,save,reset,render,renderWords,renderListening,renderPractice,renderRecords,persistDraft,speak,seven,checkLocalRelease,state:()=>({ws,ls,ps,rate,selected,today}),setDate:k=>{selected=k;reset()},setTab:k=>{tab=k}};reset();render();setInterval');
+  code=code.replace(marker,'globalThis.studyTest={lesson,progress,rawProgress,courseKey,record,save,reset,render,renderWords,renderListening,renderPractice,renderExtensive,renderRecords,persistDraft,speak,pauseSpeech,resumeSpeech,stopSpeech,seven,checkLocalRelease,articleEntry,articleText,lookupPanelHtml,openArticleWord,closeArticleWord,enrolArticleWord,saveUserVocab,userVocabulary:()=>userVocab,state:()=>({ws,ls,ps,er,rate,selected,today,articleLookup}),setDate:k=>{selected=k;reset()},setTab:k=>{tab=k}};reset();render();setInterval');
   vm.runInContext(code,context);
-  return {api:context.studyTest,saved,element,spoken,window,events,session,beacons,reloads:()=>reloadCount,advanceTime:iso=>{now=Date.parse(iso);timers.forEach(fn=>fn())}};
+  return {api:context.studyTest,saved,element,spoken,audioEvents,window,events,session,beacons,reloads:()=>reloadCount,advanceTime:iso=>{now=Date.parse(iso);timers.forEach(fn=>fn())}};
 }
 
 test('a local release update waits for typing, uses a versioned URL, preserves work and caps retries',()=>{
@@ -285,7 +354,7 @@ test('China midnight refresh changes the day without deleting saved work or inte
   rt.advanceTime('2026-08-28T16:01:00Z');
   assert.equal(rt.api.state().today,'2026-08-29');assert.equal(rt.api.state().selected,'2026-08-29');
   assert.equal(rt.api.progress('2026-08-28').notes,'午夜前的记录');
-  assert.equal(rt.api.lesson().tasks.reduce((n,t)=>n+t.minutes,0),180);
+  assert.equal(rt.api.lesson().tasks.reduce((n,t)=>n+t.minutes,0),210);
   rt.api.setDate('2026-08-28');rt.advanceTime('2026-08-29T16:01:00Z');
   assert.equal(rt.api.state().today,'2026-08-30');assert.equal(rt.api.state().selected,'2026-08-28');
 });
@@ -293,7 +362,7 @@ test('China midnight refresh changes the day without deleting saved work or inte
 test('generated offline runtime starts, saves drafts, reloads and does not overwrite old same-day records',()=>{
   const legacy=JSON.stringify({'2026-08-28':{wordCorrect:9,wordTotal:12,notes:'原来记录',wordErrors:['think']}});
   let rt=runtime({[OLD_PROGRESS_KEYS[0]]:legacy});rt.api.setDate('2026-08-28');rt.api.renderWords(rt.api.lesson());
-  assert.equal(rt.api.lesson().nw.length,8);assert.equal(rt.api.seven().length,7);
+  assert.equal(rt.api.lesson().nw.length,12);assert.equal(rt.api.lesson().rev.length,18);assert.equal(rt.api.lesson().quizWords.length,20);assert.equal(rt.api.seven().length,7);
   rt.element('wordInput').oninput({target:{value:'wrong'}});
   rt.element('meaningInput').oninput({target:{value:'不会'}});
   rt.element('checkWord').onclick();
@@ -316,7 +385,7 @@ test('generated offline runtime starts, saves drafts, reloads and does not overw
 });
 
 test('a corrected same-date course gets a clean score bucket while old work remains archived',()=>{
-  const date='2026-08-28',current=buildRecoveryLesson(DATA,RECOVERY,date),old=clone(current);
+  const date='2026-08-28',current=buildRecoveryLesson(DATA,CURRICULUM,date),old=clone(current);
   old.title='旧版重复课程';old.contentSignature='old-content-signature';
   const oldAttempt='word:'+old.id+':0',stored={...blankProgress(),lessonSnapshot:old,completed:['words'],wordCorrect:1,wordTotal:1,attempts:{[oldAttempt]:{group:'word',correct:true,targetWord:'assess'}},notes:'旧难点'};
   const rt=runtime({[RECOVERY_STORAGE_KEY]:JSON.stringify({[date]:stored})});rt.api.setDate(date);
@@ -336,9 +405,11 @@ test('synthetic listening and practice submissions save distinct results and pre
   rt.api.renderListening(L);
   rt.element('listenInput').oninput({target:{value:'wrong sentence'}});rt.element('checkListen').onclick();
   assert.equal(rt.api.progress().listeningTotal,1);assert.equal(rt.api.progress().listeningCorrect,0);
-  rt.element('listenInput').oninput({target:{value:L.listening.dictation[0]}});rt.element('checkListen').onclick();
+  assert.equal(rt.api.progress().wordErrors.length,0);assert.equal(Object.keys(rt.api.userVocabulary().items).length,0);
+  rt.element('listenInput').oninput({target:{value:fullDictationItems(L.listening)[0].text}});rt.element('checkListen').onclick();
   assert.equal(rt.api.progress().listeningTotal,1);assert.equal(rt.api.progress().listeningCorrect,0);
   rt.element('listenRate').oninput({target:{value:'0.7'}});rt.api.speak('test');assert.equal(rt.spoken.at(-1).rate,.7);
+  rt.api.pauseSpeech();rt.api.resumeSpeech();rt.api.stopSpeech();assert.deepEqual(rt.audioEvents.slice(-4),['speak','pause','resume','cancel']);
   const state=rt.api.state();L.listening.questions.forEach((q,i)=>state.ls.answers[i]=q.answer);
   rt.element('submitListen').onclick();assert.equal(rt.api.progress().listeningChoiceTotal,2);
   rt.api.renderPractice(L);
@@ -349,4 +420,39 @@ test('synthetic listening and practice submissions save distinct results and pre
   rt.element('submitPractice').onclick();assert.equal(rt.api.progress().quizTotal,10);
   const next=runtime(Object.fromEntries(rt.saved));next.api.setDate('2026-08-28');
   assert.equal(next.api.state().ps.submitted,true);assert.equal(next.api.progress().readingCorrect,4);
+});
+
+test('daily extensive article can be heard, answered, shadowed, retold and saved',()=>{
+  const rt=runtime();rt.api.setDate('2026-09-12');const L=rt.api.lesson();rt.api.renderExtensive(L);
+  assert.match(rt.element('app').innerHTML,/四步听说提升法/);assert.match(rt.element('app').innerHTML,/data-audio-pause/);
+  assert.match(rt.element('app').innerHTML,/data-lookup-source="extensive"/);
+  L.extensive.questions.forEach((q,i)=>rt.api.state().er.answers[i]=q.answer);
+  rt.element('submitExtensive').onclick();assert.equal(rt.api.progress().extensiveTotal,2);assert.equal(rt.api.progress().extensiveCorrect,2);
+  rt.element('shadowDone').onclick();rt.element('retellDone').onclick();
+  assert.ok(rt.api.progress().completed.includes('extensive'));assert.equal(rt.api.state().er.shadowDone,true);assert.equal(rt.api.state().er.retellDone,true);
+  const again=runtime(Object.fromEntries(rt.saved));again.api.setDate('2026-09-12');assert.equal(again.api.state().er.submitted,true);assert.equal(again.api.state().er.retellDone,true);
+});
+
+test('opening an article word shows Chinese but does not enrol it until explicit confirmation',()=>{
+  let rt=runtime();rt.api.setDate('2026-09-11');const L=rt.api.lesson(),surface=L.reading.passage.match(/[A-Za-z]+(?:['’][A-Za-z]+)?/)[0],entry=rt.api.articleEntry(surface);
+  assert.ok(entry?.meaning);assert.equal(Object.keys(rt.api.userVocabulary().items).length,0);
+  const wrapped=rt.api.articleText(L.reading.passage,'reading');assert.match(wrapped,/data-lookup-word/);assert.equal(wrapped.includes(entry.meaning),false);
+  assert.equal((wrapped.match(/data-lookup-word=/g)||[]).length,(L.reading.passage.match(/[A-Za-z]+(?:['’][A-Za-z]+)?/g)||[]).length);
+  assert.equal(rt.api.articleEntry('constructor'),null);
+  rt.api.openArticleWord(surface,'reading');const panel=rt.api.lookupPanelHtml(L,'reading');assert.ok(panel.includes(entry.meaning));
+  assert.equal(Object.keys(rt.api.userVocabulary().items).length,0);
+  rt.api.closeArticleWord();assert.equal(Object.keys(rt.api.userVocabulary().items).length,0);
+  rt.api.openArticleWord(surface,'reading');assert.equal(rt.api.enrolArticleWord(L),true);
+  const stored=JSON.parse(rt.saved.get(USER_VOCAB_STORAGE_KEY));assert.equal(Object.keys(stored.items).length,1);assert.equal(stored.items[entry.word].active,true);
+  assert.equal(stored.items[entry.word].dueDate,'2026-08-29');
+  assert.equal(rt.api.progress().wordErrors.length,0);
+  rt=runtime(Object.fromEntries(rt.saved));assert.equal(rt.api.userVocabulary().items[entry.word].active,true);
+});
+
+test('user vocabulary capacity keeps a newly added active word and evicts the oldest inactive item',()=>{
+  const items={};
+  const name=i=>'w'+String.fromCharCode(97+Math.floor(i/676)%26,97+Math.floor(i/26)%26,97+i%26);
+  for(let i=0;i<MAX_USER_VOCABULARY;i++){const word=name(i);items[word]={word,meaning:'测试词',phonetic:'/wɜːd/',active:i!==0,dueDate:'2026-09-01',addedAt:new Date(Date.UTC(2025,0,1,0,0,i)).toISOString()}}
+  const next=addUserVocabulary({version:1,items},{word:'newest',meaning:'最新加入的词',phonetic:'/ˈnjuːɪst/'},'2026-09-12','extensive');
+  assert.equal(Object.keys(next.items).length,MAX_USER_VOCABULARY);assert.equal(next.items.newest.active,true);assert.equal(Object.hasOwn(next.items,name(0)),false);
 });

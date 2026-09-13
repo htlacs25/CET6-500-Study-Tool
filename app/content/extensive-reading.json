@@ -1,0 +1,2212 @@
+[
+  {
+    "date": "2026-08-28",
+    "title": "Alice and the Impossible Hallway",
+    "titleZh": "爱丽丝与不可能的走廊",
+    "category": "Literature · curiosity and self-control",
+    "sourceType": "public-domain adaptation",
+    "sourceNote": "Original adaptation of Lewis Carroll's public-domain novel Alice's Adventures in Wonderland.",
+    "text": "Alice followed the White Rabbit into a deep hole and reached a long hallway. Many doors surrounded her, but every one was locked. On a glass table, she found a tiny golden key. It opened the smallest door, beyond which stood a bright garden. However, Alice was far too large to pass through.\n\nShe then noticed a bottle marked with a simple instruction to drink. Alice did not obey at once. She checked it carefully because she remembered that unknown things might be dangerous. After tasting a little, she became small enough for the door—but she had left the key on the high table. A cake made her grow again, and soon her head touched the ceiling.\n\nAt first, Alice blamed the strange room. Then she understood that rushing from one choice to another had created part of the problem. She stopped, reviewed what each object had done, and formed a plan. The hallway remained unreasonable, yet careful thinking gave her some control. It also helped her avoid repeating the same mistake. Her experience suggests that curiosity is useful when it travels together with patience.",
+    "textZh": "爱丽丝跟着白兔掉进一个深洞，来到一条长走廊。四周有许多门，却全都锁着。她在玻璃桌上发现一把小金钥匙，它能打开最小的门，门外是一座美丽花园，可爱丽丝太大，无法通过。\n\n她又看到一只写着简单饮用说明的瓶子。爱丽丝没有立刻照做，而是先仔细检查，因为她记得陌生东西可能有危险。尝了一点后，她缩小到能穿门的尺寸，却把钥匙落在高桌上。一块蛋糕又让她变大，头几乎碰到天花板。\n\n起初，爱丽丝责怪这个古怪房间。后来她意识到，自己匆忙地从一个选择跳到另一个选择，也造成了部分麻烦。她停下来，回想每样东西的作用，再制定计划。走廊依然不讲道理，但认真思考让她获得了一些掌控。这也帮助她避免重复同一个错误。她的经历说明，好奇心与耐心同行时才更有用。",
+    "listeningTip": "先听表示先后顺序的词，如 then、after 和 at first，再留意大小变化及其原因。",
+    "speakingPrompt": "Describe a time when curiosity helped you, but patience was also necessary.",
+    "speakingPromptZh": "描述一次好奇心帮助了你、但同时也需要耐心的经历。",
+    "keyPhrases": [
+      {
+        "en": "far too large",
+        "zh": "大得远远超过需要"
+      },
+      {
+        "en": "at once",
+        "zh": "立刻"
+      },
+      {
+        "en": "form a plan",
+        "zh": "制定计划"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why did Alice not drink immediately?",
+        "promptZh": "爱丽丝为什么没有立刻喝？",
+        "options": [
+          "She disliked the color",
+          "She wanted the Rabbit to return",
+          "She first considered possible danger",
+          "The bottle was empty"
+        ],
+        "optionsZh": [
+          "她不喜欢颜色",
+          "她想等白兔回来",
+          "她先考虑了可能的危险",
+          "瓶子是空的"
+        ],
+        "answer": 2,
+        "explanation": "第二段说明她先检查瓶子，因为陌生东西可能有危险。"
+      },
+      {
+        "prompt": "What lesson does the passage emphasize?",
+        "promptZh": "文章强调了什么道理？",
+        "options": [
+          "Locked doors should be broken",
+          "Curiosity works better with patience",
+          "Every instruction is trustworthy",
+          "Size is the cause of every problem"
+        ],
+        "optionsZh": [
+          "锁门都应被打破",
+          "好奇心与耐心结合更有效",
+          "所有说明都可信",
+          "大小是一切问题的原因"
+        ],
+        "answer": 1,
+        "explanation": "末句明确把好奇心和耐心联系起来。"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-29",
+    "title": "A Library for Things",
+    "titleZh": "一座借用物品的图书馆",
+    "category": "Community · shared resources",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article; not a report of a live event.",
+    "text": "A neighborhood center has opened a small “library of things” where residents can borrow useful objects instead of books. Its shelves hold drills, folding tables, camping lamps, cake tins, and other items that many people need only a few times a year. Members pay a modest yearly fee and may reserve an object online for up to one week.\n\nThe center created the service after volunteers noticed that local storage rooms were full of rarely used equipment. Before an item enters the collection, a trained volunteer checks it, records its condition, and writes clear safety instructions. Borrowers must also report damage, even when the object still works. This rule helps the next user avoid an unpleasant surprise.\n\nSupporters say the project saves money and reduces waste because fewer people buy products for a single task. It has also created unexpected conversations. A person collecting a ladder may meet someone returning a sewing machine and exchange practical advice. The center does not claim that sharing can replace every private purchase. Instead, it offers a simple question before shopping: do I need to own this object, or do I only need to use it?",
+    "textZh": "一家社区中心开设了一座小型“物品图书馆”，居民借到的不是书，而是实用物件。架子上有电钻、折叠桌、露营灯、蛋糕模具等一年可能只用几次的东西。会员缴纳不高的年费，就能在线预约物品，每次最多借一周。\n\n志愿者发现当地储藏室堆满很少使用的设备后，中心建立了这项服务。物品入库前，受过培训的志愿者会检查、记录状态并写清安全说明。借用者即使发现物品仍能使用，也必须报告损坏，以免下一位使用者遇到意外。\n\n支持者认为，这个项目既省钱又减少浪费，因为人们不必为一次任务购买新产品。它还带来了意料之外的交流：取梯子的人可能碰到归还缝纫机的人，并交换实用建议。中心并不声称共享能代替一切私人购买，而是希望人们购物前先问：我真的需要拥有它，还是只需要使用它？",
+    "listeningTip": "留意数字和规则类信息，尤其是费用、借用期限以及借用者的责任。",
+    "speakingPrompt": "Would a library of things work in your neighborhood? Explain what it should lend.",
+    "speakingPromptZh": "“物品图书馆”在你的社区可行吗？说明它应该借出哪些东西。",
+    "keyPhrases": [
+      {
+        "en": "reserve an object",
+        "zh": "预约一件物品"
+      },
+      {
+        "en": "report damage",
+        "zh": "报告损坏"
+      },
+      {
+        "en": "reduce waste",
+        "zh": "减少浪费"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What happens before an object joins the collection?",
+        "promptZh": "物品进入收藏前会经过什么流程？",
+        "options": [
+          "It is sold online",
+          "A volunteer checks and records it",
+          "Every resident tests it",
+          "It is kept unused for a year"
+        ],
+        "optionsZh": [
+          "在网上出售",
+          "由志愿者检查并记录",
+          "每位居民都测试",
+          "闲置一年"
+        ],
+        "answer": 1,
+        "explanation": "第二段说明受训志愿者会检查并记录物品状态。"
+      },
+      {
+        "prompt": "What broader idea does the center encourage?",
+        "promptZh": "中心鼓励人们思考什么更广泛的问题？",
+        "options": [
+          "All tools should be free",
+          "Old equipment is unsafe",
+          "Using something may not require owning it",
+          "Online booking should replace conversation"
+        ],
+        "optionsZh": [
+          "所有工具都应免费",
+          "旧设备都不安全",
+          "使用某物未必需要拥有它",
+          "网上预约应取代交流"
+        ],
+        "answer": 2,
+        "explanation": "结尾邀请人们区分“拥有”和“仅仅使用”的需要。"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-30",
+    "title": "Mole's First Morning by the River",
+    "titleZh": "鼹鼠在河边的第一个早晨",
+    "category": "Literature · discovering a wider world",
+    "sourceType": "public-domain adaptation",
+    "sourceNote": "Original adaptation of Kenneth Grahame's public-domain novel The Wind in the Willows.",
+    "text": "Mole had spent all morning cleaning his underground home. Spring air entered through an open passage, carrying a smell of wet earth and growing plants. Suddenly, brushes and buckets seemed unimportant. He dropped them, climbed upward, and pushed through the soil until sunlight filled his eyes.\n\nAbove ground, Mole walked without a destination. He soon reached a river, something he had never truly known. The moving water appeared alive: it flashed, whispered, and changed its face every moment. Rat came past in a small boat and invited the nervous stranger aboard. Mole tried to hide his lack of experience, but Rat noticed and kindly showed him where to sit.\n\nThey shared a picnic on the bank. Rat described islands, streams, and animals who lived farther away. Mole listened with delight, although he could not understand why anyone would leave such a beautiful river. By evening, he knew that his familiar rooms were only one small part of life. His decision to abandon the spring cleaning was careless in one sense, yet it opened a door that routine had kept shut. The new world became less frightening because someone welcomed him into it.",
+    "textZh": "鼹鼠整个早晨都在打扫地下的家。春天的空气从通道涌入，带着湿土和新生植物的气味。突然之间，刷子和水桶显得不再重要。他丢下工具，向上爬去，钻出泥土，阳光一下充满双眼。\n\n来到地面后，鼹鼠漫无目的地走着，很快遇见一条他从未真正了解的河。流动的水像有生命一样，闪光、低语，时刻改变面貌。河鼠划着小船经过，邀请紧张的陌生人上船。鼹鼠想掩饰自己的生疏，但河鼠看了出来，并友好地告诉他坐在哪里。\n\n他们在岸边野餐。河鼠讲起岛屿、溪流和住在远处的动物。鼹鼠听得入迷，却不明白为什么有人愿意离开如此美丽的河。到傍晚，他明白熟悉的房间只是生活的一小部分。丢下大扫除从某种角度看有些任性，却打开了一扇被日常习惯关住的门。因为有人欢迎他，新世界也不再那么可怕。",
+    "listeningTip": "重点听环境声音和感官动词，并区分鼹鼠在地面前后的感受变化。",
+    "speakingPrompt": "What familiar routine would you pause in order to explore something new?",
+    "speakingPromptZh": "为了探索新事物，你愿意暂时放下哪种熟悉的日常习惯？",
+    "keyPhrases": [
+      {
+        "en": "without a destination",
+        "zh": "没有目的地"
+      },
+      {
+        "en": "lack of experience",
+        "zh": "缺乏经验"
+      },
+      {
+        "en": "one small part of",
+        "zh": "……的一小部分"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why did Mole leave his cleaning?",
+        "promptZh": "鼹鼠为什么放下打扫？",
+        "options": [
+          "Rat called him",
+          "Spring made the outside world attractive",
+          "His home was already perfect",
+          "The river entered his house"
+        ],
+        "optionsZh": [
+          "河鼠叫他",
+          "春天气息让外面的世界充满吸引力",
+          "他的家已经完美",
+          "河水流进了家"
+        ],
+        "answer": 1,
+        "explanation": "第一段描写春天气息激发了他走出去的冲动。"
+      },
+      {
+        "prompt": "What made the new world less frightening?",
+        "promptZh": "什么让新世界不那么可怕？",
+        "options": [
+          "Mole brought his brushes",
+          "The river stopped moving",
+          "Rat welcomed and guided him",
+          "He returned underground early"
+        ],
+        "optionsZh": [
+          "鼹鼠带着刷子",
+          "河停止流动",
+          "河鼠欢迎并指导他",
+          "他很早回到地下"
+        ],
+        "answer": 2,
+        "explanation": "末句指出他人的欢迎降低了陌生感。"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-31",
+    "title": "A Rooftop Garden Becomes a Weather Classroom",
+    "titleZh": "屋顶花园变身天气课堂",
+    "category": "Education · practical science",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article; not a report of a live event.",
+    "text": "Students at a city secondary school are using a rooftop garden as a small weather classroom. The garden already supplied herbs for cooking lessons, but teachers wanted it to support science learning as well. With simple instruments, students now record rainfall, wind direction, air temperature, and the amount of water held in the soil.\n\nEach class takes responsibility for one week of observations. Teams measure at the same times every day and enter the results into a shared table. This regular schedule matters because a reading taken at noon cannot be fairly compared with one taken before sunrise. When an instrument produces an unusual result, students check it again rather than quietly removing the number.\n\nThe project has led to practical questions. One group found that containers beside a pale wall stayed cooler than containers beside a dark wall. Another noticed that shallow pots lost water quickly on windy days. The school is careful not to present these limited observations as major scientific discoveries. Their value lies in teaching a habit: collect evidence patiently, look for patterns, and remain honest about what the evidence cannot prove.",
+    "textZh": "一所城市中学的学生正把屋顶花园当作小型天气课堂。花园原本为烹饪课提供香草，如今老师希望它也服务于科学学习。学生使用简单仪器，记录降雨量、风向、气温以及土壤含水量。\n\n每个班负责一周的观察。小组每天在相同时间测量，并把结果填入共享表格。固定时间十分重要，因为中午的数据不能与日出前的数据公平比较。如果仪器出现异常结果，学生会重新检查，而不是悄悄删掉这个数字。\n\n项目带来了不少实际问题。一组发现浅色墙旁的容器比深色墙旁的凉，另一组注意到浅盆在大风天失水更快。学校不会把这些有限观察说成重大的科学发现。它们的价值在于培养一种习惯：耐心收集证据、寻找规律，并诚实面对证据无法证明的事情。",
+    "listeningTip": "听清测量项目与实验规则，特别注意 because、rather than 等表达因果或选择的连接词。",
+    "speakingPrompt": "How could your school or home become a place for a simple science project?",
+    "speakingPromptZh": "你的学校或家可以怎样成为开展简单科学项目的场所？",
+    "keyPhrases": [
+      {
+        "en": "take responsibility for",
+        "zh": "负责"
+      },
+      {
+        "en": "shared table",
+        "zh": "共享表格"
+      },
+      {
+        "en": "look for patterns",
+        "zh": "寻找规律"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why do students measure at the same times?",
+        "promptZh": "学生为什么要在相同时间测量？",
+        "options": [
+          "To finish before class",
+          "To make comparisons fairer",
+          "To avoid using instruments",
+          "To change the weather"
+        ],
+        "optionsZh": [
+          "为了上课前完成",
+          "为了让比较更公平",
+          "为了避免使用仪器",
+          "为了改变天气"
+        ],
+        "answer": 1,
+        "explanation": "第二段说明不同时间取得的数据难以公平比较。"
+      },
+      {
+        "prompt": "What is the project's main educational value?",
+        "promptZh": "这个项目最主要的教育价值是什么？",
+        "options": [
+          "Producing food for sale",
+          "Making a major discovery",
+          "Building careful habits with evidence",
+          "Predicting every storm"
+        ],
+        "optionsZh": [
+          "生产食物出售",
+          "做出重大突破",
+          "培养认真对待证据的习惯",
+          "预测每场暴风雨"
+        ],
+        "answer": 2,
+        "explanation": "结尾强调耐心收集、寻找规律并承认证据的限制。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-01",
+    "title": "The March Family's Home Newspaper",
+    "titleZh": "马奇一家的家庭报纸",
+    "category": "Literature · creativity at home",
+    "sourceType": "public-domain adaptation",
+    "sourceNote": "Original adaptation of Louisa May Alcott's public-domain novel Little Women.",
+    "text": "On a cold evening, the four March sisters had no money for expensive entertainment, but they did have paper, ink, and strong opinions. Jo proposed that they produce a family newspaper. Each sister would contribute something: a story, a poem, local observations, or humorous advertisements for household objects.\n\nThe work quickly revealed their different characters. Meg wanted the pages to look respectable. Beth quietly wrote about music and home. Amy decorated her section with great care, while Jo filled several pages and resisted every request to shorten them. Their mother became the first reader. She laughed at the jokes but also asked why one article made an unkind reference to a neighbor.\n\nJo first defended the line as harmless fun. When she imagined the neighbor reading it, however, the joke seemed less clever. She replaced it with a fictional character and found that the story actually improved. The newspaper gave the sisters an audience without requiring a public stage. More importantly, it taught them that creative freedom includes responsibility. Words made inside a warm room can still travel into another person's feelings.",
+    "textZh": "一个寒冷的夜晚，马奇家四姐妹没有钱享受昂贵娱乐，却有纸、墨水和鲜明的观点。乔提议办一份家庭报纸。每个姐妹都要投稿，可以是故事、诗歌、身边观察，或为家中物品写的幽默广告。\n\n这项工作很快显出她们不同的性格。梅格希望版面体面；贝丝安静地写音乐和家庭；艾米认真装饰自己的栏目；乔则写满好几页，还不肯接受删减。母亲成了第一位读者。她被笑话逗乐，却也问道，为什么有篇文章要不友善地提到邻居。\n\n乔起初辩称那只是无害玩笑。但当她想象邻居读到它时，笑话便不再聪明。她把真实的人换成虚构角色，反而让故事更好了。家庭报纸让姐妹们不用登上公共舞台也拥有读者。更重要的是，它教会她们创作自由也包含责任：温暖房间里写下的话，仍会走进另一个人的感受。",
+    "listeningTip": "注意四姐妹各自的贡献，并听出 Jo 的态度从辩护到反思的变化。",
+    "speakingPrompt": "What responsibilities should a writer consider when using real people in a story?",
+    "speakingPromptZh": "作家在故事中使用真实人物时应考虑哪些责任？",
+    "keyPhrases": [
+      {
+        "en": "contribute something",
+        "zh": "贡献一些内容"
+      },
+      {
+        "en": "harmless fun",
+        "zh": "无伤大雅的玩笑"
+      },
+      {
+        "en": "creative freedom",
+        "zh": "创作自由"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What concern did the sisters' mother raise?",
+        "promptZh": "姐妹们的母亲提出了什么担忧？",
+        "options": [
+          "The paper cost too much",
+          "A joke might hurt a neighbor",
+          "Beth wrote no music",
+          "The newspaper was too short"
+        ],
+        "optionsZh": [
+          "纸太贵",
+          "一个笑话可能伤害邻居",
+          "贝丝没有写音乐",
+          "报纸太短"
+        ],
+        "answer": 1,
+        "explanation": "母亲特别指出了一处对邻居不友善的内容。"
+      },
+      {
+        "prompt": "Why did Jo change the article?",
+        "promptZh": "乔为什么修改文章？",
+        "options": [
+          "She lost the original page",
+          "Meg ordered her to stop",
+          "She considered how the neighbor might feel",
+          "She wanted fewer readers"
+        ],
+        "optionsZh": [
+          "她弄丢了原稿",
+          "梅格命令她停下",
+          "她考虑了邻居可能的感受",
+          "她希望读者更少"
+        ],
+        "answer": 2,
+        "explanation": "她想象邻居读到文章后，意识到玩笑并不合适。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-02",
+    "title": "Captioned Mornings at a Small Cinema",
+    "titleZh": "小影院的字幕早场",
+    "category": "Culture · accessible entertainment",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article; not a report of a live event.",
+    "text": "A small cinema has introduced a weekly morning screening with on-screen captions and softer sound. The idea came from a discussion with older residents, language learners, and people who find ordinary film sound difficult to follow. The captions show spoken words and also identify important sounds, such as a telephone ringing behind a character.\n\nManagers chose a morning period because the building is usually quiet then. Tickets are priced the same as for other daytime shows, and any customer may attend. The cinema also keeps some lights low instead of making the room completely dark. Staff explain that different viewers need different conditions; there is no single setting that is comfortable for everyone.\n\nThe first challenge was technical rather than financial. Captions sometimes covered written information already shown in a film, so workers had to test each title and adjust the display position. The cinema is collecting comments before adding more sessions. Its experiment shows that access is often created through many small decisions, not one dramatic change. Clear information on the schedule is equally important: a useful service achieves little if the people who need it do not know it exists.",
+    "textZh": "一家小影院推出每周一次的字幕早场，同时把声音调得更柔和。这个想法来自与老年居民、语言学习者以及难以听清普通电影声音的人交流。字幕不仅显示台词，也会标出重要声音，例如角色身后响起的电话。\n\n管理者选择上午，是因为那时影院通常安静。票价与其他日场相同，任何观众都能参加。影院还保留一些较暗的灯光，而不是让房间完全黑下来。员工解释，不同观众需要不同条件，不存在让所有人都舒适的唯一设置。\n\n最初的难题是技术而非资金。字幕有时会盖住影片中原有的文字，因此工作人员必须测试每部片并调整显示位置。影院正在收集意见，再决定是否增加场次。这个尝试说明，无障碍体验往往来自许多小决定，而不是一次巨大改变。排片信息是否清楚同样重要：如果需要它的人不知道服务存在，再有用也难以发挥作用。",
+    "listeningTip": "第一遍抓住服务对象和主要调整，第二遍关注技术问题及解决办法。",
+    "speakingPrompt": "Which small change could make a public place more comfortable for more people?",
+    "speakingPromptZh": "哪一项小改变能让公共场所对更多人更舒适？",
+    "keyPhrases": [
+      {
+        "en": "on-screen captions",
+        "zh": "屏幕字幕"
+      },
+      {
+        "en": "adjust the position",
+        "zh": "调整位置"
+      },
+      {
+        "en": "collect comments",
+        "zh": "收集意见"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Who helped inspire the new screening?",
+        "promptZh": "哪些人推动了新场次的想法？",
+        "options": [
+          "Only film directors",
+          "People with several different listening needs",
+          "Customers asking for louder sound",
+          "Workers from another cinema"
+        ],
+        "optionsZh": [
+          "只有电影导演",
+          "有不同听觉需求的人们",
+          "要求更大音量的顾客",
+          "另一家影院的员工"
+        ],
+        "answer": 1,
+        "explanation": "第一段列出了老年人、语言学习者等不同群体。"
+      },
+      {
+        "prompt": "What technical problem did staff face?",
+        "promptZh": "员工遇到了什么技术问题？",
+        "options": [
+          "The screen was too small",
+          "Captions could cover other written information",
+          "Morning films had no sound",
+          "Tickets could not be printed"
+        ],
+        "optionsZh": [
+          "银幕太小",
+          "字幕可能遮挡其他文字",
+          "早场电影没有声音",
+          "电影票无法打印"
+        ],
+        "answer": 1,
+        "explanation": "第三段明确说明字幕会盖住影片中已有的文字。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-03",
+    "title": "Holmes and the Owner of the Hat",
+    "titleZh": "福尔摩斯与帽子的主人",
+    "category": "Literature · observation and uncertainty",
+    "sourceType": "public-domain adaptation",
+    "sourceNote": "Original adaptation inspired by Arthur Conan Doyle's public-domain Sherlock Holmes story The Blue Carbuncle.",
+    "text": "A worn black hat arrived at Baker Street after a street accident. Its owner had disappeared, leaving no name behind. Watson saw only an ordinary object that was too old to be valuable. Holmes, however, placed it under a lamp and asked what it could reveal about the person who had worn it.\n\nThe hat was large, so Holmes guessed that its owner was probably an intelligent man, although he admitted that head size was not perfect evidence. Dust on the upper surface suggested that the hat had hung indoors for weeks. Several careful repairs showed that the owner once valued his appearance but could no longer afford a replacement. A few short hairs inside had been recently cut.\n\nWatson was impressed, yet Holmes warned him not to treat every guess as a fact. Each mark supported more than one possible story. The pair therefore placed a simple notice in an evening paper, asking the owner to collect his property. When a worried man answered it, Holmes compared the stranger's account with the physical clues. Observation had produced useful questions, but conversation was still needed to test the answers.",
+    "textZh": "一顶破旧的黑帽子在一次街头意外后被送到贝克街。帽子的主人消失了，也没留下姓名。华生只看到一件不值钱的普通物品，福尔摩斯却把它放在灯下，思考它能透露出怎样的主人。\n\n帽子很大，所以福尔摩斯推测主人可能很聪明，不过他也承认头部大小并不是完美证据。帽顶的灰尘说明它在室内挂了好几周；几处仔细修补表明主人曾重视外表，却买不起新帽子；帽内的短发则像是刚剪过。\n\n华生十分佩服，但福尔摩斯提醒他不要把所有猜测都当成事实。每道痕迹都可能支持不止一种故事。于是两人在晚报上刊登简短启事，请主人来取。当一个焦急的人回应后，福尔摩斯把他的说法与实物线索比较。观察提出了有用问题，但仍需交谈来检验答案。",
+    "listeningTip": "听线索时用“物品特征—推测”配对，并注意 probably、suggested 等表示不确定的词。",
+    "speakingPrompt": "Choose an everyday object and explain what it might suggest about its owner.",
+    "speakingPromptZh": "选择一件日常物品，说明它可能透露主人哪些信息。",
+    "keyPhrases": [
+      {
+        "en": "ordinary object",
+        "zh": "普通物品"
+      },
+      {
+        "en": "physical clues",
+        "zh": "实物线索"
+      },
+      {
+        "en": "treat a guess as a fact",
+        "zh": "把猜测当作事实"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What did the repairs suggest to Holmes?",
+        "promptZh": "帽子上的修补让福尔摩斯想到什么？",
+        "options": [
+          "The owner hated the hat",
+          "The owner valued appearance but lacked money",
+          "The hat came from a uniform",
+          "Watson had repaired it"
+        ],
+        "optionsZh": [
+          "主人讨厌帽子",
+          "主人重视外表但缺钱",
+          "帽子来自制服",
+          "华生修过它"
+        ],
+        "answer": 1,
+        "explanation": "第二段把仔细修补与曾经重视外表、如今无钱更换联系起来。"
+      },
+      {
+        "prompt": "Why did Holmes publish a notice?",
+        "promptZh": "福尔摩斯为什么刊登启事？",
+        "options": [
+          "To sell the hat",
+          "To test deductions by meeting the owner",
+          "To find a new assistant",
+          "To advertise his lamp"
+        ],
+        "optionsZh": [
+          "为了卖帽子",
+          "为了见到主人并检验推断",
+          "为了寻找新助手",
+          "为了宣传台灯"
+        ],
+        "answer": 1,
+        "explanation": "结尾说明交谈能用来检验观察所得的答案。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-04",
+    "title": "Bus Drivers Learn Basic Bicycle Repair",
+    "titleZh": "公交司机学习基础自行车维修",
+    "category": "Transport · connected journeys",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article; not a report of a live event.",
+    "text": "A local transport center has begun offering basic bicycle-repair lessons to bus drivers and station staff. The short course covers loose chains, soft tires, and brakes that need simple adjustment. It does not prepare workers to replace professional mechanics. Its aim is to help when a small fault interrupts a passenger's combined bicycle-and-bus journey.\n\nThe idea developed after staff repeatedly saw riders arrive with minor problems. A person who had cycled several kilometers to a station could miss the last bus because a chain had fallen off. During training, workers practise on old bicycles donated for education. They also learn when not to make a repair. A damaged wheel or broken brake cable requires proper equipment and expert attention.\n\nSmall tool stands are now available at selected stations, and passengers complete repairs themselves whenever possible. Staff can explain the steps but record each use for safety. The program highlights a wider point about public transport: a journey rarely begins at the bus door. Walking paths, bicycle parking, signs, and helpful information all affect whether the system feels reliable. Sometimes a five-minute repair protects an hour of travel.",
+    "textZh": "一家地方交通中心开始为公交司机和车站员工提供基础自行车维修课。短课包括处理松动的链条、缺气的轮胎和需要简单调整的刹车。课程并不是把员工培养成专业修车师，而是希望在小故障打断乘客“自行车加公交”的行程时提供帮助。\n\n这个想法源于员工多次看到骑车人遇到小问题。有人骑了几公里到车站，却可能因为链条脱落错过末班车。培训中，员工在捐作教学的旧自行车上练习，也学习什么时候不能动手。车轮损坏或刹车线断裂，需要专业设备和专家处理。\n\n部分车站现已设置小型工具台，乘客尽量自己维修。员工可以说明步骤，但会为安全记录每次使用。这个项目提醒人们：公共交通的一次行程很少从公交车门才开始。步道、自行车停放、标志和有用信息都会影响系统是否可靠。有时五分钟的维修能保住一小时的行程。",
+    "listeningTip": "注意课程“能做”和“不能做”的边界，并抓住最后一段对公共交通的扩展理解。",
+    "speakingPrompt": "What service at a bus or train station would make your journeys easier?",
+    "speakingPromptZh": "公交站或火车站增加什么服务会让你的出行更方便？",
+    "keyPhrases": [
+      {
+        "en": "minor problem",
+        "zh": "小问题"
+      },
+      {
+        "en": "expert attention",
+        "zh": "专家处理"
+      },
+      {
+        "en": "combined journey",
+        "zh": "组合式行程"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What is the course designed to do?",
+        "promptZh": "这门课程的设计目的是什么？",
+        "options": [
+          "Replace all mechanics",
+          "Help with small bicycle faults",
+          "Teach drivers to race",
+          "Sell donated bicycles"
+        ],
+        "optionsZh": [
+          "取代所有修车师",
+          "帮助处理自行车小故障",
+          "教司机比赛",
+          "出售捐赠自行车"
+        ],
+        "answer": 1,
+        "explanation": "第一段明确把目标限定为帮助解决影响行程的小故障。"
+      },
+      {
+        "prompt": "Which problem should be left to an expert?",
+        "promptZh": "哪种问题应交给专家？",
+        "options": [
+          "A loose chain",
+          "A soft tire",
+          "A broken brake cable",
+          "A low seat"
+        ],
+        "optionsZh": [
+          "链条松动",
+          "轮胎缺气",
+          "刹车线断裂",
+          "车座偏低"
+        ],
+        "answer": 2,
+        "explanation": "第二段指出断裂的刹车线需要专业设备和技术。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-05",
+    "title": "Crusoe's Marks on the Post",
+    "titleZh": "鲁滨逊刻在木柱上的记号",
+    "category": "Literature · time and survival",
+    "sourceType": "public-domain adaptation",
+    "sourceNote": "Original adaptation of Daniel Defoe's public-domain novel Robinson Crusoe.",
+    "text": "After the shipwreck, Crusoe carried tools, food, and cloth from the damaged ship before the sea swallowed it. On the lonely island, urgent work filled every hour. He built a shelter, protected his supplies from rain, and searched for fresh water. Soon he realized that survival required more than reacting to the next problem.\n\nCrusoe set a strong wooden post near his shelter and cut one mark into it each day. Every seventh mark was longer, and the marks for each new month had another shape. This rough calendar helped him follow the passing weeks. He also began a journal that listed both hardships and advantages. He was alone, but he had saved tools; he lacked human company, but the island provided food.\n\nThe records did not change the weather or remove danger. They changed Crusoe's relationship with uncertainty. By measuring time and naming his difficulties, he could plan tasks instead of feeling that every day was an endless emergency. The post also protected his memory: without it, fear and repetition might have caused whole weeks to disappear from his mind. Order became one of the tools he rescued, although it had never been stored on the ship.",
+    "textZh": "海难后，鲁滨逊趁破船尚未被海水吞没，把工具、食物和布料运上岸。在孤岛上，紧急工作占满每个小时：搭建住处、让物资避雨、寻找淡水。不久他意识到，生存不能只靠应付眼前的下一个问题。\n\n他在住所旁立起一根结实木柱，每天刻一道痕迹，每七天的记号更长，新月份则换一种形状。这套粗糙日历帮他追踪时间。他还开始写日志，列出困难与有利条件。他孤身一人，却救出了工具；没有同伴，岛上却有食物。\n\n这些记录不能改变天气，也无法消除危险，却改变了鲁滨逊与不确定性的关系。通过计算时间、说清困难，他能安排任务，不再觉得每天都是没有尽头的紧急状况。木柱也保护了记忆；若没有它，恐惧和重复可能让整整几周从脑中消失。秩序成了他救回的工具之一，尽管它从未存放在船上。",
+    "listeningTip": "抓住鲁滨逊记录时间的两种方式，并注意记录带来的心理和实际作用。",
+    "speakingPrompt": "What simple record helps you manage time or uncertainty in daily life?",
+    "speakingPromptZh": "日常生活中，哪种简单记录能帮助你管理时间或不确定性？",
+    "keyPhrases": [
+      {
+        "en": "fresh water",
+        "zh": "淡水"
+      },
+      {
+        "en": "follow the passing weeks",
+        "zh": "追踪流逝的周数"
+      },
+      {
+        "en": "an endless emergency",
+        "zh": "没完没了的紧急状态"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "How did Crusoe show each seventh day?",
+        "promptZh": "鲁滨逊怎样标出每个第七天？",
+        "options": [
+          "With a longer mark",
+          "With blue paint",
+          "By moving the post",
+          "By writing on cloth"
+        ],
+        "optionsZh": [
+          "刻一道更长的痕迹",
+          "涂蓝色油漆",
+          "移动木柱",
+          "写在布上"
+        ],
+        "answer": 0,
+        "explanation": "第二段明确说每第七道痕迹会更长。"
+      },
+      {
+        "prompt": "What did keeping records allow Crusoe to do?",
+        "promptZh": "保存记录让鲁滨逊能够做什么？",
+        "options": [
+          "Control the weather",
+          "Forget the shipwreck",
+          "Plan instead of only reacting",
+          "Speak with other people"
+        ],
+        "optionsZh": [
+          "控制天气",
+          "忘记海难",
+          "制定计划而非只被动应对",
+          "与其他人交谈"
+        ],
+        "answer": 2,
+        "explanation": "第三段说记录使他能安排任务，不把每天都当成紧急状况。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-06",
+    "title": "Clear Labels for a Community Fridge",
+    "titleZh": "社区冰箱的清晰标签",
+    "category": "Food · safe sharing",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article; not a report of a live event.",
+    "text": "A community kitchen has redesigned the labels used on its shared refrigerator. Local shops and residents place extra food inside, and anyone may take what they can use. Volunteers found, however, that kindness alone did not keep the service safe. Food sometimes arrived without a preparation date or a list of possible allergens.\n\nThe new label uses three large sections: what the food is, when it was prepared or opened, and what ingredients require special attention. Colored symbols show whether an item belongs on the “use today” shelf or can remain longer. Volunteers check the refrigerator twice daily and remove anything with missing information. They also measure its temperature rather than judging safety by touch.\n\nSome donors first felt that the rules were unfriendly because perfectly good dishes could be rejected. The kitchen explained that unknown food places the greatest risk on people who already have fewer choices. Clear standards protect trust, and trust keeps the sharing system alive. A label cannot prevent every mistake, but it turns private knowledge into public information. The redesigned card is a small piece of paper with an important job: it allows generosity to travel safely from one household to another.",
+    "textZh": "一家社区厨房重新设计了共享冰箱使用的标签。当地商店和居民把多余食物放进去，任何人都可取走能用的部分。但志愿者发现，仅靠善意并不能保证安全；有些食物送来时没有制作日期，也没有可能引起过敏的成分表。\n\n新标签分成三大栏：食物名称、制作或开封时间、需要特别注意的配料。彩色标记说明物品应放在“今日食用”架，还是能保存更久。志愿者每天检查两次，移除信息不全的物品，并测量冰箱温度，而不是用手感判断安全。\n\n起初有些捐赠者认为规定不够友好，因为看似完好的菜也可能被拒收。厨房解释，来源不明的食物对本来选择就少的人风险最大。清楚的标准保护信任，而信任让共享体系持续。标签不能杜绝一切错误，却能把私人信息变成公共信息。这张小纸片承担着重要工作：让善意安全地从一个家庭传到另一个家庭。",
+    "listeningTip": "重点听三项标签信息与志愿者的检查流程，分清捐赠者最初的看法和厨房的回应。",
+    "speakingPrompt": "What information should always appear on food that is shared with strangers?",
+    "speakingPromptZh": "与陌生人分享的食物上应始终标明哪些信息？",
+    "keyPhrases": [
+      {
+        "en": "possible allergens",
+        "zh": "可能的过敏原"
+      },
+      {
+        "en": "missing information",
+        "zh": "缺失的信息"
+      },
+      {
+        "en": "protect trust",
+        "zh": "维护信任"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which information appears on the new label?",
+        "promptZh": "新标签上包含哪项信息？",
+        "options": [
+          "The donor's income",
+          "The preparation or opening time",
+          "The price at every shop",
+          "The refrigerator's brand"
+        ],
+        "optionsZh": [
+          "捐赠者收入",
+          "制作或开封时间",
+          "每家商店的售价",
+          "冰箱品牌"
+        ],
+        "answer": 1,
+        "explanation": "第二段列出了制作或开封时间。"
+      },
+      {
+        "prompt": "Why can strict rules support generosity?",
+        "promptZh": "为什么严格规定反而能支持善意共享？",
+        "options": [
+          "They make food look expensive",
+          "They build the trust needed for sharing",
+          "They allow fewer people to donate",
+          "They remove the need for volunteers"
+        ],
+        "optionsZh": [
+          "让食物显得昂贵",
+          "建立共享所需的信任",
+          "让更少的人捐赠",
+          "不再需要志愿者"
+        ],
+        "answer": 1,
+        "explanation": "第三段说明清晰标准保护信任，而信任维持共享系统。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-07",
+    "title": "Black Beauty and the Stable Fire",
+    "titleZh": "黑骏马与马厩火灾",
+    "category": "Literature · calm action in danger",
+    "sourceType": "public-domain adaptation",
+    "sourceNote": "Original adaptation of Anna Sewell's public-domain novel Black Beauty.",
+    "text": "Black Beauty was resting at an inn when the smell of smoke reached the stable. At first, the young worker thought the horses were only nervous because of the weather. Then he saw a red light through a crack above the door. Fire had started in a nearby building and was spreading toward the roof.\n\nPeople rushed in, shouting and pulling at the animals. Their panic made the horses step backward. A horse may be physically strong, but fear can make a familiar doorway seem dangerous. James, an experienced driver, entered quietly. He covered Beauty's eyes, spoke in a steady voice, and led him outside without sudden force. Once Beauty moved, another horse followed.\n\nAll the animals escaped before part of the roof fell. Later, several people praised James for being brave. He answered that courage had mattered, but knowledge had mattered too. He understood that frightened animals listen to tone and trust more than to loud commands. The rescue was not a victory of human strength over animal weakness. It succeeded because one person respected how fear changes behavior. Calmness became a practical skill, not merely a pleasant manner.",
+    "textZh": "黑骏马在一家旅店休息时，烟味飘进马厩。起初，年轻伙计以为马匹只是因天气而不安。后来他从门上方的缝隙看到红光：附近建筑起火，火势正向屋顶蔓延。\n\n人们冲进来，大喊着拉扯动物。他们的慌乱反而让马匹后退。马虽然力气大，恐惧却能让熟悉的门口也显得危险。经验丰富的车夫詹姆斯安静地走进来，蒙住黑骏马的眼睛，用稳定的声音说话，不靠突然用力便把它带出。黑骏马一动，另一匹马也跟了出来。\n\n在部分屋顶倒塌前，所有动物都逃脱了。事后人们称赞詹姆斯勇敢，他却说勇气重要，知识也同样重要。他明白，受惊动物对语气和信任的反应强于大声命令。这次救援不是人的力量战胜动物的弱点，而是因为有人尊重恐惧如何改变行为。冷静在此成为实用技能，而不只是一种温和态度。",
+    "listeningTip": "留意火情发展的顺序，以及 shouting 与 steady voice 所形成的对比。",
+    "speakingPrompt": "Why can calm behavior be more effective than force during an emergency?",
+    "speakingPromptZh": "为什么在紧急情况下，冷静行动可能比强力更有效？",
+    "keyPhrases": [
+      {
+        "en": "spread toward",
+        "zh": "向……蔓延"
+      },
+      {
+        "en": "in a steady voice",
+        "zh": "用平稳的声音"
+      },
+      {
+        "en": "practical skill",
+        "zh": "实用技能"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why did the horses move backward?",
+        "promptZh": "马匹为什么往后退？",
+        "options": [
+          "They wanted food",
+          "People's panic increased their fear",
+          "The door was locked",
+          "James called them"
+        ],
+        "optionsZh": [
+          "它们想吃东西",
+          "人们的慌乱加重了它们的恐惧",
+          "门锁住了",
+          "詹姆斯呼唤它们"
+        ],
+        "answer": 1,
+        "explanation": "第二段说明喊叫和拉扯使马匹更加害怕。"
+      },
+      {
+        "prompt": "What does James say helped the rescue besides courage?",
+        "promptZh": "詹姆斯说除了勇气，什么也帮助了救援？",
+        "options": [
+          "Luck",
+          "Knowledge of animal behavior",
+          "A wider doorway",
+          "Heavy rain"
+        ],
+        "optionsZh": [
+          "运气",
+          "对动物行为的了解",
+          "更宽的门",
+          "大雨"
+        ],
+        "answer": 1,
+        "explanation": "他明确指出知识也很重要，并解释了语气与信任的作用。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-08",
+    "title": "Benches That Invite People to Read",
+    "titleZh": "邀请人们阅读的长椅",
+    "category": "Public space · everyday reading",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article; not a report of a live event.",
+    "text": "A riverside park has added weatherproof boxes of books beside six public benches. Visitors may read while they rest, take a book home, or leave another in its place. The project is smaller than a branch library and has no membership cards. Its purpose is to make casual reading possible in a place where people already spend time.\n\nDesigners first planned to attach shelves to every bench. A trial showed that rain entered from the side and that low shelves were difficult for some older visitors to reach. The final boxes stand at waist height, include clear covers, and have small holes that allow damp air to escape. Volunteers inspect them weekly, but readers also report damage through a printed contact number.\n\nThe selection mixes short stories, local history, nature guides, and books for children. Very valuable books are not suitable because every box remains open. The organizers measure success by use, not by keeping each book forever. A guide may disappear but inspire a family walk; a novel may return months later with a different cover. In this open system, movement is evidence that the books are doing their job.",
+    "textZh": "一座河滨公园在六张公共长椅旁设置了防风雨书箱。游客休息时可以阅读，也能把书带回家，或留下另一本书交换。项目比图书馆分馆小，也没有借书证，目的是在人们本来就会停留的地方创造随手阅读的机会。\n\n设计者最初想在每张长椅上安装书架。试用发现雨会从侧面进入，低矮书架也让一些老年游客难以取书。最终书箱设在腰部高度，有透明盖，还开了小孔让湿气散出。志愿者每周检查，读者也能通过印出的联系电话报告损坏。\n\n书籍包括短篇故事、地方史、自然指南和童书。贵重书不适合，因为书箱一直开放。组织者用使用情况衡量成功，而不是要求每本书永久保存。一本指南可能消失，却启发全家散步；一本小说也可能几个月后换着封面回来。在这个开放体系中，流动正说明书籍发挥了作用。",
+    "listeningTip": "注意设计方案从最初到最终的变化，并听清组织者如何定义“成功”。",
+    "speakingPrompt": "Where in your town could a small book-sharing box be most useful, and why?",
+    "speakingPromptZh": "你所在的地方，哪里最适合设置共享书箱？为什么？",
+    "keyPhrases": [
+      {
+        "en": "weatherproof box",
+        "zh": "防风雨箱"
+      },
+      {
+        "en": "at waist height",
+        "zh": "在腰部高度"
+      },
+      {
+        "en": "measure success by",
+        "zh": "用……衡量成功"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why were the original low shelves changed?",
+        "promptZh": "为什么改变了原来的低矮书架设计？",
+        "options": [
+          "They cost too much",
+          "Rain entered and some people could not reach them easily",
+          "Children disliked the books",
+          "They blocked the river view"
+        ],
+        "optionsZh": [
+          "成本太高",
+          "雨水会进入且有人不易够到",
+          "孩子不喜欢这些书",
+          "挡住河景"
+        ],
+        "answer": 1,
+        "explanation": "第二段列出防雨和可达性两个问题。"
+      },
+      {
+        "prompt": "How do organizers judge the project?",
+        "promptZh": "组织者怎样评价项目是否成功？",
+        "options": [
+          "By how much books move and get used",
+          "By selling rare books",
+          "By keeping every title unchanged",
+          "By issuing membership cards"
+        ],
+        "optionsZh": [
+          "看书籍是否流动并被使用",
+          "靠出售珍本书",
+          "让每本书始终不变",
+          "靠发放借书证"
+        ],
+        "answer": 0,
+        "explanation": "第三段明确说他们依据使用情况而非永久保留来衡量。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "title": "Anne's Difficult Apology",
+    "titleZh": "安妮艰难的道歉",
+    "category": "Literature · pride and repair",
+    "sourceType": "public-domain adaptation",
+    "sourceNote": "Original adaptation of L. M. Montgomery's public-domain novel Anne of Green Gables.",
+    "text": "Anne arrived at Green Gables with a quick imagination and an equally quick temper. When Mrs. Lynde criticized her red hair and thin appearance, Anne answered with a storm of angry words. Marilla was shocked. She told Anne that she must apologize before she could join the household normally again.\n\nAt first, Anne refused. She believed an apology would mean that Mrs. Lynde's comments had been acceptable. Matthew quietly listened and suggested another view: Anne could admit that her own reply was wrong without approving the insult that caused it. This distinction gave her a path forward.\n\nAnne prepared a speech and delivered it with so much feeling that it almost became a performance. Yet beneath the dramatic language, she honestly named what she had done. Mrs. Lynde accepted the apology and even found something kind to say about Anne's hair. The meeting did not prove that adults are always right or that anger has no value. It showed that making peace does not require a person to deny the original hurt. Anne kept her sense of justice while taking responsibility for the harm caused by her response.",
+    "textZh": "安妮来到绿山墙时，有着敏捷的想象力和同样急躁的脾气。林德太太批评她的红头发和瘦弱外表，安妮便用一连串愤怒的话回击。玛丽拉很震惊，要求安妮先道歉，才能重新正常参与家庭生活。\n\n起初安妮拒绝，因为她以为道歉就等于承认林德太太的评论没问题。马修安静地听完，提出另一种看法：安妮可以承认自己的回应错误，同时不认可引发回应的侮辱。这个区别给了她前进的路。\n\n安妮准备了一段道歉，说得情感过于充沛，几乎像一场表演。但在夸张语言之下，她真诚说清了自己的过错。林德太太接受道歉，甚至夸了安妮的头发。这次见面不是证明大人总正确，也不是说愤怒没有价值，而是说明和解不要求否认最初的伤害。安妮既保留了正义感，也为自己回应造成的伤害负责。",
+    "listeningTip": "注意 apology、insult、response 分别指向什么，并听出安妮想法改变的关键理由。",
+    "speakingPrompt": "Can someone apologize for a response while still disagreeing with the other person? Explain.",
+    "speakingPromptZh": "一个人能否一边为自己的回应道歉，一边仍不同意对方？请说明。",
+    "keyPhrases": [
+      {
+        "en": "quick temper",
+        "zh": "急脾气"
+      },
+      {
+        "en": "another view",
+        "zh": "另一种看法"
+      },
+      {
+        "en": "take responsibility for",
+        "zh": "为……承担责任"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why did Anne first refuse to apologize?",
+        "promptZh": "安妮起初为什么拒绝道歉？",
+        "options": [
+          "She planned to leave",
+          "She thought it would approve Mrs. Lynde's insult",
+          "Matthew stopped her",
+          "She could not remember the event"
+        ],
+        "optionsZh": [
+          "她打算离开",
+          "她以为这等于认可林德太太的侮辱",
+          "马修阻止她",
+          "她不记得此事"
+        ],
+        "answer": 1,
+        "explanation": "第二段说明她把道歉误解为认可对方的评论。"
+      },
+      {
+        "prompt": "What important distinction did Matthew suggest?",
+        "promptZh": "马修提出了什么重要区别？",
+        "options": [
+          "Private and public speech",
+          "Hair color and appearance",
+          "Admitting a bad response and accepting the original insult",
+          "Children and adults"
+        ],
+        "optionsZh": [
+          "私下与公开发言",
+          "发色与外表",
+          "承认回应不当与接受原先侮辱",
+          "孩子与大人"
+        ],
+        "answer": 2,
+        "explanation": "他指出安妮可以承认自己的回应有错，同时仍否定原来的侮辱。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-10",
+    "title": "A Second Life for School Uniforms",
+    "titleZh": "校服的第二次生命",
+    "category": "Education · clothing exchange",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article; not a report of a live event.",
+    "text": "A parent group has turned an unused classroom into a monthly school-uniform exchange. Families leave clean shirts, jackets, and sports clothes that children have outgrown. Other families can choose what they need without paying. The room is arranged like a small shop so that visitors may check sizes calmly instead of searching through bags.\n\nNot every donated item is ready for the rail. Volunteers examine buttons, zippers, and stains. Clothes needing a simple repair go to a Saturday mending table, where older students learn to sew under adult guidance. Items that are too worn become cleaning cloths for the art rooms. A clear sorting system prevents unsuitable clothing from returning to the exchange.\n\nOrganizers avoid describing the project only as help for families with limited money. Many parents take part because children grow quickly and good clothing should not be wasted. This wider message reduces embarrassment and makes participation ordinary. The exchange cannot solve the full cost of education, but it handles one common expense in a practical way. It also gives students a visible lesson in value: an object may stop fitting one person without losing its usefulness.",
+    "textZh": "一个家长团体把闲置教室改成每月开放一次的校服交换点。家庭送来孩子穿不下的干净衬衫、外套和运动服，其他家庭可以免费选择需要的衣物。房间像小商店一样布置，让来访者从容查看尺码，而不是在袋子里翻找。\n\n并非所有捐赠品都能直接挂上衣架。志愿者检查纽扣、拉链和污渍；只需简单修补的衣服会送到周六缝补桌，高年级学生在成人指导下学习缝纫；磨损太严重的则变成美术教室的清洁布。清楚的分类避免不合适的衣服再次流入交换区。\n\n组织者不愿只把项目说成对经济困难家庭的帮助。许多家长参加，是因为孩子长得快，好衣服不应浪费。更广泛的说法减少了尴尬，让参与变得普通。交换无法解决教育的全部费用，却务实处理了一项常见开支，也给学生上了看得见的一课：物品不再适合一个人，并不等于失去用途。",
+    "listeningTip": "听清衣物的三种去向，并关注组织者为什么改变项目的宣传方式。",
+    "speakingPrompt": "How can a reuse program make participation feel normal rather than embarrassing?",
+    "speakingPromptZh": "再利用项目怎样让参与显得自然，而不是令人尴尬？",
+    "keyPhrases": [
+      {
+        "en": "have outgrown",
+        "zh": "已经长得穿不下"
+      },
+      {
+        "en": "under adult guidance",
+        "zh": "在成人指导下"
+      },
+      {
+        "en": "limited money",
+        "zh": "有限的经济条件"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What happens to clothes needing a small repair?",
+        "promptZh": "只需小修补的衣服会怎样处理？",
+        "options": [
+          "They are thrown away",
+          "They go to a student mending table",
+          "They are sold online",
+          "They stay in bags"
+        ],
+        "optionsZh": [
+          "被扔掉",
+          "送到学生缝补桌",
+          "在网上出售",
+          "留在袋子里"
+        ],
+        "answer": 1,
+        "explanation": "第二段说明这类衣服会进入周六缝补环节。"
+      },
+      {
+        "prompt": "Why do organizers use a broad message about reuse?",
+        "promptZh": "组织者为什么强调广泛的再利用理念？",
+        "options": [
+          "To hide the clothing sizes",
+          "To make participation ordinary and reduce embarrassment",
+          "To charge a higher price",
+          "To end the monthly exchange"
+        ],
+        "optionsZh": [
+          "为了隐藏尺码",
+          "让参与更平常并减少尴尬",
+          "为了提高价格",
+          "为了停止每月交换"
+        ],
+        "answer": 1,
+        "explanation": "第三段直接说明这种表述能减少尴尬。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-11",
+    "title": "Mary Opens the Hidden Garden",
+    "titleZh": "玛丽打开隐秘花园",
+    "category": "Literature · attention and renewal",
+    "sourceType": "public-domain adaptation",
+    "sourceNote": "Original adaptation of Frances Hodgson Burnett's public-domain novel The Secret Garden.",
+    "text": "Mary had been told that a garden at Misselthwaite Manor was locked and forgotten after the mistress of the house died. The mystery interested her more than the grand rooms inside. While exploring outdoors, she noticed a robin repeatedly landing near a patch of freshly moved earth. There she found an old key.\n\nFinding the door took longer. Ivy covered the walls so completely that Mary almost passed the entrance several times. When wind lifted a hanging branch, she saw the shape of a handle. The key turned, and she stepped into a silent space of tangled roses and winter-brown plants. She could not tell which branches were alive.\n\nInstead of demanding that a gardener repair everything, Mary began with small acts. She pulled weeds away from green shoots and asked Dickon how to recognize living wood. Daily attention slowly changed both the garden and the lonely child. The place did not recover through a sudden miracle; its hidden life needed air, light, movement, and care. Mary discovered those same needs in herself. By protecting something fragile, she became less closed and more willing to trust other people.",
+    "textZh": "玛丽听说米瑟斯韦特庄园有一座花园，自女主人去世后便被锁上并遗忘。相比宏伟的室内房间，这个谜更吸引她。一次在户外探索时，她注意到一只知更鸟反复落在一块刚被翻动的泥土旁，并在那里找到一把旧钥匙。\n\n寻找门花了更久。常春藤把墙遮得严严实实，玛丽几次差点错过入口。风吹起一根垂下的枝条，她才看见把手的形状。钥匙转动，她走进一片寂静空间，里面是纠缠的玫瑰和冬日枯黄的植物。她无法判断哪些枝条还活着。\n\n玛丽没有要求园丁一下修好一切，而是从小事开始：清除绿芽周围的杂草，向狄肯请教如何辨认活木。每天的关注慢慢改变了花园，也改变了孤独的孩子。这里不是靠突然的奇迹复原；隐藏的生命需要空气、阳光、活动和照料。玛丽也发现自己有同样需要。保护脆弱之物，让她不再封闭，更愿意信任别人。",
+    "listeningTip": "听自然线索如何帮助玛丽找到钥匙和门，并注意花园与人物变化之间的对应。",
+    "speakingPrompt": "Why can caring for a place or living thing change the person who provides the care?",
+    "speakingPromptZh": "为什么照料一个地方或生命，也可能改变照料者本人？",
+    "keyPhrases": [
+      {
+        "en": "freshly moved earth",
+        "zh": "刚被翻动的泥土"
+      },
+      {
+        "en": "tangled roses",
+        "zh": "纠缠的玫瑰"
+      },
+      {
+        "en": "daily attention",
+        "zh": "每日的关注"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What led Mary to the old key?",
+        "promptZh": "什么把玛丽引向旧钥匙？",
+        "options": [
+          "A map in the house",
+          "A robin landing near moved earth",
+          "Dickon's written note",
+          "A gardener's order"
+        ],
+        "optionsZh": [
+          "屋里的地图",
+          "落在翻动泥土旁的知更鸟",
+          "狄肯的字条",
+          "园丁的命令"
+        ],
+        "answer": 1,
+        "explanation": "第一段说明知更鸟反复落在翻过的泥土附近。"
+      },
+      {
+        "prompt": "How did Mary begin restoring the garden?",
+        "promptZh": "玛丽怎样开始恢复花园？",
+        "options": [
+          "By cutting every branch",
+          "By demanding instant repairs",
+          "With small, informed acts of care",
+          "By opening it to crowds"
+        ],
+        "optionsZh": [
+          "砍掉所有枝条",
+          "要求立即修好",
+          "从了解情况的小照料做起",
+          "向人群开放"
+        ],
+        "answer": 2,
+        "explanation": "最后一段强调她从除草和学习辨认活木等小事做起。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-12",
+    "title": "A Map for Apartment Deliveries",
+    "titleZh": "公寓配送地图",
+    "category": "Housing · clearer services",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article; not a report of a live event.",
+    "text": "Residents of a large apartment complex have designed a simple delivery map after parcels repeatedly reached the wrong entrance. The buildings share similar numbers, while three gates face different streets. Digital maps usually guide drivers to the nearest wall rather than to an open gate. Residents were spending time searching several lobbies for their orders.\n\nThe new one-page guide uses colors and familiar landmarks. It shows which gate serves each building, where bicycles may stop, and which paths are suitable for large carts. A short web address lets residents send the guide with an order. Printed copies are also fixed beside the gates because not every driver can safely check a phone while working.\n\nDuring a two-week trial, users reported that one green line looked like a walking route although it crossed stairs. Designers changed it to a dotted line and added a cart symbol to the step-free path. This correction was more valuable than defending the first design. The map's creators say clear directions depend on local experience: a technically correct address may still be practically confusing. Good information meets people at the decision they actually face—here, choosing the right gate before turning off a busy street.",
+    "textZh": "一个大型公寓小区的居民设计了一张简明配送地图，因为包裹常被送错入口。楼栋编号相似，三个大门又朝向不同街道。电子地图通常把司机带到最近的一面墙，而非开放的大门，居民只好在多个大厅间寻找订单。\n\n这张单页指南使用颜色和熟悉地标，标出每栋楼对应的大门、自行车可停位置，以及适合大型推车的路径。居民可以把一个短网址随订单发送。门旁也贴有纸质版，因为司机工作时不一定能安全查看手机。\n\n两周试用期间，有人反映一条绿色线路看起来像步行路线，却会经过楼梯。设计者把它改成虚线，并在无台阶道路上加了推车标志。纠正问题比维护初版更有价值。制图者认为，清晰指引依赖本地经验：技术上正确的地址，实际仍可能令人困惑。好信息要在人们真正做决定的地方帮助他们——这里就是司机离开繁忙街道前选择正确大门的时刻。",
+    "listeningTip": "记录原问题、地图新增信息和试用后的修改，注意 rather than 表示的取舍。",
+    "speakingPrompt": "Think of a confusing place you know. What would make its directions clearer?",
+    "speakingPromptZh": "想一个你熟悉但容易迷路的地方。怎样能让它的指引更清楚？",
+    "keyPhrases": [
+      {
+        "en": "apartment complex",
+        "zh": "公寓小区"
+      },
+      {
+        "en": "familiar landmark",
+        "zh": "熟悉的地标"
+      },
+      {
+        "en": "step-free path",
+        "zh": "无台阶通道"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why are printed maps also placed at the gates?",
+        "promptZh": "为什么门口也放纸质地图？",
+        "options": [
+          "Phones are not always safe to check while driving",
+          "The web address is secret",
+          "Residents dislike colors",
+          "Printed maps show different buildings"
+        ],
+        "optionsZh": [
+          "驾驶时查看手机不一定安全",
+          "网址是保密的",
+          "居民不喜欢颜色",
+          "纸质地图显示不同楼栋"
+        ],
+        "answer": 0,
+        "explanation": "第二段指出司机工作时并非总能安全看手机。"
+      },
+      {
+        "prompt": "What changed after the trial?",
+        "promptZh": "试用后发生了什么修改？",
+        "options": [
+          "All gate numbers were removed",
+          "A confusing route style was corrected",
+          "The map became five pages",
+          "Deliveries were forbidden"
+        ],
+        "optionsZh": [
+          "删除所有门牌号",
+          "修改了容易误解的路线样式",
+          "地图变成五页",
+          "禁止配送"
+        ],
+        "answer": 1,
+        "explanation": "第三段说明绿色线路被改成虚线，并补充了推车符号。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-13",
+    "title": "Jim Hears the Pirates' Plan",
+    "titleZh": "吉姆听见海盗的计划",
+    "category": "Literature · courage and information",
+    "sourceType": "public-domain adaptation",
+    "sourceNote": "Original adaptation of Robert Louis Stevenson's public-domain novel Treasure Island.",
+    "text": "During the voyage to Treasure Island, Jim climbed into an apple barrel to find a late-night snack. Before he could leave, several sailors gathered beside it. Their voices made him remain perfectly still. Among them was Long John Silver, the friendly cook whom Jim had trusted since the ship departed.\n\nSilver now spoke differently. He described an old pirate crew and explained that his group would wait until the treasure was safely aboard before taking control of the ship. Some sailors were uncertain, but Silver used patience rather than threats. Jim understood that the planned rebellion was larger and more organized than anyone suspected.\n\nWhen the men finally walked away, Jim's legs shook so badly that he could hardly climb out. He wanted to warn the captain immediately, yet he waited until he could do so without being seen. The information gave the honest crew an advantage, but it also placed a burden on a young boy. Jim learned that courage is not always a loud act performed in open danger. Sometimes it means staying silent, remembering exact words, and choosing the safe moment to speak.",
+    "textZh": "前往金银岛的航程中，吉姆爬进苹果桶寻找夜宵。还没来得及出来，几名水手便聚在旁边，他们的声音让他一动也不敢动。其中就有约翰·西尔弗——那个自开船以来一直受到吉姆信任的友善厨师。\n\n此时西尔弗的语气变了。他讲起旧海盗船员，并说明自己的同伙会等财宝安全上船后再夺取控制权。一些水手有些犹豫，但西尔弗使用的是耐心而非威胁。吉姆意识到，计划中的叛乱比任何人想象的都更庞大、更有组织。\n\n那些人终于走开时，吉姆的腿抖得几乎爬不出桶。他想立刻警告船长，却一直等到不会被人看见的时机。这条信息给忠诚船员带来优势，也把重担放在一个少年身上。吉姆明白，勇气并不总是在公开危险中高声行动；有时它意味着保持沉默、记住准确话语，并选择安全时机开口。",
+    "listeningTip": "注意 Silver 在表面身份与真实计划之间的反差，并抓住 Jim 为什么延迟报告。",
+    "speakingPrompt": "When is waiting for the right moment more responsible than acting immediately?",
+    "speakingPromptZh": "什么时候等待合适时机比立即行动更负责任？",
+    "keyPhrases": [
+      {
+        "en": "remain perfectly still",
+        "zh": "完全不动"
+      },
+      {
+        "en": "take control of",
+        "zh": "控制"
+      },
+      {
+        "en": "place a burden on",
+        "zh": "给……带来负担"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why did Jim stay inside the barrel?",
+        "promptZh": "吉姆为什么留在桶里？",
+        "options": [
+          "He fell asleep",
+          "The sailors' conversation made leaving dangerous",
+          "Silver locked him in",
+          "He was counting apples"
+        ],
+        "optionsZh": [
+          "他睡着了",
+          "水手的谈话使离开很危险",
+          "西尔弗把他锁住",
+          "他在数苹果"
+        ],
+        "answer": 1,
+        "explanation": "有人在桶边密谈，吉姆若出现就可能暴露自己。"
+      },
+      {
+        "prompt": "What kind of courage does the ending describe?",
+        "promptZh": "结尾描述了哪种勇气？",
+        "options": [
+          "Winning a physical fight",
+          "Speaking without evidence",
+          "Keeping calm and choosing a safe time to report",
+          "Ignoring a serious plan"
+        ],
+        "optionsZh": [
+          "赢得搏斗",
+          "没有证据便开口",
+          "保持冷静并选择安全时机报告",
+          "忽略严重计划"
+        ],
+        "answer": 2,
+        "explanation": "末两句把勇气定义为沉默记忆并在安全时机说出。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-14",
+    "title": "A Quiet Hour Without Meetings",
+    "titleZh": "没有会议的安静一小时",
+    "category": "Work · focused collaboration",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article; not a report of a live event.",
+    "text": "A design company has tested a daily hour during which staff cannot schedule meetings or send non-urgent group messages. The “quiet hour” was proposed after an internal survey showed that short interruptions were dividing complex work into pieces. Employees could still contact someone about a safety issue or a customer problem that truly required an immediate answer.\n\nThe trial began at the same time for everyone, but that approach caused difficulties. Some teams worked with colleagues in other time zones, while reception staff had duties that could not simply pause. The company therefore allowed each team to choose its own hour and required members to display the period on a shared calendar.\n\nManagers did not judge the experiment by counting messages alone. They asked staff whether they completed important tasks more easily and whether work was pushed into the evening. Several employees reported better concentration, but others said questions collected into a stressful pile. Teams responded by adding a ten-minute check-in after the quiet period. The lesson was not that communication harms productivity. Instead, useful collaboration depends on rhythm: people need protected time to think and predictable time to reconnect.",
+    "textZh": "一家设计公司试行每天一小时的“安静时段”，期间员工不能安排会议，也不能发送不紧急的群消息。内部调查发现，短暂打扰会把复杂工作切成碎片，因此有人提出这个办法。若涉及安全或确实需要立即回答的客户问题，员工仍可联系他人。\n\n试行起初为所有人设在同一时间，却带来困难。有的团队要与其他时区的同事合作，前台人员的职责也不能简单暂停。于是公司允许各团队选择自己的时段，并要求成员在共享日历上标出。\n\n管理者没有只靠消息数量评价实验，还询问员工是否更容易完成重要任务、工作是否被推到晚上。几名员工说专注度提高，也有人觉得问题堆积起来令人紧张。团队便在安静时段后增加十分钟交流。结论不是沟通损害效率，而是有效协作需要节奏：人们既需要受保护的思考时间，也需要可预期的重新沟通时间。",
+    "listeningTip": "听试行方案如何因不同岗位而调整，并分辨支持意见与担忧。",
+    "speakingPrompt": "Would a daily quiet hour improve your study or work? What rules would it need?",
+    "speakingPromptZh": "每天一小时的安静时段会改善你的学习或工作吗？它需要哪些规则？",
+    "keyPhrases": [
+      {
+        "en": "non-urgent message",
+        "zh": "非紧急消息"
+      },
+      {
+        "en": "shared calendar",
+        "zh": "共享日历"
+      },
+      {
+        "en": "protected time",
+        "zh": "受保护的时间"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why did teams stop using one common quiet hour?",
+        "promptZh": "为什么团队不再使用同一个安静时段？",
+        "options": [
+          "Employees wanted more meetings",
+          "Different duties and time zones required flexibility",
+          "The shared calendar failed",
+          "Customers preferred evening work"
+        ],
+        "optionsZh": [
+          "员工想开更多会议",
+          "不同职责和时区需要灵活安排",
+          "共享日历坏了",
+          "客户更喜欢晚间工作"
+        ],
+        "answer": 1,
+        "explanation": "第二段列出跨时区合作与前台职责的差异。"
+      },
+      {
+        "prompt": "What did teams add after some employees felt stressed?",
+        "promptZh": "部分员工感到压力后，团队增加了什么？",
+        "options": [
+          "A ten-minute check-in",
+          "A second quiet hour",
+          "A public report",
+          "An evening meeting"
+        ],
+        "optionsZh": [
+          "十分钟沟通",
+          "第二个安静时段",
+          "公开报告",
+          "晚间会议"
+        ],
+        "answer": 0,
+        "explanation": "第三段说明他们在安静时段后加入十分钟交流。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-15",
+    "title": "Sara's Warm Attic Supper",
+    "titleZh": "萨拉温暖的阁楼晚餐",
+    "category": "Literature · dignity and imagination",
+    "sourceType": "public-domain adaptation",
+    "sourceNote": "Original adaptation of Frances Hodgson Burnett's public-domain novel A Little Princess.",
+    "text": "After her father's death, Sara lost her comfortable room at the school and was sent to sleep in a cold attic. She worked long hours, carried heavy parcels, and often received too little food. The headmistress expected hardship to make Sara humble, but it did not remove the careful manners she had learned in happier days.\n\nOne evening, Sara and the servant girl Becky pretended that the attic was a royal dining room. A broken box became a table, and an old cloth became a fine cover. They described imaginary soup and warm bread in such detail that the empty plates almost seemed less cruel. Sara knew imagination could not feed them. Still, their shared game gave Becky a short rest from fear.\n\nLater, mysterious food and a fire appeared in the attic, provided secretly by a neighbor who had learned about Sara's situation. The real meal was wonderful, yet the earlier pretend supper had also mattered. It allowed two powerless children to offer each other respect when adults had denied it. Sara's strength did not come from believing poverty was beautiful. It came from refusing to let poverty decide the worth of the person beside her.",
+    "textZh": "父亲去世后，萨拉失去了学校里舒适的房间，被安排睡在寒冷阁楼。她长时间干活、搬沉重包裹，还常常吃不饱。校长期待艰难生活使萨拉变得卑微，但苦难没有夺走她在幸福日子里学会的礼貌。\n\n一天晚上，萨拉和女仆贝姬假装阁楼是皇家餐厅。破箱子成了桌子，旧布成了精美桌布。她们把想象中的汤和热面包说得十分具体，空盘子似乎也不再那么残酷。萨拉知道想象不能填饱肚子，但共同的游戏让贝姬暂时摆脱恐惧。\n\n后来，一位得知萨拉处境的邻居暗中送来食物，还生起炉火。真正的饭菜当然美好，可之前那顿假想晚餐也有意义。它让两个无力的孩子在被成年人剥夺尊重时，仍能彼此尊重。萨拉的力量不是把贫穷想成美事，而是拒绝让贫穷决定身边之人的价值。",
+    "listeningTip": "留意真实食物与想象食物的对比，并思考两顿晚餐分别满足了什么需要。",
+    "speakingPrompt": "How can imagination offer real help even when it cannot change material conditions?",
+    "speakingPromptZh": "当想象无法改变物质条件时，它仍能怎样提供真正的帮助？",
+    "keyPhrases": [
+      {
+        "en": "long hours",
+        "zh": "很长时间"
+      },
+      {
+        "en": "in such detail",
+        "zh": "如此详细地"
+      },
+      {
+        "en": "decide the worth of",
+        "zh": "决定……的价值"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What did the pretend supper give Becky?",
+        "promptZh": "假想晚餐给了贝姬什么？",
+        "options": [
+          "A full stomach",
+          "A brief rest from fear",
+          "Permission to leave school",
+          "A new job"
+        ],
+        "optionsZh": [
+          "饱腹感",
+          "暂时摆脱恐惧",
+          "离开学校的许可",
+          "一份新工作"
+        ],
+        "answer": 1,
+        "explanation": "第二段说游戏虽不能提供食物，却让贝姬短暂放下恐惧。"
+      },
+      {
+        "prompt": "What is presented as Sara's real strength?",
+        "promptZh": "文章把萨拉真正的力量概括为什么？",
+        "options": [
+          "Pretending poverty is pleasant",
+          "Hiding all emotion",
+          "Refusing to measure human worth by poverty",
+          "Waiting for a rich neighbor"
+        ],
+        "optionsZh": [
+          "假装贫穷很愉快",
+          "隐藏一切情绪",
+          "拒绝用贫穷衡量人的价值",
+          "等待富裕邻居"
+        ],
+        "answer": 2,
+        "explanation": "末句明确指出她不让贫穷决定人的价值。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-16",
+    "title": "A Garden That Holds the Rain",
+    "titleZh": "留住雨水的花园",
+    "category": "Environment · neighborhood drainage",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article; not a report of a live event.",
+    "text": "Residents beside a frequently flooded footpath have built a shallow rain garden instead of adding another concrete drain. The garden sits lower than the path, so water flows into it during heavy rain. Stones slow the movement, while plants and soil hold part of the water and release it gradually.\n\nBefore construction, volunteers watched where puddles formed and asked maintenance workers about underground pipes. They avoided a place where digging might damage a cable. A landscape student then helped select native plants that can survive both wet days and dry weeks. The group also left one clear route for wheelchairs and baby carriages.\n\nThe garden requires care. Leaves can block the entrance, and young plants need watering before their roots grow deep. Residents take turns inspecting it after storms and record how long standing water remains. They know one small garden cannot prevent every flood, especially during extreme weather. Its success is more modest: less water now rushes onto the path, insects have gained plants for food, and neighbors understand their drainage system better. The project treats rain not only as a problem to remove, but also as water that can be guided and used.",
+    "textZh": "一条步道经常积水，附近居民没有再加一条混凝土排水沟，而是建了一个浅浅的雨水花园。花园低于路面，暴雨时水会流入其中。石块减慢水流，植物和土壤则保存一部分水，再逐渐释放。\n\n施工前，志愿者观察水坑形成的位置，并向维修人员询问地下管线。他们避开了挖掘可能损坏电缆的地方。一名景观专业学生协助选择本地植物，这些植物既能经历潮湿天气，也能熬过干燥数周。小组还为轮椅和婴儿车保留了一条通畅路线。\n\n花园需要维护。落叶会堵住入口，幼苗根扎深前也要浇水。居民轮流在暴雨后检查，并记录积水多久消退。他们知道一个小花园不可能阻止所有洪水，尤其无法抵挡极端天气。它的成绩更朴素：冲上步道的水减少了，昆虫多了食物，邻居也更了解排水系统。项目不再只把雨当作要排走的问题，也把它看作可以引导和利用的水。",
+    "listeningTip": "按“施工前调查—设计—维护—效果”梳理信息，注意作者对项目能力的限制。",
+    "speakingPrompt": "Where could rainwater be managed more wisely in your community?",
+    "speakingPromptZh": "你的社区中，哪里的雨水可以得到更明智的管理？",
+    "keyPhrases": [
+      {
+        "en": "flow into",
+        "zh": "流入"
+      },
+      {
+        "en": "take turns",
+        "zh": "轮流"
+      },
+      {
+        "en": "standing water",
+        "zh": "积水"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why did volunteers ask about underground pipes?",
+        "promptZh": "志愿者为什么询问地下管线？",
+        "options": [
+          "To find drinking water",
+          "To avoid damaging cables or pipes",
+          "To make the garden deeper than every pipe",
+          "To close the footpath forever"
+        ],
+        "optionsZh": [
+          "寻找饮用水",
+          "避免损坏电缆或管道",
+          "让花园比所有管道都深",
+          "永久关闭步道"
+        ],
+        "answer": 1,
+        "explanation": "第二段说明他们避开了可能损坏电缆的地点。"
+      },
+      {
+        "prompt": "How does the passage describe the garden's success?",
+        "promptZh": "文章怎样描述花园的成效？",
+        "options": [
+          "It prevents every possible flood",
+          "It offers several modest local benefits",
+          "It needs no maintenance",
+          "It removes all insects"
+        ],
+        "optionsZh": [
+          "它阻止所有洪水",
+          "它带来几项有限但实际的本地益处",
+          "它无需维护",
+          "它消灭所有昆虫"
+        ],
+        "answer": 1,
+        "explanation": "最后一段清楚限制其能力，同时列出减水、助虫和增进理解等好处。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-17",
+    "title": "Tom Sawyer and the White Fence",
+    "titleZh": "汤姆·索亚与白栅栏",
+    "category": "Literature · persuasion and fairness",
+    "sourceType": "public-domain adaptation",
+    "sourceNote": "Original adaptation of Mark Twain's public-domain novel The Adventures of Tom Sawyer.",
+    "text": "Tom was ordered to paint a long fence on a bright Saturday, while other boys were free to play. He disliked the work, but he disliked their expected laughter even more. When Ben approached, Tom held the brush carefully and acted as if painting were a rare skill rather than a punishment.\n\nBen asked to try. Tom refused at first, explaining that his aunt required excellent work. The refusal increased Ben's interest. Soon Ben offered an apple for a turn, and later boys traded marbles, toys, and other small treasures for the same privilege. Tom rested in the shade while the fence received several coats of paint.\n\nHis clever performance changed how the boys valued the task: work looked desirable when access became limited. Yet the episode also raises an uncomfortable question. Tom did not force anyone, and the boys enjoyed painting, but he hid information and used their pride for his own advantage. Persuasion can create energy, but it can also move benefits unfairly toward the person who understands the trick. Tom learned how strongly desire depends on presentation; a thoughtful reader must decide whether he also learned how to use that power responsibly.",
+    "textZh": "一个晴朗的星期六，汤姆被罚给长栅栏刷漆，别的男孩却能自由玩耍。他讨厌这项工作，更讨厌大家可能的嘲笑。本走近时，汤姆认真地拿着刷子，装作刷漆是一项难得的本领，而不是惩罚。\n\n本提出试一试。汤姆起初拒绝，说姨妈要求极高。拒绝反而让本更感兴趣。不久，本用苹果换来一次机会，后来其他男孩也拿弹珠、玩具和小宝贝交换同样的“特权”。汤姆在树荫下休息，栅栏却被刷了好几遍。\n\n他的聪明表演改变了男孩们对任务的评价：当机会有限时，劳动也显得诱人。但这件事也带来不舒服的问题。汤姆没有强迫任何人，男孩们也确实刷得开心，可他隐瞒信息，利用了大家的自尊为自己获利。说服能产生动力，也会把利益不公平地推向看懂技巧的人。汤姆发现欲望多么依赖包装；读者还要判断，他是否学会负责任地使用这种力量。",
+    "listeningTip": "关注 Tom 如何一步步改变任务的价值，并留意结尾对“聪明”所作的道德追问。",
+    "speakingPrompt": "Is Tom's fence trick clever, unfair, or both? Support your view.",
+    "speakingPromptZh": "汤姆的栅栏计策是聪明、不公平，还是两者皆有？说明理由。",
+    "keyPhrases": [
+      {
+        "en": "a rare skill",
+        "zh": "一项难得的技能"
+      },
+      {
+        "en": "for a turn",
+        "zh": "换取一次机会"
+      },
+      {
+        "en": "for his own advantage",
+        "zh": "为他自己的利益"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why did Ben become more interested in painting?",
+        "promptZh": "本为什么对刷漆更感兴趣？",
+        "options": [
+          "Tom presented it as difficult and special",
+          "The aunt paid him",
+          "The fence was already finished",
+          "Ben feared the other boys"
+        ],
+        "optionsZh": [
+          "汤姆把它表现得困难而特别",
+          "姨妈付钱给他",
+          "栅栏已经刷完",
+          "本害怕其他男孩"
+        ],
+        "answer": 0,
+        "explanation": "汤姆把刷漆包装成需要技巧且机会有限的活动。"
+      },
+      {
+        "prompt": "What ethical concern does the passage raise?",
+        "promptZh": "文章提出了什么道德担忧？",
+        "options": [
+          "Painting is always harmful",
+          "Persuasion can distribute benefits unfairly",
+          "Children should not own toys",
+          "Saturday work is illegal"
+        ],
+        "optionsZh": [
+          "刷漆总有害",
+          "说服可能造成利益分配不公",
+          "孩子不应拥有玩具",
+          "周六劳动违法"
+        ],
+        "answer": 1,
+        "explanation": "第三段指出汤姆隐瞒信息，并让自己从他人的欲望中获益。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-18",
+    "title": "One Object, Three Family Stories",
+    "titleZh": "一件物品，三个家庭故事",
+    "category": "Culture · community memory",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article; not a report of a live event.",
+    "text": "A town museum has started monthly evenings built around ordinary household objects. Instead of asking visitors to bring rare antiques, organizers invite them to choose an object with a family story. A bus ticket, cooking spoon, or repaired shoe may become the center of a five-minute talk.\n\nAt one session, three relatives brought the same metal lunch box. The grandmother remembered carrying rice in it to a factory. Her son recalled using it on school trips, while his daughter knew it only as a container for old photographs. Their accounts did not always agree about dates or details. A museum worker explained that such differences should be recorded rather than quietly corrected, because memory shows how people understand an event, not only what happened.\n\nSpeakers sign a form allowing the museum to store an audio recording, but they keep their objects. Short summaries are added to a digital catalog with names removed if families request privacy. The project expands the museum without filling its shelves. It treats residents as sources of knowledge and reminds visitors that history lives in repeated use. A simple box can carry food, photographs, and several generations of meaning.",
+    "textZh": "一家城镇博物馆开始举办每月一次的“日常物品之夜”。组织者不要求访客带稀有古董，而是邀请大家选择一件有家庭故事的物品。一张车票、一把汤勺或一只修过的鞋，都能成为五分钟讲述的中心。\n\n一次活动中，三位亲属带来同一个金属饭盒。祖母记得用它带米饭去工厂；儿子记得在学校旅行中使用；女儿只知道它是存放旧照片的盒子。他们关于日期和细节的说法并不总一致。博物馆工作人员解释，这些差异应该被记录，而非悄悄纠正，因为记忆不仅说明发生了什么，也说明人们如何理解一件事。\n\n讲述者签署同意书，允许博物馆保存录音，但物品仍由本人保留。简短摘要会加入数字目录，如家庭要求隐私就删除姓名。项目无需塞满展架也能扩展博物馆内容。它把居民视为知识来源，也提醒访客历史存在于重复使用之中。一个普通盒子可以装过食物、照片，也承载几代人的意义。",
+    "listeningTip": "把三代人与同一个饭盒的用途配对，并注意博物馆如何处理矛盾记忆和隐私。",
+    "speakingPrompt": "Which ordinary object in your home could tell a story about your family?",
+    "speakingPromptZh": "你家中哪件普通物品可以讲述一个家庭故事？",
+    "keyPhrases": [
+      {
+        "en": "rare antique",
+        "zh": "稀有古董"
+      },
+      {
+        "en": "audio recording",
+        "zh": "录音"
+      },
+      {
+        "en": "request privacy",
+        "zh": "要求保护隐私"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "How did the granddaughter know the lunch box?",
+        "promptZh": "孙女眼中的饭盒是做什么的？",
+        "options": [
+          "It carried factory meals",
+          "It held old photographs",
+          "It was a museum prize",
+          "It stored bus tickets"
+        ],
+        "optionsZh": [
+          "装工厂饭菜",
+          "存放旧照片",
+          "是一件博物馆奖品",
+          "存放车票"
+        ],
+        "answer": 1,
+        "explanation": "第二段说女儿只把它当作旧照片的容器。"
+      },
+      {
+        "prompt": "Why are different memories kept?",
+        "promptZh": "为什么不同版本的记忆都被保留？",
+        "options": [
+          "The museum cannot edit audio",
+          "Differences reveal how people understand events",
+          "Every date is equally correct",
+          "Visitors prefer arguments"
+        ],
+        "optionsZh": [
+          "博物馆无法编辑录音",
+          "差异能显示人们如何理解事件",
+          "每个日期都同样正确",
+          "访客喜欢争论"
+        ],
+        "answer": 1,
+        "explanation": "工作人员说明记忆也反映人们对事件的理解。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-19",
+    "title": "Fogg Faces a Broken Bridge",
+    "titleZh": "福格面对断桥",
+    "category": "Literature · plans and adaptation",
+    "sourceType": "public-domain adaptation",
+    "sourceNote": "Original adaptation of Jules Verne's public-domain novel Around the World in Eighty Days.",
+    "text": "Phileas Fogg planned his journey around the world with careful timetables. While crossing America by train, however, he learned that a bridge ahead was too weak for normal travel. The passengers were told to leave the train and wait until another route could be arranged. Every hour mattered to Fogg's eighty-day promise.\n\nThe driver proposed a dangerous solution: build enough speed and rush across before the damaged structure gave way. Some passengers cheered, treating risk as adventure. Others protested that a timetable was not worth human lives. Fogg, usually calm about delays, supported caution. A promise to arrive, he reasoned, did not include permission to endanger strangers.\n\nIn this retelling, the group crosses the gap using local wagons while workers transfer light luggage separately. The slower choice costs time, but Fogg gains useful information about a later connection. His plan survives because it changes. Precision helped him begin the journey, yet flexibility helps him continue it. A schedule can guide decisions, but it should not replace them. When conditions alter, responsible travelers protect the purpose of a plan without becoming prisoners of its original form.",
+    "textZh": "菲利亚斯·福格用精确时刻表安排环球旅行。然而乘火车穿越美国时，他得知前方桥梁太脆弱，无法正常通行。乘客被要求下车，等待另一路线。对承诺八十天完成旅程的福格来说，每小时都重要。\n\n司机提出危险方案：让火车加速，在受损结构倒塌前冲过去。有些乘客欢呼，把风险当冒险；另一些人反对，认为时刻表不值得拿生命交换。面对延误一向冷静的福格支持谨慎。他认为，按时抵达的承诺并不包含危及陌生人的许可。\n\n在这篇改写中，大家乘本地马车绕过缺口，工作人员另行运送轻便行李。较慢的选择耗费时间，却让福格获得后一段接驳的重要信息。他的计划因为改变而活了下来。精确帮助他出发，灵活则帮助他继续。日程可以指导决定，却不应取代决定。条件变化时，负责任的旅行者会保护计划目的，而不会被计划原来的形式困住。",
+    "listeningTip": "听清危险方案与谨慎方案的差别，注意 precision 和 flexibility 在结尾形成的对照。",
+    "speakingPrompt": "When should a person change a plan even if the original goal remains important?",
+    "speakingPromptZh": "即使原目标仍很重要，一个人什么时候应该改变计划？",
+    "keyPhrases": [
+      {
+        "en": "another route",
+        "zh": "另一条路线"
+      },
+      {
+        "en": "support caution",
+        "zh": "支持谨慎行事"
+      },
+      {
+        "en": "become prisoners of",
+        "zh": "成为……的囚徒"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why does Fogg reject the driver's solution?",
+        "promptZh": "福格为什么拒绝司机的方案？",
+        "options": [
+          "He dislikes trains",
+          "It risks lives for a timetable",
+          "He has lost his watch",
+          "The passengers want to sleep"
+        ],
+        "optionsZh": [
+          "他不喜欢火车",
+          "它为了时刻表拿生命冒险",
+          "他丢了表",
+          "乘客想睡觉"
+        ],
+        "answer": 1,
+        "explanation": "第二段说明按时抵达不应成为危及他人的理由。"
+      },
+      {
+        "prompt": "What larger lesson does Fogg's changed plan illustrate?",
+        "promptZh": "福格改变计划说明了什么更大的道理？",
+        "options": [
+          "Detailed plans always fail",
+          "Goals should be forgotten after delay",
+          "Flexibility can protect a plan's purpose",
+          "Speed is safer than caution"
+        ],
+        "optionsZh": [
+          "详细计划总会失败",
+          "延误后应忘记目标",
+          "灵活性可以保护计划目的",
+          "速度比谨慎更安全"
+        ],
+        "answer": 2,
+        "explanation": "末段强调计划通过调整而延续，目的比固定形式重要。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-20",
+    "title": "The Night Market's Returning Bowls",
+    "titleZh": "夜市会回来的碗",
+    "category": "Business · reusable packaging",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article; not a report of a live event.",
+    "text": "Food sellers at a night market have introduced a shared system of reusable bowls. Customers pay a small deposit when ordering and receive it back after returning the bowl to any participating stall. The containers are then carried to one washing station, where trained workers clean and inspect them before the next evening.\n\nEarlier attempts failed because each seller used a different container and customers had to remember the correct stall. The new bowls share one shape and a clear symbol. A numbered mark allows damaged items to be removed, but it does not collect personal information. Sellers pay according to the number of bowls they use instead of buying their own supply.\n\nThe system still depends on convenience. Return points stand near exits, and signs explain the deposit in several languages. Organizers also keep ordinary single-use containers for customers who cannot carry a bowl back. They will compare washing costs, return rates, and the amount of rubbish after a three-month trial. Reuse is not automatically better in every situation; transport, water, and cleaning all have environmental effects. The project therefore asks a practical question rather than making a perfect claim: can one well-managed container complete enough journeys to justify the work of bringing it back?",
+    "textZh": "夜市摊主推出了一套共享可重复使用餐碗的系统。顾客点餐时支付少量押金，把碗归还到任何参与摊位后即可取回。餐具随后集中送往清洗点，由受训员工清洁检查，供下一晚使用。\n\n早先的尝试失败，是因为各摊位使用不同容器，顾客还得记住原摊位。新碗采用统一形状和清晰标志。编号可以帮助移除破损餐具，却不收集个人信息。摊主按使用数量付费，不必各自购买一批。\n\n系统仍然依赖便利性。出口附近设归还点，说明牌用多种语言解释押金。对于无法把碗带回的人，摊位也保留普通一次性容器。组织者将在三个月试用后比较清洗成本、归还率和垃圾量。重复使用并非任何情况下都自动更环保，运输、用水和清洁也有环境影响。因此项目提出的是实际问题，而非完美口号：一个管理良好的容器要完成多少次旅程，才值得把它带回来？",
+    "listeningTip": "抓住押金流程和旧方案失败原因；结尾注意作者没有把“重复使用”绝对化。",
+    "speakingPrompt": "What would make you willing to return a reusable food container?",
+    "speakingPromptZh": "什么条件会让你愿意归还可重复使用的食品容器？",
+    "keyPhrases": [
+      {
+        "en": "pay a deposit",
+        "zh": "支付押金"
+      },
+      {
+        "en": "participating stall",
+        "zh": "参与的摊位"
+      },
+      {
+        "en": "return rate",
+        "zh": "归还率"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What was a weakness of earlier attempts?",
+        "promptZh": "早先尝试的弱点是什么？",
+        "options": [
+          "Bowls had no food",
+          "Each stall used a different container",
+          "Customers paid no money",
+          "The market had too many exits"
+        ],
+        "optionsZh": [
+          "碗里没有食物",
+          "各摊位使用不同容器",
+          "顾客不付钱",
+          "市场出口太多"
+        ],
+        "answer": 1,
+        "explanation": "第二段说明容器不统一，且必须归还原摊位。"
+      },
+      {
+        "prompt": "Why will organizers examine several kinds of cost?",
+        "promptZh": "组织者为什么要考察多种成本？",
+        "options": [
+          "Reuse has environmental effects as well as benefits",
+          "They plan to collect personal data",
+          "Washing is never necessary",
+          "Single-use items are already banned"
+        ],
+        "optionsZh": [
+          "重复使用既有好处也有环境成本",
+          "他们打算收集个人数据",
+          "清洗从来没必要",
+          "一次性用品已被禁止"
+        ],
+        "answer": 0,
+        "explanation": "最后一段说明运输、用水和清洗都需要纳入判断。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-21",
+    "title": "Four Travelers at the Crossroads",
+    "titleZh": "十字路口的四位旅伴",
+    "category": "Literature · different kinds of strength",
+    "sourceType": "public-domain adaptation",
+    "sourceNote": "Original adaptation of L. Frank Baum's public-domain novel The Wonderful Wizard of Oz.",
+    "text": "Dorothy followed the yellow road toward the Emerald City because she hoped the Wizard could send her home. Along the way, the Scarecrow asked for a brain, the Tin Woodman wished for a heart, and the Lion wanted courage. Each traveler believed that one missing quality prevented him from living fully.\n\nAt a crossroads, a fallen tree blocked the road. The Scarecrow suggested tying long branches together as a tool. The Tin Woodman cut the strongest branches, and the Lion pulled them while Dorothy directed the group from higher ground. Their solution worked, although none of them noticed the joke: the supposedly brainless Scarecrow had planned it, the heartless Woodman had worked for his friends, and the frightened Lion had taken the heaviest risk.\n\nThey continued to seek the Wizard because knowing a quality and believing you possess it are not the same. Dorothy began to understand that her companions' wishes were less about receiving new powers than about gaining confidence in powers already shown. The blocked road became a quiet test. It did not tell them what they lacked; it revealed what they contributed when a problem required several kinds of strength.",
+    "textZh": "多萝西沿黄砖路前往翡翠城，希望魔法师送她回家。途中，稻草人想要大脑，铁皮人希望得到一颗心，狮子则渴望勇气。每位旅伴都相信，自己缺少的一种品质阻碍了完整生活。\n\n在一个十字路口，倒下的树挡住去路。稻草人建议把长树枝绑成工具，铁皮人砍下最结实的枝条，狮子负责拉动，多萝西则站在高处指挥。办法成功了，可他们谁也没注意到其中的反差：自称没脑子的稻草人制定了计划，没有心的铁皮人为朋友出力，胆小的狮子承担了最大风险。\n\n他们仍继续寻找魔法师，因为展现一种品质，与相信自己拥有它并不相同。多萝西开始明白，伙伴们的愿望与其说是获得新力量，不如说是相信已经表现出来的力量。拦路的树成了一次安静的考验。它没有说明大家缺什么，而是揭示一个问题需要多种力量时，每个人能贡献什么。",
+    "listeningTip": "把四位人物与各自的愿望、实际贡献相配对，体会叙述中的反差。",
+    "speakingPrompt": "Which ability do people sometimes show before they believe they have it?",
+    "speakingPromptZh": "人们有时会在相信自己拥有某种能力之前，就已经表现出它。你能举例吗？",
+    "keyPhrases": [
+      {
+        "en": "living fully",
+        "zh": "充实地生活"
+      },
+      {
+        "en": "from higher ground",
+        "zh": "从较高处"
+      },
+      {
+        "en": "gain confidence in",
+        "zh": "对……获得信心"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What did the Scarecrow contribute at the crossroads?",
+        "promptZh": "稻草人在十字路口贡献了什么？",
+        "options": [
+          "A plan using branches",
+          "A magical map",
+          "A speech from the Wizard",
+          "A metal tool"
+        ],
+        "optionsZh": [
+          "利用树枝的计划",
+          "魔法地图",
+          "魔法师的演讲",
+          "金属工具"
+        ],
+        "answer": 0,
+        "explanation": "第二段说明用树枝制作工具的主意来自稻草人。"
+      },
+      {
+        "prompt": "Why do the travelers still seek the Wizard?",
+        "promptZh": "旅伴们为什么仍然寻找魔法师？",
+        "options": [
+          "Their solution failed",
+          "They need help believing in qualities they already show",
+          "Dorothy lost the road",
+          "They want to replace their friendship"
+        ],
+        "optionsZh": [
+          "他们的办法失败了",
+          "他们需要帮助自己相信已经表现出的品质",
+          "多萝西迷路了",
+          "他们想取代友谊"
+        ],
+        "answer": 1,
+        "explanation": "第三段区分了实际拥有能力与相信自己拥有能力。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-22",
+    "title": "Price Labels That Compare Fairly",
+    "titleZh": "能公平比较的价格标签",
+    "category": "Consumer life · clear pricing",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article; not a report of a live event.",
+    "text": "A weekend market has redesigned its price labels so shoppers can compare products sold in different package sizes. A small bag of rice may look cheaper than a large one even when its price per kilogram is higher. Under the new system, the total price remains in large print, while a second line shows the cost for a standard amount.\n\nSellers helped choose the layout because crowded signs can be difficult to update. The final card has spaces for weight, total price, and unit price, with one worked example on the back. Market volunteers offer calculators, but vendors are responsible for checking their own numbers. Random reviews identify mistakes without publicly blaming a worker for a simple calculation error.\n\nSome customers still choose smaller packages because they have limited cash, storage, or carrying space. The organizers stress that the cheapest unit price is not automatically the best personal choice. Clear comparison does not make decisions for shoppers; it shows the trade-off they are making. The labels also encourage sellers to explain why a product may cost more, such as careful production or stronger packaging. Better information can support both saving money and paying intentionally for qualities a buyer values.",
+    "textZh": "一个周末市场重新设计价格标签，让顾客能公平比较不同包装大小的商品。一小袋米看起来可能更便宜，但每公斤价格反而高于大袋。新标签仍用大字显示总价，第二行则标出标准单位的价格。\n\n摊主参与了版式选择，因为拥挤的标牌很难更新。最终卡片留出重量、总价和单价的位置，背面还有一个完整例题。市场志愿者提供计算器，但摊主负责检查自己的数字。抽查用来发现错误，却不会因简单计算失误公开责备员工。\n\n一些顾客仍会选择小包装，因为现金、储藏空间或携带能力有限。组织者强调，单价最低并不自动等于最适合个人。清楚比较不会替顾客决定，而是让取舍可见。标签也鼓励摊主解释商品为何较贵，例如生产更仔细或包装更结实。更好的信息既能帮助省钱，也能让买家有意识地为重视的品质付费。",
+    "listeningTip": "注意 total price 与 unit price 的区别，并听清为什么最便宜的单价未必是最佳选择。",
+    "speakingPrompt": "Besides price, what factors matter when you choose a package size?",
+    "speakingPromptZh": "除了价格，你选择包装大小时还会考虑哪些因素？",
+    "keyPhrases": [
+      {
+        "en": "standard amount",
+        "zh": "标准数量"
+      },
+      {
+        "en": "random review",
+        "zh": "随机抽查"
+      },
+      {
+        "en": "make a trade-off",
+        "zh": "作出取舍"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What does the second line on the new label show?",
+        "promptZh": "新标签第二行显示什么？",
+        "options": [
+          "The seller's name",
+          "The unit price",
+          "The market's opening time",
+          "A customer review"
+        ],
+        "optionsZh": [
+          "摊主姓名",
+          "单位价格",
+          "市场营业时间",
+          "顾客评价"
+        ],
+        "answer": 1,
+        "explanation": "第一段说明第二行给出标准单位的成本。"
+      },
+      {
+        "prompt": "Why might someone reasonably choose a smaller package?",
+        "promptZh": "为什么有人可能合理地选择小包装？",
+        "options": [
+          "Unit prices are invisible",
+          "They may have limits on cash or storage",
+          "Large packages are forbidden",
+          "Calculators cannot be used"
+        ],
+        "optionsZh": [
+          "单价看不见",
+          "现金或储存空间可能有限",
+          "禁止大包装",
+          "不能使用计算器"
+        ],
+        "answer": 1,
+        "explanation": "第三段列举了现金、空间和携带条件。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-23",
+    "title": "Jane Chooses the Open Road",
+    "titleZh": "简选择前方的道路",
+    "category": "Literature · conscience and independence",
+    "sourceType": "public-domain adaptation",
+    "sourceNote": "Original adaptation of Charlotte Brontë's public-domain novel Jane Eyre.",
+    "text": "Jane loved Rochester and believed she had found an equal companion at Thornfield. During their wedding, however, she learned that he already had a living wife hidden in the house. Rochester begged Jane to leave England with him and begin a new life where no one knew their history.\n\nJane understood his loneliness and felt the force of her own love. Remaining would have been easier in the short term: she would have money, shelter, and the person she desired. Yet she feared losing respect for her own judgment. A rule mattered most, she decided, when breaking it promised comfort rather than punishment.\n\nBefore dawn, Jane packed very little and left without a clear destination. The open road was frightening, and independence did not protect her from hunger. Still, leaving allowed her future choices to remain her own. Her decision was not a rejection of feeling. It was a refusal to let strong feeling silence conscience. Jane carried both love and disagreement away from Thornfield, proving that two truths can exist together: a person may understand another's pain and still refuse the solution that person proposes.",
+    "textZh": "简爱着罗切斯特，并相信自己在桑菲尔德找到了平等伴侣。然而婚礼上，她得知他已有一位仍在世的妻子，而且被藏在宅中。罗切斯特恳求简与他离开英国，到无人知晓过去的地方开始新生活。\n\n简理解他的孤独，也强烈感受到自己的爱。留下在短期内更容易：她会有金钱、住处和渴望的人。但她害怕失去对自己判断的尊重。她认为，一条原则最有意义的时候，正是违背它会带来舒适而不是惩罚的时候。\n\n天亮前，简只收拾少量行李，在没有明确目的地的情况下离开。前路令人恐惧，独立也不能让她免受饥饿。但离开使未来的选择仍属于自己。她并非拒绝感情，而是不让强烈感情压过良知。简带着爱和不同意见离开桑菲尔德，证明两个事实能同时成立：一个人可以理解他人的痛苦，却仍拒绝对方提出的解决办法。",
+    "listeningTip": "注意 Jane 在“短期舒适”和“长期自我尊重”间的选择，并听出结尾的双重观点。",
+    "speakingPrompt": "Can understanding someone's reasons make it harder—but still necessary—to say no?",
+    "speakingPromptZh": "理解一个人的理由会不会让拒绝变得更难、却仍有必要？",
+    "keyPhrases": [
+      {
+        "en": "equal companion",
+        "zh": "平等的伴侣"
+      },
+      {
+        "en": "in the short term",
+        "zh": "从短期看"
+      },
+      {
+        "en": "silence conscience",
+        "zh": "让良知沉默"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What makes staying attractive to Jane?",
+        "promptZh": "什么让留下对简具有吸引力？",
+        "options": [
+          "She would gain comfort and remain with Rochester",
+          "She has no feelings for Rochester",
+          "The wedding continues normally",
+          "She wants to hide someone else"
+        ],
+        "optionsZh": [
+          "她能获得舒适并与罗切斯特在一起",
+          "她对罗切斯特没有感情",
+          "婚礼正常继续",
+          "她想藏起另一个人"
+        ],
+        "answer": 0,
+        "explanation": "第二段列出金钱、住所和爱人带来的短期吸引力。"
+      },
+      {
+        "prompt": "What principle guides Jane's decision?",
+        "promptZh": "什么原则引导了简的决定？",
+        "options": [
+          "Feeling should always win",
+          "Comfort proves a choice is right",
+          "Strong love should not silence conscience",
+          "Understanding requires agreement"
+        ],
+        "optionsZh": [
+          "感情应该总获胜",
+          "舒适证明选择正确",
+          "强烈的爱不应压过良知",
+          "理解就必须同意"
+        ],
+        "answer": 2,
+        "explanation": "末段明确说她拒绝让强烈情感使良知沉默。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-24",
+    "title": "A Rehearsal Room Shared by the Hour",
+    "titleZh": "按小时共享的排练室",
+    "category": "Arts · fair access to space",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article; not a report of a live event.",
+    "text": "A community arts center has converted a storage room into a low-cost rehearsal space for small music groups. The room can be booked by the hour and includes chairs, music stands, and basic sound protection. Organizers hope it will help young musicians and adult beginners who cannot practise loudly at home.\n\nDemand was greater than expected, so a simple “first request wins” system soon caused problems. People with flexible schedules booked many evening periods as soon as they appeared online. The center changed the rules: each group may reserve only two popular evening hours per week, while unused times become freely available one day before use. A waiting list fills cancellations.\n\nNeighbors were invited to test the room before it opened. They reported that low drum sounds still traveled through one wall. The center added a raised floor section and now ends amplified rehearsals earlier than acoustic ones. These limits do not satisfy every musician, but sharing space requires attention to people outside it. The project shows that access is not created simply by unlocking a door. Fair booking, honest sound tests, and clear responsibilities turn an empty room into a resource that different groups can continue to use.",
+    "textZh": "一家社区艺术中心把储藏室改造成收费不高的小型乐队排练空间。房间按小时预约，配有椅子、谱架和基础隔音设施。组织者希望帮助无法在家中大声练习的年轻乐手和成年初学者。\n\n需求超出预期，简单的“先到先得”很快引发问题。时间灵活的人一看到线上时段，就订走许多晚间名额。中心于是修改规则：每组每周最多预约两个热门晚间时段，尚未使用的时间则在前一天自由开放；取消的预约由等候名单补上。\n\n开放前，邻居受邀测试房间。他们发现低沉鼓声仍会穿过一面墙。中心增加了一块架高地面，并规定扩音乐队比原声乐队更早结束。这些限制无法满足每位乐手，但共享空间必须顾及外面的人。项目说明，开放资源不只是把门锁打开；公平预约、诚实的声音测试和清晰责任，才能把空房变成不同群体可持续使用的资源。",
+    "listeningTip": "听出预约规则为什么改变，以及不同类型排练的结束时间为何不同。",
+    "speakingPrompt": "How should a shared creative space balance access for users and peace for neighbors?",
+    "speakingPromptZh": "共享创作空间应怎样平衡使用者的便利与邻居的安宁？",
+    "keyPhrases": [
+      {
+        "en": "book by the hour",
+        "zh": "按小时预约"
+      },
+      {
+        "en": "waiting list",
+        "zh": "等候名单"
+      },
+      {
+        "en": "acoustic music",
+        "zh": "原声音乐"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why was the first booking system unfair?",
+        "promptZh": "最初的预约系统为什么不公平？",
+        "options": [
+          "It required paper forms",
+          "People with flexible time captured many popular hours",
+          "Only neighbors could use it",
+          "Every booking was canceled"
+        ],
+        "optionsZh": [
+          "它要求纸质表格",
+          "时间灵活者抢走许多热门时段",
+          "只有邻居能使用",
+          "所有预约都被取消"
+        ],
+        "answer": 1,
+        "explanation": "第二段指出有些人能在时段上线时立即大量预约。"
+      },
+      {
+        "prompt": "What change addressed low drum sounds?",
+        "promptZh": "针对低沉鼓声采取了什么变化？",
+        "options": [
+          "Removing all chairs",
+          "Opening another window",
+          "Adding a raised floor section and earlier limits",
+          "Allowing longer amplified rehearsals"
+        ],
+        "optionsZh": [
+          "移走所有椅子",
+          "再开一扇窗",
+          "增加架高地面并提前结束",
+          "允许扩音乐队排更久"
+        ],
+        "answer": 2,
+        "explanation": "第三段列出架高地面和更早结束两项措施。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-25",
+    "title": "Gulliver Learns to Listen in Lilliput",
+    "titleZh": "格列佛在小人国学习倾听",
+    "category": "Literature · language and perspective",
+    "sourceType": "public-domain adaptation",
+    "sourceNote": "Original adaptation of Jonathan Swift's public-domain novel Gulliver's Travels.",
+    "text": "When Gulliver woke on the shore of Lilliput, tiny ropes held his arms, legs, and hair. Small people moved across his body with bows ready. Because he could have broken many ropes at once, he first saw the islanders as weak. Their organized response soon showed that size was not the same as power.\n\nGulliver decided to cooperate. He pointed to his mouth to request food and repeated words spoken by the officials who approached him. Children laughed at his mistakes, but teachers returned daily. He kept a list of sounds and connected them with gestures, objects, and actions. As his vocabulary grew, the islanders became individuals rather than a noisy crowd below him.\n\nLanguage did not remove every disagreement. Gulliver still misunderstood customs, and the government sometimes used polite words to hide unreasonable demands. Yet listening gave him access to motives that force could never reveal. He learned that communication involves more than making oneself understood; it also requires allowing other people to become complex. Before learning their words, Gulliver measured Lilliput mainly against his own huge body. Afterward, he could begin to measure his own assumptions against their world.",
+    "textZh": "格列佛在小人国海岸醒来时，细小绳索绑住了手脚和头发，小人在他身上走动，弓箭已经备好。他本可以一次挣断许多绳子，因此起初觉得岛民弱小。但对方有组织的反应很快说明，体型并不等于力量。\n\n格列佛决定合作。他指着嘴请求食物，并重复靠近他的官员所说的词。孩子们嘲笑他的错误，老师却每天回来。他列出声音，再把声音与手势、物品和动作联系。随着词汇增加，岛民不再只是脚下一群吵闹的人，而成了一个个具体的人。\n\n语言没有消除所有分歧。格列佛仍会误解习俗，政府有时也用礼貌措辞掩盖不合理要求。但倾听让他接触到武力无法揭示的动机。他明白，交流不只是让别人理解自己，还要允许别人变得复杂。学会他们的语言前，格列佛主要用自己的巨大身体衡量小人国；之后，他开始用对方的世界检验自己的成见。",
+    "listeningTip": "关注 Gulliver 对岛民的看法怎样随语言学习改变，并区分“听懂”和“同意”。",
+    "speakingPrompt": "How does learning another person's language challenge simple assumptions about them?",
+    "speakingPromptZh": "学习另一个人的语言，怎样会挑战我们对他的简单成见？",
+    "keyPhrases": [
+      {
+        "en": "organized response",
+        "zh": "有组织的反应"
+      },
+      {
+        "en": "connect with",
+        "zh": "与……联系起来"
+      },
+      {
+        "en": "unreasonable demand",
+        "zh": "不合理的要求"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "How did Gulliver build his vocabulary?",
+        "promptZh": "格列佛怎样积累词汇？",
+        "options": [
+          "By reading a large dictionary",
+          "By linking sounds with gestures, objects, and actions",
+          "By refusing to make mistakes",
+          "By teaching the islanders English"
+        ],
+        "optionsZh": [
+          "阅读大词典",
+          "把声音与手势、物品和动作联系",
+          "拒绝犯错",
+          "教岛民英语"
+        ],
+        "answer": 1,
+        "explanation": "第二段具体描述了他记录声音并建立对应关系。"
+      },
+      {
+        "prompt": "What deeper effect did listening have?",
+        "promptZh": "倾听带来了什么更深层的影响？",
+        "options": [
+          "It made all conflicts disappear",
+          "It let Gulliver see the islanders as complex individuals",
+          "It increased Gulliver's size",
+          "It proved every official was honest"
+        ],
+        "optionsZh": [
+          "消除所有冲突",
+          "让格列佛把岛民看成复杂的个体",
+          "让格列佛变大",
+          "证明所有官员都诚实"
+        ],
+        "answer": 1,
+        "explanation": "文章强调语言使岛民不再只是模糊人群，并让他反思成见。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-26",
+    "title": "Picture Cards for a Clearer Clinic Visit",
+    "titleZh": "让门诊沟通更清楚的图片卡",
+    "category": "Health · communication support",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article; not a report of a live event or medical advice.",
+    "text": "A neighborhood clinic has created a set of picture cards to support conversations with patients who have limited language skills or difficulty hearing. The cards show common needs, such as water, a quiet place, an interpreter, or help contacting a family member. Another group of images helps a patient point to the location and general type of discomfort.\n\nDoctors emphasize that the cards do not diagnose illness. A picture of a burning feeling, for example, cannot explain its cause or replace a proper examination. Staff use the cards to begin questions, then confirm the meaning in several ways. Patients may write, speak, gesture, or request professional language support. The cards also include “yes,” “no,” and “I am not sure,” because uncertainty is important information.\n\nThe first version contained too much detail and made users search through several pages. After testing, the clinic reduced the set and placed urgent communication needs first. Copies are cleaned after use, and a digital version is available on a large screen. The project recognizes a simple fact: when communication becomes difficult, responsibility does not belong only to the patient. A service can change its tools so that both sides have a better chance of understanding each other.",
+    "textZh": "一家社区诊所制作了一套图片卡，帮助语言能力有限或听力有困难的患者沟通。卡片显示喝水、安静空间、口译服务、联系家人等常见需要。另一组图片则帮助患者指出不适的位置和大致类型。\n\n医生强调，卡片不能诊断疾病。例如，“灼烧感”的图无法解释原因，也不能代替正规检查。工作人员用卡片开启提问，再通过多种方式确认含义。患者可以书写、说话、做手势或要求专业语言支持。卡片还包括“是”“否”“我不确定”，因为不确定本身也是重要信息。\n\n第一版细节太多，使用者需要翻找好几页。测试后，诊所精简了数量，并把紧急沟通需求放在前面。实体卡使用后会清洁，大屏幕上也有电子版。这个项目承认一个简单事实：沟通困难时，责任不只属于患者。服务方也能改变工具，让双方更有机会理解彼此。",
+    "listeningTip": "先听图片卡能做什么、不能做什么，再留意诊所如何根据测试精简设计。",
+    "speakingPrompt": "What should public services do when a visitor cannot easily explain a need?",
+    "speakingPromptZh": "当来访者难以说明需求时，公共服务机构应该怎么做？",
+    "keyPhrases": [
+      {
+        "en": "limited language skills",
+        "zh": "有限的语言能力"
+      },
+      {
+        "en": "proper examination",
+        "zh": "正规检查"
+      },
+      {
+        "en": "confirm the meaning",
+        "zh": "确认含义"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What are the picture cards meant to do?",
+        "promptZh": "图片卡的用途是什么？",
+        "options": [
+          "Provide a final diagnosis",
+          "Support the beginning of communication",
+          "Replace every interpreter",
+          "Teach medical treatment"
+        ],
+        "optionsZh": [
+          "给出最终诊断",
+          "帮助开始沟通",
+          "取代所有口译员",
+          "教授医疗处理"
+        ],
+        "answer": 1,
+        "explanation": "第二段明确限制其作用：辅助开启问题，而非诊断。"
+      },
+      {
+        "prompt": "Why does the set include “I am not sure”?",
+        "promptZh": "为什么卡片中有“我不确定”？",
+        "options": [
+          "To end every visit",
+          "Because uncertainty is useful information",
+          "Because staff dislike questions",
+          "To test reading speed"
+        ],
+        "optionsZh": [
+          "为了结束每次问诊",
+          "因为不确定也是有用信息",
+          "因为员工不喜欢提问",
+          "为了测试阅读速度"
+        ],
+        "answer": 1,
+        "explanation": "原文直接说明不确定性本身也很重要。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-27",
+    "title": "The Creature Watches the Cottage",
+    "titleZh": "怪物注视着小屋",
+    "category": "Literature · learning and exclusion",
+    "sourceType": "public-domain adaptation",
+    "sourceNote": "Original adaptation of Mary Shelley's public-domain novel Frankenstein.",
+    "text": "Rejected by his creator and frightened away by strangers, Frankenstein's creature hid beside a country cottage. Through a narrow opening, he watched the family inside. At first, their speech was only sound, but their actions offered clues. When one person brought wood, the others became warmer; when food was scarce, they quietly divided it.\n\nThe creature listened day after day. A visitor was learning the family's language, so her simple lessons became his lessons too. He connected spoken words with objects and emotions, then learned to read from books used in the cottage. Knowledge gave names to beauty, friendship, history, and injustice. It also made his loneliness more painful because he could now describe what he lacked.\n\nHoping kindness might overcome appearance, he finally spoke to the family's blind father while the others were away. The old man heard an educated, unhappy stranger and responded gently. When the family returned, however, fear ended the conversation before explanation was possible. The creature's secret education proves his ability to learn and care. His rejection also shows a limit of knowledge: language can open a mind, but it cannot guarantee that another person will stay long enough to listen.",
+    "textZh": "被创造者抛弃、又被陌生人恐惧地赶走后，弗兰肯斯坦的怪物藏在一座乡间小屋旁。他从狭窄缝隙观察屋内一家人。起初，他们的语言只是声音，但行动提供了线索。一个人搬来木柴，大家便更暖；食物不足时，他们安静地分着吃。\n\n怪物日复一日地倾听。正好有位访客也在学习这家人的语言，她的简单课程便成了他的课程。他把口语与物品、情感联系，再从小屋里的书中学会阅读。知识为美、友谊、历史和不公提供了名称，却也让孤独更痛，因为他现在能说清自己缺少什么。\n\n他希望善意能战胜外表，于是趁其他人不在，终于与家中失明的父亲交谈。老人听到的是一位受过教育却不幸的陌生人，并温和回应。但家人回来后，恐惧在解释发生前就结束了谈话。秘密教育证明怪物能够学习和关爱；遭到拒绝也显示知识的局限：语言可以打开思想，却不能保证别人愿意留下来听。",
+    "listeningTip": "注意 creature 如何从动作、语言到书本逐层学习，并听出知识带来的好处与痛苦。",
+    "speakingPrompt": "Why does education sometimes make a person's loneliness more visible to them?",
+    "speakingPromptZh": "为什么教育有时会让一个人更清楚地感受到自己的孤独？",
+    "keyPhrases": [
+      {
+        "en": "offer clues",
+        "zh": "提供线索"
+      },
+      {
+        "en": "day after day",
+        "zh": "日复一日"
+      },
+      {
+        "en": "overcome appearance",
+        "zh": "克服外表造成的影响"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "How did the visitor's lessons help the creature?",
+        "promptZh": "访客的课程怎样帮助了怪物？",
+        "options": [
+          "They taught him the language indirectly",
+          "They showed him a road home",
+          "They introduced him to his creator",
+          "They hid his appearance"
+        ],
+        "optionsZh": [
+          "它们间接教会他语言",
+          "它们给他指明回家路",
+          "它们介绍他认识创造者",
+          "它们隐藏他的外表"
+        ],
+        "answer": 0,
+        "explanation": "访客在学语言，怪物旁听并把同样的课程变成自己的学习。"
+      },
+      {
+        "prompt": "Why did the talk with the blind father end?",
+        "promptZh": "与失明父亲的交谈为什么结束？",
+        "options": [
+          "The creature forgot all words",
+          "The returning family reacted with fear",
+          "The father asked for money",
+          "A storm destroyed the cottage"
+        ],
+        "optionsZh": [
+          "怪物忘了所有词",
+          "归来的家人因恐惧作出反应",
+          "父亲要钱",
+          "暴风雨摧毁小屋"
+        ],
+        "answer": 1,
+        "explanation": "家人回来后被外表吓住，没有给他解释的时间。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-28",
+    "title": "Energy Information Without Naming Neighbors",
+    "titleZh": "不点名邻居的用能信息",
+    "category": "Technology · privacy-aware feedback",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article; not a report of a live event.",
+    "text": "An apartment building has placed a shared energy display in its entrance, but the screen does not rank individual homes. It shows the building's total electricity use by week and compares it with the building's own recent pattern. Residents can see when use rises sharply without learning how much power a particular neighbor consumes.\n\nThe first proposal included a list of apartment numbers from lowest to highest use. During consultation, residents argued that family size, medical equipment, home working, and travel could make such rankings unfair. A low figure did not always mean careful behavior, and a high figure did not prove waste. The committee removed the list and focused on common spaces and shared goals.\n\nWhen electricity use rises, the display offers possible checks rather than accusations: confirm that hallway lights switch off, inspect heating controls, and report a faulty door. Residents receive private details about their own homes through a separate system. The design gives up the excitement of a public competition, but it may produce more useful cooperation. Information can guide change without exposing people. The key is to match the level of data with the level at which a decision can reasonably be made.",
+    "textZh": "一栋公寓楼在入口设置了共享用能屏幕，但它不对各户进行排名。屏幕按周显示整栋楼的总用电量，并与该楼近期自身水平比较。居民能看出用电何时突然上升，却不会知道某位邻居具体用了多少电。\n\n最初方案准备按用电量从低到高列出房号。征求意见时，居民指出家庭人数、医疗设备、居家工作和旅行都会让排名不公平。低数字不一定代表行为节约，高数字也不能证明浪费。委员会删掉名单，转而关注公共空间和共同目标。\n\n用电上升时，屏幕给出可检查事项而非指责：确认走廊灯会自动关闭、检查供暖控制、报告故障门。居民通过另一套系统私下查看自家详情。设计放弃了公开竞赛的刺激，却可能带来更有效的合作。信息可以在不暴露个人的情况下推动改变，关键是让数据层级与能够合理作出决定的层级相匹配。",
+    "listeningTip": "分辨公开信息与私人信息，并听清为什么按房号排名可能产生错误结论。",
+    "speakingPrompt": "When is group-level information more useful or fair than individual rankings?",
+    "speakingPromptZh": "什么时候群体层面的信息比个人排名更有用或更公平？",
+    "keyPhrases": [
+      {
+        "en": "rank individual homes",
+        "zh": "给各户排名"
+      },
+      {
+        "en": "rise sharply",
+        "zh": "急剧上升"
+      },
+      {
+        "en": "rather than accusations",
+        "zh": "而不是指责"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why was the apartment ranking removed?",
+        "promptZh": "为什么取消各户排名？",
+        "options": [
+          "The screen was too small",
+          "Different household situations made comparison unfair",
+          "Residents used no electricity",
+          "The building had no apartment numbers"
+        ],
+        "optionsZh": [
+          "屏幕太小",
+          "不同家庭情况让比较不公平",
+          "居民不用电",
+          "大楼没有房号"
+        ],
+        "answer": 1,
+        "explanation": "第二段列出家庭规模、医疗设备等造成不可比的因素。"
+      },
+      {
+        "prompt": "What does the shared display do when use increases?",
+        "promptZh": "用电上升时，共享屏幕会做什么？",
+        "options": [
+          "Name the highest user",
+          "Turn off every home",
+          "Suggest checks in common areas",
+          "Publish medical information"
+        ],
+        "optionsZh": [
+          "点名最高用户",
+          "关闭所有住户用电",
+          "建议检查公共区域",
+          "公开医疗信息"
+        ],
+        "answer": 2,
+        "explanation": "第三段列出检查走廊灯、供暖和门等共同事项。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-29",
+    "title": "Joe's Visit to London",
+    "titleZh": "乔的伦敦来访",
+    "category": "Literature · loyalty and social shame",
+    "sourceType": "public-domain adaptation",
+    "sourceNote": "Original adaptation of Charles Dickens's public-domain novel Great Expectations.",
+    "text": "After receiving money from a secret supporter, Pip moved to London and tried to become a gentleman. He bought fashionable clothes and learned formal manners. When Joe, the kind blacksmith who had raised him, announced a visit, Pip felt both affection and embarrassment. He worried that Joe's rough speech would look strange in his new rooms.\n\nJoe arrived in his best clothes but seemed uncomfortable. Pip's careful behavior made the simple visit feel like an examination. Joe called him “sir,” held his hat nervously, and avoided sitting naturally. He had brought news from home and a loving message, yet he left sooner than planned because distance had entered the room before he did.\n\nOnce alone, Pip recognized that Joe had not embarrassed him; his own shame had embarrassed them both. Education and opportunity were not the true problem. The problem was Pip's mistaken belief that rising socially required him to look down on the people who had loved him without conditions. Joe's visit becomes painful because no open insult is spoken. Courtesy remains on the surface while gratitude disappears beneath it. Pip begins to understand that becoming refined should enlarge a person's respect, not narrow it.",
+    "textZh": "得到神秘资助者的钱后，匹普搬到伦敦，努力成为绅士。他买时髦衣服，学习正式礼仪。当抚养他的善良铁匠乔说要来访时，匹普既亲切又尴尬。他担心乔粗朴的说话方式在新房间里显得奇怪。\n\n乔穿着最好的衣服到来，却十分不自在。匹普过分谨慎的表现，让一次普通探望像考试。乔称他“先生”，紧张地拿着帽子，也无法自然坐下。他带来了家乡消息和充满爱意的问候，却比计划更早离开，因为在他进门前，心理距离已经进入房间。\n\n独处后，匹普意识到不是乔让自己丢脸，而是自己的羞耻感让两人都难堪。教育和机会本身不是问题，问题在于匹普错误地以为社会地位上升就必须轻视那些无条件爱过他的人。乔的来访令人痛苦，正因为没有人公开侮辱；表面仍有礼貌，内里却失去感激。匹普开始明白，变得有教养应当扩大尊重，而不是缩小它。",
+    "listeningTip": "注意表面礼貌与内心态度的反差，并听出 Pip 独处后的自我认识。",
+    "speakingPrompt": "How can people change their social position without becoming ashamed of their past?",
+    "speakingPromptZh": "人们怎样能在社会位置改变时，不对自己的过去感到羞耻？",
+    "keyPhrases": [
+      {
+        "en": "formal manners",
+        "zh": "正式礼仪"
+      },
+      {
+        "en": "sooner than planned",
+        "zh": "比计划更早"
+      },
+      {
+        "en": "without conditions",
+        "zh": "无条件地"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why was Joe uncomfortable during the visit?",
+        "promptZh": "乔来访时为什么不自在？",
+        "options": [
+          "He disliked London weather",
+          "Pip's manner made the visit feel like a test",
+          "He had forgotten the news",
+          "The room had no chair"
+        ],
+        "optionsZh": [
+          "他不喜欢伦敦天气",
+          "匹普的态度让探望像一次考试",
+          "他忘了消息",
+          "房间没有椅子"
+        ],
+        "answer": 1,
+        "explanation": "第二段说匹普的谨慎举止使普通会面变得像考核。"
+      },
+      {
+        "prompt": "What does Pip realize afterward?",
+        "promptZh": "事后匹普意识到什么？",
+        "options": [
+          "Joe needs fashionable clothes",
+          "Opportunity is always harmful",
+          "His own shame damaged the meeting",
+          "Courtesy is more important than gratitude"
+        ],
+        "optionsZh": [
+          "乔需要时髦衣服",
+          "机会总有害",
+          "他自己的羞耻感破坏了会面",
+          "礼貌比感激更重要"
+        ],
+        "answer": 2,
+        "explanation": "第三段开头直接指出问题来自匹普自己的羞耻。"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-30",
+    "title": "A Pool Posts What Its Water Tests Mean",
+    "titleZh": "泳池公开解释水质检测",
+    "category": "Public health · transparent information",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article; not a report of a live event or medical advice.",
+    "text": "A public swimming pool has replaced a small sheet of test numbers with a larger board explaining how water is checked. The old sheet met basic reporting rules, but most visitors did not know what the figures meant. The new board names each type of check, shows when it was last completed, and states what staff do if a result falls outside the accepted range.\n\nPool workers test the water on a regular schedule and record the results, while an independent laboratory performs additional checks. The board does not promise that risk can become zero. Instead, it explains layers of protection: water treatment, shower rules, cleaning routines, and temporary closure when needed. A contact address allows visitors to request the full report.\n\nDuring the redesign, staff avoided using a simple green or red symbol by itself. Green could create false confidence, while red might cause fear without explaining whether the pool was already closed. The final display combines a clear current status with dates and plain-language notes. Transparency is not the same as placing every technical detail on a wall. It means giving people enough reliable context to understand a decision, ask a sensible question, and see who is responsible for acting when conditions change.",
+    "textZh": "一家公共泳池把原来只有少量检测数字的小纸张，换成更大的说明板，解释水质如何检查。旧表符合基本报告要求，但多数访客不知道数字含义。新板写明每类检查、最近完成时间，以及结果超出允许范围时员工会采取什么行动。\n\n泳池员工按固定时间表检测并记录，独立实验室还会进行额外检查。说明板不承诺风险能降到零，而是解释多层保护：水处理、淋浴规定、清洁流程，以及必要时暂时关闭。访客可通过联系地址索取完整报告。\n\n重新设计时，员工避免只用简单的绿或红标记。绿色可能制造错误安全感，红色则可能在没有解释泳池是否已关闭时引起恐慌。最终展示把清楚的当前状态、日期和通俗说明结合起来。透明不等于把所有技术细节贴满墙，而是给人们足够可靠的背景，以理解决定、提出合理问题，并看清条件变化时由谁负责行动。",
+    "listeningTip": "听三层信息：检测内容、异常后的行动、公开方式；特别注意作者如何定义 transparency。",
+    "speakingPrompt": "What information makes a public safety notice trustworthy and useful?",
+    "speakingPromptZh": "哪些信息能让公共安全告示既可信又有用？",
+    "keyPhrases": [
+      {
+        "en": "accepted range",
+        "zh": "允许范围"
+      },
+      {
+        "en": "temporary closure",
+        "zh": "暂时关闭"
+      },
+      {
+        "en": "plain-language note",
+        "zh": "通俗说明"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What does the new board add to the test results?",
+        "promptZh": "新说明板在检测结果之外增加了什么？",
+        "options": [
+          "A list of swimmers",
+          "Explanations of checks and responses",
+          "Advertising for private pools",
+          "A promise of zero risk"
+        ],
+        "optionsZh": [
+          "游泳者名单",
+          "对检查和应对措施的解释",
+          "私人泳池广告",
+          "零风险承诺"
+        ],
+        "answer": 1,
+        "explanation": "第一段说明新板解释检查内容、时间及异常后的措施。"
+      },
+      {
+        "prompt": "Why are simple color symbols not enough?",
+        "promptZh": "为什么简单颜色标记并不足够？",
+        "options": [
+          "Visitors cannot see colors",
+          "They may create confidence or fear without context",
+          "The pool has no wall space",
+          "Laboratories ban colored signs"
+        ],
+        "optionsZh": [
+          "访客看不见颜色",
+          "它们可能在缺少背景时造成自信或恐惧",
+          "泳池没有墙面空间",
+          "实验室禁止彩色标志"
+        ],
+        "answer": 1,
+        "explanation": "第三段解释单独的绿或红标记可能导致误解。"
+      }
+    ]
+  }
+]
