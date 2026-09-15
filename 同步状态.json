@@ -1,6 +1,6 @@
 {
   "version": "2026-09-13.1",
-  "buildId": "f7c821f7f2b2",
+  "buildId": "03b385733901",
   "verifiedOn": "2026-09-15",
   "preparedThrough": "2026-09-30",
   "days": [
@@ -50,7 +50,7 @@
         "buy",
         "pay"
       ],
-      "quizWordCount": 20,
+      "quizWordCount": 30,
       "dictationSegments": 8,
       "dictationComplete": true,
       "missingGlosses": [],
@@ -103,7 +103,7 @@
         "time",
         "early"
       ],
-      "quizWordCount": 20,
+      "quizWordCount": 30,
       "dictationSegments": 7,
       "dictationComplete": true,
       "missingGlosses": [],
@@ -156,7 +156,7 @@
         "phone",
         "message"
       ],
-      "quizWordCount": 20,
+      "quizWordCount": 30,
       "dictationSegments": 8,
       "dictationComplete": true,
       "missingGlosses": [],
@@ -209,7 +209,7 @@
         "city",
         "village"
       ],
-      "quizWordCount": 20,
+      "quizWordCount": 30,
       "dictationSegments": 9,
       "dictationComplete": true,
       "missingGlosses": [],
@@ -262,7 +262,7 @@
         "habit",
         "practice"
       ],
-      "quizWordCount": 20,
+      "quizWordCount": 30,
       "dictationSegments": 9,
       "dictationComplete": true,
       "missingGlosses": [],
@@ -357,7 +357,7 @@
         "plan",
         "choose"
       ],
-      "quizWordCount": 20,
+      "quizWordCount": 30,
       "dictationSegments": 9,
       "dictationComplete": true,
       "missingGlosses": [],
