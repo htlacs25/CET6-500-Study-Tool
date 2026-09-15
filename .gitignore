@@ -10,6 +10,7 @@ out/
 # Local caches and temporary runtime data
 npm-cache/
 runtime-temp/
+/runtime/
 创建的node_cache文件夹所在路径/
 app/创建的node_cache文件夹所在路径/
 
@@ -26,4 +27,3 @@ backups/
 Thumbs.db
 .idea/
 .vscode/
-

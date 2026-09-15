@@ -81,6 +81,46 @@ export function lessonFingerprint(lesson={}){
 }
 export function blankProgress(){return {completed:[],wordCorrect:0,wordTotal:0,listeningCorrect:0,listeningTotal:0,listeningChoiceCorrect:0,listeningChoiceTotal:0,quizCorrect:0,quizTotal:0,grammarCorrect:0,grammarTotal:0,readingCorrect:0,readingTotal:0,extensiveCorrect:0,extensiveTotal:0,sentenceCorrect:0,sentenceTotal:0,translationCorrect:0,translationTotal:0,wordErrors:[],listeningErrors:[],quizErrors:[],notes:'',attempts:{},errorDetails:[],draft:null,lessonSnapshot:null,snapshotArchive:[]}}
 export function normEnglish(s){return String(s||'').toLowerCase().replace(/[’‘]/g,"'").replace(/[^a-z0-9' ]/g,' ').replace(/\s+/g,' ').trim()}
+export function allDictationWords(lesson={}){
+  const rows=lesson.all||[...(lesson.rev||[]),...(lesson.nw||[])];
+  return rows.filter((w,i,a)=>w?.word&&a.findIndex(x=>normEnglish(x.word)===normEnglish(w.word))===i);
+}
+export function shuffledWords(words,previous=[],random=Math.random){
+  const rows=[...words];
+  for(let i=rows.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[rows[i],rows[j]]=[rows[j],rows[i]]}
+  const same=order=>rows.length===order.length&&rows.every((w,i)=>w.word===order[i]?.word);
+  if(rows.length>1&&same(words))rows.push(rows.shift());
+  if(rows.length>1&&same(previous))rows.push(rows.shift());
+  return rows;
+}
+export function firstWordAttempt(progress={},lesson={},target){
+  const key=normEnglish(target),oldOrder=progress.lessonSnapshot?.quizWords||lesson.quizWords||[];
+  for(const [id,attempt] of Object.entries(progress.attempts||{})){
+    if(attempt.group!=='word')continue;
+    const index=id.match(/:(\d+)$/)?.[1],word=attempt.targetWord||(index!==undefined?oldOrder[Number(index)]?.word:'');
+    if(normEnglish(word)===key)return attempt;
+  }
+  return null;
+}
+export function makeWordRound(words,previous=[],random=Math.random){
+  const order=shuffledWords(words,previous,random).map((w,i)=>({...w,audio:i<Math.ceil(words.length/2)}));
+  return {version:2,order,i:0,input:'',meaningInput:'',phase:'try',score:0,hadError:false,results:{},done:!order.length,startedAt:new Date().toISOString()};
+}
+export function restoreDailyWordRound(lesson,progress={},draft={},random=Math.random){
+  const all=allDictationWords(lesson),oldOrder=progress.lessonSnapshot?.quizWords||lesson.quizWords||[];
+  const cursor=oldOrder[draft.i||0],hasDraft=!progress.completed?.includes('words')&&cursor&&(draft.input||draft.meaningInput||draft.i||draft.phase&&draft.phase!=='try');
+  const taken=all.filter(w=>firstWordAttempt(progress,lesson,w.word)&&(!hasDraft||normEnglish(w.word)!==normEnglish(cursor.word)));
+  const current=hasDraft?all.find(w=>normEnglish(w.word)===normEnglish(cursor.word)):null;
+  const rest=all.filter(w=>!taken.includes(w)&&w!==current),round=makeWordRound(rest,[],random);
+  const oldEntry=w=>{const index=oldOrder.findIndex(x=>normEnglish(x.word)===normEnglish(w.word));return {...w,audio:index>=0?index<Math.ceil(oldOrder.length/2):true}};
+  round.order=[...taken.map(oldEntry),...(current?[oldEntry(current)]:[]),...round.order];round.i=taken.length;round.done=round.i>=round.order.length;
+  if(current){
+    for(const key of ['input','meaningInput','phase','hadError'])if(draft[key]!==undefined)round[key]=draft[key];
+    const first=firstWordAttempt(progress,lesson,current.word);
+    if(first&&draft.phase&&draft.phase!=='try')round.results[normEnglish(current.word)]={correct:first.correct,answer:draft.input||'',meaningInput:draft.meaningInput||''};
+  }
+  return round;
+}
 export function mergeLegacyStores(read){
   const out={};
   for(const key of [...OLD_PROGRESS_KEYS].reverse()){
@@ -127,7 +167,7 @@ export function assessTranslation(x,input){
 }
 export function readiness(history,date){
   const days=Object.entries(history).filter(([k,p])=>k<date&&dateGap(date,k)<=7&&p.lessonSnapshot?.recovery);
-  const complete=days.filter(([,p])=>p.wordTotal>=Math.max(1,p.lessonSnapshot?.quizWords?.length||12)&&p.listeningChoiceTotal>=2&&p.grammarTotal>=6&&p.readingTotal>=3);
+  const complete=days.filter(([,p])=>p.wordTotal>=Math.max(1,p.wordPractice?.daily?.order?.length||p.lessonSnapshot?.quizWords?.length||12)&&p.listeningChoiceTotal>=2&&p.grammarTotal>=6&&p.readingTotal>=3);
   const rates={};
   for(const group of ['word','listeningChoice','grammar','reading']){
     const [c,t]=scoreFields[group];const total=days.reduce((n,[,p])=>n+(p[t]||0),0),correct=days.reduce((n,[,p])=>n+(p[c]||0),0);
@@ -163,6 +203,9 @@ export function buildRecoveryLesson(data,recovery,date,history={},userVocabulary
     const packDate=k;
     const runs=[p,...(Array.isArray(p.snapshotArchive)?[...p.snapshotArchive].reverse().map(x=>x.progress).filter(Boolean):[])];
     for(const run of runs){
+      for(const n of run.wordPractice?.mistakes||[])if(!latestWordResult.has(n)){
+        latestWordResult.set(n,false);latestWordDate.set(n,packDate);
+      }
       for(const a of Object.values(run.attempts||{}))if(a.group==='word'&&a.targetWord&&!latestWordResult.has(a.targetWord)){
         latestWordResult.set(a.targetWord,a.correct);latestWordDate.set(a.targetWord,packDate);
       }
@@ -202,8 +245,8 @@ export function buildRecoveryLesson(data,recovery,date,history={},userVocabulary
   const candidateNames=[...priorityNames,...ordinaryNames];
   const reviewTarget=weekly?20:18;
   const rev=candidateNames.map(find).filter(Boolean).filter((w,i,a)=>!nw.some(n=>n.word===w.word)&&a.findIndex(n=>n.word===w.word)===i).slice(0,reviewTarget);
-  const quizNew=[...nw.filter(w=>['improve','think'].includes(w.word)),...nw.filter(w=>!['improve','think'].includes(w.word))];
-  const quizWords=nw.length?[...rev.slice(0,5),...quizNew.slice(0,5),...rev.slice(5,10),...quizNew.slice(5,10)]:rev.slice(0,20);
+  // The curriculum exposes every daily word; the browser persists its shuffled round separately.
+  const quizWords=[...rev,...nw];
   const phase=phaseFor(date),advanced=!foundation&&date>='2026-10-01';
   let reading=seed.reading,listening=seed.listening,extensive=seed.extensive,sent=[seed.sent],trans=seed.trans;
   if(!foundation&&!dated){
@@ -225,6 +268,7 @@ export function buildRecoveryLesson(data,recovery,date,history={},userVocabulary
   return {...lesson,contentSignature,contentRevision:'course-'+contentSignature};
 }
 export function hasAnswerWork(p={}){
+  if(p.wordPractice?.daily?.order?.length)return true;
   if((p.completed||[]).length||Object.keys(p.attempts||{}).length||['wordTotal','listeningTotal','listeningChoiceTotal','quizTotal','extensiveTotal','sentenceTotal','translationTotal'].some(k=>p[k]>0))return true;
   const d=p.draft||{};
   return Boolean(d.ws?.input||d.ws?.meaningInput||d.ws?.i||d.ls?.input||d.ls?.i||Object.keys(d.ls?.answers||{}).length||Object.keys(d.ps?.answers||{}).length||Object.values(d.ps?.sent||{}).some(x=>x.main||x.trans)||Object.values(d.ps?.trans||{}).some(x=>x.input)||Object.keys(d.er?.answers||{}).length||d.er?.submitted||d.er?.shadowDone||d.er?.retellDone);

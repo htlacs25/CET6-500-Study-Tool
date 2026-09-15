@@ -11,6 +11,7 @@ import { prepareStandalone } from './generate-standalone.mjs';
 
 const root=path.resolve(import.meta.dirname,'..');
 const html=fs.readFileSync(path.join(root,'public','六级学习工具.html'),'utf8');
+const RELEASE=JSON.parse(html.match(/const RELEASE=([\s\S]*?);\r?\n/)[1]);
 const DATA=JSON.parse(html.match(/const DATA=([\s\S]*?); const RECOVERY=/)[1]);
 const CURRICULUM=loadCurriculum();
 const dateAt=n=>new Date(Date.UTC(2026,7,28+n)).toISOString().slice(0,10);
@@ -23,7 +24,7 @@ const assertFullDictation=(L,label)=>{
 };
 
 test('sync report stays ASCII-safe for Windows PowerShell JSON parsing',()=>{
-  const result=spawnSync(process.execPath,[path.join(root,'scripts','sync-daily-content.mjs'),'2026-09-13','--check'],{encoding:'utf8'});
+  const result=spawnSync(process.execPath,[path.join(root,'scripts','sync-daily-content.mjs'),RELEASE.verifiedOn,'--check'],{encoding:'utf8'});
   assert.equal(result.status,0,result.stderr||result.stdout);
   assert.match(result.stdout,/^[\x00-\x7F]*$/);
   const report=JSON.parse(result.stdout);
@@ -40,9 +41,9 @@ test('14 complete lessons have bilingual material, IPA and valid answers',()=>{
   for(let i=0;i<14;i++){
     const L=buildRecoveryLesson(DATA,CURRICULUM,dateAt(i));titles.add(L.reading.title);
     assert.equal(L.nw.length,[6,13].includes(i)?0:12);
-    assert.equal(L.rev.length,L.weekly?20:18);assert.equal(L.quizWords.length,20);
+    assert.equal(L.rev.length,L.weekly?20:18);assert.equal(L.quizWords.length,L.weekly?20:30);
     assert.equal(new Set(L.all.map(w=>w.word)).size,L.all.length);
-    assert.equal(new Set(L.quizWords.map(w=>w.word)).size,20);
+    assert.equal(new Set(L.quizWords.map(w=>w.word)).size,L.weekly?20:30);
     assert.equal(L.grammar.length,6);assert.equal(L.reading.questions.length,4);
     assert.equal(L.listening.questions.length,2);assertFullDictation(L,`recovery day ${i+1}`);
     assert.equal(L.sent.length,1);assert.equal(L.trans.length,2);assert.equal(L.tasks.length,7);
@@ -72,7 +73,7 @@ test('weekday/weekend budget, weekly tests, dates and roadmap',()=>{
     assert.equal(L.tasks.at(-1).minutes,wk?15:10);
     assert.equal(L.weekly,(i+1)%7===0);
     if(L.weekly)assert.equal(L.nw.length,0);
-    assert.equal(L.rev.length,L.weekly?20:18);assert.equal(L.quizWords.length,20);
+    assert.equal(L.rev.length,L.weekly?20:18);assert.equal(L.quizWords.length,L.weekly?20:30);
   }
   const pending=buildRecoveryLesson(DATA,RECOVERY,'2026-09-11');
   assert.equal(pending.unprepared,true);assert.equal(pending.freshMaterial,false);
@@ -113,7 +114,7 @@ test('every rolling seven-day window through September is complete and fully dis
     const date=`2026-09-${String(day).padStart(2,'0')}`,L=buildRecoveryLesson(DATA,curriculum,date);
     assert.equal(L.unprepared,undefined);assert.equal(L.freshMaterial,true);
     assert.equal(L.nw.length,[17,24].includes(day)?0:12);
-    assert.equal(L.rev.length,L.weekly?20:18);assert.equal(L.quizWords.length,20);assert.equal(L.grammar.length,6);
+    assert.equal(L.rev.length,L.weekly?20:18);assert.equal(L.quizWords.length,L.weekly?20:30);assert.equal(L.grammar.length,6);
     assert.equal(L.reading.questions.length,4);assert.equal(L.listening.questions.length,2);
     assertFullDictation(L,date);assert.equal(L.sent.length,1);assert.equal(L.trans.length,2);assert.equal(L.tasks.length,7);
     assert.ok(L.extensive.text&&L.extensive.textZh);assert.equal(L.extensive.questions.length,2);assert.equal(L.extensive.keyPhrases.length,3);
@@ -291,7 +292,7 @@ test('only explicitly added article words enter a fixed-size spaced review queue
   vocab=addUserVocabulary(vocab,{surface:'zebra',word:'zebra',meaning:'斑马'},'2026-09-10','listening');
   assert.equal(Object.keys(vocab.items).length,1);
   const L=buildRecoveryLesson(DATA,CURRICULUM,'2026-09-11',{},vocab);
-  assert.equal(L.rev.length,18);assert.equal(L.quizWords.length,20);assert.ok(L.rev.some(x=>x.word==='zebra'));
+  assert.equal(L.rev.length,18);assert.equal(L.quizWords.length,L.weekly?20:30);assert.ok(L.rev.some(x=>x.word==='zebra'));
   vocab=reviewUserVocabulary(vocab,'zebra','2026-09-11',true);
   assert.equal(vocab.items.zebra.dueDate,'2026-09-13');
   vocab=reviewUserVocabulary(vocab,'zebra','2026-09-13',true);
@@ -308,19 +309,45 @@ function runtime(initial={},browserMode=false){
   const session=new Map(),events={},beacons=[],audioEvents=[];let reloadCount=0;
   let now=Date.parse('2026-08-28T15:59:30Z');
   class TestDate extends Date {constructor(...args){super(...(args.length?args:[now]))}static now(){return now}}
-  const element=id=>{if(!elements.has(id))elements.set(id,{id,innerHTML:'',textContent:'',value:'',disabled:false,dataset:{}});return elements.get(id)};
+  const element=id=>{if(!elements.has(id))elements.set(id,{
+    id,innerHTML:'',textContent:'',value:'',disabled:false,dataset:{},style:{},hidden:false,isConnected:true,
+    focus(options){this.focusOptions=options},getBoundingClientRect(){return {left:100,top:120,right:460,bottom:440,width:360,height:320}},
+    querySelector(selector){const child=selector.slice(1);if(!this.innerHTML.includes('id="'+child+'"'))return null;const found=element(child);found.parentElement=this;return found},
+    contains(target){return target===this||target?.parentElement===this}
+  });return elements.get(id)};
   const document={getElementById:element,querySelectorAll:()=>[],querySelector:()=>null,createElement:()=>({click(){},remove(){}}),head:{appendChild:s=>beacons.push(s)},addEventListener:(name,fn)=>events[name]=fn,hidden:false};
   const location={href:'file:///D:/CET6-500-Study-Tool/六级学习工具.html',protocol:'file:',hostname:'',reload:()=>reloadCount++};
   location.replace=url=>{location.href=url;reloadCount++};
-  const window={location,addEventListener:(name,fn)=>events[name]=fn};
+  const window={location,innerWidth:1024,innerHeight:768,addEventListener:(name,fn)=>events[name]=fn};
   const speechSynthesis={speaking:false,paused:false,cancel(){this.speaking=false;this.paused=false;audioEvents.push('cancel')},getVoices(){return[]},speak(u){spoken.push(u);this.speaking=true;this.paused=false;audioEvents.push('speak')},pause(){if(this.speaking){this.paused=true;audioEvents.push('pause')}},resume(){if(this.paused){this.paused=false;audioEvents.push('resume')}}};
   const context=vm.createContext({...(browserMode?{window,sessionStorage:{getItem:k=>session.get(k)||null,setItem:(k,v)=>session.set(k,v),removeItem:k=>session.delete(k)}}:{}),Date:TestDate,document,app:element('app'),checkListen:element('checkListen'),listenRateLabel:element('listenRateLabel'),localStorage:{getItem:k=>saved.get(k)||null,setItem:(k,v)=>saved.set(k,v)},alert:m=>{throw new Error(m)},setInterval:fn=>timers.push(fn),setTimeout(){},speechSynthesis,SpeechSynthesisUtterance:function(t){this.text=t},Blob,URL,console});
   let code=[...html.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)].map(x=>x[1]).join('\n');
   const marker='reset();render();setInterval';assert.ok(code.includes(marker));
-  code=code.replace(marker,'globalThis.studyTest={lesson,progress,rawProgress,courseKey,record,save,reset,render,renderWords,renderListening,renderPractice,renderExtensive,renderRecords,persistDraft,speak,pauseSpeech,resumeSpeech,stopSpeech,seven,checkLocalRelease,articleEntry,articleText,lookupPanelHtml,openArticleWord,closeArticleWord,enrolArticleWord,saveUserVocab,userVocabulary:()=>userVocab,state:()=>({ws,ls,ps,er,rate,selected,today,articleLookup}),setDate:k=>{selected=k;reset()},setTab:k=>{tab=k}};reset();render();setInterval');
+  code=code.replace(marker,'globalThis.studyTest={lesson,progress,rawProgress,courseKey,record,save,reset,render,renderWords,renderListening,renderPractice,renderExtensive,renderRecords,persistDraft,speak,pauseSpeech,resumeSpeech,stopSpeech,seven,checkLocalRelease,firstWordAttempt,makeWordRound,restoreDailyWordRound,todayMistakeWords,articleEntry,articleText,articlePairs,parallelArticle,toggleArticleTranslation,lookupPosition,lookupPanelHtml,openArticleWord,closeArticleWord,enrolArticleWord,saveUserVocab,userVocabulary:()=>userVocab,state:()=>({ws,ls,ps,er,rate,selected,today,articleLookup,wordPractice}),setDate:k=>{selected=k;reset()},setTab:k=>{tab=k}};reset();render();setInterval');
   vm.runInContext(code,context);
   return {api:context.studyTest,saved,element,spoken,audioEvents,window,events,session,beacons,reloads:()=>reloadCount,advanceTime:iso=>{now=Date.parse(iso);timers.forEach(fn=>fn())}};
 }
+
+test('the header stays collapsible across navigation and reload without changing learning records',()=>{
+  const rt=runtime(),key='cet4-header-expanded-v1';
+  assert.equal(rt.element('headerPanel').hidden,true);
+  assert.equal(rt.element('studyHeader').dataset.collapsed,'true');
+  assert.equal(rt.element('headerToggle').ariaExpanded,'false');
+  assert.equal((rt.element('mobileNav').innerHTML.match(/data-tab=/g)||[]).length,6);
+  rt.api.record('word',0,false,{targetWord:'improve'});rt.api.state().ws.input='imporve';rt.api.persistDraft();
+  const records=rt.saved.get(RECOVERY_STORAGE_KEY),draft=JSON.stringify(rt.api.state().ws);
+  rt.element('headerToggle').onclick();
+  assert.equal(rt.element('headerPanel').hidden,false);assert.equal(rt.saved.get(key),'true');
+  assert.equal(rt.saved.get(RECOVERY_STORAGE_KEY),records);assert.equal(JSON.stringify(rt.api.state().ws),draft);
+  rt.api.setDate('2026-09-14');rt.api.render();
+  assert.equal(rt.element('headerPanel').hidden,false);assert.match(rt.element('dateBar').innerHTML,/data-date=/);
+  const reloaded=runtime(Object.fromEntries(rt.saved));
+  assert.equal(reloaded.element('headerPanel').hidden,false);
+  reloaded.element('headerToggle').onclick();
+  assert.equal(reloaded.element('headerPanel').hidden,true);assert.equal(reloaded.saved.get(key),'false');
+  assert.equal(reloaded.saved.get(RECOVERY_STORAGE_KEY),records);
+  assert.equal(runtime(Object.fromEntries(reloaded.saved)).element('headerPanel').hidden,true);
+});
 
 test('a local release update waits for typing, uses a versioned URL, preserves work and caps retries',()=>{
   const rt=runtime({},true);rt.api.setDate('2026-08-28');
@@ -362,7 +389,7 @@ test('China midnight refresh changes the day without deleting saved work or inte
 test('generated offline runtime starts, saves drafts, reloads and does not overwrite old same-day records',()=>{
   const legacy=JSON.stringify({'2026-08-28':{wordCorrect:9,wordTotal:12,notes:'原来记录',wordErrors:['think']}});
   let rt=runtime({[OLD_PROGRESS_KEYS[0]]:legacy});rt.api.setDate('2026-08-28');rt.api.renderWords(rt.api.lesson());
-  assert.equal(rt.api.lesson().nw.length,12);assert.equal(rt.api.lesson().rev.length,18);assert.equal(rt.api.lesson().quizWords.length,20);assert.equal(rt.api.seven().length,7);
+  assert.equal(rt.api.lesson().nw.length,12);assert.equal(rt.api.lesson().rev.length,18);assert.equal(rt.api.lesson().quizWords.length,30);assert.equal(rt.api.seven().length,7);
   rt.element('wordInput').oninput({target:{value:'wrong'}});
   rt.element('meaningInput').oninput({target:{value:'不会'}});
   rt.element('checkWord').onclick();
@@ -374,7 +401,7 @@ test('generated offline runtime starts, saves drafts, reloads and does not overw
   const frozen=JSON.stringify(rt.api.lesson());
   rt.api.save({notes:'恢复版共同难点'});
   assert.equal(JSON.stringify(rt.api.lesson()),frozen);
-  rt.api.renderWords(rt.api.lesson());const target=rt.api.lesson().quizWords[0];
+  rt.api.renderWords(rt.api.lesson());const target=rt.api.state().ws.order[rt.api.state().ws.i];
   rt.element('wordInput').oninput({target:{value:target.word}});
   rt.element('meaningInput').oninput({target:{value:target.meaning}});
   rt.element('checkWord').onclick();
@@ -384,10 +411,94 @@ test('generated offline runtime starts, saves drafts, reloads and does not overw
   assert.ok(rt.saved.has(RECOVERY_STORAGE_KEY));
 });
 
+test('full-word rounds contain all daily words once, shuffle and persist independently of the course snapshot',()=>{
+  let rt=runtime();rt.api.setDate('2026-09-15');const L=rt.api.lesson();rt.api.renderWords(L);
+  const round=rt.api.state().ws,names=round.order.map(x=>x.word);
+  assert.equal(names.length,30);assert.equal(new Set(names).size,30);
+  assert.deepEqual([...names].sort(),clone(L.all.map(x=>x.word)).sort());
+  assert.notDeepEqual(names,L.all.map(x=>x.word));assert.equal(round.order.filter(x=>x.audio).length,15);
+  rt.element('wordInput').oninput({target:{value:'draft spelling'}});
+  const saved=Object.fromEntries(rt.saved),before=JSON.stringify(round);
+  rt.api.setTab('listening');rt.api.render();rt.api.setDate('2026-09-16');rt.api.setDate('2026-09-15');rt.api.renderWords(rt.api.lesson());
+  assert.equal(JSON.stringify(rt.api.state().ws),before);
+  rt=runtime(saved);rt.api.setDate('2026-09-15');rt.api.renderWords(rt.api.lesson());
+  assert.equal(JSON.stringify(rt.api.state().ws),before);
+  assert.equal(rt.api.lesson().contentSignature,L.contentSignature);
+  rt.api.setDate('2026-09-17');rt.api.renderWords(rt.api.lesson());assert.equal(rt.api.state().ws.order.length,20);
+});
+
+test('a legacy numeric word attempt and the old Chinese-mode draft keep their exact word, mode and first grade',()=>{
+  const date='2026-09-15',L=buildRecoveryLesson(DATA,CURRICULUM,date),old=clone(L);
+  old.quizWords=[...old.rev.slice(0,5),...old.nw.slice(0,5),...old.rev.slice(5,10),...old.nw.slice(5,10)];
+  const target=old.quizWords[10],key='word:'+old.id+'|'+old.contentSignature+':10';
+  const p={...blankProgress(),lessonSnapshot:old,wordTotal:1,wordCorrect:0,wordErrors:[target.word],attempts:{[key]:{group:'word',correct:false}},draft:{lessonId:old.id,ws:{i:10,input:'unfinished spelling',meaningInput:'',phase:'hint',hadError:true}}};
+  const rt=runtime({[RECOVERY_STORAGE_KEY]:JSON.stringify({[date]:p})});rt.api.setDate(date);rt.api.renderWords(rt.api.lesson());
+  const s=rt.api.state().ws,item=s.order[s.i];
+  assert.equal(item.word,target.word);assert.equal(item.audio,false);assert.equal(s.input,'unfinished spelling');assert.equal(s.phase,'hint');
+  assert.equal(s.order.length,30);assert.equal(rt.api.progress().wordTotal,1);assert.equal(rt.api.progress().wordCorrect,0);
+  rt.element('wordInput').oninput({target:{value:target.word}});rt.element('checkWord').onclick();
+  assert.equal(rt.api.state().ws.phase,'correct');assert.equal(rt.api.progress().wordTotal,1);assert.equal(rt.api.progress().wordCorrect,0);
+  assert.equal(Object.keys(rt.api.progress().attempts)[0],key);assert.equal(rt.api.progress().snapshotArchive.length,0);
+});
+
+test('old completed twenty-word lessons retain grades while the additional ten words are tested exactly once',()=>{
+  const date='2026-09-15',L=buildRecoveryLesson(DATA,CURRICULUM,date),old=clone(L);old.quizWords=old.all.slice(0,20);
+  const attempts=Object.fromEntries(old.quizWords.map((w,i)=>['word:'+old.id+'|'+old.contentSignature+':'+i,{group:'word',correct:true,targetWord:w.word}]));
+  const p={...blankProgress(),lessonSnapshot:old,completed:['words'],wordTotal:20,wordCorrect:20,attempts};
+  const rt=runtime({[RECOVERY_STORAGE_KEY]:JSON.stringify({[date]:p})});rt.api.setDate(date);rt.api.renderWords(rt.api.lesson());
+  assert.equal(rt.api.state().ws.i,20);assert.equal(rt.api.state().ws.done,false);assert.equal(rt.api.progress().completed.includes('words'),false);
+  assert.equal(rt.api.state().wordPractice.legacyCompleted,true);
+  for(let i=0;i<10;i++){
+    const s=rt.api.state().ws,d=s.order[s.i];rt.element('wordInput').oninput({target:{value:d.word}});
+    if(d.audio)rt.element('meaningInput').oninput({target:{value:d.meaning}});
+    rt.element('checkWord').onclick();rt.element('nextWord').onclick();
+  }
+  assert.equal(rt.api.state().ws.done,true);assert.equal(rt.api.progress().wordTotal,30);assert.equal(rt.api.progress().wordCorrect,30);
+  assert.equal(rt.api.progress().completed.includes('words'),true);
+  for(const [id,a] of Object.entries(attempts))assert.deepEqual(clone(rt.api.progress().attempts[id]),a);
+  const firstOrder=rt.api.state().ws.order.map(x=>x.word);rt.element('reshuffleAllWords').onclick();
+  assert.notDeepEqual(rt.api.state().ws.order.map(x=>x.word),firstOrder);assert.equal(rt.api.state().ws.order.length,30);
+  const d=rt.api.state().ws.order[0];rt.element('wordInput').oninput({target:{value:d.word}});rt.element('meaningInput').oninput({target:{value:d.meaning}});rt.element('checkWord').onclick();
+  assert.equal(rt.api.progress().wordTotal,30);assert.equal(rt.api.progress().wordCorrect,30);
+});
+
+test('today mistake retry is inline, resumes on reload and never changes first scores or the main round',()=>{
+  let rt=runtime();rt.api.setDate('2026-09-15');rt.api.renderWords(rt.api.lesson());
+  assert.equal(rt.element('app').innerHTML.includes('id="startWrongRound" class="primary" disabled'),true);
+  rt.element('wordInput').oninput({target:{value:'wrong'}});rt.element('meaningInput').oninput({target:{value:'不会'}});rt.element('checkWord').onclick();
+  const first=p=>JSON.stringify({wordTotal:p.wordTotal,wordCorrect:p.wordCorrect,attempts:p.attempts,wordErrors:p.wordErrors,errorDetails:p.errorDetails});
+  const score=first(rt.api.progress()),daily=JSON.stringify(rt.api.state().ws),target=rt.api.state().ws.order[0];
+  rt.element('startWrongRound').onclick();
+  assert.equal(rt.api.state().wordPractice.retry.order.length,1);assert.equal(rt.api.state().wordPractice.retry.order[0].word,target.word);
+  assert.ok(rt.element('app').innerHTML.indexOf('今日错词重默')>rt.element('app').innerHTML.indexOf('今日全部单词默写'));
+  assert.match(rt.element('app').innerHTML,/id="retryWordInput"/);
+  rt.element('retryWordInput').oninput({target:{value:'unfinished retry'}});
+  const inProgress=JSON.stringify(rt.api.state().wordPractice.retry);rt.element('startWrongRound').onclick();
+  assert.equal(JSON.stringify(rt.api.state().wordPractice.retry),inProgress,'starting again cannot discard an unfinished retry');
+  rt=runtime(Object.fromEntries(rt.saved));rt.api.setDate('2026-09-15');rt.api.renderWords(rt.api.lesson());
+  assert.equal(JSON.stringify(rt.api.state().wordPractice.retry),inProgress);assert.equal(JSON.stringify(rt.api.state().ws),daily);
+  rt.element('retryWordInput').oninput({target:{value:target.word}});rt.element('retryMeaningInput').oninput({target:{value:target.meaning}});rt.element('retryCheckWord').onclick();rt.element('retryNextWord').onclick();
+  assert.equal(rt.api.state().wordPractice.retry.done,true);assert.equal(first(rt.api.progress()),score);assert.equal(JSON.stringify(rt.api.state().ws),daily);
+  rt.element('startWrongRound').onclick();assert.equal(rt.api.state().wordPractice.history.filter(x=>x.kind==='retry').length,1);
+  const p=rt.api.progress();rt.api.setDate('2026-09-16');rt.api.renderWords(rt.api.lesson());
+  assert.equal(rt.api.todayMistakeWords(rt.api.lesson()).length,0,'yesterday errors are not today errors');
+  rt.api.setDate('2026-09-15');assert.equal(first(rt.api.progress()),first(p));
+});
+
+test('listening full text is one compact bilingual passage while all dictation segments remain available',()=>{
+  const rt=runtime();rt.api.setDate('2026-09-15');const L=rt.api.lesson();rt.api.state().ls.show=true;rt.api.renderListening(L);
+  const markup=rt.element('app').innerHTML;
+  assert.equal((markup.match(/class="parallel-unit"/g)||[]).length,1);
+  assert.match(markup,/全文分段听写 1\/9/);assert.match(markup,/data-audio-pause/);
+  assert.equal((markup.match(/data-lookup-word=/g)||[]).length,L.listening.passage.match(/[A-Za-z]+(?:[’'][A-Za-z]+)?/g).length);
+  assert.ok(markup.includes(L.listening.passageZh));assert.match(markup,/lang="zh-CN" hidden/);
+});
+
 test('a corrected same-date course gets a clean score bucket while old work remains archived',()=>{
   const date='2026-08-28',current=buildRecoveryLesson(DATA,CURRICULUM,date),old=clone(current);
   old.title='旧版重复课程';old.contentSignature='old-content-signature';
-  const oldAttempt='word:'+old.id+':0',stored={...blankProgress(),lessonSnapshot:old,completed:['words'],wordCorrect:1,wordTotal:1,attempts:{[oldAttempt]:{group:'word',correct:true,targetWord:'assess'}},notes:'旧难点'};
+  const retry={order:[{word:'assess',audio:true}],input:'unfinished retry',done:false};
+  const oldAttempt='word:'+old.id+':0',stored={...blankProgress(),lessonSnapshot:old,completed:['words'],wordCorrect:1,wordTotal:1,attempts:{[oldAttempt]:{group:'word',correct:true,targetWord:'assess'}},wordPractice:{version:2,courseKey:'old',retry,history:[{kind:'retry',done:true}],mistakes:['assess']},notes:'旧难点'};
   const rt=runtime({[RECOVERY_STORAGE_KEY]:JSON.stringify({[date]:stored})});rt.api.setDate(date);
   assert.equal(rt.api.lesson().cacheContentMismatch,true);
   assert.equal(rt.api.progress().wordTotal,0);assert.equal(rt.api.progress().completed.length,0);
@@ -397,6 +508,7 @@ test('a corrected same-date course gets a clean score bucket while old work rema
   assert.equal(keys.length,1);assert.match(keys[0],new RegExp(current.contentSignature));
   assert.equal(raw.snapshotArchive.length,1);assert.equal(raw.snapshotArchive[0].progress.wordTotal,1);
   assert.ok(raw.snapshotArchive[0].progress.attempts[oldAttempt]);
+  assert.deepEqual(clone(raw.snapshotArchive[0].progress.wordPractice),stored.wordPractice);
   assert.equal('snapshot' in raw.snapshotArchive[0],false);assert.equal(raw.notes,'旧难点');
 });
 
@@ -447,6 +559,90 @@ test('opening an article word shows Chinese but does not enrol it until explicit
   assert.equal(stored.items[entry.word].dueDate,'2026-08-29');
   assert.equal(rt.api.progress().wordErrors.length,0);
   rt=runtime(Object.fromEntries(rt.saved));assert.equal(rt.api.userVocabulary().items[entry.word].active,true);
+});
+
+test('lookup cards stay beside the clicked word without rebuilding the article or changing first scores and drafts',()=>{
+  const rt=runtime({},true);rt.api.setDate('2026-09-15');const L=rt.api.lesson();
+  rt.api.record('reading',0,false,{label:'test reading',answer:'A',expected:'B'});
+  rt.api.state().ps.trans[0]={input:'My unfinished translation',checked:false};rt.api.persistDraft();
+  rt.api.renderPractice(L);
+  const before=rt.element('app').innerHTML,saved=rt.saved.get(RECOVERY_STORAGE_KEY),draft=JSON.stringify(rt.api.state().ps);
+  const anchor=rt.element('articleWord'),surface=L.reading.passage.match(/[A-Za-z]+/)[0],entry=rt.api.articleEntry(surface);
+  anchor.getBoundingClientRect=()=>({left:950,right:998,top:660,bottom:690,width:48,height:30});
+  rt.api.openArticleWord(surface,'reading',anchor);
+  const popup=rt.element('articleLookupPopover');
+  assert.equal(popup.hidden,false);assert.ok(popup.innerHTML.includes(entry.meaning));
+  assert.ok(parseFloat(popup.style.left)+360<=1024-8);assert.ok(parseFloat(popup.style.top)<660);
+  assert.equal(anchor.dataset.lookupActive,'true');assert.equal(popup.focusOptions.preventScroll,true);
+  assert.equal(rt.element('app').innerHTML,before);assert.equal(rt.saved.get(RECOVERY_STORAGE_KEY),saved);
+  assert.equal(JSON.stringify(rt.api.state().ps),draft);assert.equal(Object.keys(rt.api.userVocabulary().items).length,0);
+  rt.element('lookupSkip').onclick();assert.equal(popup.hidden,true);assert.equal(anchor.focusOptions.preventScroll,true);
+  rt.api.openArticleWord(surface,'reading',anchor);rt.element('lookupAdd').onclick();
+  assert.equal(rt.api.userVocabulary().items[entry.word].active,true);assert.equal(rt.element('app').innerHTML,before);
+  rt.element('lookupRemove').onclick();assert.equal(rt.api.userVocabulary().items[entry.word].active,false);
+  let prevented=false;rt.events.keydown({key:'Escape',preventDefault(){prevented=true}});
+  assert.equal(prevented,true);assert.equal(popup.hidden,true);assert.equal(anchor.ariaExpanded,'false');
+  rt.api.openArticleWord(surface,'reading',anchor);rt.events.scroll();assert.equal(popup.hidden,true);
+  rt.api.openArticleWord(surface,'reading',anchor);rt.api.renderPractice(L);assert.equal(popup.hidden,true);
+  assert.equal(rt.saved.get(RECOVERY_STORAGE_KEY),saved);assert.equal(JSON.stringify(rt.api.state().ps),draft);
+});
+
+test('lookup positioning handles screen edges, narrow screens and a shifted visual viewport',()=>{
+  const {api}=runtime();
+  for(const viewport of [{width:1280,height:800},{width:375,height:667},{width:320,height:240},{left:20,top:30,width:300,height:300}]){
+    const left=viewport.left||0,top=viewport.top||0;
+    for(const anchor of [
+      {left:left+8,top:top+10,bottom:top+32},
+      {left:left+viewport.width-40,top:top+viewport.height-42,bottom:top+viewport.height-12},
+      {left:left+70,top:top+viewport.height/2,bottom:top+viewport.height/2+22}
+    ]){
+      const box=api.lookupPosition(anchor,{width:360,height:450},viewport),height=Math.min(450,box.maxHeight);
+      assert.ok(box.left>=left+8);assert.ok(box.left+box.width<=left+viewport.width-8);
+      assert.ok(box.top>=top+8);assert.ok(box.top+height<=top+viewport.height-8);
+      assert.ok(box.top+height<=anchor.top-8||box.top>=anchor.bottom+8,'card must not cover its word');
+    }
+  }
+});
+
+test('bilingual articles use complete authored segments or matching paragraphs without guessing sentence alignment',()=>{
+  const {api}=runtime();const clean=s=>s.replace(/\s+/g,' ').trim();
+  for(const L of [...CURRICULUM.lessons,...Object.values(CURRICULUM.datedLessons)]){
+    for(const [en,zh,source,authored,count] of [
+      [L.reading.passage,L.reading.passageZh,'reading',[],1],
+      [L.extensive.text,L.extensive.textZh,'extensive',[],3],
+      [L.listening.passage,L.listening.passageZh,'listening',fullDictationItems(L.listening),fullDictationItems(L.listening).length]
+    ]){
+      const pairs=api.articlePairs(en,zh,authored),markup=api.parallelArticle(en,zh,source,authored);
+      assert.equal(pairs.length,count,L.date+': '+source);
+      assert.equal(clean(pairs.map(x=>x.text).join(' ')),clean(en));
+      assert.equal(clean(pairs.map(x=>x.zh).join(' ')),clean(authored.length?authored.map(x=>x.zh).join(' '):zh));
+      assert.equal((markup.match(/data-translation-key=/g)||[]).length,count);
+      assert.equal((markup.match(/lang="zh-CN" hidden/g)||[]).length,count);
+      assert.equal((markup.match(/data-lookup-word=/g)||[]).length,(en.match(/[A-Za-z]+(?:[’'][A-Za-z]+)?/g)||[]).length);
+    }
+  }
+  const unmatched=api.articlePairs('First.\n\nSecond.','第一，第二。');
+  assert.equal(unmatched.length,1);assert.equal(unmatched[0].zh,'第一，第二。');
+  const incomplete=api.articlePairs('First. Second.','完整中文',[{text:'First.',zh:'第一句'}]);
+  assert.equal(incomplete.length,1);assert.equal(incomplete[0].text,'First. Second.');
+});
+
+test('revealing Chinese stays local to its paragraph and survives lookup and answer redraws without saving grades',()=>{
+  const rt=runtime({},true);rt.api.setDate('2026-09-15');const L=rt.api.lesson();rt.api.renderExtensive(L);
+  const before=rt.element('app').innerHTML,saved=rt.saved.get(RECOVERY_STORAGE_KEY);
+  const match=before.match(/data-translation-key="([^"]+)" data-translation-id="([^"]+)"/);
+  const button=rt.element('translationButton');button.dataset={translationKey:match[1],translationId:match[2]};
+  rt.api.toggleArticleTranslation(button);assert.equal(button.ariaExpanded,'true');
+  assert.equal(rt.element(match[2]+'-zh').hidden,false);assert.equal(rt.element('app').innerHTML,before);
+  rt.api.openArticleWord(L.extensive.text.match(/[A-Za-z]+/)[0],'extensive',rt.element('wordAnchor'));
+  assert.equal(rt.element(match[2]+'-zh').hidden,false);assert.equal(rt.element('app').innerHTML,before);
+  rt.api.renderExtensive(L);
+  const restored=rt.element('app').innerHTML;
+  assert.equal((restored.match(/class="parallel-unit" data-translated="true"/g)||[]).length,1);
+  assert.equal((restored.match(/lang="zh-CN" hidden/g)||[]).length,2);
+  rt.api.toggleArticleTranslation(button);rt.api.renderExtensive(L);
+  assert.equal((rt.element('app').innerHTML.match(/lang="zh-CN" hidden/g)||[]).length,3);
+  assert.equal(rt.saved.get(RECOVERY_STORAGE_KEY),saved);
 });
 
 test('user vocabulary capacity keeps a newly added active word and evicts the oldest inactive item',()=>{
