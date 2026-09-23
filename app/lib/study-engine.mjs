@@ -17,6 +17,176 @@ export function phaseFor(k){return ROADMAP.find(x=>k>=x.from&&k<=x.to)||ROADMAP[
 const validDate=k=>/^\d{4}-\d{2}-\d{2}$/.test(String(k))&&!Number.isNaN(Date.parse(k+'T00:00:00Z'));
 const addDate=(k,n)=>new Date(Date.parse(k+'T00:00:00Z')+n*86400000).toISOString().slice(0,10);
 const cleanWord=value=>(String(value||'').toLowerCase().replace(/[’‘]/g,"'").match(/[a-z]+(?:[-'][a-z]+)*/)||[''])[0];
+const WORD_POS_NAMES={n:'名词',v:'动词',vt:'及物动词',vi:'不及物动词',adj:'形容词',adv:'副词',pron:'代词',prep:'介词',conj:'连词',num:'数词',art:'冠词',det:'限定词',aux:'助动词',modal:'情态动词',interj:'感叹词'};
+const WORD_POS_SUPPLEMENTS={balanced:['adj'],distraction:['n'],accurately:['adv'],actively:['adv'],adequately:['adv'],consistency:['n'],educational:['adj'],online:['adj','adv'],upload:['v','n'],download:['v','n'],data:['n'],flexibility:['n'],kindly:['adv','adj'],patiently:['adv'],equally:['adv'],honestly:['adv'],technically:['adv'],differently:['adv'],secretly:['adv'],unfairly:['adv'],responsibly:['adv'],intentionally:['adv'],reasonably:['adv'],nervously:['adv'],socially:['adv'],creator:['n'],buyer:['n'],supporter:['n'],baker:['n'],educated:['adj','v'],loving:['adj','v'],refined:['adj','v'],leaves:['n','v'],lives:['n','v']};
+export function parseWordPartsOfSpeech(text=''){
+  const found=[];
+  for(const match of String(text).matchAll(/(?:^|[；;\n])\s*(?:(?:\[[^\]]*\]|pl\.)\s*)*(n|v|vt|vi|a|adj|ad|adv|pron|prep|conj|num|art|det|aux|modal|int|interj)\./gi)){
+    const raw=match[1].toLowerCase(),code=({a:'adj',ad:'adv',int:'interj'})[raw]||raw;
+    if(!found.includes(code))found.push(code);
+  }
+  return found;
+}
+export function wordPartsOfSpeech(entry={},glossary={}){
+  // Display metadata only: do not add fields to lesson snapshots, fingerprints or grades.
+  const item=typeof entry==='string'?{word:entry}:entry||{},entries=glossary?.entries||glossary||{};
+  let key=String(item.word||item.surface||'').trim().toLowerCase().replace(/[’‘]/g,"'");
+  if(Object.hasOwn(WORD_POS_SUPPLEMENTS,key))return [...WORD_POS_SUPPLEMENTS[key]];
+  const explicit=parseWordPartsOfSpeech(item.pos||item.partOfSpeech||item.meaning);
+  if(explicit.length)return explicit;
+  const seen=new Set();
+  while(key&&!seen.has(key)&&seen.size<8){
+    seen.add(key);
+    if(Object.hasOwn(WORD_POS_SUPPLEMENTS,key))return [...WORD_POS_SUPPLEMENTS[key]];
+    const row=Object.hasOwn(entries,key)?entries[key]:null;
+    const codes=parseWordPartsOfSpeech(row?.pos||row?.partOfSpeech||row?.meaning);
+    if(codes.length)return codes;
+    key=row?.base?String(row.base).toLowerCase():key.endsWith("'s")?key.slice(0,-2):'';
+  }
+  return [];
+}
+export function wordPartOfSpeechLabel(entry,glossary){
+  return wordPartsOfSpeech(entry,glossary).map(code=>code+'. '+WORD_POS_NAMES[code]).join(' / ')||'待核实';
+}
+// Editorial, phrase-bound senses, not dictionary-order guesses. Keep these display
+// annotations outside lesson objects so adding a gloss cannot invalidate scores.
+// [exact phrase, clicked surface, meaning in that phrase, POS, optional lemma]
+export const ARTICLE_CONTEXT_SENSES=[
+  ['reading club','reading','阅读','n'],
+  ['Saturday event','event','活动','n'],
+  ['nearby community','community','社区','n'],
+  ['club leader','leader','负责人','n'],
+  ['preparing the same game','preparing','准备','v'],
+  ['responsibility chart','chart','分工表','n'],
+  ['Jia called the center','called','打电话联系','v'],
+  ['prepared pictures and name cards','prepared','准备','v'],
+  ['one volunteer was ill','volunteer','志愿者','n'],
+  ['leading a story group','leading','带领','v'],
+  ['the jobs were clear','clear','明确的','adj'],
+  ['could adjust without confusion','adjust','作出调整','v'],
+  ['could adjust without confusion','confusion','混乱','n'],
+  ['sharing ideas','sharing','交流；分享','v'],
+  ['accepting a clear responsibility','accepting','承担','v'],
+  ['a plan changes','changes','发生变化','v'],
+  ['check your responsibility','responsibility','负责的任务','n'],
+  ['prepare the tables','prepare','布置好','v'],
+  ['welcome families','welcome','迎接','v'],
+  ['lead the first reading group','lead','带领','v'],
+  ['your plan changes','changes','发生变化','v'],
+  ['frequently flooded footpath','flooded','被水淹的','adj'],
+  ['concrete drain','concrete','混凝土的','adj'],
+  ['concrete drain','drain','排水沟','n'],
+  ['garden sits lower','sits','位于','v'],
+  ['heavy rain','heavy','（雨）大的','adj'],
+  ['Stones slow the movement','slow','减缓','v'],
+  ['hold part of the water','hold','蓄住','v'],
+  ['release it gradually','release','释放（水）','v'],
+  ['where puddles formed','formed','形成','v'],
+  ['maintenance workers','maintenance','维护；养护','n'],
+  ['landscape student','landscape','景观设计','n'],
+  ['native plants','native','本地的','adj'],
+  ['left one clear route','left','留出','v','leave'],
+  ['one clear route','clear','畅通的','adj'],
+  ['Leaves can block the entrance','leaves','树叶','n','leaf'],
+  ['Leaves can block the entrance','block','堵塞','v'],
+  ['plants need watering','watering','浇水','v','water'],
+  ['their roots grow deep','roots','根','n'],
+  ['take turns inspecting','turns','轮流（take turns）','n'],
+  ['standing water remains','standing','积聚不流动的','adj'],
+  ['standing water remains','remains','仍然存在','v'],
+  ['success is more modest','modest','有限的；不算大的','adj'],
+  ['rain not only as a problem','rain','雨水','n'],
+  ['record how long','record','记录','v'],
+  ['study record','record','学习记录','n'],
+  ['paint a long fence','paint','刷油漆','v'],
+  ['coats of paint','coats','（涂料的）层','n'],
+  ['coats of paint','paint','油漆','n'],
+  ['for a turn','turn','一次机会','n'],
+  ['work looked desirable','work','劳动；干活','n'],
+  ['access became limited','access','参与的机会','n'],
+  ['used their pride','pride','自尊心','n'],
+  ['points to a specific next action','points','指明','v'],
+  ['missed times and room numbers','missed','没听清','v'],
+  ['four review places','places','名额','n'],
+  ['remain perfectly still','still','静止的；一动不动的','adj'],
+  ['Employees could still contact someone','still','仍然','adv'],
+  ['During the first week of term','term','学期','n'],
+  ['check that it works','works','正常运行','v','work'],
+  ['nobody recorded who would do each job','recorded','记录；记下','v','record'],
+  ['After seven days of practice','practice','练习；训练','n'],
+  ['He disliked the work','work','工作；劳动','n'],
+  ['how long it might last','last','耐用；持续','v'],
+  ['Let us order fifty washable cups','order','订购','v'],
+  ['Their accounts did not always agree','accounts','叙述；讲述','n','account'],
+  ['Speakers sign a form','form','表格','n'],
+  ['its original form','form','形式；原有安排','n'],
+  ['Sofia received the position','position','职位','n'],
+  ['workers transfer light luggage separately','light','轻的','adj'],
+  ['about a later connection','connection','接续交通；换乘班次','n'],
+  ['missed times and room numbers','times','时间','n','time'],
+  ['missed three listening questions','missed','答错','v','miss'],
+  ['was ordered to paint','ordered','被要求；被命令','v','order'],
+  ['Tom held the brush','held','拿着','v','hold'],
+  ['acted as if painting','acted','装作','v','act'],
+  ['boys valued the task','valued','看待；评价','v','value'],
+  ['desire depends on presentation','presentation','呈现方式；包装方式','n'],
+  ['three times as much','times','倍','n','time'],
+  ['used many times','times','次','n','time'],
+  ['Speakers sign a form','sign','签署','v'],
+  ['history lives in repeated use','lives','存在；延续','v','live'],
+  ['The position includes','position','职位','n'],
+  ['human lives','lives','生命','n','life'],
+  ['structure gave way','gave','坍塌（give way）','v','give'],
+  ['choice costs time','costs','耗费','v','cost']
+];
+const articleTokens=text=>[...String(text||'').matchAll(/[A-Za-z]+(?:[’'][A-Za-z]+)?/g)].map(m=>({word:m[0].toLowerCase().replace(/[’‘]/g,"'"),index:m.index}));
+const contextSenseIndex=new Map();
+for(const row of ARTICLE_CONTEXT_SENSES){
+  if(!contextSenseIndex.has(row[1]))contextSenseIndex.set(row[1],[]);
+  contextSenseIndex.get(row[1]).push({row,tokens:articleTokens(row[0]).map(x=>x.word)});
+}
+for(const rules of contextSenseIndex.values())rules.sort((a,b)=>b.tokens.length-a.tokens.length);
+export function articleTokenContext(text,offset){
+  const source=String(text||'');
+  for(const m of source.matchAll(/[^.!?\n]+(?:[.!?]+|$)/g)){
+    if(offset>=m.index&&offset<m.index+m[0].length)return {text:m[0],offset:offset-m.index};
+  }
+  return {text:source,offset};
+}
+export function articleContextSense(surface,context,offset=-1){
+  const word=String(surface||'').toLowerCase().replace(/[’‘]/g,"'"),matches=articleTokens(context).filter(x=>x.word===word);
+  // Missing occurrence data must never select an arbitrary occurrence.
+  if(offset<0){if(matches.length!==1)return null;offset=matches[0].index}
+  const sentence=articleTokenContext(context,offset),tokens=articleTokens(sentence.text);offset=sentence.offset;
+  const clicked=tokens.findIndex(x=>x.index===offset&&x.word===word);
+  if(clicked<0)return null;
+  for(const {row,tokens:phrase} of contextSenseIndex.get(word)||[]){
+    for(let start=Math.max(0,clicked-phrase.length+1);start<=clicked;start++){
+      if(start+phrase.length>tokens.length||!phrase.every((w,i)=>tokens[start+i].word===w))continue;
+      return {meaning:row[2],pos:row[3],base:row[4]||'',phrase:row[0]};
+    }
+  }
+  return null;
+}
+export function conciseWordMeaning(meaning,preferred=''){
+  const split=(value,separators=/[；;，,、\n]/)=>{
+    // Keep parenthetical explanations intact; commas inside them aren't senses.
+    const result=[];let part='',depth=0;
+    for(const ch of String(value||'')){
+      if('（(['.includes(ch))depth++;
+      if('）)]'.includes(ch))depth=Math.max(0,depth-1);
+      if(!depth&&separators.test(ch)){result.push(part);part=''}else part+=ch;
+    }
+    result.push(part);return result;
+  };
+  const clean=value=>String(value).replace(/（[^（）]*为[^（）]*的词形或所有格形式）/g,'').replace(/^(?:(?:\[[^\]]*\]|pl\.|(?:n|v|vt|vi|a|adj|ad|adv|pron|prep|conj|num|art|det|aux|modal|int|interj)\.)\s*)+/gi,'').trim();
+  const main=[],special=[];
+  for(const block of split(preferred||meaning||'',/[；;\n]/)){
+    const target=/\[[^\]]+\]/.test(block)?special:main;
+    target.push(...split(block).map(clean).filter(Boolean));
+  }
+  return [...new Set(main.length?main:special)].slice(0,2).join('；')||'暂无可靠的简明释义';
+}
 export function splitListeningPassage(text){
   return (String(text||'').match(/[^.!?]+(?:[.!?]+|$)/g)||[]).map(x=>x.trim()).filter(Boolean);
 }

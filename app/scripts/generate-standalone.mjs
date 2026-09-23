@@ -26,6 +26,8 @@ export async function prepareStandalone(date=chinaDate()){
   const payload=json(Object.fromEntries(names.map(n=>[n,data[n]]))),recovery=loadCurriculum();
   const template=fs.readFileSync(path.join(appRoot,'standalone-template.html'),'utf8');
   const engine=fs.readFileSync(path.join(appRoot,'lib','study-engine.mjs'),'utf8').replace(/^export /gm,'');
+  const searchEngine=fs.readFileSync(path.join(appRoot,'lib','word-search.mjs'),'utf8').replace(/^export /gm,'');
+  const searchData=json(JSON.parse(fs.readFileSync(path.join(appRoot,'content','word-search.json'),'utf8')));
   const days=Array.from({length:7},(_,i)=>{
     const k=addDay(date,i-3),L=buildRecoveryLesson(data,recovery,k);
     if(!L){const di=Math.max(0,Math.floor((Date.parse(k)-Date.parse('2026-08-22'))/864e5)),p=data.DAY_PRESETS[k],r=data.CET_READINGS[(p?.readingIndex??di)%data.CET_READINGS.length],l=data.LISTENINGS[(p?.listeningIndex??di)%data.LISTENINGS.length],legacy={date:k,title:'历史课程',reading:r,listening:l,extensive:null};return {date:k,lessonDate:k,lessonId:'legacy:'+k,title:legacy.title,reading:r.title,listening:l.title,extensive:'',readingHash:digest(r.passage),listeningHash:digest(l.passage),extensiveHash:'',courseHash:courseDigest(legacy),prepared:true}}
@@ -44,10 +46,10 @@ export async function prepareStandalone(date=chinaDate()){
   const missingExtensive=days.filter(d=>d.date>='2026-08-28'&&d.prepared&&!d.extensiveComplete).map(d=>d.date);
   const missingGlosses=days.flatMap(d=>(d.missingGlosses||[]).map(word=>`${d.date}:${word}`));
   const version='2026-09-13.1';
-  const buildId=createHash('sha256').update(template+engine+payload+json(recovery)+date+version).digest('hex').slice(0,12);
+  const buildId=createHash('sha256').update(template+engine+searchEngine+searchData+payload+json(recovery)+date+version).digest('hex').slice(0,12);
   const release={version,buildId,verifiedOn:date,preparedThrough:[addDay(recovery.start,recovery.lessons.length-1),...Object.keys(recovery.datedLessons)].sort().at(-1),days,missingDates,duplicateReading,duplicateListening,duplicateExtensive,duplicateCourse,dateMismatches,incompleteDictation,missingExtensive,missingGlosses};
-  const html=template.replace('__STUDY_DATA__',()=>payload).replace('__RECOVERY_DATA__',()=>json(recovery)).replace('__STUDY_ENGINE__',()=>engine).replace('__RELEASE__',()=>json(release));
-  if(/__(STUDY_DATA|RECOVERY_DATA|STUDY_ENGINE|RELEASE)__/.test(html))throw new Error('Unexpanded template');
+  const html=template.replace('__STUDY_DATA__',()=>payload).replace('__RECOVERY_DATA__',()=>json(recovery)).replace('__STUDY_ENGINE__',()=>engine).replace('__WORD_SEARCH_ENGINE__',()=>searchEngine).replace('__WORD_SEARCH_DATA__',()=>searchData).replace('__RELEASE__',()=>json(release));
+  if(/__(STUDY_DATA|RECOVERY_DATA|STUDY_ENGINE|WORD_SEARCH_DATA|WORD_SEARCH_ENGINE|RELEASE)__/.test(html))throw new Error('Unexpanded template');
   for(const match of html.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g))new Function(match[1]);
   const releaseJs='window.__CET6ReceiveRelease && window.__CET6ReceiveRelease('+json(release)+');\n';
   const files=[

@@ -8,6 +8,64 @@ import { RECOVERY } from '../lib/recovery-data.mjs';
 import { loadCurriculum } from '../lib/load-curriculum.mjs';
 import { buildRecoveryLesson, blankProgress, recordFirstAttempt, mergeLegacyStores, assessSentence, assessTranslation, readiness, courseDay, phaseFor, chooseDailyLesson, hasAnswerWork, lessonFingerprint, fullDictationItems, normEnglish, blankUserVocabulary, addUserVocabulary, removeUserVocabulary, dueUserVocabulary, reviewUserVocabulary, normalizeUserVocabulary, USER_VOCAB_STORAGE_KEY, MAX_USER_VOCABULARY, RECOVERY_STORAGE_KEY, OLD_PROGRESS_KEYS } from '../lib/study-engine.mjs';
 import { prepareStandalone } from './generate-standalone.mjs';
+import { parseWordPartsOfSpeech, wordPartsOfSpeech, wordPartOfSpeechLabel } from '../lib/study-engine.mjs';
+import { ARTICLE_CONTEXT_SENSES, articleTokenContext, articleContextSense, conciseWordMeaning } from '../lib/study-engine.mjs';
+import {createWordSearch,normalizeSearchWord} from '../lib/word-search.mjs';
+
+test('offline dictionary supports real families, exact senses and irregular verb forms',()=>{
+  const data=JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname,'../content/word-search.json'),'utf8'));
+  const before=JSON.stringify(data),s=createWordSearch({},data,{brief:conciseWordMeaning});
+  assert.ok(s.count>20000);assert.ok(Object.keys(data.related).length>5000);
+  const care=s.find('carefully');assert.match(care.entry.posLabel,/adv\. 副词/);
+  assert.deepEqual(care.families.map(g=>g.pos),['n','v','adj','adv']);
+  assert.ok(care.families.find(g=>g.pos==='v').items.some(w=>w.word==='care'));
+  const written=s.find('written'),write=written.verbs.find(v=>v.base==='write');
+  assert.deepEqual(write.forms.find(f=>f.kind==='past').words,['wrote']);
+  assert.deepEqual(write.forms.find(f=>f.kind==='participle').words,['written']);
+  assert.ok(s.find('went').verbs.some(v=>v.base==='go'));
+  assert.deepEqual(s.find('saw').verbs.map(v=>v.base),['saw','see']);
+  assert.ok(s.find('lie').verbs[0].note.includes('说谎'));
+  assert.deepEqual(s.find('be').verbs[0].forms[0].words,['was','were']);
+  assert.ok(s.find('quickly').families.some(g=>g.items.some(w=>w.word==='quick')));
+  assert.ok(!s.find('quickly').families.some(g=>g.items.some(w=>w.word==='faster')));
+  assert.ok(!s.find('accurately').families.some(g=>g.pos==='v'));
+  const act=s.find('actively').families.find(g=>g.pos==='v').items.find(w=>w.word==='act');
+  assert.ok(!act.brief.includes('法案'),'verb family rows should not lead with noun meaning');
+  assert.equal(JSON.stringify(data),before);
+  assert.match(data.licenses.wordnet,/Copyright 2006 by Princeton/);
+});
+
+test('search handles malformed input, spelling suggestions and missing data without invented answers',()=>{
+  const s=createWordSearch({entries:{think:{meaning:'v. 思考'},thing:{meaning:'n. 东西'}}},{});
+  assert.equal(normalizeSearchWord(' WRITTEN '),'written');
+  assert.equal(s.find('<script>').invalid,true);assert.equal(s.find('two words').invalid,true);
+  assert.equal(s.find('constructor').entry,null);assert.equal(s.find('zzzz').entry,null);
+  assert.deepEqual(s.find('zzzz').families,[]);assert.deepEqual(s.find('zzzz').verbs,[]);
+  assert.ok(s.find('thnik').suggestions.includes('think'));
+});
+
+test('global search is reachable on every tab and never changes drafts, enrollment or first grades',()=>{
+  const rt=runtime({},true);rt.api.setDate('2026-09-22');rt.api.record('word',0,false,{targetWord:'improve'});
+  rt.api.state().ps.trans[0]={input:'My unfinished translation',checked:false};rt.api.persistDraft();
+  const grades=rt.saved.get(RECOVERY_STORAGE_KEY),vocab=JSON.stringify(rt.api.userVocabulary());
+  for(const tab of ['plan','words','listening','extensive','practice','records']){
+    rt.api.setTab(tab);rt.api.render();const markup=rt.element('app').innerHTML,persisted=rt.saved.get(RECOVERY_STORAGE_KEY);
+    rt.api.openWordSearch('carefully');assert.equal(rt.element('wordSearchPanel').hidden,false);
+    assert.equal(rt.element('studyWorkspace').dataset.searchOpen,'true');
+    assert.match(rt.element('wordSearchResults').innerHTML,/相关词族/);
+    assert.equal(rt.element('app').innerHTML,markup);
+    rt.api.closeWordSearch();assert.equal(rt.element('wordSearchPanel').hidden,true);
+    assert.equal(rt.saved.get(RECOVERY_STORAGE_KEY),persisted,'search itself must not write learner records');
+  }
+  rt.api.runWordSearch('written');assert.match(rt.element('wordSearchResults').innerHTML,/wrote/);
+  rt.api.runWordSearch('zzzz');assert.match(rt.element('wordSearchStatus').textContent,/暂未收录/);
+  const prior=JSON.parse(grades)['2026-09-22'],after=JSON.parse(rt.saved.get(RECOVERY_STORAGE_KEY))['2026-09-22'];
+  assert.deepEqual(after.attempts,prior.attempts);assert.equal(after.wordTotal,prior.wordTotal);assert.equal(after.wordCorrect,prior.wordCorrect);
+  assert.equal(JSON.stringify(rt.api.userVocabulary()),vocab);
+  assert.equal(rt.api.progress().draft.ps.trans[0].input,'My unfinished translation');
+  assert.match(html,/#studyWorkspace\[data-search-open="true"\]\{grid-template-columns:minmax\(0,1fr\) minmax\(300px,360px\)/);
+  assert.match(html,/id="lookupSearch"/);
+});
 
 const root=path.resolve(import.meta.dirname,'..');
 const html=fs.readFileSync(path.join(root,'public','六级学习工具.html'),'utf8');
@@ -23,6 +81,78 @@ const assertFullDictation=(L,label)=>{
   assert.ok(items.every(x=>x.text&&x.zh),`${label}: every segment needs hidden Chinese`);
 };
 
+test('concise meanings preserve whole senses and do not present specialist dictionary clutter first',()=>{
+  assert.equal(conciseWordMeaning('n. 社区, 公众, 共有, 共同体；[经] 公众, 共有, 社会'),'社区；公众');
+  assert.equal(conciseWordMeaning('n. 通路, 入口, 发作','使用机会；使用权'),'使用机会；使用权');
+  assert.equal(conciseWordMeaning('[医] 发作, 急性；n. 使用权, 入口'),'使用权；入口');
+  assert.equal(conciseWordMeaning('n. （涂料，油漆的）层, 外套, 覆盖物'),'（涂料，油漆的）层；外套');
+  assert.equal(conciseWordMeaning('n. （涂料；油漆；颜色的）层, 外套, 覆盖物'),'（涂料；油漆；颜色的）层；外套');
+  assert.equal(conciseWordMeaning('v. 跑, 跑, 经营（runs 为 run 的词形或所有格形式）'),'跑；经营');
+});
+
+test('context senses distinguish clicked occurrences and never guess an unverified sense',()=>{
+  const sentence='The jobs were clear, and they left one clear route.';
+  assert.equal(articleContextSense('clear',sentence,sentence.indexOf('clear')).meaning,'明确的');
+  assert.equal(articleContextSense('clear',sentence,sentence.lastIndexOf('clear')).meaning,'畅通的');
+  assert.equal(articleContextSense('clear',sentence),null);
+  assert.equal(articleContextSense('clear','The sky is clear.'),null);
+  assert.equal(articleContextSense('clear',sentence,0),null);
+  assert.equal(articleContextSense('constructor','constructor'),null);
+  const passage='Leaves can block the entrance. She leaves after work.';
+  const first=articleTokenContext(passage,0),last=articleTokenContext(passage,passage.lastIndexOf('leaves'));
+  assert.equal(articleContextSense('Leaves',first.text,first.offset).base,'leaf');
+  assert.equal(articleContextSense('leaves',last.text,last.offset),null);
+  assert.equal(articleContextSense('Leaves','Leaves. Can block the entrance',0),null);
+  assert.equal(articleContextSense('coats','several coats of paint').meaning,'（涂料的）层');
+  assert.equal(articleContextSense('record','his study record').pos,'n');
+  assert.equal(articleContextSense('record','record how long standing water remains').pos,'v');
+});
+
+test('authored context annotations match real prepared articles and leave course data unchanged',()=>{
+  const before=JSON.stringify(CURRICULUM),normal=s=>s.toLowerCase().replace(/[’‘]/g,"'").replace(/[^a-z' ]/g,' ').replace(/\s+/g,' ').trim();
+  const passages=[...CURRICULUM.lessons,...Object.values(CURRICULUM.datedLessons)].flatMap(l=>[l.reading.passage,l.listening.passage,l.extensive.text]).map(normal);
+  for(const [phrase,surface,meaning,pos] of ARTICLE_CONTEXT_SENSES){
+    assert.ok(passages.some(p=>(' '+p+' ').includes(' '+normal(phrase)+' ')),'Context absent from articles: '+phrase);
+    assert.ok(normal(phrase).split(' ').includes(surface));
+    assert.ok(meaning&&meaning.split('；').length<=2);
+    assert.notEqual(wordPartOfSpeechLabel({pos:pos+'.'}),'待核实');
+  }
+  assert.equal(JSON.stringify(CURRICULUM),before);
+});
+
+test('article popup leads with a compact contextual sense and folds raw definitions without saving work',()=>{
+  const rt=runtime({},true);rt.api.setDate('2026-09-17');const L=rt.api.lesson();
+  rt.api.record('reading',0,false,{label:'existing mistake',answer:'A',expected:'B'});
+  rt.api.state().ps.trans[0]={input:'Unfinished translation',checked:false};rt.api.persistDraft();rt.api.renderExtensive(L);
+  const before=rt.element('app').innerHTML,saved=rt.saved.get(RECOVERY_STORAGE_KEY),signature=L.contentSignature;
+  const sentence=articleTokenContext(L.extensive.text,L.extensive.text.indexOf('coats'));
+  const anchor=rt.element('contextCoats');anchor.dataset={lookupContext:sentence.text,lookupOffset:String(sentence.offset)};
+  rt.api.openArticleWord('coats','extensive',anchor);
+  const panel=rt.element('articleLookupPopover').innerHTML,visible=panel.split('<details')[0];
+  assert.match(visible,/本文义：<\/b>（涂料的）层/);assert.doesNotMatch(visible,/外套/);
+  assert.match(visible,/词性：n\. 名词/);assert.match(panel,/<details class="reveal"><summary>其他词典义/);assert.doesNotMatch(panel,/<details[^>]*\bopen\b/);
+  assert.ok(panel.includes(rt.api.articleEntry('coats').meaning));
+  assert.equal(rt.element('app').innerHTML,before);assert.equal(rt.saved.get(RECOVERY_STORAGE_KEY),saved);
+  assert.equal(rt.api.lesson().contentSignature,signature);assert.equal(Object.keys(rt.api.userVocabulary().items).length,0);
+  const markup=rt.api.articleText('The jobs were clear, and they left one clear route.','reading');
+  assert.match(markup,/data-lookup-context=/);assert.match(markup,/data-lookup-offset="14"/);
+  rt.api.closeArticleWord();rt.api.openArticleWord('university','reading');
+  assert.match(rt.api.lookupPanelHtml(L,'reading'),/常用义（本文义待确认）/);
+});
+
+test('clicked occurrence is retained for explicit vocabulary enrollment with the correct contextual lemma',()=>{
+  const rt=runtime({},true);rt.api.setDate('2026-09-16');const L=rt.api.lesson(),surface='Leaves';
+  const point=articleTokenContext(L.extensive.text,L.extensive.text.indexOf(surface));
+  const anchor=rt.element('leafAnchor');anchor.dataset={lookupContext:point.text,lookupOffset:String(point.offset)};
+  rt.api.openArticleWord(surface,'extensive',anchor);
+  assert.match(rt.element('articleLookupPopover').innerHTML,/<b>本文义：<\/b>树叶/);
+  assert.match(rt.element('articleLookupPopover').innerHTML,/背诵原形：<\/b>leaf/);
+  assert.equal(Object.keys(rt.api.userVocabulary().items).length,0);
+  rt.element('lookupAdd').onclick();const words=rt.api.userVocabulary().items;
+  assert.equal(words.leaf.active,true);assert.equal(words.leave,undefined);assert.equal(words.leaf.phrase,point.text.trim());
+  rt.element('lookupRemove').onclick();assert.equal(rt.api.userVocabulary().items.leaf.active,false);
+});
+
 test('sync report stays ASCII-safe for Windows PowerShell JSON parsing',()=>{
   const result=spawnSync(process.execPath,[path.join(root,'scripts','sync-daily-content.mjs'),RELEASE.verifiedOn,'--check'],{encoding:'utf8'});
   assert.equal(result.status,0,result.stderr||result.stdout);
@@ -30,6 +160,49 @@ test('sync report stays ASCII-safe for Windows PowerShell JSON parsing',()=>{
   const report=JSON.parse(result.stdout);
   assert.equal(report.synced,true);
   assert.match(report.note,/浏览器成绩/);
+});
+
+test('word parts of speech cover the word bank without mutating lessons or trusting derived base tags',()=>{
+  assert.deepEqual(parseWordPartsOfSpeech('n. 名词；a. 形容词；adj. 形容词；vt. 及物；vi. 不及物；adv. 副词'),['n','adj','vt','vi','adv']);
+  assert.deepEqual(parseWordPartsOfSpeech('Arrive at 8 a.m. See page n. 3.'),[]);
+  const before=JSON.stringify(CURRICULUM),entries=CURRICULUM.articleGlossary;
+  for(const w of [...CURRICULUM.words,...DATA.WORDS])assert.ok(wordPartsOfSpeech(w,entries).length,'Missing POS: '+w.word);
+  assert.deepEqual(wordPartsOfSpeech('has',entries),wordPartsOfSpeech('have',entries));
+  assert.deepEqual(wordPartsOfSpeech('prepared',entries),['adj']);
+  assert.deepEqual(wordPartsOfSpeech({word:'patiently',meaning:'a. 从原形复制的错误词性'},entries),['adv']);
+  assert.deepEqual(wordPartsOfSpeech('creator',entries),['n']);
+  assert.deepEqual(wordPartsOfSpeech('leaves',entries),['n','v']);
+  assert.match(wordPartOfSpeechLabel('healthy',entries),/adj\. 形容词/);
+  assert.match(wordPartOfSpeechLabel('usually',entries),/adv\. 副词/);
+  assert.equal(wordPartOfSpeechLabel('unverified-unknown-word',entries),'待核实');
+  assert.deepEqual(wordPartsOfSpeech('loop',{loop:{base:'loop'}}),[]);
+  assert.equal(JSON.stringify(CURRICULUM),before);
+});
+
+test('POS appears on study cards, lookups and corrections but stays hidden during dictation',()=>{
+  const rt=runtime();rt.api.setDate('2026-09-16');const L=rt.api.lesson(),signature=L.contentSignature;
+  rt.api.setTab('plan');rt.api.render();
+  assert.equal((rt.element('app').innerHTML.match(/class="word-pos"/g)||[]).length,L.all.length);
+  assert.equal(rt.element('app').innerHTML.includes('词性：待核实'),false);
+  const score=JSON.stringify(rt.api.progress());
+  rt.api.openArticleWord('community','reading');
+  assert.match(rt.api.lookupPanelHtml(L,'reading'),/词性：n\. 名词/);
+  assert.equal(JSON.stringify(rt.api.progress()),score);
+  assert.equal(Object.keys(rt.api.userVocabulary().items).length,0);
+  rt.api.renderWords(L);assert.equal(rt.element('app').innerHTML.includes('class="word-pos"'),false);
+  rt.element('wordInput').oninput({target:{value:'wrong'}});
+  rt.element('meaningInput').oninput({target:{value:'不会'}});rt.element('checkWord').onclick();
+  assert.equal(rt.element('app').innerHTML.includes('class="word-pos"'),false);
+  const first=JSON.stringify(rt.api.progress().attempts),target=rt.api.state().ws.order[0];
+  rt.element('wordInput').oninput({target:{value:target.word}});
+  rt.element('meaningInput').oninput({target:{value:target.meaning}});rt.element('checkWord').onclick();
+  assert.match(rt.element('app').innerHTML,/class="word-pos"/);
+  assert.equal(JSON.stringify(rt.api.progress().attempts),first);
+  assert.equal(rt.api.lesson().contentSignature,signature);
+  assert.equal(rt.api.progress().snapshotArchive.length,0);
+  rt.element('startWrongRound').onclick();
+  const markup=rt.element('app').innerHTML.split('id="todayWrongPractice"')[1]||rt.element('app').innerHTML.split('今日错词重默')[1];
+  assert.equal(markup.includes('class="word-pos"'),false,'retry must not show the answer metadata early');
 });
 
 test('14 complete lessons have bilingual material, IPA and valid answers',()=>{
@@ -323,7 +496,7 @@ function runtime(initial={},browserMode=false){
   const context=vm.createContext({...(browserMode?{window,sessionStorage:{getItem:k=>session.get(k)||null,setItem:(k,v)=>session.set(k,v),removeItem:k=>session.delete(k)}}:{}),Date:TestDate,document,app:element('app'),checkListen:element('checkListen'),listenRateLabel:element('listenRateLabel'),localStorage:{getItem:k=>saved.get(k)||null,setItem:(k,v)=>saved.set(k,v)},alert:m=>{throw new Error(m)},setInterval:fn=>timers.push(fn),setTimeout(){},speechSynthesis,SpeechSynthesisUtterance:function(t){this.text=t},Blob,URL,console});
   let code=[...html.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)].map(x=>x[1]).join('\n');
   const marker='reset();render();setInterval';assert.ok(code.includes(marker));
-  code=code.replace(marker,'globalThis.studyTest={lesson,progress,rawProgress,courseKey,record,save,reset,render,renderWords,renderListening,renderPractice,renderExtensive,renderRecords,persistDraft,speak,pauseSpeech,resumeSpeech,stopSpeech,seven,checkLocalRelease,firstWordAttempt,makeWordRound,restoreDailyWordRound,todayMistakeWords,articleEntry,articleText,articlePairs,parallelArticle,toggleArticleTranslation,lookupPosition,lookupPanelHtml,openArticleWord,closeArticleWord,enrolArticleWord,saveUserVocab,userVocabulary:()=>userVocab,state:()=>({ws,ls,ps,er,rate,selected,today,articleLookup,wordPractice}),setDate:k=>{selected=k;reset()},setTab:k=>{tab=k}};reset();render();setInterval');
+  code=code.replace(marker,'globalThis.studyTest={findSearchWord,runWordSearch,openWordSearch,closeWordSearch,lesson,progress,rawProgress,courseKey,record,save,reset,render,renderWords,renderListening,renderPractice,renderExtensive,renderRecords,persistDraft,speak,pauseSpeech,resumeSpeech,stopSpeech,seven,checkLocalRelease,firstWordAttempt,makeWordRound,restoreDailyWordRound,todayMistakeWords,articleEntry,articleText,articlePairs,parallelArticle,toggleArticleTranslation,lookupPosition,lookupPanelHtml,openArticleWord,closeArticleWord,enrolArticleWord,saveUserVocab,userVocabulary:()=>userVocab,state:()=>({ws,ls,ps,er,rate,selected,today,articleLookup,wordPractice}),setDate:k=>{selected=k;reset()},setTab:k=>{tab=k}};reset();render();setInterval');
   vm.runInContext(code,context);
   return {api:context.studyTest,saved,element,spoken,audioEvents,window,events,session,beacons,reloads:()=>reloadCount,advanceTime:iso=>{now=Date.parse(iso);timers.forEach(fn=>fn())}};
 }

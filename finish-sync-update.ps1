@@ -5,7 +5,7 @@ Set-StrictMode -Version Latest
 $repoRoot = $PSScriptRoot
 $safeDirectory = $repoRoot -replace '\\', '/'
 $gitArgs = @('-c', "safe.directory=$safeDirectory", '-c', 'core.quotePath=false', '-C', $repoRoot)
-$files = @('.gitignore', 'README.md', 'sync-runtime.ps1', '每日同步到GitHub.ps1', 'app/scripts/test-sync-proxy.ps1', 'app/scripts/test-sync-runtime.ps1', 'app/lib/study-engine.mjs', 'app/standalone-template.html', 'app/scripts/test-recovery.mjs', 'finish-sync-update.ps1', 'Finish-Sync-Update.cmd')
+$files = @('.gitignore', 'README.md', 'THIRD_PARTY_NOTICES.md', 'sync-runtime.ps1', '每日同步到GitHub.ps1', 'app/scripts/test-sync-proxy.ps1', 'app/scripts/test-sync-runtime.ps1', 'app/lib/study-engine.mjs', 'app/lib/word-search.mjs', 'app/content/word-search.json', 'app/scripts/build-word-search-data.mjs', 'app/scripts/generate-standalone.mjs', 'app/standalone-template.html', 'app/scripts/test-recovery.mjs', 'finish-sync-update.ps1', 'Finish-Sync-Update.cmd')
 $previousEncoding = [Console]::OutputEncoding
 $transcriptStarted = $false
 $failure = $false
@@ -51,7 +51,7 @@ try {
   & $gitExecutable @gitArgs diff --cached --quiet -- @files
   $difference = $LASTEXITCODE
   if ($difference -eq 1) {
-    & $gitExecutable @gitArgs commit -m 'Add full shuffled dictation, inline retries and reliable Windows sync'
+    & $gitExecutable @gitArgs commit -m 'Update study features and offline word search'
     if ($LASTEXITCODE -ne 0) { throw 'Commit failed; local files are retained.' }
   } elseif ($difference -ne 0) { throw 'Cannot inspect staged changes.' }
   Write-Host '[4/4] Publishing daily pages and verifying the GitHub commit...'
