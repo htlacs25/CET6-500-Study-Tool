@@ -2208,5 +2208,200 @@
         "explanation": "第三段解释单独的绿或红标记可能导致误解。"
       }
     ]
+  },
+  {
+    "date": "2026-10-01",
+    "title": "A Library Tests Seats You Can Book",
+    "titleZh": "图书馆试行座位预约",
+    "category": "Campus life · understanding a trial",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article about an imagined campus trial; not a report of a real or live news event.",
+    "text": "A university library is testing a seat booking system after students complained about spending too long looking for somewhere to study. During the four-week trial, students can reserve most seats for up to two hours. A quarter of the seats remain available without a booking. Anyone who arrives more than ten minutes late loses the reservation, allowing another student to use the place.\n\nThe library has put these limits beside the booking button, not just in a separate guide. Staff say a reservation guarantees a seat during the chosen period, but it does not promise silence or a place beside a friend. Students without a smartphone can book at the service desk. Staff are also recording how often reserved seats remain empty and whether the desk becomes too busy.\n\nEarly comments are positive, and the entrance queue was shorter on one afternoon. However, the library is waiting before calling the trial a success. Fewer classes were running that day, which may have reduced demand. Staff will compare experiences at busy and quiet times and ask students who did not use the system for their views. The aim is to find out whether booking makes access easier across the week, rather than judge it by one encouraging afternoon.",
+    "textZh": "一所大学的图书馆正在试行座位预约系统，起因是学生抱怨寻找学习座位花费了太长时间。在为期四周的试行期间，大多数座位每次最多可预约两小时。四分之一的座位保留给未预约的学生。预约者如果迟到超过十分钟，预约就会失效，其他学生便可使用这个座位。\n\n图书馆把这些限制写在预约按钮旁边，而不只是放在另一份指南里。工作人员说，预约保证学生在所选时段有座位，但不保证周围安静，也不保证能坐在朋友旁边。没有智能手机的学生可以在服务台预约。工作人员还在记录预约座位空置的频率，以及服务台是否变得过于忙碌。\n\n早期反馈是积极的，某天下午入口处的队伍也比以前短了。不过，图书馆仍在等待更多结果，暂未宣布试行成功。那天开课较少，可能降低了座位需求。工作人员将比较繁忙时段和空闲时段的使用体验，并询问没有使用预约系统的学生的看法。这样做是为了了解预约是否让一周内不同时段的入座都更方便，而不是根据一个令人鼓舞的下午就作出判断。",
+    "listeningTip": "先听清两小时、四分之一和十分钟分别限制什么，再注意 However 后面为何不能只凭一个下午判断试行成功。",
+    "speakingPrompt": "Would you prefer to book a library seat or find one when you arrive? Explain your choice and one possible difficulty.",
+    "speakingPromptZh": "你更愿意提前预约图书馆座位，还是到达后再找座位？请解释你的选择，并说出一个可能的困难。",
+    "keyPhrases": [
+      {
+        "en": "up to two hours",
+        "zh": "最多两小时"
+      },
+      {
+        "en": "remain available",
+        "zh": "仍可使用"
+      },
+      {
+        "en": "reduced demand",
+        "zh": "降低了需求"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What happens if a student arrives fifteen minutes after the reserved starting time?",
+        "promptZh": "如果学生比预约开始时间晚到十五分钟，会发生什么？",
+        "options": [
+          "The booking period becomes fifteen minutes shorter.",
+          "The student must make the next booking at the desk.",
+          "The seat becomes available to another student.",
+          "The reservation moves to a different seat."
+        ],
+        "optionsZh": [
+          "预约时段会缩短十五分钟。",
+          "该学生下次必须到服务台预约。",
+          "其他学生可以使用这个座位。",
+          "预约会转移到另一个座位。"
+        ],
+        "answer": 2,
+        "explanation": "第一段规定，迟到超过十分钟就会失去预约，座位可供其他学生使用。十五分钟已经超过这一限制。"
+      },
+      {
+        "prompt": "Why is the shorter queue not enough to prove that the booking system works well?",
+        "promptZh": "为什么队伍变短还不足以证明预约系统效果良好？",
+        "options": [
+          "Lower demand that day could also explain the change.",
+          "The library had not yet allowed students to book seats.",
+          "Students without smartphones were excluded from the trial.",
+          "Staff had already decided to remove the booking system."
+        ],
+        "optionsZh": [
+          "当天较低的需求也可能解释这一变化。",
+          "图书馆当时还未允许学生预约座位。",
+          "没有智能手机的学生被排除在试行之外。",
+          "工作人员已经决定取消预约系统。"
+        ],
+        "answer": 0,
+        "explanation": "第三段指出，当天开课较少，可能使座位需求下降。因此，排队变短不能单独证明是预约系统带来的效果，还需比较其他时段。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-02",
+    "title": "The Question That Helped a Repair",
+    "titleZh": "让修理顺利进行的一次提问",
+    "category": "Campus life · asking for clarification",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article about an imagined campus workshop; not a report of a real or live news event.",
+    "text": "At a campus repair workshop, students brought worn bags, loose handles, and other small items from their rooms. The volunteers wanted visitors to take part in each repair instead of simply leaving an object on a table. Tools were provided, but students soon discovered that understanding an instruction could be as important as choosing the right tool.\n\nOne student was fixing the handle on a storage box when a volunteer said, \"Put the washer under it and tighten it gently.\" The student knew that a washer was a small metal ring, but was unsure what \"it\" referred to. Instead of guessing, she pointed and asked, \"Do you mean this screw beside the handle?\" After the volunteer confirmed this, she asked how to tell when it was tight enough. He explained that the screw should stay firm while the handle could still turn.\n\nThe exchange took less than a minute, yet it prevented the student from forcing the handle into a fixed position. Later, the workshop leader encouraged everyone to repeat unclear instructions in their own words before continuing. Asking a precise question did not slow the whole activity down; it helped the work move forward. Several visitors said they would use the same approach during group tasks in class, where a confident nod can sometimes hide a different understanding.",
+    "textZh": "在一场校园修理工作坊上，学生们带来了房间里的旧包、松动的提手以及其他小物件。志愿者希望来访者亲自参与每一次修理，而不是只把物品放在桌上等人修好。现场提供了工具，但学生们很快发现，理解一条指令可能和选对工具同样重要。\n\n一名学生正在修理收纳箱的提手，一位志愿者说：“把垫圈放在它下面，再轻轻拧紧它。”学生知道垫圈是一个小金属环，却不确定“它”指的是什么。她没有猜测，而是指着零件问：“你是指提手旁边的这颗螺丝吗？”志愿者确认后，她又问怎样判断拧得是否足够紧。他解释说，螺丝应该保持牢固，同时提手仍能转动。\n\n这段交流不到一分钟，却避免了学生用力把提手拧死。随后，工作坊负责人鼓励大家在继续操作之前，用自己的话复述不清楚的指令。提出一个明确的问题并没有拖慢整个活动，反而帮助工作继续推进。几位参加者表示，今后在课堂小组任务中也会采用同样的方法，因为一个自信的点头有时可能掩盖不同的理解。",
+    "listeningTip": "留意对话中 it 指代不明带来的问题，以及学生怎样先确认零件、再询问完成标准；复述时可使用 Do you mean...?",
+    "speakingPrompt": "A teammate gives you an unclear instruction. What two questions could you ask before starting the task?",
+    "speakingPromptZh": "队友给出了一条不清楚的指令。开始任务前，你可以提出哪两个问题？",
+    "keyPhrases": [
+      {
+        "en": "instead of guessing",
+        "zh": "而不是猜测"
+      },
+      {
+        "en": "in their own words",
+        "zh": "用他们自己的话"
+      },
+      {
+        "en": "move forward",
+        "zh": "继续推进"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What did the student need to clarify first?",
+        "promptZh": "这名学生首先需要弄清楚什么？",
+        "options": [
+          "Whether she could keep the tools after the workshop.",
+          "Which part the volunteer was referring to.",
+          "What a washer looked like.",
+          "Whether the storage box belonged to the volunteer."
+        ],
+        "optionsZh": [
+          "工作坊结束后她能否保留工具。",
+          "志愿者所指的是哪个零件。",
+          "垫圈是什么样子的。",
+          "收纳箱是否属于志愿者。"
+        ],
+        "answer": 1,
+        "explanation": "第二段说学生知道 washer 是小金属环，但不确定 it 指什么，因此先指着螺丝确认志愿者所指的零件。"
+      },
+      {
+        "prompt": "What does the final sentence suggest about a confident nod?",
+        "promptZh": "最后一句暗示，自信地点头可能意味着什么？",
+        "options": [
+          "The listener has found a quicker way to finish the task.",
+          "The speaker has explained every detail clearly.",
+          "The group has agreed to change its plan.",
+          "The listener may still have misunderstood the instruction."
+        ],
+        "optionsZh": [
+          "听者已经找到更快完成任务的方法。",
+          "说话者已经清楚地解释了每个细节。",
+          "小组已经同意改变计划。",
+          "听者仍有可能误解了指令。"
+        ],
+        "answer": 3,
+        "explanation": "最后一句指出，自信地点头有时会掩盖不同的理解。因此，外表上的认可不能保证听者已经正确理解指令。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-03",
+    "title": "A Meeting Where the Quiet Ideas Were Heard",
+    "titleZh": "让安静的意见也被听见的一次会议",
+    "category": "Campus life · teamwork and respectful disagreement",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article about an imagined student theatre group; not a report of a real or live news event. 原创报刊风格教学短文，描述虚构学生剧团，不是真实或实时新闻。",
+    "text": "A student theatre group tried a small change at its weekly planning meeting. Instead of asking for suggestions immediately, the leader gave everyone two minutes to write down one idea and one concern. Members then read their notes aloud without being interrupted. The group was preparing a short performance, and its previous meetings had often been dominated by two experienced students.\n\nThis time, a new member questioned a proposal to use recorded music throughout the performance. She worried that the words would be difficult to hear in the small hall. Another member liked the music because it created a lively atmosphere. Rather than vote at once, the group tested one scene with music and then without it. They agreed to keep music between scenes but stop it during spoken lines. Both students helped explain the decision to the rest of the cast.\n\nThe leader said the new process was not designed to make everyone agree with every idea. Its purpose was to give useful reasons a fair chance to be heard. Writing first helped some members prepare their thoughts, while the short test gave the discussion a shared focus. The group plans to use the same method again, but will also ask whether members feel able to raise concerns after the meeting.",
+    "textZh": "一个学生剧团在每周的筹备会上尝试了一项小改变。负责人没有立刻征求建议，而是先给每个人两分钟，写下一项想法和一个担忧。随后，成员们依次大声读出笔记，过程中不被打断。剧团正在准备一场短剧，而此前的会议常常被两名经验丰富的学生主导。\n\n这一次，一名新成员对全程播放录制音乐的建议提出了疑问。她担心在小礼堂里，观众会听不清台词。另一名成员喜欢配乐，因为它能营造活泼的气氛。小组没有马上投票，而是分别在有音乐和没有音乐的情况下试演了一场戏。他们同意在场景之间保留音乐，但在演员说台词时停止播放。两名学生共同向其他演员解释了这个决定。\n\n负责人表示，新流程不是为了让每个人都赞同每一种想法，而是为了让有价值的理由获得被公平听取的机会。先写下来帮助一些成员整理思路，短暂的试演则给讨论提供了共同的关注点。剧团计划再次采用这种方法，同时也会询问成员是否觉得会后仍能提出担忧。",
+    "listeningTip": "先抓住建议、担忧、测试、折中方案四步；听清keep music between scenes与stop it during spoken lines的对照。挑三小组意群影子跟读，再脱稿复述30—60秒。",
+    "speakingPrompt": "Two teammates disagree about a plan. Retell how the theatre group handled a disagreement, and suggest one question you could ask before your own team decides.",
+    "speakingPromptZh": "两名队友对一项计划有分歧。请复述剧团怎样处理分歧，再提出一个你自己的团队作决定前可以问的问题。",
+    "keyPhrases": [
+      {
+        "en": "without being interrupted",
+        "zh": "不被打断地"
+      },
+      {
+        "en": "rather than vote at once",
+        "zh": "而不是马上投票"
+      },
+      {
+        "en": "a fair chance to be heard",
+        "zh": "被公平听取的机会"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What compromise did the group reach about the music?",
+        "promptZh": "剧团在音乐问题上达成了什么折中方案？",
+        "options": [
+          "Use music only while actors are speaking.",
+          "Ask the audience to vote during the performance.",
+          "Keep music between scenes but stop it during spoken lines.",
+          "Remove all music from every future performance."
+        ],
+        "optionsZh": [
+          "仅在演员说话时播放音乐。",
+          "在演出中请观众投票。",
+          "场景之间保留音乐，说台词时停止播放。",
+          "今后的所有演出都不再使用音乐。"
+        ],
+        "answer": 2,
+        "explanation": "第二段直接说明keep music between scenes but stop it during spoken lines；方案兼顾了气氛与台词清晰度。"
+      },
+      {
+        "prompt": "What was the main purpose of the new meeting process?",
+        "promptZh": "新的会议流程主要目的是什么？",
+        "options": [
+          "To give useful reasons a fair chance to be heard.",
+          "To ensure that the leader always makes the final choice alone.",
+          "To prevent new members from disagreeing with experienced students.",
+          "To make every member support every idea."
+        ],
+        "optionsZh": [
+          "让有价值的理由获得被公平听取的机会。",
+          "确保负责人始终独自作最后决定。",
+          "防止新成员反对经验丰富的学生。",
+          "让每位成员支持每一种想法。"
+        ],
+        "answer": 0,
+        "explanation": "第三段明确区分目的：不是强求人人赞同每种想法，而是让有价值的理由有公平的表达和倾听机会。"
+      }
+    ]
   }
 ]

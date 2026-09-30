@@ -342,5 +342,115 @@
     {"text": "Morning and evening times will remain the same,", "zh": "早晚的发车时间将保持不变，"},
     {"text": "but journeys may take about ten minutes longer.", "zh": "但路程可能会多花大约十分钟。"},
     {"text": "Check the transport website before leaving.", "zh": "出发前请查看交通网站。"}
+  ],
+  "2026-10-01": [
+    {
+      "text": "A visitor left a green notebook in the museum on Saturday.",
+      "zh": "一位访客星期六把一本绿色笔记本落在了博物馆。"
+    },
+    {
+      "text": "It was found under a seat in the film room,",
+      "zh": "它是在放映室的一个座位下面被发现的，"
+    },
+    {
+      "text": "not in the exhibition hall.",
+      "zh": "而不是在展厅里。"
+    },
+    {
+      "text": "The notebook is now at the information desk near the entrance.",
+      "zh": "笔记本现放在入口附近的信息台。"
+    },
+    {
+      "text": "The owner can collect it before five this afternoon.",
+      "zh": "失主可以在今天下午五点前领取。"
+    },
+    {
+      "text": "Please describe something written inside,",
+      "zh": "请描述一下本子里面写了什么，"
+    },
+    {
+      "text": "so staff can check that it belongs to you.",
+      "zh": "这样工作人员才能确认它属于你。"
+    },
+    {
+      "text": "If you cannot come today, call the museum to arrange another time.",
+      "zh": "如果今天来不了，请致电博物馆另约时间。"
+    }
+  ],
+  "2026-10-02": [
+    {
+      "text": "This message is for students attending the interview practice session.",
+      "zh": "这条通知面向参加面试练习课的学生。"
+    },
+    {
+      "text": "The session was planned for two on Friday,",
+      "zh": "原定练习课在星期五两点开始，"
+    },
+    {
+      "text": "but it will now begin at three.",
+      "zh": "但现在将改为三点开始。"
+    },
+    {
+      "text": "Room twelve is being repaired,",
+      "zh": "十二号教室正在维修，"
+    },
+    {
+      "text": "so please go to Room sixteen in the same building.",
+      "zh": "所以请前往同一栋楼的十六号教室。"
+    },
+    {
+      "text": "Bring a short description of one project you have completed.",
+      "zh": "请带上一份你已完成项目的简短介绍。"
+    },
+    {
+      "text": "You do not need to print your whole application.",
+      "zh": "你不需要打印整份申请材料。"
+    },
+    {
+      "text": "If the new time is unsuitable,",
+      "zh": "如果新时间不合适，"
+    },
+    {
+      "text": "email the office by noon tomorrow to request another session.",
+      "zh": "请在明天中午前发邮件给办公室，申请参加另一场练习。"
+    }
+  ],
+  "2026-10-03": [
+    {
+      "text": "Before we start our campus survey, let's agree on our roles.",
+      "zh": "开始校园调查前，我们先商定各自的职责。"
+    },
+    {
+      "text": "Two members will ask the questions,",
+      "zh": "两名成员负责提问，"
+    },
+    {
+      "text": "and one will write down the answers.",
+      "zh": "一名成员记录回答。"
+    },
+    {
+      "text": "The fourth member should check that nobody is counted twice.",
+      "zh": "第四名成员应检查，确保没有人被重复计数。"
+    },
+    {
+      "text": "Please do not interrupt a person who is still answering.",
+      "zh": "受访者仍在回答时，请不要打断。"
+    },
+    {
+      "text": "If you disagree with a teammate's suggestion, explain your reason calmly.",
+      "zh": "如果不同意队友的建议，请平静地说明理由。"
+    },
+    {
+      "text": "We will compare our notes after twenty interviews.",
+      "zh": "完成二十次访谈后，我们会对照笔记。"
+    },
+    {
+      "text": "That will help us find problems",
+      "zh": "这有助于我们发现问题，"
+    },
+    {
+      "text": "before we collect the rest of the information.",
+      "zh": "在收集剩余信息之前。"
+    }
   ]
 }

@@ -7002,6 +7002,98 @@
     ]
   },
   "2026-09-29": {
+    "additionalWords": [
+      {
+        "word": "achievement",
+        "pos": "n.",
+        "phonetic": "/əˈtʃiːvmənt/",
+        "meaning": "成就",
+        "phrase": "a personal achievement",
+        "example": "Describe an achievement that shows your ability.",
+        "exampleZh": "描述一项能体现你能力的成就。"
+      },
+      {
+        "word": "applicant",
+        "pos": "n.",
+        "phonetic": "/ˈæplɪkənt/",
+        "meaning": "申请者",
+        "phrase": "a suitable applicant",
+        "example": "Each applicant should provide a clear example.",
+        "exampleZh": "每位申请者都应提供一个清楚的例子。"
+      },
+      {
+        "word": "qualification",
+        "pos": "n.",
+        "phonetic": "/ˌkwɒlɪfɪˈkeɪʃən/",
+        "meaning": "资格；资历",
+        "phrase": "a professional qualification",
+        "example": "This job requires a professional qualification.",
+        "exampleZh": "这份工作要求有专业资格。"
+      },
+      {
+        "word": "responsible",
+        "pos": "adj.",
+        "phonetic": "/rɪˈspɒnsəbəl/",
+        "meaning": "负责的",
+        "phrase": "be responsible for",
+        "example": "I was responsible for checking the results.",
+        "exampleZh": "我负责检查结果。"
+      },
+      {
+        "word": "confident",
+        "pos": "adj.",
+        "phonetic": "/ˈkɒnfɪdənt/",
+        "meaning": "自信的",
+        "phrase": "feel confident",
+        "example": "Practice helps me feel more confident.",
+        "exampleZh": "练习帮助我更自信。"
+      },
+      {
+        "word": "strength",
+        "pos": "n.",
+        "phonetic": "/streŋθ/",
+        "meaning": "长处；力量",
+        "phrase": "a personal strength",
+        "example": "Patient communication is one of her strengths.",
+        "exampleZh": "耐心沟通是她的长处之一。"
+      },
+      {
+        "word": "weakness",
+        "pos": "n.",
+        "phonetic": "/ˈwiːknəs/",
+        "meaning": "弱点",
+        "phrase": "recognize a weakness",
+        "example": "Recognizing a weakness is the first step to improvement.",
+        "exampleZh": "认识弱点是改进的第一步。"
+      },
+      {
+        "word": "relevant",
+        "pos": "adj.",
+        "phonetic": "/ˈreləvənt/",
+        "meaning": "相关的",
+        "phrase": "relevant experience",
+        "example": "Choose experience that is relevant to the job.",
+        "exampleZh": "选择与工作相关的经历。"
+      },
+      {
+        "word": "professional",
+        "pos": "adj.",
+        "phonetic": "/prəˈfeʃənəl/",
+        "meaning": "专业的；职业的",
+        "phrase": "professional skills",
+        "example": "The project helped her develop professional skills.",
+        "exampleZh": "这个项目帮助她培养专业技能。"
+      },
+      {
+        "word": "enthusiasm",
+        "pos": "n.",
+        "phonetic": "/ɪnˈθjuːziæzəm/",
+        "meaning": "热情",
+        "phrase": "show enthusiasm",
+        "example": "He showed enthusiasm for learning new skills.",
+        "exampleZh": "他表现出学习新技能的热情。"
+      }
+    ],
     "title": "实习准备：用具体经历证明能力",
     "grammarTip": "apply for、prepare for是固定搭配；if引导真实条件时，从句常用一般现在时，主句可用will加动词原形。",
     "words": [
@@ -7391,6 +7483,98 @@
     ]
   },
   "2026-09-30": {
+    "additionalWords": [
+      {
+        "word": "vehicle",
+        "pos": "n.",
+        "phonetic": "/ˈviːɪkəl/",
+        "meaning": "车辆",
+        "phrase": "an electric vehicle",
+        "example": "An electric vehicle still needs energy.",
+        "exampleZh": "电动车仍然需要能源。"
+      },
+      {
+        "word": "pedestrian",
+        "pos": "n.",
+        "phonetic": "/pəˈdestriən/",
+        "meaning": "行人",
+        "phrase": "pedestrian safety",
+        "example": "The new crossing improves pedestrian safety.",
+        "exampleZh": "新的人行横道提高了行人的安全性。"
+      },
+      {
+        "word": "destination",
+        "pos": "n.",
+        "phonetic": "/ˌdestɪˈneɪʃən/",
+        "meaning": "目的地",
+        "phrase": "reach a destination",
+        "example": "We reached our destination before noon.",
+        "exampleZh": "我们在中午前到达了目的地。"
+      },
+      {
+        "word": "fare",
+        "pos": "n.",
+        "phonetic": "/feə/",
+        "meaning": "车费；票价",
+        "phrase": "a bus fare",
+        "example": "The bus fare is lower for students.",
+        "exampleZh": "学生的公交票价更低。"
+      },
+      {
+        "word": "journey",
+        "pos": "n.",
+        "phonetic": "/ˈdʒɜːni/",
+        "meaning": "旅程；行程",
+        "phrase": "a short journey",
+        "example": "The short journey took longer in heavy traffic.",
+        "exampleZh": "由于交通拥堵，这段短途行程花了更长时间。"
+      },
+      {
+        "word": "distance",
+        "pos": "n.",
+        "phonetic": "/ˈdɪstəns/",
+        "meaning": "距离",
+        "phrase": "walking distance",
+        "example": "The station is within walking distance.",
+        "exampleZh": "车站在步行可达的距离内。"
+      },
+      {
+        "word": "accessible",
+        "pos": "adj.",
+        "phonetic": "/əkˈsesəbəl/",
+        "meaning": "可到达的；可使用的",
+        "phrase": "accessible transport",
+        "example": "Accessible transport helps more people travel independently.",
+        "exampleZh": "无障碍交通帮助更多人独立出行。"
+      },
+      {
+        "word": "affordable",
+        "pos": "adj.",
+        "phonetic": "/əˈfɔːdəbəl/",
+        "meaning": "负担得起的",
+        "phrase": "affordable tickets",
+        "example": "Students need safe transport with affordable tickets.",
+        "exampleZh": "学生需要票价负担得起的安全交通。"
+      },
+      {
+        "word": "fuel",
+        "pos": "n.",
+        "phonetic": "/ˈfjuːəl/",
+        "meaning": "燃料",
+        "phrase": "save fuel",
+        "example": "Sharing a car can help save fuel.",
+        "exampleZh": "拼车有助于节省燃料。"
+      },
+      {
+        "word": "crowded",
+        "pos": "adj.",
+        "phonetic": "/ˈkraʊdɪd/",
+        "meaning": "拥挤的",
+        "phrase": "a crowded bus",
+        "example": "The bus is crowded during the morning rush hour.",
+        "exampleZh": "早高峰时公交车很拥挤。"
+      }
+    ],
     "title": "公共交通：比较便利、成本与环境影响",
     "grammarTip": "due to后接名词或名词短语；比较方案时不要只找一个优点，要识别however、while等转折和对照信号。",
     "words": [
@@ -7778,6 +7962,1416 @@
           "the total number of passengers"
         ],
         "alternative": "The total number of passengers alone cannot show whether public transport is effective."
+      }
+    ]
+  },
+  "2026-10-01": {
+    "title": "周测复盘：识别信息改写，给答案找依据",
+    "grammarTip": "本周小测不加新词。先独立作答再订正：分清主句谓语与定语从句谓语、形容词前的be动词，以及before后接动名词。记录答案依据，不用讲解后的重做成绩替代首次成绩。",
+    "words": [],
+    "grammar": [
+      {
+        "prompt": "The guide who answers our questions ___ very patient.",
+        "promptZh": "回答我们问题的导览员非常耐心。",
+        "options": [
+          "is",
+          "are",
+          "be",
+          "have"
+        ],
+        "optionsZh": [
+          "单数现在时",
+          "复数现在时",
+          "原形",
+          "拥有"
+        ],
+        "answer": 0,
+        "explanation": "主句主语是单数The guide，who从句只是修饰；形容词patient前需要is。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "Visitors should ___ their tickets until the end of the tour.",
+        "promptZh": "访客应保留门票直到参观结束。",
+        "options": [
+          "kept",
+          "keeping",
+          "keep",
+          "keeps"
+        ],
+        "optionsZh": [
+          "过去式",
+          "动名词",
+          "原形",
+          "第三人称单数"
+        ],
+        "answer": 2,
+        "explanation": "should是情态动词，其后接keep原形。",
+        "tag": "modal"
+      },
+      {
+        "prompt": "The information on this notice ___ correct.",
+        "promptZh": "这张告示上的信息是正确的。",
+        "options": [
+          "are",
+          "were",
+          "have",
+          "is"
+        ],
+        "optionsZh": [
+          "复数现在时",
+          "复数过去时",
+          "拥有",
+          "单数现在时"
+        ],
+        "answer": 3,
+        "explanation": "information在这里是不可数名词，主句用is。",
+        "tag": "subject-verb"
+      },
+      {
+        "prompt": "Check the opening time before ___ home.",
+        "promptZh": "离家前核对开放时间。",
+        "options": [
+          "leave",
+          "leaving",
+          "left",
+          "leaves"
+        ],
+        "optionsZh": [
+          "原形",
+          "动名词",
+          "过去式",
+          "第三人称单数"
+        ],
+        "answer": 1,
+        "explanation": "before在此是介词，后接leaving；也可另写before you leave home。",
+        "tag": "word-form"
+      },
+      {
+        "prompt": "I practise listening ___, even when I am busy.",
+        "promptZh": "即使忙碌，我也每天练习听力。",
+        "options": [
+          "every day",
+          "everyday",
+          "every days",
+          "day off"
+        ],
+        "optionsZh": [
+          "每天",
+          "日常的（形容词）",
+          "错误的复数形式",
+          "休息日"
+        ],
+        "answer": 0,
+        "explanation": "题意是每天；every day作时间状语，everyday一般放在名词前；every后接单数day。",
+        "tag": "every-day"
+      },
+      {
+        "prompt": "The visitors ___ arrived early could choose their seats first.",
+        "promptZh": "早到的访客可以先选座位。",
+        "options": [
+          "where",
+          "when",
+          "who",
+          "what"
+        ],
+        "optionsZh": [
+          "表示地点",
+          "表示时间",
+          "指代人的关系代词",
+          "什么"
+        ],
+        "answer": 2,
+        "explanation": "先行词visitors指人，关系代词who在从句中作arrived的主语。",
+        "tag": "relative-clause"
+      }
+    ],
+    "reading": {
+      "title": "Two Ways to Tell the Same Story",
+      "titleZh": "讲述同一个故事的两种方式",
+      "passage": "A class visited a local history museum on Saturday. Before entering, each student received a question sheet. One question asked why families had moved from nearby villages to the town a century earlier. The display did not repeat the words on the sheet. Instead, it explained that new factories offered regular wages, while farm work depended heavily on the season.\n\nSeveral students chose the answer about better weather because they had noticed a picture of a sunny street. Others compared the options with the explanation and selected employment. After the visit, the teacher asked everyone to underline the evidence for their answer. She did not ask them to copy the whole display.\n\nThe exercise showed that finding a familiar word is not always enough. A picture may attract attention without explaining a cause. Readers need to connect ideas expressed in different words and check whether their evidence actually answers the question. Even a correct choice is worth reviewing if it was only a guess.",
+      "passageZh": "一个班星期六参观了一家地方历史博物馆。进馆前，每位学生都拿到了一张问题单。其中一题问，一百年前附近村庄的家庭为什么搬到镇上。展板没有重复题目中的措辞，而是解释说，新工厂提供固定工资，而农业劳动高度依赖季节。\n\n几名学生注意到一张阳光下街道的图片，便选择了“天气更好”的答案。其他人把选项与说明对照后，选择了就业。参观结束后，老师要求每个人画出支持答案的依据，而不是抄下整块展板。\n\n这项练习说明，找到熟悉的单词并不总是足够。图片可能吸引注意，却没有解释原因。读者需要把不同措辞表达的意思联系起来，并检查证据是否真正回答了问题。即使选对了，如果只是猜的，也值得复盘。",
+      "level": "四级衔接周测 · 原创模拟",
+      "topic": "同义改写与证据定位",
+      "questions": [
+        {
+          "prompt": "Why did families move to the town?",
+          "promptZh": "这些家庭为什么搬到镇上？",
+          "options": [
+            "To enjoy warmer weather",
+            "To visit the museum",
+            "To find regular paid work",
+            "To study local pictures"
+          ],
+          "optionsZh": [
+            "为了更暖和的天气",
+            "为了参观博物馆",
+            "为了找到有固定收入的工作",
+            "为了研究当地图片"
+          ],
+          "answer": 2,
+          "explanation": "第一段的new factories offered regular wages与regular paid work意思对应。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What led some students to the wrong answer?",
+          "promptZh": "什么使一些学生选错？",
+          "options": [
+            "A picture that did not explain the cause",
+            "An incorrect question sheet",
+            "A missing display",
+            "A teacher who changed the question"
+          ],
+          "optionsZh": [
+            "一张没有解释原因的图片",
+            "错误的问题单",
+            "缺失的展板",
+            "更改问题的老师"
+          ],
+          "answer": 0,
+          "explanation": "他们看到了晴天街道图片，却忽略了文字中关于就业的原因。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What did the teacher ask students to do after the visit?",
+          "promptZh": "参观后老师要求学生做什么？",
+          "options": [
+            "Write a new history book",
+            "Copy every word on the display",
+            "Remove an option from the question",
+            "Underline evidence supporting their answers"
+          ],
+          "optionsZh": [
+            "编写新历史书",
+            "抄下展板上每一个词",
+            "删除题目中的一个选项",
+            "画出支持答案的证据"
+          ],
+          "answer": 3,
+          "explanation": "第二段明确要求underline the evidence，而非抄整块展板。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What is the main lesson of the exercise?",
+          "promptZh": "这项练习主要说明什么？",
+          "options": [
+            "Pictures always contain the answer",
+            "Match ideas and check relevant evidence",
+            "Choose an option with familiar words",
+            "Never review a correct answer"
+          ],
+          "optionsZh": [
+            "图片总是包含答案",
+            "对应意思并核对相关证据",
+            "选含熟悉单词的选项",
+            "不要复盘答对的题"
+          ],
+          "answer": 1,
+          "explanation": "末段强调连接不同措辞的意思，并核对证据是否回答了问题。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "A Notebook Left at the Museum",
+      "titleZh": "遗落在博物馆的笔记本",
+      "passage": "A visitor left a green notebook in the museum on Saturday. It was found under a seat in the film room, not in the exhibition hall. The notebook is now at the information desk near the entrance. The owner can collect it before five this afternoon. Please describe something written inside, so staff can check that it belongs to you. If you cannot come today, call the museum to arrange another time.",
+      "passageZh": "一位访客星期六把一本绿色笔记本落在了博物馆。它是在放映室的一个座位下面被发现的，而不是在展厅里。笔记本现放在入口附近的信息台。失主可以在今天下午五点前领取。请描述一下本子里面写了什么，这样工作人员才能确认它属于你。如果今天来不了，请致电博物馆另约时间。",
+      "dictation": [
+        "The notebook is now at the information desk near the entrance.",
+        "The owner can collect it before five this afternoon."
+      ],
+      "dictationZh": [
+        "笔记本现放在入口附近的信息台。",
+        "失主可以在今天下午五点前领取。"
+      ],
+      "level": "四级衔接周测短听力 · 合成朗读",
+      "tip": "区分发现地点和领取地点；听到not时确认否定的是哪条信息。先完成理解题，再展开文本。",
+      "questions": [
+        {
+          "prompt": "Where can the owner collect the notebook now?",
+          "promptZh": "失主现在应在哪里领取笔记本？",
+          "options": [
+            "In the exhibition hall",
+            "In the film room",
+            "At the information desk",
+            "At the ticket machine"
+          ],
+          "optionsZh": [
+            "在展厅",
+            "在放映室",
+            "在信息台",
+            "在售票机旁"
+          ],
+          "answer": 2,
+          "explanation": "发现地点是放映室，当前领取地点是入口附近的信息台，注意时间与地点角色。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "Why should the owner describe something inside the notebook?",
+          "promptZh": "为什么失主要描述笔记本中的内容？",
+          "options": [
+            "To prove that the notebook is theirs",
+            "To give the museum a new story",
+            "To pay for an entrance ticket",
+            "To change the closing time"
+          ],
+          "optionsZh": [
+            "为了证明笔记本属于自己",
+            "为了给博物馆提供新故事",
+            "为了支付门票",
+            "为了更改闭馆时间"
+          ],
+          "answer": 0,
+          "explanation": "so staff can check that it belongs to you说明目的是确认归属。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "Readers who compare each option with the evidence are less likely to choose an attractive but unsupported answer.",
+      "main": "Readers are less likely to choose an attractive but unsupported answer.",
+      "translation": "把每个选项与证据对照的读者，不太可能选择一个看似吸引人却缺乏支持的答案。",
+      "core": [
+        "readers",
+        "are",
+        "less",
+        "likely",
+        "choose",
+        "answer"
+      ],
+      "keywords": [
+        "读者",
+        "每个选项",
+        "证据",
+        "不太可能",
+        "缺乏支持"
+      ],
+      "structure": "who compare each option with the evidence是修饰Readers的定语从句；主句谓语部分为are less likely to choose。",
+      "mainZh": "读者不太可能选择看似吸引人却缺乏支持的答案。",
+      "level": "四级衔接周测句法",
+      "topic": "定语从句与be likely to",
+      "grammar": [
+        "who从句里的compare不是主句谓语。",
+        "likely是形容词，在此不能漏掉前面的are。"
+      ],
+      "examTip": "先括起who从句，再检查主句主语与be动词是否完整。"
+    },
+    "trans": [
+      {
+        "source": "作答之前，请把每个选项与原文对照。",
+        "answer": "Before answering, please compare each option with the passage.",
+        "keywords": [
+          "before answering",
+          "compare",
+          "each option",
+          "passage"
+        ],
+        "grammar": "before后接动名词answering；compare A with B表示把A与B对照。",
+        "acceptedAnswers": [
+          "Before answering, please compare each option with the passage.",
+          "Please compare every option with the text before answering."
+        ],
+        "level": "四级衔接表达",
+        "topic": "证据定位",
+        "chunks": [
+          "before answering",
+          "compare each option with the passage"
+        ],
+        "alternative": "Please compare every option with the text before answering."
+      },
+      {
+        "source": "如果一个答案缺乏证据，我们应该再次检查它。",
+        "answer": "If an answer lacks evidence, we should check it again.",
+        "keywords": [
+          "if",
+          "answer",
+          "evidence",
+          "should check",
+          "again"
+        ],
+        "grammar": "条件从句中an answer为单数，所以用lacks；should后接check原形。",
+        "acceptedAnswers": [
+          "If an answer lacks evidence, we should check it again.",
+          "We should check an answer again if there is no evidence for it."
+        ],
+        "level": "四级衔接表达",
+        "topic": "核对答案",
+        "chunks": [
+          "lack evidence",
+          "check it again"
+        ],
+        "alternative": "We should check an answer again if there is no evidence for it."
+      }
+    ]
+  },
+  "2026-10-02": {
+    "additionalWords": [
+      {
+        "word": "contact",
+        "pos": "v.",
+        "phonetic": "/ˈkɒntækt/",
+        "meaning": "联系",
+        "phrase": "contact the office",
+        "example": "Contact the office if you need help.",
+        "exampleZh": "如果需要帮助，请联系办公室。"
+      },
+      {
+        "word": "request",
+        "pos": "v.",
+        "phonetic": "/rɪˈkwest/",
+        "meaning": "请求",
+        "phrase": "request a change",
+        "example": "You can request a change before Friday.",
+        "exampleZh": "你可以在星期五之前申请变更。"
+      },
+      {
+        "word": "location",
+        "pos": "n.",
+        "phonetic": "/ləʊˈkeɪʃən/",
+        "meaning": "地点；位置",
+        "phrase": "confirm the location",
+        "example": "Confirm the location before you leave.",
+        "exampleZh": "出发前先确认地点。"
+      },
+      {
+        "word": "notice",
+        "pos": "n.; v.",
+        "phonetic": "/ˈnəʊtɪs/",
+        "meaning": "通知；注意到",
+        "phrase": "read the notice",
+        "example": "Read the latest notice for the correct room number.",
+        "exampleZh": "阅读最新通知以确认正确的教室号码。"
+      },
+      {
+        "word": "instruction",
+        "pos": "n.",
+        "phonetic": "/ɪnˈstrʌkʃən/",
+        "meaning": "指示；说明",
+        "phrase": "follow an instruction",
+        "example": "Follow each instruction carefully.",
+        "exampleZh": "认真遵循每一条指示。"
+      },
+      {
+        "word": "preparation",
+        "pos": "n.",
+        "phonetic": "/ˌprepəˈreɪʃən/",
+        "meaning": "准备",
+        "phrase": "careful preparation",
+        "example": "Careful preparation can reduce mistakes.",
+        "exampleZh": "认真准备可以减少错误。"
+      },
+      {
+        "word": "attendance",
+        "pos": "n.",
+        "phonetic": "/əˈtendəns/",
+        "meaning": "出席；到场",
+        "phrase": "confirm attendance",
+        "example": "Please confirm your attendance by email.",
+        "exampleZh": "请通过电子邮件确认你是否出席。"
+      },
+      {
+        "word": "replacement",
+        "pos": "n.",
+        "phonetic": "/rɪˈpleɪsmənt/",
+        "meaning": "替代物；替换",
+        "phrase": "a replacement room",
+        "example": "The office found a replacement room for the class.",
+        "exampleZh": "办公室为这节课找到了替代教室。"
+      },
+      {
+        "word": "temporary",
+        "pos": "adj.",
+        "phonetic": "/ˈtempərəri/",
+        "meaning": "临时的",
+        "phrase": "a temporary change",
+        "example": "This is only a temporary change to the timetable.",
+        "exampleZh": "这只是课表的一次临时变更。"
+      },
+      {
+        "word": "notify",
+        "pos": "v.",
+        "phonetic": "/ˈnəʊtɪfaɪ/",
+        "meaning": "通知",
+        "phrase": "notify somebody of",
+        "example": "Please notify students of the change.",
+        "exampleZh": "请通知学生这一变更。"
+      }
+    ],
+    "title": "听力衔接专项：确认变更后的最终安排",
+    "grammarTip": "抓住but、instead、now后的更正信息。将“原安排”和“最终安排”分开记录；will后用动词原形，正在进行的被动语态是is/are being done。不因为进入10月就自动增加题量。",
+    "words": [
+      {
+        "word": "announcement",
+        "phonetic": "/əˈnaʊnsmənt/",
+        "meaning": "n. 通知；公告",
+        "phrase": "read the announcement",
+        "example": "Read the announcement before choosing a room.",
+        "exampleZh": "选择教室前先阅读通知。"
+      },
+      {
+        "word": "reserve",
+        "phonetic": "/rɪˈzɜːv/",
+        "meaning": "预订；保留",
+        "phrase": "reserve a room",
+        "example": "We need to reserve a room for the session.",
+        "exampleZh": "我们需要为这场活动预订教室。"
+      },
+      {
+        "word": "cancel",
+        "phonetic": "/ˈkænsəl/",
+        "meaning": "取消",
+        "phrase": "cancel a booking",
+        "example": "Please cancel your booking if you cannot attend.",
+        "exampleZh": "如果不能参加，请取消预订。"
+      },
+      {
+        "word": "postpone",
+        "phonetic": "/pəˈspəʊn/",
+        "meaning": "推迟",
+        "phrase": "postpone the meeting",
+        "example": "They decided to postpone the meeting until Friday.",
+        "exampleZh": "他们决定把会议推迟到星期五。"
+      },
+      {
+        "word": "appointment",
+        "phonetic": "/əˈpɔɪntmənt/",
+        "meaning": "预约；约定",
+        "phrase": "make an appointment",
+        "example": "I made an appointment with the adviser.",
+        "exampleZh": "我和指导老师约好了时间。"
+      },
+      {
+        "word": "remind",
+        "phonetic": "/rɪˈmaɪnd/",
+        "meaning": "提醒",
+        "phrase": "remind somebody to do",
+        "example": "Please remind me to check the latest message.",
+        "exampleZh": "请提醒我查看最新消息。"
+      },
+      {
+        "word": "original",
+        "phonetic": "/əˈrɪdʒənəl/",
+        "meaning": "原来的；最初的",
+        "phrase": "the original plan",
+        "example": "The original plan included a morning session.",
+        "exampleZh": "原计划包括一场上午的活动。"
+      },
+      {
+        "word": "final",
+        "phonetic": "/ˈfaɪnəl/",
+        "meaning": "最终的",
+        "phrase": "the final decision",
+        "example": "We will send the final decision by email.",
+        "exampleZh": "我们将通过电子邮件发送最终决定。"
+      },
+      {
+        "word": "arrangement",
+        "phonetic": "/əˈreɪndʒmənt/",
+        "meaning": "n. 安排",
+        "phrase": "confirm the arrangement",
+        "example": "Please confirm the new arrangement with the office.",
+        "exampleZh": "请向办公室确认新的安排。"
+      },
+      {
+        "word": "permission",
+        "phonetic": "/pəˈmɪʃən/",
+        "meaning": "许可；允许",
+        "phrase": "ask for permission",
+        "example": "Ask for permission before changing the schedule.",
+        "exampleZh": "更改日程前应先征求许可。"
+      },
+      {
+        "word": "reminder",
+        "phonetic": "/rɪˈmaɪndə/",
+        "meaning": "n. 提醒；提示",
+        "phrase": "send a reminder",
+        "example": "The office sent a reminder about the new time.",
+        "exampleZh": "办公室发来了一条有关新时间的提醒。"
+      },
+      {
+        "word": "otherwise",
+        "phonetic": "/ˈʌðəwaɪz/",
+        "meaning": "否则",
+        "phrase": "otherwise you may miss it",
+        "example": "Check the room number; otherwise you may miss the class.",
+        "exampleZh": "核对教室号码，否则你可能错过这节课。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "Room twelve ___ repaired at the moment.",
+        "promptZh": "十二号教室此刻正在维修。",
+        "options": [
+          "is being",
+          "has being",
+          "are being",
+          "being"
+        ],
+        "optionsZh": [
+          "单数正在被",
+          "错误结构",
+          "复数正在被",
+          "缺少限定动词"
+        ],
+        "answer": 0,
+        "explanation": "主语Room twelve单数，正在被维修用is being repaired。",
+        "tag": "passive"
+      },
+      {
+        "prompt": "The session will ___ at three instead of two.",
+        "promptZh": "这场活动将改在三点而不是两点开始。",
+        "options": [
+          "begins",
+          "began",
+          "beginning",
+          "begin"
+        ],
+        "optionsZh": [
+          "第三人称单数",
+          "过去式",
+          "动名词",
+          "原形"
+        ],
+        "answer": 3,
+        "explanation": "will后接动词原形begin。",
+        "tag": "modal"
+      },
+      {
+        "prompt": "Students who cannot attend ___ asked to contact the office.",
+        "promptZh": "不能参加的学生被要求联系办公室。",
+        "options": [
+          "is",
+          "are",
+          "be",
+          "has"
+        ],
+        "optionsZh": [
+          "单数现在时",
+          "复数现在时",
+          "原形",
+          "拥有"
+        ],
+        "answer": 1,
+        "explanation": "主句主语Students为复数，who从句不改变主句数；被动结构are asked。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "Please remind me ___ the room number.",
+        "promptZh": "请提醒我核对教室号码。",
+        "options": [
+          "checking",
+          "checked",
+          "to check",
+          "checks"
+        ],
+        "optionsZh": [
+          "动名词",
+          "过去式",
+          "不定式",
+          "第三人称单数"
+        ],
+        "answer": 2,
+        "explanation": "remind somebody to do something是固定结构。",
+        "tag": "verb-pattern"
+      },
+      {
+        "prompt": "The new time is ___ than the original time.",
+        "promptZh": "新时间比原定时间更晚。",
+        "options": [
+          "later",
+          "latest",
+          "late",
+          "lately"
+        ],
+        "optionsZh": [
+          "更晚",
+          "最晚",
+          "晚的",
+          "最近"
+        ],
+        "answer": 0,
+        "explanation": "than提示比较，使用比较级later；lately意为最近。",
+        "tag": "comparison"
+      },
+      {
+        "prompt": "Confirm the location, ___ you may go to the wrong building.",
+        "promptZh": "确认地点，否则你可能走错楼。",
+        "options": [
+          "although",
+          "because",
+          "unless",
+          "otherwise"
+        ],
+        "optionsZh": [
+          "尽管",
+          "因为",
+          "除非",
+          "否则"
+        ],
+        "answer": 3,
+        "explanation": "otherwise连接前面的建议和不照做可能产生的后果。",
+        "tag": "connector"
+      }
+    ],
+    "reading": {
+      "title": "Read the Update, Not Just the Invitation",
+      "titleZh": "不仅要读邀请，还要读更新通知",
+      "passage": "A student signed up for a photography workshop after reading an invitation on a club page. The invitation listed a morning session in the art building and asked everyone to bring a camera. Two days before the workshop, the club sent an update. Repairs had made the original room unavailable, so the session would take place in the library that afternoon. Students could borrow cameras there.\n\nThe student noticed the familiar workshop title and closed the message without reading further. On the day, she arrived at the art building early and found a locked door. After calling a friend, she checked the update and changed her plan.\n\nLater, the club made its messages clearer by placing changes at the top. It also kept the original invitation online, but added a link to the latest information. Clear communication requires effort from both sides: organizers should make important changes easy to notice, while readers should check whether their earlier understanding is still correct.",
+      "passageZh": "一名学生看了社团网页上的邀请后，报名参加摄影工作坊。邀请上写着活动上午在艺术楼举行，并要求每人带相机。活动前两天，社团发来了更新通知。维修导致原教室无法使用，因此活动改到当天下午在图书馆举行。学生可以在那里借相机。\n\n这名学生注意到熟悉的活动标题，没有继续往下读就关掉了消息。活动当天，她早早来到艺术楼，却发现门锁着。给朋友打电话后，她查看了更新通知，改变了计划。\n\n后来，社团把变更放在消息开头，使通知更加清楚。它也保留了网上的原邀请，但添加了通向最新信息的链接。清楚的沟通需要双方努力：组织者应让重要变更容易被发现，读者也应检查自己先前的理解是否仍然正确。",
+      "level": "四级衔接专项 · 原创模拟",
+      "topic": "最终信息与沟通责任",
+      "questions": [
+        {
+          "prompt": "Why did the workshop move to the library?",
+          "promptZh": "工作坊为什么改到图书馆？",
+          "options": [
+            "More cameras were sold there",
+            "The original room was unavailable because of repairs",
+            "The art building was too far away",
+            "The club had cancelled the whole event"
+          ],
+          "optionsZh": [
+            "那里出售更多相机",
+            "原教室因维修无法使用",
+            "艺术楼太远",
+            "社团取消了整个活动"
+          ],
+          "answer": 1,
+          "explanation": "第一段说明维修使原教室无法使用，这才是更换地点的原因。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Why did the student go to the wrong building?",
+          "promptZh": "这名学生为什么走错楼？",
+          "options": [
+            "Her friend gave her a false address",
+            "She had lost access to the club page",
+            "She did not read beyond the familiar title",
+            "The update had no title"
+          ],
+          "optionsZh": [
+            "朋友提供了假地址",
+            "她无法访问社团网页",
+            "她看到熟悉标题后没有继续阅读",
+            "更新通知没有标题"
+          ],
+          "answer": 2,
+          "explanation": "第二段说她看到熟悉的标题就关掉消息，没有读具体变更。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What did the club do to improve its messages?",
+          "promptZh": "社团怎样改进通知？",
+          "options": [
+            "It put important changes at the top",
+            "It stopped sending updates",
+            "It removed every workshop title",
+            "It required all students to buy cameras"
+          ],
+          "optionsZh": [
+            "把重要变更放在开头",
+            "停止发送更新",
+            "删除所有工作坊标题",
+            "要求所有学生购买相机"
+          ],
+          "answer": 0,
+          "explanation": "第三段首句指出把changes放在top。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What does the writer suggest about clear communication?",
+          "promptZh": "作者对清楚沟通的看法是什么？",
+          "options": [
+            "Only the reader is responsible",
+            "Old information should never be kept",
+            "A familiar title proves the details are unchanged",
+            "Both organizers and readers need to make an effort"
+          ],
+          "optionsZh": [
+            "只有读者负责任",
+            "旧信息绝不能保留",
+            "熟悉标题证明细节没有变",
+            "组织者和读者都需要努力"
+          ],
+          "answer": 3,
+          "explanation": "末句明确提到effort from both sides，并分别解释双方的责任。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "An Updated Interview Practice Session",
+      "titleZh": "面试练习课的变更通知",
+      "passage": "This message is for students attending the interview practice session. The session was planned for two on Friday, but it will now begin at three. Room twelve is being repaired, so please go to Room sixteen in the same building. Bring a short description of one project you have completed. You do not need to print your whole application. If the new time is unsuitable, email the office by noon tomorrow to request another session.",
+      "passageZh": "这条通知面向参加面试练习课的学生。原定练习课在星期五两点开始，但现在将改为三点开始。十二号教室正在维修，所以请前往同一栋楼的十六号教室。请带上一份你已完成项目的简短介绍。你不需要打印整份申请材料。如果新时间不合适，请在明天中午前发邮件给办公室，申请参加另一场练习。",
+      "dictation": [
+        "but it will now begin at three.",
+        "so please go to Room sixteen in the same building."
+      ],
+      "dictationZh": [
+        "但现在将改为三点开始。",
+        "所以请前往同一栋楼的十六号教室。"
+      ],
+      "level": "四级衔接专项短听力 · 合成朗读",
+      "tip": "先看问题再盲听，用两列记“原定/现在”。不要把先听到的时间、教室号码直接当答案；听写仍覆盖全文。",
+      "questions": [
+        {
+          "prompt": "When will the session begin now?",
+          "promptZh": "练习课现在几点开始？",
+          "options": [
+            "At two on Friday",
+            "At noon tomorrow",
+            "At three on Friday",
+            "At three tomorrow morning"
+          ],
+          "optionsZh": [
+            "星期五两点",
+            "明天中午",
+            "星期五三点",
+            "明天上午三点"
+          ],
+          "answer": 2,
+          "explanation": "but it will now begin at three更正了原先星期五两点的安排，日期仍为星期五。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "What should students bring?",
+          "promptZh": "学生应带什么？",
+          "options": [
+            "A printed copy of their whole application",
+            "A short description of a completed project",
+            "A list of every available room",
+            "Written permission to use Room twelve"
+          ],
+          "optionsZh": [
+            "整份申请的打印件",
+            "已完成项目的简短介绍",
+            "所有可用教室的名单",
+            "使用十二号教室的书面许可"
+          ],
+          "answer": 1,
+          "explanation": "原文明确要求项目简短介绍，并否定需要打印整份申请。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "Students who check the latest notice before leaving are less likely to miss an important change.",
+      "main": "Students are less likely to miss an important change.",
+      "translation": "出发前查看最新通知的学生不太可能漏掉重要变更。",
+      "core": [
+        "students",
+        "are",
+        "less",
+        "likely",
+        "miss",
+        "change"
+      ],
+      "keywords": [
+        "学生",
+        "出发前",
+        "最新通知",
+        "不太可能",
+        "重要变更"
+      ],
+      "structure": "who check the latest notice before leaving修饰Students；主句谓语部分为are less likely to miss。",
+      "mainZh": "学生不太可能漏掉重要变更。",
+      "level": "四级衔接专项句法",
+      "topic": "修饰语与主句谓语",
+      "grammar": [
+        "check属于who引导的定语从句。",
+        "before leaving作时间说明；主句形容词likely前需要are。"
+      ],
+      "examTip": "删去who修饰部分后，检验剩余主句是否仍有完整主谓结构。"
+    },
+    "trans": [
+      {
+        "source": "会议已推迟到星期五，请确认新的时间。",
+        "answer": "The meeting has been postponed until Friday. Please confirm the new time.",
+        "keywords": [
+          "meeting",
+          "has been postponed",
+          "friday",
+          "confirm the new time"
+        ],
+        "grammar": "会议被推迟，使用has been postponed；until Friday说明推迟到何时。",
+        "acceptedAnswers": [
+          "The meeting has been postponed until Friday. Please confirm the new time.",
+          "The meeting has been postponed to Friday. Please confirm the new time."
+        ],
+        "level": "四级衔接表达",
+        "topic": "安排变更",
+        "chunks": [
+          "be postponed until Friday",
+          "confirm the new time"
+        ],
+        "alternative": "The meeting has been postponed to Friday. Please confirm the new time."
+      },
+      {
+        "source": "如果新时间不合适，请联系办公室。",
+        "answer": "If the new time is unsuitable, please contact the office.",
+        "keywords": [
+          "if",
+          "new time",
+          "is unsuitable",
+          "contact the office"
+        ],
+        "grammar": "形容词unsuitable前不能漏掉is；if从句用一般现在时，主句为祈使句。",
+        "acceptedAnswers": [
+          "If the new time is unsuitable, please contact the office.",
+          "Please contact the office if the new time does not suit you."
+        ],
+        "level": "四级衔接表达",
+        "topic": "请求调整",
+        "chunks": [
+          "the new time is unsuitable",
+          "contact the office"
+        ],
+        "alternative": "Please contact the office if the new time does not suit you."
+      }
+    ]
+  },
+  "2026-10-03": {
+    "title": "团队合作：明确分工，认真听取不同意见",
+    "grammarTip": "先找主句主语和谓语，再把who从句作为修饰部分括起来。描述合作方式时区分形容词与副词：a respectful discussion，但listen respectfully。听说练习先说清对方的理由，再表达自己的建议，不把沉默当成同意。",
+    "words": [
+      {
+        "word": "cooperation",
+        "pos": "n.",
+        "phonetic": "/kəʊˌɒpəˈreɪʃən/",
+        "meaning": "合作；协作",
+        "phrase": "close cooperation",
+        "example": "The project requires close cooperation between two teams.",
+        "exampleZh": "这个项目需要两个团队密切合作。"
+      },
+      {
+        "word": "teammate",
+        "pos": "n.",
+        "phonetic": "/ˈtiːmmeɪt/",
+        "meaning": "队友；团队成员",
+        "phrase": "listen to a teammate",
+        "example": "Listen to your teammate before offering advice.",
+        "exampleZh": "提出建议前先听听队友的想法。"
+      },
+      {
+        "word": "assign",
+        "pos": "v.",
+        "phonetic": "/əˈsaɪn/",
+        "meaning": "分配；指派",
+        "phrase": "assign a task",
+        "example": "The leader will assign a clear task to each member.",
+        "exampleZh": "负责人将给每名成员分配一项明确的任务。"
+      },
+      {
+        "word": "division",
+        "pos": "n.",
+        "phonetic": "/dɪˈvɪʒən/",
+        "meaning": "分配；划分；分工",
+        "phrase": "a fair division of work",
+        "example": "A fair division of work considers each member's available time.",
+        "exampleZh": "公平的分工会考虑每位成员的可用时间。"
+      },
+      {
+        "word": "feedback",
+        "pos": "n.",
+        "phonetic": "/ˈfiːdbæk/",
+        "meaning": "反馈；反馈意见",
+        "phrase": "receive useful feedback",
+        "example": "The team received useful feedback after its first presentation.",
+        "exampleZh": "第一次展示后，团队收到了有用的反馈。"
+      },
+      {
+        "word": "workload",
+        "pos": "n.",
+        "phonetic": "/ˈwɜːkləʊd/",
+        "meaning": "工作量；任务量",
+        "phrase": "a heavy workload",
+        "example": "A heavy workload can make it difficult to check details.",
+        "exampleZh": "繁重的工作量会让人难以核对细节。"
+      },
+      {
+        "word": "concern",
+        "pos": "n.; v.",
+        "phonetic": "/kənˈsɜːn/",
+        "meaning": "担忧；使担忧；涉及",
+        "phrase": "raise a concern",
+        "example": "She raised a concern about the cost of printing.",
+        "exampleZh": "她提出了对印刷成本的担忧。"
+      },
+      {
+        "word": "disagreement",
+        "pos": "n.",
+        "phonetic": "/ˌdɪsəˈɡriːmənt/",
+        "meaning": "分歧；不同意见",
+        "phrase": "a reasonable disagreement",
+        "example": "A disagreement can help a team notice a problem.",
+        "exampleZh": "不同意见可以帮助团队发现问题。"
+      },
+      {
+        "word": "perspective",
+        "pos": "n.",
+        "phonetic": "/pəˈspektɪv/",
+        "meaning": "看法；角度",
+        "phrase": "from another perspective",
+        "example": "Try to consider the plan from another perspective.",
+        "exampleZh": "试着从另一个角度考虑这个计划。"
+      },
+      {
+        "word": "proposal",
+        "pos": "n.",
+        "phonetic": "/prəˈpəʊzəl/",
+        "meaning": "建议；提案",
+        "phrase": "discuss a proposal",
+        "example": "The group discussed a proposal for a shorter presentation.",
+        "exampleZh": "小组讨论了一项缩短展示时间的建议。"
+      },
+      {
+        "word": "compromise",
+        "pos": "n.; v.",
+        "phonetic": "/ˈkɒmprəmaɪz/",
+        "meaning": "折中方案；妥协",
+        "phrase": "reach a compromise",
+        "example": "They reached a compromise after explaining their needs.",
+        "exampleZh": "说明各自的需要后，他们达成了折中方案。"
+      },
+      {
+        "word": "resolve",
+        "pos": "v.",
+        "phonetic": "/rɪˈzɒlv/",
+        "meaning": "解决；化解",
+        "phrase": "resolve a disagreement",
+        "example": "Listening to each other can help members resolve a disagreement.",
+        "exampleZh": "相互倾听可以帮助成员化解分歧。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "coordinate",
+        "pos": "v.",
+        "phonetic": "/kəʊˈɔːdɪneɪt/",
+        "meaning": "协调；统筹安排",
+        "phrase": "coordinate the work",
+        "example": "One member will coordinate the work of the whole team.",
+        "exampleZh": "一名成员将负责协调全队的工作。"
+      },
+      {
+        "word": "negotiate",
+        "pos": "v.",
+        "phonetic": "/nɪˈɡəʊʃieɪt/",
+        "meaning": "协商；谈判",
+        "phrase": "negotiate a deadline",
+        "example": "The team negotiated a new deadline with the teacher.",
+        "exampleZh": "团队与老师协商了新的截止日期。"
+      },
+      {
+        "word": "commitment",
+        "pos": "n.",
+        "phonetic": "/kəˈmɪtmənt/",
+        "meaning": "承诺；投入",
+        "phrase": "keep a commitment",
+        "example": "If you make a commitment to the team, try to keep it.",
+        "exampleZh": "如果你向团队作了承诺，就应努力兑现。"
+      },
+      {
+        "word": "distribute",
+        "pos": "v.",
+        "phonetic": "/dɪˈstrɪbjuːt/",
+        "meaning": "分配；分发",
+        "phrase": "distribute the work",
+        "example": "Distribute the work according to the time each person has.",
+        "exampleZh": "根据每个人的可用时间分配工作。"
+      },
+      {
+        "word": "respectful",
+        "pos": "adj.",
+        "phonetic": "/rɪˈspektfəl/",
+        "meaning": "表示尊重的；有礼貌的",
+        "phrase": "a respectful reply",
+        "example": "A respectful reply can disagree with an idea without attacking a person.",
+        "exampleZh": "礼貌的回应可以反对观点，而不攻击提出观点的人。"
+      },
+      {
+        "word": "reasonable",
+        "pos": "adj.",
+        "phonetic": "/ˈriːzənəbəl/",
+        "meaning": "合理的；有道理的",
+        "phrase": "a reasonable request",
+        "example": "Asking for more information is a reasonable request.",
+        "exampleZh": "要求提供更多信息是合理的请求。"
+      },
+      {
+        "word": "equally",
+        "pos": "adv.",
+        "phonetic": "/ˈiːkwəli/",
+        "meaning": "平均地；同样地",
+        "phrase": "divide something equally",
+        "example": "The team divided the printing cost equally.",
+        "exampleZh": "团队平均分担了印刷费用。"
+      },
+      {
+        "word": "honestly",
+        "pos": "adv.",
+        "phonetic": "/ˈɒnɪstli/",
+        "meaning": "诚实地；坦率地",
+        "phrase": "speak honestly",
+        "example": "Speak honestly about how much work you can finish.",
+        "exampleZh": "坦率说明自己能完成多少工作。"
+      },
+      {
+        "word": "joint",
+        "pos": "adj.",
+        "phonetic": "/dʒɔɪnt/",
+        "meaning": "共同的；联合的",
+        "phrase": "a joint decision",
+        "example": "The final plan was a joint decision by all four members.",
+        "exampleZh": "最终方案是四名成员共同作出的决定。"
+      },
+      {
+        "word": "flexible",
+        "pos": "adj.",
+        "phonetic": "/ˈfleksəbəl/",
+        "meaning": "灵活的；可调整的",
+        "phrase": "a flexible approach",
+        "example": "A flexible approach allows the team to adjust its plan.",
+        "exampleZh": "灵活的方法使团队能够调整计划。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "Members who offer different opinions ___ important to the team.",
+        "promptZh": "提出不同意见的成员对团队很重要。",
+        "options": [
+          "is",
+          "are",
+          "has",
+          "being"
+        ],
+        "optionsZh": [
+          "单数现在时",
+          "复数现在时",
+          "拥有",
+          "缺少限定动词"
+        ],
+        "answer": 1,
+        "explanation": "主句主语Members是复数；who从句修饰Members。形容词important前用are，不能把从句中的offer当作主句谓语。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "Each member should ___ one reason for the proposal.",
+        "promptZh": "每位成员都应该为这项建议提供一个理由。",
+        "options": [
+          "gives",
+          "gave",
+          "giving",
+          "give"
+        ],
+        "optionsZh": [
+          "第三人称单数",
+          "过去式",
+          "动名词",
+          "原形"
+        ],
+        "answer": 3,
+        "explanation": "should是情态动词，后接动词原形give。",
+        "tag": "modal"
+      },
+      {
+        "prompt": "They divided the printing cost ___ among the four members.",
+        "promptZh": "他们在四名成员之间平均分担印刷费用。",
+        "options": [
+          "equally",
+          "equal",
+          "equality",
+          "equals"
+        ],
+        "optionsZh": [
+          "平均地（副词）",
+          "相等的（形容词）",
+          "平等（名词）",
+          "等于（动词第三人称单数）"
+        ],
+        "answer": 0,
+        "explanation": "修饰动作divided需要副词equally；equal通常作形容词或动词。",
+        "tag": "word-form"
+      },
+      {
+        "prompt": "Please avoid ___ while a teammate is speaking.",
+        "promptZh": "队友说话时，请避免打断。",
+        "options": [
+          "interrupt",
+          "interrupted",
+          "interrupting",
+          "interrupts"
+        ],
+        "optionsZh": [
+          "原形",
+          "过去式",
+          "动名词",
+          "第三人称单数"
+        ],
+        "answer": 2,
+        "explanation": "avoid后接动名词，因此用interrupting。",
+        "tag": "verb-pattern"
+      },
+      {
+        "prompt": "The team ___ ready to start; it needs more information.",
+        "promptZh": "团队还没有准备好开始；它需要更多信息。",
+        "options": [
+          "doesn't",
+          "isn't",
+          "don't",
+          "not"
+        ],
+        "optionsZh": [
+          "不（第三人称单数助动词）",
+          "不是／尚未处于某状态",
+          "不（非第三人称单数助动词）",
+          "否定词，不能单独充当谓语"
+        ],
+        "answer": 1,
+        "explanation": "ready是形容词，这里需要be动词的否定形式isn't；句中的it也表明team按单数整体处理。",
+        "tag": "be-verb"
+      },
+      {
+        "prompt": "We cannot choose a plan until everyone ___ had a chance to speak.",
+        "promptZh": "直到每个人都有机会发言，我们才能选定方案。",
+        "options": [
+          "have",
+          "are",
+          "were",
+          "has"
+        ],
+        "optionsZh": [
+          "复数／非第三人称单数助动词",
+          "复数现在时be",
+          "复数过去时be",
+          "第三人称单数助动词"
+        ],
+        "answer": 3,
+        "explanation": "everyone按单数处理，has had构成现在完成时，表示人人获得发言机会之后再决定。",
+        "tag": "subject-verb"
+      }
+    ],
+    "reading": {
+      "title": "A Fair Share Is Not Always the Same Task",
+      "titleZh": "公平分工不等于人人做同一件事",
+      "passage": "Four students were preparing a poster for a campus exhibition. At their first meeting, they divided the work into four equal parts. Each person would collect facts, write a paragraph, and design part of the poster. The plan looked fair, but one member had little experience with design, while another could only work at the weekend.\n\nDuring a second meeting, a quiet student explained why she had missed the first deadline. Instead of treating her silence as agreement, the others asked about her available time. They then assigned different roles. One checked the facts, another prepared pictures, and two wrote and edited the text. Everyone still checked the final poster together.\n\nThe group learned that fair cooperation requires more than identical tasks. Members need to discuss their skills and limits openly. Listening to a concern early can prevent a larger problem later, without removing anyone's responsibility.",
+      "passageZh": "四名学生正在为校园展览制作一张海报。在第一次会议上，他们把工作平均分成了四份。每个人都要搜集事实、写一段文字并设计海报的一部分。这个计划看似公平，但一名成员缺少设计经验，另一名成员只能在周末工作。\n\n第二次会议上，一名平时安静的学生解释了自己为什么没能在第一个截止日期前完成工作。其他人没有再把她的沉默当作同意，而是询问了她的可用时间。随后，他们分配了不同的职责：一人核对事实，一人准备图片，两人撰写并编辑文字。每个人仍然一起检查了最终的海报。\n\n小组认识到，公平合作需要的不只是相同的任务。成员需要坦率讨论自己的技能和限制。尽早听取担忧可以避免日后出现更大的问题，同时不免除任何人的责任。",
+      "level": "四级衔接专项 · 原创模拟",
+      "topic": "分工公平与推断作者观点",
+      "questions": [
+        {
+          "prompt": "Why did the first plan cause difficulty?",
+          "promptZh": "最初的计划为什么造成困难？",
+          "options": [
+            "It ignored differences in members' skills and available time.",
+            "It allowed only one person to check the facts.",
+            "It required students to buy expensive cameras.",
+            "It gave the group no deadline."
+          ],
+          "optionsZh": [
+            "它忽视了成员技能和可用时间的差异。",
+            "它只允许一个人核对事实。",
+            "它要求学生购买昂贵相机。",
+            "它没有给小组设定截止日期。"
+          ],
+          "answer": 0,
+          "explanation": "第一段指出一名成员缺乏设计经验，另一名只能周末工作。相同任务没有考虑这些差异。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What did the members do after hearing the quiet student's explanation?",
+          "promptZh": "听了那名安静学生的解释后，成员们做了什么？",
+          "options": [
+            "They removed her from the group.",
+            "They cancelled the exhibition.",
+            "They asked about her time and assigned different roles.",
+            "They asked her to complete every part alone."
+          ],
+          "optionsZh": [
+            "把她移出小组。",
+            "取消展览。",
+            "询问她的时间并分配不同职责。",
+            "要求她独自完成所有部分。"
+          ],
+          "answer": 2,
+          "explanation": "第二段明确提到询问available time，随后assigned different roles。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Which task was still shared by everyone?",
+          "promptZh": "哪项任务仍由所有成员共同承担？",
+          "options": [
+            "Designing a separate poster",
+            "Checking the final poster",
+            "Writing the same paragraph",
+            "Preparing all the pictures"
+          ],
+          "optionsZh": [
+            "各自设计一张海报",
+            "检查最终海报",
+            "撰写同一段文字",
+            "准备全部图片"
+          ],
+          "answer": 1,
+          "explanation": "第二段末句说明Everyone still checked the final poster together。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What does the writer suggest about fair cooperation?",
+          "promptZh": "作者认为公平合作意味着什么？",
+          "options": [
+            "Quiet members should receive no tasks.",
+            "Every member must always do identical work.",
+            "Personal limits should be discussed only after failure.",
+            "Different roles can be fair when needs and responsibilities are clear."
+          ],
+          "optionsZh": [
+            "安静的成员不应承担任务。",
+            "每位成员必须始终做完全相同的工作。",
+            "个人限制只能在失败后讨论。",
+            "需要和责任明确时，不同分工也可以是公平的。"
+          ],
+          "answer": 3,
+          "explanation": "全文支持在考虑技能和时间差异的同时保留共同责任，公平不等于任务完全相同。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "Sharing the Work for a Campus Survey",
+      "titleZh": "为校园调查进行分工",
+      "passage": "Before we start our campus survey, let's agree on our roles. Two members will ask the questions, and one will write down the answers. The fourth member should check that nobody is counted twice. Please do not interrupt a person who is still answering. If you disagree with a teammate's suggestion, explain your reason calmly. We will compare our notes after twenty interviews. That will help us find problems before we collect the rest of the information.",
+      "passageZh": "开始校园调查前，我们先商定各自的职责。两名成员负责提问，一名成员记录回答。第四名成员应检查，确保没有人被重复计数。受访者仍在回答时，请不要打断。如果不同意队友的建议，请平静地说明理由。完成二十次访谈后，我们会对照笔记。这有助于我们在收集剩余信息前发现问题。",
+      "dictation": [
+        "The fourth member should check that nobody is counted twice.",
+        "We will compare our notes after twenty interviews."
+      ],
+      "dictationZh": [
+        "第四名成员应检查，确保没有人被重复计数。",
+        "完成二十次访谈后，我们会对照笔记。"
+      ],
+      "level": "四级衔接专项短听力 · 合成朗读",
+      "tip": "盲听时按“提问／记录／核对”分别记职责；不要把二十次访谈误听成二十分钟。对照文本后做三组影子跟读，再用自己的话说明团队怎样减少调查错误。",
+      "questions": [
+        {
+          "prompt": "What is the fourth member responsible for?",
+          "promptZh": "第四名成员负责什么？",
+          "options": [
+            "Writing every survey question",
+            "Preventing the same person from being counted twice",
+            "Choosing the interview location",
+            "Ending the survey after twenty minutes"
+          ],
+          "optionsZh": [
+            "编写每一道调查问题",
+            "避免同一个人被重复计数",
+            "选择访谈地点",
+            "二十分钟后结束调查"
+          ],
+          "answer": 1,
+          "explanation": "听力明确说第四名成员检查nobody is counted twice，即防止重复计数。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "Why will the team compare notes after twenty interviews?",
+          "promptZh": "为什么团队要在二十次访谈后对照笔记？",
+          "options": [
+            "To select a new team leader",
+            "To prove that every suggestion was correct",
+            "To avoid collecting any more information",
+            "To find problems before continuing the survey"
+          ],
+          "optionsZh": [
+            "选出新负责人",
+            "证明每条建议都正确",
+            "不再收集任何信息",
+            "在继续调查前发现问题"
+          ],
+          "answer": 3,
+          "explanation": "末句直接说明，这样可以在收集剩余信息前发现问题。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "Team members who explain their concerns clearly are more likely to reach an agreement that everyone understands.",
+      "main": "Team members are more likely to reach an agreement.",
+      "translation": "清楚说明自己担忧的团队成员，更有可能达成人人都理解的共识。",
+      "core": [
+        "team",
+        "members",
+        "are",
+        "likely",
+        "reach",
+        "agreement"
+      ],
+      "keywords": [
+        "团队成员",
+        "担忧",
+        "清楚",
+        "更有可能",
+        "共识",
+        "理解"
+      ],
+      "structure": "主句主干为Team members are more likely to reach an agreement。who explain their concerns clearly修饰Team members；that everyone understands修饰agreement。",
+      "mainZh": "团队成员更有可能达成共识。",
+      "level": "四级衔接句法",
+      "topic": "两个定语从句与主句谓语",
+      "grammar": [
+        "explain属于who引导的定语从句，不是主句谓语；主句需要are。",
+        "that在第二个定语从句中作understands的宾语，everyone是该从句的主语。",
+        "clearly是副词，修饰explain；likely在此是形容词，结构为be likely to do。"
+      ],
+      "examTip": "先圈出are，再括起两个定语从句；检查主句和每个从句各自的主谓关系。"
+    },
+    "trans": [
+      {
+        "source": "在分配任务之前，我们应该讨论每个人可以投入多少时间。",
+        "answer": "Before assigning tasks, we should discuss how much time each person can spend.",
+        "keywords": [
+          "before",
+          "assigning tasks",
+          "should discuss",
+          "how much time",
+          "each person"
+        ],
+        "grammar": "before后接动名词assigning；how much time each person can spend是discuss的宾语从句，使用陈述语序。",
+        "acceptedAnswers": [
+          "Before assigning tasks, we should discuss how much time each person can spend.",
+          "We should discuss how much time each person has before we assign the tasks."
+        ],
+        "level": "四级衔接表达",
+        "topic": "合理分工",
+        "chunks": [
+          "before assigning tasks",
+          "discuss how much time each person can spend"
+        ],
+        "alternative": "We should discuss how much time each person has before we assign the tasks."
+      },
+      {
+        "source": "认真听取不同意见并不意味着你必须同意每一项建议。",
+        "answer": "Listening carefully to different opinions does not mean that you must agree with every suggestion.",
+        "keywords": [
+          "listening",
+          "carefully",
+          "different opinions",
+          "does not mean",
+          "agree with"
+        ],
+        "grammar": "动名词短语Listening carefully to different opinions作主语，谓语用单数does；agree with表示同意某种观点或建议。",
+        "acceptedAnswers": [
+          "Listening carefully to different opinions does not mean that you must agree with every suggestion.",
+          "Listening carefully to different views does not mean you have to accept every suggestion."
+        ],
+        "level": "四级衔接表达",
+        "topic": "倾听与独立判断",
+        "chunks": [
+          "listen carefully to different opinions",
+          "does not mean that",
+          "agree with every suggestion"
+        ],
+        "alternative": "Listening carefully to different views does not mean you have to accept every suggestion."
       }
     ]
   }
