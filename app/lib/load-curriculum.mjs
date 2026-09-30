@@ -17,6 +17,11 @@ export function loadCurriculum(){
   if(!extensiveReadings||typeof extensiveReadings!=='object'||Array.isArray(extensiveReadings))throw new Error('Invalid extensive reading collection');
   for(const [date,lesson] of Object.entries(datedLessons)){
     if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||!lesson.reading?.passage||!lesson.listening?.passage||!lesson.sent||lesson.trans?.length!==2||lesson.grammar?.length!==6||!Array.isArray(lesson.words))throw new Error('Invalid dated lesson: '+date);
+    const weekly=(Math.round((Date.parse(date)-Date.parse(RECOVERY.start))/864e5)+1)%7===0;
+    if(date>='2026-09-29'&&!weekly&&lesson.words.length<22){
+      const extra=lesson.additionalWords;
+      if(!Array.isArray(extra)||extra.length!==10||new Set(extra.map(w=>w.word)).size!==10||extra.some(w=>['word','phonetic','meaning','phrase','example','exampleZh'].some(k=>!String(w?.[k]||'').trim())))throw new Error('Missing ten additional vocabulary entries: '+date);
+    }
   }
   const addDay=(date,n)=>new Date(Date.parse(date+'T00:00:00Z')+n*864e5).toISOString().slice(0,10);
   const attachExtensive=(lesson,date)=>{

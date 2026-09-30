@@ -11,6 +11,110 @@ import { prepareStandalone } from './generate-standalone.mjs';
 import { parseWordPartsOfSpeech, wordPartsOfSpeech, wordPartOfSpeechLabel } from '../lib/study-engine.mjs';
 import { ARTICLE_CONTEXT_SENSES, articleTokenContext, articleContextSense, conciseWordMeaning } from '../lib/study-engine.mjs';
 import {createWordSearch,normalizeSearchWord} from '../lib/word-search.mjs';
+import {makeWordRound,reconcileDailyWordRound} from '../lib/study-engine.mjs';
+
+test('22 new words precede reviews in cards and both dictation modes, with stable old signatures',()=>{
+  const oldCurriculum=clone(CURRICULUM);
+  for(const l of Object.values(oldCurriculum.datedLessons))delete l.additionalWords;
+  const L=buildRecoveryLesson(DATA,CURRICULUM,'2026-09-29'),old=buildRecoveryLesson(DATA,oldCurriculum,'2026-09-29');
+  assert.equal(L.nw.length,22);assert.equal(L.rev.length,18);assert.equal(L.all.length,40);
+  assert.equal(L.contentSignature,old.contentSignature);
+  assert.deepEqual(L.all.slice(0,22),L.nw);
+  const round=makeWordRound(L.all,[],()=>0.3,L.nw),fresh=new Set(L.nw.map(w=>w.word));
+  assert.equal(new Set(round.order.map(w=>w.word)).size,40);
+  assert.ok(round.order.slice(0,22).every(w=>fresh.has(w.word)));
+  for(const audio of [true,false]){
+    const rows=round.order.filter(w=>w.audio===audio);
+    assert.equal(rows.length,20);assert.ok(rows.slice(0,11).every(w=>fresh.has(w.word)));
+    assert.ok(rows.slice(11).every(w=>!fresh.has(w.word)));
+  }
+  const weekly=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-01');
+  assert.equal(weekly.nw.length,0);assert.equal(weekly.rev.length,20);
+  const next=buildRecoveryLesson(DATA,CURRICULUM,'2026-09-30');
+  assert.ok(next.rev.some(w=>L.nw.some(n=>n.word===w.word)),'D1 uses the real previous pack');
+});
+
+test('a completed 30-word course gains ten words without resetting any first grades or other drafts',()=>{
+  const date='2026-09-29',fresh=buildRecoveryLesson(DATA,CURRICULUM,date),old=clone(fresh);
+  old.nw=old.sourceWords;old.all=[...old.rev,...old.nw];old.quizWords=old.all;delete old.vocabularyPlanVersion;
+  const key=old.id+'|'+old.contentSignature,round=makeWordRound(old.all,[],()=>0.4);
+  round.done=true;round.i=29;round.phase='correct';round.input=round.order[29].word;round.finishedAt='2026-09-29T01:00:00Z';
+  const attempts=Object.fromEntries(old.quizWords.map((w,i)=>['word:'+key+':'+i,{group:'word',correct:true}]));
+  attempts['reading:'+key+':0']={group:'reading',correct:false};
+  const p={...blankProgress(),lessonSnapshot:old,attempts,wordTotal:30,wordCorrect:30,readingTotal:1,completed:['words','reading'],notes:'保留难点',wordPractice:{version:2,courseKey:key,daily:round,retry:null,history:[],mistakes:[]},draft:{lessonId:old.id,courseKey:key,contentSignature:old.contentSignature,ws:round,ls:{input:'unfinished listening'},ps:{answers:{0:1},trans:{0:{input:'unfinished translation'}}}}};
+  let rt=runtime({[RECOVERY_STORAGE_KEY]:JSON.stringify({[date]:p})});rt.api.setDate(date);rt.api.renderWords(rt.api.lesson());
+  assert.equal(rt.api.state().ws.i,30);assert.equal(rt.api.state().ws.order.length,40);assert.equal(rt.api.state().ws.done,false);
+  assert.equal(rt.api.progress().wordTotal,30);assert.equal(rt.api.progress().readingTotal,1);assert.equal(rt.api.progress().notes,p.notes);
+  assert.equal(rt.api.state().ls.input,'unfinished listening');assert.equal(rt.api.state().ps.trans[0].input,'unfinished translation');
+  assert.deepEqual(clone(rt.api.progress().attempts),attempts);assert.equal(rt.api.progress().snapshotArchive.length,0);
+  assert.ok(rt.api.progress().completed.includes('reading'));assert.ok(!rt.api.progress().completed.includes('words'));
+  for(const [i,w] of old.quizWords.entries())assert.ok(rt.api.firstWordAttempt(rt.api.progress(),rt.api.lesson(),w.word));
+  const before=JSON.stringify(rt.api.state().ws);
+  rt=runtime(Object.fromEntries(rt.saved));rt.api.setDate(date);rt.api.renderWords(rt.api.lesson());
+  assert.equal(JSON.stringify(rt.api.state().ws),before);
+  for(let i=0;i<10;i++){
+    const s=rt.api.state().ws,d=s.order[s.i];rt.element('wordInput').oninput({target:{value:d.word}});
+    if(d.audio)rt.element('meaningInput').oninput({target:{value:d.meaning}});
+    rt.element('checkWord').onclick();rt.element('nextWord').onclick();
+  }
+  assert.equal(rt.api.progress().wordTotal,40);assert.equal(rt.api.progress().wordCorrect,40);
+  assert.deepEqual(clone(rt.api.progress().attempts['reading:'+key+':0']),attempts['reading:'+key+':0']);
+});
+
+test('vocabulary expansion rejects duplicates and future authors cannot shift old filler words',()=>{
+  const date='2026-09-30',before=buildRecoveryLesson(DATA,CURRICULUM,date),broken=clone(CURRICULUM);
+  broken.datedLessons[date].additionalWords[0]=clone(broken.datedLessons[date].words[0]);
+  assert.throws(()=>buildRecoveryLesson(DATA,broken,date),/22 distinct/);
+  const future=clone(CURRICULUM),word=DATA.WORDS.find(w=>!CURRICULUM.words.some(x=>x.word===w.word));
+  future.words.push(word);future.datedLessons['2026-10-10']={...future.datedLessons[date],words:[word]};
+  assert.equal(buildRecoveryLesson(DATA,future,date).contentSignature,before.contentSignature);
+});
+
+test('overdue mistakes rotate within a fixed review capacity without excluding scheduled old words',()=>{
+  const first=buildRecoveryLesson(DATA,CURRICULUM,'2026-09-30'),second=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-01');
+  const candidates=CURRICULUM.words.filter(w=>![...first.nw,...second.nw].some(x=>x.word===w.word)).slice(0,14);
+  const p={...blankProgress(),wordErrors:candidates.map(w=>w.word)},history={'2026-09-28':p};
+  const a=buildRecoveryLesson(DATA,CURRICULUM,'2026-09-30',history),b=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-01',history);
+  assert.equal(a.rev.length,18);assert.equal(b.rev.length,20);
+  assert.equal(a.priorityErrors.length,6);assert.equal(b.priorityErrors.length,6);
+  assert.notDeepEqual(a.priorityErrors,b.priorityErrors);
+  assert.ok(a.rev.filter(w=>!a.priorityErrors.includes(w.word)).length>=12);
+});
+
+test('expansion pins in-flight spelling and error feedback while reordering only unanswered words',()=>{
+  const L=buildRecoveryLesson(DATA,CURRICULUM,'2026-09-29'),oldWords=[...L.rev,...L.sourceWords];
+  for(const phase of ['try','hint','answer','correct']){
+    const round=makeWordRound(oldWords,[],()=>0.2);round.i=4;round.input='unfinished';round.meaningInput='草稿';round.phase=phase;round.hadError=true;
+    round.results[round.order[0].word]={correct:false};
+    const before=JSON.stringify(round),next=reconcileDailyWordRound(L,round,()=>0.3);
+    assert.equal(JSON.stringify(round),before);assert.equal(next.order.length,40);
+    assert.deepEqual(next.order.slice(0,5),round.order.slice(0,5));
+    assert.equal(next.input,'unfinished');assert.equal(next.phase,phase);assert.deepEqual(next.results,round.results);
+    const pending=next.order.slice(5),flags=pending.map(w=>L.nw.some(n=>n.word===w.word));
+    assert.equal(flags.slice(flags.indexOf(false)).includes(true),false);
+    assert.equal(reconcileDailyWordRound(L,next),next);
+  }
+});
+
+test('study cards play on a card click without hijacking translation controls or dictation',()=>{
+  const rt=runtime({},true);rt.api.setDate('2026-09-30');rt.api.setTab('plan');rt.api.render();
+  const markup=rt.element('app').innerHTML,L=rt.api.lesson();
+  assert.equal((markup.match(/data-study-word=/g)||[]).length,40);
+  assert.ok(markup.includes('data-study-word="'+L.nw[0].word+'"'));
+  assert.ok(markup.includes('aria-label="播放 '+L.nw[0].word+'"'));
+  const before=JSON.stringify([...rt.saved]),card={dataset:{studyWord:L.nw[0].word}};
+  rt.api.bindStudyWordCard(card);
+  card.onclick({target:{closest:()=>null}});
+  assert.equal(rt.spoken.length,1);assert.equal(rt.spoken[0].text,L.nw[0].word);
+  for(const tag of ['button','summary','details','a','input'])card.onclick({target:{closest:selector=>selector.split(',').includes(tag)?{}:null}});
+  assert.equal(rt.spoken.length,1,'nested playback and translation controls do not bubble into another reading');
+  rt.window.getSelection=()=>({toString:()=>L.nw[0].word});card.onclick({target:{closest:()=>null}});
+  assert.equal(rt.spoken.length,1,'selecting text for lookup is not a playback request');
+  assert.equal(JSON.stringify([...rt.saved]),before,'listening to a study word does not change grades or drafts');
+  for(const tab of ['words','listening','practice','extensive']){
+    rt.api.setTab(tab);rt.api.render();assert.doesNotMatch(rt.element('app').innerHTML,/data-study-word=/);
+  }
+});
 
 test('offline dictionary supports real families, exact senses and irregular verb forms',()=>{
   const data=JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname,'../content/word-search.json'),'utf8'));
@@ -277,17 +381,17 @@ test('every rolling seven-day window through September is complete and fully dis
   const curriculum=CURRICULUM;
   const dated=Object.values(curriculum.datedLessons),datedWords=dated.flatMap(x=>x.words);
   const extensive=Object.values(curriculum.extensiveReadings);
-  assert.equal(extensive.length,34);assert.equal(new Set(extensive.map(x=>x.date)).size,34);assert.equal(new Set(extensive.map(x=>x.text)).size,34);
+  assert.ok(extensive.length>=34);assert.equal(new Set(extensive.map(x=>x.date)).size,extensive.length);assert.equal(new Set(extensive.map(x=>x.text)).size,extensive.length);
   assert.ok(extensive.some(x=>x.sourceType==='public-domain adaptation'));assert.ok(extensive.some(x=>x.sourceType==='original news-style'));
-  assert.equal(dated.length,20);assert.equal(new Set(datedWords.map(w=>w.word)).size,datedWords.length);
+  assert.ok(dated.length>=20);assert.equal(new Set(datedWords.map(w=>w.word)).size,datedWords.length);
   assert.equal(new Set(dated.map(x=>x.title)).size,dated.length);
   assert.equal(new Set(dated.map(x=>x.reading.passage)).size,dated.length);
   assert.equal(new Set(dated.map(x=>x.listening.passage)).size,dated.length);
   for(let day=11;day<=30;day++){
     const date=`2026-09-${String(day).padStart(2,'0')}`,L=buildRecoveryLesson(DATA,curriculum,date);
     assert.equal(L.unprepared,undefined);assert.equal(L.freshMaterial,true);
-    assert.equal(L.nw.length,[17,24].includes(day)?0:12);
-    assert.equal(L.rev.length,L.weekly?20:18);assert.equal(L.quizWords.length,L.weekly?20:30);assert.equal(L.grammar.length,6);
+    assert.equal(L.nw.length,[17,24].includes(day)?0:day>=29?22:12);
+    assert.equal(L.rev.length,L.weekly?20:18);assert.equal(L.quizWords.length,L.weekly?20:day>=29?40:30);assert.equal(L.grammar.length,6);
     assert.equal(L.reading.questions.length,4);assert.equal(L.listening.questions.length,2);
     assertFullDictation(L,date);assert.equal(L.sent.length,1);assert.equal(L.trans.length,2);assert.equal(L.tasks.length,7);
     assert.ok(L.extensive.text&&L.extensive.textZh);assert.equal(L.extensive.questions.length,2);assert.equal(L.extensive.keyPhrases.length,3);
@@ -497,6 +601,7 @@ function runtime(initial={},browserMode=false){
   let code=[...html.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)].map(x=>x[1]).join('\n');
   const marker='reset();render();setInterval';assert.ok(code.includes(marker));
   code=code.replace(marker,'globalThis.studyTest={findSearchWord,runWordSearch,openWordSearch,closeWordSearch,lesson,progress,rawProgress,courseKey,record,save,reset,render,renderWords,renderListening,renderPractice,renderExtensive,renderRecords,persistDraft,speak,pauseSpeech,resumeSpeech,stopSpeech,seven,checkLocalRelease,firstWordAttempt,makeWordRound,restoreDailyWordRound,todayMistakeWords,articleEntry,articleText,articlePairs,parallelArticle,toggleArticleTranslation,lookupPosition,lookupPanelHtml,openArticleWord,closeArticleWord,enrolArticleWord,saveUserVocab,userVocabulary:()=>userVocab,state:()=>({ws,ls,ps,er,rate,selected,today,articleLookup,wordPractice}),setDate:k=>{selected=k;reset()},setTab:k=>{tab=k}};reset();render();setInterval');
+  code=code.replace('globalThis.studyTest={','globalThis.studyTest={bindStudyWordCard,');
   vm.runInContext(code,context);
   return {api:context.studyTest,saved,element,spoken,audioEvents,window,events,session,beacons,reloads:()=>reloadCount,advanceTime:iso=>{now=Date.parse(iso);timers.forEach(fn=>fn())}};
 }
@@ -781,7 +886,7 @@ test('bilingual articles use complete authored segments or matching paragraphs w
   const {api}=runtime();const clean=s=>s.replace(/\s+/g,' ').trim();
   for(const L of [...CURRICULUM.lessons,...Object.values(CURRICULUM.datedLessons)]){
     for(const [en,zh,source,authored,count] of [
-      [L.reading.passage,L.reading.passageZh,'reading',[],1],
+      [L.reading.passage,L.reading.passageZh,'reading',[],L.reading.passage.split(/\n\s*\n/).filter(Boolean).length],
       [L.extensive.text,L.extensive.textZh,'extensive',[],3],
       [L.listening.passage,L.listening.passageZh,'listening',fullDictationItems(L.listening),fullDictationItems(L.listening).length]
     ]){
