@@ -8832,6 +8832,26 @@
     ]
   },
   "2026-10-03": {
+    "vocabularyReplacements": {
+      "feedback": {
+        "word": "response",
+        "phonetic": "/rɪˈspɒns/",
+        "pos": "n.",
+        "meaning": "回答；反应",
+        "phrase": "a clear response",
+        "example": "The team leader gave a clear response to our proposal.",
+        "exampleZh": "组长对我们的提议作出了明确的回应。"
+      },
+      "flexible": {
+        "word": "adaptable",
+        "phonetic": "/əˈdæptəbəl/",
+        "pos": "adj.",
+        "meaning": "能适应的；适应性强的",
+        "phrase": "an adaptable team",
+        "example": "An adaptable team can adjust when a plan changes.",
+        "exampleZh": "适应性强的团队能在计划变化时作出调整。"
+      }
+    },
     "title": "团队合作：明确分工，认真听取不同意见",
     "grammarTip": "先找主句主语和谓语，再把who从句作为修饰部分括起来。描述合作方式时区分形容词与副词：a respectful discussion，但listen respectfully。听说练习先说清对方的理由，再表达自己的建议，不把沉默当成同意。",
     "words": [
@@ -9376,6 +9396,26 @@
     ]
   },
   "2026-10-04": {
+    "vocabularyReplacements": {
+      "condition": {
+        "word": "warranty",
+        "phonetic": "/ˈwɒrənti/",
+        "pos": "n.",
+        "meaning": "保修承诺；保修期",
+        "phrase": "a one-year warranty",
+        "example": "The lamp comes with a one-year warranty.",
+        "exampleZh": "这盏灯有一年的保修期。"
+      },
+      "practical": {
+        "word": "economical",
+        "phonetic": "/ˌiːkəˈnɒmɪkəl/",
+        "pos": "adj.",
+        "meaning": "节约的；经济实惠的",
+        "phrase": "an economical choice",
+        "example": "Repairing the old lamp may be the more economical choice.",
+        "exampleZh": "修理旧灯可能是更经济实惠的选择。"
+      }
+    },
     "title": "理性消费：比较价格、用途与总成本",
     "grammarTip": "先把who或that引导的定语从句括起来，再检查主句是否有完整谓语。形容词suitable前需要be动词；worth后接动名词。比较消费方案时分清purchase price与total cost，并用if从句表达条件。本课情境与练习均为原创模拟，不是真题或新闻。",
     "words": [
@@ -9921,6 +9961,116 @@
     ]
   },
   "2026-10-05": {
+    "vocabularyReplacements": {
+      "measure": {
+        "word": "thermometer",
+        "phonetic": "/θəˈmɒmɪtə/",
+        "pos": "n.",
+        "meaning": "温度计；体温计",
+        "phrase": "read a thermometer",
+        "example": "We used a thermometer to check the air temperature.",
+        "exampleZh": "我们用温度计测量空气温度。"
+      },
+      "compare": {
+        "word": "comparison",
+        "phonetic": "/kəmˈpærɪsən/",
+        "pos": "n.",
+        "meaning": "比较；对照",
+        "phrase": "a fair comparison",
+        "example": "A fair comparison requires similar weather conditions.",
+        "exampleZh": "公平的比较需要相似的天气条件。"
+      },
+      "evidence": {
+        "word": "proof",
+        "phonetic": "/pruːf/",
+        "pos": "n.",
+        "meaning": "证据；证明",
+        "phrase": "proof of a claim",
+        "example": "One cool afternoon is not proof of a change in climate.",
+        "exampleZh": "一个凉爽的下午并不能证明气候发生了变化。"
+      },
+      "effect": {
+        "word": "climate",
+        "phonetic": "/ˈklaɪmət/",
+        "pos": "n.",
+        "meaning": "气候；环境氛围",
+        "phrase": "a warm climate",
+        "example": "Climate describes weather patterns over many years.",
+        "exampleZh": "气候描述的是多年来的天气规律。"
+      },
+      "average": {
+        "word": "calculation",
+        "phonetic": "/ˌkælkjəˈleɪʃən/",
+        "pos": "n.",
+        "meaning": "计算；计算结果",
+        "phrase": "check a calculation",
+        "example": "Check your calculation before adding the result to the chart.",
+        "exampleZh": "把结果填入图表之前，先检查计算是否正确。"
+      },
+      "reduce": {
+        "word": "minimize",
+        "phonetic": "/ˈmɪnɪmaɪz/",
+        "pos": "v.",
+        "meaning": "使减少到最低程度",
+        "phrase": "minimize errors",
+        "example": "Following the same steps helps us minimize errors.",
+        "exampleZh": "遵循相同的步骤有助于我们尽量减少错误。"
+      },
+      "resident": {
+        "word": "citizen",
+        "phonetic": "/ˈsɪtɪzən/",
+        "pos": "n.",
+        "meaning": "公民；市民",
+        "phrase": "local citizens",
+        "example": "Local citizens suggested planting more trees near the bus stop.",
+        "exampleZh": "当地市民建议在公交车站附近多种些树。"
+      },
+      "method": {
+        "word": "technique",
+        "phonetic": "/tekˈniːk/",
+        "pos": "n.",
+        "meaning": "技巧；技术方法",
+        "phrase": "a measuring technique",
+        "example": "The students practised the measuring technique before collecting data.",
+        "exampleZh": "学生们在收集数据之前练习了测量方法。"
+      },
+      "factor": {
+        "word": "variable",
+        "phonetic": "/ˈveəriəbəl/",
+        "pos": "n.; adj.",
+        "meaning": "n. 变量；adj. 可变的",
+        "phrase": "control a variable",
+        "example": "The amount of sunlight is a variable in this investigation.",
+        "exampleZh": "日照量是这项调查中的一个变量。"
+      },
+      "reliable": {
+        "word": "dependable",
+        "phonetic": "/dɪˈpendəbəl/",
+        "pos": "adj.",
+        "meaning": "可靠的；可信赖的",
+        "phrase": "dependable information",
+        "example": "Careful records help us provide dependable information.",
+        "exampleZh": "认真记录有助于我们提供可靠的信息。"
+      },
+      "support": {
+        "word": "shelter",
+        "phonetic": "/ˈʃeltə/",
+        "pos": "n.; v.",
+        "meaning": "n. 遮蔽处；庇护；v. 遮蔽；保护",
+        "phrase": "shelter from the sun",
+        "example": "Trees can provide shelter from the sun for people waiting outside.",
+        "exampleZh": "树木可以为在室外等候的人们遮阳。"
+      },
+      "limit": {
+        "word": "restriction",
+        "phonetic": "/rɪˈstrɪkʃən/",
+        "pos": "n.",
+        "meaning": "限制；约束",
+        "phrase": "a restriction on access",
+        "example": "A restriction on access meant we could not collect data in the garden.",
+        "exampleZh": "由于进入受到限制，我们无法在花园里收集数据。"
+      }
+    },
     "title": "城市树荫：读懂温度与证据",
     "grammarTip": "先括起who或that引导的定语从句，再检查主句是否有谓语。reliable是形容词，前面需要be动词；compare A with B表示把两者比较。阅读数据时区分地表温度与空气温度，留意may和only对结论的限制。本课为原创虚构教学情境，不是真题或真实新闻。",
     "words": [
