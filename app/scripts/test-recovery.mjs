@@ -11,7 +11,7 @@ import { prepareStandalone } from './generate-standalone.mjs';
 import { parseWordPartsOfSpeech, wordPartsOfSpeech, wordPartOfSpeechLabel } from '../lib/study-engine.mjs';
 import { ARTICLE_CONTEXT_SENSES, articleTokenContext, articleContextSense, conciseWordMeaning } from '../lib/study-engine.mjs';
 import {createWordSearch,normalizeSearchWord} from '../lib/word-search.mjs';
-import {makeWordRound,reconcileDailyWordRound} from '../lib/study-engine.mjs';
+import {makeWordRound,reconcileDailyWordRound,sameDayRecall,wordLearningSchedule} from '../lib/study-engine.mjs';
 
 test('22 new words precede reviews in cards and both dictation modes, with stable old signatures',()=>{
   const oldCurriculum=clone(CURRICULUM);
@@ -29,7 +29,7 @@ test('22 new words precede reviews in cards and both dictation modes, with stabl
     assert.ok(rows.slice(11).every(w=>!fresh.has(w.word)));
   }
   const weekly=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-01');
-  assert.equal(weekly.nw.length,0);assert.equal(weekly.rev.length,20);
+  assert.equal(weekly.nw.length,0);assert.equal(weekly.rev.length,40);
   const next=buildRecoveryLesson(DATA,CURRICULUM,'2026-09-30');
   assert.ok(next.rev.some(w=>L.nw.some(n=>n.word===w.word)),'D1 uses the real previous pack');
 });
@@ -75,7 +75,7 @@ test('overdue mistakes rotate within a fixed review capacity without excluding s
   const candidates=CURRICULUM.words.filter(w=>![...first.nw,...second.nw].some(x=>x.word===w.word)).slice(0,14);
   const p={...blankProgress(),wordErrors:candidates.map(w=>w.word)},history={'2026-09-28':p};
   const a=buildRecoveryLesson(DATA,CURRICULUM,'2026-09-30',history),b=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-01',history);
-  assert.equal(a.rev.length,18);assert.equal(b.rev.length,20);
+  assert.equal(a.rev.length,18);assert.equal(b.rev.length,40);
   assert.equal(a.priorityErrors.length,6);assert.equal(b.priorityErrors.length,6);
   assert.notDeepEqual(a.priorityErrors,b.priorityErrors);
   assert.ok(a.rev.filter(w=>!a.priorityErrors.includes(w.word)).length>=12);
@@ -114,6 +114,115 @@ test('study cards play on a card click without hijacking translation controls or
   for(const tab of ['words','listening','practice','extensive']){
     rt.api.setTab(tab);rt.api.render();assert.doesNotMatch(rt.element('app').innerHTML,/data-study-word=/);
   }
+});
+
+test('article words enter next-day learning then only their own spaced review dates',()=>{
+  let vocab=addUserVocabulary(blankUserVocabulary(),{word:'feedback',meaning:'反馈',phonetic:'/ˈfiːdbæk/'},'2026-09-30','reading');
+  const first=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-01',{},vocab);
+  assert.equal(first.all.length,40);assert.equal(first.nw[0].word,'feedback');assert.equal(first.rev.length,39);
+  const round=makeWordRound(first.all,[],()=>0.3,first.nw);
+  assert.equal(round.order.filter(w=>w.audio).length,20);assert.equal(round.order.filter(w=>!w.audio).length,20);
+  vocab=reviewUserVocabulary(vocab,'feedback','2026-10-01',false);
+  assert.equal(vocab.items.feedback.dueDate,'2026-10-02');assert.equal(vocab.items.feedback.lastResult,false);
+  const history={'2026-10-01':{...blankProgress(),lessonSnapshot:first,wordErrors:['feedback'],attempts:{'word:test:0':{group:'word',targetWord:'feedback',correct:false}}}};
+  const second=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-02',history,vocab);
+  assert.equal(second.nw.length,22);assert.equal(second.all.length,40);assert.ok(second.rev.some(w=>w.word==='feedback'));
+  vocab=reviewUserVocabulary(vocab,'feedback','2026-10-02',true);
+  assert.equal(vocab.items.feedback.dueDate,'2026-10-04');
+  assert.ok(!buildRecoveryLesson(DATA,CURRICULUM,'2026-10-03',history,vocab).all.some(w=>w.word==='feedback'),'authored and fallback words must not bypass the personal due date');
+  vocab=reviewUserVocabulary(vocab,'feedback','2026-10-04',true);assert.equal(vocab.items.feedback.dueDate,'2026-10-07');
+  vocab=reviewUserVocabulary(vocab,'feedback','2026-10-07',true);assert.equal(vocab.items.feedback.dueDate,'2026-10-15');
+});
+
+test('personal first learning occupies fixed new slots and displaced authored words are deferred',()=>{
+  let vocab=blankUserVocabulary();
+  for(const word of ['zebra','falcon','otter'])vocab=addUserVocabulary(vocab,{word,meaning:'测试词义'},'2026-10-01');
+  const first=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-02',{},vocab);
+  assert.ok(first.nw.slice(0,3).every(w=>['zebra','falcon','otter'].includes(w.word)));
+  assert.equal(first.nw.length,22);assert.equal(first.rev.length,18);assert.equal(first.deferredNewWords.length,3);
+  for(const word of ['zebra','falcon','otter'])vocab=reviewUserVocabulary(vocab,word,'2026-10-02',true);
+  const attempts=Object.fromEntries(first.nw.map(w=>['word:'+w.word,{group:'word',targetWord:w.word,correct:true,at:'2026-10-02T08:00:00Z'}]));
+  const next=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-03',{'2026-10-02':{...blankProgress(),lessonSnapshot:first,attempts}},vocab);
+  assert.ok(first.deferredNewWords.every(w=>next.nw.some(n=>n.word===w.word)));assert.equal(next.all.length,40);
+  let crowded=blankUserVocabulary();
+  for(let i=0;i<25;i++)crowded=addUserVocabulary(crowded,{word:'test'+String.fromCharCode(97+i),meaning:'测试'},'2026-10-01');
+  const capped=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-02',{},crowded);
+  assert.equal(capped.nw.length,22);assert.equal(capped.rev.length,18);assert.equal(capped.deferredNewWords.length,22);
+  assert.equal(Object.values(crowded.items).filter(w=>!w.lastReviewed).length,25,'planning must not mark words as studied');
+});
+
+test('weekly expansion appends to completed twenty words without touching grades, retry or drafts',()=>{
+  const date='2026-10-01',fresh=buildRecoveryLesson(DATA,CURRICULUM,date),old=clone(fresh);
+  old.nw=[];old.rev=old.rev.slice(0,20);old.all=old.rev;old.quizWords=old.rev;old.vocabularyPlanVersion=2;
+  const key=old.id+'|'+old.contentSignature,round=makeWordRound(old.all,[],()=>0.3,[]);
+  round.done=true;round.i=19;round.phase='correct';round.finishedAt='2026-10-01T01:00:00Z';
+  const retry=makeWordRound(old.all.slice(0,1),[],()=>0.4),attempts=Object.fromEntries(old.quizWords.map((w,i)=>['word:'+key+':'+i,{group:'word',correct:true}]));
+  const p={...blankProgress(),lessonSnapshot:old,attempts,wordTotal:20,wordCorrect:20,completed:['words','reading'],notes:'保留难点',wordPractice:{version:2,courseKey:key,daily:round,retry,history:[],mistakes:[]},draft:{lessonId:old.id,courseKey:key,contentSignature:old.contentSignature,ws:round,ls:{input:'unfinished listening'},ps:{trans:{0:{input:'unfinished translation'}}}}};
+  const rt=runtime({[RECOVERY_STORAGE_KEY]:JSON.stringify({[date]:p})});rt.api.setDate(date);rt.api.renderWords(rt.api.lesson());
+  assert.equal(rt.api.state().ws.order.length,40);assert.equal(rt.api.state().ws.i,20);assert.equal(rt.api.progress().wordTotal,20);
+  assert.deepEqual(clone(rt.api.progress().attempts),attempts);assert.deepEqual(clone(rt.api.state().wordPractice.retry),retry);
+  assert.equal(rt.api.state().ls.input,'unfinished listening');assert.equal(rt.api.state().ps.trans[0].input,'unfinished translation');
+  assert.equal(rt.api.progress().notes,p.notes);assert.ok(rt.api.progress().completed.includes('reading'));
+});
+
+test('same-day recall is due after an hour and in the evening without altering first grades',()=>{
+  const lesson=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-02'),word=lesson.nw[0].word,p={...blankProgress(),wordPractice:{daily:{results:{[word]:{correct:true,at:'2026-10-02T08:00:00Z'}}}}};
+  assert.equal(sameDayRecall(lesson,p,'2026-10-02T08:59:59Z').hour.words.length,0);
+  assert.equal(sameDayRecall(lesson,p,'2026-10-02T09:00:00Z').hour.words.length,1);
+  assert.equal(sameDayRecall(lesson,p,'2026-10-02T11:59:59Z').evening.words.length,0);
+  assert.equal(sameDayRecall(lesson,p,'2026-10-02T12:00:00Z').evening.words.length,1);
+  p.memoryCheckins={hour:{[word]:'2026-10-02T09:00:00Z'}};
+  assert.equal(sameDayRecall(lesson,p,'2026-10-02T12:00:00Z').hour.words.length,0);
+  assert.equal(sameDayRecall(lesson,p,'2026-10-03T12:00:00Z').evening.words.length,0);
+  assert.equal(p.wordTotal,0);assert.equal(p.wordCorrect,0);assert.deepEqual(p.attempts,{});
+  const repeated={...blankProgress(),attempts:{'word:first':{group:'word',targetWord:word,correct:true,at:'2026-10-02T08:00:00Z'}},wordPractice:{daily:{results:{[word]:{correct:true,at:'2026-10-02T11:59:00Z'}}}}};
+  assert.equal(sameDayRecall(lesson,repeated,'2026-10-02T12:00:00Z').evening.words.length,1,'a reshuffled retry must not postpone first-study recall');
+});
+
+test('ordinary spacing uses actual learning and carries untouched new words forward',()=>{
+  const L=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-02'),word=L.nw[0].word;
+  const untouched={...blankProgress(),lessonSnapshot:L,wordPractice:{daily:makeWordRound(L.all,[],()=>0.4,L.nw)}};
+  const next=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-03',{'2026-10-02':untouched});
+  assert.deepEqual(next.nw.map(w=>w.word),L.nw.map(w=>w.word));assert.equal(next.all.length,40);
+  assert.ok(next.rev.every(w=>!L.nw.some(n=>n.word===w.word)));
+  const make=(at,correct=true)=>({...blankProgress(),lessonSnapshot:L,attempts:{'word:first:18':{group:'word',targetWord:word,at,correct}}});
+  const history={'2026-10-03':make('2026-10-02T08:00:00Z')};
+  assert.equal(wordLearningSchedule(history,'2026-10-03').get(word).dueDate,'2026-10-03','preview submissions use actual China date');
+  history['2026-10-02']=make('2026-10-02T09:00:00Z');
+  assert.equal(wordLearningSchedule(history,'2026-10-03').get(word).stage,0,'one day cannot advance twice');
+  history['2026-10-04']=make('2026-10-03T08:00:00Z');
+  assert.equal(wordLearningSchedule(history,'2026-10-04').get(word).dueDate,'2026-10-05');
+  history['2026-10-05']=make('2026-10-05T08:00:00Z');
+  assert.equal(wordLearningSchedule(history,'2026-10-06').get(word).dueDate,'2026-10-08');
+  history['2026-10-08']=make('2026-10-08T08:00:00Z');
+  assert.equal(wordLearningSchedule(history,'2026-10-09').get(word).dueDate,'2026-10-16');
+  history['2026-10-09']=make('2026-10-09T08:00:00Z',false);
+  assert.equal(wordLearningSchedule(history,'2026-10-10').get(word).dueDate,'2026-10-10');
+});
+
+test('inline recall completion saves only check-ins and retains current answer drafts',()=>{
+  const rt=runtime();rt.advanceTime('2026-10-02T08:00:00Z');rt.api.setDate('2026-10-02');rt.api.setTab('words');rt.api.renderWords(rt.api.lesson());
+  const target=rt.api.lesson().nw[0].word;rt.api.record('word','token:'+target,true,{targetWord:target});
+  rt.api.state().ws.input='unfinished current spelling';rt.api.persistDraft();
+  const attempts=JSON.stringify(rt.api.progress().attempts),draft=JSON.stringify(rt.api.progress().draft);
+  rt.advanceTime('2026-10-02T09:00:00Z');assert.match(rt.element('memoryReviewPanel').innerHTML,/1词可回顾/);
+  rt.element('memory-hour').onclick();
+  assert.ok(rt.api.progress().memoryCheckins.hour[target]);assert.equal(JSON.stringify(rt.api.progress().attempts),attempts);
+  assert.equal(JSON.stringify(rt.api.progress().draft),draft);assert.equal(rt.api.progress().wordTotal,1);
+});
+
+test('a pristine preview accepts tomorrow personal words without exceeding forty on migration',()=>{
+  const date='2026-10-03',old=buildRecoveryLesson(DATA,CURRICULUM,date),round=makeWordRound(old.all,[],()=>0.4,old.nw);
+  let vocab=addUserVocabulary(blankUserVocabulary(),{word:'zebra',meaning:'斑马'},'2026-10-02');
+  const p={...blankProgress(),lessonSnapshot:old,wordPractice:{daily:round}},fresh=buildRecoveryLesson(DATA,CURRICULUM,date,{},vocab);
+  const next=chooseDailyLesson(date,p,fresh),updated=reconcileDailyWordRound(next,round,()=>0.3);
+  assert.equal(next.nw[0].word,'zebra');assert.equal(updated.order.length,40);assert.ok(updated.order.some(w=>w.word==='zebra'));
+  const legacy=clone(old);legacy.nw=legacy.sourceWords;legacy.all=[...legacy.nw,...legacy.rev];legacy.quizWords=legacy.all;legacy.vocabularyPlanVersion=1;
+  for(let i=0;i<22;i++)vocab=addUserVocabulary(vocab,{word:'trial'+String.fromCharCode(97+i),meaning:'测试词'},'2026-10-02');
+  const work={...blankProgress(),lessonSnapshot:legacy,wordTotal:1,attempts:{'word:legacy:0':{group:'word',correct:true,targetWord:legacy.nw[0].word}}};
+  const migrated=chooseDailyLesson(date,work,buildRecoveryLesson(DATA,CURRICULUM,date,{},vocab));
+  assert.equal(migrated.all.length,40);assert.equal(migrated.nw.length,22);assert.equal(migrated.rev.length,18);
+  assert.ok(legacy.all.every(w=>migrated.all.some(n=>n.word===w.word)));
 });
 
 test('offline dictionary supports real families, exact senses and irregular verb forms',()=>{
@@ -379,7 +488,7 @@ test('a seven-day window has different reading, listening and extensive passages
 
 test('every rolling seven-day window through September is complete and fully distinct',async()=>{
   const curriculum=CURRICULUM;
-  const dated=Object.values(curriculum.datedLessons),datedWords=dated.flatMap(x=>x.words);
+  const dated=Object.entries(curriculum.datedLessons).filter(([date])=>date<'2026-10-01').map(([,L])=>L),datedWords=dated.flatMap(x=>x.words);
   const extensive=Object.values(curriculum.extensiveReadings);
   assert.ok(extensive.length>=34);assert.equal(new Set(extensive.map(x=>x.date)).size,extensive.length);assert.equal(new Set(extensive.map(x=>x.text)).size,extensive.length);
   assert.ok(extensive.some(x=>x.sourceType==='public-domain adaptation'));assert.ok(extensive.some(x=>x.sourceType==='original news-style'));
@@ -887,7 +996,7 @@ test('bilingual articles use complete authored segments or matching paragraphs w
   for(const L of [...CURRICULUM.lessons,...Object.values(CURRICULUM.datedLessons)]){
     for(const [en,zh,source,authored,count] of [
       [L.reading.passage,L.reading.passageZh,'reading',[],L.reading.passage.split(/\n\s*\n/).filter(Boolean).length],
-      [L.extensive.text,L.extensive.textZh,'extensive',[],3],
+      [L.extensive.text,L.extensive.textZh,'extensive',[],L.extensive.text.split(/\n\s*\n/).filter(Boolean).length],
       [L.listening.passage,L.listening.passageZh,'listening',fullDictationItems(L.listening),fullDictationItems(L.listening).length]
     ]){
       const pairs=api.articlePairs(en,zh,authored),markup=api.parallelArticle(en,zh,source,authored);
