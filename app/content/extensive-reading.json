@@ -2403,5 +2403,135 @@
         "explanation": "第三段明确区分目的：不是强求人人赞同每种想法，而是让有价值的理由有公平的表达和倾听机会。"
       }
     ]
+  },
+  {
+    "date": "2026-10-04",
+    "title": "An Umbrella Shelf Needs More Than Umbrellas",
+    "titleZh": "共享雨伞架需要的不只是雨伞",
+    "category": "Campus life · sharing and responsibility",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article about an imagined campus umbrella scheme; not a real or live news report. 原创报刊风格教学短文，描述虚构校园共享雨伞项目，不是真实或实时新闻。",
+    "text": "A student group placed a shelf of shared umbrellas beside the campus library entrance. Students could borrow one when unexpected rain arrived and return it the following day. The first notice simply asked users to be responsible. After a week, however, several umbrellas were missing, and two broken ones had been returned without any warning.\n\nThe group did not immediately buy more umbrellas. Instead, it asked students what had gone wrong. Some had forgotten where to return them, while others thought a different building would be equally convenient. The students added clear return instructions and a simple borrowing record. They also put a small box beside the shelf for damaged umbrellas, so the next person would not take one that could not keep them dry.\n\nDuring the next two weeks, more umbrellas came back on time. Yet the group avoided claiming that the record alone had solved the problem: there had also been fewer rainy days. Members will count both borrowing trips and late returns before deciding whether to expand the scheme. Their aim is not to collect perfect-looking records, but to make shared items useful and available. A shared object saves money only when people can actually find it and use it safely.",
+    "textZh": "一个学生小组在校园图书馆入口旁放置了一个共享雨伞架。遇到突如其来的雨，学生可以借一把伞，在第二天归还。最初的告示只是要求使用者负责任。然而一周后，几把伞不见了，还有两把损坏的伞被归还时没有任何提示。\n\n小组没有立即购买更多雨伞，而是询问学生哪里出了问题。有些人忘了应该在哪里归还，另一些人认为还到另一栋楼也同样方便。学生们增加了明确的归还说明和简单的借用记录。他们还在架子旁放了一个小箱子，用于收纳损坏的雨伞，以免下一个人拿到无法遮雨的伞。\n\n接下来的两周里，更多雨伞被按时归还。不过，小组没有宣称仅凭借用记录就解决了问题，因为这段时间雨天也更少了。成员们将同时统计借用次数和逾期归还次数，再决定是否扩大项目。他们的目标不是收集看上去完美的记录，而是让共享物品有用且可供使用。只有人们确实能找到并安全使用共享物品，它才真正有助于省钱。",
+    "listeningTip": "盲听先记问题、改动、结果三步；再听清Yet后的保留意见：雨天减少也可能影响归还情况。三个短语各跟读三遍，最后脱稿复述。",
+    "speakingPrompt": "Describe the problems with the shared umbrellas and one change that helped. What else should the group measure before expanding the scheme?",
+    "speakingPromptZh": "说明共享雨伞遇到的问题和一项有帮助的改变。扩大项目之前，小组还应统计什么？",
+    "keyPhrases": [
+      {
+        "en": "return it the following day",
+        "zh": "第二天归还它"
+      },
+      {
+        "en": "clear return instructions",
+        "zh": "明确的归还说明"
+      },
+      {
+        "en": "both borrowing trips and late returns",
+        "zh": "借用次数和逾期归还次数两者"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why did the group place a small box beside the shelf?",
+        "promptZh": "小组为什么在雨伞架旁放置小箱子？",
+        "options": [
+          "To collect money for new books.",
+          "To separate damaged umbrellas from usable ones.",
+          "To allow returns at every campus building.",
+          "To store students' personal phones."
+        ],
+        "optionsZh": [
+          "为新书筹集款项。",
+          "把损坏的雨伞与可用的雨伞分开。",
+          "允许在校园每栋楼归还雨伞。",
+          "存放学生的私人手机。"
+        ],
+        "answer": 1,
+        "explanation": "第二段说明箱子用于放置损坏的雨伞，避免下一位使用者借到不能遮雨的伞。"
+      },
+      {
+        "prompt": "Why is the group careful about judging the effect of the borrowing record?",
+        "promptZh": "小组为什么谨慎判断借用记录的效果？",
+        "options": [
+          "The library had removed the shelf.",
+          "Every student had stopped borrowing umbrellas.",
+          "The group had already expanded the scheme.",
+          "Fewer rainy days could also have affected the result."
+        ],
+        "optionsZh": [
+          "图书馆已经移走雨伞架。",
+          "所有学生都停止借伞了。",
+          "小组已经扩大了项目。",
+          "雨天减少也可能影响了结果。"
+        ],
+        "answer": 3,
+        "explanation": "第三段明确指出雨天也变少了，不能把改善全归因于记录；需要比较借用次数与逾期归还次数。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-05",
+    "title": "A Shade Map Helps a Town Ask Better Questions",
+    "titleZh": "一张树荫地图帮助小镇提出更好的问题",
+    "category": "Urban environment · tree shade and evidence",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article about an imagined town and a fictional shade survey; all local observations and events are invented for learning, not real or live news. 原创报刊风格教学短文，镇名、树荫调查及当地事件均为教学虚构，不是真实或实时新闻。",
+    "text": "Residents of the fictional town of Brookfield have produced a map showing where people can find shade on three busy walking routes. Volunteers visited each route at noon and again at three in the afternoon. Their notes included shade from buildings as well as trees. The map will help the town discuss where new trees might be useful.\n\nOne busy crossing had almost no shade at noon, while a quieter street had several mature trees. At first, a volunteer suggested giving every street the same number of new trees. Other residents pointed out that equal numbers would not necessarily meet equal needs. A street used by many older walkers might need closer attention. The group also learned that narrow pavements and underground pipes could limit planting space.\n\nThe project leader warned against treating the map as a complete measure of heat. It showed shade at selected times, not air temperature throughout the day. Nor did it show how comfortable every walker felt. The town plans to add comments from residents and ask a planting team to check possible locations.\n\nThe map has therefore become a starting point for discussion. Its value lies partly in making missing information visible. Residents can now ask which routes need help most, what can be planted safely, and how future improvements should be checked.",
+    "textZh": "虚构小镇布鲁克菲尔德的居民制作了一张地图，标明三条繁忙步行路线上的阴凉处。志愿者在中午和下午三点分别走访了每条路线。他们不仅记录树荫，也记录建筑物形成的阴影。这张地图将帮助小镇讨论哪些地方种植新树可能有用。\n\n一个繁忙的路口在中午几乎没有阴凉处，而一条较安静的街道上有几棵成熟的大树。起初，一名志愿者建议每条街种同样数量的新树。其他居民指出，数量相等未必能同样满足需求。许多年长行人使用的街道可能需要更多关注。小组还了解到，狭窄的人行道和地下管道可能限制种植空间。\n\n项目负责人提醒大家，不要把这张地图视为对高温的全面测量。它展示的是特定时刻的阴凉处，而不是全天的空气温度。它也不能说明每个行人的舒适程度。小镇计划补充居民的意见，并请种植团队检查可能的种植地点。\n\n因此，这张地图成了讨论的起点。它的价值部分在于让缺失的信息变得清楚。居民们现在可以询问：哪些路线最需要帮助，哪些树木可以安全种植，以及今后应该如何检查改善效果。",
+    "listeningTip": "首遍听地图记录了什么；第二遍抓not、nor之后的局限，并区分中午与下午三点。选取三个重点短语所在的句子，按意群暂停模仿，再跟随音频影子跟读两遍；最后不看原文复述30—60秒。",
+    "speakingPrompt": "Retell the shade-map project in 30–60 seconds. Explain one reason for planting different numbers of trees on different streets, one limit of the map, and one useful next step.",
+    "speakingPromptZh": "用30—60秒复述树荫地图项目。解释不同街道为何可能需要种不同数量的树，说明地图的一项局限，并提出一个有用的后续步骤。",
+    "keyPhrases": [
+      {
+        "en": "give every street the same number of new trees",
+        "zh": "给每条街种同样数量的新树"
+      },
+      {
+        "en": "limit planting space",
+        "zh": "限制种植空间"
+      },
+      {
+        "en": "a starting point for discussion",
+        "zh": "讨论的起点"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why might planting the same number of trees on every street be unsuitable?",
+        "promptZh": "为什么每条街种同样数量的树可能并不合适？",
+        "options": [
+          "Every street already has exactly the same shade.",
+          "Streets differ in existing shade, users and available planting space.",
+          "Older walkers never use busy streets.",
+          "Underground pipes make all tree planting impossible."
+        ],
+        "optionsZh": [
+          "每条街现有的阴凉面积已完全相同。",
+          "各条街现有树荫、使用者和可种植空间不同。",
+          "年长行人从不走繁忙的街道。",
+          "地下管道使所有植树工作都不可能进行。"
+        ],
+        "answer": 1,
+        "explanation": "第二段分别提到树荫分布、年长行人的需要及人行道和管道对种植空间的限制，说明仅按相同数量分配不能充分回应不同需求。"
+      },
+      {
+        "prompt": "What does the article suggest about the map's main value?",
+        "promptZh": "文章认为这张地图的主要价值是什么？",
+        "options": [
+          "It proves the air temperature is the same throughout the day.",
+          "It removes the need to listen to residents.",
+          "It guarantees that every possible planting location is safe.",
+          "It helps people identify gaps in information and plan further checks."
+        ],
+        "optionsZh": [
+          "它证明空气温度全天相同。",
+          "它使听取居民意见变得没有必要。",
+          "它保证每个可能的种植点都安全。",
+          "它帮助人们发现信息缺口并安排进一步检查。"
+        ],
+        "answer": 3,
+        "explanation": "末段强调地图是讨论的起点，能让缺失的信息显现。第三段提出收集居民意见和检查地点，表明地图仍需其他信息配合。"
+      }
+    ]
   }
 ]

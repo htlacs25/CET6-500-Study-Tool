@@ -452,5 +452,81 @@
       "text": "before we collect the rest of the information.",
       "zh": "在收集剩余信息之前。"
     }
+  ],
+  "2026-10-04": [
+    {
+      "text": "This is a message from Green Street Repair Shop.",
+      "zh": "这里是绿街维修店的留言。"
+    },
+    {
+      "text": "Your desk lamp will be ready on Thursday afternoon,",
+      "zh": "你的台灯将在星期四下午修好，"
+    },
+    {
+      "text": "instead of Wednesday morning.",
+      "zh": "而不是星期三上午。"
+    },
+    {
+      "text": "The replacement part arrived later than expected.",
+      "zh": "替换部件比预期到得晚。"
+    },
+    {
+      "text": "You can collect the lamp after two on Thursday.",
+      "zh": "你可以在星期四两点后领取台灯。"
+    },
+    {
+      "text": "Please bring the receipt and use the side entrance,",
+      "zh": "请带上收据，并从侧门进入，"
+    },
+    {
+      "text": "because workers are painting the front door.",
+      "zh": "因为工人正在给正门刷漆。"
+    },
+    {
+      "text": "The repair price is unchanged.",
+      "zh": "维修价格没有变化。"
+    },
+    {
+      "text": "If you cannot visit then, call us to arrange another collection time.",
+      "zh": "如果那个时间来不了，请打电话给我们另约领取时间。"
+    }
+  ],
+  "2026-10-05": [
+    {
+      "text": "Good morning, volunteers.",
+      "zh": "志愿者们，早上好。"
+    },
+    {
+      "text": "Meet beside the east gate at ten tomorrow.",
+      "zh": "明天十点在东门旁集合。"
+    },
+    {
+      "text": "Each pair will measure the surface temperature at two marked spots.",
+      "zh": "每两人一组，测量两个标记地点的地表温度。"
+    },
+    {
+      "text": "One spot is under a tree, and the other is in sunlight.",
+      "zh": "一处在树下，另一处在阳光中。"
+    },
+    {
+      "text": "Use the same device for both readings.",
+      "zh": "两次读数都使用同一台设备。"
+    },
+    {
+      "text": "Write down the time and weather each time you measure.",
+      "zh": "每次测量时，记下时间和天气。"
+    },
+    {
+      "text": "Please remember that these numbers describe the road surface, not the air.",
+      "zh": "请记住，这些数字描述的是路面，而不是空气。"
+    },
+    {
+      "text": "Only compare readings taken under similar conditions.",
+      "zh": "只比较在相似条件下取得的读数。"
+    },
+    {
+      "text": "Bring water and a hat.",
+      "zh": "请带水和帽子。"
+    }
   ]
 }

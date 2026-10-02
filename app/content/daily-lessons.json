@@ -9374,5 +9374,1096 @@
         "alternative": "Listening carefully to different views does not mean you have to accept every suggestion."
       }
     ]
+  },
+  "2026-10-04": {
+    "title": "理性消费：比较价格、用途与总成本",
+    "grammarTip": "先把who或that引导的定语从句括起来，再检查主句是否有完整谓语。形容词suitable前需要be动词；worth后接动名词。比较消费方案时分清purchase price与total cost，并用if从句表达条件。本课情境与练习均为原创模拟，不是真题或新闻。",
+    "words": [
+      {
+        "word": "purchase",
+        "phonetic": "/ˈpɜːtʃəs/",
+        "pos": "n.; v.",
+        "meaning": "购买；购买的物品",
+        "phrase": "make a purchase",
+        "example": "Compare the total cost before you make a purchase.",
+        "exampleZh": "购买前先比较总成本。"
+      },
+      {
+        "word": "refund",
+        "phonetic": "/ˈriːfʌnd/",
+        "pos": "n.",
+        "meaning": "退款；退还的款项",
+        "phrase": "ask for a refund",
+        "example": "The customer asked the shop for a refund.",
+        "exampleZh": "顾客向商店提出了退款请求。"
+      },
+      {
+        "word": "receipt",
+        "phonetic": "/rɪˈsiːt/",
+        "pos": "n.",
+        "meaning": "收据；购物小票",
+        "phrase": "keep the receipt",
+        "example": "Keep the receipt in a folder after buying the lamp.",
+        "exampleZh": "买灯后把购物小票保存在文件夹里。"
+      },
+      {
+        "word": "guarantee",
+        "phonetic": "/ˌɡærənˈtiː/",
+        "pos": "n.; v.",
+        "meaning": "保证；保修承诺；保证做到",
+        "phrase": "a one-year guarantee",
+        "example": "Read what the one-year guarantee covers before paying.",
+        "exampleZh": "付款前读清一年保修承诺涵盖哪些内容。"
+      },
+      {
+        "word": "budget",
+        "phonetic": "/ˈbʌdʒɪt/",
+        "pos": "n.",
+        "meaning": "预算；可用经费",
+        "phrase": "stay within a budget",
+        "example": "We chose a smaller desk to stay within our budget.",
+        "exampleZh": "我们选择了较小的书桌，以免超出预算。"
+      },
+      {
+        "word": "discount",
+        "phonetic": "/ˈdɪskaʊnt/",
+        "pos": "n.",
+        "meaning": "折扣；减价",
+        "phrase": "offer a discount",
+        "example": "The shop offers a discount on these chairs this week.",
+        "exampleZh": "商店本周对这些椅子提供折扣。"
+      },
+      {
+        "word": "brand",
+        "phonetic": "/brænd/",
+        "pos": "n.",
+        "meaning": "品牌",
+        "phrase": "a familiar brand",
+        "example": "A familiar brand may still sell products that do not fit your needs.",
+        "exampleZh": "熟悉的品牌也可能销售不适合你需求的产品。"
+      },
+      {
+        "word": "repair",
+        "phonetic": "/rɪˈpeə/",
+        "pos": "v.; n.",
+        "meaning": "修理；维修",
+        "phrase": "repair a lamp",
+        "example": "The shop can repair the lamp for twenty yuan.",
+        "exampleZh": "商店可以花二十元修好这盏灯。"
+      },
+      {
+        "word": "replace",
+        "phonetic": "/rɪˈpleɪs/",
+        "pos": "v.",
+        "meaning": "更换；代替",
+        "phrase": "replace a broken part",
+        "example": "We only need to replace the broken part.",
+        "exampleZh": "我们只需要更换损坏的部件。"
+      },
+      {
+        "word": "consumer",
+        "phonetic": "/kənˈsjuːmə/",
+        "pos": "n.",
+        "meaning": "消费者",
+        "phrase": "a careful consumer",
+        "example": "A careful consumer checks both price and quality.",
+        "exampleZh": "谨慎的消费者会同时检查价格和质量。"
+      },
+      {
+        "word": "afford",
+        "phonetic": "/əˈfɔːd/",
+        "pos": "v.",
+        "meaning": "买得起；负担得起",
+        "phrase": "afford to buy",
+        "example": "She cannot afford to buy a new printer this month.",
+        "exampleZh": "她这个月负担不起一台新打印机。"
+      },
+      {
+        "word": "worth",
+        "phonetic": "/wɜːθ/",
+        "pos": "adj.",
+        "meaning": "值得的；价值为……的",
+        "phrase": "be worth checking",
+        "example": "The repair cost is worth checking before you replace the lamp.",
+        "exampleZh": "换灯之前，值得先了解维修费用。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "advertisement",
+        "phonetic": "/ədˈvɜːtɪsmənt/",
+        "pos": "n.",
+        "meaning": "广告",
+        "phrase": "an online advertisement",
+        "example": "An online advertisement caught his attention.",
+        "exampleZh": "一则网上广告吸引了他的注意。"
+      },
+      {
+        "word": "faulty",
+        "phonetic": "/ˈfɔːlti/",
+        "pos": "adj.",
+        "meaning": "有故障的；有缺陷的",
+        "phrase": "a faulty switch",
+        "example": "The lamp stopped working because of a faulty switch.",
+        "exampleZh": "这盏灯因为开关故障而无法工作。"
+      },
+      {
+        "word": "suitable",
+        "phonetic": "/ˈsuːtəbl/",
+        "pos": "adj.",
+        "meaning": "合适的；适宜的",
+        "phrase": "be suitable for",
+        "example": "This narrow shelf is suitable for a small room.",
+        "exampleZh": "这个窄架子适合小房间。"
+      },
+      {
+        "word": "condition",
+        "phonetic": "/kənˈdɪʃən/",
+        "pos": "n.",
+        "meaning": "状况；条件",
+        "phrase": "in good condition",
+        "example": "The used desk is still in good condition.",
+        "exampleZh": "这张二手书桌仍然状况良好。"
+      },
+      {
+        "word": "inspect",
+        "phonetic": "/ɪnˈspekt/",
+        "pos": "v.",
+        "meaning": "检查；仔细查看",
+        "phrase": "inspect an item",
+        "example": "Inspect the item carefully before taking it home.",
+        "exampleZh": "把物品带回家前先仔细检查。"
+      },
+      {
+        "word": "rent",
+        "phonetic": "/rent/",
+        "pos": "v.; n.",
+        "meaning": "租用；出租；租金",
+        "phrase": "rent a camera",
+        "example": "We decided to rent a camera for the weekend.",
+        "exampleZh": "我们决定租一台相机周末使用。"
+      },
+      {
+        "word": "lend",
+        "phonetic": "/lend/",
+        "pos": "v.",
+        "meaning": "借出；借给",
+        "phrase": "lend something to someone",
+        "example": "My neighbour can lend a small tool kit to me.",
+        "exampleZh": "邻居可以借给我一套小工具。"
+      },
+      {
+        "word": "expense",
+        "phonetic": "/ɪkˈspens/",
+        "pos": "n.",
+        "meaning": "费用；开支",
+        "phrase": "an extra expense",
+        "example": "Special bulbs would be an extra expense.",
+        "exampleZh": "专用灯泡会是一笔额外开支。"
+      },
+      {
+        "word": "practical",
+        "phonetic": "/ˈpræktɪkl/",
+        "pos": "adj.",
+        "meaning": "实用的；切合实际的",
+        "phrase": "a practical choice",
+        "example": "A simple bag with strong handles is a practical choice.",
+        "exampleZh": "一只款式简单、提手结实的包是实用的选择。"
+      },
+      {
+        "word": "inexpensive",
+        "phonetic": "/ˌɪnɪkˈspensɪv/",
+        "pos": "adj.",
+        "meaning": "价格不高的；便宜的",
+        "phrase": "an inexpensive option",
+        "example": "Borrowing a tool can be an inexpensive option for a small job.",
+        "exampleZh": "做一项小活时，借用工具可以是成本不高的选择。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "Consumers who compare total costs ___ better prepared to choose a product.",
+        "promptZh": "比较总成本的消费者更有准备作出产品选择。",
+        "options": [
+          "is",
+          "are",
+          "has",
+          "being"
+        ],
+        "optionsZh": [
+          "单数现在时be",
+          "复数现在时be",
+          "有；第三人称单数",
+          "非限定形式，不能单独作谓语"
+        ],
+        "answer": 1,
+        "explanation": "who compare total costs修饰Consumers，compare是从句谓语。主句主语Consumers为复数，主句需要are；being不能单独构成完整谓语。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "The lamp ___ suitable for this narrow desk.",
+        "promptZh": "这盏灯适合这张窄书桌。",
+        "options": [
+          "does",
+          "has",
+          "is",
+          "do"
+        ],
+        "optionsZh": [
+          "第三人称单数助动词",
+          "有；第三人称单数",
+          "单数现在时be",
+          "非第三人称单数助动词"
+        ],
+        "answer": 2,
+        "explanation": "suitable是形容词，前面需要be动词。主语The lamp为单数，因此用is；does不能直接接形容词构成这种结构。",
+        "tag": "be-verb"
+      },
+      {
+        "prompt": "The repair price is worth ___ before you buy a new lamp.",
+        "promptZh": "购买新灯前，值得先了解维修价格。",
+        "options": [
+          "check",
+          "checked",
+          "to check",
+          "checking"
+        ],
+        "optionsZh": [
+          "动词原形",
+          "过去式或过去分词",
+          "动词不定式",
+          "动名词"
+        ],
+        "answer": 3,
+        "explanation": "be worth doing表示“值得做……”，worth后用动名词checking，不用to check。",
+        "tag": "verb-pattern"
+      },
+      {
+        "prompt": "This simple model is a ___ choice for a small room.",
+        "promptZh": "对小房间而言，这个简单款式是实用的选择。",
+        "options": [
+          "practical",
+          "practically",
+          "practice",
+          "practises"
+        ],
+        "optionsZh": [
+          "实用的（形容词）",
+          "几乎；实际上（副词）",
+          "练习（名词或动词）",
+          "练习（动词第三人称单数）"
+        ],
+        "answer": 0,
+        "explanation": "空格位于冠词a与名词choice之间，需要形容词practical修饰choice。practically是副词，不能在此直接修饰名词。",
+        "tag": "word-form"
+      },
+      {
+        "prompt": "If the shop ___ the lamp by Thursday, I will collect it that afternoon.",
+        "promptZh": "如果商店在星期四之前修好这盏灯，我会在当天下午领取。",
+        "options": [
+          "will repair",
+          "repairing",
+          "repairs",
+          "to repair"
+        ],
+        "optionsZh": [
+          "一般将来时",
+          "现在分词或动名词",
+          "一般现在时第三人称单数",
+          "动词不定式"
+        ],
+        "answer": 2,
+        "explanation": "这里if引导真实条件从句，谈未来时从句用一般现在时，主句用will collect。the shop为单数，所以用repairs。",
+        "tag": "conditional"
+      },
+      {
+        "prompt": "In “The receipt that Lin keeps shows the purchase date”, which word is the main-clause verb?",
+        "promptZh": "在“The receipt that Lin keeps shows the purchase date”中，哪个词是主句谓语动词？",
+        "options": [
+          "keeps",
+          "shows",
+          "purchase",
+          "date"
+        ],
+        "optionsZh": [
+          "保存（定语从句谓语）",
+          "显示（主句谓语）",
+          "购买（在此修饰名词date）",
+          "日期（名词）"
+        ],
+        "answer": 1,
+        "explanation": "括起that Lin keeps后，主干是The receipt shows the purchase date。keeps属于定语从句，主句谓语是shows。",
+        "tag": "main-verb"
+      }
+    ],
+    "reading": {
+      "title": "The Price Beyond the Label",
+      "titleZh": "标价之外的成本",
+      "level": "四级衔接专项 · 原创模拟（非真题、非新闻）",
+      "topic": "理性消费与总成本比较",
+      "passage": "Lin needed a desk lamp for her shared room. An advertisement offered a large discount on a familiar brand, and she almost made the purchase immediately. Before paying, however, she checked whether the lamp was suitable for her desk. It was too wide, and its special replacement bulbs were expensive.\n\nA second lamp cost fifteen yuan more, but it used ordinary bulbs and fitted the space. Lin compared the purchase price with the likely cost of bulbs over two years. She also asked how much a simple repair would cost. This helped her see that the cheaper label did not necessarily mean a lower total expense.\n\nLin chose the second lamp and kept the receipt in a folder. Her decision was based on her needs and budget, rather than the size of the discount. A careful consumer does not always buy the cheapest item. Sometimes a slightly higher price is worth paying for a product that remains practical over time.",
+      "passageZh": "林需要为自己合住的房间买一盏台灯。一则广告表示，一个她熟悉的品牌有大幅折扣，她差点立即购买。不过，付款前，她检查了这盏灯是否适合自己的书桌。灯太宽了，而且更换用的专用灯泡价格很高。\n\n第二盏灯贵十五元，但它使用普通灯泡，尺寸也适合那个空间。林把购买价格和未来两年可能花在灯泡上的费用放在一起比较。她还询问了一次简单维修要多少钱。这让她认识到，标价较低未必意味着总开支更少。\n\n林选了第二盏灯，并把购物小票放进文件夹。她的决定依据的是自己的需要和预算，而不是折扣大小。谨慎的消费者并不总是购买最便宜的物品。有时，为了得到一件长期保持实用的产品，多付一点钱是值得的。",
+      "questions": [
+        {
+          "prompt": "What attracted Lin to the first lamp at the beginning?",
+          "promptZh": "起初，第一盏灯的什么特点吸引了林？",
+          "options": [
+            "Its ordinary replacement bulbs",
+            "A large discount on a familiar brand",
+            "Its perfect size for her desk",
+            "A promise of free repairs forever"
+          ],
+          "optionsZh": [
+            "它使用普通的替换灯泡",
+            "熟悉品牌提供的大幅折扣",
+            "它的尺寸与书桌完全匹配",
+            "永远免费维修的承诺"
+          ],
+          "answer": 1,
+          "explanation": "第一段直接提到广告中熟悉品牌的大幅折扣。A属于第二盏灯；C与第一盏灯太宽相矛盾；D在文中没有出现。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Why did Lin consider the second lamp suitable?",
+          "promptZh": "林为什么认为第二盏灯合适？",
+          "options": [
+            "It had the lowest purchase price.",
+            "It needed no bulbs.",
+            "It came with a larger desk.",
+            "It fitted the space and used ordinary bulbs."
+          ],
+          "optionsZh": [
+            "它的购买价格最低。",
+            "它不需要灯泡。",
+            "它附送一张更大的书桌。",
+            "它适合那个空间，而且使用普通灯泡。"
+          ],
+          "answer": 3,
+          "explanation": "第二段首句说明第二盏灯使用普通灯泡且尺寸适合。A与贵十五元矛盾；B和C均无依据。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Which future expense did Lin explicitly compare over two years?",
+          "promptZh": "林明确比较了未来两年的哪项开支？",
+          "options": [
+            "The cost of bulbs",
+            "The rent for the room",
+            "The cost of a new desk",
+            "Delivery fees for furniture"
+          ],
+          "optionsZh": [
+            "灯泡费用",
+            "房间租金",
+            "新书桌费用",
+            "家具配送费"
+          ],
+          "answer": 0,
+          "explanation": "第二段的the likely cost of bulbs over two years明确指两年内可能花在灯泡上的费用。其余三项未被列为比较对象。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What is the main lesson of Lin's experience?",
+          "promptZh": "林的经历主要说明了什么？",
+          "options": [
+            "A familiar brand is always the best choice.",
+            "The largest discount guarantees the lowest total cost.",
+            "Needs and later expenses matter as well as the purchase price.",
+            "Consumers should always choose the most expensive product."
+          ],
+          "optionsZh": [
+            "熟悉的品牌总是最佳选择。",
+            "折扣最大就能保证总成本最低。",
+            "需要和后续开支与购买价格同样值得考虑。",
+            "消费者应始终选择最贵的产品。"
+          ],
+          "answer": 2,
+          "explanation": "全文比较用途、尺寸、灯泡费用与维修费用，支持综合判断。A、B把品牌或折扣绝对化；D把“有时多付一点值得”误解成“总选最贵”。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "A New Collection Time for a Repaired Lamp",
+      "titleZh": "修好台灯后的新领取时间",
+      "level": "四级衔接专项短听力 · 原创模拟 · 合成朗读",
+      "tip": "首遍抓“原安排→新安排”，第二遍记录星期、时刻、入口和携带物。注意instead of后的旧时间，以及unchanged所指的维修价格；本段为虚构商店通知，并非新闻或真实服务条款。",
+      "passage": "This is a message from Green Street Repair Shop. Your desk lamp will be ready on Thursday afternoon, instead of Wednesday morning. The replacement part arrived later than expected. You can collect the lamp after two on Thursday. Please bring the receipt and use the side entrance, because workers are painting the front door. The repair price is unchanged. If you cannot visit then, call us to arrange another collection time.",
+      "passageZh": "这里是绿街维修店的留言。你的台灯将在星期四下午修好，而不是星期三上午。替换部件比预期到得晚。你可以在星期四两点后领取台灯。请带上收据，并从侧门进入，因为工人正在给正门刷漆。维修价格没有变化。如果那个时间来不了，请打电话给我们另约领取时间。",
+      "dictation": [
+        "You can collect the lamp after two on Thursday.",
+        "The repair price is unchanged."
+      ],
+      "dictationZh": [
+        "你可以在星期四两点后领取台灯。",
+        "维修价格没有变化。"
+      ],
+      "questions": [
+        {
+          "prompt": "When can the customer now collect the lamp?",
+          "promptZh": "顾客现在何时可以领取台灯？",
+          "options": [
+            "On Wednesday morning",
+            "Before two on Thursday",
+            "After two on Thursday",
+            "On Friday evening"
+          ],
+          "optionsZh": [
+            "星期三上午",
+            "星期四两点前",
+            "星期四两点后",
+            "星期五晚上"
+          ],
+          "answer": 2,
+          "explanation": "新安排是after two on Thursday。星期三上午是被instead of否定的原安排；两点前与after相反；文中没有提星期五。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "Why should the customer use the side entrance?",
+          "promptZh": "为什么顾客应该从侧门进入？",
+          "options": [
+            "Workers are painting the front door.",
+            "The repair price has increased.",
+            "The receipt is kept at the side entrance.",
+            "The shop has moved to another street."
+          ],
+          "optionsZh": [
+            "工人正在给正门刷漆。",
+            "维修价格上涨了。",
+            "收据存放在侧门处。",
+            "商店搬到了另一条街。"
+          ],
+          "answer": 0,
+          "explanation": "because从句直接说明正门正在刷漆。价格unchanged，排除B；收据应由顾客带来，排除C；D没有依据。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "Consumers who compare the costs that a product may bring over time are better prepared to decide whether it is worth buying.",
+      "main": "Consumers are better prepared to decide whether it is worth buying.",
+      "translation": "比较产品长期可能带来哪些费用的消费者，更有准备判断它是否值得购买。",
+      "core": [
+        "consumers",
+        "are",
+        "prepared",
+        "decide",
+        "worth",
+        "buying"
+      ],
+      "keywords": [
+        "消费者",
+        "比较",
+        "费用",
+        "长期",
+        "判断",
+        "是否值得购买"
+      ],
+      "structure": "主句主语是Consumers，谓语结构是are better prepared to decide。who compare the costs修饰Consumers；嵌在其中的that a product may bring over time修饰costs。whether it is worth buying作decide的宾语从句。",
+      "mainZh": "消费者更有准备判断它是否值得购买。",
+      "level": "四级衔接句法",
+      "topic": "嵌套定语从句、主句谓语与whether宾语从句",
+      "grammar": [
+        "compare属于who从句，may bring属于that从句；二者都不能替代主句中的are。",
+        "that在定语从句中作bring的宾语，a product是该从句的主语；over time表示随着时间推移。",
+        "whether引导宾语从句，使用it is的陈述语序；be worth后接动名词buying。"
+      ],
+      "examTip": "先圈出主句的are，再逐层括起修饰Consumers和costs的从句，最后读出需要判断的内容。"
+    },
+    "trans": [
+      {
+        "source": "购买之前，我们应该比较价格和未来可能产生的维修费用。",
+        "answer": "Before making a purchase, we should compare prices and possible future repair costs.",
+        "keywords": [
+          "before",
+          "purchase",
+          "should compare",
+          "prices",
+          "repair costs"
+        ],
+        "grammar": "before作介词时后接动名词making；should后接动词原形compare。possible future repair costs表示未来可能产生的维修费用。",
+        "acceptedAnswers": [
+          "Before making a purchase, we should compare prices and possible future repair costs.",
+          "We should compare prices and potential future repair costs before buying a product."
+        ],
+        "level": "四级衔接表达",
+        "topic": "购买前比较总成本",
+        "chunks": [
+          "before making a purchase",
+          "compare prices",
+          "possible future repair costs"
+        ],
+        "alternative": "We should compare prices and potential future repair costs before buying a product."
+      },
+      {
+        "source": "如果这盏灯适合你的书桌，而且你买得起，它可能值得购买。",
+        "answer": "If this lamp is suitable for your desk and you can afford it, it may be worth buying.",
+        "keywords": [
+          "if",
+          "lamp",
+          "suitable for",
+          "afford",
+          "worth buying"
+        ],
+        "grammar": "if从句包含两个并列分句：this lamp is suitable和you can afford it。suitable前不能漏掉is；主句may后用be，worth后用buying。",
+        "acceptedAnswers": [
+          "If this lamp is suitable for your desk and you can afford it, it may be worth buying.",
+          "This lamp may be worth buying if it suits your desk and you can afford it."
+        ],
+        "level": "四级衔接表达",
+        "topic": "条件与购买判断",
+        "chunks": [
+          "be suitable for your desk",
+          "can afford it",
+          "may be worth buying"
+        ],
+        "alternative": "This lamp may be worth buying if it suits your desk and you can afford it."
+      }
+    ]
+  },
+  "2026-10-05": {
+    "title": "城市树荫：读懂温度与证据",
+    "grammarTip": "先括起who或that引导的定语从句，再检查主句是否有谓语。reliable是形容词，前面需要be动词；compare A with B表示把两者比较。阅读数据时区分地表温度与空气温度，留意may和only对结论的限制。本课为原创虚构教学情境，不是真题或真实新闻。",
+    "words": [
+      {
+        "word": "shade",
+        "phonetic": "/ʃeɪd/",
+        "pos": "n.",
+        "meaning": "阴凉处；树荫",
+        "phrase": "in the shade",
+        "example": "The students waited in the shade of a large tree.",
+        "exampleZh": "学生们在一棵大树的树荫下等候。"
+      },
+      {
+        "word": "temperature",
+        "phonetic": "/ˈtemprətʃə/",
+        "pos": "n.",
+        "meaning": "温度",
+        "phrase": "air temperature",
+        "example": "The report gives the air temperature at noon.",
+        "exampleZh": "报告给出了中午的空气温度。"
+      },
+      {
+        "word": "surface",
+        "phonetic": "/ˈsɜːfɪs/",
+        "pos": "n.",
+        "meaning": "表面；地表",
+        "phrase": "the road surface",
+        "example": "The road surface felt warm after hours of sunshine.",
+        "exampleZh": "经过数小时的日照，路面摸起来很热。"
+      },
+      {
+        "word": "measure",
+        "phonetic": "/ˈmeʒə/",
+        "pos": "v.; n.",
+        "meaning": "测量；措施",
+        "phrase": "measure the temperature",
+        "example": "They used the same device to measure the temperature.",
+        "exampleZh": "他们用同一台设备测量温度。"
+      },
+      {
+        "word": "compare",
+        "phonetic": "/kəmˈpeə/",
+        "pos": "v.",
+        "meaning": "比较；对照",
+        "phrase": "compare A with B",
+        "example": "Compare today's reading with yesterday's reading.",
+        "exampleZh": "把今天的读数和昨天的读数比较一下。"
+      },
+      {
+        "word": "evidence",
+        "phonetic": "/ˈevɪdəns/",
+        "pos": "n.",
+        "meaning": "证据；依据",
+        "phrase": "collect evidence",
+        "example": "The group collected evidence before writing its report.",
+        "exampleZh": "小组先收集证据，再撰写报告。"
+      },
+      {
+        "word": "effect",
+        "phonetic": "/ɪˈfekt/",
+        "pos": "n.",
+        "meaning": "影响；效果",
+        "phrase": "have an effect on",
+        "example": "Cloud cover can have an effect on the reading.",
+        "exampleZh": "云量可能影响读数。"
+      },
+      {
+        "word": "average",
+        "phonetic": "/ˈævərɪdʒ/",
+        "pos": "n.; adj.",
+        "meaning": "平均数；平均的",
+        "phrase": "the average temperature",
+        "example": "The average temperature was calculated from six readings.",
+        "exampleZh": "平均温度根据六次读数计算得出。"
+      },
+      {
+        "word": "reduce",
+        "phonetic": "/rɪˈdjuːs/",
+        "pos": "v.",
+        "meaning": "减少；降低",
+        "phrase": "reduce exposure to heat",
+        "example": "A shaded route may reduce our exposure to heat.",
+        "exampleZh": "有树荫的路线可能减少我们暴露在高温中的时间。"
+      },
+      {
+        "word": "resident",
+        "phonetic": "/ˈrezɪdənt/",
+        "pos": "n.",
+        "meaning": "居民",
+        "phrase": "a local resident",
+        "example": "A local resident showed us the busiest crossing.",
+        "exampleZh": "一位当地居民向我们指出了最繁忙的路口。"
+      },
+      {
+        "word": "observe",
+        "phonetic": "/əbˈzɜːv/",
+        "pos": "v.",
+        "meaning": "观察；注意到",
+        "phrase": "observe a change",
+        "example": "We observed a change when clouds covered the sun.",
+        "exampleZh": "云遮住太阳时，我们观察到了变化。"
+      },
+      {
+        "word": "conclusion",
+        "phonetic": "/kənˈkluːʒən/",
+        "pos": "n.",
+        "meaning": "结论",
+        "phrase": "draw a conclusion",
+        "example": "It is too early to draw a conclusion from one reading.",
+        "exampleZh": "仅凭一次读数就下结论还为时过早。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "urban",
+        "phonetic": "/ˈɜːbən/",
+        "pos": "adj.",
+        "meaning": "城市的；城镇的",
+        "phrase": "urban trees",
+        "example": "Urban trees need space for their roots to grow.",
+        "exampleZh": "城市树木需要根系生长的空间。"
+      },
+      {
+        "word": "pavement",
+        "phonetic": "/ˈpeɪvmənt/",
+        "pos": "n.",
+        "meaning": "人行道（英式英语）",
+        "phrase": "a narrow pavement",
+        "example": "The narrow pavement had little space for new trees.",
+        "exampleZh": "这条狭窄的人行道几乎没有种新树的空间。"
+      },
+      {
+        "word": "method",
+        "phonetic": "/ˈmeθəd/",
+        "pos": "n.",
+        "meaning": "方法；办法",
+        "phrase": "a research method",
+        "example": "The class discussed whether the research method was fair.",
+        "exampleZh": "全班讨论了这项研究方法是否公平。"
+      },
+      {
+        "word": "record",
+        "phonetic": "/ˈrekɔːd/",
+        "pos": "n.",
+        "meaning": "记录；记载",
+        "phrase": "keep a record",
+        "example": "Keep a record of the time and weather.",
+        "exampleZh": "记录下时间和天气。"
+      },
+      {
+        "word": "factor",
+        "phonetic": "/ˈfæktə/",
+        "pos": "n.",
+        "meaning": "因素；要素",
+        "phrase": "an important factor",
+        "example": "The time of day was an important factor in the comparison.",
+        "exampleZh": "一天中的测量时段是这项比较中的重要因素。"
+      },
+      {
+        "word": "reliable",
+        "phonetic": "/rɪˈlaɪəbl/",
+        "pos": "adj.",
+        "meaning": "可靠的；可信赖的",
+        "phrase": "reliable information",
+        "example": "Reliable information includes clear details about the measurements.",
+        "exampleZh": "可靠的信息包含清晰的测量细节。"
+      },
+      {
+        "word": "support",
+        "phonetic": "/səˈpɔːt/",
+        "pos": "v.; n.",
+        "meaning": "支持；支撑",
+        "phrase": "support a claim",
+        "example": "The results do not support such a broad claim.",
+        "exampleZh": "这些结果不足以支持如此宽泛的说法。"
+      },
+      {
+        "word": "limit",
+        "phonetic": "/ˈlɪmɪt/",
+        "pos": "n.; v.",
+        "meaning": "限度；限制",
+        "phrase": "recognise the limits",
+        "example": "We should recognise the limits of this small study.",
+        "exampleZh": "我们应该认识到这项小规模研究的局限。"
+      },
+      {
+        "word": "sample",
+        "phonetic": "/ˈsɑːmpl/",
+        "pos": "n.",
+        "meaning": "样本；样品",
+        "phrase": "a small sample",
+        "example": "A small sample may miss differences between streets.",
+        "exampleZh": "小样本可能无法体现街道之间的差异。"
+      },
+      {
+        "word": "cautiously",
+        "phonetic": "/ˈkɔːʃəsli/",
+        "pos": "adv.",
+        "meaning": "谨慎地；小心地",
+        "phrase": "interpret results cautiously",
+        "example": "We should interpret the results cautiously until more evidence is available.",
+        "exampleZh": "在获得更多证据之前，我们应该谨慎解读这些结果。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The residents who live near the square ___ interested in the study.",
+        "promptZh": "住在广场附近的居民对这项研究感兴趣。",
+        "options": [
+          "is",
+          "are",
+          "being",
+          "has"
+        ],
+        "optionsZh": [
+          "单数现在时be",
+          "复数现在时be",
+          "非限定形式，不能单独作谓语",
+          "有；第三人称单数"
+        ],
+        "answer": 1,
+        "explanation": "who live near the square修饰residents，live属于定语从句。主句主语residents为复数，需要完整的谓语are interested，不能用being单独作谓语。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "A reading without a recorded time ___ not reliable enough for this comparison.",
+        "promptZh": "没有记录测量时间的读数，对这项比较而言不够可靠。",
+        "options": [
+          "does",
+          "has",
+          "is",
+          "do"
+        ],
+        "optionsZh": [
+          "第三人称单数助动词",
+          "有；第三人称单数",
+          "单数现在时be",
+          "非第三人称单数助动词"
+        ],
+        "answer": 2,
+        "explanation": "reliable是形容词，前面需要be。主语A reading为单数，without a recorded time是介词短语，因此用is。",
+        "tag": "be-verb"
+      },
+      {
+        "prompt": "The class compared the shaded path ___ the sunny path.",
+        "promptZh": "全班把有树荫的小路和阳光直射的小路作了比较。",
+        "options": [
+          "at",
+          "for",
+          "on",
+          "with"
+        ],
+        "optionsZh": [
+          "在某点",
+          "为了；对于",
+          "在……上",
+          "与……"
+        ],
+        "answer": 3,
+        "explanation": "compare A with B是“把A与B比较”的常用搭配；with后接第二个比较对象the sunny path。",
+        "tag": "preposition"
+      },
+      {
+        "prompt": "The students examined the surprising result ___.",
+        "promptZh": "学生们谨慎地检查了这个令人惊讶的结果。",
+        "options": [
+          "cautiously",
+          "cautious",
+          "caution",
+          "cautions"
+        ],
+        "optionsZh": [
+          "谨慎地（副词）",
+          "谨慎的（形容词）",
+          "谨慎；警告（名词或动词）",
+          "警告（复数名词或动词第三人称单数）"
+        ],
+        "answer": 0,
+        "explanation": "空格修饰动词examined，说明检查的方式，因此用副词cautiously。cautious是形容词，不能在这里作方式状语。",
+        "tag": "word-form"
+      },
+      {
+        "prompt": "The road surface under the tree was ___ than the surface in direct sunlight.",
+        "promptZh": "树下的路面比阳光直射处的路面凉。",
+        "options": [
+          "coolest",
+          "cool",
+          "cooler",
+          "more coolly"
+        ],
+        "optionsZh": [
+          "最凉的（最高级）",
+          "凉的（原级）",
+          "更凉的（比较级）",
+          "更加凉爽地（副词比较形式）"
+        ],
+        "answer": 2,
+        "explanation": "than提示比较两个路面的温度。be动词后用形容词，cool的比较级是cooler。这个句子比较的是地表温度，不能据此直接得出空气温度的差异。",
+        "tag": "comparative"
+      },
+      {
+        "prompt": "In “The chart that Mei prepared shows the limits of the study”, which word is the main-clause verb?",
+        "promptZh": "在“The chart that Mei prepared shows the limits of the study”中，哪个词是主句谓语动词？",
+        "options": [
+          "prepared",
+          "shows",
+          "limits",
+          "study"
+        ],
+        "optionsZh": [
+          "制作了（定语从句谓语）",
+          "显示（主句谓语）",
+          "局限（此处是复数名词）",
+          "研究（此处是名词）"
+        ],
+        "answer": 1,
+        "explanation": "先括起that Mei prepared，剩下The chart shows the limits of the study。主句谓语是shows；prepared属于修饰chart的定语从句。",
+        "tag": "main-verb"
+      }
+    ],
+    "reading": {
+      "title": "What Did the Cooler Number Mean?",
+      "titleZh": "较低的温度数字说明了什么？",
+      "level": "四级衔接专项 · 原创模拟（非真题、非新闻）",
+      "topic": "城市树荫、测量条件与结论边界",
+      "passage": "Mei joined a school project about trees and summer heat. Her group measured the road surface under a tree and in direct sunlight at noon. The shaded surface was eight degrees cooler. Excited by the result, Mei wrote that trees could lower the whole city's air temperature by eight degrees.\n\nHer teacher asked what the device had actually measured. Mei checked her notes: it recorded surface temperature, not air temperature. The group had also visited only one street on one day. Its evidence could describe those two spots, but could not support a claim about the entire city.\n\nThe students changed their report and added the time, location and measurement method. They planned to compare more streets under similar weather conditions. Mei still believed urban trees were valuable. However, she now understood that a useful conclusion must match the evidence. A smaller, accurate claim can teach people more than a dramatic statement that the study does not support.",
+      "passageZh": "梅参加了一个关于树木与夏季高温的学校项目。她的小组在中午测量了一棵树下和阳光直射处的路面温度。有树荫处的地表温度低八度。梅对这一结果很兴奋，于是写道，树木能让整座城市的空气温度降低八度。\n\n老师问她，设备实际上测量的是什么。梅检查了笔记：设备记录的是地表温度，而非空气温度。小组也只在一天里走访了一条街。他们的证据可以描述那两个地点，却不足以支持关于整座城市的说法。\n\n学生们修改了报告，补充了时间、地点和测量方法。他们计划在相似天气条件下比较更多街道。梅仍然认为城市树木很有价值。不过，她现在明白，有用的结论必须与证据相符。一个范围较小而准确的结论，比研究无法支持的夸张说法更能让人学到东西。",
+      "questions": [
+        {
+          "prompt": "What did the group's device measure?",
+          "promptZh": "小组的设备测量了什么？",
+          "options": [
+            "Air temperature across the city",
+            "The number of trees on every street",
+            "Road surface temperature at two spots",
+            "The amount of rain during the summer"
+          ],
+          "optionsZh": [
+            "全市的空气温度",
+            "每条街上的树木数量",
+            "两个地点的路面温度",
+            "整个夏季的降雨量"
+          ],
+          "answer": 2,
+          "explanation": "第一、二段明确说明设备测的是树下和阳光直射处的地表温度。空气温度、全市树木数量和降雨量都不在本次测量范围内。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Why was Mei's first claim too broad?",
+          "promptZh": "梅最初的说法为什么过于宽泛？",
+          "options": [
+            "It used limited surface measurements to make a claim about citywide air temperature.",
+            "The group had not written any numbers down.",
+            "The shaded road surface was warmer than the sunny surface.",
+            "The teacher believed no trees should be planted."
+          ],
+          "optionsZh": [
+            "她用有限的地表测量推断全市空气温度。",
+            "小组没有记录任何数字。",
+            "树荫下的路面比阳光直射处更热。",
+            "老师认为不应该种任何树。"
+          ],
+          "answer": 0,
+          "explanation": "原说法同时改变了测量对象（地表→空气）和范围（两个地点→全市）。B与记录存在相矛盾，C颠倒比较结果，D没有依据。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What did the students plan to do next?",
+          "promptZh": "学生们接下来计划做什么？",
+          "options": [
+            "Remove all details from the report",
+            "Use the same result for every season",
+            "Stop studying trees completely",
+            "Compare more streets in similar weather"
+          ],
+          "optionsZh": [
+            "删除报告中的全部细节",
+            "把同一结果用于所有季节",
+            "完全停止研究树木",
+            "在相似天气下比较更多街道"
+          ],
+          "answer": 3,
+          "explanation": "第三段写明compare more streets under similar weather conditions。这个计划扩大观察范围，并尽量让比较条件相近。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Which statement best expresses the main idea?",
+          "promptZh": "哪句话最能概括文章主旨？",
+          "options": [
+            "A dramatic claim is always more useful.",
+            "A conclusion should stay within what its evidence supports.",
+            "One reading can describe an entire city.",
+            "Surface and air temperatures always change by the same amount."
+          ],
+          "optionsZh": [
+            "夸张的说法总是更有用。",
+            "结论应限定在证据能够支持的范围内。",
+            "一次读数足以描述整座城市。",
+            "地表和空气温度的变化幅度总是相同。"
+          ],
+          "answer": 1,
+          "explanation": "梅修正报告的过程与末段总结共同说明结论要匹配证据。A、C、D都作出了文章并不支持的绝对判断。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "Instructions for the Tree Shade Survey",
+      "titleZh": "树荫调查的操作说明",
+      "level": "四级衔接专项短听力 · 原创模拟 · 合成朗读",
+      "tip": "首遍抓集合地点与测量任务，第二遍记录时刻、设备和每次需填写的信息。留意surface temperature与air temperature的区别，以及Only compare后的比较条件。本段为虚构调查通知。",
+      "passage": "Good morning, volunteers. Meet beside the east gate at ten tomorrow. Each pair will measure the surface temperature at two marked spots. One spot is under a tree, and the other is in sunlight. Use the same device for both readings. Write down the time and weather each time you measure. Please remember that these numbers describe the road surface, not the air. Only compare readings taken under similar conditions. Bring water and a hat.",
+      "passageZh": "志愿者们，早上好。明天十点在东门旁集合。每两人一组，测量两个标记地点的地表温度。一处在树下，另一处在阳光中。两次读数都使用同一台设备。每次测量时，记下时间和天气。请记住，这些数字描述的是路面，而不是空气。只比较在相似条件下取得的读数。请带水和帽子。",
+      "dictation": [
+        "Use the same device for both readings.",
+        "Only compare readings taken under similar conditions."
+      ],
+      "dictationZh": [
+        "两次读数都使用同一台设备。",
+        "只比较在相似条件下取得的读数。"
+      ],
+      "questions": [
+        {
+          "prompt": "Where should the volunteers meet?",
+          "promptZh": "志愿者们应该在哪里集合？",
+          "options": [
+            "Inside the west gate",
+            "Beside the east gate",
+            "At the library entrance",
+            "Under the largest tree"
+          ],
+          "optionsZh": [
+            "西门里面",
+            "东门旁边",
+            "图书馆入口",
+            "最大的树下"
+          ],
+          "answer": 1,
+          "explanation": "开头直接说明Meet beside the east gate at ten tomorrow。树下是一个测量点，不能据此把它当作集合地点。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "What should volunteers record each time they measure?",
+          "promptZh": "志愿者每次测量时都应记录什么？",
+          "options": [
+            "The height and age of the tree",
+            "The names of passing residents",
+            "The time and weather",
+            "The city's average air temperature"
+          ],
+          "optionsZh": [
+            "树的高度和年龄",
+            "路过居民的姓名",
+            "时间和天气",
+            "全市的平均空气温度"
+          ],
+          "answer": 2,
+          "explanation": "Write down the time and weather each time you measure给出明确答案。其他选项都不属于通知要求记录的内容。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The students who measured the road surface realised that the evidence they had collected could not support a claim about the whole city.",
+      "main": "The students realised that the evidence could not support a claim about the whole city.",
+      "translation": "测量了路面的学生们意识到，他们收集的证据不足以支持关于整座城市的说法。",
+      "core": [
+        "students",
+        "realised",
+        "evidence",
+        "could",
+        "not",
+        "support",
+        "claim"
+      ],
+      "keywords": [
+        "学生们",
+        "测量路面",
+        "意识到",
+        "收集的证据",
+        "不足以支持",
+        "整座城市"
+      ],
+      "structure": "主句主语为The students，主句谓语为realised。who measured the road surface修饰students；that引导realised的宾语从句。该宾语从句中，the evidence是主语，could not support是谓语；they had collected是省略了关系代词that或which的定语从句，修饰evidence。",
+      "mainZh": "学生们意识到，证据不足以支持关于整座城市的说法。",
+      "level": "四级衔接句法",
+      "topic": "主句谓语、that宾语从句与省略关系代词的定语从句",
+      "grammar": [
+        "measured属于who引导的定语从句，主句仍需要realised作为谓语。",
+        "realised后的that只引导宾语从句；它不是修饰evidence的关系代词。",
+        "they had collected中省略的关系代词作collected的宾语；could后用动词原形support。"
+      ],
+      "examTip": "先找students realised，再读that后面的结论；把两个修饰人的或事物的定语从句分别括起来，避免把measured或had collected当成主句谓语。"
+    },
+    "trans": [
+      {
+        "source": "在得出结论之前，我们应该比较在相似天气条件下取得的读数。",
+        "answer": "Before drawing a conclusion, we should compare readings taken under similar weather conditions.",
+        "keywords": [
+          "before",
+          "conclusion",
+          "should compare",
+          "readings",
+          "similar weather conditions"
+        ],
+        "grammar": "before作介词，后接动名词drawing。taken under similar weather conditions是过去分词短语，修饰readings，表示读数是在这些条件下取得的。",
+        "acceptedAnswers": [
+          "Before drawing a conclusion, we should compare readings taken under similar weather conditions.",
+          "We should compare readings collected in similar weather conditions before we draw a conclusion."
+        ],
+        "level": "四级衔接表达",
+        "topic": "比较条件与谨慎推断",
+        "chunks": [
+          "before drawing a conclusion",
+          "compare readings",
+          "under similar weather conditions"
+        ],
+        "alternative": "We should compare readings collected in similar weather conditions before we draw a conclusion."
+      },
+      {
+        "source": "这张图表显示的是地表温度，因此它不能直接告诉我们空气有多热。",
+        "answer": "This chart shows surface temperature, so it cannot directly tell us how hot the air is.",
+        "keywords": [
+          "chart",
+          "surface temperature",
+          "cannot",
+          "directly",
+          "how hot the air is"
+        ],
+        "grammar": "so连接原因与结果两个分句。how hot the air is作tell的宾语，使用the air is的陈述语序，不能写成how hot is the air。",
+        "acceptedAnswers": [
+          "This chart shows surface temperature, so it cannot directly tell us how hot the air is.",
+          "Because this chart shows surface temperature, it cannot directly tell us how hot the air is."
+        ],
+        "level": "四级衔接表达",
+        "topic": "解释图表与宾语从句语序",
+        "chunks": [
+          "show surface temperature",
+          "cannot directly tell us",
+          "how hot the air is"
+        ],
+        "alternative": "Because this chart shows surface temperature, it cannot directly tell us how hot the air is."
+      }
+    ]
   }
 }
