@@ -617,7 +617,7 @@ export function chooseDailyLesson(date,p,fresh){
   if(fresh.vocabularyPlanVersion>=3&&!p.wordTotal&&!Object.values(p.attempts||{}).some(a=>a.group==='word')&&pristineWordRound(p.wordPractice?.daily)&&pristineWordRound(p.draft?.ws)){
     return {...old,nw:fresh.nw,rev:fresh.rev,all:fresh.all,quizWords:fresh.quizWords,deferredNewWords:fresh.deferredNewWords,vocabularyPlanVersion:fresh.vocabularyPlanVersion,wordReviewRule:fresh.wordReviewRule,tasks:fresh.tasks};
   }
-  if(fresh.vocabularyPlanVersion>=4&&old.vocabularyPlanVersion>=3&&old.vocabularyPlanVersion<4&&!fresh.weekly&&allDictationWords(old).length===40){
+  if(fresh.vocabularyPlanVersion>=4&&!fresh.weekly&&allDictationWords(old).length===40&&old.nw.some(w=>(fresh.excludedNewWords||[]).includes(w.word))){
     const round=p.wordPractice?.daily||p.draft?.ws;
     // Completed work is history. Repair only untouched future questions, never
     // reopen a finished forty-word test or discard a currently typed spelling.
@@ -627,6 +627,7 @@ export function chooseDailyLesson(date,p,fresh){
     const pinnedReview=new Set(old.rev.filter(w=>pinned.has(w.word)).map(w=>w.word));
     const forbidden=new Set(fresh.excludedNewWords||[]),unique=rows=>rows.filter((w,i,a)=>a.findIndex(x=>x.word===w.word)===i);
     const keep=old.nw.filter(w=>pinned.has(w.word)||!forbidden.has(w.word));
+    if(keep.length===old.nw.length)return old; // Only historical/pinned words remain; nothing unattempted to replace.
     const nw=unique([...keep,...fresh.nw,...(fresh.continuationCandidates||[])]).filter(w=>!pinnedReview.has(w.word)).slice(0,22);
     const newNames=new Set(nw.map(w=>w.word));
     const rev=unique([...old.rev.filter(w=>pinned.has(w.word)),...old.rev,...fresh.rev]).filter(w=>!newNames.has(w.word)).slice(0,18);

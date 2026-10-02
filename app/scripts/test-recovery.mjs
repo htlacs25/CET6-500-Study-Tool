@@ -249,6 +249,13 @@ test('repairing an in-flight repeated cohort preserves input, first grades and a
   const blocked=new Set(fresh.excludedNewWords),pinned=new Set(round.order.slice(0,3).map(w=>w.word));
   assert.ok(fixed.nw.every(w=>pinned.has(w.word)||!blocked.has(w.word)));assert.equal(fixed.contentSignature,old.contentSignature);
   assert.equal(reconcileDailyWordRound(fixed,next),next,'refresh must preserve the corrected order');
+  for(const version of [undefined,1,2,4]){
+    const cached=clone(p);cached.lessonSnapshot.vocabularyPlanVersion=version;
+    const repaired=chooseDailyLesson(date,cached,fresh),continued=reconcileDailyWordRound(repaired,cached.wordPractice.daily,()=>0.4);
+    assert.ok(repaired.nw.every(w=>pinned.has(w.word)||!blocked.has(w.word)),'repair stale words regardless of cached version '+version);
+    assert.equal(continued.order.length,40);assert.deepEqual(continued.order.slice(0,3),round.order.slice(0,3));
+    assert.equal(continued.input,'unfinished');assert.deepEqual(cached.attempts,attempts);
+  }
   const rt=runtime({[RECOVERY_STORAGE_KEY]:JSON.stringify({...history,[date]:p})});rt.api.setDate(date);rt.api.renderWords(rt.api.lesson());
   assert.equal(rt.api.state().ws.order.length,40);assert.equal(rt.api.state().ws.i,2);assert.equal(rt.api.state().ws.input,'unfinished');
   assert.deepEqual(clone(rt.api.progress().attempts),attempts);assert.deepEqual(clone(rt.api.state().wordPractice.retry),retry);
