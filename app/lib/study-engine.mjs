@@ -6,12 +6,16 @@ export const OLD_PROGRESS_KEYS = ['cet6-500-offline-v2','cet6-500-study-progress
 export const RECOVERY_DATE = '2026-08-28';
 export const VOCABULARY_EXPANSION_DATE = '2026-09-29';
 export const ARTICLE_FIRST_LEARNING_DATE = '2026-10-01';
+export const VOCABULARY_CONTINUATION_DATE = '2026-10-02';
+export const EXAM_TARGET_DATE = '2026-12-13';
 export const ROADMAP = [
   {from:'2026-08-28',to:'2026-09-10',name:'两周基础恢复',goal:'常用词、主句谓语、be动词、短听力'},
   {from:'2026-09-11',to:'2026-09-30',name:'四级550衔接',goal:'扩大四级核心词汇，增加泛读、影子跟读和复述'},
   {from:'2026-10-01',to:'2026-10-31',name:'四级专项',goal:'按四级听读译写题型训练并逐步限时'},
   {from:'2026-11-01',to:'2026-11-30',name:'四级真题与限时训练',goal:'核验真题来源，分套练习并复盘'},
-  {from:'2026-12-01',to:'2026-12-31',name:'模考与查漏补缺',goal:'根据实际考试日期安排整套练习与考前节奏'}
+  {from:'2026-12-01',to:'2026-12-12',name:'模考与查漏补缺',goal:'按你确定的12月13日目标倒排整套练习与考前节奏'},
+  {from:'2026-12-13',to:'2026-12-13',name:'目标日',goal:'四级550分冲刺目标；考试安排以准考证为准'},
+  {from:'2026-12-14',to:'2026-12-31',name:'考后巩固',goal:'保留学习记录，复盘已有难点'}
 ];
 export function courseDay(k){return Math.floor((Date.parse(k+'T00:00:00Z')-Date.parse(RECOVERY_DATE+'T00:00:00Z'))/86400000)}
 export function dateGap(a,b){return Math.round((Date.parse(a+'T00:00:00Z')-Date.parse(b+'T00:00:00Z'))/86400000)}
@@ -332,6 +336,19 @@ export function reconcileDailyWordRound(lesson,round,random=Math.random){
   const all=allDictationWords(lesson),present=new Set(round.order.map(w=>normEnglish(w.word)));
   const missing=all.filter(w=>!present.has(normEnglish(w.word)));
   if(lesson.vocabularyPlanVersion>=3&&pristineWordRound(round)&&(missing.length||round.order.length!==all.length))return {...makeWordRound(all,round.order,random,lesson.nw),startedAt:round.startedAt};
+  const allowed=new Set(all.map(w=>normEnglish(w.word)));
+  if(lesson.vocabularyPlanVersion>=4&&round.order.some(w=>!allowed.has(normEnglish(w.word)))){
+    const pinned=!round.done&&Boolean(round.input||round.meaningInput||round.phase!=='try');
+    const cut=(round.done?round.order.length:round.i)+(pinned?1:0),prefix=round.order.slice(0,cut);
+    const newNames=new Set(lesson.nw.map(w=>normEnglish(w.word)));
+    const rest=[...round.order.slice(cut).filter(w=>allowed.has(normEnglish(w.word))),...shuffledWords(missing,[],random)];
+    const fresh=rest.filter(w=>newNames.has(normEnglish(w.word))),review=rest.filter(w=>!newNames.has(normEnglish(w.word)));
+    const audioNeeded=Math.ceil(all.length/2)-prefix.filter(w=>w.audio).length;
+    const desiredNew=Math.ceil(lesson.nw.length/2)-prefix.filter(w=>w.audio&&newNames.has(normEnglish(w.word))).length;
+    const newAudio=Math.min(fresh.length,audioNeeded,Math.max(0,desiredNew,audioNeeded-review.length));
+    const tag=(rows,n)=>rows.map((w,i)=>({...w,audio:i<n}));
+    return {...round,order:[...prefix,...tag(fresh,newAudio),...tag(review,audioNeeded-newAudio)],newFirstVersion:1};
+  }
   if(round.newFirstVersion===1&&!missing.length)return round;
   const fresh=new Set((lesson.nw||[]).map(w=>normEnglish(w.word)));
   const pinned=!round.done&&Boolean(round.input||round.meaningInput||round.phase!=='try');
@@ -433,7 +450,7 @@ export function buildRecoveryLesson(data,recovery,date,history={},userVocabulary
   }
   const seed=dated||recovery.lessons[index];
   const foundation=di<14||!gate.advance,weekly=(di+1)%7===0;
-  const expanded=date>=VOCABULARY_EXPANSION_DATE,articleFirst=date>=ARTICLE_FIRST_LEARNING_DATE;
+  const expanded=date>=VOCABULARY_EXPANSION_DATE,articleFirst=date>=ARTICLE_FIRST_LEARNING_DATE,continuing=date>=VOCABULARY_CONTINUATION_DATE;
   // Freeze the legacy filler bank: future authored vocabulary must not shift
   // the words or assessment fingerprints of an already prepared course.
   const legacyWords=recovery.datedLessons?[...recovery.lessons.flatMap(l=>l.words),...Object.entries(recovery.datedLessons).filter(([k])=>k<='2026-09-30').flatMap(([,l])=>l.words)]:recovery.words;
@@ -445,7 +462,9 @@ export function buildRecoveryLesson(data,recovery,date,history={},userVocabulary
     const start=(day*4)%Math.max(1,extraBank.length),fallback=Array.from({length:12},(_,i)=>extraBank[(start+i)%extraBank.length]);
     const unique=rows=>rows.filter((w,i,a)=>w&&a.findIndex(x=>x.word.toLowerCase()===w.word.toLowerCase())===i);
     const base=unique([...(pack.words||[]),...fallback]).slice(0,12);
-    return k>=VOCABULARY_EXPANSION_DATE?unique([...base,...(pack.additionalWords||[]),...(pack.words||[]).slice(12)]).slice(0,22):base;
+    const rows=k>=VOCABULARY_EXPANSION_DATE?unique([...base,...(pack.additionalWords||[]),...(pack.words||[]).slice(12)]).slice(0,22):base;
+    // Vocabulary-only corrections never change sourceWords or assessment IDs.
+    return rows.map(w=>pack.vocabularyReplacements?.[w.word]||w);
   };
   const manualItems=normalizeUserVocabulary(userVocabulary).items;
   const activeManual=Object.values(manualItems).filter(w=>w.active),allDueManual=dueUserVocabulary(userVocabulary,date,MAX_USER_VOCABULARY);
@@ -454,7 +473,7 @@ export function buildRecoveryLesson(data,recovery,date,history={},userVocabulary
   // A personal word has one authoritative due date. Never let an ordinary
   // fallback or an old error bypass it and put the same word back every day.
   const reviewAllowed=n=>!articleFirst||!manualItems[n]?.active||Boolean(manualItems[n].lastReviewed&&manualItems[n].lastReviewed!==date&&manualItems[n].dueDate<=date);
-  const additionalPool=Object.entries(recovery.datedLessons||{}).filter(([k])=>k<=date).flatMap(([,l])=>l.additionalWords||[]);
+  const additionalPool=Object.entries(recovery.datedLessons||{}).filter(([k])=>k<=date).flatMap(([,l])=>[...(l.additionalWords||[]),...Object.values(l.vocabularyReplacements||{})]);
   const pool=[...(articleFirst?activeManual:dueManual),...recovery.words,...additionalPool,...data.WORDS].filter((w,i,a)=>a.findIndex(x=>x.word===w.word)===i);
   const find=n=>pool.find(w=>w.word.toLowerCase()===String(n).toLowerCase());
   const past=Object.entries(history).filter(([k])=>k<date).sort(([a],[b])=>b.localeCompare(a));
@@ -496,11 +515,31 @@ export function buildRecoveryLesson(data,recovery,date,history={},userVocabulary
   const extraStart=(di*4)%Math.max(1,extraBank.length),extraWords=Array.from({length:12},(_,i)=>extraBank[(extraStart+i)%extraBank.length]);
   const sourceWords=weekly?[]:[...authoredWords,...extraWords].filter((w,i,a)=>w&&a.findIndex(x=>x.word.toLowerCase()===w.word.toLowerCase())===i).slice(0,12);
   const uniqueWords=rows=>rows.filter((w,i,a)=>w&&a.findIndex(x=>x.word===w.word)===i);
-  const introduced=articleFirst?new Set(learning.keys()):new Set(past.flatMap(([,p])=>(p.lessonSnapshot?.nw||[]).map(w=>w.word)));
-  const deferred=uniqueWords([...past].reverse().flatMap(([k,p])=>[...(articleFirst&&k>=ARTICLE_FIRST_LEARNING_DATE?p.lessonSnapshot?.nw||[]:[]),...(p.lessonSnapshot?.deferredNewWords||[])])).filter(w=>!introduced.has(w.word));
+  const introduced=new Set([...learning.keys(),...past.flatMap(([,p])=>(p.lessonSnapshot?.nw||[]).map(w=>w.word))]);
+  // Missing submissions mean unknown progress, not an instruction to restart a
+  // whole cohort. Only words explicitly displaced by personal words carry over.
+  const deferred=uniqueWords([...past].reverse().flatMap(([,p])=>p.lessonSnapshot?.deferredNewWords||[])).filter(w=>!introduced.has(w.word));
   const planned=weekly?[]:expanded?preparedWords(date):sourceWords;
+  const scheduledPreviously=new Set();
+  if(continuing)for(let day=0;day<di;day++){
+    const k=addDate(RECOVERY_DATE,day);
+    for(const w of preparedWords(k))scheduledPreviously.add(w.word);
+    const pack=recovery.datedLessons?.[k];
+    // Previously published words remain old even after a display-only correction.
+    for(const original of Object.keys(pack?.vocabularyReplacements||{}))scheduledPreviously.add(original);
+  }
+  if(continuing&&!weekly){
+    const repeated=planned.filter(w=>scheduledPreviously.has(w.word));
+    if(repeated.length)throw new Error('Repeated new vocabulary; supply vocabularyReplacements for '+date+': '+repeated.map(w=>w.word).join(', '));
+    if(new Set(planned.map(w=>w.word)).size!==22)throw new Error('Expected 22 distinct continuation words: '+date);
+  }
   const authoredQueue=uniqueWords([...deferred,...planned]).filter(w=>!articleFirst||!manualItems[w.word]?.active&&!introduced.has(w.word));
-  const nw=articleFirst?uniqueWords([...pendingManual,...(weekly?[]:authoredQueue),...(!weekly?pool.filter(w=>!manualItems[w.word]?.active&&!introduced.has(w.word)):[])]).slice(0,weekly?pendingManual.length:22):planned;
+  const excludedNewWords=[...new Set([...scheduledPreviously,...introduced,...past.flatMap(([,p])=>(p.lessonSnapshot?.rev||[]).map(w=>w.word))])];
+  const excludedNew=new Set(excludedNewWords),reservedNow=new Set([...authoredQueue,...planned].map(w=>w.word));
+  // The supplemental list has a fixed authored order. Never refill from the
+  // beginning of recovery.words, or relabel a previously scheduled word as new.
+  const continuationCandidates=continuing?data.WORDS.filter(w=>!excludedNew.has(w.word)&&!reservedNow.has(w.word)&&!manualItems[w.word]?.active):[];
+  const nw=articleFirst?uniqueWords([...pendingManual,...(weekly?[]:authoredQueue),...(!weekly?continuationCandidates:[])]).slice(0,weekly?pendingManual.length:22):planned;
   const deferredNewWords=articleFirst?authoredQueue.filter(w=>!nw.some(n=>n.word===w.word)):[];
   if(expanded&&!weekly&&(seed.additionalWords||authoredWords.length>=22)&&planned.length!==22)throw new Error('Expected 22 distinct new vocabulary entries: '+date);
   if(articleFirst&&!weekly&&nw.length!==22)throw new Error('Insufficient new vocabulary: '+date);
@@ -557,8 +596,8 @@ export function buildRecoveryLesson(data,recovery,date,history={},userVocabulary
   const minutes=weekend?[45,35,20,30,25,40,15]:[35,25,15,20,15,30,10];
   const labels=[weekly?(nw.length+rev.length)+'词周测与错词复习'+(nw.length?'（含'+nw.length+'个自选待学词）':''):nw.length+'个新/激活词＋'+rev.length+'个复习词','短听力理解＋'+listening.fullDictation.length+'段全文听写','1个语法点＋6题','阅读1篇＋'+reading.questions.length+'题','句子主干'+sent.length+'句＋表达2句','每日泛读＋影子跟读＋60秒复述','错题复盘＋共同记录难点'];
   const targets=['words','listening','grammar','reading','sentences','extensive','review'],tabs=['words','listening','practice','practice','practice','extensive','records'];
-  const wordReviewRule=articleFirst?'正常日22新词＋18复习词；自选文章词从次日先新学，占新词名额，挤出的课程词顺延。周测共40词，不新增课程词；若有次日待学的自选词，先学习它们，其余补足复习。默写错词自动进入后续复习；学过的自选词仅到期出现，首学当天约1小时和晚间短回想；跨日按第2、4、7、15天（相隔1、3、6、14天）安排，到期过多顺延，不每天反复占位。':'新词先学先默写，组内乱序；固定18个复习位（周测20个），按D1、D3、D7、D14安排，漏做顺延：到期错词、自主加入的文章词和间隔旧词共同安排。只有你点“加入后续背诵”的文章词才进入队列；到期词按固定容量顺延，不额外加量。';
-  const lesson={id:'recovery-v2:'+date,date,freshMaterial:di<recovery.lessons.length||Boolean(dated),recovery:true,foundation,weekly,index,di:Math.floor((Date.parse(date)-Date.parse('2026-08-22'))/864e5),recoveryDay:di+1,title:seed.title,phase,gate,trainingName:di<14?'基础恢复':advanced?'四级专项模拟':'四级550衔接',grammarTip:seed.grammarTip,sourceWords,nw,rev,quizWords,all:expanded?[...nw,...rev]:[...rev,...nw],vocabularyPlanVersion:articleFirst?3:expanded?2:1,deferredNewWords,priorityErrors,priorityUserWords,reading,listening,extensive,sent,trans,grammar,taskCount:7,tasks:labels.map((label,i)=>({id:targets[i],tab:tabs[i],label,minutes:minutes[i]})),wordReviewRule,sourceNote:'目标为2026年12月四级550分。课程文章与题目为原创分级模拟或注明来源的公版名著改写；浏览器合成朗读不冒充真题录音。文章点词释义来自离线词典，查看词义不会自动加入复习。'};
+  const wordReviewRule=articleFirst?'正常日22新词＋18复习词；新词接续原课程，不因缺少提交记录把旧词整批重排。自选文章词从次日先新学，占新词名额，只有挤出的课程词顺延。周测共40词，不新增课程词；若有次日待学的自选词，先学习它们，其余补足复习。默写错词自动进入后续复习；学过的自选词仅到期出现，首学当天约1小时和晚间短回想；跨日按第2、4、7、15天（相隔1、3、6、14天）安排，到期过多顺延，不每天反复占位。':'新词先学先默写，组内乱序；固定18个复习位（周测20个），按D1、D3、D7、D14安排，漏做顺延：到期错词、自主加入的文章词和间隔旧词共同安排。只有你点“加入后续背诵”的文章词才进入队列；到期词按固定容量顺延，不额外加量。';
+  const lesson={id:'recovery-v2:'+date,date,freshMaterial:di<recovery.lessons.length||Boolean(dated),recovery:true,foundation,weekly,index,di:Math.floor((Date.parse(date)-Date.parse('2026-08-22'))/864e5),recoveryDay:di+1,title:seed.title,phase,gate,trainingName:di<14?'基础恢复':advanced?'四级专项模拟':'四级550衔接',grammarTip:seed.grammarTip,sourceWords,nw,rev,quizWords,all:expanded?[...nw,...rev]:[...rev,...nw],vocabularyPlanVersion:continuing?4:articleFirst?3:expanded?2:1,deferredNewWords,excludedNewWords,continuationCandidates,priorityErrors,priorityUserWords,reading,listening,extensive,sent,trans,grammar,taskCount:7,tasks:labels.map((label,i)=>({id:targets[i],tab:tabs[i],label,minutes:minutes[i]})),wordReviewRule,sourceNote:'按你确定的2026年12月13日倒排四级550分冲刺，结果不作保证，考试安排以准考证为准。课程文章与题目为原创分级模拟或注明来源的公版名著改写；浏览器合成朗读不冒充真题录音。文章点词释义来自离线词典，查看词义不会自动加入复习。'};
   const contentSignature=lessonFingerprint(lesson);
   return {...lesson,contentSignature,contentRevision:'course-'+contentSignature};
 }
@@ -576,15 +615,33 @@ export function chooseDailyLesson(date,p,fresh){
   const oldSignature=old.contentSignature||lessonFingerprint(old),freshSignature=fresh.contentSignature||lessonFingerprint(fresh);
   if(oldSignature!==freshSignature)return {...fresh,cacheContentMismatch:true,staleContentSignature:oldSignature};
   if(fresh.vocabularyPlanVersion>=3&&!p.wordTotal&&!Object.values(p.attempts||{}).some(a=>a.group==='word')&&pristineWordRound(p.wordPractice?.daily)&&pristineWordRound(p.draft?.ws)){
-    return {...old,nw:fresh.nw,rev:fresh.rev,all:fresh.all,quizWords:fresh.quizWords,deferredNewWords:fresh.deferredNewWords,vocabularyPlanVersion:3,wordReviewRule:fresh.wordReviewRule,tasks:fresh.tasks};
+    return {...old,nw:fresh.nw,rev:fresh.rev,all:fresh.all,quizWords:fresh.quizWords,deferredNewWords:fresh.deferredNewWords,vocabularyPlanVersion:fresh.vocabularyPlanVersion,wordReviewRule:fresh.wordReviewRule,tasks:fresh.tasks};
   }
-  if(fresh.vocabularyPlanVersion===3&&fresh.weekly&&allDictationWords(old).length<40){
+  if(fresh.vocabularyPlanVersion>=4&&old.vocabularyPlanVersion>=3&&old.vocabularyPlanVersion<4&&!fresh.weekly&&allDictationWords(old).length===40){
+    const round=p.wordPractice?.daily||p.draft?.ws;
+    // Completed work is history. Repair only untouched future questions, never
+    // reopen a finished forty-word test or discard a currently typed spelling.
+    if(round?.done||p.wordTotal>=40)return {...old,vocabularyPlanVersion:4,wordReviewRule:fresh.wordReviewRule};
+    const cut=(round?.i||0)+(round&&(round.input||round.meaningInput||round.phase&&round.phase!=='try')?1:0);
+    const pinned=new Set([...(round?.order||[]).slice(0,cut).map(w=>w.word),...old.all.filter(w=>firstWordAttempt(p,old,w.word)).map(w=>w.word)]);
+    const pinnedReview=new Set(old.rev.filter(w=>pinned.has(w.word)).map(w=>w.word));
+    const forbidden=new Set(fresh.excludedNewWords||[]),unique=rows=>rows.filter((w,i,a)=>a.findIndex(x=>x.word===w.word)===i);
+    const keep=old.nw.filter(w=>pinned.has(w.word)||!forbidden.has(w.word));
+    const nw=unique([...keep,...fresh.nw,...(fresh.continuationCandidates||[])]).filter(w=>!pinnedReview.has(w.word)).slice(0,22);
+    const newNames=new Set(nw.map(w=>w.word));
+    const rev=unique([...old.rev.filter(w=>pinned.has(w.word)),...old.rev,...fresh.rev]).filter(w=>!newNames.has(w.word)).slice(0,18);
+    if(nw.length!==22||rev.length!==18)return old; // Never risk deleting answers to force a migration.
+    const all=[...nw,...rev],quizWords=unique([...(old.quizWords||[]),...all]);
+    const deferredNewWords=unique([...(fresh.deferredNewWords||[]),...fresh.nw.filter(w=>!newNames.has(w.word))]);
+    return {...old,nw,rev,all,quizWords,deferredNewWords,vocabularyPlanVersion:4,wordReviewRule:fresh.wordReviewRule,tasks:fresh.tasks};
+  }
+  if(fresh.vocabularyPlanVersion>=3&&fresh.weekly&&allDictationWords(old).length<40){
     const previous=allDictationWords(old),existing=new Set(previous.map(w=>w.word));
     const all=[...previous,...fresh.all.filter(w=>!existing.has(w.word))].slice(0,40);
     const newNames=new Set([...(old.nw||[]),...fresh.nw.filter(w=>!existing.has(w.word))].map(w=>w.word));
     const nw=all.filter(w=>newNames.has(w.word)),rev=all.filter(w=>!newNames.has(w.word));
     const quizWords=[...(old.quizWords||[]),...all.filter(w=>!(old.quizWords||[]).some(x=>x.word===w.word))];
-    return {...old,nw,rev,all:[...nw,...rev],quizWords,vocabularyPlanVersion:3,wordReviewRule:fresh.wordReviewRule,tasks:fresh.tasks.map(t=>t.id==='words'?{...t,label:'40词周测与错词复习'+(nw.length?'（含'+nw.length+'个自选待学词）':'')}:t)};
+    return {...old,nw,rev,all:[...nw,...rev],quizWords,vocabularyPlanVersion:fresh.vocabularyPlanVersion,wordReviewRule:fresh.wordReviewRule,tasks:fresh.tasks.map(t=>t.id==='words'?{...t,label:'40词周测与错词复习'+(nw.length?'（含'+nw.length+'个自选待学词）':'')}:t)};
   }
   if(fresh.vocabularyPlanVersion>=2&&!(old.vocabularyPlanVersion>=2)){
     // Vocabulary-only expansion is outside the assessment fingerprint. Preserve
@@ -594,7 +651,7 @@ export function chooseDailyLesson(date,p,fresh){
     const quizWords=[...(old.quizWords||[]),...nw,...rev].filter((w,i,a)=>a.findIndex(x=>x.word===w.word)===i);
     return {...old,nw,rev,all:[...nw,...rev],quizWords,vocabularyPlanVersion:fresh.vocabularyPlanVersion,wordReviewRule:fresh.wordReviewRule,tasks:fresh.tasks};
   }
-  if(fresh.vocabularyPlanVersion===3&&old.vocabularyPlanVersion!==3)return {...old,vocabularyPlanVersion:3,wordReviewRule:fresh.wordReviewRule};
+  if(fresh.vocabularyPlanVersion>=3&&old.vocabularyPlanVersion!==fresh.vocabularyPlanVersion)return {...old,vocabularyPlanVersion:fresh.vocabularyPlanVersion,wordReviewRule:fresh.wordReviewRule};
   return old; // Only reuse answers when the snapshot belongs to this date and this exact question set.
 }
 export function difficultiesFor(p,diagnostic){

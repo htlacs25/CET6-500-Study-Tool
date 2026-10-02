@@ -16,6 +16,9 @@ export function loadCurriculum(){
   if(!articleGlossary.entries||typeof articleGlossary.entries!=='object'||Array.isArray(articleGlossary.entries))throw new Error('Invalid article glossary');
   if(!extensiveReadings||typeof extensiveReadings!=='object'||Array.isArray(extensiveReadings))throw new Error('Invalid extensive reading collection');
   for(const [date,lesson] of Object.entries(datedLessons)){
+    for(const [original,word] of Object.entries(lesson.vocabularyReplacements||{})){
+      if(![...(lesson.words||[]),...(lesson.additionalWords||[])].some(w=>w.word===original)||['word','phonetic','pos','meaning','phrase','example','exampleZh'].some(k=>!String(word?.[k]||'').trim()))throw new Error('Invalid vocabulary replacement: '+date+': '+original);
+    }
     if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||!lesson.reading?.passage||!lesson.listening?.passage||!lesson.sent||lesson.trans?.length!==2||lesson.grammar?.length!==6||!Array.isArray(lesson.words))throw new Error('Invalid dated lesson: '+date);
     const weekly=(Math.round((Date.parse(date)-Date.parse(RECOVERY.start))/864e5)+1)%7===0;
     if(date>='2026-09-29'&&!weekly&&lesson.words.length<22){

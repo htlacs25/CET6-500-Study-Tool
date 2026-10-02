@@ -179,12 +179,12 @@ test('same-day recall is due after an hour and in the evening without altering f
   assert.equal(sameDayRecall(lesson,repeated,'2026-10-02T12:00:00Z').evening.words.length,1,'a reshuffled retry must not postpone first-study recall');
 });
 
-test('ordinary spacing uses actual learning and carries untouched new words forward',()=>{
+test('ordinary spacing uses actual learning without restarting untouched new cohorts',()=>{
   const L=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-02'),word=L.nw[0].word;
   const untouched={...blankProgress(),lessonSnapshot:L,wordPractice:{daily:makeWordRound(L.all,[],()=>0.4,L.nw)}};
   const next=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-03',{'2026-10-02':untouched});
-  assert.deepEqual(next.nw.map(w=>w.word),L.nw.map(w=>w.word));assert.equal(next.all.length,40);
-  assert.ok(next.rev.every(w=>!L.nw.some(n=>n.word===w.word)));
+  assert.ok(next.nw.every(w=>!L.nw.some(n=>n.word===w.word)));assert.equal(next.all.length,40);
+  assert.ok(next.rev.some(w=>L.nw.some(n=>n.word===w.word)),'default review remains separate from new learning');
   const make=(at,correct=true)=>({...blankProgress(),lessonSnapshot:L,attempts:{'word:first:18':{group:'word',targetWord:word,at,correct}}});
   const history={'2026-10-03':make('2026-10-02T08:00:00Z')};
   assert.equal(wordLearningSchedule(history,'2026-10-03').get(word).dueDate,'2026-10-03','preview submissions use actual China date');
@@ -198,6 +198,64 @@ test('ordinary spacing uses actual learning and carries untouched new words forw
   assert.equal(wordLearningSchedule(history,'2026-10-09').get(word).dueDate,'2026-10-16');
   history['2026-10-09']=make('2026-10-09T08:00:00Z',false);
   assert.equal(wordLearningSchedule(history,'2026-10-10').get(word).dueDate,'2026-10-10');
+});
+
+test('October new words continue the historical sequence without recycling earlier new words',()=>{
+  const seen=new Set(),history={};
+  for(let day=0;day<=38;day++){
+    const date=dateAt(day),L=buildRecoveryLesson(DATA,CURRICULUM,date,history);
+    if(date>='2026-10-02'){
+      assert.equal(L.nw.length,22);assert.equal(L.rev.length,18);
+      assert.ok(L.nw.every(w=>!seen.has(w.word)),date+': '+L.nw.filter(w=>seen.has(w.word)).map(w=>w.word).join(','));
+    }
+    L.nw.forEach(w=>seen.add(w.word));
+    // Merely opening all seven dates must not copy the same new cohort forward.
+    history[date]={...blankProgress(),lessonSnapshot:L,wordPractice:{daily:makeWordRound(L.all,[],()=>0.3,L.nw)}};
+  }
+  const date='2026-10-03',broken=clone(CURRICULUM);delete broken.datedLessons[date].vocabularyReplacements;
+  assert.throws(()=>buildRecoveryLesson(DATA,broken,date),/Repeated new vocabulary/);
+  const L=buildRecoveryLesson(DATA,CURRICULUM,date),signature=L.contentSignature,oldDisplay=clone(L);
+  oldDisplay.nw=[...oldDisplay.sourceWords,...CURRICULUM.datedLessons[date].additionalWords];
+  assert.equal(lessonFingerprint(oldDisplay),signature,'display-only replacement cannot reset other exercises');
+});
+
+test('already learned planned words use unseen supplementation, never the first recovery word',()=>{
+  const first=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-02'),word=first.nw[0].word;
+  const history={'2026-10-01':{...blankProgress(),attempts:{'word:personal':{group:'word',targetWord:word,correct:true,at:'2026-10-01T08:00:00Z'}}}};
+  const next=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-02',history),seen=new Set();
+  for(let day=0;day<35;day++)buildRecoveryLesson(DATA,CURRICULUM,dateAt(day)).nw.forEach(w=>seen.add(w.word));
+  assert.equal(next.nw.length,22);assert.ok(!next.nw.some(w=>w.word===word));
+  assert.ok(next.nw.every(w=>!seen.has(w.word)));assert.ok(!next.nw.some(w=>w.word==='study'));
+  const future=clone(CURRICULUM);future.words.unshift(first.nw[0]);future.datedLessons['2026-10-11']=clone(CURRICULUM.datedLessons['2026-10-03']);
+  assert.deepEqual(buildRecoveryLesson(DATA,future,'2026-10-02',history).nw,next.nw,'adding future lessons cannot change the existing sequence');
+});
+
+test('repairing an in-flight repeated cohort preserves input, first grades and a forty-word limit',()=>{
+  const prior=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-02'),date='2026-10-03';
+  const history={'2026-10-02':{...blankProgress(),lessonSnapshot:prior}};
+  const fresh=buildRecoveryLesson(DATA,CURRICULUM,date,history),old=clone(fresh);
+  old.nw=clone(prior.nw);old.rev=CURRICULUM.words.filter(w=>!old.nw.some(n=>n.word===w.word)&&!fresh.nw.some(n=>n.word===w.word)).slice(0,18);
+  old.all=[...old.nw,...old.rev];old.quizWords=old.all;old.vocabularyPlanVersion=3;
+  const round=makeWordRound(old.all,[],()=>0.3,old.nw);round.i=2;round.input='unfinished';round.meaningInput='草稿';
+  const key=old.id+'|'+old.contentSignature;
+  const attempts=Object.fromEntries(round.order.slice(0,2).map(w=>['word:'+key+':token:'+w.word,{group:'word',targetWord:w.word,correct:false,at:'2026-10-03T08:00:00Z'}]));
+  attempts['reading:'+key+':0']={group:'reading',correct:true};
+  const retry=makeWordRound(round.order.slice(0,1),[],()=>0.3);
+  const p={...blankProgress(),lessonSnapshot:old,wordTotal:2,readingTotal:1,readingCorrect:1,attempts,wordPractice:{version:2,courseKey:key,daily:round,retry,history:[],mistakes:[round.order[0].word]},draft:{lessonId:old.id,courseKey:key,contentSignature:old.contentSignature,ws:round,ls:{input:'listening draft'},ps:{trans:{0:{input:'translation draft'}}}}};
+  const before=JSON.stringify(p),fixed=chooseDailyLesson(date,p,fresh),next=reconcileDailyWordRound(fixed,round,()=>0.4);
+  assert.equal(JSON.stringify(p),before);assert.equal(fixed.all.length,40);assert.equal(next.order.length,40);
+  assert.deepEqual(next.order.slice(0,3),round.order.slice(0,3));assert.equal(next.input,'unfinished');assert.equal(next.meaningInput,'草稿');
+  assert.equal(next.order.filter(w=>w.audio).length,20);assert.equal(next.order.filter(w=>!w.audio).length,20);
+  const blocked=new Set(fresh.excludedNewWords),pinned=new Set(round.order.slice(0,3).map(w=>w.word));
+  assert.ok(fixed.nw.every(w=>pinned.has(w.word)||!blocked.has(w.word)));assert.equal(fixed.contentSignature,old.contentSignature);
+  assert.equal(reconcileDailyWordRound(fixed,next),next,'refresh must preserve the corrected order');
+  const rt=runtime({[RECOVERY_STORAGE_KEY]:JSON.stringify({...history,[date]:p})});rt.api.setDate(date);rt.api.renderWords(rt.api.lesson());
+  assert.equal(rt.api.state().ws.order.length,40);assert.equal(rt.api.state().ws.i,2);assert.equal(rt.api.state().ws.input,'unfinished');
+  assert.deepEqual(clone(rt.api.progress().attempts),attempts);assert.deepEqual(clone(rt.api.state().wordPractice.retry),retry);
+  assert.equal(rt.api.progress().snapshotArchive.length,0);assert.equal(rt.api.state().ls.input,'listening draft');
+  assert.equal(rt.api.state().ps.trans[0].input,'translation draft');
+  const done=clone(p);done.wordPractice.daily.done=true;done.wordTotal=40;
+  assert.deepEqual(chooseDailyLesson(date,done,fresh).all,old.all,'completed tests are not reopened or rewritten');
 });
 
 test('inline recall completion saves only check-ins and retains current answer drafts',()=>{

@@ -14,7 +14,7 @@ const exported = process.argv[3] ? JSON.parse(fs.readFileSync(path.resolve(proce
 const history = { ...(exported.legacy || {}), ...(exported.recovery || {}) };
 const lesson = chooseDailyLesson(date, exported.recovery?.[date], buildRecoveryLesson(data, RECOVERY, date, history, exported.userVocabulary || {}));
 console.log(JSON.stringify({
-  date, goal:'2026年12月四级550分（冲刺目标，不保证）',
+  date, goal:'2026年12月13日四级550分（用户指定备考目标日；冲刺目标，不保证）',
   recordsAvailable:Boolean(process.argv[3]),
   diagnostic:RECOVERY.diagnostic,
   lesson,
