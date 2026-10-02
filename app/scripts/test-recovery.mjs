@@ -290,6 +290,77 @@ test('a pristine preview accepts tomorrow personal words without exceeding forty
   assert.ok(legacy.all.every(w=>migrated.all.some(n=>n.word===w.word)));
 });
 
+test('stand is allocated once and future previews consume each displaced cohort once',()=>{
+  const dates=['2026-10-02','2026-10-03','2026-10-04','2026-10-05'];
+  for(const added of ['2026-09-30','2026-10-01']){
+    const vocab=addUserVocabulary(blankUserVocabulary(),{word:'stand',meaning:'站立'},added),before=JSON.stringify(vocab);
+    const first=buildRecoveryLesson(DATA,CURRICULUM,dates[0],{},vocab),polluted=clone(first);
+    polluted.vocabularyPlanVersion=4;delete polluted.newAllocationVersion;
+    polluted.deferredNewWords.push(...buildRecoveryLesson(DATA,CURRICULUM,dates[1]).nw);
+    const history={[dates[0]]:{...blankProgress(),lessonSnapshot:polluted}},seen=new Set();
+    const plans=dates.map(date=>buildRecoveryLesson(DATA,CURRICULUM,date,history,vocab));
+    for(const L of plans){
+      assert.equal(L.all.length,40);assert.equal(L.nw.length,22);assert.equal(L.rev.length,18);
+      assert.ok(L.nw.every(w=>!seen.has(w.word)),L.date+': '+L.nw.filter(w=>seen.has(w.word)).map(w=>w.word));
+      L.nw.forEach(w=>seen.add(w.word));
+      assert.equal(L.newAllocationVersion,1);assert.equal(L.vocabularyPlanVersion,5);
+      assert.ok(!L.rev.some(w=>w.word==='stand'),'a preview is not a first learning submission');
+      const round=makeWordRound(L.all,[],()=>0.3,L.nw);
+      assert.equal(round.order.filter(w=>w.audio).length,20);
+      assert.equal(round.order.filter(w=>!w.audio).length,20);
+    }
+    if(added==='2026-09-30')assert.ok(plans.every(L=>!L.nw.some(w=>w.word==='stand')));
+    else {assert.equal(plans[0].nw[0].word,'stand');assert.equal(plans[1].nw[0].word,'notify')}
+    assert.deepEqual(plans[3].pendingFirstLearning,[{word:'stand',date:added==='2026-09-30'?'2026-10-01':'2026-10-02'}]);
+    assert.equal(JSON.stringify(vocab),before);assert.equal(wordLearningSchedule(history,dates[3]).size,0);
+    for(const date of [...dates].reverse())assert.deepEqual(buildRecoveryLesson(DATA,CURRICULUM,date,history,vocab).nw,plans.find(L=>L.date===date).nw);
+    const rt=runtime({[RECOVERY_STORAGE_KEY]:JSON.stringify(history),[USER_VOCAB_STORAGE_KEY]:JSON.stringify(vocab)});
+    for(const date of [dates[3],dates[1],dates[2],dates[0],dates[3]]){
+      rt.api.setDate(date);rt.api.setTab('plan');rt.api.render();
+      assert.deepEqual(clone(rt.api.lesson().nw),plans.find(L=>L.date===date).nw);
+      assert.match(rt.element('app').innerHTML,/统一词库与排学记录/);
+    }
+    const reloaded=runtime(Object.fromEntries(rt.saved));reloaded.api.setDate(dates[3]);
+    assert.deepEqual(clone(reloaded.api.lesson().nw),plans[3].nw);
+  }
+});
+
+test('personal allocation date survives reviews, overflow and legacy timezone conversion',()=>{
+  let vocab=addUserVocabulary(blankUserVocabulary(),{word:'stand',meaning:'站立'},'2026-10-01');
+  const old=clone(vocab);delete old.items.stand.firstDueDate;old.items.stand.addedAt='2026-09-30T16:30:00Z';
+  assert.equal(normalizeUserVocabulary(old).items.stand.firstDueDate,'2026-10-02');
+  const before=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-04',{},vocab).nw;
+  vocab=reviewUserVocabulary(vocab,'stand','2026-10-02',false);
+  vocab=reviewUserVocabulary(vocab,'stand','2026-10-03',true);
+  assert.equal(vocab.items.stand.firstDueDate,'2026-10-02');
+  assert.deepEqual(buildRecoveryLesson(DATA,CURRICULUM,'2026-10-04',{},vocab).nw,before);
+  let crowded=blankUserVocabulary();
+  for(let i=0;i<25;i++)crowded=addUserVocabulary(crowded,{word:'test'+String.fromCharCode(97+i),meaning:'测试'},'2026-10-01');
+  const a=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-02',{},crowded),b=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-03',{},crowded),c=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-04',{},crowded);
+  assert.equal(a.nw.filter(w=>w.word.startsWith('test')).length,22);
+  assert.equal(b.nw.filter(w=>w.word.startsWith('test')).length,3);
+  assert.equal(c.nw.filter(w=>w.word.startsWith('test')).length,0);
+  assert.ok(b.nw.every(w=>!a.nw.some(n=>n.word===w.word)));
+});
+
+test('next-day review reads actual wrong submissions and fills at most eighteen places',()=>{
+  const L=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-02');
+  for(const count of [12,22])for(const courseDate of ['2026-10-02','2026-10-05']){
+    const wrong=L.nw.slice(0,count).map(w=>w.word),attempts=Object.fromEntries(wrong.map(word=>['word:'+word,{group:'word',targetWord:word,correct:false,at:'2026-10-02T08:00:00Z'}]));
+    const history={[courseDate]:{...blankProgress(),lessonSnapshot:L,attempts}},before=JSON.stringify(history);
+    const next=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-03',history);
+    assert.equal(next.rev.length,18);assert.equal(next.nw.length,22);
+    assert.equal(next.rev.filter(w=>wrong.includes(w.word)).length,Math.min(count,18));
+    assert.equal(next.priorityErrors.length,Math.min(count,18));
+    assert.equal(JSON.stringify(history),before);
+  }
+  const vocab=addUserVocabulary(blankUserVocabulary(),{word:'improve',meaning:'提高'},'2026-10-02');
+  const history={'2026-10-02':{...blankProgress(),attempts:{'word:improve':{group:'word',targetWord:'improve',correct:false,at:'2026-10-02T08:00:00Z'}}}};
+  const next=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-03',history,vocab);
+  assert.ok(next.rev.some(w=>w.word==='improve'));assert.ok(next.priorityErrors.includes('improve'));
+  assert.ok(!next.nw.some(w=>w.word==='improve'));
+});
+
 test('offline dictionary supports real families, exact senses and irregular verb forms',()=>{
   const data=JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname,'../content/word-search.json'),'utf8'));
   const before=JSON.stringify(data),s=createWordSearch({},data,{brief:conciseWordMeaning});
