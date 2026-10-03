@@ -116,6 +116,64 @@ test('study cards play on a card click without hijacking translation controls or
   }
 });
 
+test('study-card speech is immediate, prefers American voices and does not restart a pending identical word',()=>{
+  const remote={name:'Remote US',lang:'en-US',localService:false,default:true},local={name:'Local British',lang:'en-GB',localService:true};
+  const rt=runtime({},true,{voices:[remote,local],delayedStart:true}),before=JSON.stringify([...rt.saved]);
+  assert.equal(rt.spoken.length,0,'initialisation must not play silent or audible warm-up speech');
+  assert.equal(rt.voiceReads(),1);
+  const card={dataset:{studyWord:'cooperation'}};rt.api.bindStudyWordCard(card);
+  const click=()=>card.onclick({target:{closest:()=>null}});
+  click();assert.deepEqual(rt.audioEvents,['speak'],'the first click calls speak synchronously without cancel or a timer');
+  assert.equal(rt.spoken[0].voice,remote);assert.equal(rt.spoken[0].lang,'en-US');assert.equal(rt.spoken[0].rate,0.8);
+  click();click();assert.equal(rt.spoken.length,1,'repeated clicks must not reset startup of the same word');
+  card.dataset.studyWord='purchase';click();assert.deepEqual(rt.audioEvents,['speak','cancel','speak']);
+  rt.spoken[0].onend();click();assert.equal(rt.spoken.length,2,'a late cancelled callback cannot discard the newer request');
+  rt.startSpeech();click();assert.equal(rt.spoken.length,3,'after speech starts, another click may replay it');
+  rt.finishSpeech();card.dataset.studyWord='shade';click();assert.equal(rt.audioEvents.at(-2),'speak','an idle engine is not cancelled');
+  assert.equal(rt.voiceReads(),1,'successive cards reuse the cached voice');
+  const localUS={name:'Local US',lang:'en-US',localService:true};rt.setVoices([remote,local,localUS]);
+  rt.finishSpeech();card.dataset.studyWord='temperature';click();assert.equal(rt.spoken.at(-1).voice,localUS);
+  assert.equal(rt.voiceReads(),2);assert.equal(JSON.stringify([...rt.saved]),before);
+  rt.api.speak('The listening passage uses the same English voice.');
+  assert.equal(rt.spoken.at(-1).voice,localUS,'cards, dictation and passages keep the same English voice');
+  assert.equal(rt.spoken.at(-1).lang,'en-US');assert.equal(rt.spoken.at(-1).rate,0.8);assert.equal(rt.voiceReads(),2);
+  rt.api.pauseSpeech();rt.api.resumeSpeech();assert.deepEqual(rt.audioEvents.slice(-2),['pause','resume'],'a queued remote voice can be paused even before its first sound');
+});
+
+test('study-card buttons share fast speech while unavailable voices and article controls remain safe',()=>{
+  const rt=runtime({},true,{voices:[],delayedStart:true}),button={dataset:{speak:'stand'},closest:()=>({})};
+  rt.api.bindSpeechButton(button);button.onclick();assert.equal(rt.spoken.length,0);
+  assert.equal(rt.element('speechStatus').hidden,false);assert.match(rt.element('speechStatus').textContent,/未找到美式或英式/);
+  rt.api.speak('Do not use a non-English default voice.');assert.equal(rt.spoken.length,0);
+  const local={name:'Local',lang:'en-US',localService:true};rt.setVoices([local]);
+  button.onclick();assert.equal(rt.spoken.at(-1).voice,local);assert.equal(rt.element('speechStatus').hidden,true);
+  const card={dataset:{studyWord:'stand'}};rt.api.bindStudyWordCard(card);
+  card.onclick({target:{closest:()=>button}});assert.equal(rt.spoken.length,1,'nested button click does not trigger the card again');
+  rt.api.stopSpeech();button.onclick();assert.equal(rt.spoken.length,2,'stop clears a pending card request');
+  const article={dataset:{speak:'This is a complete article.'},closest:()=>null};rt.api.bindSpeechButton(article);article.onclick();
+  rt.startSpeech();rt.api.pauseSpeech();rt.api.resumeSpeech();rt.api.stopSpeech();
+  assert.deepEqual(rt.audioEvents.slice(-4),['speak','pause','resume','cancel']);
+  button.onclick();rt.spoken.at(-1).onerror({error:'audio-busy'});assert.match(rt.element('speechStatus').textContent,/播放失败/);
+  button.onclick();assert.equal(rt.spoken.at(-1).text,'stand','errors allow a user retry');assert.equal(rt.element('speechStatus').hidden,true);
+  const beforeRetry=rt.spoken.length;rt.advanceTime('2026-08-28T15:59:32Z');button.onclick();
+  assert.equal(rt.spoken.length,beforeRetry+1,'a missing browser start/error event cannot permanently block the same word');
+});
+
+test('speech restricts fallback to British English and resumes a paused engine before new playback',()=>{
+  const other={name:'Other English',lang:'en-IN',localService:true,default:true},chinese={name:'Chinese',lang:'zh-CN',localService:true};
+  const british={name:'British',lang:'en-GB',localService:false},localBritish={name:'Local British',lang:'en-GB',localService:true};
+  const rt=runtime({},true,{voices:[other,chinese,british,localBritish]}),before=JSON.stringify([...rt.saved]);
+  const card={dataset:{studyWord:'reserve'}};rt.api.bindStudyWordCard(card);const click=()=>card.onclick({target:{closest:()=>null}});
+  click();assert.equal(rt.spoken.at(-1).voice,localBritish);assert.equal(rt.spoken.at(-1).lang,'en-GB');assert.match(rt.element('speechStatus').textContent,/当前使用英式/);
+  rt.api.pauseSpeech();rt.api.stopSpeech();rt.api.speak('Please listen to this announcement.');
+  assert.deepEqual(rt.audioEvents.slice(-5),['pause','cancel','cancel','resume','speak'],'cancel must not silently reset the engine paused flag');
+  rt.api.pauseSpeech();click();assert.deepEqual(rt.audioEvents.slice(-4),['pause','cancel','resume','speak']);
+  const old=rt.spoken.at(-1);rt.api.speak('The next passage.');old.onerror({error:'audio-busy'});
+  assert.doesNotMatch(rt.element('speechStatus').textContent,/播放失败/,'obsolete cancellation callbacks cannot report an error for current audio');
+  rt.setVoices([other,chinese]);rt.api.stopSpeech();const count=rt.spoken.length;click();rt.api.speak('No supported voice.');assert.equal(rt.spoken.length,count);
+  assert.match(rt.element('speechStatus').textContent,/未找到美式或英式/);assert.equal(JSON.stringify([...rt.saved]),before);
+});
+
 test('article words enter next-day learning then only their own spaced review dates',()=>{
   let vocab=addUserVocabulary(blankUserVocabulary(),{word:'feedback',meaning:'反馈',phonetic:'/ˈfiːdbæk/'},'2026-09-30','reading');
   const first=buildRecoveryLesson(DATA,CURRICULUM,'2026-10-01',{},vocab);
@@ -826,7 +884,7 @@ test('only explicitly added article words enter a fixed-size spaced review queue
   assert.deepEqual(normalizeUserVocabulary({items:{broken:{word:'',meaning:''}}}),blankUserVocabulary());
 });
 
-function runtime(initial={},browserMode=false){
+function runtime(initial={},browserMode=false,speechOptions={}){
   const saved=new Map(Object.entries(initial)),elements=new Map(),spoken=[],timers=[];
   const session=new Map(),events={},beacons=[],audioEvents=[];let reloadCount=0;
   let now=Date.parse('2026-08-28T15:59:30Z');
@@ -841,14 +899,15 @@ function runtime(initial={},browserMode=false){
   const location={href:'file:///D:/CET6-500-Study-Tool/六级学习工具.html',protocol:'file:',hostname:'',reload:()=>reloadCount++};
   location.replace=url=>{location.href=url;reloadCount++};
   const window={location,innerWidth:1024,innerHeight:768,addEventListener:(name,fn)=>events[name]=fn};
-  const speechSynthesis={speaking:false,paused:false,cancel(){this.speaking=false;this.paused=false;audioEvents.push('cancel')},getVoices(){return[]},speak(u){spoken.push(u);this.speaking=true;this.paused=false;audioEvents.push('speak')},pause(){if(this.speaking){this.paused=true;audioEvents.push('pause')}},resume(){if(this.paused){this.paused=false;audioEvents.push('resume')}}};
+  let availableVoices=speechOptions.voices??[{name:'Test US',lang:'en-US',localService:true}],voiceReadCount=0;const speechEvents={};
+  const speechSynthesis={speaking:false,pending:false,paused:false,cancel(){this.speaking=false;this.pending=false;audioEvents.push('cancel')},getVoices(){voiceReadCount++;return availableVoices},addEventListener(name,fn){speechEvents[name]=fn},speak(u){spoken.push(u);this.pending=Boolean(speechOptions.delayedStart)||this.paused;this.speaking=!this.pending;audioEvents.push('speak');if(this.speaking)u.onstart?.()},pause(){if(this.speaking||this.pending){this.paused=true;audioEvents.push('pause')}},resume(){if(this.paused){this.paused=false;audioEvents.push('resume')}}};
   const context=vm.createContext({...(browserMode?{window,sessionStorage:{getItem:k=>session.get(k)||null,setItem:(k,v)=>session.set(k,v),removeItem:k=>session.delete(k)}}:{}),Date:TestDate,document,app:element('app'),checkListen:element('checkListen'),listenRateLabel:element('listenRateLabel'),localStorage:{getItem:k=>saved.get(k)||null,setItem:(k,v)=>saved.set(k,v)},alert:m=>{throw new Error(m)},setInterval:fn=>timers.push(fn),setTimeout(){},speechSynthesis,SpeechSynthesisUtterance:function(t){this.text=t},Blob,URL,console});
   let code=[...html.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)].map(x=>x[1]).join('\n');
   const marker='reset();render();setInterval';assert.ok(code.includes(marker));
   code=code.replace(marker,'globalThis.studyTest={findSearchWord,runWordSearch,openWordSearch,closeWordSearch,lesson,progress,rawProgress,courseKey,record,save,reset,render,renderWords,renderListening,renderPractice,renderExtensive,renderRecords,persistDraft,speak,pauseSpeech,resumeSpeech,stopSpeech,seven,checkLocalRelease,firstWordAttempt,makeWordRound,restoreDailyWordRound,todayMistakeWords,articleEntry,articleText,articlePairs,parallelArticle,toggleArticleTranslation,lookupPosition,lookupPanelHtml,openArticleWord,closeArticleWord,enrolArticleWord,saveUserVocab,userVocabulary:()=>userVocab,state:()=>({ws,ls,ps,er,rate,selected,today,articleLookup,wordPractice}),setDate:k=>{selected=k;reset()},setTab:k=>{tab=k}};reset();render();setInterval');
-  code=code.replace('globalThis.studyTest={','globalThis.studyTest={bindStudyWordCard,');
+  code=code.replace('globalThis.studyTest={','globalThis.studyTest={bindStudyWordCard,bindSpeechButton,');
   vm.runInContext(code,context);
-  return {api:context.studyTest,saved,element,spoken,audioEvents,window,events,session,beacons,reloads:()=>reloadCount,advanceTime:iso=>{now=Date.parse(iso);timers.forEach(fn=>fn())}};
+  return {api:context.studyTest,saved,element,spoken,audioEvents,window,events,session,beacons,reloads:()=>reloadCount,voiceReads:()=>voiceReadCount,setVoices:rows=>{availableVoices=rows;speechEvents.voiceschanged?.()},startSpeech:()=>{speechSynthesis.pending=false;speechSynthesis.speaking=true;spoken.at(-1)?.onstart?.()},finishSpeech:()=>{speechSynthesis.pending=false;speechSynthesis.speaking=false;spoken.at(-1)?.onend?.()},advanceTime:iso=>{now=Date.parse(iso);timers.forEach(fn=>fn())}};
 }
 
 test('the header stays collapsible across navigation and reload without changing learning records',()=>{
