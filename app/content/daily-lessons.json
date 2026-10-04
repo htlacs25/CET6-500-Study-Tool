@@ -10615,5 +10615,1098 @@
         "alternative": "Because this chart shows surface temperature, it cannot directly tell us how hot the air is."
       }
     ]
+  },
+  "2026-10-06": {
+    "title": "博物馆导览：区分事实与推测",
+    "grammarTip": "先确认主句主语和谓语，再处理who、that或which引导的定语从句。物品被保护用被动语态be preserved；fragile是形容词，不能单独作谓语。阅读展品说明时区分事实、可能性和未知信息，may不能直接理解为确定发生。本课为原创虚构教学情境，非真题、非实时新闻。",
+    "words": [
+      {
+        "word": "museum",
+        "phonetic": "/mjuˈziːəm/",
+        "pos": "n.",
+        "meaning": "博物馆",
+        "phrase": "visit a museum",
+        "example": "Our class will visit a museum on Tuesday.",
+        "exampleZh": "我们班周二将参观一家博物馆。"
+      },
+      {
+        "word": "exhibition",
+        "phonetic": "/ˌeksəˈbɪʃən/",
+        "pos": "n.",
+        "meaning": "展览；展出",
+        "phrase": "a local history exhibition",
+        "example": "The exhibition shows how local families lived a century ago.",
+        "exampleZh": "这场展览展示了一百年前当地家庭的生活方式。"
+      },
+      {
+        "word": "collection",
+        "phonetic": "/kəˈlekʃən/",
+        "pos": "n.",
+        "meaning": "收藏品；一批物品；收集",
+        "phrase": "a collection of photographs",
+        "example": "The museum has a collection of old photographs.",
+        "exampleZh": "这家博物馆收藏了一批老照片。"
+      },
+      {
+        "word": "object",
+        "phonetic": "/ˈɑːbdʒekt/",
+        "pos": "n.",
+        "meaning": "物品；物体（本课名词义）",
+        "phrase": "a historical object",
+        "example": "This small object tells us something about daily life.",
+        "exampleZh": "这件小物品能让我们了解一些日常生活的情况。"
+      },
+      {
+        "word": "historical",
+        "phonetic": "/hɪˈstɔːrɪkəl/",
+        "pos": "adj.",
+        "meaning": "历史的；有关历史的",
+        "phrase": "historical records",
+        "example": "Historical records can help us check a story.",
+        "exampleZh": "历史记录可以帮助我们核查一个故事。"
+      },
+      {
+        "word": "ancient",
+        "phonetic": "/ˈeɪnʃənt/",
+        "pos": "adj.",
+        "meaning": "古代的；古老的",
+        "phrase": "an ancient city",
+        "example": "The map shows the walls of an ancient city.",
+        "exampleZh": "这幅地图展示了一座古城的城墙。"
+      },
+      {
+        "word": "modern",
+        "phonetic": "/ˈmɑːdərn/",
+        "pos": "adj.",
+        "meaning": "现代的；近代的",
+        "phrase": "modern technology",
+        "example": "Modern technology helps staff examine fragile objects.",
+        "exampleZh": "现代技术帮助工作人员检查易损物品。"
+      },
+      {
+        "word": "preserve",
+        "phonetic": "/prɪˈzɜːrv/",
+        "pos": "v.",
+        "meaning": "保护；保存；维护",
+        "phrase": "preserve old documents",
+        "example": "The museum controls the light to preserve old documents.",
+        "exampleZh": "博物馆控制光照以保护旧文献。"
+      },
+      {
+        "word": "restore",
+        "phonetic": "/rɪˈstɔːr/",
+        "pos": "v.",
+        "meaning": "修复；恢复",
+        "phrase": "restore a painting",
+        "example": "Experts spent months working to restore the painting.",
+        "exampleZh": "专家们花了数月修复这幅画。"
+      },
+      {
+        "word": "origin",
+        "phonetic": "/ˈɔːrɪdʒɪn/",
+        "pos": "n.",
+        "meaning": "起源；来源；出身",
+        "phrase": "the origin of an object",
+        "example": "The origin of the wooden box is still uncertain.",
+        "exampleZh": "这个木箱的来源仍不确定。"
+      },
+      {
+        "word": "cultural",
+        "phonetic": "/ˈkʌltʃərəl/",
+        "pos": "adj.",
+        "meaning": "文化的；与文化有关的",
+        "phrase": "cultural differences",
+        "example": "The guide explained several cultural differences between the two regions.",
+        "exampleZh": "导览员解释了这两个地区之间的几种文化差异。"
+      },
+      {
+        "word": "visitor",
+        "phonetic": "/ˈvɪzɪtər/",
+        "pos": "n.",
+        "meaning": "参观者；访客",
+        "phrase": "welcome a visitor",
+        "example": "Every visitor receives a map of the exhibition.",
+        "exampleZh": "每位参观者都会领到一张展览地图。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "guide",
+        "phonetic": "/ɡaɪd/",
+        "pos": "n.; v.",
+        "meaning": "n. 导览员；指南；v. 引导；指导",
+        "phrase": "a museum guide",
+        "example": "The museum guide answered our questions about the box.",
+        "exampleZh": "博物馆导览员回答了我们关于木箱的问题。"
+      },
+      {
+        "word": "display",
+        "phonetic": "/dɪˈspleɪ/",
+        "pos": "n.; v.",
+        "meaning": "n. 陈列；展示；v. 展示；陈列",
+        "phrase": "on display",
+        "example": "Several traditional tools are on display near the door.",
+        "exampleZh": "门边陈列着几件传统工具。"
+      },
+      {
+        "word": "craft",
+        "phonetic": "/kræft/",
+        "pos": "n.; v.",
+        "meaning": "n. 手艺；工艺；v. 精心制作",
+        "phrase": "a traditional craft",
+        "example": "Making wooden toys is a traditional craft in this town.",
+        "exampleZh": "制作木制玩具是这座小镇的一门传统手艺。"
+      },
+      {
+        "word": "traditional",
+        "phonetic": "/trəˈdɪʃənəl/",
+        "pos": "adj.",
+        "meaning": "传统的；习俗的",
+        "phrase": "traditional skills",
+        "example": "Young workers are learning traditional skills from experienced teachers.",
+        "exampleZh": "年轻工人正在向经验丰富的老师学习传统技艺。"
+      },
+      {
+        "word": "valuable",
+        "phonetic": "/ˈvæljuəbəl/",
+        "pos": "adj.",
+        "meaning": "有价值的；宝贵的；贵重的",
+        "phrase": "valuable information",
+        "example": "A simple photograph can provide valuable information about the past.",
+        "exampleZh": "一张普通的照片也能提供关于过去的宝贵信息。"
+      },
+      {
+        "word": "fragile",
+        "phonetic": "/ˈfrædʒəl/",
+        "pos": "adj.",
+        "meaning": "易碎的；易损的；脆弱的",
+        "phrase": "a fragile object",
+        "example": "The paper is fragile, so please do not touch it.",
+        "exampleZh": "这张纸很容易破损，所以请不要触摸。"
+      },
+      {
+        "word": "handle",
+        "phonetic": "/ˈhændəl/",
+        "pos": "v.; n.",
+        "meaning": "v. 拿；搬动；处理；n. 把手",
+        "phrase": "handle with care",
+        "example": "Only trained staff may handle the original objects.",
+        "exampleZh": "只有受过培训的工作人员才能搬动原件。"
+      },
+      {
+        "word": "admission",
+        "phonetic": "/ədˈmɪʃən/",
+        "pos": "n.",
+        "meaning": "准许进入；入场费；承认",
+        "phrase": "free admission",
+        "example": "The museum offers free admission to students on Friday.",
+        "exampleZh": "这家博物馆周五向学生提供免费入场。"
+      },
+      {
+        "word": "heritage",
+        "phonetic": "/ˈherɪtɪdʒ/",
+        "pos": "n.",
+        "meaning": "文化遗产；传统",
+        "phrase": "protect cultural heritage",
+        "example": "Local people work together to protect their cultural heritage.",
+        "exampleZh": "当地人共同努力保护他们的文化遗产。"
+      },
+      {
+        "word": "history",
+        "phonetic": "/ˈhɪstəri/",
+        "pos": "n.",
+        "meaning": "历史；过去经历",
+        "phrase": "local history",
+        "example": "Learning local history helps us understand the place where we live.",
+        "exampleZh": "学习地方历史有助于我们理解自己生活的地方。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The guide who leads our group ___ careful about uncertain details.",
+        "promptZh": "带领我们小组的导览员对不确定的细节很谨慎。",
+        "options": [
+          "are",
+          "is",
+          "being",
+          "do"
+        ],
+        "optionsZh": [
+          "复数现在时be",
+          "单数现在时be",
+          "非限定形式，不能单独作谓语",
+          "做；非第三人称单数助动词"
+        ],
+        "answer": 1,
+        "explanation": "who leads our group修饰单数主语The guide。careful是形容词，主句需要be动词is；leads属于定语从句，不能代替主句谓语。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "These original documents must ___ away from strong light.",
+        "promptZh": "这些原始文献必须在避开强光的地方保存。",
+        "options": [
+          "preserved",
+          "preserving",
+          "be preserved",
+          "preserve"
+        ],
+        "optionsZh": [
+          "保存（过去式或过去分词）",
+          "保存（现在分词或动名词）",
+          "被保存（被动结构）",
+          "保存（动词原形）"
+        ],
+        "answer": 2,
+        "explanation": "documents与preserve之间是被动关系。must后接动词原形，因此用must be preserved；单独的preserved缺少构成被动语态的be。",
+        "tag": "passive"
+      },
+      {
+        "prompt": "The wooden box is ___, so visitors should not touch it.",
+        "promptZh": "这个木箱很易损，因此参观者不应触摸它。",
+        "options": [
+          "fragile",
+          "fragility",
+          "fragilely",
+          "fragilities"
+        ],
+        "optionsZh": [
+          "易损的（形容词）",
+          "脆弱性（名词）",
+          "脆弱地（副词）",
+          "脆弱性（复数名词形式）"
+        ],
+        "answer": 0,
+        "explanation": "is后需要说明木箱状态的表语，选形容词fragile。名词fragility表示性质本身，不适合这里；副词不能在此替代形容词。",
+        "tag": "be-verb"
+      },
+      {
+        "prompt": "The old photograph ___ a similar box is shown beside the display.",
+        "promptZh": "那张出现了一个相似木箱的老照片陈列在展品旁边。",
+        "options": [
+          "which show",
+          "who shows",
+          "shows",
+          "that shows"
+        ],
+        "optionsZh": [
+          "展示……的（关系代词后动词数不匹配）",
+          "展示……的（who通常指人）",
+          "展示（主句谓语形式）",
+          "展示……的（关系代词加单数谓语）"
+        ],
+        "answer": 3,
+        "explanation": "主句已有is shown。空格要引导修饰photograph的定语从句，且从句主语为单数，故用that shows。不能把另一个独立谓语shows直接接在photograph后。",
+        "tag": "relative-clause"
+      },
+      {
+        "prompt": "We do not know ___ the box originally belonged to.",
+        "promptZh": "我们不知道这个箱子原来属于谁。",
+        "options": [
+          "where",
+          "who",
+          "when",
+          "whose"
+        ],
+        "optionsZh": [
+          "哪里",
+          "谁（这里作介词to的宾语）",
+          "什么时候",
+          "谁的"
+        ],
+        "answer": 1,
+        "explanation": "belong to后需要人作宾语。who引导宾语从句，放到从句开头，to留在句末；正式表达也可用whom。whose表示“谁的”，不能在这里替代who。",
+        "tag": "object-clause"
+      },
+      {
+        "prompt": "In “The records that the staff examined do not identify the owner”, which is the main-clause verb phrase?",
+        "promptZh": "在“The records that the staff examined do not identify the owner”中，哪部分是主句谓语？",
+        "options": [
+          "examined",
+          "the staff",
+          "do not identify",
+          "the owner"
+        ],
+        "optionsZh": [
+          "检查了（定语从句谓语）",
+          "工作人员（定语从句主语）",
+          "没有确认（主句谓语）",
+          "主人（主句宾语）"
+        ],
+        "answer": 2,
+        "explanation": "括起that the staff examined后，主句为The records do not identify the owner。examined在定语从句中，不是主句谓语。否定谓语do not identify必须整体识别。",
+        "tag": "main-verb"
+      }
+    ],
+    "reading": {
+      "title": "A Label That Admitted What Was Unknown",
+      "titleZh": "一张承认未知之处的展品说明",
+      "level": "四级专项衔接 · 原创模拟（非真题、非新闻）",
+      "topic": "博物馆展品说明、事实与推测",
+      "passage": "During a visit to a local museum, Nora stopped beside a wooden box. Its label said that a farming family may have used it to keep important papers. Nora wondered why the museum did not simply name the family.\n\nThe guide explained that the box had been found in an old house. A photograph showed a similar box, but no name appeared on either object. Staff had checked records and interviewed local people. They could describe where the box was discovered, but they could not identify its original owner.\n\nAt first, Nora thought the uncertain label made the exhibition less useful. Then the guide asked her to compare two statements: the box was found in that house, and it belonged to a particular family. The first was supported by a written record; the second was only a possibility.\n\nNora changed her mind. An honest exhibition did not need a complete story for every object. By separating facts from guesses, the museum allowed visitors to understand both the evidence and its limits. A clear question could be as valuable as a confident answer.",
+      "passageZh": "参观一家地方博物馆时，诺拉在一个木箱旁停下来。展品说明写道，一个农民家庭可能曾用它保存重要文件。诺拉想知道，为什么博物馆不直接写出这个家庭的名字。\n\n导览员解释说，这个箱子是在一所老房子里发现的。一张照片上出现了一个相似的箱子，但这两件物品上都没有名字。工作人员查阅了记录，也采访了当地人。他们能够说明箱子在哪里被发现，却无法确认它最初的主人。\n\n起初，诺拉觉得这张带有不确定表述的说明降低了展览的价值。随后，导览员请她比较两个说法：箱子是在那所房子里发现的；箱子属于某个特定家庭。第一个说法有书面记录支持，第二个却只是一种可能性。\n\n诺拉改变了想法。诚实的展览不需要为每件物品都编出完整故事。通过区分事实与猜测，博物馆让参观者既了解证据，也了解它的局限。一个清楚的问题，可能和一个笃定的答案同样有价值。",
+      "questions": [
+        {
+          "prompt": "Why did Nora question the label at first?",
+          "promptZh": "诺拉起初为什么对展品说明产生疑问？",
+          "options": [
+            "It gave the wrong date for the photograph.",
+            "It named too many possible owners.",
+            "It did not state exactly which family had owned the box.",
+            "It said the box had never been used."
+          ],
+          "optionsZh": [
+            "它把照片的日期写错了。",
+            "它列出了太多可能的主人。",
+            "它没有明确说明哪个家庭曾拥有这个箱子。",
+            "它说这个箱子从未被使用过。"
+          ],
+          "answer": 2,
+          "explanation": "第一段最后一句说，Nora想知道为何博物馆不直接name the family。她质疑的是主人的身份没有确定，而非日期或使用情况。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Which statement was supported by a written record?",
+          "promptZh": "哪个说法有书面记录支持？",
+          "options": [
+            "The box was discovered in the old house.",
+            "A named farming family made the box.",
+            "The box in the photograph was certainly the same object.",
+            "The original owner left a name inside the box."
+          ],
+          "optionsZh": [
+            "箱子是在那所老房子里发现的。",
+            "一个有明确姓名的农民家庭制作了箱子。",
+            "照片中的箱子确定就是同一件物品。",
+            "最初的主人在箱内留下了名字。"
+          ],
+          "answer": 0,
+          "explanation": "第三段明确把发现地点与归属某家庭对比，并说明前者有书面记录支持。similar只表示相似，不能推出照片中必然是同一物品。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What does “the second” in the third paragraph refer to?",
+          "promptZh": "第三段中的“the second（第二个）”指什么？",
+          "options": [
+            "The second photograph found in the house",
+            "The second interview with a local resident",
+            "The possibility that the box contained a written record",
+            "The statement that the box belonged to a particular family"
+          ],
+          "optionsZh": [
+            "在房子里发现的第二张照片",
+            "对一名当地居民的第二次采访",
+            "箱子里装着书面记录的可能性",
+            "箱子属于某个特定家庭的说法"
+          ],
+          "answer": 3,
+          "explanation": "two statements之后依次列出发现地点和归属家庭；the second回指后一个说法。不要把上文出现的record误当成箱内物品。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What did Nora learn from the visit?",
+          "promptZh": "诺拉从这次参观中学到了什么？",
+          "options": [
+            "Museums should avoid showing objects with missing information.",
+            "Explaining the limits of evidence can make an exhibition more useful.",
+            "A confident answer is always better than an open question.",
+            "A photograph is enough to identify any object's owner."
+          ],
+          "optionsZh": [
+            "博物馆应避免展示信息不完整的物品。",
+            "解释证据的局限可以让展览更有价值。",
+            "笃定的答案总比开放的问题好。",
+            "一张照片足以确认任何物品的主人。"
+          ],
+          "answer": 1,
+          "explanation": "最后一段通过Nora改变想法总结主旨：诚实区分事实和猜测能帮助参观者理解证据及其边界，不需要为每件展品强行给出完整故事。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "Instructions for the Museum Visit",
+      "titleZh": "博物馆参观通知",
+      "level": "四级专项衔接 · 原创模拟通知 · 合成朗读",
+      "tip": "先盲听确定集合时间、地点和活动，再记下禁止事项。特别注意nine forty-five与ten的区别，以及photographs允许但flash不允许的转折。第三遍按短段听写，随后选3段跟读。美式英语语音优先；这不是四级真题录音。",
+      "passage": "Good afternoon, everyone. Tomorrow's museum visit begins at ten, but meet outside the main gate at nine forty-five. Bring your student card for free admission. The guide will first introduce the local history exhibition. You may take photographs, but please turn off your flash. Do not touch the original objects, even if they look strong. Some materials are fragile. During the final activity, choose one object and write down one fact and one unanswered question about it. We will discuss your notes on the bus back to school.",
+      "passageZh": "大家下午好。明天的博物馆参观十点开始，但请在九点四十五分到大门外集合。带上学生证以便免费入场。导览员将首先介绍地方历史展览。可以拍照，但请关闭闪光灯。即使原件看起来很结实，也不要触摸。有些材料很容易损坏。在最后的活动中，选择一件物品，写下关于它的一个事实和一个尚未解答的问题。我们将在返校的巴士上讨论你们的笔记。",
+      "dictation": [
+        "Bring your student card for free admission.",
+        "You may take photographs, but please turn off your flash."
+      ],
+      "dictationZh": [
+        "带上学生证以便免费入场。",
+        "可以拍照，但请关闭闪光灯。"
+      ],
+      "questions": [
+        {
+          "prompt": "When should students meet outside the main gate?",
+          "promptZh": "学生们应该几点在大门外集合？",
+          "options": [
+            "At nine fifteen",
+            "At ten",
+            "At ten fifteen",
+            "At nine forty-five"
+          ],
+          "optionsZh": [
+            "九点十五分",
+            "十点",
+            "十点十五分",
+            "九点四十五分"
+          ],
+          "answer": 3,
+          "explanation": "通知区分了visit begins at ten与meet ... at nine forty-five。题目问集合时间，不是参观开始时间，应选九点四十五分。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "What should students write during the final activity?",
+          "promptZh": "学生们在最后的活动中应该写什么？",
+          "options": [
+            "One fact and one unanswered question about an object",
+            "The names of every visitor in their group",
+            "A complete story about the original owner",
+            "Instructions for repairing a fragile object"
+          ],
+          "optionsZh": [
+            "关于一件物品的一个事实和一个未解答的问题",
+            "小组中每位参观者的名字",
+            "关于原主人的完整故事",
+            "修复一件易损物品的步骤"
+          ],
+          "answer": 0,
+          "explanation": "结尾直接要求write down one fact and one unanswered question about it。任务强调证据和未知信息，不能自行编写主人的完整故事。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The guide who showed us the wooden box explained that the records which the staff had examined did not identify its original owner.",
+      "main": "The guide explained that the records did not identify its original owner.",
+      "translation": "向我们展示木箱的导览员解释说，工作人员查阅过的记录并没有确认木箱最初的主人。",
+      "core": [
+        "guide",
+        "explained",
+        "records",
+        "did",
+        "not",
+        "identify",
+        "owner"
+      ],
+      "keywords": [
+        "导览员",
+        "展示木箱",
+        "解释",
+        "工作人员查阅的记录",
+        "没有确认",
+        "最初的主人"
+      ],
+      "structure": "主句主语The guide，谓语explained，宾语为that引导的整个从句。who showed us the wooden box是修饰guide的定语从句。宾语从句的主语是the records，谓语为did not identify；which the staff had examined是修饰records的定语从句，which作examined的宾语。its original owner指木箱最初的主人。",
+      "mainZh": "导览员解释说，记录没有确认它最初的主人。",
+      "level": "四级专项句法",
+      "topic": "主句谓语、宾语从句与两层定语从句",
+      "grammar": [
+        "showed属于who定语从句，不是主句谓语；主句核心是guide explained。",
+        "explained后的that引导宾语从句，不在该从句内作主语或宾语。which则作had examined的宾语。",
+        "过去完成时had examined表示查阅记录发生在解释之前；did not之后用动词原形identify，不能用identified。"
+      ],
+      "examTip": "先框定guide explained，再找records did not identify。把who和which引导的两段修饰分别括起来，特别保留否定词not，避免把“没有确认”读成“确认了”。"
+    },
+    "trans": [
+      {
+        "source": "这家博物馆保护历史物品，让参观者能够了解当地人的生活。",
+        "answer": "This museum preserves historical objects so that visitors can learn about local people's lives.",
+        "keywords": [
+          "museum",
+          "preserves",
+          "historical objects",
+          "visitors",
+          "learn about"
+        ],
+        "grammar": "主语This museum为单数，谓语preserve加-s。so that引导目的状语从句，can后接原形learn。historical修饰objects；local people's lives表示当地人的生活。",
+        "acceptedAnswers": [
+          "This museum preserves historical objects so that visitors can learn about local people's lives.",
+          "The museum preserves historical objects to help visitors learn about the lives of local people."
+        ],
+        "level": "四级专项表达",
+        "topic": "文化遗产保护与目的表达",
+        "chunks": [
+          "preserve historical objects",
+          "so that visitors can",
+          "learn about local people's lives"
+        ],
+        "alternative": "The museum preserves historical objects to help visitors learn about the lives of local people."
+      },
+      {
+        "source": "虽然我们知道这个箱子在哪里被发现，但我们仍不知道它最初属于谁。",
+        "answer": "Although we know where the box was found, we still do not know who it originally belonged to.",
+        "keywords": [
+          "although",
+          "where the box was found",
+          "still",
+          "do not know",
+          "belonged to"
+        ],
+        "grammar": "although引导让步状语从句，主句通常不再加but。where the box was found与who it originally belonged to都是宾语从句，使用陈述语序。belong to不是被动语态，不能写成was belonged to。",
+        "acceptedAnswers": [
+          "Although we know where the box was found, we still do not know who it originally belonged to.",
+          "We know where the box was discovered, but we still do not know who its original owner was."
+        ],
+        "level": "四级专项表达",
+        "topic": "让步关系与宾语从句语序",
+        "chunks": [
+          "although we know",
+          "where the box was found",
+          "who it originally belonged to"
+        ],
+        "alternative": "We know where the box was discovered, but we still do not know who its original owner was."
+      }
+    ]
+  },
+  "2026-10-07": {
+    "title": "兼职培训：用具体反馈改进工作流程",
+    "grammarTip": "先划掉who或that引导的定语从句，再找主句谓语；experienced和punctual作表语时需要be动词。副词修饰动作，如check carefully；yesterday等过去时间提示一般过去时。阅读时区分“工作更快”与“减少返工”，听力抓培训时间、携带物品和操作顺序。材料为原创分级模拟，不是真题或真实新闻。",
+    "words": [
+      {
+        "word": "employee",
+        "phonetic": "/ɪmˈplɔɪiː/",
+        "pos": "n.",
+        "meaning": "雇员；员工",
+        "phrase": "a new employee",
+        "example": "Each new employee receives safety training before starting work.",
+        "exampleZh": "每位新员工在开始工作前都要接受安全培训。"
+      },
+      {
+        "word": "profession",
+        "phonetic": "/prəˈfeʃən/",
+        "pos": "n.",
+        "meaning": "职业，尤指需要专门训练的职业",
+        "phrase": "enter a profession",
+        "example": "She hopes to enter the teaching profession after college.",
+        "exampleZh": "她希望大学毕业后从事教师职业。"
+      },
+      {
+        "word": "occupation",
+        "phonetic": "/ˌɑːkjəˈpeɪʃən/",
+        "pos": "n.",
+        "meaning": "职业；工作",
+        "phrase": "state your occupation",
+        "example": "The form asks applicants to state their occupation.",
+        "exampleZh": "表格要求申请人填写自己的职业。"
+      },
+      {
+        "word": "wage",
+        "phonetic": "/weɪdʒ/",
+        "pos": "n.",
+        "meaning": "工资，尤指按小时、日或周计算的报酬",
+        "phrase": "an hourly wage",
+        "example": "The store pays an hourly wage for part-time work.",
+        "exampleZh": "这家商店按小时支付兼职工作的工资。"
+      },
+      {
+        "word": "income",
+        "phonetic": "/ˈɪnkʌm/",
+        "pos": "n.",
+        "meaning": "收入；收益",
+        "phrase": "a regular income",
+        "example": "A regular income helps him plan his monthly spending.",
+        "exampleZh": "稳定的收入有助于他规划每月开支。"
+      },
+      {
+        "word": "earn",
+        "phonetic": "/ɝːn/",
+        "pos": "v.",
+        "meaning": "挣得；赢得",
+        "phrase": "earn money",
+        "example": "She earns money by helping at a local store on weekends.",
+        "exampleZh": "她周末在当地一家商店帮忙挣钱。"
+      },
+      {
+        "word": "hire",
+        "phonetic": "/haɪr/",
+        "pos": "v.",
+        "meaning": "雇用；租用",
+        "phrase": "hire an assistant",
+        "example": "The manager plans to hire an assistant for the busy season.",
+        "exampleZh": "经理计划为旺季雇用一名助理。"
+      },
+      {
+        "word": "train",
+        "phonetic": "/treɪn/",
+        "pos": "v.; n.",
+        "meaning": "v. 培训；训练；n. 火车",
+        "phrase": "train new employees",
+        "example": "An experienced worker will train the new employees.",
+        "exampleZh": "一名有经验的工人将培训新员工。"
+      },
+      {
+        "word": "training",
+        "phonetic": "/ˈtreɪnɪŋ/",
+        "pos": "n.",
+        "meaning": "培训；训练",
+        "phrase": "practical training",
+        "example": "Practical training gives students a chance to use their skills.",
+        "exampleZh": "实践培训让学生有机会运用自己的技能。"
+      },
+      {
+        "word": "experienced",
+        "phonetic": "/ɪkˈspɪriənst/",
+        "pos": "adj.",
+        "meaning": "有经验的；熟练的",
+        "phrase": "an experienced worker",
+        "example": "An experienced worker showed me a safer way to lift the box.",
+        "exampleZh": "一名有经验的工人教了我一种更安全的搬箱方法。"
+      },
+      {
+        "word": "efficiency",
+        "phonetic": "/ɪˈfɪʃənsi/",
+        "pos": "n.",
+        "meaning": "效率；效能",
+        "phrase": "improve efficiency",
+        "example": "Clear labels can improve efficiency by reducing mistakes.",
+        "exampleZh": "清晰的标签可以通过减少错误来提高效率。"
+      },
+      {
+        "word": "punctual",
+        "phonetic": "/ˈpʌŋktʃuəl/",
+        "pos": "adj.",
+        "meaning": "守时的；准时的",
+        "phrase": "be punctual",
+        "example": "Being punctual gives us time to prepare before the store opens.",
+        "exampleZh": "守时让我们有时间在商店开门前做好准备。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "equipment",
+        "phonetic": "/ɪˈkwɪpmənt/",
+        "pos": "n.",
+        "meaning": "设备；器材（不可数名词）",
+        "phrase": "safety equipment",
+        "example": "Workers must check the safety equipment before each task.",
+        "exampleZh": "工人必须在每项任务开始前检查安全设备。"
+      },
+      {
+        "word": "machinery",
+        "phonetic": "/məˈʃiːnəri/",
+        "pos": "n.",
+        "meaning": "机械；机器的总称（不可数名词）",
+        "phrase": "operate machinery",
+        "example": "Only trained staff may operate this machinery.",
+        "exampleZh": "只有受过培训的员工才能操作这些机械。"
+      },
+      {
+        "word": "factory",
+        "phonetic": "/ˈfæktəri/",
+        "pos": "n.",
+        "meaning": "工厂",
+        "phrase": "a local factory",
+        "example": "A local factory offered summer jobs to college students.",
+        "exampleZh": "当地一家工厂为大学生提供了暑期工作。"
+      },
+      {
+        "word": "manufacture",
+        "phonetic": "/ˌmænjəˈfæktʃɚ/",
+        "pos": "v.; n.",
+        "meaning": "v. 制造，尤指大规模生产；n. 制造；生产",
+        "phrase": "manufacture furniture",
+        "example": "The company manufactures furniture for schools and offices.",
+        "exampleZh": "这家公司为学校和办公室生产家具。"
+      },
+      {
+        "word": "industry",
+        "phonetic": "/ˈɪndəstri/",
+        "pos": "n.",
+        "meaning": "工业；行业",
+        "phrase": "the clothing industry",
+        "example": "The clothing industry provides many different kinds of jobs.",
+        "exampleZh": "服装行业提供多种不同类型的工作。"
+      },
+      {
+        "word": "trade",
+        "phonetic": "/treɪd/",
+        "pos": "n.; v.",
+        "meaning": "n. 贸易；行业；v. 做买卖；交换",
+        "phrase": "international trade",
+        "example": "The students discussed how international trade connects different countries.",
+        "exampleZh": "学生们讨论了国际贸易如何把不同国家联系起来。"
+      },
+      {
+        "word": "export",
+        "phonetic": "/ɪkˈspɔːrt/",
+        "pos": "v.",
+        "meaning": "出口；输出（此处学习动词读音）",
+        "phrase": "export products",
+        "example": "The company exports its products to several countries.",
+        "exampleZh": "这家公司向多个国家出口产品。"
+      },
+      {
+        "word": "import",
+        "phonetic": "/ɪmˈpɔːrt/",
+        "pos": "v.",
+        "meaning": "进口；输入（此处学习动词读音）",
+        "phrase": "import equipment",
+        "example": "The factory imports equipment that it cannot buy locally.",
+        "exampleZh": "这家工厂进口在当地无法买到的设备。"
+      },
+      {
+        "word": "foreign",
+        "phonetic": "/ˈfɔːrən/",
+        "pos": "adj.",
+        "meaning": "外国的；外来的",
+        "phrase": "a foreign language",
+        "example": "Knowing a foreign language can help when working with visitors.",
+        "exampleZh": "掌握一门外语有助于在工作中接待访客。"
+      },
+      {
+        "word": "international",
+        "phonetic": "/ˌɪntɚˈnæʃənəl/",
+        "pos": "adj.",
+        "meaning": "国际的；跨国的",
+        "phrase": "an international company",
+        "example": "An international company may have offices in several countries.",
+        "exampleZh": "一家跨国公司可能在多个国家设有办事处。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The employees who check the orders carefully ___ fewer mistakes.",
+        "promptZh": "认真检查订单的员工犯的错误更少。",
+        "options": [
+          "makes",
+          "make",
+          "making",
+          "is"
+        ],
+        "optionsZh": [
+          "犯；造成（第三人称单数）",
+          "犯；造成（动词原形）",
+          "犯；造成（非限定形式）",
+          "是（单数be）"
+        ],
+        "answer": 1,
+        "explanation": "who check the orders carefully是修饰employees的定语从句；主句仍需要谓语。主语employees是复数，一般现在时用make；making不能独立充当谓语。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "The worker who leads our training ___ very experienced.",
+        "promptZh": "负责我们培训的那名工人很有经验。",
+        "options": [
+          "does",
+          "has",
+          "is",
+          "are"
+        ],
+        "optionsZh": [
+          "助动词第三人称单数",
+          "有（第三人称单数）",
+          "是（单数be）",
+          "是（复数be）"
+        ],
+        "answer": 2,
+        "explanation": "experienced在此是形容词，需要be动词。主语The worker是单数，选is。leads属于who引导的定语从句，不能替代主句谓语。",
+        "tag": "be-verb"
+      },
+      {
+        "prompt": "Please check the labels ___ before sending the boxes.",
+        "promptZh": "寄出箱子之前，请仔细检查标签。",
+        "options": [
+          "careful",
+          "care",
+          "carefulness",
+          "carefully"
+        ],
+        "optionsZh": [
+          "仔细的（形容词）",
+          "小心；照料（名词或动词）",
+          "细心（名词）",
+          "仔细地（副词）"
+        ],
+        "answer": 3,
+        "explanation": "空格说明check这一动作的方式，使用副词carefully。careful通常修饰名词或作表语，不能在这里直接修饰check。",
+        "tag": "word-form"
+      },
+      {
+        "prompt": "Yesterday, the manager ___ two students for weekend work.",
+        "promptZh": "昨天，经理雇用了两名学生做周末兼职。",
+        "options": [
+          "hired",
+          "hires",
+          "will hire",
+          "hiring"
+        ],
+        "optionsZh": [
+          "雇用了（一般过去时）",
+          "雇用（一般现在时第三人称单数）",
+          "将雇用（一般将来时）",
+          "雇用（非限定形式）"
+        ],
+        "answer": 0,
+        "explanation": "Yesterday明确表示过去时间，句子描述已发生的动作，用hired。hiring不能独立作主句谓语。",
+        "tag": "past-tense"
+      },
+      {
+        "prompt": "The new equipment ___ ready for the afternoon session.",
+        "promptZh": "新设备已经为下午的培训准备好了。",
+        "options": [
+          "are",
+          "is",
+          "being",
+          "have"
+        ],
+        "optionsZh": [
+          "是（复数be）",
+          "是（单数be）",
+          "是（非限定形式）",
+          "有；完成时助动词原形"
+        ],
+        "answer": 1,
+        "explanation": "equipment是不可数名词，作主语时谓语通常用单数；ready是形容词，前面用is。不能把equipment写成equipments来表示多台设备。",
+        "tag": "agreement"
+      },
+      {
+        "prompt": "In 'The notes that Alex wrote helped him check orders correctly', which word is the main-clause verb?",
+        "promptZh": "在“The notes that Alex wrote helped him check orders correctly”中，哪个词是主句谓语动词？",
+        "options": [
+          "wrote",
+          "check",
+          "helped",
+          "correctly"
+        ],
+        "optionsZh": [
+          "写了（定语从句谓语）",
+          "检查（此处为动词原形）",
+          "帮助了（主句谓语）",
+          "正确地（副词）"
+        ],
+        "answer": 2,
+        "explanation": "先去掉that Alex wrote，得到The notes helped him check orders correctly。主句谓语是helped；wrote属于定语从句；check出现在help somebody do something结构中，不是另一个主句谓语。",
+        "tag": "main-verb"
+      }
+    ],
+    "reading": {
+      "title": "A Better Way to Check an Order",
+      "titleZh": "检查订单的更好方法",
+      "level": "四级衔接专项 · 原创分级模拟（非真题、非新闻）",
+      "topic": "兼职培训、具体反馈与工作效率",
+      "passage": "When Alex started a part-time job at a small printing shop, he thought a good employee should finish every order as quickly as possible. During his first week, however, he printed several pages in the wrong size. The shop had to use extra paper and spend more time correcting the work.\n\nHis manager did not simply tell him to be more careful. She asked him to describe each step he had taken. Together, they found that he often began printing before checking the customer's written request. An experienced worker then showed him a short checking routine: read the request, confirm the size, and print one test page.\n\nAt first, this routine made each order slightly slower. By Friday, Alex was making fewer mistakes and rarely needed to print an order again. He wrote down one problem after each shift and asked for advice on it the next day.\n\nAlex learned that useful feedback points to an action a worker can change. Improving efficiency does not always mean moving faster; sometimes it means preventing the same mistake from happening again.",
+      "passageZh": "亚历克斯开始在一家小印刷店做兼职时，认为好员工应该尽可能快地完成每份订单。然而，在第一周，他把好几页纸印成了错误的尺寸。商店不得不额外用纸，并花更多时间纠正这项工作。\n\n经理并没有只让他更加小心。她让他描述自己采取过的每一个步骤。他们一起发现，他经常在检查客户的书面要求之前就开始打印。随后，一名有经验的工人教了他一套简短的检查流程：读要求、确认尺寸、打印一页样张。\n\n起初，这套流程让每份订单都稍慢一些。到了星期五，亚历克斯犯的错误变少了，很少再需要重印整份订单。每次下班后，他都会记下一个问题，第二天针对这个问题请教。\n\n亚历克斯明白了，有用的反馈会指出一个员工能够改变的具体行动。提高效率并不总是意味着动作更快；有时候，它意味着避免再次犯同样的错误。",
+      "questions": [
+        {
+          "prompt": "What caused some of Alex's early mistakes?",
+          "promptZh": "亚历克斯早期的一些错误是什么原因造成的？",
+          "options": [
+            "He received no written requests from customers.",
+            "He started printing before checking the written request.",
+            "He used a different shop's checking routine.",
+            "He refused to print a test page after training."
+          ],
+          "optionsZh": [
+            "客户没有提供书面要求。",
+            "他尚未检查书面要求就开始打印。",
+            "他使用了另一家店的检查流程。",
+            "培训之后他拒绝打印样张。"
+          ],
+          "answer": 1,
+          "explanation": "第二段明确指出he often began printing before checking the customer's written request。问题不是缺少书面要求，而是没有先检查；D与之后采用流程的行为不符。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "How did the manager make her feedback useful?",
+          "promptZh": "经理怎样让自己的反馈更有用？",
+          "options": [
+            "She asked Alex to work twice as fast.",
+            "She removed all checks from the process.",
+            "She blamed the customers for unclear orders.",
+            "She helped Alex find a specific step to change."
+          ],
+          "optionsZh": [
+            "她让亚历克斯以两倍速度工作。",
+            "她取消了流程中的所有检查。",
+            "她责怪客户的订单不清楚。",
+            "她帮助亚历克斯找到一个需要改变的具体步骤。"
+          ],
+          "answer": 3,
+          "explanation": "经理让他逐步描述过程，并定位到打印前未检查要求这一问题。反馈具体指向可以改变的步骤，而非笼统催促或责怪他人。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What happened after Alex adopted the checking routine?",
+          "promptZh": "亚历克斯采用检查流程后发生了什么？",
+          "options": [
+            "He made fewer mistakes and needed less repeated printing.",
+            "He immediately completed every order faster.",
+            "He no longer needed to read customers' requests.",
+            "He stopped asking other workers for advice."
+          ],
+          "optionsZh": [
+            "他的错误减少了，需要重印的情况也减少了。",
+            "他立刻更快地完成了每一份订单。",
+            "他不再需要阅读客户的要求。",
+            "他不再向其他工人请教。"
+          ],
+          "answer": 0,
+          "explanation": "第三段说明起初略慢，但到周五错误和重印都减少。B中的immediately与At first...slightly slower冲突；C、D均不符合原文。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What is the main lesson of the passage?",
+          "promptZh": "这篇文章主要说明了什么？",
+          "options": [
+            "A part-time worker should never question a routine.",
+            "Speed is the only useful measure of work quality.",
+            "Specific feedback can improve efficiency by reducing repeated mistakes.",
+            "Experienced workers do not need to check their orders."
+          ],
+          "optionsZh": [
+            "兼职员工绝不应该质疑工作流程。",
+            "速度是衡量工作质量唯一有用的标准。",
+            "具体反馈可以通过减少重复错误提高效率。",
+            "有经验的工人不需要检查订单。"
+          ],
+          "answer": 2,
+          "explanation": "全文通过查明原因、改变步骤和减少重印展示具体反馈的作用，末段直接总结效率不只来自速度，也来自避免重复错误。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "A Notice for New Employees",
+      "titleZh": "新员工培训通知",
+      "level": "四级衔接短通知 · 原创模拟 · 浏览器合成朗读",
+      "tip": "第一遍抓住通知目的；第二遍区分培训开始时间和提前到达时间，记录携带物品与请假截止时间。重点听first、then和This time，辨认先示范、后结对练习的顺序。朗读优先采用可用美式英语语音，不是真题录音。",
+      "passage": "Hello, everyone. Tomorrow's training for new employees will start at nine in Room Three. Please arrive ten minutes early, but do not begin using the equipment alone. An experienced worker will first show you how to check each order. Then you will practice in pairs and receive feedback on one completed task. Last week's group tried to work quickly and missed several labels. This time, accuracy comes before speed. Bring a notebook, not your own tools. If you cannot attend, call the office before five today so we can arrange another session.",
+      "passageZh": "大家好。明天的新员工培训将在九点于三号房间开始。请提前十分钟到达，但不要独自开始使用设备。一名有经验的工人会先示范如何检查每一份订单。随后，你们将结对练习，并就一项完成的任务获得反馈。上周那组人力求工作迅速，却漏看了几个标签。这一次，准确性比速度更重要。请带笔记本，不要带自己的工具。如果无法参加，请在今天五点前给办公室打电话，以便我们安排另一场培训。",
+      "dictation": [
+        "This time, accuracy comes before speed.",
+        "Bring a notebook, not your own tools."
+      ],
+      "dictationZh": [
+        "这一次，准确性比速度更重要。",
+        "请带笔记本，不要带自己的工具。"
+      ],
+      "questions": [
+        {
+          "prompt": "What should employees do before the training begins at nine?",
+          "promptZh": "员工在九点培训开始前应该做什么？",
+          "options": [
+            "Start using the equipment alone.",
+            "Call the office at five tomorrow.",
+            "Arrive ten minutes early.",
+            "Bring their own tools to the room."
+          ],
+          "optionsZh": [
+            "独自开始使用设备。",
+            "明天五点给办公室打电话。",
+            "提前十分钟到达。",
+            "把自己的工具带到房间。"
+          ],
+          "answer": 2,
+          "explanation": "通知明确要求arrive ten minutes early，因此应八点五十分到达。不能把开始时间九点当成到达时间；工具和独自操作设备都被否定。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "Why does the speaker emphasize accuracy before speed?",
+          "promptZh": "说话者为什么强调准确性优先于速度？",
+          "options": [
+            "The previous group worked quickly but missed labels.",
+            "The office no longer accepts written orders.",
+            "The training session has been moved to another day.",
+            "Experienced workers must complete all the tasks alone."
+          ],
+          "optionsZh": [
+            "上一组工作求快，却漏看了标签。",
+            "办公室不再接受书面订单。",
+            "培训已改到另一天。",
+            "有经验的工人必须独自完成所有任务。"
+          ],
+          "answer": 0,
+          "explanation": "Last week's group tried to work quickly and missed several labels给出强调准确性的原因。其余内容未被提及或与结对练习的安排不符。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The employee who checks each order carefully knows that training is useful only when workers apply what they have learned.",
+      "main": "The employee knows that training is useful only when workers apply what they have learned.",
+      "translation": "这名认真检查每份订单的员工明白，只有当工人运用所学内容时，培训才有用。",
+      "core": [
+        "employee",
+        "knows",
+        "training",
+        "is",
+        "useful",
+        "workers",
+        "apply"
+      ],
+      "keywords": [
+        "员工",
+        "认真检查每份订单",
+        "明白",
+        "培训",
+        "只有",
+        "运用所学内容",
+        "才有用"
+      ],
+      "structure": "主句主语是The employee，谓语是knows，that引导宾语从句。who checks each order carefully是修饰employee的定语从句，不是主句。宾语从句的主语是training，系表结构是is useful；only when workers apply what they have learned表示培训有用的条件。what they have learned整体作apply的宾语，意为“他们所学的内容”。",
+      "mainZh": "员工明白，只有当工人运用所学内容时，培训才有用。",
+      "level": "四级衔接句法",
+      "topic": "主句谓语、定语从句、be加形容词及what名词性从句",
+      "grammar": [
+        "先括起who checks each order carefully，便能找到The employee knows这一主干；checks不是主句谓语。",
+        "training是名词，useful是形容词，两者之间需要系动词is；不能省略be。",
+        "carefully修饰checks这一动作；what they have learned不是疑问句，而是表示“他们所学内容”的名词性从句。"
+      ],
+      "examTip": "先说出employee knows，再解释that后面的观点；翻译only when时要保留“只有……才……”这一限制，不要译成所有培训自动有效。"
+    },
+    "trans": [
+      {
+        "source": "有经验的员工会在开始工作之前检查设备。",
+        "answer": "Experienced employees check the equipment before starting work.",
+        "keywords": [
+          "experienced",
+          "employees",
+          "check",
+          "equipment",
+          "before"
+        ],
+        "grammar": "experienced是形容词，修饰employees；复数主语搭配check。equipment是不可数名词。before后可接动名词starting，也可接they start这样的完整从句。",
+        "acceptedAnswers": [
+          "Experienced employees check the equipment before starting work.",
+          "Experienced employees check the equipment before they start work."
+        ],
+        "level": "四级衔接表达",
+        "topic": "形容词修饰名词、不可数名词与时间顺序",
+        "chunks": [
+          "experienced employees",
+          "check the equipment",
+          "before starting work"
+        ],
+        "alternative": "Experienced employees check the equipment before they start work."
+      },
+      {
+        "source": "具体的反馈帮助我们减少错误，而不仅仅是加快速度。",
+        "answer": "Specific feedback helps us reduce mistakes, not just work faster.",
+        "keywords": [
+          "specific feedback",
+          "helps us",
+          "reduce mistakes",
+          "not just",
+          "faster"
+        ],
+        "grammar": "feedback是不可数名词，作主语时用helps；help somebody do something中的reduce和work用动词原形。not just保留“不仅仅”的对比含义，不能把句子简化成只追求速度。",
+        "acceptedAnswers": [
+          "Specific feedback helps us reduce mistakes, not just work faster.",
+          "Specific feedback helps us make fewer mistakes rather than simply work faster."
+        ],
+        "level": "四级衔接表达",
+        "topic": "feedback的主谓一致、help结构与对比表达",
+        "chunks": [
+          "specific feedback",
+          "help us reduce mistakes",
+          "not just work faster"
+        ],
+        "alternative": "Specific feedback helps us make fewer mistakes rather than simply work faster."
+      }
+    ]
   }
 }

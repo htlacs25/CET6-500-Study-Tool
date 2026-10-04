@@ -2533,5 +2533,117 @@
         "explanation": "末段强调地图是讨论的起点，能让缺失的信息显现。第三段提出收集居民意见和检查地点，表明地图仍需其他信息配合。"
       }
     ]
+  },
+  {
+    "date": "2026-10-06",
+    "title": "A Bus Ticket Opens a Conversation About a Town",
+    "titleZh": "一张公交票开启关于小城的对话",
+    "category": "Local history — ordinary objects and changing journeys",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article about a fictional local history museum and invented exhibits; not real or live news. 原创报刊风格教学短文，博物馆、展品和人物回忆均为教学虚构，不是真实或实时新闻。",
+    "text": "In a fictional local history museum, a small bus ticket has become the starting point for an exhibition about daily travel. The paper is thin, its price is printed in faded ink, and a tiny hole shows that it was checked. It is not rare or expensive. That is exactly why the museum chose it.\n\nBeside the ticket, visitors can see a street map and read short accounts from former passengers. One woman remembers taking an early bus to a factory. A retired teacher describes carrying a heavy bag of exercise books home. Their journeys show how public transport connected work, school and family life. The exhibition asks visitors to compare these journeys with their own.\n\nThe museum team avoided telling a simple story of constant improvement. Buses are more comfortable now, but some old routes no longer exist. A quicker journey for one person may mean a longer walk to the stop for another. Children are invited to plan a journey using both the old map and a modern one.\n\nStaff hope the display will encourage conversations between generations. An ordinary ticket cannot explain every change in a town. However, when it is placed beside maps and personal memories, it can help people ask whose journeys became easier and whose needs remain unmet.",
+    "textZh": "在一座虚构的地方历史博物馆里，一张小小的公交票成为日常出行展览的切入点。票纸很薄，上面的票价用已经褪色的墨水印着，一个小孔表明这张票曾被查验。它既不罕见，也不昂贵。这恰恰是博物馆选择它的原因。\n\n车票旁，参观者可以看街道地图，并阅读昔日乘客的简短讲述。一位女士记得自己曾坐早班公交去工厂。一位退休教师描述了背着沉重的作业本回家的经历。他们的旅程展现了公共交通如何把工作、学校与家庭生活联系起来。展览请参观者把这些旅程与自己的出行作比较。\n\n博物馆团队没有把变化简单讲成不断进步的故事。如今的公交车更舒适了，但一些旧线路已经不复存在。一个人的行程变快，可能意味着另一个人要走更远才能到车站。孩子们被邀请分别使用旧地图和现代地图规划一次出行。\n\n工作人员希望这个展览能鼓励不同代人之间的交流。一张普通车票无法解释小城的每一种变化。然而，把它与地图和个人回忆放在一起，就能帮助人们追问：谁的出行变得更便利，谁的需求仍未得到满足。",
+    "listeningTip": "先盲听车票为什么值得展出，再带文精听but和However后的转折。选取三句，分别围绕public transport、no longer exist和whose needs remain unmet划分意群，暂停模仿后各做一组影子跟读，最后脱稿复述30—60秒。朗读为浏览器合成语音，不是真题录音。",
+    "speakingPrompt": "Retell the museum display in 30–60 seconds. Explain why the ordinary ticket matters, give one example of a past journey, and describe why transport changes may help people differently.",
+    "speakingPromptZh": "用30—60秒复述这个展览。解释普通车票为什么有意义，举出一例过去的出行，并说明交通变化为什么可能对不同人产生不同影响。",
+    "keyPhrases": [
+      { "en": "the starting point for an exhibition", "zh": "一次展览的切入点" },
+      { "en": "compare these journeys with their own", "zh": "把这些旅程与他们自己的出行作比较" },
+      { "en": "encourage conversations between generations", "zh": "鼓励不同代人之间的交流" }
+    ],
+    "questions": [
+      {
+        "prompt": "Why did the museum choose the bus ticket?",
+        "promptZh": "博物馆为什么选择这张公交票？",
+        "options": [
+          "Its ordinary nature helps introduce the history of daily travel.",
+          "It is the most expensive object in the museum.",
+          "It proves that every bus route has stayed the same.",
+          "It contains a complete account of the town's history."
+        ],
+        "optionsZh": [
+          "它的普通性有助于引出日常出行的历史。",
+          "它是博物馆里最昂贵的物品。",
+          "它证明每一条公交线路都没有变化。",
+          "它包含小城历史的完整记录。"
+        ],
+        "answer": 0,
+        "explanation": "第一段先说车票是日常出行展览的切入点，又强调它不罕见也不昂贵，这恰恰是选择它的原因。后文通过普通乘客的旅程展开日常生活史，因此选A；文章没有把它的价值归结为价格或稀有程度。"
+      },
+      {
+        "prompt": "What does the example of a longer walk to the bus stop suggest?",
+        "promptZh": "走更远才能到公交站的例子说明了什么？",
+        "options": [
+          "Modern buses are always less comfortable than old buses.",
+          "Old maps cannot help visitors understand any changes.",
+          "Transport changes do not benefit all people in the same way.",
+          "The museum recommends closing every old route."
+        ],
+        "optionsZh": [
+          "现代公交车总比旧公交车不舒适。",
+          "旧地图无法帮助参观者理解任何变化。",
+          "交通变化对不同人的好处并不完全相同。",
+          "博物馆建议关闭所有旧线路。"
+        ],
+        "answer": 2,
+        "explanation": "第三段把一个人的行程变快与另一个人走更远到站作对照，说明不能把交通变化简单看成对所有人同样有利的进步，因此选C。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-07",
+    "title": "A Picture Card Makes a Work Handover Clearer",
+    "titleZh": "一张图示卡让工作交接更清楚",
+    "category": "Workplace learning — communication and practical feedback",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article about an imagined coffee shop and training exercise; all events are fictional, not real or live news. 原创报刊风格教学短文，咖啡店与培训活动均为教学虚构，不是真实或实时新闻。",
+    "text": "At an imagined coffee shop, new employees used to watch an experienced worker for one morning before taking orders alone. The manager noticed that beginners could remember how to make popular drinks but often felt unsure when handing work to the next person. A missing message could leave a customer waiting while everyone assumed someone else was helping.\n\nThe team introduced a small picture card for practice. It showed three moments: receiving an order, checking any special request, and passing the order to a colleague. During training, one employee played the customer while another explained the next step aloud. The colleague then repeated the key information before starting.\n\nThe card was not meant to replace conversation. When a customer changed an order, employees still needed to ask questions and update each other. Trainers also used examples that were not on the card, so beginners could practice noticing when a familiar routine was no longer enough.\n\nAfter each practice round, the learner named one clear instruction and one confusing moment. This helped the trainer give specific feedback instead of simply saying that everything looked fine. The manager planned to observe real handovers before deciding whether the new training reduced mistakes. Feeling confident was useful, but the team also needed evidence that important messages actually reached the right person.",
+    "textZh": "在一家虚构的咖啡店里，新员工过去通常先观察有经验的员工工作一个上午，然后就独立接单。经理发现，新手能够记住热门饮品的制作方法，但把工作交给下一个人时却经常不太确定该怎么做。漏传一条信息，就可能让顾客一直等着，而所有员工都以为另一个人正在处理。\n\n团队为练习引入了一张小图示卡，展示三个环节：接收订单、核对特殊要求，以及把订单交给同事。培训时，一名员工扮演顾客，另一名员工大声说明下一步。同事在开始操作前，再重复一遍关键信息。\n\n这张卡片并不是用来代替交流的。顾客更改订单时，员工仍然需要提问并及时互相告知变化。培训者还使用卡片上没有的例子，让新手练习判断熟悉的常规做法何时已经不够用。\n\n每轮练习后，学习者都说出一条清楚的指令和一个令人困惑的环节。这有助于培训者给出具体反馈，而不只是笼统地说一切看起来都不错。经理计划观察真实的交接，再判断新培训是否减少了错误。感到有信心固然有用，但团队还需要证据，证明重要信息确实传到了正确的人那里。",
+    "listeningTip": "盲听先抓住培训解决的是交接信息遗漏，而不只是做饮品。带文精听receiving、checking、passing三个动作，以及not meant to replace后面的限制。选三句按意群暂停模仿，再各做一组影子跟读；最后用30—60秒说明问题、练习方式和效果验证。朗读为浏览器合成语音，不是真题录音。",
+    "speakingPrompt": "In 30–60 seconds, explain the coffee shop's communication problem and how the picture card was used. Say why asking questions and observing real handovers still matter.",
+    "speakingPromptZh": "用30—60秒解释咖啡店的沟通问题，以及图示卡的使用方式。说明为什么提问和观察真实交接仍然重要。",
+    "keyPhrases": [
+      { "en": "pass the order to a colleague", "zh": "把订单交给同事" },
+      { "en": "give specific feedback", "zh": "给出具体反馈" },
+      { "en": "reach the right person", "zh": "传到正确的人那里" }
+    ],
+    "questions": [
+      {
+        "prompt": "What did the colleague do before starting during the practice?",
+        "promptZh": "练习中，同事在开始操作前做了什么？",
+        "options": [
+          "Changed the customer's order without asking.",
+          "Repeated the key information.",
+          "Removed every special request from the order.",
+          "Worked alone without listening to the next step."
+        ],
+        "optionsZh": [
+          "没有询问就更改顾客的订单。",
+          "重复关键信息。",
+          "删掉订单上的所有特殊要求。",
+          "不听下一步说明就独自工作。"
+        ],
+        "answer": 1,
+        "explanation": "第二段最后一句明确说，同事在开始前重复关键信息，因此选B。这是核对信息是否正确传递的练习步骤，并非擅自更改订单。"
+      },
+      {
+        "prompt": "Why did the manager plan to observe real handovers?",
+        "promptZh": "经理为什么计划观察真实的工作交接？",
+        "options": [
+          "To prove that employees should never ask questions.",
+          "To replace all practical training with a picture card.",
+          "To check whether popular drinks had become more expensive.",
+          "To find out whether the training improved information transfer and reduced mistakes."
+        ],
+        "optionsZh": [
+          "证明员工永远不应提问。",
+          "用一张图示卡代替所有实践培训。",
+          "检查热门饮品是否涨价。",
+          "了解培训是否改善了信息传递并减少错误。"
+        ],
+        "answer": 3,
+        "explanation": "最后一段区分了有信心与实际效果：经理要先观察真实交接，再判断错误是否减少、关键信息是否传给正确的人，因此选D。"
+      }
+    ]
   }
 ]
