@@ -214,7 +214,7 @@ export function normalizeUserVocabulary(value={}){
     const refs=[...new Set((Array.isArray(raw.sourceRefs)?raw.sourceRefs:[]).map(x=>String(x).slice(0,160)))].slice(-20);
     const addedDate=refs.map(x=>x.split('|')[0]).filter(validDate).sort()[0];
     const firstDueDate=validDate(raw.firstDueDate)?raw.firstDueDate:!raw.lastReviewed&&validDate(raw.dueDate)?raw.dueDate:addedDate?addDate(addedDate,1):validDate(raw.lastReviewed)?raw.lastReviewed:raw.dueDate;
-    normalized.set(word,{word,surface:String(raw.surface||word).slice(0,80),phonetic:String(raw.phonetic||'').slice(0,80),meaning,phrase:String(raw.phrase||'').slice(0,240),active:raw.active!==false,stage:Math.max(0,Math.min(4,Number.isInteger(raw.stage)?raw.stage:0)),dueDate:validDate(raw.dueDate)?raw.dueDate:'',firstDueDate:validDate(firstDueDate)?firstDueDate:'',addedAt:String(raw.addedAt||'').slice(0,40),lastReviewed:String(raw.lastReviewed||'').slice(0,10),lastResult:typeof raw.lastResult==='boolean'?raw.lastResult:null,sourceRefs:refs});
+    normalized.set(word,{word,surface:String(raw.surface||word).slice(0,80),phonetic:String(raw.phonetic||'').slice(0,80),meaning,phrase:String(raw.phrase||'').slice(0,240),active:raw.active!==false,stage:Math.max(0,Math.min(4,Number.isInteger(raw.stage)?raw.stage:0)),dueDate:validDate(raw.dueDate)?raw.dueDate:'',firstDueDate:validDate(firstDueDate)?firstDueDate:'',addedAt:String(raw.addedAt||'').slice(0,40),lastReviewed:String(raw.lastReviewed||'').slice(0,10),lastResult:typeof raw.lastResult==='boolean'?raw.lastResult:null,sourceRefs:refs,...(raw.reviewOnly===true?{reviewOnly:true,reviewRequestedDate:validDate(raw.reviewRequestedDate)?raw.reviewRequestedDate:''}:{})});
   }
   const keep=[...normalized.values()].sort((a,b)=>Number(b.active)-Number(a.active)||(b.addedAt||'').localeCompare(a.addedAt||'')||a.word.localeCompare(b.word)).slice(0,MAX_USER_VOCABULARY),items=Object.fromEntries(keep.map(x=>[x.word,x]));
   return {version:1,items};
@@ -223,8 +223,21 @@ export function addUserVocabulary(previous,entry,date,source='article'){
   const vocab=normalizeUserVocabulary(previous),word=cleanWord(entry?.word||entry?.base||entry?.surface),meaning=String(entry?.meaning||'').trim().slice(0,240);
   if(!word||!meaning||!validDate(date))return vocab;
   const old=Object.hasOwn(vocab.items,word)?vocab.items[word]:null,ref=`${date}|${String(source).slice(0,40)}|${String(entry.surface||word).slice(0,80)}`;
+  if(old?.active&&old.reviewOnly)return vocab;
   vocab.items[word]={word,surface:String(entry.surface||old?.surface||word).slice(0,80),phonetic:String(entry.phonetic||old?.phonetic||'').slice(0,80),meaning,phrase:String(entry.phrase||old?.phrase||'').slice(0,240),active:true,stage:old?.active?old.stage:0,dueDate:old?.active&&validDate(old.dueDate)?old.dueDate:addDate(date,1),firstDueDate:old?.active&&validDate(old.firstDueDate)?old.firstDueDate:addDate(date,1),addedAt:old?.active&&old.addedAt?old.addedAt:new Date().toISOString(),lastReviewed:old?.active?old.lastReviewed||'':'',lastResult:old?.active&&typeof old.lastResult==='boolean'?old.lastResult:null,sourceRefs:[...new Set([...(old?.sourceRefs||[]),ref])].slice(-20)};
   return normalizeUserVocabulary(vocab);
+}
+// Card enrollment requests a review, not another allocation of a new word.
+// It deliberately creates no study attempt or fabricated lastReviewed date.
+export function addStudyReviewVocabulary(previous,entry,date){
+  const vocab=normalizeUserVocabulary(previous),word=cleanWord(entry?.word);
+  if(!word||!String(entry?.meaning||'').trim()||!validDate(date))return vocab;
+  const old=vocab.items[word];
+  if(old?.active&&old.reviewOnly)return vocab;
+  const next=addUserVocabulary(vocab,entry,date,'study-card');
+  if(!next.items[word])return vocab;
+  next.items[word]={...next.items[word],reviewOnly:true,reviewRequestedDate:date,dueDate:addDate(date,1),stage:0,lastReviewed:'',lastResult:null};
+  return normalizeUserVocabulary(next);
 }
 export function removeUserVocabulary(previous,word){
   const vocab=normalizeUserVocabulary(previous),key=cleanWord(word);if(!Object.hasOwn(vocab.items,key))return vocab;
@@ -237,7 +250,7 @@ export function dueUserVocabulary(previous,date,limit=4){
 export function reviewUserVocabulary(previous,word,date,correct){
   const vocab=normalizeUserVocabulary(previous),key=cleanWord(word),old=Object.hasOwn(vocab.items,key)?vocab.items[key]:null;
   if(!old||!old.active||!validDate(date)||!validDate(old.dueDate)||old.dueDate>date||old.lastReviewed===date)return vocab;
-  const firstLearning=date>=ARTICLE_FIRST_LEARNING_DATE&&!old.lastReviewed;
+  const firstLearning=date>=ARTICLE_FIRST_LEARNING_DATE&&!old.lastReviewed&&!old.reviewOnly;
   const increments=date>=ARTICLE_FIRST_LEARNING_DATE?[2,3,8,14,14]:[2,4,7,14,14],stage=firstLearning?0:!correct?(date>=ARTICLE_FIRST_LEARNING_DATE?0:old.stage):Math.min(4,old.stage+1);
   vocab.items[key]={...old,stage,dueDate:addDate(date,firstLearning||!correct?1:increments[old.stage]||14),lastReviewed:date,lastResult:Boolean(correct)};
   return vocab;
@@ -515,14 +528,15 @@ export function buildRecoveryLesson(data,recovery,date,history={},userVocabulary
   // submissions outrank the empty personal-queue status, without rewriting it.
   for(const [word,s] of learning){
     const item=manualItems[word];
-    if(item?.active&&(!item.lastReviewed||s.lastDate>=item.lastReviewed))manualItems[word]={...item,lastReviewed:s.lastDate,lastResult:s.correct,dueDate:s.dueDate,stage:s.stage};
+    const newerReview=!item?.reviewOnly||s.lastDate>=item.reviewRequestedDate&&(s.lastDate>(item.lastReviewed||'')||s.lastDate===item.lastReviewed&&!s.correct&&item.lastResult!==false);
+    if(item?.active&&(!item.lastReviewed||s.lastDate>=item.lastReviewed)&&newerReview)manualItems[word]={...item,lastReviewed:s.lastDate,lastResult:s.correct,dueDate:s.dueDate,stage:s.stage};
   }
   const activeManual=Object.values(manualItems).filter(w=>w.active),allDueManual=dueUserVocabulary({items:manualItems},date,MAX_USER_VOCABULARY);
-  const pendingManual=articleFirst?allDueManual.filter(w=>!w.lastReviewed).slice(0,22):[];
-  const dueManual=(articleFirst?allDueManual.filter(w=>w.lastReviewed&&w.lastReviewed!==date):allDueManual).slice(0,6);
+  const pendingManual=articleFirst?allDueManual.filter(w=>!w.lastReviewed&&!w.reviewOnly).slice(0,22):[];
+  const dueManual=(articleFirst?allDueManual.filter(w=>(w.lastReviewed||w.reviewOnly)&&w.lastReviewed!==date):allDueManual).slice(0,40);
   // A personal word has one authoritative due date. Never let an ordinary
   // fallback or an old error bypass it and put the same word back every day.
-  const reviewAllowed=n=>!articleFirst||!manualItems[n]?.active||Boolean(manualItems[n].lastReviewed&&manualItems[n].lastReviewed!==date&&manualItems[n].dueDate<=date);
+  const reviewAllowed=n=>!articleFirst||!manualItems[n]?.active||Boolean((manualItems[n].lastReviewed||manualItems[n].reviewOnly)&&manualItems[n].lastReviewed!==date&&manualItems[n].dueDate<=date);
   const additionalPool=Object.entries(recovery.datedLessons||{}).filter(([k])=>k<=date).flatMap(([,l])=>[...(l.additionalWords||[]),...Object.values(l.vocabularyReplacements||{})]);
   const pool=[...(articleFirst?activeManual:dueManual),...recovery.words,...additionalPool,...data.WORDS].filter((w,i,a)=>a.findIndex(x=>x.word===w.word)===i);
   const find=n=>pool.find(w=>w.word.toLowerCase()===String(n).toLowerCase());
@@ -583,7 +597,8 @@ export function buildRecoveryLesson(data,recovery,date,history={},userVocabulary
     if(new Set(planned.map(w=>w.word)).size!==22)throw new Error('Expected 22 distinct continuation words: '+date);
   }
   const authoredQueue=uniqueWords([...deferred,...planned]).filter(w=>!articleFirst||!manualItems[w.word]?.active&&!introduced.has(w.word));
-  const projection=continuing?projectFirstLearning(date,preparedWords,manualItems,history,learning,data.WORDS):null;
+  const allocationItems=Object.fromEntries(Object.entries(manualItems).filter(([,w])=>!w.reviewOnly));
+  const projection=continuing?projectFirstLearning(date,preparedWords,allocationItems,history,learning,data.WORDS):null;
   const excludedNewWords=[...new Set([...scheduledPreviously,...introduced,...(projection?.allocatedBefore||[]),...past.flatMap(([,p])=>(p.lessonSnapshot?.rev||[]).map(w=>w.word))])].filter(n=>!projection?.nw.some(w=>w.word===n));
   const excludedNew=new Set(excludedNewWords);
   // The supplemental list has a fixed authored order. Never refill from the
@@ -622,7 +637,7 @@ export function buildRecoveryLesson(data,recovery,date,history={},userVocabulary
     for(let i=0;i<Math.max(0,...buckets.map(x=>x.length));i++)for(const bucket of buckets)if(bucket[i])rotatedDue.push(bucket[i]);
   }
   const awaitingFirst=new Set([...deferredNewWords,...nw].map(w=>w.word));
-  const ordinaryAllowed=n=>!articleFirst||!awaitingFirst.has(n)&&(!learning.has(n)||learning.get(n).dueDate<=date);
+  const ordinaryAllowed=n=>!articleFirst||!awaitingFirst.has(n)&&(manualItems[n]?.active&&manualItems[n].reviewOnly?manualItems[n].dueDate<=date:!learning.has(n)||learning.get(n).dueDate<=date);
   const actualDue=[...learning.entries()].filter(([,s])=>s.dueDate<=date).sort((a,b)=>a[1].dueDate.localeCompare(b[1].dueDate)||a[0].localeCompare(b[0])).map(([n])=>n);
   const ordinaryNames=[...actualDue,...rotatedDue,...priorPacks,...baseline,...recovery.words.map(w=>w.word)].filter(n=>!errorSet.has(n)&&(!articleFirst||!manualItems[n]?.active)&&ordinaryAllowed(n));
   const priorityNames=[];
