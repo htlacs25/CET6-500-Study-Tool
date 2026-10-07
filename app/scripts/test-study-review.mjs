@@ -94,11 +94,13 @@ test('rendered card has an inline button; enrollment stops speech and does not r
   const context=vm.createContext({userVocab:{items:{}},esc:s=>String(s??'').replaceAll('"','&quot;'),wordPosHtml:()=>'',hiddenZh:()=>'',dateKey:()=> '2026-10-07',addStudyReviewVocabulary,saveUserVocab:v=>{context.userVocab=v;saved.push(v);return true},speakStudyWord:()=>spoken++,document:{querySelectorAll:s=>s==='[data-study-review]'?buttons:statuses}});
   vm.runInContext(code,context);
   assert.match(context.studyWordCard(word,false),/data-study-review=/);
+  assert.doesNotMatch(context.studyWordCard(word,false),/data-review-status|次日起按间隔复习/);
   const b={dataset:{studyReview:word.word,reviewEntry:JSON.stringify(word)}},s={dataset:{reviewStatus:word.word}};
   buttons.push(b);statuses.push(s);context.bindStudyReviewButton(b);
   b.onclick({stopPropagation:()=>stopped++});
   assert.equal(stopped,1);assert.equal(spoken,0);assert.equal(saved.length,1);
-  assert.equal(b.disabled,true);assert.equal(b.textContent,'已加入复习');assert.match(s.textContent,/次日/);
+  assert.equal(b.disabled,true);assert.equal(b.textContent,'已加入复习');
+  assert.doesNotMatch(context.studyWordCard(word,false),/data-review-status|已按间隔排队/);
   const card={dataset:{studyWord:word.word}};context.bindStudyWordCard(card);
   card.onclick({target:{closest:()=>b}});assert.equal(spoken,0);
   card.onclick({target:{closest:()=>null}});assert.equal(spoken,1);
