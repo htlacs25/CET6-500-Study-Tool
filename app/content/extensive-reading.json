@@ -2645,5 +2645,200 @@
         "explanation": "最后一段区分了有信心与实际效果：经理要先观察真实交接，再判断错误是否减少、关键信息是否传给正确的人，因此选D。"
       }
     ]
+  },
+  {
+    "date": "2026-10-08",
+    "title": "A Lost Property Board Shows Less and Helps More",
+    "titleZh": "失物照片板少展示一点，反而更有帮助",
+    "category": "Community life — lost property and personal information",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article about an imagined community center and a fictional lost property project; not real or live news. 原创报刊风格教学短文，社区中心及失物项目均为教学虚构，不是真实或实时新闻。",
+    "text": "A fictional community center has changed the way it displays lost property. In the past, its notice board showed large photographs of every item found in meeting rooms. The pictures attracted attention, but some also revealed names on cards or addresses inside open bags.\n\nThe center now photographs only the outside of an item and gives it a simple number. A short description says where and when it was found. Personal details are kept off the public board. Anyone who thinks an item belongs to them can speak to a worker at the desk and describe a detail that the photograph does not show.\n\nThe change followed a discussion with regular visitors. Several people said that a clear route for collecting an item mattered more than a detailed picture. The center therefore added its desk hours and contact number beside the photographs. It also removes each photograph once the item is returned.\n\nWorkers will compare the number of items returned before and after the change, but they will also ask visitors whether the instructions are easy to follow. A busy board is not necessarily a useful one. The aim is to reunite people with their belongings while avoiding the unnecessary display of personal information.",
+    "textZh": "一家虚构的社区中心改变了展示失物的方式。过去，公告板上会贴出在会议室里找到的每件物品的大幅照片。这些照片吸引了注意，但有些还露出了卡片上的姓名或打开的包内的地址。\n\n现在，中心只拍摄物品的外观，并给它一个简单的编号。简短的说明会告知物品在何时、何地被发现。个人信息不会出现在公开的公告板上。认为物品属于自己的人，可以到服务台与工作人员交谈，并描述照片上没有展示的一个细节。\n\n这项改变源于一次与常来访者的讨论。几个人表示，与一张细节丰富的照片相比，清楚的领取流程更重要。因此，中心在照片旁补充了服务台开放时间和联系电话。物品归还后，相应照片也会被撤下。\n\n工作人员将比较改变前后归还的物品数量，但也会询问来访者，领取说明是否容易理解。内容密密麻麻的公告板不一定实用。目标是在避免不必要地公开个人信息的同时，让人们找回自己的物品。",
+    "listeningTip": "盲听先抓住公告板改了什么；带文精听in the past与now的对比，以及but后面补充的评价方式。选三句，分别围绕only the outside、does not show和easy to follow划分意群，暂停模仿后各做一组影子跟读，最后脱稿复述30—60秒。朗读为浏览器合成语音，不是真题录音。",
+    "speakingPrompt": "Retell the lost property project in 30–60 seconds. Explain what the old photographs revealed, how people now collect their belongings, and how workers will check whether the new board is useful.",
+    "speakingPromptZh": "用30—60秒复述失物公告板项目。解释旧照片暴露了什么信息、人们现在如何领取物品，以及工作人员将如何检查新公告板是否有用。",
+    "keyPhrases": [
+      {
+        "en": "kept off the public board",
+        "zh": "不出现在公开的公告板上"
+      },
+      {
+        "en": "a clear route for collecting an item",
+        "zh": "清楚的物品领取流程"
+      },
+      {
+        "en": "reunite people with their belongings",
+        "zh": "让人们找回自己的物品"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What should someone do if they believe an item on the board is theirs?",
+        "promptZh": "如果有人认为公告板上的物品是自己的，应该怎么做？",
+        "options": [
+          "Write their home address under its photograph.",
+          "Ask for photographs of the contents of every bag.",
+          "Speak to a desk worker and describe a detail not shown.",
+          "Take the item without speaking to anyone."
+        ],
+        "optionsZh": [
+          "在物品照片下写上自己的家庭地址。",
+          "索要每个包内物品的照片。",
+          "与服务台工作人员交谈，并描述一个未展示的细节。",
+          "不与任何人交谈就拿走物品。"
+        ],
+        "answer": 2,
+        "explanation": "第二段末句明确说明，认为失物属于自己的人应向服务台工作人员描述照片未显示的细节，因此选C。新规则并不要求公开家庭地址或所有包内物品。"
+      },
+      {
+        "prompt": "What does the article suggest makes a lost property board useful?",
+        "promptZh": "文章认为，什么能让失物公告板真正有用？",
+        "options": [
+          "Helping people recover items through clear instructions without exposing unnecessary personal details.",
+          "Displaying as many names and addresses as possible.",
+          "Keeping photographs on the board after every item is returned.",
+          "Replacing desk workers with photographs of open bags."
+        ],
+        "optionsZh": [
+          "用清楚的说明帮助人们找回物品，同时避免暴露不必要的个人信息。",
+          "尽可能多地展示姓名和地址。",
+          "每件物品归还后仍保留它的照片。",
+          "用打开的包的照片代替服务台工作人员。"
+        ],
+        "answer": 0,
+        "explanation": "第三段强调清楚的领取流程，末段说明目标是归还物品并避免不必要地展示个人信息，合起来对应A。照片数量多或个人信息详细，不等于公告板更实用。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-09",
+    "title": "Smaller First Servings Give a Canteen Useful Clues",
+    "titleZh": "先少盛一点，为食堂提供有用线索",
+    "category": "Campus life — food waste and serving choices",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article about an imagined college canteen and a fictional food waste trial; all events are invented for learning, not real or live news. 原创报刊风格教学短文，大学食堂与剩饭试验均为教学虚构，不是真实或实时新闻。",
+    "text": "An imagined college canteen is testing a different way of serving rice. Students can ask for a smaller first serving and return for more without paying extra. A sign makes this choice clear before they reach the counter, so they do not need to decide while holding up the queue.\n\nThe idea began when kitchen workers noticed large amounts of rice left on plates. They could weigh the waste, but the total did not explain why food was being left. Some students said the standard serving was too large. Others said they sometimes disliked the dish served with it.\n\nDuring the trial, workers record the number of meals sold and the weight of leftover rice each day. They calculate the average waste per meal rather than comparing daily totals alone. A quiet day would naturally produce less waste, even if nobody changed their behavior. The team also asks students brief questions about taste and serving size.\n\nEarly comments suggest that some students appreciate choosing a smaller amount, while others prefer the original serving. The canteen has kept both options. It has not claimed that smaller servings solve every cause of waste. Instead, the trial is helping workers distinguish between problems of quantity and problems of taste, so that later changes can respond to what students actually need.",
+    "textZh": "一家虚构的大学食堂正在试用一种不同的米饭供应方式。学生可以第一次少盛一点，之后需要时再回来添饭，不另收费。学生到达取餐台之前就能看到说明这一选择的标牌，因此不用一边挡着队伍，一边临时作决定。\n\n这个想法源于厨房工作人员发现餐盘上剩下了大量米饭。他们可以给剩饭称重，但总重量无法解释食物为什么会被剩下。一些学生说标准份量太大，另一些则说自己有时不喜欢搭配米饭的菜。\n\n试验期间，工作人员每天记录售出的餐数和剩饭重量。他们计算每餐平均剩饭量，而不只比较每天的总重量。即使没有人改变行为，客流少的一天也自然会产生更少的剩饭。团队还会简短询问学生对口味和份量的看法。\n\n初步反馈表明，一些学生喜欢能够选择少盛一点，另一些仍更喜欢原来的份量。食堂保留了这两种选择。它并没有声称减小份量能解决造成剩饭的所有原因。相反，这项试验帮助工作人员区分份量问题和口味问题，让之后的改变能够回应学生的实际需要。",
+    "listeningTip": "盲听先抓两个选择：少盛一点后再添，或保持原份量。带文精听rather than后的比较方式和even if后的解释。选三句，分别围绕without paying extra、average waste per meal和problems of quantity划分意群，暂停模仿后各做一组影子跟读，再脱稿复述30—60秒。朗读为浏览器合成语音，不是真题录音。",
+    "speakingPrompt": "In 30–60 seconds, explain the canteen's serving trial. Say why daily waste totals can be misleading and describe two possible reasons why students leave food on their plates.",
+    "speakingPromptZh": "用30—60秒解释食堂的供餐试验。说明为什么每天的剩饭总量可能产生误导，并描述学生剩饭的两种可能原因。",
+    "keyPhrases": [
+      {
+        "en": "return for more without paying extra",
+        "zh": "不另付费就能回来添饭"
+      },
+      {
+        "en": "the average waste per meal",
+        "zh": "每餐的平均剩饭量"
+      },
+      {
+        "en": "distinguish between problems of quantity and problems of taste",
+        "zh": "区分份量问题与口味问题"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why do workers calculate the average waste per meal?",
+        "promptZh": "工作人员为什么计算每餐的平均剩饭量？",
+        "options": [
+          "To charge students more when they ask for extra rice.",
+          "To avoid collecting any comments about food.",
+          "To show that every student eats the same amount.",
+          "To account for changes in the number of meals sold."
+        ],
+        "optionsZh": [
+          "在学生添饭时收取更多费用。",
+          "避免收集任何有关食物的意见。",
+          "证明每个学生的食量都相同。",
+          "把售出餐数的变化考虑在内。"
+        ],
+        "answer": 3,
+        "explanation": "第三段说明，客流少时即使行为不变，总剩饭量也会减少。因此需要结合售出餐数计算每餐平均剩饭量，以免把人数变化误认为浪费行为的改善，选D。"
+      },
+      {
+        "prompt": "Why has the canteen kept both smaller and original servings?",
+        "promptZh": "食堂为什么同时保留较小份量与原份量？",
+        "options": [
+          "Workers have proved that taste never affects waste.",
+          "Students have different preferences, and smaller servings cannot explain or solve every cause of waste.",
+          "Every student has refused the smaller serving.",
+          "The trial requires everyone to return for more rice."
+        ],
+        "optionsZh": [
+          "工作人员已证明口味从不影响剩饭。",
+          "学生的偏好不同，而减小份量无法解释或解决剩饭的所有原因。",
+          "每个学生都拒绝了较小份量。",
+          "试验要求每个人都回来添饭。"
+        ],
+        "answer": 1,
+        "explanation": "末段指出，一些学生喜欢较小份量，另一些偏好原份量，且减小份量不能解决所有剩饭原因。第二段还提到口味因素，故B全面符合原文；其余选项都与原文冲突。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-10",
+    "title": "A Paper Map Gives Visitors Another Way Home",
+    "titleZh": "纸质地图为游客提供另一种回程办法",
+    "category": "Travel and city life — accessible information",
+    "sourceType": "original news-style",
+    "sourceNote": "Original educational news-style article about an imagined town and its visitor information service. Events and people are fictional, not real or live news. 原创报刊风格教学短文，小城及游客信息服务均为教学虚构，不是真实或实时新闻。",
+    "text": "A visitor center in an imagined coastal town has started offering a small paper map alongside its digital guide. The map marks the railway station, public toilets, two bridges, and a walking route back from the harbor. It also gives the center's phone number and the date when the information was checked.\n\nThe idea came from volunteers who regularly helped people whose phones had run out of power. Some visitors had saved a picture of the harbor but had not noticed the street names along the way. Without a working screen, they found it difficult to describe where they were.\n\nThe paper version does not try to show every shop. Instead, it uses a few clear landmarks and notes which paths include stairs. Volunteers tested the first draft by asking new visitors to follow one route without extra help. When several people turned too early at a bridge, the team changed the drawing rather than blaming the readers.\n\nThe center still recommends checking current transport notices before a journey. A printed map cannot show a sudden road closure or a delayed train. Its purpose is more modest: to offer a useful backup when a phone is unavailable. By keeping the important information simple, the center hopes visitors can spend less time worrying about directions and more time enjoying the town.",
+    "textZh": "一座虚构的海滨小城的游客中心开始在数字指南之外提供一张小纸质地图。地图标出了火车站、公共卫生间、两座桥以及从港口返回的步行路线，还印有游客中心的电话号码和信息核查日期。\n\n这个想法来自经常帮助手机没电的游客的志愿者。有些游客保存了港口的照片，却没有注意沿途的街道名称。没有可用的屏幕，他们发现很难描述自己所处的位置。\n\n纸质版本不试图展示每一家商店，而是采用少数清晰的地标，并注明哪些道路有台阶。志愿者请第一次来访的游客在没有额外帮助的情况下沿一条路线行走，以此测试初稿。发现好几个人在桥边过早转弯后，团队修改了图示，而不是责怪读者。\n\n游客中心仍然建议出行前查看最新交通通知。印刷地图无法显示突然封路或列车晚点。它的目的更为有限：在手机不可用时提供一个有用的备用办法。通过让重要信息保持简单，中心希望游客少花时间担心路线，多花时间欣赏小城。",
+    "listeningTip": "盲听抓住“纸质地图为什么仍有用”；带文听清rather than blaming the readers和cannot show两处对比。选三句分别练alongside its digital guide、run out of power、offer a useful backup，先暂停模仿，再各做一组影子跟读。最后关掉文本复述30—60秒。朗读是浏览器合成语音，不是真题录音。",
+    "speakingPrompt": "In 30–60 seconds, explain why the visitor center offers a paper map. Describe how it tested the map and mention one thing that a printed map cannot provide.",
+    "speakingPromptZh": "用30—60秒解释游客中心为什么提供纸质地图，描述它如何测试地图，并指出印刷地图无法提供的一种信息。",
+    "keyPhrases": [
+      {
+        "en": "run out of power",
+        "zh": "耗尽电量"
+      },
+      {
+        "en": "follow one route without extra help",
+        "zh": "在没有额外帮助的情况下沿一条路线行走"
+      },
+      {
+        "en": "offer a useful backup",
+        "zh": "提供一个有用的备用办法"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why did the team change the drawing near a bridge?",
+        "promptZh": "团队为什么修改了桥附近的图示？",
+        "options": [
+          "The bridge was removed from the town.",
+          "Several new visitors turned too early during the test.",
+          "Every visitor had asked for a map of every shop.",
+          "The volunteers wanted to stop people from walking."
+        ],
+        "optionsZh": [
+          "这座桥被从小城中拆除了。",
+          "几位首次来访的游客在测试中过早转弯。",
+          "每位游客都要求地图标出所有商店。",
+          "志愿者想阻止人们步行。"
+        ],
+        "answer": 1,
+        "explanation": "第三段明确说several people turned too early at a bridge，因此团队根据实际使用困难修改图示。原文没有说拆桥、标全商店或阻止步行。"
+      },
+      {
+        "prompt": "How does the center view the paper map?",
+        "promptZh": "游客中心如何看待纸质地图？",
+        "options": [
+          "As a complete replacement for all digital information.",
+          "As a tool that always shows sudden road closures.",
+          "As a reason to stop checking transport notices.",
+          "As a useful backup with limits that users should understand."
+        ],
+        "optionsZh": [
+          "把它作为所有数字信息的完整替代品。",
+          "把它作为始终能显示突然封路的工具。",
+          "把它作为停止查看交通通知的理由。",
+          "把它作为有用的备用工具，同时需要让使用者了解它的局限。"
+        ],
+        "answer": 3,
+        "explanation": "最后一段保留查看最新交通通知的建议，承认纸图不能显示临时变化，同时说明其backup用途；D同时涵盖价值和局限。"
+      }
+    ]
   }
 ]

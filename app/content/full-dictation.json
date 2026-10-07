@@ -616,5 +616,127 @@
       "text": "so we can arrange another session.",
       "zh": "以便我们安排另一场培训。"
     }
+  ],
+  "2026-10-08": [
+    {
+      "text": "The laundry room in Hall Two will test a new booking system next week.",
+      "zh": "二号宿舍楼的洗衣房将于下周试行一套新的预约系统。"
+    },
+    {
+      "text": "Each student may reserve one machine for thirty minutes.",
+      "zh": "每位学生可以预约一台机器，时长三十分钟。"
+    },
+    {
+      "text": "Please arrive five minutes before your time begins.",
+      "zh": "请在预约开始时间前五分钟到达。"
+    },
+    {
+      "text": "If you are more than ten minutes late, your booking will be canceled.",
+      "zh": "如果迟到超过十分钟，你的预约将被取消。"
+    },
+    {
+      "text": "Students without a booking may use a machine only when it is available.",
+      "zh": "没有预约的学生只有在机器空闲时才可以使用。"
+    },
+    {
+      "text": "After washing, remove your clothes promptly and leave the door open.",
+      "zh": "洗完后，请及时取走衣物，并让机门保持打开。"
+    },
+    {
+      "text": "Report a fault to the service desk",
+      "zh": "遇到故障请向服务台报告，"
+    },
+    {
+      "text": "instead of trying to repair the machine yourself.",
+      "zh": "不要自行尝试修理机器。"
+    },
+    {
+      "text": "We will review the system on Friday.",
+      "zh": "我们将在星期五评估这套系统。"
+    }
+  ],
+  "2026-10-09": [
+    {
+      "text": "This is a message for students attending tomorrow's science reporting workshop.",
+      "zh": "这是一则发给参加明天科学报道工作坊的学生的通知。"
+    },
+    {
+      "text": "The session has moved from the laboratory to the library meeting room.",
+      "zh": "活动地点已从实验室改到图书馆会议室。"
+    },
+    {
+      "text": "Please bring one short article about a scientific claim,",
+      "zh": "请带一篇关于某项科学说法的短文，"
+    },
+    {
+      "text": "either on paper or on your phone.",
+      "zh": "纸质版或手机版都可以。"
+    },
+    {
+      "text": "You do not need to agree with the article.",
+      "zh": "你不需要赞同文章。"
+    },
+    {
+      "text": "Instead, write down one question about its evidence.",
+      "zh": "而是要记下一个关于其证据的问题。"
+    },
+    {
+      "text": "Include the headline and the name of the original source.",
+      "zh": "请附上标题和原始来源的名称。"
+    },
+    {
+      "text": "The speaker will compare several examples before answering questions.",
+      "zh": "演讲者会先比较几个例子，然后回答问题。"
+    },
+    {
+      "text": "Send your article to the organizer by six tonight,",
+      "zh": "请在今晚六点前把文章发给组织者，"
+    },
+    {
+      "text": "so the examples can be prepared in advance.",
+      "zh": "以便提前准备示例。"
+    }
+  ],
+  "2026-10-10": [
+    {
+      "text": "This is a notice for students joining Saturday's trip to the coast.",
+      "zh": "这是一则发给参加周六海岸之旅的学生的通知。"
+    },
+    {
+      "text": "Because work is taking place near the north entrance,",
+      "zh": "由于北入口附近正在施工，"
+    },
+    {
+      "text": "please meet at the south entrance of Central Station.",
+      "zh": "请到中央车站的南入口集合。"
+    },
+    {
+      "text": "Our meeting time is nine twenty,",
+      "zh": "我们的集合时间是九点二十分，"
+    },
+    {
+      "text": "although the train does not leave until nine forty.",
+      "zh": "虽然火车要到九点四十分才开。"
+    },
+    {
+      "text": "Keep your ticket ready and bring only a small bag.",
+      "zh": "请准备好车票，并只携带一个小包。"
+    },
+    {
+      "text": "If you arrive by bus, get off at Bridge Road",
+      "zh": "如果乘公交到达，请在桥路下车，"
+    },
+    {
+      "text": "and follow the signs through the tunnel.",
+      "zh": "跟随标志穿过隧道。"
+    },
+    {
+      "text": "Your train ticket is also valid on the temporary bus service,",
+      "zh": "你的火车票也适用于临时公交服务，"
+    },
+    {
+      "text": "but not on the subway.",
+      "zh": "但不适用于地铁。"
+    }
   ]
 }
