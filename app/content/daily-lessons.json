@@ -13143,5 +13143,549 @@
         "alternative": "Clear directions can help visitors avoid unnecessary walking."
       }
     ]
+  },
+  "2026-10-11": {
+    "title": "艺术与表达：分清作品事实、个人感受和活动限制",
+    "grammarTip": "四级阅读训练事实与观点的区别，听力辨别更改后的时间、单独预约和开放范围。句法巩固定语从句与主句谓语、be加形容词、被动语态和动名词。课程为原创分级模拟，地点与活动为教学虚构。",
+    "words": [
+      {
+        "word": "gallery",
+        "phonetic": "/ˈɡæləri/",
+        "pos": "n.",
+        "meaning": "美术馆；画廊",
+        "phrase": "an art gallery",
+        "example": "The gallery offers a short tour on Sunday.",
+        "exampleZh": "这家美术馆周日提供一次简短导览。"
+      },
+      {
+        "word": "sculpture",
+        "phonetic": "/ˈskʌlptʃər/",
+        "pos": "n.",
+        "meaning": "雕塑；雕刻作品",
+        "phrase": "a stone sculpture",
+        "example": "The stone sculpture stands near the main entrance.",
+        "exampleZh": "那座石雕位于正门附近。"
+      },
+      {
+        "word": "portrait",
+        "phonetic": "/ˈpɔːrtrət/",
+        "pos": "n.",
+        "meaning": "肖像；人物描写",
+        "phrase": "paint a portrait",
+        "example": "The portrait shows a teacher beside a window.",
+        "exampleZh": "这幅肖像画的是一位站在窗边的教师。"
+      },
+      {
+        "word": "painting",
+        "phonetic": "/ˈpeɪntɪŋ/",
+        "pos": "n.",
+        "meaning": "绘画；画作",
+        "phrase": "a landscape painting",
+        "example": "Look at the painting before reading its label.",
+        "exampleZh": "先看看画作，再读它的说明标签。"
+      },
+      {
+        "word": "artist",
+        "phonetic": "/ˈɑːrtɪst/",
+        "pos": "n.",
+        "meaning": "艺术家；画家",
+        "phrase": "a local artist",
+        "example": "A local artist answered questions about her work.",
+        "exampleZh": "一位本地艺术家回答了关于自己作品的问题。"
+      },
+      {
+        "word": "performance",
+        "phonetic": "/pərˈfɔːrməns/",
+        "pos": "n.",
+        "meaning": "表演；表现",
+        "phrase": "a live performance",
+        "example": "The performance begins after the gallery tour.",
+        "exampleZh": "表演在美术馆参观结束后开始。"
+      },
+      {
+        "word": "stage",
+        "phonetic": "/steɪdʒ/",
+        "pos": "n.; v.",
+        "meaning": "n. 舞台；阶段；v. 上演；举办",
+        "phrase": "on stage",
+        "example": "The students felt nervous before going on stage.",
+        "exampleZh": "学生们上台前感到紧张。"
+      },
+      {
+        "word": "theater",
+        "phonetic": "/ˈθiːətər/",
+        "pos": "n.",
+        "meaning": "剧院；戏剧（美式拼写）",
+        "phrase": "go to the theater",
+        "example": "We booked seats at the theater near our campus.",
+        "exampleZh": "我们预订了校园附近剧院的座位。"
+      },
+      {
+        "word": "drama",
+        "phonetic": "/ˈdrɑːmə/",
+        "pos": "n.",
+        "meaning": "戏剧；戏剧作品",
+        "phrase": "a drama club",
+        "example": "The drama club practices twice a week.",
+        "exampleZh": "戏剧社每周排练两次。"
+      },
+      {
+        "word": "novel",
+        "phonetic": "/ˈnɑːvəl/",
+        "pos": "n.; adj.",
+        "meaning": "n. 长篇小说；adj. 新颖的",
+        "phrase": "read a novel",
+        "example": "This novel follows a family through several difficult years.",
+        "exampleZh": "这部长篇小说讲述一个家庭度过数年艰难时光的经历。"
+      },
+      {
+        "word": "poetry",
+        "phonetic": "/ˈpoʊətri/",
+        "pos": "n.",
+        "meaning": "诗；诗歌（总称，不可数）",
+        "phrase": "read poetry aloud",
+        "example": "Reading poetry aloud helps me notice the rhythm.",
+        "exampleZh": "朗读诗歌有助于我注意节奏。"
+      },
+      {
+        "word": "poet",
+        "phonetic": "/ˈpoʊət/",
+        "pos": "n.",
+        "meaning": "诗人",
+        "phrase": "a young poet",
+        "example": "The young poet described ordinary life in simple words.",
+        "exampleZh": "这位年轻诗人用简单的词语描写日常生活。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "literature",
+        "phonetic": "/ˈlɪtərətʃər/",
+        "pos": "n.",
+        "meaning": "文学；文献",
+        "phrase": "study literature",
+        "example": "Literature can introduce us to lives different from our own.",
+        "exampleZh": "文学能让我们了解与自己不同的生活。"
+      },
+      {
+        "word": "fiction",
+        "phonetic": "/ˈfɪkʃən/",
+        "pos": "n.",
+        "meaning": "小说；虚构的事",
+        "phrase": "read fiction",
+        "example": "The story is fiction, although the setting feels familiar.",
+        "exampleZh": "虽然故事背景令人感到熟悉，但这个故事是虚构的。"
+      },
+      {
+        "word": "character",
+        "phonetic": "/ˈkærəktər/",
+        "pos": "n.",
+        "meaning": "人物；性格；文字",
+        "phrase": "the main character",
+        "example": "The main character changes her opinion after listening to a friend.",
+        "exampleZh": "主人公听取一位朋友的话后改变了看法。"
+      },
+      {
+        "word": "plot",
+        "phonetic": "/plɑːt/",
+        "pos": "n.; v.",
+        "meaning": "n. 情节；小块土地；v. 密谋；绘制",
+        "phrase": "the plot of a story",
+        "example": "Explain the plot without revealing the ending.",
+        "exampleZh": "解释故事情节时不要透露结局。"
+      },
+      {
+        "word": "edition",
+        "phonetic": "/ɪˈdɪʃən/",
+        "pos": "n.",
+        "meaning": "版本；版次",
+        "phrase": "a new edition",
+        "example": "The new edition includes a short introduction.",
+        "exampleZh": "新版包含一篇简短的导言。"
+      },
+      {
+        "word": "imagination",
+        "phonetic": "/ɪˌmædʒəˈneɪʃən/",
+        "pos": "n.",
+        "meaning": "想象力；想象",
+        "phrase": "use your imagination",
+        "example": "Use your imagination, but separate guesses from facts.",
+        "exampleZh": "发挥想象力，但要把猜测与事实区分开。"
+      },
+      {
+        "word": "emotion",
+        "phonetic": "/ɪˈmoʊʃən/",
+        "pos": "n.",
+        "meaning": "情感；情绪",
+        "phrase": "express emotion",
+        "example": "The actor used her voice to express emotion.",
+        "exampleZh": "这位演员用声音表达情感。"
+      },
+      {
+        "word": "emotional",
+        "phonetic": "/ɪˈmoʊʃənəl/",
+        "pos": "adj.",
+        "meaning": "情感的；情绪激动的",
+        "phrase": "an emotional response",
+        "example": "Different visitors may have different emotional responses to the same painting.",
+        "exampleZh": "不同参观者可能对同一幅画产生不同的情感反应。"
+      },
+      {
+        "word": "creative",
+        "phonetic": "/kriˈeɪtɪv/",
+        "pos": "adj.",
+        "meaning": "有创造力的；创造性的",
+        "phrase": "a creative idea",
+        "example": "The group found a creative way to introduce the exhibition.",
+        "exampleZh": "小组找到了一种富有创意的介绍展览的方法。"
+      },
+      {
+        "word": "appreciate",
+        "phonetic": "/əˈpriːʃieɪt/",
+        "pos": "v.",
+        "meaning": "欣赏；感激；理解",
+        "phrase": "appreciate a work of art",
+        "example": "You do not need to agree with every opinion to appreciate the discussion.",
+        "exampleZh": "你不必赞同每个观点，也能欣赏这场讨论。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The artist who paints these portraits ___ near the campus.",
+        "promptZh": "画这些肖像的艺术家住在校园附近。",
+        "options": [
+          "live",
+          "lives",
+          "living",
+          "are"
+        ],
+        "optionsZh": [
+          "居住（原形）",
+          "居住（第三人称单数）",
+          "居住（非限定形式）",
+          "是（复数be）"
+        ],
+        "answer": 1,
+        "explanation": "who paints these portraits是定语从句，主句为The artist lives near the campus。单数artist搭配lives，paints不是主句谓语。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "The paintings in this room ___ different from those upstairs.",
+        "promptZh": "这个房间的画作与楼上的不同。",
+        "options": [
+          "is",
+          "has",
+          "are",
+          "does"
+        ],
+        "optionsZh": [
+          "是（单数be）",
+          "有（单数）",
+          "是（复数be）",
+          "助动词第三人称单数"
+        ],
+        "answer": 2,
+        "explanation": "different是形容词，需要be；主语paintings是复数，in this room不改变主语的数。",
+        "tag": "be-verb"
+      },
+      {
+        "prompt": "Seats for the performance must ___ separately.",
+        "promptZh": "表演的座位必须单独预订。",
+        "options": [
+          "reserve",
+          "reserved",
+          "be reserved",
+          "reserving"
+        ],
+        "optionsZh": [
+          "预订（原形）",
+          "预订（过去式或过去分词）",
+          "被预订（被动结构）",
+          "预订（非限定形式）"
+        ],
+        "answer": 2,
+        "explanation": "座位是被预订的，情态动词must后接be加过去分词reserved，构成被动语态。",
+        "tag": "passive"
+      },
+      {
+        "prompt": "She enjoys ___ poetry aloud after class.",
+        "promptZh": "她喜欢课后朗读诗歌。",
+        "options": [
+          "read",
+          "reads",
+          "to read",
+          "reading"
+        ],
+        "optionsZh": [
+          "读（原形）",
+          "读（第三人称单数）",
+          "读（不定式）",
+          "读（动名词）"
+        ],
+        "answer": 3,
+        "explanation": "enjoy后跟动名词reading，不能跟to read。poetry为不可数名词，指诗歌这一总称。",
+        "tag": "gerund"
+      },
+      {
+        "prompt": "Although the label was short, it ___ the date and the materials.",
+        "promptZh": "虽然标签很短，但它说明了日期和材料。",
+        "options": [
+          "explained",
+          "explaining",
+          "explanation",
+          "to explain"
+        ],
+        "optionsZh": [
+          "解释了（过去式）",
+          "解释（非限定形式）",
+          "解释（名词）",
+          "解释（不定式）"
+        ],
+        "answer": 0,
+        "explanation": "Although引导让步状语从句，主句it后仍需要谓语；过去时用explained。不要因为前半句已有was就遗漏主句谓语。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "Which sentence correctly describes a daily habit?",
+        "promptZh": "哪句话正确描述了每天的习惯？",
+        "options": [
+          "I read fiction everyday.",
+          "I read fiction every day.",
+          "I reading fiction every day.",
+          "I reads fiction every day."
+        ],
+        "optionsZh": [
+          "把everyday形容词误作时间状语",
+          "我每天读小说",
+          "主句缺少限定谓语",
+          "I后误用第三人称单数"
+        ],
+        "answer": 1,
+        "explanation": "every day是时间状语“每天”；everyday是形容词“日常的”，通常放在名词前，例如everyday life。I搭配read。",
+        "tag": "every-day"
+      }
+    ],
+    "reading": {
+      "title": "A Label That Leaves Room for Questions",
+      "titleZh": "为提问留出空间的展品标签",
+      "level": "四级衔接专项 · 原创分级模拟",
+      "topic": "艺术教育、事实与观点",
+      "passage": "A small campus gallery noticed that visitors often read the labels beside paintings and then moved on without looking closely at the pictures. The labels contained dates, names, and long explanations of what each work meant. Some students said they felt there was one correct response to every painting.\n\nThe gallery tried a different approach in one room. Each new label gave a few verified facts and one open question. Beside a portrait, for example, it asked what the position of the hands might suggest. Visitors were invited to discuss their ideas, but guides reminded them to distinguish personal impressions from facts about the artist.\n\nDuring the trial, visitors spent longer looking at the paintings and asked more questions. However, the gallery did not claim that shorter labels always produced better learning. Some visitors still wanted detailed background information, so the old explanations remained available in a booklet. The aim was to offer a starting point for observation, not to remove useful knowledge.",
+      "passageZh": "一家小型校园美术馆发现，参观者常常读完画作旁的标签后就继续往前走，没有仔细看画。标签包含日期、姓名，以及关于每件作品含义的长篇解释。有些学生说，他们觉得每幅画都只有一种正确的回应。\n\n美术馆在一个展室尝试了不同的方法。每张新标签提供少量经过核实的事实和一个开放问题。例如，一幅肖像画旁的问题是：画中双手的位置可能暗示什么？参观者受邀讨论自己的想法，但导览员提醒他们区分个人感受和关于艺术家的事实。\n\n试验期间，参观者观看画作的时间更长，提出的问题也更多。不过，美术馆并没有声称更短的标签总能带来更好的学习效果。一些参观者仍想了解详细背景，因此旧版解释仍保留在一本小册子中。目的在于提供一个观察的起点，而不是删除有用的知识。",
+      "questions": [
+        {
+          "prompt": "What problem did the gallery notice?",
+          "promptZh": "美术馆发现了什么问题？",
+          "options": [
+            "Visitors spent too long discussing the paintings.",
+            "Visitors often read labels without observing the paintings closely.",
+            "Students refused to read any background information.",
+            "The paintings had no names or dates."
+          ],
+          "optionsZh": [
+            "参观者讨论画作时间太长",
+            "参观者常只读标签而不仔细观察画作",
+            "学生拒绝阅读任何背景信息",
+            "画作没有名称或日期"
+          ],
+          "answer": 1,
+          "explanation": "第一段指出read the labels后便继续走，without looking closely是问题所在。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What did the new labels contain?",
+          "promptZh": "新标签包含什么？",
+          "options": [
+            "Only personal stories from visitors.",
+            "A complete history of every artist.",
+            "A rule against discussing the works.",
+            "A few checked facts and an open question."
+          ],
+          "optionsZh": [
+            "只有参观者的个人故事",
+            "每位艺术家的完整生平",
+            "禁止讨论作品的规则",
+            "少量已核实事实和一个开放问题"
+          ],
+          "answer": 3,
+          "explanation": "第二段明确给出a few verified facts and one open question；verified意为核实过的。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Why were the old explanations kept in a booklet?",
+          "promptZh": "为什么旧版解释被保留在小册子里？",
+          "options": [
+            "To serve visitors who still wanted more background.",
+            "To prove that all personal impressions were wrong.",
+            "To stop guides from answering questions.",
+            "To make the new labels longer again."
+          ],
+          "optionsZh": [
+            "满足仍想了解更多背景的参观者",
+            "证明所有个人感受都是错误的",
+            "阻止导览员回答问题",
+            "使新标签再次变长"
+          ],
+          "answer": 0,
+          "explanation": "末段因果关系：some visitors still wanted detailed background，所以旧版解释保留。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Which conclusion is best supported by the passage?",
+          "promptZh": "哪项结论最符合文章？",
+          "options": [
+            "Every painting has just one correct interpretation.",
+            "Art galleries should remove all historical information.",
+            "Questions can encourage observation without replacing factual knowledge.",
+            "Spending more time always proves that learning has improved."
+          ],
+          "optionsZh": [
+            "每幅画只有一种正确解读",
+            "美术馆应删除所有历史信息",
+            "提问能够促进观察，同时不必取代事实知识",
+            "观看时间更长总能证明学习进步"
+          ],
+          "answer": 2,
+          "explanation": "新做法鼓励观察并保留背景资料；作者明确不把试验效果推广为always的结论。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "A Revised Gallery Tour",
+      "titleZh": "调整后的美术馆导览",
+      "level": "四级衔接短通知 · 原创模拟 · 合成朗读",
+      "tip": "盲听抓更改后的时间与预约条件；区分two thirty与two fifteen，注意separately、without和remain closed。对照原文精听后挑三段影子跟读。使用浏览器合成朗读，优先可用美式声音，不是真题录音。",
+      "passage": "The campus gallery has changed the plan for its Sunday tour. The tour will begin at two thirty, not two fifteen. Please meet inside the main entrance. Visitors who booked online should show their confirmation message to the guide. A short theater performance will follow the tour, but seats for that event must be reserved separately. You may take photographs of the paintings without flash. The sculpture room will remain closed while staff repair a light. The gallery shop will stay open until five.",
+      "passageZh": "校园美术馆更改了周日参观活动的安排。参观将于两点半开始，而不是两点十五分。请在正门里面集合。在线预约的参观者应向导览员出示确认信息。参观之后将有一场简短的戏剧表演，但那场活动的座位必须单独预订。你可以给画作拍照，但不能使用闪光灯。工作人员维修一盏灯期间，雕塑展室将保持关闭。美术馆商店将一直营业到五点。",
+      "dictation": [
+        "The campus gallery has changed the plan for its Sunday tour.",
+        "The tour will begin at two thirty, not two fifteen."
+      ],
+      "dictationZh": [
+        "校园美术馆更改了周日参观活动的安排。",
+        "参观将于两点半开始，而不是两点十五分。"
+      ],
+      "questions": [
+        {
+          "prompt": "What should visitors do if they want to attend the performance?",
+          "promptZh": "如果想观看表演，参观者应该做什么？",
+          "options": [
+            "Arrive at two fifteen instead of two thirty.",
+            "Reserve a seat separately from the tour.",
+            "Wait in the sculpture room.",
+            "Buy something from the gallery shop."
+          ],
+          "optionsZh": [
+            "两点十五分到，而不是两点半",
+            "在导览预约之外单独预订表演座位",
+            "在雕塑展室等待",
+            "在美术馆商店购买商品"
+          ],
+          "answer": 1,
+          "explanation": "but后的限制是seats must be reserved separately；导览预约不等于已订表演座位。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "Which statement matches the notice?",
+          "promptZh": "哪项陈述与通知一致？",
+          "options": [
+            "The shop closes at two thirty.",
+            "The tour starts outside the sculpture room.",
+            "Photography is forbidden in every room.",
+            "The sculpture room is closed for a light repair."
+          ],
+          "optionsZh": [
+            "商店两点半关闭",
+            "导览在雕塑展室外开始",
+            "所有房间都禁止拍照",
+            "雕塑展室因维修灯具而关闭"
+          ],
+          "answer": 3,
+          "explanation": "倒数第二句直接说明雕塑展室关闭的原因；without flash只禁止闪光灯，不是禁止所有拍照。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The guide who helped write the new labels explained that visitors could share different ideas as long as they distinguished opinions from facts.",
+      "main": "The guide explained that visitors could share different ideas.",
+      "mainZh": "导览员解释说，参观者可以分享不同想法。",
+      "translation": "那位协助编写新标签的导览员解释说，只要参观者把观点和事实区分开，就可以分享不同的想法。",
+      "core": [
+        "guide",
+        "explained",
+        "visitors",
+        "share",
+        "ideas"
+      ],
+      "keywords": [
+        "导览员",
+        "编写",
+        "标签",
+        "解释",
+        "不同",
+        "只要",
+        "观点",
+        "事实"
+      ],
+      "structure": "主句The guide explained，who helped write the new labels是修饰guide的定语从句。that引导宾语从句visitors could share different ideas；as long as引导条件状语从句，不表示时间长度。",
+      "grammar": [
+        "先括起who从句，helped不是主句谓语。",
+        "that后用could加动词原形share。",
+        "distinguish A from B意为区分A和B；as long as此处意为只要。"
+      ],
+      "examTip": "先找The guide explained，再回答解释了什么，最后补上条件。",
+      "level": "四级衔接句法",
+      "topic": "定语从句、宾语从句和条件状语从句"
+    },
+    "trans": [
+      {
+        "source": "这家美术馆鼓励参观者区分个人观点和事实。",
+        "answer": "The gallery encourages visitors to distinguish personal opinions from facts.",
+        "acceptedAnswers": [
+          "The gallery encourages visitors to distinguish personal opinions from facts.",
+          "The gallery encourages visitors to separate personal opinions from facts."
+        ],
+        "keywords": [
+          "gallery",
+          "encourages",
+          "visitors",
+          "opinions",
+          "facts"
+        ],
+        "grammar": "encourage somebody to do表示鼓励某人做某事；gallery是单数，谓语用encourages。distinguish A from B表示区分。",
+        "chunks": [
+          "encourage visitors to",
+          "distinguish personal opinions from facts"
+        ],
+        "alternative": "The gallery encourages visitors to separate personal opinions from facts.",
+        "level": "四级衔接表达",
+        "topic": "动词搭配与主谓一致"
+      },
+      {
+        "source": "虽然说明标签很短，但它们提供了有用的背景信息。",
+        "answer": "Although the labels are short, they provide useful background information.",
+        "acceptedAnswers": [
+          "Although the labels are short, they provide useful background information.",
+          "Although the labels were short, they provided useful background information."
+        ],
+        "keywords": [
+          "although",
+          "labels",
+          "short",
+          "useful",
+          "background information"
+        ],
+        "grammar": "although引导让步从句，不能再用but连接同一主句；short是形容词，前面不能省略are。information不可数，不加s。",
+        "chunks": [
+          "although the labels are short",
+          "provide useful background information"
+        ],
+        "alternative": "Although the labels were short, they provided useful background information.",
+        "level": "四级衔接表达",
+        "topic": "让步从句、be动词与不可数名词"
+      }
+    ]
   }
 }

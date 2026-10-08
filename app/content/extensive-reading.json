@@ -2840,5 +2840,72 @@
         "explanation": "最后一段保留查看最新交通通知的建议，承认纸图不能显示临时变化，同时说明其backup用途；D同时涵盖价值和局限。"
       }
     ]
+  },
+  {
+    "date": "2026-10-11",
+    "title": "A Small Stage for First Attempts",
+    "titleZh": "让初次尝试登台的小舞台",
+    "category": "Arts and campus life — participation",
+    "sourceType": "original news-style",
+    "sourceNote": "原创报刊风格教学短文，以下校园活动与人物均属虚构，不是真实或实时新闻。Original educational news-style fiction, not a report of a real event.",
+    "text": "A student theater group at an imagined college has introduced a short evening event for people who have never performed in public. Each participant can read a poem, tell a story, or act out a scene lasting no more than three minutes. The group provides a chair, a simple light, and one rehearsal before the event.\n\nThe idea came from a problem with the annual drama competition. Some students wanted to take part but felt unable to prepare a full play. Others were interested in writing rather than acting. The new event allows a writer to ask a friend to read the work, provided that both people agree.\n\nOrganizers do not give prizes or rank the performances. Instead, audience members may leave one specific comment about something they noticed. Comments such as \"I could follow the change in your character\" are more useful than a general \"Great job.\" Performers can choose whether to read this feedback.\n\nThe group also recognizes limits. Three minutes cannot replace the practice needed for a longer production, and not everyone will enjoy being on stage. Students can help with lighting or welcome visitors instead. The purpose is not to turn everyone into an actor, but to offer a manageable first step and several ways to contribute.",
+    "textZh": "一所虚构大学的学生戏剧社推出了一场简短的晚间活动，面向从未公开表演过的人。每位参与者可以朗读一首诗、讲一个故事，或表演一段不超过三分钟的戏。社团提供一把椅子、一盏简单的灯，以及活动前的一次排练。\n\n这个想法源于年度戏剧比赛中的一个问题。有些学生想参加，却觉得无法准备一整部戏。另一些学生对写作而不是表演感兴趣。新活动允许作者请朋友朗读作品，前提是双方都同意。\n\n组织者不颁奖，也不为表演排名。观众可以留下一条针对自己所观察到的内容的具体评价。比如“我能理解你的人物发生的变化”这样的评价，比笼统的“做得很好”更有用。表演者可以选择是否阅读这些反馈。\n\n社团也承认活动的局限。三分钟无法取代较长剧目所需要的练习，并非所有人都喜欢登台。学生还可以协助灯光工作或迎接来访者。目的不是把每个人都变成演员，而是提供一个容易着手的第一步，以及多种参与方式。",
+    "listeningTip": "第一遍听三分钟活动解决了什么问题；第二遍听rather than、provided that和not everyone，注意选择与限制。挑三句分别做一组影子跟读，随时暂停模仿，最后关掉原文复述30—60秒。浏览器合成朗读不是真题录音。",
+    "speakingPrompt": "In 30–60 seconds, explain why the group created this event, how feedback works, and one way to help without acting.",
+    "speakingPromptZh": "用30—60秒解释社团为何举办活动、反馈如何进行，以及不表演也能参与的一种方式。",
+    "keyPhrases": [
+      {
+        "en": "take part",
+        "zh": "参加"
+      },
+      {
+        "en": "provided that both people agree",
+        "zh": "前提是双方都同意"
+      },
+      {
+        "en": "a manageable first step",
+        "zh": "一个容易着手的第一步"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why did the group introduce the short event?",
+        "promptZh": "社团为什么推出这场简短活动？",
+        "options": [
+          "To make every student enter the annual competition.",
+          "To choose the best professional actor.",
+          "To give beginners a smaller and more flexible way to participate.",
+          "To replace all rehearsals with written comments."
+        ],
+        "optionsZh": [
+          "让每个学生参加年度比赛",
+          "选出最好的职业演员",
+          "给初学者提供规模较小且更灵活的参与方式",
+          "用书面评价取代全部排练"
+        ],
+        "answer": 2,
+        "explanation": "前两段说明完整剧目的准备门槛，以及写作者与表演者的不同兴趣；新活动提供较小、灵活的尝试机会。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "What does the last paragraph emphasize?",
+        "promptZh": "最后一段强调什么？",
+        "options": [
+          "Everyone should become an actor.",
+          "The event has limits, and students can contribute in different ways.",
+          "Longer productions need no practice.",
+          "Lighting is more important than writing."
+        ],
+        "optionsZh": [
+          "每个人都应成为演员",
+          "活动有局限，学生可以以不同方式参与",
+          "较长剧目不需要练习",
+          "灯光比写作更重要"
+        ],
+        "answer": 1,
+        "explanation": "末段既承认三分钟活动无法替代长期练习，又提出灯光和接待等非表演岗位；没有比较岗位价值。",
+        "tag": "extensive"
+      }
+    ]
   }
 ]
