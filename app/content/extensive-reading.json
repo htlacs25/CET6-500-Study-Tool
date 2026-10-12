@@ -2907,5 +2907,273 @@
         "tag": "extensive"
       }
     ]
+  },
+  {
+    "date": "2026-10-12",
+    "title": "The Work Behind a Free Workshop",
+    "titleZh": "免费工作坊背后的付出",
+    "category": "Campus activities — understanding costs",
+    "sourceType": "original news-style",
+    "sourceNote": "原创报刊风格教学短文；人物、机构与事件均为虚构，不是真实或实时新闻。Original educational news-style fiction, not a report of a real event.",
+    "text": "A college repair club in an imagined town advertises a free workshop for students who want to fix a small desk lamp. The notice sounds simple, but the organizers explain that free admission does not mean the event has no costs. Someone must prepare the room, check the tools, and clean up afterward.\n\nThe club uses a small activity fund to buy basic materials. Experienced volunteers offer their time, while the college provides the room. Participants are asked to bring only lamps that match the workshop description. Devices outside that description cannot be accepted because the team has limited time and equipment.\n\nInstead of hiding these limits, the organizers put a short explanation beside the booking form. They also say that donations are optional. A student who cannot give money can still attend on the same terms as everyone else. Nobody is expected to repair a device without guidance.\n\nAfter the first session, the team counts not only repaired lamps but also preparation and cleaning hours. These records will help it decide whether another workshop is practical. The aim is to keep the service available without assuming that volunteer time is endless. A free event can be valuable, but understanding the work behind it makes future planning more realistic.",
+    "textZh": "一座虚构小城的大学维修社宣传一场免费工作坊，帮助想修理小台灯的学生。通知听起来很简单，但组织者解释，免费入场不等于活动没有成本。必须有人准备场地、检查工具，并在结束后清理。\n\n社团使用少量活动资金购买基本材料。有经验的志愿者投入时间，学校提供房间。参与者只应携带符合工作坊说明的台灯。团队时间和设备有限，因此不能接收说明范围之外的设备。\n\n组织者没有隐藏这些限制，而是在预约表旁放了一段简短说明。他们也明确捐款是自愿的。不能捐钱的学生仍可在同等条件下参加。任何人都不应在没有指导的情况下修理设备。\n\n第一场结束后，团队不仅统计修好的台灯，也统计准备和清理的小时数。这些记录将帮助他们判断再办一场是否可行。目的是保持服务可用，而不是假设志愿者的时间无穷无尽。免费活动可以很有价值，但理解背后的付出会让今后的计划更现实。",
+    "listeningTip": "先听免费与零成本的区别；带文找not only、optional和without guidance。三组短语各跟读三遍，最后脱稿复述30—60秒；不是实际维修操作教程。",
+    "speakingPrompt": "Explain why a free workshop still has costs. Mention one limit and one record the team keeps.",
+    "speakingPromptZh": "解释免费工作坊为什么仍有成本，提到一个限制和团队保存的一种记录。",
+    "keyPhrases": [
+      {
+        "en": "free admission",
+        "zh": "免费入场"
+      },
+      {
+        "en": "on the same terms",
+        "zh": "在同等条件下"
+      },
+      {
+        "en": "volunteer time is endless",
+        "zh": "志愿者的时间无穷无尽"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why are only certain lamps accepted?",
+        "promptZh": "为什么只接收某些台灯？",
+        "options": [
+          "Donations are required for other lamps.",
+          "The room belongs to a shop.",
+          "The team has limited time and equipment.",
+          "Students dislike reading notices."
+        ],
+        "optionsZh": [
+          "其他灯具必须捐款",
+          "房间属于商店",
+          "团队时间和设备有限",
+          "学生不喜欢读通知"
+        ],
+        "answer": 2,
+        "explanation": "第二段把接收范围与有限的时间设备联系起来。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "Why does the club record preparation and cleaning hours?",
+        "promptZh": "社团为什么记录准备和清理时间？",
+        "options": [
+          "To make every participant pay an entrance fee.",
+          "To judge whether it can realistically offer another session.",
+          "To replace all its experienced volunteers.",
+          "To prove that no lamps need repair."
+        ],
+        "optionsZh": [
+          "要求每人支付入场费",
+          "判断是否有条件再次举办",
+          "替换全部有经验的志愿者",
+          "证明没有台灯需要维修"
+        ],
+        "answer": 1,
+        "explanation": "最后一段用这些工时判断另办一场是否practical。",
+        "tag": "extensive"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-13",
+    "title": "A Garden Keeps a Notebook",
+    "titleZh": "花园也有一本记录册",
+    "category": "Community life — observation and records",
+    "sourceType": "original news-style",
+    "sourceNote": "原创报刊风格教学短文；人物、机构与事件均为虚构，不是真实或实时新闻。Original educational news-style fiction, not a report of a real event.",
+    "text": "A community garden in an imagined neighborhood has started keeping a shared notebook beside its tool shed. Each page records the date, recent weather, and work completed that day. Volunteers also note which areas of soil were dry and which plants had changed since their last visit.\n\nThe notebook began after two groups watered the same section on one morning. Each group assumed that the other had worked elsewhere. Nobody had done anything deliberately wrong, but the lack of a shared record made the work difficult to coordinate.\n\nNow volunteers read the latest page before beginning. They write short observations rather than long personal stories. A drawing or a clear photograph can be attached when a description is hard to understand. The group leaves space for questions, so an uncertain observation does not have to become a confident claim.\n\nThe organizers warn that the notebook is not a scientific experiment. If a plant grows faster, the notes alone cannot prove which change caused it. Weather, soil, and several other conditions may have changed together. Still, the record helps new volunteers learn what has been tried and prevents useful experience from disappearing when someone leaves. It turns individual memories into information that the whole group can discuss.",
+    "textZh": "一个虚构社区的公共花园开始在工具棚旁保存一本共享记录册。每一页记录日期、近期天气和当天完成的工作。志愿者还写下哪些土壤区域较干，以及哪些植物自上次到访后发生了变化。\n\n记录册起源于一个早晨两组人给同一区域浇水。每组都以为另一组在别处工作。没人故意做错，但缺少共享记录让工作难以协调。\n\n现在，志愿者开始前先读最新一页。他们写简短观察，而不是冗长的个人故事。如果文字描述难懂，可以附上图画或清楚的照片。团队留出提问空间，使不确定的观察不必变成肯定的断言。\n\n组织者提醒，记录册并不是科学实验。如果植物长得更快，仅凭这些笔记不能证明是哪种改变造成的。天气、土壤和其他多种条件可能一起变化。不过，记录能帮助新志愿者了解已经尝试过什么，也能防止有用经验因人员离开而消失。它把个人记忆变成了整个团队可以讨论的信息。",
+    "listeningTip": "盲听记录册解决的协作问题；精听rather than与cannot prove。练习三组短语后，用30—60秒说明记录的价值和不能证明的事情。",
+    "speakingPrompt": "Describe the problem that led to the notebook. Explain one benefit and one limit of this shared record.",
+    "speakingPromptZh": "描述促使团队建立记录册的问题，并解释共享记录的一项好处和一项局限。",
+    "keyPhrases": [
+      {
+        "en": "a shared record",
+        "zh": "共享记录"
+      },
+      {
+        "en": "leave space for questions",
+        "zh": "为问题留出空间"
+      },
+      {
+        "en": "rather than long personal stories",
+        "zh": "而不是冗长的个人故事"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What problem led to the notebook?",
+        "promptZh": "什么问题促成了记录册？",
+        "options": [
+          "Two groups repeated the same work without knowing it.",
+          "Every volunteer refused to write.",
+          "The garden had no plants.",
+          "A scientific experiment had proved a new method."
+        ],
+        "optionsZh": [
+          "两组人不知情地重复做了同一工作",
+          "每位志愿者都拒绝写字",
+          "花园没有植物",
+          "科学实验已证明新方法"
+        ],
+        "answer": 0,
+        "explanation": "第二段指出两组人同一天早上重复浇同一区域，因为缺少共享记录。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "What can the notebook NOT establish by itself?",
+        "promptZh": "记录册本身无法确定什么？",
+        "options": [
+          "What work was written down.",
+          "Which questions volunteers left.",
+          "Which change caused a plant to grow faster.",
+          "What date appears on a page."
+        ],
+        "optionsZh": [
+          "记下了哪些工作",
+          "志愿者留下哪些问题",
+          "哪一种改变导致植物长得更快",
+          "某页标注的日期"
+        ],
+        "answer": 2,
+        "explanation": "末段区分观察记录与因果证明，多种条件可能同时变化。",
+        "tag": "extensive"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-14",
+    "title": "A Notice Needs a Time as Well as a Number",
+    "titleZh": "通知除了数字还需要时间",
+    "category": "Technology and campus life — useful information",
+    "sourceType": "original news-style",
+    "sourceNote": "原创报刊风格教学短文；人物、机构与事件均为虚构，不是真实或实时新闻。Original educational news-style fiction, not a report of a real event.",
+    "text": "A student project at an imagined college shows how many study seats are available in several buildings. Volunteers count empty seats at set times and enter the figures on a shared page. At first, the page displayed only a building name and a number.\n\nStudents welcomed the idea, but some walked across campus and found no seats. The number had been correct when a volunteer recorded it, yet the situation had changed before they arrived. A precise number looked more certain than the information really was.\n\nThe team added the time of the latest count beside every figure. When a record became old, the page showed a warning instead of presenting the number as current. The team also explained that a seat count was not a reservation. Nobody could claim a desk simply because the page had shown one empty place.\n\nThe revised page still could not predict how many people would enter a building in the next few minutes. However, it helped students judge how much confidence to place in the information. Some chose to check a nearby room first rather than make a long walk. The project taught its designers that useful information needs context: not only what was measured, but when it was measured and what it can reasonably promise.",
+    "textZh": "一所虚构大学的学生项目显示几栋楼里还有多少自习座位。志愿者在固定时间数空座位，并把数字录入共享页面。最初，页面只显示楼名和数字。\n\n学生欢迎这个想法，但有些人穿过校园后却发现没有空位。志愿者记录时数字是对的，可在他们到达前情况已变。精确的数字看起来比信息实际能保证的更确定。\n\n团队在每个数字旁加上最近统计时间。记录变旧时，页面显示警告，而不再把数字当作当前状态。团队还解释座位统计并不是预约。没人能仅凭页面显示过一个空位就要求占用某张桌子。\n\n修改后的页面仍无法预测接下来几分钟有多少人会进入楼内。不过，它帮助学生判断应该多大程度上信赖信息。一些人选择先查看附近教室，而不是走很远。这个项目让设计者明白，有用信息需要背景：不仅说明测了什么，还要说明何时测量，以及它合理地能保证什么。",
+    "listeningTip": "盲听“数字正确却仍没找到座位”的原因；精听when、instead of和not a reservation。三组短语跟读后，用30—60秒解释修改及其局限。",
+    "speakingPrompt": "Explain why the original seat count misled some students. Describe two changes and one limit of the new page.",
+    "speakingPromptZh": "解释原座位统计为何误导了一些学生，描述两项改动及新版页面的一项局限。",
+    "keyPhrases": [
+      {
+        "en": "the time of the latest count",
+        "zh": "最近一次统计的时间"
+      },
+      {
+        "en": "not a reservation",
+        "zh": "不是预约"
+      },
+      {
+        "en": "place confidence in the information",
+        "zh": "信赖这些信息"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why did some students find no seats despite the number on the page?",
+        "promptZh": "为什么页面有空位数字，一些学生到场后却没座位？",
+        "options": [
+          "The count was always deliberately false.",
+          "They had entered the wrong college.",
+          "Volunteers had reserved every desk.",
+          "The situation changed between the count and their arrival."
+        ],
+        "optionsZh": [
+          "统计总是故意造假",
+          "他们走进了错误的大学",
+          "志愿者预约了全部桌子",
+          "统计与到达之间情况发生变化"
+        ],
+        "answer": 3,
+        "explanation": "第二段指出记录时正确但之后变化，不代表故意造假。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "What is the main lesson of the project?",
+        "promptZh": "这个项目的主要启示是什么？",
+        "options": [
+          "A number is useful only when everyone agrees with it.",
+          "Information should include its timing and limits.",
+          "Old records should always be presented as current.",
+          "A count guarantees a place for every reader."
+        ],
+        "optionsZh": [
+          "数字只有人人赞同时才有用",
+          "信息应包含时间和局限",
+          "旧记录应始终作为当前状态展示",
+          "统计保证每位读者都有座位"
+        ],
+        "answer": 1,
+        "explanation": "末段总结when it was measured及what it can reasonably promise。",
+        "tag": "extensive"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-15",
+    "title": "An Old Photograph Gains a Careful Caption",
+    "titleZh": "一张旧照片得到谨慎的说明",
+    "category": "Community history — evidence and uncertainty",
+    "sourceType": "original news-style",
+    "sourceNote": "原创报刊风格教学短文；人物、机构与事件均为虚构，不是真实或实时新闻。Original educational news-style fiction, not a report of a real event.",
+    "text": "A small local history group in an imagined town receives a photograph of people standing outside an old station. Someone has written a year on the back, but there are no names. At first, a volunteer plans to display the picture with a confident story about a holiday trip.\n\nAnother member asks where that story came from. The photograph shows bags and smiling faces, but these details do not prove why the people were traveling. They might have been leaving, arriving, or simply meeting friends. The handwritten year could also have been added long after the photograph was taken.\n\nThe group decides to publish what it knows and clearly mark what remains uncertain. It describes the building and the visible objects, then invites readers to share information that could be checked. A former resident recognizes one person and offers a family letter. The letter helps establish a date, although it does not answer every question.\n\nThe final caption is less dramatic than the first story, but more useful. It separates observation, supporting evidence, and unanswered questions. For the volunteers, preserving history means more than keeping an attractive picture. It also means allowing future readers to see how an explanation was reached and where further research is still needed.",
+    "textZh": "一座虚构小城的小型地方史小组收到一张照片，照片里有人站在旧车站外。有人在背面写了年份，却没有姓名。最初，一名志愿者打算配上一段肯定的假日旅行故事来展示照片。\n\n另一位成员询问这个故事从何而来。照片里有包和笑脸，但这些细节不能证明人们为何出行。他们可能在出发、抵达，或只是与朋友见面。手写年份也可能是在拍照很久后才加上去的。\n\n小组决定发表已知事实，并明确标出仍不确定的内容。他们描述建筑和可见物品，再邀请读者提供可核实的信息。一位前居民认出其中一人，并提供一封家信。信件帮助确定了日期，但没有回答所有问题。\n\n最终说明没有最初故事那么戏剧化，却更有用。它区分观察、支持证据和未解问题。对志愿者而言，保存历史不仅是留住好看的照片，也意味着让未来读者看出解释如何得来，以及哪里还需要研究。",
+    "listeningTip": "先听为什么最初的旅行故事不能直接采用；精听might、could和although。三组短语跟读后，复述团队怎样区分观察与证据。",
+    "speakingPrompt": "Explain why the first caption was uncertain. Describe what the group did and how the family letter helped.",
+    "speakingPromptZh": "解释最初的照片说明为什么不确定，描述小组的做法以及家信提供的帮助。",
+    "keyPhrases": [
+      {
+        "en": "mark what remains uncertain",
+        "zh": "标明仍不确定的内容"
+      },
+      {
+        "en": "supporting evidence",
+        "zh": "支持性证据"
+      },
+      {
+        "en": "unanswered questions",
+        "zh": "未解的问题"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why did the group question the holiday story?",
+        "promptZh": "小组为什么质疑假日旅行故事？",
+        "options": [
+          "The station had never existed.",
+          "The visible details did not establish the purpose of the trip.",
+          "Every smile proved that the photograph was false.",
+          "The picture contained no people."
+        ],
+        "optionsZh": [
+          "车站从未存在",
+          "可见细节无法确定出行目的",
+          "每个笑容都证明照片造假",
+          "照片里没有人"
+        ],
+        "answer": 1,
+        "explanation": "包和笑脸只能观察到，不能推出确定的出行动机。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "What made the final caption more useful?",
+        "promptZh": "什么让最终说明更有用？",
+        "options": [
+          "It removed every question from local history.",
+          "It told a more exciting invented story.",
+          "It separated known evidence from remaining uncertainty.",
+          "It ignored the family letter."
+        ],
+        "optionsZh": [
+          "它消除了地方史的一切问题",
+          "它讲更刺激的虚构故事",
+          "它区分已知证据和仍存在的不确定性",
+          "它忽视家信"
+        ],
+        "answer": 2,
+        "explanation": "末段强调observation、supporting evidence和unanswered questions的区分。",
+        "tag": "extensive"
+      }
+    ]
   }
 ]

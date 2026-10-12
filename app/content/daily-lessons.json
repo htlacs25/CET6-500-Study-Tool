@@ -13687,5 +13687,1973 @@
         "topic": "让步从句、be动词与不可数名词"
       }
     ]
+  },
+  "2026-10-12": {
+    "title": "财务信息：区分收到申请、批准付款与实际支出",
+    "grammarTip": "听力注意截止时间更改和确认信息的含义；阅读区分账户总额与可用资金。语法巩固从句与主句谓语、被动语态、不可数名词及条件句。材料为虚构校园场景的原创模拟，不是理财建议。",
+    "words": [
+      {
+        "word": "bank",
+        "phonetic": "/bæŋk/",
+        "pos": "n.",
+        "meaning": "银行；岸",
+        "phrase": "a bank account",
+        "example": "The club keeps its money in a bank account.",
+        "exampleZh": "社团把钱存放在银行账户中。"
+      },
+      {
+        "word": "deposit",
+        "phonetic": "/dɪˈpɑːzɪt/",
+        "pos": "n.; v.",
+        "meaning": "n. 押金；存款；v. 存入",
+        "phrase": "pay a deposit",
+        "example": "We paid a deposit before borrowing the equipment.",
+        "exampleZh": "借设备前我们付了押金。"
+      },
+      {
+        "word": "withdraw",
+        "phonetic": "/wɪðˈdrɔː/",
+        "pos": "v.",
+        "meaning": "提取；撤回；退出",
+        "phrase": "withdraw cash",
+        "example": "She went to the bank to withdraw cash.",
+        "exampleZh": "她去银行提取现金。"
+      },
+      {
+        "word": "currency",
+        "phonetic": "/ˈkɜːrənsi/",
+        "pos": "n.",
+        "meaning": "货币；通货",
+        "phrase": "foreign currency",
+        "example": "Check which currency is used on the price list.",
+        "exampleZh": "确认价目表使用的是哪种货币。"
+      },
+      {
+        "word": "cash",
+        "phonetic": "/kæʃ/",
+        "pos": "n.; v.",
+        "meaning": "n. 现金；v. 兑现",
+        "phrase": "pay in cash",
+        "example": "Visitors can pay in cash at the desk.",
+        "exampleZh": "参观者可以在服务台用现金付款。"
+      },
+      {
+        "word": "coin",
+        "phonetic": "/kɔɪn/",
+        "pos": "n.; v.",
+        "meaning": "n. 硬币；v. 创造新词",
+        "phrase": "a small coin",
+        "example": "He found a coin under the chair.",
+        "exampleZh": "他在椅子下发现一枚硬币。"
+      },
+      {
+        "word": "debt",
+        "phonetic": "/det/",
+        "pos": "n.",
+        "meaning": "债务；欠款",
+        "phrase": "pay off a debt",
+        "example": "The club plans to pay off its debt after the event.",
+        "exampleZh": "社团计划在活动后还清债务。"
+      },
+      {
+        "word": "loan",
+        "phonetic": "/loʊn/",
+        "pos": "n.; v.",
+        "meaning": "n. 贷款；借款；v. 借出",
+        "phrase": "repay a loan",
+        "example": "A loan is money that must be paid back.",
+        "exampleZh": "借款是必须归还的钱。"
+      },
+      {
+        "word": "interest",
+        "phonetic": "/ˈɪntrəst/",
+        "pos": "n.; v.",
+        "meaning": "n. 兴趣；利息；v. 使感兴趣",
+        "phrase": "show an interest in",
+        "example": "Several students showed an interest in the finance workshop.",
+        "exampleZh": "几名学生对财务讲座表现出兴趣。"
+      },
+      {
+        "word": "profit",
+        "phonetic": "/ˈprɑːfɪt/",
+        "pos": "n.; v.",
+        "meaning": "n. 利润；好处；v. 获益",
+        "phrase": "make a profit",
+        "example": "The ticket income did not cover the costs, so there was no profit.",
+        "exampleZh": "门票收入没有覆盖成本，因此没有利润。"
+      },
+      {
+        "word": "loss",
+        "phonetic": "/lɔːs/",
+        "pos": "n.",
+        "meaning": "损失；亏损；丧失",
+        "phrase": "a financial loss",
+        "example": "The canceled event caused a financial loss.",
+        "exampleZh": "活动取消造成了经济损失。"
+      },
+      {
+        "word": "investment",
+        "phonetic": "/ɪnˈvestmənt/",
+        "pos": "n.",
+        "meaning": "投资；投入",
+        "phrase": "an investment of time",
+        "example": "Learning a new skill requires an investment of time.",
+        "exampleZh": "学习一项新技能需要投入时间。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "capital",
+        "phonetic": "/ˈkæpɪtəl/",
+        "pos": "n.; adj.",
+        "meaning": "n. 资本；首都；大写字母；adj. 大写的",
+        "phrase": "start-up capital",
+        "example": "The group needed capital to buy its first set of tools.",
+        "exampleZh": "小组需要资金购买第一套工具。"
+      },
+      {
+        "word": "financial",
+        "phonetic": "/faɪˈnænʃəl/",
+        "pos": "adj.",
+        "meaning": "财务的；金融的",
+        "phrase": "financial records",
+        "example": "Clear financial records help members understand each payment.",
+        "exampleZh": "清楚的财务记录帮助成员了解每一笔付款。"
+      },
+      {
+        "word": "finance",
+        "phonetic": "/ˈfaɪnæns/",
+        "pos": "n.; v.",
+        "meaning": "n. 财务；金融；v. 为……提供资金",
+        "phrase": "finance a project",
+        "example": "The school helped finance the student project.",
+        "exampleZh": "学校帮助资助了这个学生项目。"
+      },
+      {
+        "word": "fund",
+        "phonetic": "/fʌnd/",
+        "pos": "n.; v.",
+        "meaning": "n. 基金；资金；v. 资助",
+        "phrase": "a student activity fund",
+        "example": "The student activity fund paid for the room.",
+        "exampleZh": "学生活动基金支付了场地费用。"
+      },
+      {
+        "word": "payment",
+        "phonetic": "/ˈpeɪmənt/",
+        "pos": "n.",
+        "meaning": "付款；支付的款项",
+        "phrase": "confirm a payment",
+        "example": "Keep the message that confirms your payment.",
+        "exampleZh": "保留确认付款的信息。"
+      },
+      {
+        "word": "charge",
+        "phonetic": "/tʃɑːrdʒ/",
+        "pos": "n.; v.",
+        "meaning": "n. 费用；责任；v. 收费；充电",
+        "phrase": "charge a fee",
+        "example": "The center does not charge a fee for this talk.",
+        "exampleZh": "中心不为这次讲座收取费用。"
+      },
+      {
+        "word": "fee",
+        "phonetic": "/fiː/",
+        "pos": "n.",
+        "meaning": "费用；服务费",
+        "phrase": "an entrance fee",
+        "example": "The entrance fee includes a printed guide.",
+        "exampleZh": "入场费包含一本纸质指南。"
+      },
+      {
+        "word": "tax",
+        "phonetic": "/tæks/",
+        "pos": "n.; v.",
+        "meaning": "n. 税；v. 对……征税",
+        "phrase": "a tax on goods",
+        "example": "The report explains a change in the tax on these goods.",
+        "exampleZh": "报告解释了这些商品税费的变化。"
+      },
+      {
+        "word": "wealth",
+        "phonetic": "/welθ/",
+        "pos": "n.",
+        "meaning": "财富；大量",
+        "phrase": "a wealth of information",
+        "example": "The library offers a wealth of information about local history.",
+        "exampleZh": "图书馆提供大量有关当地历史的信息。"
+      },
+      {
+        "word": "saving",
+        "phonetic": "/ˈseɪvɪŋ/",
+        "pos": "n.",
+        "meaning": "节省；节约额；savings指储蓄",
+        "phrase": "a saving of time",
+        "example": "The shared order produced a small saving in delivery costs.",
+        "exampleZh": "合并下单节省了少量配送费用。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The student who collects the receipts ___ a clear record.",
+        "promptZh": "负责收集收据的学生保留着清楚的记录。",
+        "options": [
+          "keep",
+          "keeps",
+          "keeping",
+          "are"
+        ],
+        "optionsZh": [
+          "保留（原形）",
+          "保留（第三人称单数）",
+          "保留（非限定形式）",
+          "是（复数be）"
+        ],
+        "answer": 1,
+        "explanation": "who collects the receipts是定语从句；主句是The student keeps a clear record。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "The information on these forms ___ useful.",
+        "promptZh": "这些表格上的信息很有用。",
+        "options": [
+          "are",
+          "have",
+          "is",
+          "do"
+        ],
+        "optionsZh": [
+          "是（复数）",
+          "有",
+          "是（单数）",
+          "做"
+        ],
+        "answer": 2,
+        "explanation": "information是不可数名词，主语不是forms；useful是形容词，需要is。",
+        "tag": "be-verb"
+      },
+      {
+        "prompt": "All requests must ___ before the deadline.",
+        "promptZh": "所有申请必须在截止时间前检查。",
+        "options": [
+          "check",
+          "checking",
+          "checked",
+          "be checked"
+        ],
+        "optionsZh": [
+          "检查（原形）",
+          "检查（非限定形式）",
+          "检查（过去分词）",
+          "被检查"
+        ],
+        "answer": 3,
+        "explanation": "requests是被检查的对象，must后用be checked构成被动语态。",
+        "tag": "passive"
+      },
+      {
+        "prompt": "If the receipt is missing, please ___ the reason.",
+        "promptZh": "如果收据缺失，请解释原因。",
+        "options": [
+          "explain",
+          "explains",
+          "explaining",
+          "explanation"
+        ],
+        "optionsZh": [
+          "解释（原形）",
+          "解释（第三人称单数）",
+          "解释（非限定形式）",
+          "解释（名词）"
+        ],
+        "answer": 0,
+        "explanation": "please后的祈使句用动词原形explain，不能用名词explanation。",
+        "tag": "imperative"
+      },
+      {
+        "prompt": "She has already ___ the form to the office.",
+        "promptZh": "她已经把表格发给办公室了。",
+        "options": [
+          "send",
+          "sent",
+          "sending",
+          "sends"
+        ],
+        "optionsZh": [
+          "发送（原形）",
+          "发送（过去分词）",
+          "发送（非限定形式）",
+          "发送（第三人称单数）"
+        ],
+        "answer": 1,
+        "explanation": "现在完成时has后接过去分词；send的过去式和过去分词都是sent。",
+        "tag": "present-perfect"
+      },
+      {
+        "prompt": "The club avoids ___ money without a record.",
+        "promptZh": "社团避免在没有记录的情况下花钱。",
+        "options": [
+          "spend",
+          "to spend",
+          "spending",
+          "spent"
+        ],
+        "optionsZh": [
+          "花费（原形）",
+          "花费（不定式）",
+          "花费（动名词）",
+          "花费（过去式）"
+        ],
+        "answer": 2,
+        "explanation": "avoid后接动名词spending，不接to spend。",
+        "tag": "gerund"
+      }
+    ],
+    "reading": {
+      "title": "More Than an Account Total",
+      "titleZh": "不仅仅是账户总额",
+      "level": "四级专项衔接 · 原创分级模拟",
+      "topic": "区分总额、用途与时间条件",
+      "passage": "When a student club prepared an exhibition, its account appeared to contain enough money. Several members suggested buying better lights immediately. However, the student responsible for the records asked them to examine where the money had come from.\n\nPart of the total was a loan from another club and had to be repaid after the event. Another part was money collected for a later trip. Neither amount could simply be treated as income from the exhibition. The club also expected a room deposit to be returned, but the return had not yet been confirmed.\n\nThe group made a simple table showing the source, purpose, and expected payment date of each amount. This did not increase the money available, but it changed the discussion. Members decided to borrow lights instead of buying them.\n\nThe records were shared with everyone, including members who had no experience in finance. Clear labels helped them ask useful questions. The lesson was not that every expense should be avoided, but that a large total does not explain how much can safely be used for a particular purpose.",
+      "passageZh": "一个学生社团准备展览时，账户看起来有足够的钱。几名成员建议立即购买更好的灯具。不过，负责记录的学生请大家先检查这些钱来自哪里。\n\n总额中一部分是向另一社团借的钱，必须在活动后归还。另一部分是为之后的一次旅行收取的款项。这两笔钱都不能直接视为展览收入。社团还预计能拿回场地押金，但退款尚未确认。\n\n小组制作了一张简单的表格，说明每笔钱的来源、用途和预计付款日期。这并没有增加可用资金，却改变了讨论。成员决定借灯具，而不是购买。\n\n记录向所有人公开，包括没有财务经验的成员。清楚的标签帮助他们提出有用的问题。这里的道理并不是应避免每一笔支出，而是较大的总额不能说明有多少钱可以用于特定目的。",
+      "questions": [
+        {
+          "prompt": "Why did the student ask members to check the source of the money?",
+          "promptZh": "为什么这名学生要求大家检查资金来源？",
+          "options": [
+            "The exhibition had already been canceled.",
+            "Some money was borrowed or intended for another activity.",
+            "The club had lost all its records.",
+            "Every member wanted to leave the club."
+          ],
+          "optionsZh": [
+            "展览已经取消",
+            "部分钱是借来的或用于另一活动",
+            "社团丢失了全部记录",
+            "每位成员都想退出社团"
+          ],
+          "answer": 1,
+          "explanation": "第二段说明借款需要归还，旅行款有特定用途，不能全当展览收入。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What was uncertain at the time of the discussion?",
+          "promptZh": "讨论时哪件事尚未确定？",
+          "options": [
+            "Whether the club had any members.",
+            "Whether the exhibition needed a room.",
+            "Whether the room deposit would be returned.",
+            "Whether a table could be shared."
+          ],
+          "optionsZh": [
+            "社团是否有成员",
+            "展览是否需要场地",
+            "场地押金是否会退回",
+            "表格是否能够分享"
+          ],
+          "answer": 2,
+          "explanation": "the return had not yet been confirmed表明押金退款尚未确认。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What decision did the members make?",
+          "promptZh": "成员作出了什么决定？",
+          "options": [
+            "They bought more expensive lights.",
+            "They stopped keeping financial records.",
+            "They spent the trip money first.",
+            "They borrowed lights instead of buying them."
+          ],
+          "optionsZh": [
+            "买更贵的灯",
+            "停止保存财务记录",
+            "先花旅行款",
+            "借灯具而不购买"
+          ],
+          "answer": 3,
+          "explanation": "第三段直接给出borrow lights instead of buying them。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What is the main point of the passage?",
+          "promptZh": "文章的主要观点是什么？",
+          "options": [
+            "Money must be understood in terms of its source and purpose.",
+            "All student activities should be free.",
+            "People without financial experience should not ask questions.",
+            "A larger account total always means more money is available."
+          ],
+          "optionsZh": [
+            "需要结合来源和用途理解资金",
+            "所有学生活动都应该免费",
+            "没有财务经验的人不应提问",
+            "账户总额越大就总有更多可用资金"
+          ],
+          "answer": 0,
+          "explanation": "结尾否定只看总额的判断，强调特定用途；并非主张不花任何钱。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "A Changed Deadline for Expense Forms",
+      "titleZh": "费用报销表的截止时间变更",
+      "tip": "首遍记住改后的周四下午；第二遍辨别“收到”不等于“批准”。听写后选三段跟读，合成朗读优先使用可用美式语音。",
+      "level": "四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "passage": "This message is for students requesting payment for club expenses. Please send your form to the finance office by Thursday afternoon. The previous deadline was Friday, but the office will be closed that day. Attach a copy of each receipt, not just a bank message. If a receipt is missing, explain the reason on the form. A staff member will contact you about the next step. Do not send the same request twice. The office will confirm that it has received your form, but this message does not mean the payment has been approved.",
+      "passageZh": "这则信息是发给申请报销社团费用的学生的。请在周四下午前把表格交到财务办公室。原截止日期是周五，但办公室那天将关闭。请附上每张收据的副本，而不仅仅是银行信息。如果缺少收据，请在表格上解释原因。一名工作人员将联系你说明下一步。不要把同一份申请发送两次。办公室会确认已收到你的表格，但这条信息并不意味着报销已经获批。",
+      "dictation": [
+        "This message is for students requesting payment for club expenses.",
+        "Please send your form to the finance office by Thursday afternoon."
+      ],
+      "dictationZh": [
+        "这则信息是发给申请报销社团费用的学生的。",
+        "请在周四下午前把表格交到财务办公室。"
+      ],
+      "questions": [
+        {
+          "prompt": "When should students send their forms?",
+          "promptZh": "学生应在什么时候前提交表格？",
+          "options": [
+            "Thursday afternoon.",
+            "Friday morning.",
+            "Friday evening.",
+            "Next Monday."
+          ],
+          "optionsZh": [
+            "周四下午",
+            "周五上午",
+            "周五晚上",
+            "下周一"
+          ],
+          "answer": 0,
+          "explanation": "新截止时间是Thursday afternoon，Friday是旧时间和关闭日。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "What does the confirmation message mean?",
+          "promptZh": "确认信息意味着什么？",
+          "options": [
+            "Every expense has been approved.",
+            "The money has reached the student.",
+            "The office has received the form.",
+            "No receipt is needed."
+          ],
+          "optionsZh": [
+            "每笔费用都获批",
+            "款项已到账",
+            "办公室收到了表格",
+            "不需要收据"
+          ],
+          "answer": 2,
+          "explanation": "末句明确说收到表格不代表付款获批，注意but的限制。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The student who checked the account explained that the money collected for the trip could not be used for the exhibition.",
+      "main": "The student explained that the money could not be used for the exhibition.",
+      "mainZh": "这名学生解释说，这笔钱不能用于展览。",
+      "translation": "核对账户的那名学生解释说，为旅行收取的钱不能用于展览。",
+      "core": [
+        "student",
+        "explained",
+        "money",
+        "used",
+        "exhibition"
+      ],
+      "keywords": [
+        "学生",
+        "核对",
+        "账户",
+        "解释",
+        "旅行",
+        "钱",
+        "不能",
+        "展览"
+      ],
+      "structure": "The student explained是主句；who checked the account修饰student。that后为宾语从句，collected for the trip是过去分词短语，修饰money；could not be used是情态动词的被动语态。",
+      "grammar": [
+        "checked在定语从句中，不是主句谓语。",
+        "collected不是这个宾语从句的谓语，核心谓语是could not be used。"
+      ],
+      "examTip": "先找谁解释了什么，再补回资金用途限制。",
+      "level": "四级衔接句法",
+      "topic": "主句、定语从句与被动结构"
+    },
+    "trans": [
+      {
+        "source": "在购买设备之前，我们应该检查全部费用。",
+        "answer": "Before buying equipment, we should check all the costs.",
+        "alternative": "We should check all the costs before buying equipment.",
+        "acceptedAnswers": [
+          "Before buying equipment, we should check all the costs.",
+          "We should check all the costs before buying equipment."
+        ],
+        "keywords": [
+          "before",
+          "equipment",
+          "should",
+          "check",
+          "costs"
+        ],
+        "grammar": "before后可接动名词buying；equipment不可数，不加s。",
+        "chunks": [
+          "before buying equipment",
+          "check all the costs"
+        ],
+        "level": "四级衔接表达",
+        "topic": "准确表达与句法巩固"
+      },
+      {
+        "source": "确认信息并不意味着付款已经获批。",
+        "answer": "A confirmation message does not mean that the payment has been approved.",
+        "alternative": "A confirmation message does not mean the payment has been approved.",
+        "acceptedAnswers": [
+          "A confirmation message does not mean that the payment has been approved.",
+          "A confirmation message does not mean the payment has been approved."
+        ],
+        "keywords": [
+          "confirmation message",
+          "does not mean",
+          "payment",
+          "has been approved"
+        ],
+        "grammar": "does not后接mean原形；has been approved是现在完成时被动语态。",
+        "chunks": [
+          "a confirmation message",
+          "does not mean",
+          "has been approved"
+        ],
+        "level": "四级衔接表达",
+        "topic": "准确表达与句法巩固"
+      }
+    ]
+  },
+  "2026-10-13": {
+    "title": "农业与生活：选择合适数量，而不只看单价",
+    "grammarTip": "阅读训练比较依据与因果，听力区分集合地点、出发时间和活动范围。语法继续巩固主从句、形容词前be、比较结构和动名词。原创教学场景，不是实际农业操作指导。",
+    "words": [
+      {
+        "word": "agriculture",
+        "phonetic": "/ˈæɡrɪkʌltʃər/",
+        "pos": "n.",
+        "meaning": "农业",
+        "phrase": "modern agriculture",
+        "example": "The course introduces several changes in modern agriculture.",
+        "exampleZh": "这门课程介绍现代农业中的一些变化。"
+      },
+      {
+        "word": "crop",
+        "phonetic": "/krɑːp/",
+        "pos": "n.; v.",
+        "meaning": "n. 作物；收成；v. 裁剪",
+        "phrase": "grow a crop",
+        "example": "The farmer chose a crop suitable for the local conditions.",
+        "exampleZh": "农民选择了一种适合当地条件的作物。"
+      },
+      {
+        "word": "harvest",
+        "phonetic": "/ˈhɑːrvɪst/",
+        "pos": "n.; v.",
+        "meaning": "n. 收获；收成；v. 收割",
+        "phrase": "harvest wheat",
+        "example": "The team helped harvest wheat on the farm.",
+        "exampleZh": "团队在农场帮助收割小麦。"
+      },
+      {
+        "word": "soil",
+        "phonetic": "/sɔɪl/",
+        "pos": "n.; v.",
+        "meaning": "n. 土壤；v. 弄脏",
+        "phrase": "dry soil",
+        "example": "The students recorded whether the soil was dry.",
+        "exampleZh": "学生记录土壤是否干燥。"
+      },
+      {
+        "word": "seed",
+        "phonetic": "/siːd/",
+        "pos": "n.; v.",
+        "meaning": "n. 种子；v. 播种",
+        "phrase": "plant a seed",
+        "example": "Each child planted a seed in a small pot.",
+        "exampleZh": "每个孩子都在小盆里种下一颗种子。"
+      },
+      {
+        "word": "drought",
+        "phonetic": "/draʊt/",
+        "pos": "n.",
+        "meaning": "旱灾；干旱",
+        "phrase": "a long drought",
+        "example": "The report describes how a long drought affected the village.",
+        "exampleZh": "报告描述长期干旱如何影响村庄。"
+      },
+      {
+        "word": "flood",
+        "phonetic": "/flʌd/",
+        "pos": "n.; v.",
+        "meaning": "n. 洪水；v. 淹没",
+        "phrase": "after a flood",
+        "example": "The road remained closed after the flood.",
+        "exampleZh": "洪水之后道路仍然关闭。"
+      },
+      {
+        "word": "wheat",
+        "phonetic": "/wiːt/",
+        "pos": "n.",
+        "meaning": "小麦",
+        "phrase": "a field of wheat",
+        "example": "A field of wheat lies beyond the farm buildings.",
+        "exampleZh": "农场建筑外是一片麦田。"
+      },
+      {
+        "word": "grain",
+        "phonetic": "/ɡreɪn/",
+        "pos": "n.",
+        "meaning": "谷物；颗粒",
+        "phrase": "store grain",
+        "example": "The building was once used to store grain.",
+        "exampleZh": "这栋建筑曾用于储存谷物。"
+      },
+      {
+        "word": "vegetable",
+        "phonetic": "/ˈvedʒtəbəl/",
+        "pos": "n.",
+        "meaning": "蔬菜",
+        "phrase": "a vegetable box",
+        "example": "The vegetable box contains several kinds of seasonal produce.",
+        "exampleZh": "蔬菜箱里装着几种当季农产品。"
+      },
+      {
+        "word": "fruit",
+        "phonetic": "/fruːt/",
+        "pos": "n.",
+        "meaning": "水果；成果",
+        "phrase": "fresh fruit",
+        "example": "The market sells fruit from nearby farms.",
+        "exampleZh": "市场出售附近农场的水果。"
+      },
+      {
+        "word": "farming",
+        "phonetic": "/ˈfɑːrmɪŋ/",
+        "pos": "n.",
+        "meaning": "农业经营；耕作",
+        "phrase": "learn about farming",
+        "example": "The visit helped students learn about farming.",
+        "exampleZh": "这次参观帮助学生了解农业经营。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "farmer",
+        "phonetic": "/ˈfɑːrmər/",
+        "pos": "n.",
+        "meaning": "农民；农场主",
+        "phrase": "talk to a farmer",
+        "example": "A farmer explained why the delivery list changed.",
+        "exampleZh": "一位农场主解释了配送清单为什么改变。"
+      },
+      {
+        "word": "livestock",
+        "phonetic": "/ˈlaɪvstɑːk/",
+        "pos": "n.",
+        "meaning": "牲畜（集合名词）",
+        "phrase": "keep livestock",
+        "example": "Visitors must stay outside the area where livestock are kept.",
+        "exampleZh": "参观者必须留在饲养牲畜的区域外。"
+      },
+      {
+        "word": "dairy",
+        "phonetic": "/ˈderi/",
+        "pos": "n.; adj.",
+        "meaning": "n. 乳品厂；奶牛场；adj. 乳制品的",
+        "phrase": "dairy products",
+        "example": "The sign separates dairy products from other goods.",
+        "exampleZh": "标牌把乳制品与其他商品分开。"
+      },
+      {
+        "word": "fertilizer",
+        "phonetic": "/ˈfɜːrtəlaɪzər/",
+        "pos": "n.",
+        "meaning": "肥料",
+        "phrase": "use fertilizer",
+        "example": "The notebook records when fertilizer was used.",
+        "exampleZh": "笔记本记录了施肥的时间。"
+      },
+      {
+        "word": "irrigation",
+        "phonetic": "/ˌɪrɪˈɡeɪʃən/",
+        "pos": "n.",
+        "meaning": "灌溉",
+        "phrase": "an irrigation system",
+        "example": "The guide showed us the farm irrigation system.",
+        "exampleZh": "导览员向我们展示农场灌溉系统。"
+      },
+      {
+        "word": "rural",
+        "phonetic": "/ˈrʊrəl/",
+        "pos": "adj.",
+        "meaning": "乡村的；农村的",
+        "phrase": "a rural community",
+        "example": "The bus connects the rural community with the town.",
+        "exampleZh": "公交车连接这个乡村社区和小镇。"
+      },
+      {
+        "word": "fertile",
+        "phonetic": "/ˈfɜːrtəl/",
+        "pos": "adj.",
+        "meaning": "肥沃的；富于创造力的",
+        "phrase": "fertile soil",
+        "example": "The farmer described the soil as fertile.",
+        "exampleZh": "农民把这片土壤形容为肥沃。"
+      },
+      {
+        "word": "growth",
+        "phonetic": "/ɡroʊθ/",
+        "pos": "n.",
+        "meaning": "生长；增长",
+        "phrase": "plant growth",
+        "example": "The class measured plant growth once a week.",
+        "exampleZh": "全班每周测量一次植物生长情况。"
+      },
+      {
+        "word": "seasonal",
+        "phonetic": "/ˈsiːzənəl/",
+        "pos": "adj.",
+        "meaning": "季节性的；当季的",
+        "phrase": "seasonal vegetables",
+        "example": "The list changes because the vegetables are seasonal.",
+        "exampleZh": "由于蔬菜有季节性，清单会变化。"
+      },
+      {
+        "word": "storage",
+        "phonetic": "/ˈstɔːrɪdʒ/",
+        "pos": "n.",
+        "meaning": "储存；储藏空间",
+        "phrase": "storage space",
+        "example": "A smaller box needs less storage space.",
+        "exampleZh": "较小的箱子需要较少的储藏空间。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The farmer who delivers these boxes ___ nearby.",
+        "promptZh": "配送这些箱子的农场主住在附近。",
+        "options": [
+          "living",
+          "live",
+          "lives",
+          "are"
+        ],
+        "optionsZh": [
+          "居住（非限定形式）",
+          "居住（原形）",
+          "居住（第三人称单数）",
+          "是（复数）"
+        ],
+        "answer": 2,
+        "explanation": "先括起who delivers these boxes；主句The farmer lives nearby，不能把delivers当主句谓语。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "The soil in these two pots ___ very dry.",
+        "promptZh": "这两个盆里的土很干。",
+        "options": [
+          "is",
+          "are",
+          "do",
+          "have"
+        ],
+        "optionsZh": [
+          "是（单数）",
+          "是（复数）",
+          "做",
+          "有"
+        ],
+        "answer": 0,
+        "explanation": "soil在这里不可数，主语不是pots；dry是形容词，需要is。",
+        "tag": "be-verb"
+      },
+      {
+        "prompt": "The smaller box contains ___ vegetables than the larger one.",
+        "promptZh": "较小的箱子比大箱子装的蔬菜少。",
+        "options": [
+          "less",
+          "few",
+          "little",
+          "fewer"
+        ],
+        "optionsZh": [
+          "更少（通常修饰不可数）",
+          "少数（非比较级）",
+          "少量（非比较级）",
+          "更少（修饰可数复数）"
+        ],
+        "answer": 3,
+        "explanation": "vegetables是可数复数，than表示比较，用fewer。",
+        "tag": "comparative"
+      },
+      {
+        "prompt": "They avoided ___ more food than they could use.",
+        "promptZh": "他们避免买入超过自己能使用的食物量。",
+        "options": [
+          "buy",
+          "buying",
+          "to buy",
+          "bought"
+        ],
+        "optionsZh": [
+          "购买（原形）",
+          "购买（动名词）",
+          "购买（不定式）",
+          "购买（过去式）"
+        ],
+        "answer": 1,
+        "explanation": "avoid后接动名词buying；than从句说明数量比较。",
+        "tag": "gerund"
+      },
+      {
+        "prompt": "We will leave when the bus ___.",
+        "promptZh": "公交车到达时我们就出发。",
+        "options": [
+          "will arrive",
+          "arriving",
+          "arrives",
+          "arrived"
+        ],
+        "optionsZh": [
+          "将到达",
+          "到达（非限定形式）",
+          "到达（现在时第三人称单数）",
+          "到达了（过去式）"
+        ],
+        "answer": 2,
+        "explanation": "表示将来的when时间从句通常用现在时代替will；bus为单数。",
+        "tag": "time-clause"
+      },
+      {
+        "prompt": "Which sentence correctly describes a completed action yesterday?",
+        "promptZh": "哪句正确描述昨天完成的动作？",
+        "options": [
+          "We measured the plants yesterday.",
+          "We measure the plants yesterday.",
+          "We measuring the plants yesterday.",
+          "We has measured the plants yesterday."
+        ],
+        "optionsZh": [
+          "我们昨天测量了植物",
+          "昨天却用一般现在时",
+          "缺少限定谓语",
+          "主谓不一致且完成时与yesterday不搭"
+        ],
+        "answer": 0,
+        "explanation": "明确过去时间yesterday通常用一般过去时measured。",
+        "tag": "past-tense"
+      }
+    ],
+    "reading": {
+      "title": "When a Vegetable Box Is Too Large",
+      "titleZh": "当蔬菜箱太大时",
+      "level": "四级专项衔接 · 原创分级模拟",
+      "topic": "单价、实际需要与浪费",
+      "passage": "A farm offered a weekly vegetable box to people living near a college. The larger box cost less per item, so many students chose it. After several weeks, however, some customers stopped ordering. The farmer first thought that the vegetables were unpopular.\n\nShort conversations suggested a different explanation. Students who lived alone often could not use the whole box before the next delivery. Some lacked enough storage space, while others ate on campus several days a week. A lower price per item did not make unused food useful.\n\nThe farm introduced a smaller box and allowed customers to skip a week before a stated deadline. It also published the expected contents in advance, while explaining that weather could affect the final selection.\n\nOrders for the larger box fell, but more customers continued using the service. The farm still needed to check delivery costs before deciding whether the change could last. The trial showed why comparing prices alone can miss an important question: does the amount offered match what people can actually use?",
+      "passageZh": "一家农场向大学附近的居民提供每周蔬菜箱。大箱按单件计算更便宜，因此许多学生选择了它。但几周后，一些顾客停止下单。农场主起初以为这些蔬菜不受欢迎。\n\n简短交流给出了另一种解释。独居学生往往无法在下一次配送前用完一整箱。有些人储藏空间不足，另一些人每周有几天在校园吃饭。单件价格更低，并不能让没有使用的食物变得有用。\n\n农场推出了较小的箱子，并允许顾客在规定期限前跳过一周。它还提前公布预计内容，同时说明天气可能影响最终品种。\n\n大箱订单减少了，但更多顾客继续使用这项服务。农场仍需检查配送成本，再决定调整能否持续。试验说明，只比较价格可能漏掉重要问题：提供的数量是否符合人们实际能使用的数量？",
+      "questions": [
+        {
+          "prompt": "What did the farmer initially misunderstand?",
+          "promptZh": "农场主最初误解了什么？",
+          "options": [
+            "The location of the college.",
+            "The number of delivery vehicles.",
+            "The reason some customers stopped ordering.",
+            "The name of the vegetables."
+          ],
+          "optionsZh": [
+            "大学的位置",
+            "配送车辆数量",
+            "部分顾客停止下单的原因",
+            "蔬菜名称"
+          ],
+          "answer": 2,
+          "explanation": "最初以为蔬菜不受欢迎，实际是数量和生活条件不匹配。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Why was the larger box unsuitable for some students?",
+          "promptZh": "大箱为什么不适合一些学生？",
+          "options": [
+            "They were forbidden to cook at home.",
+            "They could not use or store all the food.",
+            "It always contained damaged vegetables.",
+            "It arrived only once a year."
+          ],
+          "optionsZh": [
+            "他们被禁止在家做饭",
+            "他们无法用完或储存全部食物",
+            "里面总有坏蔬菜",
+            "每年只送一次"
+          ],
+          "answer": 1,
+          "explanation": "第二段给出独居、储藏空间不足和在校吃饭等具体原因。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What could customers do after the change?",
+          "promptZh": "调整后顾客可以做什么？",
+          "options": [
+            "Choose the weather for each delivery.",
+            "Cancel an order at any time without a deadline.",
+            "Receive every large box for free.",
+            "Skip a week if they acted before the deadline."
+          ],
+          "optionsZh": [
+            "选择每次配送的天气",
+            "无截止时间地随时取消",
+            "免费获得每个大箱",
+            "在截止时间前操作即可跳过一周"
+          ],
+          "answer": 3,
+          "explanation": "第三段明确有before a stated deadline限制，不能扩大为任何时候。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What remained to be checked?",
+          "promptZh": "还有什么需要检查？",
+          "options": [
+            "Whether delivery costs allowed the new arrangement to continue.",
+            "Whether students ever ate vegetables.",
+            "Whether every customer wanted a larger box.",
+            "Whether the college had closed."
+          ],
+          "optionsZh": [
+            "配送成本是否允许新安排持续",
+            "学生是否吃过蔬菜",
+            "是否每位顾客都要大箱",
+            "大学是否关闭"
+          ],
+          "answer": 0,
+          "explanation": "末段明确farm still needed to check delivery costs。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "A Farm Visit After Heavy Rain",
+      "titleZh": "大雨后的农场参观安排",
+      "tip": "首遍抓“仍然参观，但不下田”；精听八点四十分集合与十分钟后出发，区分图书馆和农场门口。全文听写后选三段跟读。",
+      "level": "四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "passage": "Here is an update for students visiting the farm on Wednesday. Heavy rain has made the field path too muddy for the group. The visit will still take place, but we will use the road beside the storage building. Meet outside the library at eight forty, not at the farm gate. The bus leaves ten minutes later. Please bring water and wear shoes suitable for wet ground. Lunch is not included, so bring your own food. The farmer will explain the irrigation system inside the main building. We will not enter the fields during this visit.",
+      "passageZh": "下面是周三参观农场的学生需要了解的更新。大雨使田间小路太泥泞，不适合团队通行。参观仍会进行，但我们将走储藏楼旁边的路。八点四十分在图书馆外集合，不是在农场门口。公交车将在十分钟后出发。请带水，并穿适合湿地面的鞋子。活动不包含午餐，因此请自带食物。农场主将在主楼内介绍灌溉系统。这次参观我们不会进入田地。",
+      "dictation": [
+        "Here is an update for students visiting the farm on Wednesday.",
+        "Heavy rain has made the field path too muddy for the group."
+      ],
+      "dictationZh": [
+        "下面是周三参观农场的学生需要了解的更新。",
+        "大雨使田间小路太泥泞，不适合团队通行。"
+      ],
+      "questions": [
+        {
+          "prompt": "Where and when should students meet?",
+          "promptZh": "学生应在何时、何处集合？",
+          "options": [
+            "At the farm gate at eight forty.",
+            "Outside the library at eight forty.",
+            "Inside the storage building at eight fifty.",
+            "Outside the library at nine forty."
+          ],
+          "optionsZh": [
+            "八点四十分在农场门口",
+            "八点四十分在图书馆外",
+            "八点五十分在储藏楼内",
+            "九点四十分在图书馆外"
+          ],
+          "answer": 1,
+          "explanation": "明确听到outside the library at eight forty；farm gate被not否定。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "How has the visit changed?",
+          "promptZh": "参观安排如何变化？",
+          "options": [
+            "The whole visit has been canceled.",
+            "Lunch will be provided free.",
+            "Students will use another road and stay out of the fields.",
+            "Students must travel to the farm on their own."
+          ],
+          "optionsZh": [
+            "整场参观取消",
+            "提供免费午餐",
+            "走另一条路，并且不进入田地",
+            "学生必须自行前往农场"
+          ],
+          "answer": 2,
+          "explanation": "通知保留参观，改走储藏楼旁道路，并说明will not enter the fields。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The students who lived alone explained that the larger box contained more vegetables than they could use before the next delivery.",
+      "main": "The students explained that the larger box contained more vegetables than they could use.",
+      "mainZh": "学生们解释说，大箱的蔬菜超过了他们能用完的量。",
+      "translation": "那些独居的学生解释说，大箱里装的蔬菜比他们在下一次配送前能用完的还多。",
+      "core": [
+        "students",
+        "explained",
+        "box",
+        "contained",
+        "vegetables"
+      ],
+      "keywords": [
+        "学生",
+        "独居",
+        "解释",
+        "大箱",
+        "蔬菜",
+        "用完",
+        "下一次配送"
+      ],
+      "structure": "主句The students explained；who lived alone修饰students。that引导宾语从句，主语box、谓语contained；more...than引出数量比较。",
+      "grammar": [
+        "lived只属于who从句，主句谓语是explained。",
+        "than they could use后省略与vegetables对应的宾语，before短语限定用完的时间。"
+      ],
+      "examTip": "先抓学生解释了什么，再比较“提供的量”和“能用的量”。",
+      "level": "四级衔接句法",
+      "topic": "主从句谓语和比较结构"
+    },
+    "trans": [
+      {
+        "source": "较低的价格并不总是意味着较少的浪费。",
+        "answer": "A lower price does not always mean less waste.",
+        "alternative": "A cheaper price does not always mean less waste.",
+        "acceptedAnswers": [
+          "A lower price does not always mean less waste.",
+          "A cheaper price does not always mean less waste."
+        ],
+        "keywords": [
+          "price",
+          "does not always mean",
+          "less waste"
+        ],
+        "grammar": "not always表示并非总是，不等于never。waste此处不可数，用less。",
+        "chunks": [
+          "a lower price",
+          "does not always mean",
+          "less waste"
+        ],
+        "level": "四级衔接表达",
+        "topic": "准确表达与句法巩固"
+      },
+      {
+        "source": "由于道路泥泞，我们将在主楼里听介绍。",
+        "answer": "Because the road is muddy, we will listen to the introduction in the main building.",
+        "alternative": "We will listen to the introduction in the main building because the road is muddy.",
+        "acceptedAnswers": [
+          "Because the road is muddy, we will listen to the introduction in the main building.",
+          "We will listen to the introduction in the main building because the road is muddy."
+        ],
+        "keywords": [
+          "road",
+          "muddy",
+          "will listen",
+          "introduction",
+          "main building"
+        ],
+        "grammar": "muddy为形容词，需要is；listen后跟宾语时用listen to。",
+        "chunks": [
+          "because the road is muddy",
+          "listen to the introduction",
+          "in the main building"
+        ],
+        "level": "四级衔接表达",
+        "topic": "准确表达与句法巩固"
+      }
+    ]
+  },
+  "2026-10-14": {
+    "title": "数字信息：区分本机保存、上传中与提交成功",
+    "grammarTip": "阅读训练用状态证据判断是否完成任务，听力辨别多个时间与操作限制。巩固be动词、现在完成时被动、条件句及形容词副词。材料描述虚构的教学系统，不能当作某个真实平台的操作说明。",
+    "words": [
+      {
+        "word": "software",
+        "phonetic": "/ˈsɔːftwer/",
+        "pos": "n.",
+        "meaning": "软件",
+        "phrase": "install software",
+        "example": "The technician tested the software before the lesson.",
+        "exampleZh": "技术人员在上课前测试了软件。"
+      },
+      {
+        "word": "hardware",
+        "phonetic": "/ˈhɑːrdwer/",
+        "pos": "n.",
+        "meaning": "硬件；五金工具",
+        "phrase": "computer hardware",
+        "example": "The course explains the difference between hardware and software.",
+        "exampleZh": "课程解释硬件和软件的区别。"
+      },
+      {
+        "word": "database",
+        "phonetic": "/ˈdeɪtəbeɪs/",
+        "pos": "n.",
+        "meaning": "数据库",
+        "phrase": "a student database",
+        "example": "Only the approved details were added to the database.",
+        "exampleZh": "只有获准的信息被加入数据库。"
+      },
+      {
+        "word": "network",
+        "phonetic": "/ˈnetwɜːrk/",
+        "pos": "n.; v.",
+        "meaning": "n. 网络；关系网；v. 建立联系",
+        "phrase": "a local network",
+        "example": "The computers share a local network.",
+        "exampleZh": "这些计算机使用同一个局域网。"
+      },
+      {
+        "word": "password",
+        "phonetic": "/ˈpæswɜːrd/",
+        "pos": "n.",
+        "meaning": "密码；口令",
+        "phrase": "enter a password",
+        "example": "The login page asks the user to enter a password.",
+        "exampleZh": "登录页面要求用户输入密码。"
+      },
+      {
+        "word": "privacy",
+        "phonetic": "/ˈpraɪvəsi/",
+        "pos": "n.",
+        "meaning": "隐私；私密",
+        "phrase": "protect privacy",
+        "example": "The form collects fewer details to protect privacy.",
+        "exampleZh": "表格收集较少的详细信息以保护隐私。"
+      },
+      {
+        "word": "security",
+        "phonetic": "/sɪˈkjʊrəti/",
+        "pos": "n.",
+        "meaning": "安全；保障",
+        "phrase": "a security check",
+        "example": "The engineer explained the purpose of the security check.",
+        "exampleZh": "工程师解释了安全检查的目的。"
+      },
+      {
+        "word": "browser",
+        "phonetic": "/ˈbraʊzər/",
+        "pos": "n.",
+        "meaning": "浏览器",
+        "phrase": "open a browser",
+        "example": "She opened a browser to read the instructions.",
+        "exampleZh": "她打开浏览器阅读说明。"
+      },
+      {
+        "word": "screen",
+        "phonetic": "/skriːn/",
+        "pos": "n.; v.",
+        "meaning": "n. 屏幕；v. 筛查；遮挡",
+        "phrase": "on the screen",
+        "example": "A clear status message appeared on the screen.",
+        "exampleZh": "屏幕上出现了清楚的状态信息。"
+      },
+      {
+        "word": "keyboard",
+        "phonetic": "/ˈkiːbɔːrd/",
+        "pos": "n.",
+        "meaning": "键盘",
+        "phrase": "use a keyboard",
+        "example": "The student used a keyboard to enter the answer.",
+        "exampleZh": "学生使用键盘输入答案。"
+      },
+      {
+        "word": "internet",
+        "phonetic": "/ˈɪntərnet/",
+        "pos": "n.",
+        "meaning": "互联网",
+        "phrase": "connect to the internet",
+        "example": "The tablet could not connect to the internet in that room.",
+        "exampleZh": "平板电脑在那个房间里无法连接互联网。"
+      },
+      {
+        "word": "mobile",
+        "phonetic": "/ˈmoʊbəl/",
+        "pos": "adj.",
+        "meaning": "可移动的；移动通信的",
+        "phrase": "a mobile device",
+        "example": "The page is easy to read on a mobile device.",
+        "exampleZh": "这个页面在移动设备上很容易阅读。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "wireless",
+        "phonetic": "/ˈwaɪərləs/",
+        "pos": "adj.",
+        "meaning": "无线的",
+        "phrase": "a wireless connection",
+        "example": "A weak wireless connection delayed the upload.",
+        "exampleZh": "较弱的无线连接延迟了上传。"
+      },
+      {
+        "word": "virtual",
+        "phonetic": "/ˈvɜːrtʃuəl/",
+        "pos": "adj.",
+        "meaning": "虚拟的；实质上的",
+        "phrase": "a virtual meeting",
+        "example": "The virtual meeting allowed distant members to join.",
+        "exampleZh": "虚拟会议让远方的成员也能参加。"
+      },
+      {
+        "word": "artificial",
+        "phonetic": "/ˌɑːrtɪˈfɪʃəl/",
+        "pos": "adj.",
+        "meaning": "人工的；人造的",
+        "phrase": "artificial light",
+        "example": "The room uses artificial light during the evening class.",
+        "exampleZh": "这个房间在晚课期间使用人工照明。"
+      },
+      {
+        "word": "automatic",
+        "phonetic": "/ˌɔːtəˈmætɪk/",
+        "pos": "adj.",
+        "meaning": "自动的",
+        "phrase": "an automatic update",
+        "example": "An automatic update changed the status message.",
+        "exampleZh": "一次自动更新改变了状态信息。"
+      },
+      {
+        "word": "engineer",
+        "phonetic": "/ˌendʒɪˈnɪr/",
+        "pos": "n.; v.",
+        "meaning": "n. 工程师；v. 设计；策划",
+        "phrase": "a software engineer",
+        "example": "The engineer asked users where they became confused.",
+        "exampleZh": "工程师询问用户在哪一步感到困惑。"
+      },
+      {
+        "word": "electronic",
+        "phonetic": "/ɪˌlekˈtrɑːnɪk/",
+        "pos": "adj.",
+        "meaning": "电子的",
+        "phrase": "an electronic form",
+        "example": "The electronic form includes a space for comments.",
+        "exampleZh": "电子表格留有填写意见的地方。"
+      },
+      {
+        "word": "electricity",
+        "phonetic": "/ɪˌlekˈtrɪsəti/",
+        "pos": "n.",
+        "meaning": "电；电力",
+        "phrase": "use electricity",
+        "example": "The display uses electricity even when no one reads it.",
+        "exampleZh": "即使没人阅读，显示屏仍耗电。"
+      },
+      {
+        "word": "battery",
+        "phonetic": "/ˈbætəri/",
+        "pos": "n.",
+        "meaning": "电池",
+        "phrase": "charge a battery",
+        "example": "He checked the battery before leaving for the interview.",
+        "exampleZh": "他出发采访前检查了电池。"
+      },
+      {
+        "word": "cable",
+        "phonetic": "/ˈkeɪbəl/",
+        "pos": "n.",
+        "meaning": "电缆；连接线",
+        "phrase": "a charging cable",
+        "example": "The charging cable was left beside the computer.",
+        "exampleZh": "充电线被留在电脑旁。"
+      },
+      {
+        "word": "update",
+        "phonetic": "/ʌpˈdeɪt/",
+        "pos": "v.",
+        "meaning": "更新；提供最新信息（此处为动词）",
+        "phrase": "update a record",
+        "example": "Please update the record when the situation changes.",
+        "exampleZh": "情况变化时，请更新记录。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The message that appears on these screens ___ confusing.",
+        "promptZh": "这些屏幕上出现的信息令人困惑。",
+        "options": [
+          "are",
+          "is",
+          "have",
+          "do"
+        ],
+        "optionsZh": [
+          "是（复数）",
+          "是（单数）",
+          "有",
+          "做"
+        ],
+        "answer": 1,
+        "explanation": "主语是单数message；that从句中的appears不是主句谓语，confusing前需要is。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "The files have already ___ to the account.",
+        "promptZh": "这些文件已经上传到账户。",
+        "options": [
+          "upload",
+          "uploading",
+          "been uploaded",
+          "be uploaded"
+        ],
+        "optionsZh": [
+          "上传（原形）",
+          "上传（非限定形式）",
+          "被上传（完成时被动部分）",
+          "被上传（原形被动部分）"
+        ],
+        "answer": 2,
+        "explanation": "have been uploaded为现在完成时被动，files是被上传的对象。",
+        "tag": "passive"
+      },
+      {
+        "prompt": "Please check the status ___.",
+        "promptZh": "请仔细检查状态。",
+        "options": [
+          "careful",
+          "carefully",
+          "care",
+          "caring"
+        ],
+        "optionsZh": [
+          "仔细的（形容词）",
+          "仔细地（副词）",
+          "关心（名词或动词）",
+          "关怀的"
+        ],
+        "answer": 1,
+        "explanation": "修饰动词check用副词carefully，不用形容词careful。",
+        "tag": "adverb"
+      },
+      {
+        "prompt": "If the connection ___, the page will show a warning.",
+        "promptZh": "如果连接中断，页面会显示警告。",
+        "options": [
+          "fail",
+          "will fail",
+          "failing",
+          "fails"
+        ],
+        "optionsZh": [
+          "失败（原形）",
+          "将失败",
+          "失败（非限定形式）",
+          "失败（第三人称单数）"
+        ],
+        "answer": 3,
+        "explanation": "if条件从句表达将来条件时常用一般现在时；connection是单数，用fails。",
+        "tag": "conditional"
+      },
+      {
+        "prompt": "The instructions are clear enough for students ___ without help.",
+        "promptZh": "说明足够清楚，学生无需帮助就能理解。",
+        "options": [
+          "understand",
+          "understood",
+          "to understand",
+          "understanding"
+        ],
+        "optionsZh": [
+          "理解（原形）",
+          "理解（过去式）",
+          "理解（不定式）",
+          "理解（动名词）"
+        ],
+        "answer": 2,
+        "explanation": "结构为形容词+enough+for somebody+to do；enough放在clear之后。",
+        "tag": "enough"
+      },
+      {
+        "prompt": "The engineer ___ users yesterday where they became confused.",
+        "promptZh": "工程师昨天询问用户在哪一步感到困惑。",
+        "options": [
+          "asked",
+          "asks",
+          "asking",
+          "ask"
+        ],
+        "optionsZh": [
+          "询问了（过去式）",
+          "询问（第三人称单数）",
+          "询问（非限定形式）",
+          "询问（原形）"
+        ],
+        "answer": 0,
+        "explanation": "yesterday对应一般过去时asked；where引导后面的宾语从句。",
+        "tag": "past-tense"
+      }
+    ],
+    "reading": {
+      "title": "Saved Here or Sent There?",
+      "titleZh": "保存在这里，还是已经发送？",
+      "level": "四级专项衔接 · 原创分级模拟",
+      "topic": "状态提示、证据与用户理解",
+      "passage": "A student team built a practice website for collecting survey answers. During a classroom test, several users lost their wireless connection. The page stored their answers on the computer and displayed a green message saying \"Saved.\" Most users assumed that the research team had received their answers.\n\nWhen the connection returned, some answers were sent successfully, but others remained on the original computers. The developers had tested whether the local saving feature worked. They had not tested what users understood from the message.\n\nThe next version used separate messages for local saving, sending, and confirmed receipt. A small explanation told users what each stage meant. The team also tested the page with people who had not helped build it. Instead of explaining the buttons first, they asked these users to describe what they thought had happened.\n\nThe change did not prevent every connection problem. It made incomplete actions easier to recognize. The project showed that a system can perform a useful technical task while still giving people a misleading impression of the result.",
+      "passageZh": "一个学生团队制作了收集调查答案的练习网站。课堂测试时，几名用户失去了无线连接。页面把答案保存在电脑上，并显示绿色的“已保存”信息。多数用户以为研究团队已经收到答案。\n\n连接恢复后，一些答案成功发出，但另一些仍留在原电脑上。开发者测试过本机保存功能是否正常，却没有测试用户如何理解提示。\n\n下一个版本分别提示本机保存、正在发送和确认收到。简短说明解释每个阶段的含义。团队还让未参与开发的人测试页面。他们没有先解释按钮，而是请这些用户描述自己认为已经发生的事情。\n\n改变并未阻止所有连接问题，却使未完成的操作更容易识别。项目说明，一个系统即便执行了有用的技术任务，仍可能让人对结果形成误导性的印象。",
+      "questions": [
+        {
+          "prompt": "What did most users wrongly assume?",
+          "promptZh": "多数用户错误地以为什么？",
+          "options": [
+            "Their computers needed a new keyboard.",
+            "The survey contained no questions.",
+            "The research team had received their answers.",
+            "The wireless connection would never return."
+          ],
+          "optionsZh": [
+            "电脑需要新键盘",
+            "调查没有问题",
+            "研究团队已收到答案",
+            "无线连接永远不会恢复"
+          ],
+          "answer": 2,
+          "explanation": "第一段明确用户把本机Saved理解为团队已收到。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What had the developers failed to test?",
+          "promptZh": "开发者之前没有测试什么？",
+          "options": [
+            "Whether users understood the message correctly.",
+            "Whether computers could display green.",
+            "Whether students could read any English.",
+            "Whether the classroom had chairs."
+          ],
+          "optionsZh": [
+            "用户能否正确理解提示",
+            "电脑能否显示绿色",
+            "学生能否读任何英语",
+            "教室有没有椅子"
+          ],
+          "answer": 0,
+          "explanation": "第二段对比技术功能测试与用户理解测试，后者被忽略。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Why did the team ask new testers to explain what had happened?",
+          "promptZh": "团队为什么让新测试者解释发生了什么？",
+          "options": [
+            "To replace all the survey questions.",
+            "To check understanding without giving the explanation first.",
+            "To make the test last longer than necessary.",
+            "To prove the website could never fail."
+          ],
+          "optionsZh": [
+            "替换全部调查题",
+            "在不事先讲解的情况下检查理解",
+            "让测试无谓延长",
+            "证明网站绝不会故障"
+          ],
+          "answer": 1,
+          "explanation": "第三段说明未先解释按钮，而是观察用户自己的理解，避免讲解掩盖提示的问题。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What did the improved version achieve?",
+          "promptZh": "改进版实现了什么？",
+          "options": [
+            "It removed the need for an internet connection.",
+            "It sent all old answers automatically without any limits.",
+            "It stopped every technical fault.",
+            "It helped users recognize unfinished actions."
+          ],
+          "optionsZh": [
+            "不再需要互联网",
+            "无限制自动发送所有旧答案",
+            "阻止每个技术故障",
+            "帮助用户识别未完成操作"
+          ],
+          "answer": 3,
+          "explanation": "末段明确没有阻止全部连接问题，但让incomplete actions更容易识别。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "Friday Computer Room Update",
+      "titleZh": "周五电脑室更新通知",
+      "tip": "区分四点十五分停止打印、四点半关门、图书馆七点关闭；注意本机保存不等于上传完成。只按这则虚构通知答题。",
+      "level": "四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "passage": "The computer room will close early on Friday for a software update. Please finish your work by four thirty. Printing will stop at four fifteen, fifteen minutes before the room closes. The library computers will remain available until seven. Before leaving, check that your files have finished uploading to your account. A message saying saved on this computer does not confirm an upload. If you are unsure, ask the assistant at the front desk. Do not turn off a machine while an update is running. The room is expected to reopen at nine on Saturday morning.",
+      "passageZh": "电脑室周五将因软件更新而提前关闭。请在四点半前完成工作。打印将在四点十五分停止，比关门早十五分钟。图书馆的电脑仍可使用到七点。离开前，请确认文件已完成上传到账户。显示“已保存在本机”的信息不能确认上传完成。如果不确定，请询问前台助理。更新进行时请不要关闭机器。电脑室预计周六上午九点重新开放。",
+      "dictation": [
+        "The computer room will close early on Friday for a software update.",
+        "Please finish your work by four thirty."
+      ],
+      "dictationZh": [
+        "电脑室周五将因软件更新而提前关闭。",
+        "请在四点半前完成工作。"
+      ],
+      "questions": [
+        {
+          "prompt": "When will printing stop?",
+          "promptZh": "打印将在何时停止？",
+          "options": [
+            "At four fifteen.",
+            "At four thirty.",
+            "At seven.",
+            "At nine on Saturday."
+          ],
+          "optionsZh": [
+            "四点十五分",
+            "四点半",
+            "七点",
+            "周六九点"
+          ],
+          "answer": 0,
+          "explanation": "Printing stop为four fifteen；four thirty为房间关闭时间。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "What should students confirm before leaving?",
+          "promptZh": "离开前学生应该确认什么？",
+          "options": [
+            "That every machine has been turned off.",
+            "That the assistant has left.",
+            "That their files have finished uploading.",
+            "That the library is closed."
+          ],
+          "optionsZh": [
+            "所有机器已经关闭",
+            "助理已经离开",
+            "文件已经完成上传",
+            "图书馆已经关闭"
+          ],
+          "answer": 2,
+          "explanation": "通知强调check that your files have finished uploading；只看saved on this computer不够。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The engineer who watched the test realized that the message shown on the screen did not explain whether the answers had been received.",
+      "main": "The engineer realized that the message did not explain whether the answers had been received.",
+      "mainZh": "工程师意识到，这条信息没有解释答案是否已被收到。",
+      "translation": "观看测试的工程师意识到，屏幕上显示的信息没有解释答案是否已经被收到。",
+      "core": [
+        "engineer",
+        "realized",
+        "message",
+        "explain",
+        "answers",
+        "received"
+      ],
+      "keywords": [
+        "工程师",
+        "观看",
+        "测试",
+        "意识到",
+        "屏幕",
+        "信息",
+        "没有",
+        "是否",
+        "收到"
+      ],
+      "structure": "主句The engineer realized；who watched the test修饰engineer。that后是宾语从句，shown on the screen为message的过去分词修饰；whether又引导explain的宾语从句。",
+      "grammar": [
+        "watched不是主句谓语，shown也不是that从句谓语。",
+        "did not explain是that从句谓语；had been received是过去完成时被动，说明此前是否被收到。"
+      ],
+      "examTip": "分三层找谓语：realized → did not explain → had been received。",
+      "level": "四级衔接句法",
+      "topic": "嵌套宾语从句与过去分词修饰"
+    },
+    "trans": [
+      {
+        "source": "清楚的提示能帮助用户识别未完成的操作。",
+        "answer": "Clear messages can help users recognize unfinished actions.",
+        "alternative": "Clear messages can help users identify unfinished actions.",
+        "acceptedAnswers": [
+          "Clear messages can help users recognize unfinished actions.",
+          "Clear messages can help users identify unfinished actions."
+        ],
+        "keywords": [
+          "clear messages",
+          "help users",
+          "unfinished actions"
+        ],
+        "grammar": "can后用help原形；help somebody do结构中recognize用原形。",
+        "chunks": [
+          "clear messages",
+          "help users recognize",
+          "unfinished actions"
+        ],
+        "level": "四级衔接表达",
+        "topic": "准确表达与句法巩固"
+      },
+      {
+        "source": "虽然文件保存在电脑上，但它们还没有上传。",
+        "answer": "Although the files are saved on the computer, they have not been uploaded yet.",
+        "alternative": "Although the files have been saved on the computer, they have not been uploaded yet.",
+        "acceptedAnswers": [
+          "Although the files are saved on the computer, they have not been uploaded yet.",
+          "Although the files have been saved on the computer, they have not been uploaded yet."
+        ],
+        "keywords": [
+          "although",
+          "files",
+          "computer",
+          "have not been uploaded"
+        ],
+        "grammar": "although引导让步从句；保存与上传是两个不同动作，后者用完成时被动的否定。",
+        "chunks": [
+          "saved on the computer",
+          "have not been uploaded yet"
+        ],
+        "level": "四级衔接表达",
+        "topic": "准确表达与句法巩固"
+      }
+    ]
+  },
+  "2026-10-15": {
+    "title": "周复盘：从背好的句子走向真正的交流",
+    "grammarTip": "本周复盘不新增课程词，默认40词复习。检查主从句谓语、be动词、完成时被动、比较级、副词和every day；听读题重点找限制词与实际目的。原创分级模拟，不是真题。",
+    "words": [],
+    "grammar": [
+      {
+        "prompt": "The students who join the exchange group ___ different interests.",
+        "promptZh": "参加交流小组的学生有不同兴趣。",
+        "options": [
+          "has",
+          "having",
+          "have",
+          "is"
+        ],
+        "optionsZh": [
+          "有（第三人称单数）",
+          "有（非限定形式）",
+          "有（复数主语）",
+          "是（单数）"
+        ],
+        "answer": 2,
+        "explanation": "主句主语students是复数，用have；who join...为定语从句。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "Speaking without a prepared script ___ difficult at first.",
+        "promptZh": "起初不看预备讲稿说话很难。",
+        "options": [
+          "are",
+          "is",
+          "have",
+          "does"
+        ],
+        "optionsZh": [
+          "是（复数）",
+          "是（单数）",
+          "有",
+          "助动词第三人称单数"
+        ],
+        "answer": 1,
+        "explanation": "动名词短语Speaking...整体作单数主语；difficult是形容词，需要is。",
+        "tag": "be-verb"
+      },
+      {
+        "prompt": "The forms have already ___ by the office.",
+        "promptZh": "这些表格已经被办公室收到。",
+        "options": [
+          "been received",
+          "receive",
+          "receiving",
+          "be received"
+        ],
+        "optionsZh": [
+          "被收到（完成时被动部分）",
+          "收到（原形）",
+          "收到（非限定形式）",
+          "被收到（原形被动部分）"
+        ],
+        "answer": 0,
+        "explanation": "have been received是现在完成时被动语态。",
+        "tag": "passive"
+      },
+      {
+        "prompt": "The smaller box contains ___ items than the larger one.",
+        "promptZh": "小箱比大箱装的物品少。",
+        "options": [
+          "little",
+          "less",
+          "few",
+          "fewer"
+        ],
+        "optionsZh": [
+          "少量（不可数）",
+          "更少（通常不可数）",
+          "少数（非比较级）",
+          "更少（可数复数）"
+        ],
+        "answer": 3,
+        "explanation": "items是可数复数，than要求比较形式fewer。",
+        "tag": "comparative"
+      },
+      {
+        "prompt": "Please listen ___ before you answer your partner.",
+        "promptZh": "回答搭档前请仔细听。",
+        "options": [
+          "careful",
+          "carefully",
+          "care",
+          "carefulness"
+        ],
+        "optionsZh": [
+          "仔细的",
+          "仔细地",
+          "关心",
+          "仔细（名词）"
+        ],
+        "answer": 1,
+        "explanation": "修饰listen用副词carefully，而不是形容词careful。",
+        "tag": "adverb"
+      },
+      {
+        "prompt": "Which sentence uses every day correctly?",
+        "promptZh": "哪句正确使用every day？",
+        "options": [
+          "I practice speaking every day.",
+          "I practice speaking everyday.",
+          "I every day speaking.",
+          "I practices speaking every day."
+        ],
+        "optionsZh": [
+          "我每天练习说话",
+          "把everyday形容词误作时间状语",
+          "缺少限定谓语",
+          "I后误用第三人称单数"
+        ],
+        "answer": 0,
+        "explanation": "every day分开写表示每天；practice后接speaking，I搭配practice原形。",
+        "tag": "every-day"
+      }
+    ],
+    "reading": {
+      "title": "A Conversation Needs a Listener",
+      "titleZh": "交流需要一位倾听者",
+      "level": "四级专项衔接 · 原创分级模拟",
+      "topic": "语言练习、互动目的与方法变化",
+      "passage": "At the first meeting of a campus language exchange group, each student brought a carefully written speech. The speakers read their pages clearly, but most listeners waited silently for their own turn. When the organizer asked what they had learned about one another, few could give details.\n\nThe next meeting used a different task. Each student brought a photograph and described it without a full script. Partners had to ask two questions about something they genuinely wanted to know. Speakers could use simple words or explain an idea in another way if they forgot a particular expression.\n\nThe conversations were slower and included more pauses than the prepared speeches. However, listeners could later recall specific details about their partners. Several students said they had felt nervous, but they had also noticed when another person understood them.\n\nThe organizer did not conclude that prepared speaking was useless. Reading aloud and rehearsing a speech still had a place. For this group, though, the immediate aim was to practice responding to another person, not merely to finish saying a page of correct sentences.",
+      "passageZh": "校园语言交流小组第一次见面时，每位学生都带来精心写好的讲稿。发言者清楚地读出内容，但大多数听者只是默默等着轮到自己。组织者问大家对彼此有何了解时，几乎没人能说出细节。\n\n第二次会议换了任务。每人带来一张照片，不看完整讲稿进行描述。搭档必须就自己真正想知道的内容提两个问题。忘记某个表达时，发言者可以用简单词语，或换个方式解释。\n\n与预先准备的讲稿相比，交流更慢、停顿更多。但听者之后能回忆出搭档的具体细节。几名学生说自己曾紧张，却也注意到别人何时理解了自己。\n\n组织者没有因此认为准备好的演讲毫无用处。朗读和排练演讲仍有价值。不过，这个小组眼下的目的是练习回应另一个人，而不只是说完一页正确句子。",
+      "questions": [
+        {
+          "prompt": "What was the main problem at the first meeting?",
+          "promptZh": "第一次见面的主要问题是什么？",
+          "options": [
+            "No one had prepared anything.",
+            "Speakers could not read their own handwriting.",
+            "Students listened little while waiting to speak.",
+            "The organizer refused to ask questions."
+          ],
+          "optionsZh": [
+            "没人准备任何东西",
+            "发言者看不懂自己的字",
+            "学生等着发言，却很少倾听",
+            "组织者拒绝提问"
+          ],
+          "answer": 2,
+          "explanation": "第一段以listeners waited和few could give details说明互动和倾听不足。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What did partners have to do in the new task?",
+          "promptZh": "新任务要求搭档做什么？",
+          "options": [
+            "Correct every grammar error immediately.",
+            "Ask two questions they genuinely wanted answered.",
+            "Memorize a complete speech.",
+            "Avoid all pauses."
+          ],
+          "optionsZh": [
+            "立即纠正每个语法错误",
+            "问两个自己真想知道答案的问题",
+            "背下一篇完整讲稿",
+            "避免所有停顿"
+          ],
+          "answer": 1,
+          "explanation": "第二段要求two questions about something they genuinely wanted to know。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What evidence suggested that listeners were more involved?",
+          "promptZh": "什么证据表明听者更投入？",
+          "options": [
+            "They could recall details about their partners afterward.",
+            "They never used simple words.",
+            "Every speech became faster.",
+            "Nobody reported feeling nervous."
+          ],
+          "optionsZh": [
+            "之后能回忆搭档的细节",
+            "他们不再用简单词",
+            "每篇发言都更快",
+            "没人报告紧张"
+          ],
+          "answer": 0,
+          "explanation": "第三段具体证据是recall specific details；更慢和紧张并没有被否认。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "How did the organizer view prepared speaking?",
+          "promptZh": "组织者如何看待有准备的发言？",
+          "options": [
+            "It should be banned in every class.",
+            "It is the only useful form of practice.",
+            "It always prevents understanding.",
+            "It can be useful, but this activity had a different immediate purpose."
+          ],
+          "optionsZh": [
+            "所有课堂都该禁止",
+            "它是唯一有用练习",
+            "它总妨碍理解",
+            "它有用，但本次活动眼下目的不同"
+          ],
+          "answer": 3,
+          "explanation": "末段明确没有否定prepared speaking，而是区分练习目标。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "A New Room for the Language Exchange",
+      "titleZh": "语言交流更换房间通知",
+      "tip": "盲听注意只换房间、不换开始时间；精听两分钟发言后还有搭档问题，不要求书面讲稿，也不计分。",
+      "level": "四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "passage": "This is a reminder for members of the language exchange group. Tonight we will meet in Room Six instead of Room Three. The meeting still begins at six, so please arrive a few minutes early. Bring one photograph or a small object that you can describe. You do not need to prepare a written speech. Each speaker will have two minutes, followed by questions from a partner. If you cannot remember a word, explain the idea in another way. The group will discuss common difficulties at the end, but nobody will receive a grade for this activity.",
+      "passageZh": "这是给语言交流小组成员的提醒。今晚我们将在六号房间集合，而不是三号房间。会议仍在六点开始，请提前几分钟到达。带一张照片或一件你能描述的小物品。你不需要准备书面讲稿。每位发言者有两分钟，之后由搭档提问。如果想不起一个词，请换一种方式解释想法。小组将在最后讨论共同的困难，但这项活动不会给任何人评分。",
+      "dictation": [
+        "This is a reminder for members of the language exchange group.",
+        "Tonight we will meet in Room Six instead of Room Three."
+      ],
+      "dictationZh": [
+        "这是给语言交流小组成员的提醒。",
+        "今晚我们将在六号房间集合，而不是三号房间。"
+      ],
+      "questions": [
+        {
+          "prompt": "What has changed for tonight?",
+          "promptZh": "今晚改变了什么？",
+          "options": [
+            "The meeting room.",
+            "The starting time.",
+            "The length of every day.",
+            "The name of the college."
+          ],
+          "optionsZh": [
+            "会议房间",
+            "开始时间",
+            "每天的时长",
+            "大学名称"
+          ],
+          "answer": 0,
+          "explanation": "Room Six instead of Room Three；still begins at six说明时间不变。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "What should a speaker do after forgetting a word?",
+          "promptZh": "发言者忘记一个词时应该怎样做？",
+          "options": [
+            "Leave immediately.",
+            "Ask for a final grade.",
+            "Read a complete written speech.",
+            "Explain the idea in another way."
+          ],
+          "optionsZh": [
+            "立刻离开",
+            "索要最终分数",
+            "读完整讲稿",
+            "换一种方式解释想法"
+          ],
+          "answer": 3,
+          "explanation": "原文明确if you cannot remember a word, explain the idea in another way。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The students who asked their partners genuine questions remembered more details because they had listened for information rather than waited for their turn.",
+      "main": "The students remembered more details because they had listened for information.",
+      "mainZh": "学生记住了更多细节，因为他们在听取信息。",
+      "translation": "那些向搭档提出真心想问的问题的学生记住了更多细节，因为他们是在倾听信息，而不是等着轮到自己。",
+      "core": [
+        "students",
+        "remembered",
+        "details",
+        "listened"
+      ],
+      "keywords": [
+        "学生",
+        "搭档",
+        "问题",
+        "更多",
+        "细节",
+        "因为",
+        "倾听",
+        "轮到"
+      ],
+      "structure": "主句The students remembered more details；who asked...修饰students。because引导原因从句；rather than连接对比行为listened和waited。",
+      "grammar": [
+        "asked属于定语从句，remembered才是主句谓语。",
+        "had listened表示先于记住细节的倾听行为，rather than意为而不是。"
+      ],
+      "examTip": "分清“谁做了什么”与“为什么”，不要把asked识别为主句谓语。",
+      "level": "四级衔接句法",
+      "topic": "主从句谓语与原因、对比关系"
+    },
+    "trans": [
+      {
+        "source": "如果你想不起一个词，可以换一种方式解释。",
+        "answer": "If you cannot remember a word, you can explain the idea in another way.",
+        "alternative": "You can explain the idea in another way if you cannot remember a word.",
+        "acceptedAnswers": [
+          "If you cannot remember a word, you can explain the idea in another way.",
+          "You can explain the idea in another way if you cannot remember a word."
+        ],
+        "keywords": [
+          "cannot remember",
+          "word",
+          "can explain",
+          "another way"
+        ],
+        "grammar": "if条件从句和主句都需要自己的谓语；can后用explain原形。",
+        "chunks": [
+          "cannot remember a word",
+          "explain the idea in another way"
+        ],
+        "level": "四级衔接表达",
+        "topic": "准确表达与句法巩固"
+      },
+      {
+        "source": "虽然交流更慢，但学生记住了更多细节。",
+        "answer": "Although the conversation was slower, the students remembered more details.",
+        "alternative": "Although the conversation was slower, students remembered more details.",
+        "acceptedAnswers": [
+          "Although the conversation was slower, the students remembered more details.",
+          "Although the conversation was slower, students remembered more details."
+        ],
+        "keywords": [
+          "although",
+          "conversation",
+          "slower",
+          "remembered",
+          "more details"
+        ],
+        "grammar": "slower是形容词比较级，前面需要was；although与but不重复连用。",
+        "chunks": [
+          "the conversation was slower",
+          "remembered more details"
+        ],
+        "level": "四级衔接表达",
+        "topic": "准确表达与句法巩固"
+      }
+    ]
   }
 }

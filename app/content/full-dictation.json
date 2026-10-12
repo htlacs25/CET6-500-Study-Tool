@@ -776,5 +776,161 @@
       "text": "The gallery shop will stay open until five.",
       "zh": "美术馆商店将一直营业到五点。"
     }
+  ],
+  "2026-10-12": [
+    {
+      "text": "This message is for students requesting payment for club expenses.",
+      "zh": "这则信息是发给申请报销社团费用的学生的。"
+    },
+    {
+      "text": "Please send your form to the finance office by Thursday afternoon.",
+      "zh": "请在周四下午前把表格交到财务办公室。"
+    },
+    {
+      "text": "The previous deadline was Friday, but the office will be closed that day.",
+      "zh": "原截止日期是周五，但办公室那天将关闭。"
+    },
+    {
+      "text": "Attach a copy of each receipt, not just a bank message.",
+      "zh": "请附上每张收据的副本，而不仅仅是银行信息。"
+    },
+    {
+      "text": "If a receipt is missing, explain the reason on the form.",
+      "zh": "如果缺少收据，请在表格上解释原因。"
+    },
+    {
+      "text": "A staff member will contact you about the next step.",
+      "zh": "一名工作人员将联系你说明下一步。"
+    },
+    {
+      "text": "Do not send the same request twice.",
+      "zh": "不要把同一份申请发送两次。"
+    },
+    {
+      "text": "The office will confirm that it has received your form,",
+      "zh": "办公室会确认已收到你的表格，"
+    },
+    {
+      "text": "but this message does not mean the payment has been approved.",
+      "zh": "但这条信息并不意味着报销已经获批。"
+    }
+  ],
+  "2026-10-13": [
+    {
+      "text": "Here is an update for students visiting the farm on Wednesday.",
+      "zh": "下面是周三参观农场的学生需要了解的更新。"
+    },
+    {
+      "text": "Heavy rain has made the field path too muddy for the group.",
+      "zh": "大雨使田间小路太泥泞，不适合团队通行。"
+    },
+    {
+      "text": "The visit will still take place,",
+      "zh": "参观仍会进行，"
+    },
+    {
+      "text": "but we will use the road beside the storage building.",
+      "zh": "但我们将走储藏楼旁边的路。"
+    },
+    {
+      "text": "Meet outside the library at eight forty, not at the farm gate.",
+      "zh": "八点四十分在图书馆外集合，不是在农场门口。"
+    },
+    {
+      "text": "The bus leaves ten minutes later.",
+      "zh": "公交车将在十分钟后出发。"
+    },
+    {
+      "text": "Please bring water and wear shoes suitable for wet ground.",
+      "zh": "请带水，并穿适合湿地面的鞋子。"
+    },
+    {
+      "text": "Lunch is not included, so bring your own food.",
+      "zh": "活动不包含午餐，因此请自带食物。"
+    },
+    {
+      "text": "The farmer will explain the irrigation system inside the main building.",
+      "zh": "农场主将在主楼内介绍灌溉系统。"
+    },
+    {
+      "text": "We will not enter the fields during this visit.",
+      "zh": "这次参观我们不会进入田地。"
+    }
+  ],
+  "2026-10-14": [
+    {
+      "text": "The computer room will close early on Friday for a software update.",
+      "zh": "电脑室周五将因软件更新而提前关闭。"
+    },
+    {
+      "text": "Please finish your work by four thirty.",
+      "zh": "请在四点半前完成工作。"
+    },
+    {
+      "text": "Printing will stop at four fifteen, fifteen minutes before the room closes.",
+      "zh": "打印将在四点十五分停止，比关门早十五分钟。"
+    },
+    {
+      "text": "The library computers will remain available until seven.",
+      "zh": "图书馆的电脑仍可使用到七点。"
+    },
+    {
+      "text": "Before leaving, check that your files have finished uploading to your account.",
+      "zh": "离开前，请确认文件已完成上传到账户。"
+    },
+    {
+      "text": "A message saying saved on this computer does not confirm an upload.",
+      "zh": "显示“已保存在本机”的信息不能确认上传完成。"
+    },
+    {
+      "text": "If you are unsure, ask the assistant at the front desk.",
+      "zh": "如果不确定，请询问前台助理。"
+    },
+    {
+      "text": "Do not turn off a machine while an update is running.",
+      "zh": "更新进行时请不要关闭机器。"
+    },
+    {
+      "text": "The room is expected to reopen at nine on Saturday morning.",
+      "zh": "电脑室预计周六上午九点重新开放。"
+    }
+  ],
+  "2026-10-15": [
+    {
+      "text": "This is a reminder for members of the language exchange group.",
+      "zh": "这是给语言交流小组成员的提醒。"
+    },
+    {
+      "text": "Tonight we will meet in Room Six instead of Room Three.",
+      "zh": "今晚我们将在六号房间集合，而不是三号房间。"
+    },
+    {
+      "text": "The meeting still begins at six, so please arrive a few minutes early.",
+      "zh": "会议仍在六点开始，请提前几分钟到达。"
+    },
+    {
+      "text": "Bring one photograph or a small object that you can describe.",
+      "zh": "带一张照片或一件你能描述的小物品。"
+    },
+    {
+      "text": "You do not need to prepare a written speech.",
+      "zh": "你不需要准备书面讲稿。"
+    },
+    {
+      "text": "Each speaker will have two minutes, followed by questions from a partner.",
+      "zh": "每位发言者有两分钟，之后由搭档提问。"
+    },
+    {
+      "text": "If you cannot remember a word, explain the idea in another way.",
+      "zh": "如果想不起一个词，请换一种方式解释想法。"
+    },
+    {
+      "text": "The group will discuss common difficulties at the end,",
+      "zh": "小组将在最后讨论共同的困难，"
+    },
+    {
+      "text": "but nobody will receive a grade for this activity.",
+      "zh": "但这项活动不会给任何人评分。"
+    }
   ]
 }
