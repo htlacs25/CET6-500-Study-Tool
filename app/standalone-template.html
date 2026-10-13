@@ -216,7 +216,7 @@ __WORD_SEARCH_ENGINE__
     }
     function compactArchiveEntry(x={}){
       const s=x.snapshot||x.lesson||{},p=x.progress||{};
-      return {key:x.key||lessonDate(s)+'|'+(s.contentSignature||lessonFingerprint(s)),reason:x.reason||'outdated-content',archivedAt:x.archivedAt||new Date().toISOString(),lesson:{id:s.id||'',date:lessonDate(s),title:s.title||'旧版课程',contentSignature:s.contentSignature||lessonFingerprint(s),newWords:(s.nw||s.newWords||[]).map(w=>typeof w==='string'?w:w.word)},progress:{completed:p.completed||[],wordCorrect:p.wordCorrect||0,wordTotal:p.wordTotal||0,listeningCorrect:p.listeningCorrect||0,listeningTotal:p.listeningTotal||0,listeningChoiceCorrect:p.listeningChoiceCorrect||0,listeningChoiceTotal:p.listeningChoiceTotal||0,quizCorrect:p.quizCorrect||0,quizTotal:p.quizTotal||0,grammarCorrect:p.grammarCorrect||0,grammarTotal:p.grammarTotal||0,readingCorrect:p.readingCorrect||0,readingTotal:p.readingTotal||0,extensiveCorrect:p.extensiveCorrect||0,extensiveTotal:p.extensiveTotal||0,sentenceCorrect:p.sentenceCorrect||0,sentenceTotal:p.sentenceTotal||0,translationCorrect:p.translationCorrect||0,translationTotal:p.translationTotal||0,wordErrors:p.wordErrors||[],listeningErrors:p.listeningErrors||[],quizErrors:p.quizErrors||[],notes:p.notes||'',attempts:p.attempts||{},errorDetails:p.errorDetails||[],wordPractice:p.wordPractice||null,draft:p.draft||x.draft||null}};
+      return {key:x.key||lessonDate(s)+'|'+(s.contentSignature||lessonFingerprint(s)),reason:x.reason||'outdated-content',archivedAt:x.archivedAt||new Date().toISOString(),lesson:{id:s.id||'',date:lessonDate(s),title:s.title||'旧版课程',contentSignature:s.contentSignature||lessonFingerprint(s),newWords:(s.nw||s.newWords||[]).map(w=>typeof w==='string'?w:w.word)},progress:{completed:p.completed||[],wordCorrect:p.wordCorrect||0,wordTotal:p.wordTotal||0,listeningCorrect:p.listeningCorrect||0,listeningTotal:p.listeningTotal||0,listeningChoiceCorrect:p.listeningChoiceCorrect||0,listeningChoiceTotal:p.listeningChoiceTotal||0,quizCorrect:p.quizCorrect||0,quizTotal:p.quizTotal||0,grammarCorrect:p.grammarCorrect||0,grammarTotal:p.grammarTotal||0,readingCorrect:p.readingCorrect||0,readingTotal:p.readingTotal||0,extensiveCorrect:p.extensiveCorrect||0,extensiveTotal:p.extensiveTotal||0,sentenceCorrect:p.sentenceCorrect||0,sentenceTotal:p.sentenceTotal||0,translationCorrect:p.translationCorrect||0,translationTotal:p.translationTotal||0,wordErrors:p.wordErrors||[],listeningErrors:p.listeningErrors||[],quizErrors:p.quizErrors||[],notes:p.notes||'',attempts:p.attempts||{},errorDetails:p.errorDetails||[],wordPractice:p.wordPractice||null,wordReviewEvents:p.wordReviewEvents||{},draft:p.draft||x.draft||null}};
     }
     function storedWordErrors(p={}){return uniq([...(p.wordErrors||[]),...(p.snapshotArchive||[]).flatMap(x=>x.progress?.wordErrors||[])])}
     function save(p){
@@ -379,7 +379,12 @@ __WORD_SEARCH_ENGINE__
       if(round.done||['correct','answer'].includes(round.phase))return;
       const d=round.order[round.i];if(!round.input.trim()||d.audio&&!round.meaningInput.trim())return;
       const eOk=norm(round.input)===norm(d.word),mOk=!d.audio||meaningOk(round.meaningInput,d.meaning),ok=eOk&&mOk,key=norm(d.word);
-      if(!Object.hasOwn(round.results,key))round.results[key]={correct:ok,answer:round.input,meaningInput:round.meaningInput,at:new Date().toISOString()};
+      if(!Object.hasOwn(round.results,key)){
+        const at=new Date().toISOString();
+        round.results[key]={correct:ok,answer:round.input,meaningInput:round.meaningInput,at};
+        const logged=recordWordReviewEvent(progress(),d.word,ok,at);
+        save({wordReviewEvents:logged.wordReviewEvents});
+      }
       if(!ok)wordPractice.mistakes=uniq([...wordPractice.mistakes,d.word]);
       if(kind==='daily'&&!firstWordAttempt(progress(),L,d.word)){
         record('word','token:'+encodeURIComponent(key),ok,{targetWord:d.word,audio:d.audio,label:'单词：'+d.word,tag:eOk?'meaning':'spelling',answer:round.input+' / '+round.meaningInput,expected:d.word+' / '+d.meaning});

@@ -5,6 +5,7 @@ import vm from 'node:vm';
 import {prepareStandalone} from './generate-standalone.mjs';
 import {loadCurriculum} from '../lib/load-curriculum.mjs';
 import {addStudyReviewVocabulary,addUserVocabulary,normalizeUserVocabulary,removeUserVocabulary,reviewUserVocabulary,buildRecoveryLesson,makeWordRound,chooseDailyLesson,blankProgress} from '../lib/study-engine.mjs';
+import {wordLearningSchedule,recordWordReviewEvent,reconcileDailyWordRound} from '../lib/study-engine.mjs';
 
 const prepared=await prepareStandalone('2026-10-07');
 const html=prepared.files.find(([name])=>name.endsWith('.html'))[1];
@@ -13,6 +14,94 @@ const curriculum=loadCurriculum();
 const day=(date,history={},vocab={})=>buildRecoveryLesson(DATA,curriculum,date,history,vocab);
 const word=day('2026-10-07').nw[0];
 const names=rows=>rows.map(w=>w.word);
+
+test('an overdue cohort no longer occupies the identical review list on consecutive dates',()=>{
+  const words=day('2026-10-02').nw;
+  const history={'2026-10-02':{wordPractice:{daily:{results:Object.fromEntries(words.map(w=>[w.word,{correct:true,at:'2026-10-02T03:00:00Z'}]))}}}};
+  const before=JSON.stringify(history),a=day('2026-10-13',history),b=day('2026-10-14',history),c=day('2026-10-15',history);
+  assert.equal(a.rev.length,18);assert.equal(b.rev.length,18);assert.equal(c.rev.length,40);
+  assert.notDeepEqual(names(a.rev),names(b.rev));
+  assert.equal(b.rev.filter(w=>a.rev.some(x=>x.word===w.word)).length,0,'unanswered offers rest while other due words take their places');
+  assert.ok(words.every(w=>[...a.rev,...b.rev,...c.rev].some(x=>x.word===w.word)),'the tail is not starved');
+  assert.deepEqual(day('2026-10-13',history).rev,a.rev,'reverse preview does not consume or mutate the schedule');
+  assert.equal(JSON.stringify(history),before);
+  assert.equal(wordLearningSchedule(history,'2026-10-15').get(words[0].word).lastDate,'2026-10-02','offers never count as successful reviews');
+});
+
+test('all yesterday errors take priority within capacity; old successes and future due words do not return',()=>{
+  const words=day('2026-10-11').nw,errors=words.map(w=>w.word),history={};
+  history['2026-10-15']={wordPractice:{daily:{results:Object.fromEntries(errors.map(word=>[word,{correct:false,at:'2026-10-12T03:00:00Z'}]))}}};
+  const next=day('2026-10-13',history);
+  assert.equal(next.rev.length,18);assert.ok(next.rev.every(w=>errors.includes(w.word)));
+  assert.equal(next.priorityErrors.length,18);
+  const rest=day('2026-10-14',history);assert.ok(errors.filter(w=>!names(next.rev).includes(w)).every(w=>names(rest.rev).includes(w)));
+  const target=next.rev[0].word;
+  history['2026-10-13']=recordWordReviewEvent({},target,true,'2026-10-13T03:00:00Z');
+  assert.equal(wordLearningSchedule(history,'2026-10-14').get(target).dueDate,'2026-10-15');
+  assert.ok(!names(day('2026-10-14',history).rev).includes(target),'newer actual success outranks the error in a future-dated pack');
+});
+
+test('later-day retry events drive spacing without changing any first score or same-day recall time',()=>{
+  const target=day('2026-10-02').nw[0].word;
+  let p={...blankProgress(),wordTotal:1,wordCorrect:0,attempts:{'word:first':{group:'word',targetWord:target,correct:false,at:'2026-10-12T03:00:00Z'}}};
+  const original=JSON.stringify(p);
+  let next=recordWordReviewEvent(p,target,false,'2026-10-12T03:00:00Z');
+  next=recordWordReviewEvent(next,target,true,'2026-10-12T04:00:00Z');
+  assert.equal(next.wordReviewEvents['2026-10-12|'+target].correct,false);
+  for(const [date,due] of [['2026-10-13','2026-10-15'],['2026-10-15','2026-10-18'],['2026-10-18','2026-10-26']]){
+    next=recordWordReviewEvent(next,target,true,date+'T03:00:00Z');
+    const tomorrow=new Date(Date.parse(date)+864e5).toISOString().slice(0,10);
+    assert.equal(wordLearningSchedule({'2026-10-02':next},tomorrow).get(target).dueDate,due);
+  }
+  assert.equal(JSON.stringify(p),original);assert.deepEqual(next.attempts,p.attempts);assert.equal(next.wordCorrect,0);assert.equal(next.wordTotal,1);
+});
+
+test('manual overdue requests rotate, but correct submissions respect their own future date',()=>{
+  const words=day('2026-10-02').nw;let vocab={};
+  for(const w of words)vocab=addStudyReviewVocabulary(vocab,w,'2026-10-12');
+  const a=day('2026-10-13',{},vocab),b=day('2026-10-14',{},vocab);
+  assert.equal(a.rev.filter(w=>vocab.items[w.word]).length,18);
+  assert.equal(b.rev.filter(w=>vocab.items[w.word]).length,4);
+  vocab=reviewUserVocabulary(vocab,a.rev[0].word,'2026-10-13',true);
+  assert.ok(!names(day('2026-10-14',{},vocab).rev).includes(a.rev[0].word));
+  const preview=day('2026-10-14').nw[0],fromPreview=addStudyReviewVocabulary({},preview,'2026-10-12');
+  assert.ok(names(day('2026-10-13',{},fromPreview).rev).includes(preview.word),'an explicit review request from a future preview is still due tomorrow');
+});
+
+test('archived later-day reviews retain the schedule and never overwrite original grades',()=>{
+  const target=day('2026-10-02').nw[0].word;
+  const history={'2026-10-02':{snapshotArchive:[{progress:{attempts:{'word:first':{group:'word',targetWord:target,correct:false,at:'2026-10-12T03:00:00Z'}},wordReviewEvents:{later:{word:target,correct:true,at:'2026-10-13T03:00:00Z'}}}}]}};
+  assert.equal(wordLearningSchedule(history,'2026-10-14').get(target).dueDate,'2026-10-15');
+  assert.equal(history['2026-10-02'].snapshotArchive[0].progress.attempts['word:first'].correct,false);
+});
+
+test('review-list migration replaces only unsubmitted reviews and keeps a completed round intact',()=>{
+  const fresh=day('2026-10-13'),old=structuredClone(fresh);delete old.reviewPlanVersion;
+  old.rev=day('2026-10-12').rev;old.all=[...old.nw,...old.rev];old.quizWords=old.all;
+  const round=makeWordRound(old.all,[],()=>.3,old.nw);round.i=24;round.input='current spelling';round.meaningInput='current meaning';
+  const attempts=Object.fromEntries(round.order.slice(0,24).map(w=>['word:'+w.word,{group:'word',targetWord:w.word,correct:true,at:'2026-10-13T02:00:00Z'}]));
+  const p={...blankProgress(),lessonSnapshot:old,attempts,wordTotal:24,wordCorrect:24,wordPractice:{daily:round,retry:{input:'retry draft'}},draft:{ls:{input:'listening draft'}},notes:'preserve'};
+  const before=JSON.stringify(p),fixed=chooseDailyLesson('2026-10-13',p,fresh),reconciled=reconcileDailyWordRound(fixed,round,()=>.4);
+  assert.equal(JSON.stringify(p),before);assert.equal(fixed.contentSignature,old.contentSignature);assert.equal(fixed.all.length,40);assert.equal(fixed.rev.length,18);
+  assert.deepEqual(fixed.nw,old.nw);assert.equal(fixed.reviewPlanVersion,1);
+  assert.deepEqual(reconciled.order.slice(0,25),round.order.slice(0,25));assert.equal(reconciled.input,round.input);assert.equal(reconciled.order.length,40);
+  assert.equal(reconciled.order.filter(w=>w.audio).length,20);
+  assert.equal(reconcileDailyWordRound(fixed,reconciled),reconciled);
+  round.done=true;p.wordTotal=40;
+  assert.deepEqual(chooseDailyLesson('2026-10-13',p,fresh).all,old.all);
+});
+
+test('new scheduling events are written once per round, independently of first-score recording',()=>{
+  const template=fs.readFileSync(new URL('../standalone-template.html',import.meta.url),'utf8');
+  const code=template.slice(template.indexOf('    function submitWordRound'),template.indexOf('    function bindWordRound'));
+  const word={word:'bank',meaning:'银行',audio:false},L={};let p={wordTotal:1,wordCorrect:0,attempts:{'word:first':{group:'word',targetWord:'bank',correct:false,at:'2026-10-12T03:00:00Z'}}};
+  const context=vm.createContext({norm:s=>s,meaningOk:()=>true,wordPractice:{mistakes:[]},uniq:a=>[...new Set(a)],progress:()=>p,recordWordReviewEvent,save:patch=>{p={...p,...patch}},firstWordAttempt:()=>p.attempts['word:first'],roundScore:()=>({correct:1}),persistDraft(){},renderWords(){}});
+  vm.runInContext(code,context);
+  const round={order:[word],i:0,input:'bank',meaningInput:'',phase:'try',results:{}};
+  context.submitWordRound(L,round,'retry');
+  assert.equal(Object.keys(p.wordReviewEvents).length,1);assert.equal(p.wordTotal,1);assert.equal(p.wordCorrect,0);
+  assert.equal(p.attempts['word:first'].correct,false);
+});
 
 test('card enrollment is idempotent, persists through normalization, and creates no grade',()=>{
   const v=addStudyReviewVocabulary({},word,'2026-10-07'),item=v.items[word.word];
