@@ -3175,5 +3175,72 @@
         "tag": "extensive"
       }
     ]
+  },
+  {
+    "date": "2026-10-16",
+    "title": "A Waiting Room Learns to Listen",
+    "titleZh": "候诊室学会倾听",
+    "category": "Community services — understanding visitors",
+    "sourceType": "original news-style",
+    "sourceNote": "原创报刊风格教学短文；人物、机构与事件均为虚构，不是真实或实时新闻。Original educational news-style fiction, not a report of a real event.",
+    "text": "In a fictional town, volunteers wanted to make a waiting room more welcoming. Their first idea was to fill the walls with bright posters. Before buying materials, however, they asked visitors what made the room difficult to use. The answers surprised them.\n\nSeveral people could not clearly hear their names being called. Others found the signs confusing because different doors had similar labels. A parent wanted a place to leave a small bag while helping a child. Very few visitors mentioned the color of the walls.\n\nThe volunteers changed their plan. With permission from the staff, they tested larger door labels and moved a noisy machine away from the reception desk. They placed a simple shelf beside several chairs. After a week, they asked visitors the same questions again instead of assuming that every change had worked.\n\nNot every suggestion could be followed. Some required more space or money than the project had. The team kept a list of these requests and explained which ones remained unresolved. The room did not become perfect, but the project developed a better way to choose improvements. Listening first helped the volunteers spend their limited budget on difficulties that people actually experienced, rather than on the changes that were easiest to photograph.",
+    "textZh": "在一个虚构小镇，志愿者想让一间候诊室更友好。他们最初的想法是在墙上贴满鲜艳海报。然而在购买材料前，他们询问来访者，房间的哪些地方使用起来困难。答案让他们意外。\n\n几个人听不清工作人员叫自己的名字。另一些人觉得标识难懂，因为不同的门有相似标签。一位家长希望在照顾孩子时有地方放小包。很少有人提到墙壁颜色。\n\n志愿者改变了计划。在获得工作人员许可后，他们试用了更大的门牌，把嘈杂的机器移离接待处，并在几把椅子旁放了一个简单架子。一周后，他们再次询问相同的问题，而不是认定每项改变都奏效了。\n\n并非所有建议都能采纳。有些需要的空间或资金超出了项目条件。团队保留了这些需求的清单，并说明哪些仍未解决。房间没有变得完美，但项目形成了更好的改进选择方式。先倾听帮助志愿者把有限预算用在大家实际遇到的困难上，而不是最容易拍出照片的改变上。",
+    "listeningTip": "盲听最初想做什么、访客真正需要什么；精听instead of与rather than的对比。三个短语各跟读一次，再脱稿复述30—60秒。",
+    "speakingPrompt": "Describe the volunteers' original idea, two changes they made, and why asking visitors again was important.",
+    "speakingPromptZh": "说明志愿者最初的想法、实施的两项改变，以及为什么再次询问来访者很重要。",
+    "keyPhrases": [
+      {
+        "en": "with permission from the staff",
+        "zh": "在获得工作人员许可后"
+      },
+      {
+        "en": "instead of assuming",
+        "zh": "而不是想当然地认为"
+      },
+      {
+        "en": "spend their limited budget on",
+        "zh": "把有限的预算花在……上"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What led the volunteers to change their first plan?",
+        "promptZh": "什么使志愿者改变最初的计划？",
+        "options": [
+          "They found more colorful paper.",
+          "Visitors described different practical difficulties.",
+          "All the walls had already been painted.",
+          "Nobody was willing to enter the room."
+        ],
+        "optionsZh": [
+          "找到了更彩色的纸",
+          "来访者描述了不同的实际困难",
+          "所有墙已粉刷",
+          "无人愿意进入房间"
+        ],
+        "answer": 1,
+        "explanation": "第二段访客主要关心听不清、标识不清和放包问题，而非墙色。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "Why did they repeat the questions after a week?",
+        "promptZh": "为什么他们一周后重复询问相同问题？",
+        "options": [
+          "To avoid speaking to the staff.",
+          "To show that every request had been met.",
+          "To check whether the changes actually helped.",
+          "To replace the project with a photography class."
+        ],
+        "optionsZh": [
+          "避免与工作人员交谈",
+          "证明每个要求都满足了",
+          "检查改变是否确实有帮助",
+          "把项目换成摄影课"
+        ],
+        "answer": 2,
+        "explanation": "第三段对比再次询问与假定所有改变有效，体现效果核验。",
+        "tag": "extensive"
+      }
+    ]
   }
 ]

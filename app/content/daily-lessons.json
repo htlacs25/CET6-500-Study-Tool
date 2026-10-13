@@ -15655,5 +15655,548 @@
         "topic": "准确表达与句法巩固"
       }
     ]
+  },
+  "2026-10-16": {
+    "title": "公共服务：辨别申请、确认与实际到场安排",
+    "grammarTip": "四级听读专项：听出改变的是入口而非预约时间；阅读区分相关性与因果。巩固主句谓语、被动语态、词性和条件从句。诊所和调查均为虚构教学情境，不提供医疗建议。",
+    "words": [
+      {
+        "word": "health",
+        "phonetic": "/helθ/",
+        "pos": "n.",
+        "meaning": "健康",
+        "phrase": "public health",
+        "example": "The report discusses public health services.",
+        "exampleZh": "报告讨论公共卫生服务。"
+      },
+      {
+        "word": "medical",
+        "phonetic": "/ˈmedɪkəl/",
+        "pos": "adj.",
+        "meaning": "医疗的；医学的",
+        "phrase": "medical training",
+        "example": "The exhibition describes medical training in the past.",
+        "exampleZh": "展览介绍过去的医学培训。"
+      },
+      {
+        "word": "medicine",
+        "phonetic": "/ˈmedɪsən/",
+        "pos": "n.",
+        "meaning": "药；医学",
+        "phrase": "study medicine",
+        "example": "Her brother plans to study medicine.",
+        "exampleZh": "她哥哥打算学医。"
+      },
+      {
+        "word": "patient",
+        "phonetic": "/ˈpeɪʃənt/",
+        "pos": "n.; adj.",
+        "meaning": "n. 病人；adj. 有耐心的",
+        "phrase": "a patient teacher",
+        "example": "A patient teacher gives learners time to answer.",
+        "exampleZh": "有耐心的老师给学习者时间回答。"
+      },
+      {
+        "word": "disease",
+        "phonetic": "/dɪˈziːz/",
+        "pos": "n.",
+        "meaning": "疾病",
+        "phrase": "study a disease",
+        "example": "The article describes research into a disease.",
+        "exampleZh": "文章介绍针对一种疾病的研究。"
+      },
+      {
+        "word": "illness",
+        "phonetic": "/ˈɪlnəs/",
+        "pos": "n.",
+        "meaning": "疾病；生病",
+        "phrase": "because of illness",
+        "example": "The speaker missed the meeting because of illness.",
+        "exampleZh": "发言人因病错过了会议。"
+      },
+      {
+        "word": "symptom",
+        "phonetic": "/ˈsɪmptəm/",
+        "pos": "n.",
+        "meaning": "症状；征兆",
+        "phrase": "describe a symptom",
+        "example": "The student learned how to describe a symptom in English.",
+        "exampleZh": "学生学习了如何用英语描述症状。"
+      },
+      {
+        "word": "treatment",
+        "phonetic": "/ˈtriːtmənt/",
+        "pos": "n.",
+        "meaning": "治疗；对待；处理",
+        "phrase": "fair treatment",
+        "example": "Every visitor expects fair treatment.",
+        "exampleZh": "每位来访者都希望得到公平对待。"
+      },
+      {
+        "word": "hospital",
+        "phonetic": "/ˈhɑːspɪtəl/",
+        "pos": "n.",
+        "meaning": "医院",
+        "phrase": "a local hospital",
+        "example": "The local hospital invited volunteers to a meeting.",
+        "exampleZh": "当地医院邀请志愿者参加会议。"
+      },
+      {
+        "word": "clinic",
+        "phonetic": "/ˈklɪnɪk/",
+        "pos": "n.",
+        "meaning": "诊所；门诊部",
+        "phrase": "a campus clinic",
+        "example": "The campus clinic has a new booking page.",
+        "exampleZh": "校内诊所有了新的预约页面。"
+      },
+      {
+        "word": "doctor",
+        "phonetic": "/ˈdɑːktər/",
+        "pos": "n.",
+        "meaning": "医生；博士",
+        "phrase": "a family doctor",
+        "example": "The story follows a family doctor in a small town.",
+        "exampleZh": "故事围绕小镇上的一位家庭医生展开。"
+      },
+      {
+        "word": "nurse",
+        "phonetic": "/nɜːrs/",
+        "pos": "n.; v.",
+        "meaning": "n. 护士；v. 护理",
+        "phrase": "a student nurse",
+        "example": "A student nurse helped explain the visitor form.",
+        "exampleZh": "一名实习护士帮助解释访客表格。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "surgery",
+        "phonetic": "/ˈsɜːrdʒəri/",
+        "pos": "n.",
+        "meaning": "外科手术；外科学",
+        "phrase": "the history of surgery",
+        "example": "The museum has a display about the history of surgery.",
+        "exampleZh": "博物馆设有介绍外科手术史的展区。"
+      },
+      {
+        "word": "recover",
+        "phonetic": "/rɪˈkʌvər/",
+        "pos": "v.",
+        "meaning": "恢复；康复；找回",
+        "phrase": "recover a file",
+        "example": "The technician managed to recover the missing file.",
+        "exampleZh": "技术人员设法找回了丢失的文件。"
+      },
+      {
+        "word": "recovery",
+        "phonetic": "/rɪˈkʌvəri/",
+        "pos": "n.",
+        "meaning": "恢复；康复",
+        "phrase": "a slow recovery",
+        "example": "The novel describes her slow recovery after an illness.",
+        "exampleZh": "小说描写她病后的缓慢康复。"
+      },
+      {
+        "word": "infection",
+        "phonetic": "/ɪnˈfekʃən/",
+        "pos": "n.",
+        "meaning": "感染",
+        "phrase": "infection research",
+        "example": "The lecture introduced a project on infection research.",
+        "exampleZh": "讲座介绍了一项感染研究项目。"
+      },
+      {
+        "word": "virus",
+        "phonetic": "/ˈvaɪrəs/",
+        "pos": "n.",
+        "meaning": "病毒",
+        "phrase": "a computer virus",
+        "example": "The exercise uses the example of a computer virus.",
+        "exampleZh": "练习使用了计算机病毒的例子。"
+      },
+      {
+        "word": "injury",
+        "phonetic": "/ˈɪndʒəri/",
+        "pos": "n.",
+        "meaning": "受伤；损伤",
+        "phrase": "a sports injury",
+        "example": "A sports injury kept the player out of the match.",
+        "exampleZh": "一次运动损伤使那名队员无法参赛。"
+      },
+      {
+        "word": "wound",
+        "phonetic": "/wuːnd/",
+        "pos": "n.; v.",
+        "meaning": "n. 伤口；v. 使受伤",
+        "phrase": "an old wound",
+        "example": "The character has an old wound on his arm.",
+        "exampleZh": "这个人物的手臂上有一道旧伤口。"
+      },
+      {
+        "word": "physical",
+        "phonetic": "/ˈfɪzɪkəl/",
+        "pos": "adj.",
+        "meaning": "身体的；物理的",
+        "phrase": "physical activity",
+        "example": "The survey asks about everyday physical activity.",
+        "exampleZh": "调查询问日常身体活动的情况。"
+      },
+      {
+        "word": "mental",
+        "phonetic": "/ˈmentəl/",
+        "pos": "adj.",
+        "meaning": "心理的；精神的；脑力的",
+        "phrase": "mental effort",
+        "example": "Learning a new skill requires mental effort.",
+        "exampleZh": "学习一项新技能需要脑力投入。"
+      },
+      {
+        "word": "cure",
+        "phonetic": "/kjʊr/",
+        "pos": "n.; v.",
+        "meaning": "n. 治疗方法；v. 治愈；解决",
+        "phrase": "find a cure",
+        "example": "The fictional scientist hopes to find a cure.",
+        "exampleZh": "这位虚构的科学家希望找到治疗方法。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The nurse who explains the forms ___ very patient.",
+        "promptZh": "解释表格的护士很有耐心。",
+        "options": [
+          "are",
+          "is",
+          "do",
+          "have"
+        ],
+        "optionsZh": [
+          "是（复数）",
+          "是（单数）",
+          "做",
+          "有"
+        ],
+        "answer": 1,
+        "explanation": "主语nurse是单数，主句谓语is；who explains the forms是修饰nurse的定语从句。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "The entrance will ___ on Monday.",
+        "promptZh": "入口将在周一关闭。",
+        "options": [
+          "closed",
+          "closing",
+          "be closed",
+          "close it"
+        ],
+        "optionsZh": [
+          "关闭的",
+          "正在关闭",
+          "被关闭",
+          "关闭它"
+        ],
+        "answer": 2,
+        "explanation": "入口是被关闭的对象，will be closed构成将来时被动。",
+        "tag": "passive"
+      },
+      {
+        "prompt": "The receptionist explained the change ___.",
+        "promptZh": "接待员耐心地解释了变化。",
+        "options": [
+          "patient",
+          "patience",
+          "patients",
+          "patiently"
+        ],
+        "optionsZh": [
+          "有耐心的",
+          "耐心",
+          "病人们",
+          "耐心地"
+        ],
+        "answer": 3,
+        "explanation": "修饰explained用副词patiently；patient还可作名词“病人”。",
+        "tag": "adverb"
+      },
+      {
+        "prompt": "If the office ___ your request, it will send a message.",
+        "promptZh": "如果办公室批准你的申请，就会发送信息。",
+        "options": [
+          "approves",
+          "will approve",
+          "approving",
+          "approve"
+        ],
+        "optionsZh": [
+          "批准（第三人称单数）",
+          "将批准",
+          "批准（非限定形式）",
+          "批准（原形）"
+        ],
+        "answer": 0,
+        "explanation": "if条件从句用一般现在时表达将来的条件，office作单数，用approves。",
+        "tag": "conditional"
+      },
+      {
+        "prompt": "The students were asked ___ the time before leaving.",
+        "promptZh": "学生被要求在出发前确认时间。",
+        "options": [
+          "check",
+          "checking",
+          "to check",
+          "checked"
+        ],
+        "optionsZh": [
+          "确认（原形）",
+          "确认（动名词）",
+          "确认（不定式）",
+          "确认了"
+        ],
+        "answer": 2,
+        "explanation": "ask somebody to do的被动形式为somebody be asked to do。",
+        "tag": "infinitive"
+      },
+      {
+        "prompt": "I ___ that checking the notice is an everyday habit.",
+        "promptZh": "我认为查看通知是一项日常习惯。",
+        "options": [
+          "thing",
+          "think",
+          "thinking",
+          "am think"
+        ],
+        "optionsZh": [
+          "东西",
+          "认为",
+          "思考（非限定形式）",
+          "错误的动词组合"
+        ],
+        "answer": 1,
+        "explanation": "think是动词“认为”，thing是名词“东西”；everyday在这里是修饰habit的形容词。",
+        "tag": "spelling"
+      }
+    ],
+    "reading": {
+      "title": "A Booking Page and a Shorter Queue",
+      "titleZh": "预约页面与更短的队伍",
+      "level": "四级专项衔接 · 原创分级模拟",
+      "topic": "相关性、因果与服务安排",
+      "passage": "A college clinic introduced an online booking page during a quiet part of the term. Two weeks later, a student report said that the new page had reduced waiting times. The conclusion was based on a shorter queue in the reception area.\n\nHowever, the clinic had made another change at the same time. A second receptionist now helped visitors during the busiest hour. Fewer students were also on campus because some courses were holding activities elsewhere. These changes could have affected the queue, whether or not the booking page was useful.\n\nThe report was revised after the team spoke with clinic staff. It still described the shorter queue, but it no longer presented the website as the only explanation. The team decided to compare similar weeks and ask visitors whether they had used the page.\n\nThis did not mean that the new system had failed. It meant that one observation was not enough to show exactly why waiting times had changed. A useful improvement and a convincing explanation are not always the same thing.",
+      "passageZh": "一所大学的诊所在学期中较清闲的一段时间推出了在线预约页面。两周后，一份学生报告称新页面缩短了等待时间。这个结论基于接待区的队伍变短了。\n\n然而，诊所同时还作了另一项改变：最忙的一小时里，增加了一名接待员帮助来访者。一些课程在校外开展活动，因此校内学生也变少了。无论预约页面是否有用，这些变化都可能影响队伍长度。\n\n团队与诊所工作人员交谈后修改了报告。报告仍描述了队伍缩短的现象，却不再把网站当作唯一解释。团队决定比较情况相近的几周，并询问来访者是否使用了该页面。\n\n这并不意味着新系统失败了，而是说一次观察不足以准确说明等待时间为什么改变。有用的改进与有说服力的解释并不总是一回事。",
+      "questions": [
+        {
+          "prompt": "What supported the report's original conclusion?",
+          "promptZh": "什么支持了报告最初的结论？",
+          "options": [
+            "A shorter queue at reception.",
+            "A comparison of several similar years.",
+            "The closure of another clinic.",
+            "A survey of every student."
+          ],
+          "optionsZh": [
+            "接待处队伍变短",
+            "对几个相似年份的比较",
+            "另一诊所关闭",
+            "对每名学生的调查"
+          ],
+          "answer": 0,
+          "explanation": "第一段明确结论基于a shorter queue，而不是完整的因果比较。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Which other change could have influenced waiting times?",
+          "promptZh": "哪项其他变化可能影响等待时间？",
+          "options": [
+            "The clinic stopped receiving visitors.",
+            "Every course moved online.",
+            "A second receptionist helped at a busy time.",
+            "The clinic removed all appointments."
+          ],
+          "optionsZh": [
+            "诊所停止接待来访者",
+            "全部课程转为线上",
+            "繁忙时段增加了一名接待员",
+            "诊所取消全部预约"
+          ],
+          "answer": 2,
+          "explanation": "第二段提到增加接待员，另外校内人数减少也可能影响排队。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What did the revised report avoid claiming?",
+          "promptZh": "修改后的报告避免作出什么断言？",
+          "options": [
+            "Students could use a booking page.",
+            "The website alone explained the shorter queue.",
+            "The queue had become shorter.",
+            "Staff worked in the reception area."
+          ],
+          "optionsZh": [
+            "学生可以使用预约页面",
+            "仅网站就能解释队伍缩短",
+            "队伍已经变短",
+            "工作人员在接待区工作"
+          ],
+          "answer": 1,
+          "explanation": "第三段说不再把网站作为唯一解释，仍保留观察到的现象。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What is the main lesson of the passage?",
+          "promptZh": "文章的主要启示是什么？",
+          "options": [
+            "New systems always make services worse.",
+            "Only long queues can be measured.",
+            "Visitors should never use a website.",
+            "An observation does not by itself establish a cause."
+          ],
+          "optionsZh": [
+            "新系统总会使服务更差",
+            "只有长队才能测量",
+            "来访者绝不该使用网站",
+            "单次观察本身不能确立原因"
+          ],
+          "answer": 3,
+          "explanation": "末段区分观察到变化与解释原因；并未否定系统有用的可能。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "A Different Entrance, the Same Appointment",
+      "titleZh": "入口变了，预约时间没变",
+      "tip": "第一遍只抓变化：换入口，不改预约时间。第二遍听确认条件、携带学生证与“不必打印”。最后三组跟读，再用自己的话复述。",
+      "level": "四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "passage": "Here is a notice about next Monday at the campus clinic. The entrance beside the library will be closed for repairs. Please use the garden entrance on the opposite side of the building. Your appointment time has not changed. The online form is only a request until you receive confirmation. If you have a confirmed appointment, bring your student card. You do not need to print the confirmation message. For questions about access, call the reception desk before Friday afternoon. Staff cannot answer personal questions in the public comments section.",
+      "passageZh": "这是一则关于校内诊所下周一安排的通知。图书馆旁的入口将因维修而关闭。请使用大楼另一侧的花园入口。你的预约时间没有变化。在收到确认之前，在线表格只是一项申请。如果你已有确认的预约，请携带学生证。你不需要打印确认信息。如对通行有疑问，请在周五下午之前致电接待处。工作人员不能在公开评论区回答个人问题。",
+      "dictation": [
+        "Here is a notice about next Monday at the campus clinic.",
+        "The entrance beside the library will be closed for repairs."
+      ],
+      "dictationZh": [
+        "这是一则关于校内诊所下周一安排的通知。",
+        "图书馆旁的入口将因维修而关闭。"
+      ],
+      "questions": [
+        {
+          "prompt": "What will change next Monday?",
+          "promptZh": "下周一什么会改变？",
+          "options": [
+            "The appointment times.",
+            "The entrance visitors should use.",
+            "The location of the whole clinic.",
+            "The need for a student card."
+          ],
+          "optionsZh": [
+            "预约时间",
+            "来访者应使用的入口",
+            "整个诊所的位置",
+            "携带学生证的要求"
+          ],
+          "answer": 1,
+          "explanation": "通知说图书馆旁入口关闭，改用花园入口；预约时间不变。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "What are visitors with confirmed appointments asked to bring?",
+          "promptZh": "已确认预约的来访者被要求携带什么？",
+          "options": [
+            "A printed message.",
+            "A repair report.",
+            "Their student card.",
+            "A library application."
+          ],
+          "optionsZh": [
+            "打印的信息",
+            "维修报告",
+            "学生证",
+            "图书馆申请表"
+          ],
+          "answer": 2,
+          "explanation": "bring your student card直接对应问题；下一句明确不必打印确认信息。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The students who compared the two weeks realized that the shorter queue did not prove that the new website had caused the improvement.",
+      "main": "The students realized that the shorter queue did not prove that the new website had caused the improvement.",
+      "mainZh": "学生们意识到，队伍缩短并不能证明新网站带来了改善。",
+      "translation": "比较了这两周情况的学生意识到，队伍缩短并不能证明是新网站带来了改善。",
+      "core": [
+        "students",
+        "realized",
+        "queue",
+        "prove",
+        "website",
+        "caused"
+      ],
+      "keywords": [
+        "学生",
+        "比较",
+        "两周",
+        "意识到",
+        "队伍",
+        "证明",
+        "网站",
+        "改善"
+      ],
+      "structure": "主句The students realized；who compared the two weeks修饰students；that引导realized的宾语从句，其中did not prove后又接that宾语从句。",
+      "grammar": [
+        "compared属于定语从句，不是主句谓语。",
+        "had caused是过去完成时，指在意识到之前被认为发生的原因。"
+      ],
+      "examTip": "按三层谓语realized → did not prove → had caused整理意思，不把所有动词当作同层动作。",
+      "level": "四级句法衔接",
+      "topic": "定语从句和嵌套宾语从句"
+    },
+    "trans": [
+      {
+        "source": "预约时间没有改变，但来访者需要使用另一个入口。",
+        "answer": "The appointment time has not changed, but visitors need to use another entrance.",
+        "alternative": "The appointment time has not changed, but visitors must use a different entrance.",
+        "acceptedAnswers": [
+          "The appointment time has not changed, but visitors need to use another entrance.",
+          "The appointment time has not changed, but visitors must use a different entrance."
+        ],
+        "keywords": [
+          "appointment time",
+          "has not changed",
+          "visitors",
+          "entrance"
+        ],
+        "grammar": "现在完成时表示截至目前未发生变化；but连接两个完整分句。",
+        "chunks": [
+          "appointment time",
+          "has not changed",
+          "use another entrance"
+        ],
+        "level": "四级衔接表达",
+        "topic": "准确表达与句法巩固"
+      },
+      {
+        "source": "在得出结论之前，我们应该考虑其他可能的原因。",
+        "answer": "Before reaching a conclusion, we should consider other possible causes.",
+        "alternative": "Before drawing a conclusion, we should consider other possible reasons.",
+        "acceptedAnswers": [
+          "Before reaching a conclusion, we should consider other possible causes.",
+          "Before drawing a conclusion, we should consider other possible reasons."
+        ],
+        "keywords": [
+          "before",
+          "conclusion",
+          "should consider",
+          "other possible"
+        ],
+        "grammar": "before后接动名词；should后接consider原形，possible修饰名词。",
+        "chunks": [
+          "before reaching a conclusion",
+          "consider other possible causes"
+        ],
+        "level": "四级衔接表达",
+        "topic": "准确表达与句法巩固"
+      }
+    ]
   }
 }

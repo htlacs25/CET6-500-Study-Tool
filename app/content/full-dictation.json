@@ -932,5 +932,43 @@
       "text": "but nobody will receive a grade for this activity.",
       "zh": "但这项活动不会给任何人评分。"
     }
+  ],
+  "2026-10-16": [
+    {
+      "text": "Here is a notice about next Monday at the campus clinic.",
+      "zh": "这是一则关于校内诊所下周一安排的通知。"
+    },
+    {
+      "text": "The entrance beside the library will be closed for repairs.",
+      "zh": "图书馆旁的入口将因维修而关闭。"
+    },
+    {
+      "text": "Please use the garden entrance on the opposite side of the building.",
+      "zh": "请使用大楼另一侧的花园入口。"
+    },
+    {
+      "text": "Your appointment time has not changed.",
+      "zh": "你的预约时间没有变化。"
+    },
+    {
+      "text": "The online form is only a request until you receive confirmation.",
+      "zh": "在收到确认之前，在线表格只是一项申请。"
+    },
+    {
+      "text": "If you have a confirmed appointment, bring your student card.",
+      "zh": "如果你已有确认的预约，请携带学生证。"
+    },
+    {
+      "text": "You do not need to print the confirmation message.",
+      "zh": "你不需要打印确认信息。"
+    },
+    {
+      "text": "For questions about access, call the reception desk before Friday afternoon.",
+      "zh": "如对通行有疑问，请在周五下午之前致电接待处。"
+    },
+    {
+      "text": "Staff cannot answer personal questions in the public comments section.",
+      "zh": "工作人员不能在公开评论区回答个人问题。"
+    }
   ]
 }
