@@ -16198,5 +16198,552 @@
         "topic": "准确表达与句法巩固"
       }
     ]
+  },
+  "2026-10-17": {
+    "title": "菜单与标签：区分配料信息、选择理由和证据",
+    "grammarTip": "四级专项衔接：阅读区分观察到的销量变化与原因，听力抓住地点变化、时间不变和预约要求。巩固定语从句与主句谓语、被动语态、形容词前的be和副词。餐饮场景为虚构语言练习，不提供个人饮食建议。",
+    "words": [
+      {
+        "word": "diet",
+        "phonetic": "/ˈdaɪət/",
+        "pos": "n.; v.",
+        "meaning": "n. 日常饮食；规定饮食；v. 节食",
+        "phrase": "a varied diet",
+        "example": "The lesson describes a varied diet in a fictional family.",
+        "exampleZh": "这节课描述一个虚构家庭多样化的日常饮食。"
+      },
+      {
+        "word": "ingredient",
+        "phonetic": "/ɪnˈɡriːdiənt/",
+        "pos": "n.",
+        "meaning": "配料；成分；要素",
+        "phrase": "an ingredient list",
+        "example": "An ingredient list tells readers what is in a product.",
+        "exampleZh": "配料表告诉读者产品里有什么。"
+      },
+      {
+        "word": "portion",
+        "phonetic": "/ˈpɔːrʃən/",
+        "pos": "n.; v.",
+        "meaning": "n. 一份；部分；v. 分配",
+        "phrase": "a small portion",
+        "example": "The menu offers a small portion at a lower price.",
+        "exampleZh": "菜单提供价格较低的小份餐食。"
+      },
+      {
+        "word": "calorie",
+        "phonetic": "/ˈkæləri/",
+        "pos": "n.",
+        "meaning": "卡路里（热量单位）",
+        "phrase": "a calorie figure",
+        "example": "The exercise asks what portion the calorie figure describes.",
+        "exampleZh": "这道练习询问热量数值描述的是多大的一份。"
+      },
+      {
+        "word": "protein",
+        "phonetic": "/ˈproʊtiːn/",
+        "pos": "n.",
+        "meaning": "蛋白质",
+        "phrase": "protein content",
+        "example": "The students located the protein content on the sample label.",
+        "exampleZh": "学生们在示例标签上找到了蛋白质含量。"
+      },
+      {
+        "word": "fiber",
+        "phonetic": "/ˈfaɪbər/",
+        "pos": "n.",
+        "meaning": "纤维；膳食纤维（英式拼写fibre）",
+        "phrase": "dietary fiber",
+        "example": "The package lists dietary fiber below the other figures.",
+        "exampleZh": "包装在其他数值下方列出了膳食纤维。"
+      },
+      {
+        "word": "vitamin",
+        "phonetic": "/ˈvaɪtəmɪn/",
+        "pos": "n.",
+        "meaning": "维生素",
+        "phrase": "vitamin content",
+        "example": "They compared the vitamin content printed on two packages.",
+        "exampleZh": "他们比较了两个包装上印出的维生素含量。"
+      },
+      {
+        "word": "mineral",
+        "phonetic": "/ˈmɪnərəl/",
+        "pos": "n.; adj.",
+        "meaning": "n. 矿物；矿物质；adj. 矿物的",
+        "phrase": "mineral water",
+        "example": "The cafe sells mineral water in returnable bottles.",
+        "exampleZh": "这家咖啡馆出售使用可退还瓶子装的矿泉水。"
+      },
+      {
+        "word": "appetite",
+        "phonetic": "/ˈæpətaɪt/",
+        "pos": "n.",
+        "meaning": "食欲；强烈欲望",
+        "phrase": "have an appetite",
+        "example": "After the long walk, the character had a good appetite.",
+        "exampleZh": "长途步行后，故事人物胃口很好。"
+      },
+      {
+        "word": "digest",
+        "phonetic": "/daɪˈdʒest/（v.）；/ˈdaɪdʒest/（n.）",
+        "pos": "v.; n.",
+        "meaning": "v. 消化；领会；n. 摘要",
+        "phrase": "digest information",
+        "example": "I need a few minutes to digest this information.",
+        "exampleZh": "我需要几分钟来理解这些信息。"
+      },
+      {
+        "word": "raw",
+        "phonetic": "/rɔː/",
+        "pos": "adj.",
+        "meaning": "生的；未经加工的；原始的",
+        "phrase": "raw data",
+        "example": "The team checked the raw data before writing its report.",
+        "exampleZh": "团队在撰写报告前检查了原始数据。"
+      },
+      {
+        "word": "ripe",
+        "phonetic": "/raɪp/",
+        "pos": "adj.",
+        "meaning": "成熟的（果实等）；时机成熟的",
+        "phrase": "ripe fruit",
+        "example": "The painting shows a bowl of ripe fruit.",
+        "exampleZh": "这幅画描绘了一碗成熟的水果。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "boil",
+        "phonetic": "/bɔɪl/",
+        "pos": "v.; n.",
+        "meaning": "v. 煮沸；沸腾；n. 沸腾",
+        "phrase": "boil water",
+        "example": "The recipe begins with the instruction to boil water.",
+        "exampleZh": "食谱首先要求把水煮沸。"
+      },
+      {
+        "word": "steam",
+        "phonetic": "/stiːm/",
+        "pos": "n.; v.",
+        "meaning": "n. 蒸汽；v. 蒸",
+        "phrase": "steam vegetables",
+        "example": "The cooking class will show how to steam vegetables.",
+        "exampleZh": "烹饪课将演示怎样蒸蔬菜。"
+      },
+      {
+        "word": "bake",
+        "phonetic": "/beɪk/",
+        "pos": "v.",
+        "meaning": "烘烤；烤制",
+        "phrase": "bake bread",
+        "example": "My neighbor learned to bake bread last winter.",
+        "exampleZh": "我的邻居去年冬天学会了烤面包。"
+      },
+      {
+        "word": "fry",
+        "phonetic": "/fraɪ/",
+        "pos": "v.",
+        "meaning": "油煎；油炸",
+        "phrase": "fry an egg",
+        "example": "The student can fry an egg but wants to learn more recipes.",
+        "exampleZh": "这名学生会煎鸡蛋，但想学习更多食谱。"
+      },
+      {
+        "word": "flavor",
+        "phonetic": "/ˈfleɪvər/",
+        "pos": "n.; v.",
+        "meaning": "n. 味道；风味；v. 给……调味（英式拼写flavour）",
+        "phrase": "a strong flavor",
+        "example": "This tea has a strong flavor that some visitors enjoy.",
+        "exampleZh": "这种茶味道浓郁，有些来访者很喜欢。"
+      },
+      {
+        "word": "menu",
+        "phonetic": "/ˈmenjuː/",
+        "pos": "n.",
+        "meaning": "菜单；选单",
+        "phrase": "read the menu",
+        "example": "Read the menu before joining the line.",
+        "exampleZh": "排队前先看看菜单。"
+      },
+      {
+        "word": "salt",
+        "phonetic": "/sɔːlt/",
+        "pos": "n.; v.",
+        "meaning": "n. 盐；v. 给……加盐",
+        "phrase": "a packet of salt",
+        "example": "A packet of salt lay beside the empty plate.",
+        "exampleZh": "空盘子旁放着一小包盐。"
+      },
+      {
+        "word": "sugar",
+        "phonetic": "/ˈʃʊɡər/",
+        "pos": "n.; v.",
+        "meaning": "n. 糖；v. 给……加糖",
+        "phrase": "add sugar",
+        "example": "The customer asked whether the cook had added sugar.",
+        "exampleZh": "顾客询问厨师是否加了糖。"
+      },
+      {
+        "word": "fat",
+        "phonetic": "/fæt/",
+        "pos": "n.; adj.",
+        "meaning": "n. 脂肪；油脂；adj. 肥胖的；厚的",
+        "phrase": "fat content",
+        "example": "The label gives the fat content for one portion.",
+        "exampleZh": "标签给出了一份食品的脂肪含量。"
+      },
+      {
+        "word": "cereal",
+        "phonetic": "/ˈsɪriəl/",
+        "pos": "n.",
+        "meaning": "谷类食物；早餐麦片",
+        "phrase": "a bowl of cereal",
+        "example": "She ate a bowl of cereal before catching the early bus.",
+        "exampleZh": "她在赶早班公交车前吃了一碗麦片。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The menu that lists the ingredients ___ useful to customers.",
+        "promptZh": "列出配料的菜单对顾客很有用。",
+        "options": [
+          "are",
+          "is",
+          "does",
+          "have"
+        ],
+        "optionsZh": [
+          "是（复数）",
+          "是（单数）",
+          "做（第三人称单数）",
+          "有"
+        ],
+        "answer": 1,
+        "explanation": "主语The menu是单数，主句谓语为is；that lists the ingredients是修饰menu的定语从句，lists不是主句谓语。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "The ingredient list ___ on the back of the package.",
+        "promptZh": "配料表被印在包装背面。",
+        "options": [
+          "prints",
+          "printing",
+          "is printed",
+          "is print"
+        ],
+        "optionsZh": [
+          "印刷（主动）",
+          "印刷（非限定形式）",
+          "被印刷",
+          "错误的被动形式"
+        ],
+        "answer": 2,
+        "explanation": "配料表是被印出的对象，一般现在时被动为is printed，不能只写过去分词而漏掉be。",
+        "tag": "passive"
+      },
+      {
+        "prompt": "The descriptions on the two menus ___ clear.",
+        "promptZh": "两份菜单上的说明都很清楚。",
+        "options": [
+          "are",
+          "is",
+          "do",
+          "has"
+        ],
+        "optionsZh": [
+          "是（复数）",
+          "是（单数）",
+          "做",
+          "有（单数）"
+        ],
+        "answer": 0,
+        "explanation": "主语中心词descriptions是复数，clear是形容词，需要be动词are；on the two menus是修饰语。",
+        "tag": "be-adjective"
+      },
+      {
+        "prompt": "The volunteer explained the label ___.",
+        "promptZh": "志愿者仔细地解释了标签。",
+        "options": [
+          "care",
+          "careful",
+          "cares",
+          "carefully"
+        ],
+        "optionsZh": [
+          "关心；照料",
+          "仔细的",
+          "关心（第三人称单数）",
+          "仔细地"
+        ],
+        "answer": 3,
+        "explanation": "修饰动词explained要用副词carefully，不用形容词careful。",
+        "tag": "adverb"
+      },
+      {
+        "prompt": "Students were asked ___ an empty package to the workshop.",
+        "promptZh": "学生们被要求带一个空包装来参加活动。",
+        "options": [
+          "bringing",
+          "brought",
+          "to bring",
+          "bring"
+        ],
+        "optionsZh": [
+          "带来（动名词）",
+          "带来了",
+          "带来（不定式）",
+          "带来（原形）"
+        ],
+        "answer": 2,
+        "explanation": "be asked to do表示被要求做某事，所以用to bring。",
+        "tag": "infinitive"
+      },
+      {
+        "prompt": "I ___ that reading labels can become an everyday habit.",
+        "promptZh": "我认为阅读标签可以成为一种日常习惯。",
+        "options": [
+          "thing",
+          "think",
+          "am think",
+          "thinking"
+        ],
+        "optionsZh": [
+          "东西",
+          "认为",
+          "错误的动词组合",
+          "思考（非限定形式）"
+        ],
+        "answer": 1,
+        "explanation": "think是动词，thing是名词。everyday修饰habit；如果表达“每天阅读”，则用read every day。",
+        "tag": "spelling"
+      }
+    ],
+    "reading": {
+      "title": "What Did the New Menu Change?",
+      "titleZh": "新菜单改变了什么？",
+      "level": "四级专项衔接 · 原创分级模拟",
+      "topic": "配料信息与选择理由：观察不等于因果",
+      "passage": "At a small college cafe, a new menu listed the ingredients in each sandwich. The manager hoped that clear descriptions would help customers compare meals. After a week, sales of the vegetable sandwich rose, and a student newspaper suggested that the menu had made customers more interested in nutrition.\n\nThe manager was less certain. During the same week, the cafe had reduced the sandwich's price and moved it to the front of the counter. Either change might explain the increase. The sales figures showed what people bought, but not why they bought it.\n\nA student team therefore asked customers to explain their choices. Some mentioned the ingredients, while others mentioned the lower price or shorter line. The team reported these different reasons instead of treating all purchases as evidence of one effect. Clear labels may support a decision, but sales alone cannot show what customers understand about their food.",
+      "passageZh": "在一家大学小咖啡馆里，新菜单列出了每种三明治的配料。经理希望清晰的说明能帮助顾客比较餐食。一周后，蔬菜三明治的销量上升了，一家学生报纸认为菜单使顾客更关注营养。\n\n经理却不那么确定。同一周里，咖啡馆还降低了这种三明治的价格，并把它移到柜台前方。这两项变化中的任何一项都可能解释销量增加。销售数字显示了人们买了什么，却没有显示他们为什么买。\n\n因此，一个学生团队询问顾客选择的理由。有些人提到了配料，另一些人则提到了更低的价格或更短的队伍。团队报告了这些不同的理由，没有把所有购买行为都当作单一效果的证据。清晰的标签可能帮助人们作决定，但仅凭销量不能说明顾客对食品了解多少。",
+      "questions": [
+        {
+          "prompt": "What did the student newspaper suggest?",
+          "promptZh": "学生报纸提出了什么看法？",
+          "options": [
+            "Customers had become more interested in nutrition because of the menu.",
+            "The cafe had stopped selling vegetable sandwiches.",
+            "The manager had removed all ingredient lists.",
+            "Every customer preferred an expensive meal."
+          ],
+          "optionsZh": [
+            "菜单使顾客更关注营养",
+            "咖啡馆停止售卖蔬菜三明治",
+            "经理删掉了所有配料表",
+            "每名顾客都更喜欢昂贵的餐食"
+          ],
+          "answer": 0,
+          "explanation": "第一段说报纸把顾客对营养的兴趣增加归因于菜单；这只是报纸的解释，还未被充分证明。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Why was the manager less certain about this explanation?",
+          "promptZh": "为什么经理对这个解释不太确定？",
+          "options": [
+            "No sandwich had been sold that week.",
+            "The newspaper had interviewed all customers.",
+            "The price and the position of the sandwich had also changed.",
+            "The cafe had no sales figures."
+          ],
+          "optionsZh": [
+            "那一周没有卖出三明治",
+            "报纸采访过所有顾客",
+            "三明治的价格和摆放位置也发生了变化",
+            "咖啡馆没有销售数字"
+          ],
+          "answer": 2,
+          "explanation": "第二段给出价格降低和位置改变两个可能原因，因此不能只归因于菜单。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What did the student team learn from customers?",
+          "promptZh": "学生团队从顾客那里了解到什么？",
+          "options": [
+            "All customers had exactly the same reason.",
+            "Customers had different reasons for their choices.",
+            "Customers never read menus.",
+            "The ingredient descriptions were all incorrect."
+          ],
+          "optionsZh": [
+            "所有顾客的理由完全相同",
+            "顾客作出选择的理由不同",
+            "顾客从不看菜单",
+            "配料说明全部错误"
+          ],
+          "answer": 1,
+          "explanation": "末段列出配料、价格和队伍长度等不同理由，不能把顾客动机一概而论。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Which statement best expresses the main point?",
+          "promptZh": "哪句话最能表达文章主旨？",
+          "options": [
+            "A lower price always means poorer food.",
+            "Menus cannot help people make choices.",
+            "Sales figures explain every customer's thinking.",
+            "Higher sales alone do not prove a particular reason for buying."
+          ],
+          "optionsZh": [
+            "更低的价格总意味着更差的食品",
+            "菜单不能帮助人们选择",
+            "销售数字解释了每名顾客的想法",
+            "仅凭销量上升不能证明某一种购买原因"
+          ],
+          "answer": 3,
+          "explanation": "全文区分观察到的销量变化与造成变化的原因，没有否定菜单可能有帮助。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "Bring a Package, Not a Purchase",
+      "titleZh": "带空包装，不必另购物",
+      "tip": "第一遍抓主题与变化：食物标签活动换房间，开始时间不变。第二遍区分“带空包装”和“买食品”、免费与仍需预约。再选三组句子跟读并脱稿复述。",
+      "level": "四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "passage": "Welcome to the museum's workshop on reading food labels. The session will begin at ten thirty as planned. However, it has moved from the main hall to room six. Please bring one empty food package with its label attached. You do not need to buy anything for this activity. We will compare ingredient lists before discussing the size of each portion. This is a language exercise, not personal diet advice. If you cannot attend, tell the desk before Friday evening. The workshop is free, but each participant must reserve a place.",
+      "passageZh": "欢迎参加博物馆关于阅读食品标签的活动。活动将按原计划于十点半开始。不过，地点已从大厅改到六号房间。请带一个仍贴有标签的空食品包装。你不需要为这次活动购买任何东西。我们会先比较配料表，再讨论每份食品的大小。这是一项语言练习，而不是个人饮食建议。如果你不能参加，请在周五晚上之前告知服务台。活动免费，但每位参加者都必须预约名额。",
+      "dictation": [
+        "The session will begin at ten thirty as planned.",
+        "You do not need to buy anything for this activity."
+      ],
+      "dictationZh": [
+        "活动将按原计划于十点半开始。",
+        "你不需要为这次活动购买任何东西。"
+      ],
+      "questions": [
+        {
+          "prompt": "What has changed about the workshop?",
+          "promptZh": "活动的哪项安排发生了变化？",
+          "options": [
+            "Its starting time.",
+            "The room where it takes place.",
+            "The requirement to reserve a place.",
+            "Its price."
+          ],
+          "optionsZh": [
+            "开始时间",
+            "举办的房间",
+            "预约名额的要求",
+            "价格"
+          ],
+          "answer": 1,
+          "explanation": "开始时间仍是十点半；However后说明地点从大厅改到六号房间。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "What should participants bring?",
+          "promptZh": "参加者应该带什么？",
+          "options": [
+            "A newly purchased meal.",
+            "A printed price list.",
+            "An empty food package with its label.",
+            "A payment receipt."
+          ],
+          "optionsZh": [
+            "新买的一餐",
+            "打印的价目表",
+            "带标签的空食品包装",
+            "付款收据"
+          ],
+          "answer": 2,
+          "explanation": "原文要求带一个贴有标签的空包装，紧接着明确不必购买任何东西。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The menu that lists the ingredients is useful, but the figures that show higher sales do not explain why customers chose the sandwich.",
+      "main": "The menu is useful, but the figures do not explain why customers chose the sandwich.",
+      "mainZh": "菜单很有用，但这些数字不能解释顾客为什么选择这种三明治。",
+      "translation": "列出配料的菜单很有用，但显示销量上升的数字不能解释顾客为什么选择这种三明治。",
+      "core": [
+        "menu",
+        "is",
+        "useful",
+        "figures",
+        "do not explain",
+        "customers",
+        "chose"
+      ],
+      "keywords": [
+        "菜单",
+        "配料",
+        "有用",
+        "数字",
+        "销量",
+        "解释",
+        "顾客",
+        "选择"
+      ],
+      "structure": "but连接两个主句：The menu is useful与the figures do not explain...；that lists the ingredients修饰menu，that show higher sales修饰figures；why customers chose the sandwich是explain的宾语从句。",
+      "grammar": [
+        "lists和show都是定语从句里的谓语，不是两个主句的谓语。",
+        "useful是形容词，前面要有is；figures是复数，否定谓语用do not explain。"
+      ],
+      "examTip": "先圈menu— is useful、figures— do not explain，再把两处that从句放回修饰位置。",
+      "level": "四级句法衔接",
+      "topic": "并列主句、定语从句与宾语从句"
+    },
+    "trans": [
+      {
+        "source": "列出配料的菜单很有用，但它不能解释每位顾客的选择。",
+        "answer": "The menu that lists the ingredients is useful, but it cannot explain every customer's choice.",
+        "alternative": "The menu which lists the ingredients is useful, but it cannot explain each customer's choice.",
+        "acceptedAnswers": [
+          "The menu that lists the ingredients is useful, but it cannot explain every customer's choice.",
+          "The menu which lists the ingredients is useful, but it cannot explain each customer's choice."
+        ],
+        "keywords": [
+          "menu",
+          "ingredients",
+          "is useful",
+          "cannot explain",
+          "choice"
+        ],
+        "grammar": "that或which引导定语从句；menu为单数，主句用is useful，不能省略is。",
+        "chunks": [
+          "the menu that lists the ingredients",
+          "is useful",
+          "every customer's choice"
+        ],
+        "level": "四级衔接表达",
+        "topic": "主句谓语与定语从句"
+      },
+      {
+        "source": "活动的时间没有改变，但参加者被要求带一个空包装。",
+        "answer": "The time of the workshop has not changed, but participants are asked to bring an empty package.",
+        "alternative": "The workshop time has not changed, but participants are required to bring an empty package.",
+        "acceptedAnswers": [
+          "The time of the workshop has not changed, but participants are asked to bring an empty package.",
+          "The workshop time has not changed, but participants are required to bring an empty package."
+        ],
+        "keywords": [
+          "time",
+          "has not changed",
+          "participants",
+          "bring",
+          "empty package"
+        ],
+        "grammar": "has not changed表示截至现在仍未改变；are asked to bring是被动结构，表示被要求带来。",
+        "chunks": [
+          "has not changed",
+          "are asked to bring",
+          "an empty package"
+        ],
+        "level": "四级衔接表达",
+        "topic": "现在完成时与被动语态"
+      }
+    ]
   }
 }

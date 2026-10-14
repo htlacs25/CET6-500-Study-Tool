@@ -3242,5 +3242,72 @@
         "tag": "extensive"
       }
     ]
+  },
+  {
+    "date": "2026-10-17",
+    "title": "Lunch for Different Days",
+    "titleZh": "不同安排，不同午餐",
+    "category": "Campus life — food information and personal choices",
+    "sourceType": "original news-style",
+    "sourceNote": "原创报刊风格教学短文；人物、学校与事件均为虚构，不是真实或实时新闻，也不提供个人营养或医疗建议。Original educational news-style fiction, not a report of a real event.",
+    "text": "At a fictional university, roommates Maya and Ben often eat lunch together, but they rarely choose the same meal. Maya has an afternoon class that ends late. Ben usually returns home earlier and enjoys cooking dinner. Their plans affect both the size and the price of the lunch they want.\n\nOne day, the canteen introduces cards beside each dish. The cards list the main ingredients, the portion size, and the price. A bowl of vegetable rice costs less than a large plate of rice with chicken, but the two portions are not equal. Maya notices this before deciding that one option offers better value.\n\nBen chooses a smaller portion and adds a side dish. Maya chooses the larger plate. Neither decision proves that one student understands food better than the other. They are choosing for different days, preferences, and budgets. When Ben is unsure about a sauce, he asks a member of staff rather than guessing from its color.\n\nLater, the roommates discuss what the cards can and cannot do. Clear information makes choices easier, but it cannot decide what every person needs. A useful label is not a prize awarded to a meal. It is a starting point for a question: does this choice fit my plans today?",
+    "textZh": "在一所虚构的大学，室友玛雅和本经常一起吃午饭，但很少选择相同的饭菜。玛雅下午有一节结束较晚的课。本通常更早回家，而且喜欢做晚饭。他们的安排影响着他们想买的午餐的分量和价格。\n\n一天，食堂在每道菜旁放上了信息卡。卡片列出主要食材、每份的分量和价格。一碗蔬菜饭比一大盘鸡肉饭便宜，但两者的分量并不相同。玛雅在判断哪一个选项更划算之前，注意到了这一点。\n\n本选择了较小的一份，又加了一份配菜。玛雅选择了较大的一盘。两种决定都不能证明其中一名学生比另一名更懂食物。他们是根据不同的日程、偏好和预算来选择的。当本不清楚一种酱汁的情况时，他向一名工作人员询问，而不是根据颜色猜测。\n\n后来，两位室友讨论这些卡片能做什么、不能做什么。清楚的信息让选择变得容易，但不能替每个人决定其需要什么。实用的标签并不是颁给某份饭菜的奖项。它是提出一个问题的起点：这一选择适合我今天的安排吗？",
+    "listeningTip": "先不看原文，听两位室友的日程和午餐选择；再带文精听but、neither和rather than的对比。把三个关键短语放回原句，各做一组影子跟读，最后脱稿复述30—60秒。浏览器使用合成朗读，可随时暂停、继续或停止。",
+    "speakingPrompt": "In 30–60 seconds, explain why Maya and Ben choose different lunches. Mention two details on the cards and one question you would ask before choosing a meal.",
+    "speakingPromptZh": "用30—60秒说明玛雅和本为什么选择不同的午餐，提到卡片上的两项信息，并提出一个你选餐前会问的问题。",
+    "keyPhrases": [
+      {
+        "en": "the portion size",
+        "zh": "每份食物的分量"
+      },
+      {
+        "en": "offers better value",
+        "zh": "更划算；更物有所值"
+      },
+      {
+        "en": "a starting point for a question",
+        "zh": "提出一个问题的起点"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why does Maya consider portion size when comparing the two rice meals?",
+        "promptZh": "玛雅比较两份米饭餐时，为什么要考虑分量？",
+        "options": [
+          "The cheaper meal contains the same amount of food.",
+          "The canteen allows only one meal for each student.",
+          "A lower price alone does not show which meal offers better value.",
+          "The cards do not show any prices."
+        ],
+        "optionsZh": [
+          "较便宜的一餐包含同样多的食物。",
+          "食堂只允许每名学生选择同一种饭菜。",
+          "仅凭较低的价格，不能判断哪一餐更划算。",
+          "卡片上完全没有标价。"
+        ],
+        "answer": 2,
+        "explanation": "第二段说明两份饭的价格和分量都不同。玛雅先比较分量再判断是否划算，因此不能只看较低的标价。A与原文分量不同相反，B未提及，D与卡片标价相反。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "What is the main point of the final paragraph?",
+        "promptZh": "最后一段的主要观点是什么？",
+        "options": [
+          "Labels provide information, but personal circumstances still matter.",
+          "A useful label proves that a meal is best for everyone.",
+          "Students should always choose the largest meal.",
+          "Food information prevents people from asking questions."
+        ],
+        "optionsZh": [
+          "标签提供信息，但个人的具体情况仍然重要。",
+          "实用的标签证明某一餐最适合所有人。",
+          "学生应当总是选择分量最大的一餐。",
+          "食物信息会阻止人们提问。"
+        ],
+        "answer": 0,
+        "explanation": "末段说清楚的信息使选择更容易，却不能决定每个人的需要；结尾还要求结合当天安排提问。因此A概括了信息与个人选择的关系，其他选项都将标签的作用或用餐选择绝对化。",
+        "tag": "extensive"
+      }
+    ]
   }
 ]
