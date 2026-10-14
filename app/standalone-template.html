@@ -19,6 +19,7 @@
     .word-study{cursor:pointer;transition:border-color .15s,background-color .15s}.word-study:hover{border-color:var(--orange);background:#fffaf1}.word-study:focus-within{outline:2px solid var(--orange);outline-offset:2px}.word-study>span{min-width:0}.word-study .reveal{cursor:auto}.word-study .example{overflow-wrap:anywhere}
     .utility-bar{flex-wrap:wrap;align-items:center}.speech-status{flex:1 1 260px;margin:0;font-size:12px;line-height:1.5;color:#90452c}.speech-status[hidden]{display:none!important}
     .word .study-review-action{margin-top:12px}.word .study-review-action button{padding:7px 12px;font-size:13px;border:1px solid var(--line);border-radius:9px}.word .study-review-action button:disabled{opacity:.7;cursor:default}
+    #aiPanel[hidden],#aiPlanNotice[hidden]{display:none!important}#aiPanel{padding:18px;max-width:1180px;margin:auto}#aiPanel iframe{width:100%;height:calc(100dvh - 230px);min-height:520px;border:1px solid var(--line);border-radius:18px;background:var(--card)}#aiPlanNotice{max-width:1144px;margin:18px auto 0;padding:14px 18px;border-left:4px solid var(--green);background:#e7efe9;white-space:pre-line;line-height:1.7}#aiPanel .ai-help{line-height:1.7;font-size:14px}#aiPanel .actions{flex-wrap:wrap}
   </style>
 </head>
 <body>
@@ -39,6 +40,8 @@ __WORD_SEARCH_ENGINE__
     let headerExpanded=false;
     try{headerExpanded=localStorage.getItem(HEADER_PREFERENCE_KEY)==='true'}catch{}
     const tabs=[['plan','今日内容'],['words','单词默写'],['listening','听力听写'],['practice','阅读做题'],['extensive','泛读口语'],['records','七日课程与记录']];
+    const AI_ORIGIN='http://127.0.0.1:4318',aiPlans=new Map();let aiFrame=null,aiReady=false;
+    const AI_PAIRING=typeof window!=='undefined'?String(window.location?.hash||'').match(/(?:^#|&)ai-pair=([a-f0-9]{64})(?:&|$)/)?.[1]||'':'';
     let storageWarning='',userVocabWarning='',legacyStore={},recoveryStore={},userVocab=blankUserVocabulary();
     try{legacyStore=mergeLegacyStores(k=>localStorage.getItem(k));const raw=localStorage.getItem(RECOVERY_STORAGE_KEY);recoveryStore=raw?JSON.parse(raw):{};if(!recoveryStore||typeof recoveryStore!=='object'||Array.isArray(recoveryStore))throw new Error('学习记录格式异常')}catch(e){storageWarning='已有记录读取异常。为避免覆盖，已停止保存；请先保留原浏览器数据。'}
     try{const raw=localStorage.getItem(USER_VOCAB_STORAGE_KEY);userVocab=normalizeUserVocabulary(raw?JSON.parse(raw):{})}catch(e){userVocabWarning='自选文章词记录读取异常，本次不会覆盖原记录；其他成绩仍可正常保存。'}
@@ -314,7 +317,36 @@ __WORD_SEARCH_ENGINE__
       toggle.title=(headerExpanded?'收起顶部日期与导航':'展开顶部日期与导航')+'（当前课程：'+selected+'）';
       toggle.onclick=()=>{headerExpanded=!headerExpanded;try{localStorage.setItem(HEADER_PREFERENCE_KEY,String(headerExpanded))}catch{}renderHeaderState()};
     }
-    function render(){closeArticleWord();renderHeaderState();nav();renderSyncBar();const L=lesson();if(L.unprepared&&tab!=='records'){renderPending(L);return}({plan:renderPlan,words:renderWords,listening:renderListening,practice:renderPractice,extensive:renderExtensive,records:renderRecords}[tab])(L)}
+    function render(){closeArticleWord();renderHeaderState();nav();renderSyncBar();document.getElementById('app').hidden=tab==='ai';const aiPanel=document.getElementById('aiPanel');if(aiPanel)aiPanel.hidden=tab!=='ai';renderAiNotice();if(tab==='ai'){openAiFrame();return}if(aiReady)aiFrame.contentWindow.postMessage({type:'cet4-ai-date',date:selected,pairing:AI_PAIRING},AI_ORIGIN);const L=lesson();if(L.unprepared&&tab!=='records'){renderPending(L);return}({plan:renderPlan,words:renderWords,listening:renderListening,practice:renderPractice,extensive:renderExtensive,records:renderRecords}[tab])(L)}
+    function renderAiNotice(){
+      const notice=document.getElementById('aiPlanNotice');if(!notice)return;
+      const plan=aiPlans.get(selected),focus={listening:'听力',reading:'阅读',speaking:'口语',vocabulary:'词汇',balanced:'均衡训练'};
+      const hasPlan=plan&&(Number.isInteger(plan.minutes)||focus[plan.focus]||typeof plan.note==='string'&&plan.note.trim()||Array.isArray(plan.practice)&&plan.practice.length);
+      notice.hidden=tab!=='plan'||!hasPlan;
+      notice.textContent=notice.hidden?'':['已确认的AI安排 · '+selected,Number.isInteger(plan.minutes)?'今日可用时间：'+plan.minutes+'分钟（以此为时间预算，未完成项保留，不额外叠加）':'',focus[plan.focus]?'优先练习：'+focus[plan.focus]:'',typeof plan.note==='string'?plan.note.slice(0,1000):'','课程题量、复习队列和首次成绩不变；补充练习与撤回在“AI助教”中。'].filter(Boolean).join('\n');
+    }
+    function openAiFrame(){
+      if(!aiFrame.src){aiFrame.src=AI_ORIGIN+'/?date='+encodeURIComponent(selected)}
+      else if(aiReady)aiFrame.contentWindow.postMessage({type:'cet4-ai-date',date:selected,pairing:AI_PAIRING},AI_ORIGIN);
+    }
+    function installAiAssistant(){
+      if(typeof window==='undefined'||!document.querySelector('.utility-bar')||!document.getElementById('studyMainPane'))return;
+      const button=document.createElement('button');button.id='aiAssistantToggle';button.className='word-search-toggle';button.type='button';button.textContent='AI助教';button.setAttribute('aria-controls','aiPanel');button.onclick=()=>{tab=tab==='ai'?'plan':'ai';render()};document.querySelector('.utility-bar').prepend(button);
+      const panel=document.createElement('section');panel.id='aiPanel';panel.hidden=true;
+      panel.innerHTML='<div class="topline"><h2>本地AI助教</h2><button id="backFromAi" class="secondary" type="button">返回学习</button></div><p class="ai-help">先双击D盘项目中的“启动AI学习工具.cmd”。密钥只交给本机后台；成绩与草稿不会自动发送。AI先提出修改，只有确认才应用。此功能不会直接执行改代码命令。</p><div class="actions"><button id="retryAiConnection" class="secondary" type="button">重新连接后台</button><a class="secondary" href="'+AI_ORIGIN+'/" target="_blank" rel="noopener">单独打开AI页面</a></div><p id="aiConnectionStatus" class="muted" role="status">正在等待本机后台。若下方空白或拒绝连接，请先运行启动器，再点重新连接。</p><iframe id="aiAssistantFrame" title="本地AI助教聊天与修改预览" referrerpolicy="no-referrer"></iframe>';
+      const pane=document.getElementById('studyMainPane');pane.prepend(panel);const notice=document.createElement('aside');notice.id='aiPlanNotice';notice.hidden=true;pane.insertBefore(notice,document.getElementById('app'));aiFrame=panel.querySelector('iframe');
+      panel.querySelector('#backFromAi').onclick=()=>{tab='plan';render()};panel.querySelector('#retryAiConnection').onclick=()=>{aiReady=false;panel.querySelector('#aiConnectionStatus').textContent='正在重新连接；请确认本机后台已启动。';aiFrame.src=AI_ORIGIN+'/?date='+encodeURIComponent(selected)+'&retry='+Date.now()};
+      window.addEventListener('message',event=>{
+        if(event.origin!==AI_ORIGIN||event.source!==aiFrame.contentWindow)return;
+        const data=event.data;if(!data||typeof data!=='object')return;
+        if(data.type==='cet4-ai-ready'){aiReady=true;panel.querySelector('#aiConnectionStatus').textContent='已连接本机后台。';aiFrame.contentWindow.postMessage({type:'cet4-ai-date',date:selected,pairing:AI_PAIRING},AI_ORIGIN)}
+        if(data.type==='cet4-ai-unpaired'){panel.querySelector('#aiConnectionStatus').textContent='未配对：请双击“启动AI学习工具.cmd”重新打开，私人安排不会发给未配对页面。'}
+        if(data.type==='cet4-ai-plan'&&/^\d{4}-\d{2}-\d{2}$/.test(data.date)&&data.plan&&typeof data.plan==='object'&&!Array.isArray(data.plan)){aiPlans.set(data.date,data.plan);renderAiNotice()}
+      });
+      // Load only the loopback client; it restores approved plans without sending a provider request.
+      openAiFrame();
+      if(new URL(window.location.href).searchParams.get('assistant')==='1')tab='ai';
+    }
     function renderPending(L){
       app.innerHTML='<section class="dark"><span class="pill">'+esc(selected)+' · 内容保护已开启</span><h1>本日课程尚未生成或同步</h1><p>系统没有循环以前的阅读、听力或题目来冒充新内容。请先完成本地同步；已有成绩、错题、难点和草稿仍保留。</p><div class="stats"><div class="stat"><b>'+esc(RELEASE.preparedThrough||'未知')+'</b><small>目前备课至</small></div><div class="stat"><b>0</b><small>重复旧题</small></div><div class="stat"><b>保留</b><small>历史记录</small></div></div><button id="retryPending" class="primary">检查并载入新课程</button></section>'+weekOverview();
       document.getElementById('retryPending').onclick=()=>checkLocalRelease(ok=>{if(ok)reloadLocalPage(true)});bindCommon();
@@ -544,6 +576,7 @@ __WORD_SEARCH_ENGINE__
     }
     function reloadLocalPage(manual=false){
       if(typeof window==='undefined')return;
+      if(tab==='ai')return; // An embedded chat may have an unsent draft or active request.
       if(!manual&&(Date.now()-lastInteraction<15000||speechSynthesis.speaking))return;
       if(!persistDraft())return;
       try{
@@ -608,7 +641,7 @@ __WORD_SEARCH_ENGINE__
       document.querySelectorAll('[data-lookup-word]').forEach(b=>b.onclick=()=>openArticleWord(b.dataset.lookupWord,b.dataset.lookupSource,b));
       document.querySelectorAll('[data-user-remove]').forEach(b=>b.onclick=()=>{if(saveUserVocab(removeUserVocabulary(userVocab,b.dataset.userRemove)))render()});
     }
-    installArticleLookup();installWordSearch();restoreView();reset();render();setInterval(()=>{syncCalendar();if(tab==='words')renderMemoryReview(lesson())},60000);installLocalUpdates();
+    installArticleLookup();installWordSearch();restoreView();installAiAssistant();reset();render();setInterval(()=>{syncCalendar();if(tab==='words')renderMemoryReview(lesson())},60000);installLocalUpdates();
   })();
   </script>
 </body>

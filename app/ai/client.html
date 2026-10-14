@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>AI 助教 · CET-4 550</title>
+  <style>
+    :root{color-scheme:light;--paper:#f5f1e8;--card:#fffdf8;--ink:#15231d;--green:#173f32;--orange:#d87343;--line:#d8d0c1;--muted:#68736d}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 "Microsoft YaHei","PingFang SC",Arial,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer;border:1px solid var(--line);background:#fff;border-radius:11px;padding:9px 14px;color:var(--ink);font-weight:700}button:hover:not(:disabled){border-color:var(--green)}button:disabled{opacity:.55;cursor:default}button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #d8734370;outline-offset:2px}input,textarea{border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);padding:10px 12px;max-width:100%}textarea{resize:vertical;width:100%;min-height:104px}label{display:block;font-weight:700;margin-bottom:5px}p{margin:7px 0}h1,h2,h3{line-height:1.4}h1{font-size:25px;margin:0}h2{font-size:19px;margin:0 0 12px}h3{font-size:16px;margin:0 0 8px}small,.muted{color:var(--muted)}small{font-size:12px}summary{cursor:pointer;font-weight:700}details>summary+*{margin-top:13px}[hidden]{display:none!important}.page{max-width:1160px;padding:22px 18px 36px;margin:auto}.heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:16px}.heading p{font-size:13px;color:var(--muted)}.date{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.date label{margin:0}.card{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:20px;margin-bottom:16px}.setting-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:14px;margin:15px 0}.setting-grid input{width:100%}.actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}.primary{background:var(--green);border-color:var(--green);color:#fff}.confirm{background:var(--orange);border-color:var(--orange);color:#fff}.layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,1fr);align-items:start;gap:18px}.tag{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px;background:#e7efe9;color:#245e40}.notice{border-left:3px solid var(--orange);background:#fff5e9;padding:10px 13px;border-radius:8px;margin:12px 0;font-size:13px}.status{min-height:26px;margin:10px 0 14px;white-space:pre-wrap;overflow-wrap:anywhere}.status.error{color:#94452d}.status.success{color:#245e40}.chat{display:flex;flex-direction:column;gap:13px;max-height:440px;min-height:140px;overflow:auto;padding:3px 4px 12px}.message{border-radius:13px;padding:12px 14px;max-width:96%;background:#eeeee6;overflow-wrap:anywhere}.message.user{align-self:flex-end;background:#e5eee8}.message.assistant{align-self:flex-start;background:#f3ede3}.message strong{display:block;font-size:12px;color:var(--muted);margin-bottom:4px}.message p{white-space:pre-wrap;margin:0}.empty{padding:16px 0;color:var(--muted);font-size:14px}.composer{border-top:1px solid var(--line);padding-top:16px;margin-top:12px}.check{display:flex;gap:8px;align-items:flex-start;font-weight:400;margin:12px 0;font-size:13px}.check input{margin:5px 0 0;accent-color:var(--green)}.privacy{background:#f6f0e6;border-radius:11px;padding:11px 12px;margin:12px 0}.privacy textarea{min-height:72px;margin-top:9px}.helper{font-size:12px;color:var(--muted)}.summary-list{padding:0;margin:0;list-style:none}.summary-list li{padding:7px 0;border-bottom:1px solid #e8e1d6;overflow-wrap:anywhere}.summary-list b{font-size:13px;display:block;color:var(--muted)}.summary-list span{white-space:pre-wrap}.proposal{border-top:1px solid var(--line);margin-top:15px;padding-top:15px}.proposal:first-child{border:0;margin-top:0;padding-top:0}.proposal .tag{margin-bottom:8px}.proposal p{white-space:pre-wrap;overflow-wrap:anywhere}.change{border:1px solid #eadac7;background:#fff9ee;border-radius:12px;padding:12px;margin:11px 0}.change-row{margin:7px 0}.change-row b{display:block;font-size:12px;color:#805037}.change-row span{white-space:pre-wrap;overflow-wrap:anywhere}.practice{padding:12px 0;border-top:1px solid var(--line);margin-top:12px}.practice p{white-space:pre-wrap;overflow-wrap:anywhere}.practice details{background:#f3ede3;border-radius:9px;padding:10px}.history{margin-top:16px;border-top:1px solid var(--line);padding-top:14px}.history-item{padding:10px 0;border-top:1px solid #e8e1d6;font-size:13px}.history-item b{display:block}.revision{font-size:12px;color:var(--muted)}
+    @media(max-width:780px){.layout,.setting-grid{grid-template-columns:1fr}.page{padding:14px 10px 28px}.card{padding:16px;border-radius:16px}.chat{max-height:360px}.heading{gap:9px}.date{width:100%}.date input{flex:1;min-width:140px}h1{font-size:22px}}
+  </style>
+</head>
+<body>
+<main class="page">
+  <div class="heading">
+    <div><h1>AI 助教 <span class="tag">本机版</span></h1><p>先讨论，再预览；你确认后才应用。原课程、成绩和草稿保持不变。</p></div>
+    <div class="date"><label for="courseDate">课程日期</label><input id="courseDate" type="date" min="2026-08-28" max="2026-12-31"><button id="refresh" type="button">刷新</button></div>
+  </div>
+  <details class="card" id="settings">
+    <summary>连接设置 · <span id="connection">检查中</span></summary>
+    <p>使用你自己的 OpenAI API，按 API 账户单独计费，不等同于 ChatGPT 订阅。AI 服务不会读取浏览器学习记录，也不会把记录上传 GitHub。</p>
+    <form id="configForm">
+      <div class="setting-grid">
+        <div><label for="apiKey">API Key</label><input id="apiKey" type="password" name="local-api-key" autocomplete="off" spellcheck="false" placeholder="仅在本机后台内存中保存"><small>后台已配置 OPENAI_API_KEY 时可直接使用；留空只更新模型。</small></div>
+        <div><label for="model">模型名称</label><input id="model" type="text" maxlength="100" value="gpt-4.1-mini" autocomplete="off" spellcheck="false"><small>请输入你的 API 账户可使用的模型。</small></div>
+      </div>
+      <div class="actions"><button class="primary" type="submit">保存连接设置</button><button id="disconnect" type="button">断开 AI</button></div>
+    </form>
+    <p class="helper">输入的密钥不写入网页、浏览器存储或项目文件；后台重启后需重新输入。不要把密钥写进下方聊天。</p>
+  </details>
+  <p class="status" id="status" role="status" aria-live="polite">正在连接本机服务……</p>
+  <div class="layout">
+    <section class="card" aria-labelledby="chatHeading">
+      <h2 id="chatHeading">和助教讨论</h2>
+      <div class="notice">当前可调整当日学习时长、训练侧重点、学习备注，以及添加不计分练习。修改网页代码、评分规则或历史记录的请求只会讨论，不会自动执行。</div>
+      <div class="chat" id="messages" aria-label="聊天记录" aria-live="polite"></div>
+      <form class="composer" id="chatForm">
+        <label for="message">你想学什么，或调整什么？</label>
+        <textarea id="message" maxlength="4000" placeholder="例如：今天只有 90 分钟，请优先安排听力，并给我 2 道定语从句练习。" required></textarea>
+        <label class="check"><input id="includeCourse" type="checkbox"><span>本次允许发送所选日期的公共课程内容给 AI（不含我的成绩和草稿）。</span></label>
+        <details class="privacy"><summary>可选：补充我愿意分享的错题或难点</summary><label class="helper" for="sharedText">只发送你填入的文字；每次发送前确认，不会自动读取学习记录。</label><textarea id="sharedText" maxlength="4000" placeholder="例如：我总是漏掉形容词前的 be 动词。不要填写密钥或其他敏感信息。"></textarea></details>
+        <div class="actions"><button class="primary" id="send" type="submit">发送给 AI</button><span id="sendHint" class="helper">Enter 换行，Ctrl + Enter 发送。</span></div>
+        <p class="helper">未发送的文字会在本页切换日期时保留；刷新或关闭页面前请先另行保存。</p>
+      </form>
+    </section>
+    <aside aria-label="计划与修改预览">
+      <section class="card" aria-labelledby="planHeading"><h2 id="planHeading">已确认的当日调整</h2><div id="plan"></div><p class="helper">这是原课程之外的个人安排补充，不会重排新词、改首次正确率或清除记录。</p><p class="revision" id="revision"></p></section>
+      <section class="card" aria-labelledby="proposalHeading"><h2 id="proposalHeading">待确认的修改</h2><div id="proposals"></div><details class="history"><summary>修改记录与撤回</summary><div id="historyItems"></div></details></section>
+    </aside>
+  </div>
+</main>
+<script>
+(() => {
+  'use strict';
+  const token = '__AI_TOKEN__';
+  const pairingToken = '__AI_PAIRING__';
+  const $ = id => document.getElementById(id);
+  const focusNames = {listening:'听力',reading:'阅读',speaking:'口语',vocabulary:'词汇',balanced:'均衡训练'};
+  const statusNames = {pending:'待确认',applied:'已应用',rejected:'已放弃',undone:'已撤回',superseded:'已过期'};
+  const drafts = new Map();
+  let state = null, busy = false, parentOrigin = null, pendingParentDate = null;
+  function validDate(value) {
+    if (typeof value !== 'string' || !/^2026-\d{2}-\d{2}$/.test(value)) return false;
+    const date = new Date(value + 'T00:00:00Z');
+    return !Number.isNaN(date.getTime()) && date.toISOString().slice(0,10) === value && value >= '2026-08-28' && value <= '2026-12-31';
+  }
+  const chinaDate = new Date(Date.now() + 8 * 3600_000).toISOString().slice(0,10);
+  const requestedDate = new URL(location.href).searchParams.get('date');
+  let selectedDate = validDate(requestedDate) ? requestedDate : (validDate(chinaDate) ? chinaDate : '2026-12-31');
+  $('courseDate').value = selectedDate;
+  function el(tag, text, className) {
+    const item = document.createElement(tag);
+    if (text !== undefined && text !== null) item.textContent = String(text);
+    if (className) item.className = className;
+    return item;
+  }
+  function saveDraft() {drafts.set(selectedDate,{message:$('message').value,sharedText:$('sharedText').value,includeCourse:$('includeCourse').checked});}
+  function restoreDraft() {const draft = drafts.get(selectedDate) || {}; $('message').value = draft.message || ''; $('sharedText').value = draft.sharedText || ''; $('includeCourse').checked = Boolean(draft.includeCourse);}
+  function notify(message, kind = '') {$('status').textContent = message; $('status').className = 'status' + (kind ? ' ' + kind : '');}
+  function setBusy(value) {
+    busy = value;
+    document.querySelectorAll('button,input,textarea').forEach(control => {control.disabled = value;});
+    $('chatForm').setAttribute('aria-busy',String(value));
+    if (!value) {$('send').disabled = !state?.configured; document.querySelectorAll('[data-unavailable="true"]').forEach(control => {control.disabled = true;});}
+  }
+  async function request(path, body) {
+    const options = {method:body === undefined ? 'GET' : 'POST',credentials:'same-origin',cache:'no-store',headers:{Authorization:'Bearer ' + token}};
+    if (body !== undefined) {options.headers['Content-Type'] = 'application/json'; options.body = JSON.stringify(body);}
+    let response;
+    try {response = await fetch(path,options);} catch {throw new Error('无法连接本机 AI 服务。请重新启动本机 AI 服务，然后点“刷新”。');}
+    let result;
+    try {result = await response.json();} catch {throw new Error('本机服务返回了无法识别的内容，请重启本机 AI 服务后再试。');}
+    if (!response.ok) {const error = new Error(result?.error?.message || '请求未完成，请检查连接后重试。'); error.code = result?.error?.code; throw error;}
+    return result;
+  }
+  async function loadState() {state = await request('/api/state?date=' + encodeURIComponent(selectedDate)); render(); postPlan();}
+  async function run(action, message) {
+    if (busy) return;
+    setBusy(true); notify(message || '正在处理……');
+    try {await action();} catch (error) {notify(error.message || '操作未完成，请重试。','error');}
+    finally {
+      setBusy(false);
+      if (pendingParentDate) {const next = pendingParentDate; pendingParentDate = null; if (next !== selectedDate) switchDate(next); else postPlan();}
+    }
+  }
+  async function switchDate(next) {
+    if (!validDate(next)) {$('courseDate').value = selectedDate; notify('请选择 2026 年 8 月 28 日至 12 月 31 日之间的有效日期。','error'); return;}
+    if (busy) {pendingParentDate = next; return;}
+    const previous = selectedDate; saveDraft();
+    await run(async () => {
+      selectedDate = next; $('courseDate').value = next; restoreDraft();
+      try {await loadState();} catch (error) {saveDraft(); selectedDate = previous; $('courseDate').value = previous; restoreDraft(); throw error;}
+      notify('已加载该日期的聊天和个人安排。');
+    },'正在切换课程日期……');
+  }
+  function render() {
+    $('connection').textContent = state.configured ? '已配置，发送消息后验证' : '尚未配置 API Key';
+    if (document.activeElement !== $('model')) $('model').value = state.model || 'gpt-4.1-mini';
+    $('sendHint').textContent = state.configured ? 'Enter 换行，Ctrl + Enter 发送。' : '请先展开连接设置，配置 API Key。';
+    if (!state.configured) $('settings').open = true;
+    $('revision').textContent = selectedDate + ' · 个人安排版本 ' + String(state.revision ?? 0);
+    renderMessages(); renderPlan(); renderProposals();
+  }
+  function renderMessages() {
+    const root = $('messages'); root.replaceChildren();
+    const messages = Array.isArray(state.messages) ? state.messages : [];
+    if (!messages.length) root.append(el('p','可以先说“今天听力哪里没听懂”，或描述想调整的学习安排。聊天和确认记录保存在这台电脑的 AI 数据目录。','empty'));
+    for (const message of messages) {const role = message.role === 'user' ? 'user' : 'assistant', box = el('article',null,'message ' + role); box.append(el('strong',role === 'user' ? '我' : 'AI 助教'),el('p',message.content || '')); root.append(box);}
+    root.scrollTop = root.scrollHeight;
+  }
+  function practiceCards(items, root, preview = false) {
+    if (!Array.isArray(items)) return;
+    items.forEach((item,index) => {const card = el('div',null,'practice'), answer = el('details'); card.append(el('b',(preview ? '拟加入练习 ' : '不计分练习 ') + (index + 1)),el('p',item.prompt || '')); answer.append(el('summary','查看参考答案与解析'),el('p',item.answer || ''),el('p',item.explanation || '')); card.append(answer); root.append(card);});
+  }
+  function renderPlan() {
+    const root = $('plan'), plan = state.plan || {}; root.replaceChildren();
+    const rows = [];
+    if (plan.minutes !== null && plan.minutes !== undefined) rows.push(['总时长',plan.minutes + ' 分钟']);
+    if (plan.focus) rows.push(['侧重点',focusNames[plan.focus] || plan.focus]);
+    if (plan.note) rows.push(['学习备注',plan.note]);
+    if (!rows.length && !plan.practice?.length) root.append(el('p','还没有应用调整，继续按原来的每日课程学习。','empty'));
+    const list = el('ul',null,'summary-list');
+    for (const [name,value] of rows) {const row = el('li'); row.append(el('b',name),el('span',value)); list.append(row);}
+    if (rows.length) root.append(list); practiceCards(plan.practice,root);
+  }
+  function addChange(root,name,before,after) {const row = el('div',null,'change-row'); row.append(el('b',name),el('span',String(before) + ' → ' + String(after))); root.append(row);}
+  function changePreview(proposal) {
+    const box = el('div',null,'change'), changes = proposal.changes || {}, plan = state.plan || {};
+    if (changes.minutes !== null && changes.minutes !== undefined) addChange(box,'学习时长',plan.minutes ? plan.minutes + ' 分钟' : '原课程安排',changes.minutes + ' 分钟');
+    if (changes.focus) addChange(box,'训练侧重点',focusNames[plan.focus] || '原课程安排',focusNames[changes.focus] || changes.focus);
+    if (changes.note !== null && changes.note !== undefined) addChange(box,'学习备注',plan.note || '无补充',changes.note || '清空补充备注');
+    if (changes.practice !== null && changes.practice !== undefined) {box.append(el('p','不计分练习：替换个人补充练习，不修改原课程题目和成绩。','helper')); if (changes.practice.length) practiceCards(changes.practice,box,true); else box.append(el('p','清空此前的个人补充练习。'));}
+    if (!box.childNodes.length) box.append(el('p','此建议没有可直接执行的学习安排修改。'));
+    return box;
+  }
+  function actionButton(text,handler,className = '',unavailable = false) {
+    const button = el('button',text,className); button.type = 'button';
+    if (unavailable) {button.dataset.unavailable = 'true'; button.disabled = true;}
+    button.addEventListener('click',handler); return button;
+  }
+  async function mutateProposal(path,proposal,success) {
+    const payload = path === '/api/reject' ? {id:proposal.id} : {id:proposal.id,revision:state.revision};
+    await request(path,payload); await loadState(); notify(success,'success');
+  }
+  function renderProposals() {
+    const root = $('proposals'), history = $('historyItems'); root.replaceChildren(); history.replaceChildren();
+    const proposals = Array.isArray(state.proposals) ? state.proposals : [], pending = proposals.filter(proposal => proposal.status === 'pending');
+    if (!pending.length) root.append(el('p','AI 提出的修改会先显示在这里。未点击“确认应用”，不会改变安排。','empty'));
+    for (const proposal of pending) {
+      const stale = proposal.baseRevision !== state.revision, card = el('article',null,'proposal');
+      card.append(el('span',stale ? '需重新生成' : '待确认','tag'),el('h3',proposal.title || '学习安排建议'),el('p',proposal.summary || ''),changePreview(proposal));
+      if (stale) card.append(el('p','这项建议生成后计划已变化。请让 AI 按当前计划重新提出建议，避免覆盖新调整。','helper'));
+      const actions = el('div',null,'actions');
+      actions.append(actionButton('确认应用',() => run(() => mutateProposal('/api/apply',proposal,'已应用到该日期的个人安排；原课程和成绩未修改。'),'正在应用你确认的修改……'),'confirm',stale),actionButton('这次不改',() => run(() => mutateProposal('/api/reject',proposal,'已放弃这项建议，学习安排未改变。'))));
+      card.append(actions); root.append(card);
+    }
+    const completed = proposals.filter(proposal => proposal.status !== 'pending');
+    const latestApplied = completed.filter(proposal => proposal.status === 'applied').sort((a,b) => (b.appliedRevision || 0) - (a.appliedRevision || 0))[0];
+    if (!completed.length) history.append(el('p','还没有已处理的修改。','helper'));
+    for (const proposal of completed) {
+      const item = el('div',null,'history-item'); item.append(el('b',proposal.title || '学习安排建议'),el('span',(statusNames[proposal.status] || proposal.status || '已处理') + (proposal.date ? ' · ' + proposal.date : '')));
+      if (proposal.summary) item.append(el('p',proposal.summary));
+      if (proposal.id === latestApplied?.id) item.append(actionButton('撤回这次修改',() => run(() => mutateProposal('/api/undo',proposal,'已撤回这次修改，恢复修改前的个人安排。'),'正在撤回……')));
+      else if (proposal.status === 'applied') item.append(el('p','先撤回后续修改，才能撤回这一项。','helper'));
+      history.append(item);
+    }
+  }
+  function trustedParent(origin) {return origin === 'null' || origin === location.origin || origin === 'http://localhost:3000' || origin === 'http://127.0.0.1:3000';}
+  function postPlan() {if (window.parent === window || parentOrigin === null || !state) return; window.parent.postMessage({type:'cet4-ai-plan',date:selectedDate,plan:state.plan || null},parentOrigin === 'null' ? '*' : parentOrigin);}
+  window.addEventListener('message',event => {
+    if (event.source !== window.parent || !trustedParent(event.origin) || event.data?.type !== 'cet4-ai-date' || !validDate(event.data.date)) return;
+    if (!/^[a-f0-9]{64}$/.test(event.data.pairing || '') || event.data.pairing !== pairingToken) {
+      notify('为保护私人安排，请通过“启动AI学习工具.cmd”重新打开学习页，或单独打开本机AI页面。','error');
+      window.parent.postMessage({type:'cet4-ai-unpaired'},event.origin === 'null' ? '*' : event.origin);
+      return;
+    }
+    parentOrigin = event.origin;
+    if (busy) {pendingParentDate = event.data.date; return;}
+    if (selectedDate === event.data.date && state) {postPlan(); return;}
+    switchDate(event.data.date);
+  });
+  $('configForm').addEventListener('submit',event => {event.preventDefault(); run(async () => {
+    const apiKey = $('apiKey').value.trim(), model = $('model').value.trim(); $('apiKey').value = '';
+    if (!model) throw new Error('请填写模型名称。');
+    await request('/api/config',{apiKey,model}); await loadState();
+    notify(state.configured ? '连接设置已保存。发送一条消息后才能确认 API 是否可用。' : '模型已保存；还需要配置 API Key。',state.configured ? 'success' : '');
+  },'正在保存本机连接设置……');});
+  $('disconnect').addEventListener('click',() => run(async () => {$('apiKey').value = ''; await request('/api/disconnect',{}); await loadState(); notify('已断开 AI，学习记录和已确认的安排继续保留。','success');}));
+  $('chatForm').addEventListener('submit',event => {event.preventDefault(); run(async () => {
+    const message = $('message').value.trim();
+    if (!message) throw new Error('请先填写你的问题或想调整的内容。');
+    if (!state?.configured) throw new Error('请先配置 API Key，再发送消息。');
+    saveDraft();
+    await request('/api/chat',{date:selectedDate,message,includeCourse:$('includeCourse').checked,sharedText:$('sharedText').value.trim()});
+    $('message').value = ''; $('sharedText').value = ''; $('includeCourse').checked = false; saveDraft();
+    await loadState(); notify('AI 已回复。有修改建议时，请先检查预览，再决定是否应用。','success');
+  },'AI 正在思考，请稍候。不会在你确认前修改安排……');});
+  $('message').addEventListener('keydown',event => {if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) {event.preventDefault(); if (!busy && state?.configured) $('chatForm').requestSubmit();}});
+  ['message','sharedText','includeCourse'].forEach(id => $(id).addEventListener('input',saveDraft));
+  $('courseDate').addEventListener('change',() => switchDate($('courseDate').value));
+  $('refresh').addEventListener('click',() => run(async () => {await loadState(); notify('已刷新本机 AI 状态。');}));
+  if (window.parent !== window) window.parent.postMessage({type:'cet4-ai-ready'},'*');
+  if (window.parent === window) {
+    run(async () => {await loadState(); notify(state.configured ? '本机服务已连接。API 可用性将在发送消息时验证。' : '本机服务已连接，请展开连接设置填写 API Key。');});
+  } else {
+    // An arbitrary file: parent has opaque origin "null" too. Do not load private data until paired.
+    setBusy(true); notify('等待学习页安全配对……');
+    busy = false;
+  }
+})();
+</script>
+</body>
+</html>

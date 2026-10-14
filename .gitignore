@@ -17,6 +17,11 @@ app/创建的node_cache文件夹所在路径/
 # Logs, backups, and local environment
 logs/
 backups/
+# Local AI conversations, proposals and runtime state are private, never source assets.
+/.local-ai/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
 *.log
 .env*
 !.env.example
