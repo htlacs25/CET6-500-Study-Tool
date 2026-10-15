@@ -24,7 +24,7 @@
 </head>
 <body>
   <header id="studyHeader" data-collapsed="true"><div class="utility-bar"><button id="wordSearchToggle" class="word-search-toggle" type="button" aria-controls="wordSearchPanel" aria-expanded="false" title="查词（Alt + K；选中单词后可直接查）">查词</button><button id="headerToggle" class="header-toggle" type="button" aria-controls="headerPanel" aria-expanded="false">展开日期与导航 ▾</button></div><div id="headerPanel" hidden><div class="head"><div class="brand"><span class="logo">4</span><div><b>CET-4 · 550</b><small>每日听说读写训练包</small></div></div><nav id="desktopNav"></nav><div id="dateLabel"></div></div><div class="datebar" id="dateBar"></div><div id="syncBar" class="syncbar"></div></div></header>
-  <div id="studyWorkspace" data-search-open="false"><div id="studyMainPane"><main class="wrap" id="app"></main></div><aside id="wordSearchPanel" hidden aria-labelledby="wordSearchTitle"><div class="search-heading"><h2 id="wordSearchTitle">词汇搜索</h2><button id="wordSearchClose" type="button">收起</button></div><form id="wordSearchForm" class="word-search-form" role="search"><label for="wordSearchInput">英文单词或词形</label><div class="search-input-row"><input id="wordSearchInput" type="search" placeholder="例如：carefully、written" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="60"><button class="primary" type="submit">搜索</button></div></form><p id="wordSearchStatus" class="search-status" role="status" aria-live="polite">查词义、常见词族和动词变化。可用 Alt + K 打开。</p><div id="wordSearchResults"></div></aside></div>
+  <div id="studyWorkspace" data-search-open="false"><div id="studyMainPane"><main class="wrap" id="app"></main></div><aside id="wordSearchPanel" hidden aria-labelledby="wordSearchTitle"><div class="search-heading"><h2 id="wordSearchTitle">词汇搜索</h2><button id="wordSearchClose" type="button">收起</button></div><form id="wordSearchForm" class="word-search-form" role="search"><label for="wordSearchInput">英文单词 / 中文词义</label><div class="search-input-row"><input id="wordSearchInput" type="search" placeholder="例如：提高、学习、carefully、written" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="60"><button class="primary" type="submit">搜索</button></div></form><p id="wordSearchStatus" class="search-status" role="status" aria-live="polite">支持英查中、中查英；点英文结果可继续查词族与词形。可用 Alt + K 打开。</p><div id="wordSearchResults"></div></aside></div>
   <div class="mobile" id="mobileNav"></div>
   <aside id="articleLookupPopover" hidden role="dialog" aria-modal="false" aria-labelledby="lookupTitle" tabindex="-1"></aside>
   <script>const DATA=__STUDY_DATA__; const RECOVERY=__RECOVERY_DATA__;
@@ -168,13 +168,22 @@ __DESIGN_HOST__
       return searchDictionary.find(value);
     }
     function searchWordLink(word){return '<button type="button" class="search-word-link" data-search-word="'+esc(word)+'">'+esc(word)+'</button>'}
-    function runWordSearch(value=document.getElementById('wordSearchInput').value){
+    function runWordSearch(value=document.getElementById('wordSearchInput').value,returnQuery=''){
       const result=findSearchWord(value),out=document.getElementById('wordSearchResults'),status=document.getElementById('wordSearchStatus');
-      if(result.invalid){status.textContent='请输入一个英文单词，可包含连字符或撇号。';out.innerHTML='';return result}
+      if(result.invalid){status.textContent='请输入英文单词或中文词语，例如 written、提高；中文按本地词义匹配，不做整句翻译。';out.innerHTML='';return result}
       document.getElementById('wordSearchInput').value=result.word;
+      if(result.direction==='zh-en'){
+        status.textContent=result.total?'找到 '+result.total+' 个词义匹配'+(result.truncated?'，先显示前 '+result.matches.length+' 个；可补充更具体的中文缩小范围':'')+'。这不是整句翻译，请结合语境选择。':'本地词典暂未找到对应词义；试试更短的关键词或近义词，例如“改善”。';
+        out.innerHTML='<section class="search-entry"><h3>'+esc(result.query)+' · 中文查英文</h3><p class="muted">点英文查看完整释义、词族与动词变化。</p>'+result.matches.map(x=>'<div class="search-family-row"><p>'+searchWordLink(x.word)+' <button type="button" class="secondary search-speak" data-search-speak="'+esc(x.word)+'" aria-label="听 '+esc(x.word)+' 的读音">▶ 听读音</button></p><p>'+esc(x.phonetic?'/'+x.phonetic.replace(/^\/|\/$/g,'')+'/':'音标暂缺')+' · '+esc(x.posLabel)+'</p><p>'+esc(x.matchMeaning||x.brief)+'</p></div>').join('')+'<p class="search-source">离线词典：ECDICT · MIT。查词不计错，不会自动加入背诵，也不会发送给 AI。</p></section>';
+        document.getElementById('wordSearchPanel').scrollTop=0;
+        out.querySelectorAll?.('[data-search-word]').forEach(b=>b.onclick=()=>runWordSearch(b.dataset.searchWord,result.query));
+        out.querySelectorAll?.('[data-search-speak]').forEach(b=>b.onclick=()=>speak(b.dataset.searchSpeak));
+        return result;
+      }
       const x=result.entry;
       status.textContent=x?'已找到。词族列出的是相关词，不一定能在原句中直接替换。':result.derived?'已找到相关动词原形，当前词形的独立释义暂缺。':'离线词典暂未收录该拼写；不代表这个词不存在。';
       let body='<section class="search-entry"><h3>'+esc(result.word)+'</h3>';
+      if(returnQuery)body+='<button type="button" id="returnChineseSearch" class="secondary">返回“'+esc(returnQuery)+'”的中文结果</button>';
       if(x)body+='<p>'+esc(x.phonetic?'/'+x.phonetic.replace(/^\/|\/$/g,'')+'/':'音标暂缺')+'</p><p class="word-pos">'+esc(x.posLabel)+'</p><p>'+esc(x.brief)+'</p>'+hiddenZh(x.meaning,'展开完整词义（按原句选择）');
       if(x||result.derived)body+='<button type="button" class="secondary search-speak" data-search-speak="'+esc(result.word)+'">▶ 听读音</button>';
       if(result.origins.length)body+='<h4>这个词形还可能来自</h4>'+result.origins.map(o=>'<p>'+searchWordLink(o.base)+' 的'+esc(o.label)+(o.entry?' · '+esc(o.entry.brief):'')+'</p>').join('');
@@ -184,8 +193,9 @@ __DESIGN_HOST__
       if(result.suggestions.length)body+='<h4>是否想查</h4><div class="search-chips">'+result.suggestions.map(searchWordLink).join('')+'</div>';
       body+='<p class="search-source">离线词典：<a href="https://github.com/skywind3000/ECDICT" target="_blank" rel="noopener noreferrer">ECDICT · MIT</a>；派生关系：<a href="https://wordnet.princeton.edu/" target="_blank" rel="noopener noreferrer">WordNet 3.0</a>。查词不计错、不自动加入背诵。</p></section>';
       out.innerHTML=body;document.getElementById('wordSearchPanel').scrollTop=0;
-      out.querySelectorAll?.('[data-search-word]').forEach(b=>b.onclick=()=>runWordSearch(b.dataset.searchWord));
+      out.querySelectorAll?.('[data-search-word]').forEach(b=>b.onclick=()=>runWordSearch(b.dataset.searchWord,returnQuery));
       out.querySelectorAll?.('[data-search-speak]').forEach(b=>b.onclick=()=>speak(b.dataset.searchSpeak));
+      if(returnQuery)document.getElementById('returnChineseSearch').onclick=()=>runWordSearch(returnQuery);
       return result;
     }
     function openWordSearch(value=''){
@@ -198,14 +208,14 @@ __DESIGN_HOST__
     }
     function installWordSearch(){
       document.getElementById('wordSearchPanel').hidden=true;document.getElementById('studyWorkspace').dataset.searchOpen='false';
-      document.getElementById('wordSearchToggle').onclick=()=>{if(document.getElementById('wordSearchPanel').hidden)openWordSearch(normalizeSearchWord(typeof window!=='undefined'?window.getSelection?.()?.toString():''));else closeWordSearch()};
+      document.getElementById('wordSearchToggle').onclick=()=>{if(document.getElementById('wordSearchPanel').hidden)openWordSearch(normalizeSearchQuery(typeof window!=='undefined'?window.getSelection?.()?.toString():''));else closeWordSearch()};
       document.getElementById('wordSearchClose').onclick=closeWordSearch;
       document.getElementById('wordSearchForm').onsubmit=event=>{event.preventDefault();runWordSearch()};
       document.getElementById('studyMainPane').onscroll=()=>closeArticleWord();
     }
     function installArticleLookup(){
       document.addEventListener('pointerdown',event=>{const popup=document.getElementById('articleLookupPopover');if(articleLookup&&!popup.contains(event.target)&&!event.target.closest?.('[data-lookup-word]'))closeArticleWord()});
-      document.addEventListener('keydown',event=>{if(event.altKey&&!event.ctrlKey&&!event.metaKey&&event.key?.toLowerCase()==='k'){event.preventDefault();openWordSearch(normalizeSearchWord(typeof window!=='undefined'?window.getSelection?.()?.toString():''))}else if(event.key==='Escape'&&articleLookup){event.preventDefault();closeArticleWord(true)}else if(event.key==='Escape'&&!document.getElementById('wordSearchPanel').hidden){event.preventDefault();closeWordSearch()}});
+      document.addEventListener('keydown',event=>{if(event.altKey&&!event.ctrlKey&&!event.metaKey&&event.key?.toLowerCase()==='k'){event.preventDefault();openWordSearch(normalizeSearchQuery(typeof window!=='undefined'?window.getSelection?.()?.toString():''))}else if(event.key==='Escape'&&articleLookup){event.preventDefault();closeArticleWord(true)}else if(event.key==='Escape'&&!document.getElementById('wordSearchPanel').hidden){event.preventDefault();closeWordSearch()}});
       if(typeof window!=='undefined'){window.addEventListener('scroll',()=>closeArticleWord(),{passive:true});window.addEventListener('resize',()=>closeArticleWord());window.visualViewport?.addEventListener('resize',()=>closeArticleWord())}
     }
     function enrolArticleWord(L=lesson()){

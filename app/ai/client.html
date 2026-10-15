@@ -9,6 +9,7 @@
     :root{color-scheme:light;--paper:#f5f1e8;--card:#fffdf8;--ink:#15231d;--green:#173f32;--orange:#d87343;--line:#d8d0c1;--muted:#68736d}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 "Microsoft YaHei","PingFang SC",Arial,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer;border:1px solid var(--line);background:#fff;border-radius:11px;padding:9px 14px;color:var(--ink);font-weight:700}button:hover:not(:disabled){border-color:var(--green)}button:disabled{opacity:.55;cursor:default}button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #d8734370;outline-offset:2px}input,textarea{border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);padding:10px 12px;max-width:100%}textarea{resize:vertical;width:100%;min-height:104px}label{display:block;font-weight:700;margin-bottom:5px}p{margin:7px 0}h1,h2,h3{line-height:1.4}h1{font-size:25px;margin:0}h2{font-size:19px;margin:0 0 12px}h3{font-size:16px;margin:0 0 8px}small,.muted{color:var(--muted)}small{font-size:12px}summary{cursor:pointer;font-weight:700}details>summary+*{margin-top:13px}[hidden]{display:none!important}.page{max-width:1160px;padding:22px 18px 36px;margin:auto}.heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:16px}.heading p{font-size:13px;color:var(--muted)}.date{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.date label{margin:0}.card{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:20px;margin-bottom:16px}.setting-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:14px;margin:15px 0}.setting-grid input{width:100%}.actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}.primary{background:var(--green);border-color:var(--green);color:#fff}.confirm{background:var(--orange);border-color:var(--orange);color:#fff}.layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,1fr);align-items:start;gap:18px}.tag{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px;background:#e7efe9;color:#245e40}.notice{border-left:3px solid var(--orange);background:#fff5e9;padding:10px 13px;border-radius:8px;margin:12px 0;font-size:13px}.status{min-height:26px;margin:10px 0 14px;white-space:pre-wrap;overflow-wrap:anywhere}.status.error{color:#94452d}.status.success{color:#245e40}.chat{display:flex;flex-direction:column;gap:13px;max-height:440px;min-height:140px;overflow:auto;padding:3px 4px 12px}.message{border-radius:13px;padding:12px 14px;max-width:96%;background:#eeeee6;overflow-wrap:anywhere}.message.user{align-self:flex-end;background:#e5eee8}.message.assistant{align-self:flex-start;background:#f3ede3}.message strong{display:block;font-size:12px;color:var(--muted);margin-bottom:4px}.message p{white-space:pre-wrap;margin:0}.empty{padding:16px 0;color:var(--muted);font-size:14px}.composer{border-top:1px solid var(--line);padding-top:16px;margin-top:12px}.check{display:flex;gap:8px;align-items:flex-start;font-weight:400;margin:12px 0;font-size:13px}.check input{margin:5px 0 0;accent-color:var(--green)}.privacy{background:#f6f0e6;border-radius:11px;padding:11px 12px;margin:12px 0}.privacy textarea{min-height:72px;margin-top:9px}.helper{font-size:12px;color:var(--muted)}.summary-list{padding:0;margin:0;list-style:none}.summary-list li{padding:7px 0;border-bottom:1px solid #e8e1d6;overflow-wrap:anywhere}.summary-list b{font-size:13px;display:block;color:var(--muted)}.summary-list span{white-space:pre-wrap}.proposal{border-top:1px solid var(--line);margin-top:15px;padding-top:15px}.proposal:first-child{border:0;margin-top:0;padding-top:0}.proposal .tag{margin-bottom:8px}.proposal p{white-space:pre-wrap;overflow-wrap:anywhere}.change{border:1px solid #eadac7;background:#fff9ee;border-radius:12px;padding:12px;margin:11px 0}.change-row{margin:7px 0}.change-row b{display:block;font-size:12px;color:#805037}.change-row span{white-space:pre-wrap;overflow-wrap:anywhere}.practice{padding:12px 0;border-top:1px solid var(--line);margin-top:12px}.practice p{white-space:pre-wrap;overflow-wrap:anywhere}.practice details{background:#f3ede3;border-radius:9px;padding:10px}.history{margin-top:16px;border-top:1px solid var(--line);padding-top:14px}.history-item{padding:10px 0;border-top:1px solid #e8e1d6;font-size:13px}.history-item b{display:block}.revision{font-size:12px;color:var(--muted)}
     @media(max-width:780px){.layout,.setting-grid{grid-template-columns:1fr}.page{padding:14px 10px 28px}.card{padding:16px;border-radius:16px}.chat{max-height:360px}.heading{gap:9px}.date{width:100%}.date input{flex:1;min-width:140px}h1{font-size:22px}}
     .mode-tabs{display:flex;gap:8px;margin:0 0 18px;flex-wrap:wrap}.mode-tabs button[aria-selected="true"]{background:var(--green);color:#fff;border-color:var(--green)}.designer-grid{display:grid;grid-template-columns:minmax(280px,.9fr) minmax(0,1.25fr);gap:18px;align-items:start}.editor-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.editor-fields select{width:100%}select{font:inherit;border:1px solid var(--line);border-radius:10px;padding:8px;background:white;color:var(--ink);max-width:100%}.wide{grid-column:1/-1}.order-row,.widget-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;border-top:1px solid var(--line);padding:8px 0}.order-row span,.widget-row strong{flex:1;min-width:95px}.order-row button,.widget-row button{padding:4px 10px}.preview-frame{border:1px solid var(--line);border-radius:16px;overflow:hidden;min-height:100px;margin:12px 0;background:white}.design-reply{white-space:pre-wrap;overflow-wrap:anywhere}.widget-builder{background:#f5f1e8;border:1px solid var(--line);padding:13px;border-radius:12px;margin:12px 0}.widget-builder input,.widget-builder select{width:100%;margin-bottom:8px}.widget-builder textarea{min-height:72px}.examples{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.examples button{font-size:12px;padding:6px 9px}.design-diff{font-size:13px;padding-left:20px}.design-diff li{margin:6px 0}.compact-checks{display:flex;gap:12px;flex-wrap:wrap}.compact-checks .check{margin:6px 0}.preview-disclaimer{font-size:12px;color:var(--muted);margin-bottom:10px}.editor-dirty{font-size:12px;color:#805037}.design-proposal{padding-top:16px;border-top:1px solid var(--line);margin-top:16px}.design-proposal:first-child{padding-top:0;border-top:0;margin-top:0}@media(max-width:880px){.designer-grid{grid-template-columns:1fr}}@media(max-width:430px){.editor-fields{grid-template-columns:1fr}.wide{grid-column:auto}}
+    .quick-start-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.quick-start-grid section{border-top:1px solid var(--line);padding-top:12px}.quick-start-grid ol{padding-left:22px;margin:8px 0}.quick-start-grid li{margin:6px 0}.quick-start-grid .example{font-size:13px;background:#f3ede3;border-radius:9px;padding:9px 11px}.quick-start-grid h3{margin-bottom:6px}@media(max-width:880px){.quick-start-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -17,6 +18,35 @@
     <div><h1>AI 助教 <span class="tag">本机版</span></h1><p>先讨论，再预览；你确认后才应用。原课程、成绩和草稿保持不变。</p></div>
     <div class="date"><label for="courseDate">课程日期</label><input id="courseDate" type="date" min="2026-08-28" max="2026-12-31"><button id="refresh" type="button">刷新</button></div>
   </div>
+  <details class="card" id="quickStart">
+    <summary>第一次使用？点这里 · 手动改页面无需 API Key</summary>
+    <p>先选你想做的事。下方引导按钮只带你到对应位置，不会发送问题、保存密钥或应用修改。</p>
+    <div class="quick-start-grid">
+      <section aria-labelledby="manualGuideHeading">
+        <h3 id="manualGuideHeading">1. 先试手动改页面</h3>
+        <p class="helper">不需要 API Key，也不调用 AI。</p>
+        <ol><li>进入“改页面与功能”，找到“自己动手改 · 免费”。</li><li>选配色、字号或单词展示，点“生成修改预览”。</li><li>点“试用修改后的页面”，满意后点“确认应用到我的页面”。</li></ol>
+        <p class="example">先试：把“单词展示”选为“列表”。</p>
+        <button type="button" id="guideManual">去手动改页面（无需密钥）</button>
+      </section>
+      <section aria-labelledby="learnGuideHeading">
+        <h3 id="learnGuideHeading">2. 让 AI 辅导学习</h3>
+        <p class="helper">需要你自己的 API Key。</p>
+        <ol><li>展开“连接设置”，填入 API Key 和可用的模型名称，再点“保存连接设置”。</li><li>在“学习助教”输入问题，点“发送给 AI”。</li><li>如有安排建议，先看“待确认的修改”，决定是否点“确认应用”。</li></ol>
+        <p class="example">可以问：请用简单例句讲讲 which 和 that 的区别。</p>
+        <div class="actions"><button type="button" id="guideConnection">去填写 API Key</button><button type="button" id="guideLearn">去学习助教</button></div>
+      </section>
+      <section aria-labelledby="designGuideHeading">
+        <h3 id="designGuideHeading">3. 让 AI 帮你改页面</h3>
+        <p class="helper">先完成连接设置，再描述想要的效果。</p>
+        <ol><li>进入“改页面与功能”，输入要求，点“让 AI 生成修改方案”。</li><li>查看方案，点“试用修改后的页面”。</li><li>满意后点“确认应用到我的页面”；不满意可点“这次不改”。</li><li>已应用后，可在“我的页面修改记录与撤回”点“撤回这次页面修改”。</li></ol>
+        <p class="example">可以说：把听力放在最前面，加一个 15 分钟计时器。</p>
+        <button type="button" id="guideDesign">去描述页面修改</button>
+      </section>
+    </div>
+    <p class="helper">手动修改也可以在“我的页面修改记录与撤回”撤回。页面编辑支持现有布局和组件；新增组件类型、联网服务等需要另外开发。</p>
+    <p class="helper">密钥只填在“连接设置”的 API Key 框，不要写进聊天。还没有密钥时，可以先使用手动编辑。</p>
+  </details>
   <details class="card" id="settings">
     <summary>连接设置 · <span id="connection">检查中</span></summary>
     <p>使用你自己的 OpenAI API，按 API 账户单独计费，不等同于 ChatGPT 订阅。AI 服务不会读取浏览器学习记录，也不会把记录上传 GitHub。</p>
@@ -349,6 +379,10 @@
   $('refresh').addEventListener('click',() => run(async () => {const wasLoaded = Boolean(workbench); await loadState(); if (wasLoaded) await loadWorkbench(); notify('已刷新本机 AI 状态；未确认的编辑草稿保持不变。');}));
   $('learnMode').addEventListener('click',() => setMode(false));
   $('designMode').addEventListener('click',() => setMode(true));
+  $('guideManual').addEventListener('click',() => {setMode(true); $('editTheme').focus();});
+  $('guideConnection').addEventListener('click',() => {$('settings').open = true; $('apiKey').focus();});
+  $('guideLearn').addEventListener('click',() => {setMode(false); $('message').focus();});
+  $('guideDesign').addEventListener('click',() => {setMode(true); $('designMessage').focus();});
   document.querySelectorAll('[data-example]').forEach(button => button.addEventListener('click',() => {$('designMessage').value = button.dataset.example; $('designMessage').focus();}));
   $('designForm').addEventListener('submit',event => {event.preventDefault(); run(async () => {
     const message = $('designMessage').value.trim(); if (!message) throw new Error('请描述你想改的页面或功能。'); if (!state?.configured) throw new Error('请先配置 API Key，或使用下方免费的手动编辑器。');
