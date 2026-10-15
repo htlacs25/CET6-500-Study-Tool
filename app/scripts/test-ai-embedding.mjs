@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 const template=fs.readFileSync(new URL('../standalone-template.html',import.meta.url),'utf8');
-const helpers=template.slice(template.indexOf('    function renderAiNotice(){'),template.indexOf('    function renderPending(L){'));
+const helpers=template.slice(template.indexOf('    function renderAiNotice(){'),template.indexOf('    function installPersonalDesigner(){'));
 
 function fixture(){
   const ids=new Map(),events={},sent=[];

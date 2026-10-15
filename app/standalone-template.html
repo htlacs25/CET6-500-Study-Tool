@@ -32,6 +32,8 @@ const RELEASE=__RELEASE__;
 const WORD_SEARCH_DATA=__WORD_SEARCH_DATA__;
 __STUDY_ENGINE__
 __WORD_SEARCH_ENGINE__
+__DESIGN_RUNTIME__
+__DESIGN_HOST__
 </script>
   <script>
   (()=>{
@@ -40,7 +42,7 @@ __WORD_SEARCH_ENGINE__
     let headerExpanded=false;
     try{headerExpanded=localStorage.getItem(HEADER_PREFERENCE_KEY)==='true'}catch{}
     const tabs=[['plan','今日内容'],['words','单词默写'],['listening','听力听写'],['practice','阅读做题'],['extensive','泛读口语'],['records','七日课程与记录']];
-    const AI_ORIGIN='http://127.0.0.1:4318',aiPlans=new Map();let aiFrame=null,aiReady=false;
+    const AI_ORIGIN='http://127.0.0.1:4318',aiPlans=new Map();let aiFrame=null,aiReady=false,personalDesignHost=null;
     const AI_PAIRING=typeof window!=='undefined'?String(window.location?.hash||'').match(/(?:^#|&)ai-pair=([a-f0-9]{64})(?:&|$)/)?.[1]||'':'';
     let storageWarning='',userVocabWarning='',legacyStore={},recoveryStore={},userVocab=blankUserVocabulary();
     try{legacyStore=mergeLegacyStores(k=>localStorage.getItem(k));const raw=localStorage.getItem(RECOVERY_STORAGE_KEY);recoveryStore=raw?JSON.parse(raw):{};if(!recoveryStore||typeof recoveryStore!=='object'||Array.isArray(recoveryStore))throw new Error('学习记录格式异常')}catch(e){storageWarning='已有记录读取异常。为避免覆盖，已停止保存；请先保留原浏览器数据。'}
@@ -317,7 +319,7 @@ __WORD_SEARCH_ENGINE__
       toggle.title=(headerExpanded?'收起顶部日期与导航':'展开顶部日期与导航')+'（当前课程：'+selected+'）';
       toggle.onclick=()=>{headerExpanded=!headerExpanded;try{localStorage.setItem(HEADER_PREFERENCE_KEY,String(headerExpanded))}catch{}renderHeaderState()};
     }
-    function render(){closeArticleWord();renderHeaderState();nav();renderSyncBar();document.getElementById('app').hidden=tab==='ai';const aiPanel=document.getElementById('aiPanel');if(aiPanel)aiPanel.hidden=tab!=='ai';renderAiNotice();if(tab==='ai'){openAiFrame();return}if(aiReady)aiFrame.contentWindow.postMessage({type:'cet4-ai-date',date:selected,pairing:AI_PAIRING},AI_ORIGIN);const L=lesson();if(L.unprepared&&tab!=='records'){renderPending(L);return}({plan:renderPlan,words:renderWords,listening:renderListening,practice:renderPractice,extensive:renderExtensive,records:renderRecords}[tab])(L)}
+    function render(){closeArticleWord();renderHeaderState();nav();renderSyncBar();document.getElementById('app').hidden=tab==='ai';const aiPanel=document.getElementById('aiPanel');if(aiPanel)aiPanel.hidden=tab!=='ai';renderAiNotice();renderPersonalDesign();if(tab==='ai'){openAiFrame();return}if(aiReady)aiFrame.contentWindow.postMessage({type:'cet4-ai-date',date:selected,pairing:AI_PAIRING},AI_ORIGIN);const L=lesson();if(L.unprepared&&tab!=='records'){renderPending(L);return}({plan:renderPlan,words:renderWords,listening:renderListening,practice:renderPractice,extensive:renderExtensive,records:renderRecords}[tab])(L);renderPersonalDesign()}
     function renderAiNotice(){
       const notice=document.getElementById('aiPlanNotice');if(!notice)return;
       const plan=aiPlans.get(selected),focus={listening:'听力',reading:'阅读',speaking:'口语',vocabulary:'词汇',balanced:'均衡训练'};
@@ -333,7 +335,7 @@ __WORD_SEARCH_ENGINE__
       if(typeof window==='undefined'||!document.querySelector('.utility-bar')||!document.getElementById('studyMainPane'))return;
       const button=document.createElement('button');button.id='aiAssistantToggle';button.className='word-search-toggle';button.type='button';button.textContent='AI助教';button.setAttribute('aria-controls','aiPanel');button.onclick=()=>{tab=tab==='ai'?'plan':'ai';render()};document.querySelector('.utility-bar').prepend(button);
       const panel=document.createElement('section');panel.id='aiPanel';panel.hidden=true;
-      panel.innerHTML='<div class="topline"><h2>本地AI助教</h2><button id="backFromAi" class="secondary" type="button">返回学习</button></div><p class="ai-help">先双击D盘项目中的“启动AI学习工具.cmd”。密钥只交给本机后台；成绩与草稿不会自动发送。AI先提出修改，只有确认才应用。此功能不会直接执行改代码命令。</p><div class="actions"><button id="retryAiConnection" class="secondary" type="button">重新连接后台</button><a class="secondary" href="'+AI_ORIGIN+'/" target="_blank" rel="noopener">单独打开AI页面</a></div><p id="aiConnectionStatus" class="muted" role="status">正在等待本机后台。若下方空白或拒绝连接，请先运行启动器，再点重新连接。</p><iframe id="aiAssistantFrame" title="本地AI助教聊天与修改预览" referrerpolicy="no-referrer"></iframe>';
+      panel.innerHTML='<div class="topline"><h2>本地AI助教</h2><button id="backFromAi" class="secondary" type="button">返回学习</button></div><p class="ai-help">先双击D盘项目中的“启动AI学习工具.cmd”。密钥只交给本机后台；成绩与草稿不会自动发送。AI先提出修改，只有确认才应用。可在“改页面与功能”中预览、应用与撤回个人布局和小工具；课程与成绩不变。</p><div class="actions"><button id="retryAiConnection" class="secondary" type="button">重新连接后台</button><a class="secondary" href="'+AI_ORIGIN+'/" target="_blank" rel="noopener">单独打开AI页面</a></div><p id="aiConnectionStatus" class="muted" role="status">正在等待本机后台。若下方空白或拒绝连接，请先运行启动器，再点重新连接。</p><iframe id="aiAssistantFrame" title="本地AI助教聊天与修改预览" referrerpolicy="no-referrer"></iframe>';
       const pane=document.getElementById('studyMainPane');pane.prepend(panel);const notice=document.createElement('aside');notice.id='aiPlanNotice';notice.hidden=true;pane.insertBefore(notice,document.getElementById('app'));aiFrame=panel.querySelector('iframe');
       panel.querySelector('#backFromAi').onclick=()=>{tab='plan';render()};panel.querySelector('#retryAiConnection').onclick=()=>{aiReady=false;panel.querySelector('#aiConnectionStatus').textContent='正在重新连接；请确认本机后台已启动。';aiFrame.src=AI_ORIGIN+'/?date='+encodeURIComponent(selected)+'&retry='+Date.now()};
       window.addEventListener('message',event=>{
@@ -342,11 +344,21 @@ __WORD_SEARCH_ENGINE__
         if(data.type==='cet4-ai-ready'){aiReady=true;panel.querySelector('#aiConnectionStatus').textContent='已连接本机后台。';aiFrame.contentWindow.postMessage({type:'cet4-ai-date',date:selected,pairing:AI_PAIRING},AI_ORIGIN)}
         if(data.type==='cet4-ai-unpaired'){panel.querySelector('#aiConnectionStatus').textContent='未配对：请双击“启动AI学习工具.cmd”重新打开，私人安排不会发给未配对页面。'}
         if(data.type==='cet4-ai-plan'&&/^\d{4}-\d{2}-\d{2}$/.test(data.date)&&data.plan&&typeof data.plan==='object'&&!Array.isArray(data.plan)){aiPlans.set(data.date,data.plan);renderAiNotice()}
+        if(data.type==='cet4-ai-design'&&AI_PAIRING&&personalDesignHost)personalDesignHost.accept(data);
       });
       // Load only the loopback client; it restores approved plans without sending a provider request.
       openAiFrame();
       if(new URL(window.location.href).searchParams.get('assistant')==='1')tab='ai';
     }
+    function installPersonalDesigner(){
+      if(typeof window==='undefined'||!globalThis.Cet4DesignHost||!document.querySelector('.utility-bar'))return;
+      const root=document.getElementById('app'),pane=document.getElementById('studyMainPane');if(!root||!pane)return;
+      const tools=document.createElement('section');tools.id='personalTools';tools.className='wrap';tools.hidden=true;tools.setAttribute('aria-label','我的自定义学习工具');pane.appendChild(tools);
+      let privateStorage;try{privateStorage=window.localStorage}catch{}
+      personalDesignHost=globalThis.Cet4DesignHost.create({root,widgetsRoot:tools,storage:privateStorage,onWarning:message=>{const status=document.getElementById('aiConnectionStatus');if(status)status.textContent=message}});
+      window.addEventListener('pagehide',()=>personalDesignHost.dispose());
+    }
+    function renderPersonalDesign(){if(personalDesignHost)personalDesignHost.render({tab,date:selected})}
     function renderPending(L){
       app.innerHTML='<section class="dark"><span class="pill">'+esc(selected)+' · 内容保护已开启</span><h1>本日课程尚未生成或同步</h1><p>系统没有循环以前的阅读、听力或题目来冒充新内容。请先完成本地同步；已有成绩、错题、难点和草稿仍保留。</p><div class="stats"><div class="stat"><b>'+esc(RELEASE.preparedThrough||'未知')+'</b><small>目前备课至</small></div><div class="stat"><b>0</b><small>重复旧题</small></div><div class="stat"><b>保留</b><small>历史记录</small></div></div><button id="retryPending" class="primary">检查并载入新课程</button></section>'+weekOverview();
       document.getElementById('retryPending').onclick=()=>checkLocalRelease(ok=>{if(ok)reloadLocalPage(true)});bindCommon();
@@ -360,11 +372,11 @@ __WORD_SEARCH_ENGINE__
     function renderPlan(L){
       if(!L.recovery){legacyRenderPlan(L);return}
       const p=progress(),minutes=L.tasks.reduce((n,t)=>n+t.minutes,0);
-      app.innerHTML='<div class="hero"><section class="dark"><span class="pill">'+esc(selected)+' · 目标：2026年12月13日四级550分</span><h1>'+esc(L.title)+'</h1><p>训练第 '+L.recoveryDay+' 天 · '+esc(L.trainingName)+'<br>阅读：'+esc(L.reading.titleZh||L.reading.title)+' · 听力：'+esc(L.listening.titleZh||L.listening.title)+'<br>泛读：'+esc(L.extensive.titleZh||L.extensive.title)+'</p><p>'+ (L.weekly?'今天是阶段小测：共'+L.all.length+'词，不新增课程词；'+(L.nw.length?'先学'+L.nw.length+'个自选文章词，其余复习。':'用主动回忆检验旧知识。'):'今天 '+L.nw.length+' 个新/激活词＋'+L.rev.length+'个复习词；先新词、后复习，两种模式组内乱序。')+'</p><div class="stats"><div class="stat"><b>'+minutes+'</b><small>计划分钟</small></div><div class="stat"><b>'+p.wordErrors.length+'</b><small>今日错词</small></div><div class="stat"><b>'+p.completed.filter(x=>L.tasks.some(t=>t.id===x)).length+'/'+L.taskCount+'</b><small>完成模块</small></div></div></section><section class="card"><h2>按顺序完成</h2><div class="route">'+L.tasks.map((t,i)=>'<button data-go="'+t.tab+'"><b>'+(p.completed.includes(t.id)?'✓ ':'□ ')+(i+1)+'. '+esc(t.label)+'</b><small>'+t.minutes+'分钟</small></button>').join('')+'</div></section></div>'+
-      dailySummary(L)+'<section class="card section"><h2>今天先掌握这一点</h2><div class="tip">'+esc(L.grammarTip)+'</div><p class="muted">首次答案提交后自动保存；修改与重做不覆盖首次成绩。长句/表达使用规则初判，合理同义答案可共同复核。</p><p class="muted">'+esc(L.sourceNote)+'</p>'+(storageWarning?'<div class="answer bad">'+esc(storageWarning)+'</div>':'')+(userVocabWarning?'<div class="answer bad">'+esc(userVocabWarning)+'</div>':'')+'</section>'+
-      '<section class="card section"><h2>按12月13日目标日倒排的路线</h2><div class="roadmap">'+ROADMAP.map(r=>'<div class="record '+(r.name===L.phase.name?'current-phase':'')+'"><small>'+r.from.slice(5)+'—'+r.to.slice(5)+'</small><b>'+r.name+'</b><p>'+r.goal+'</p></div>').join('')+'</div><p>日历阶段：'+L.phase.name+'；实际练习难度：'+L.trainingName+'。</p><div class="tip">'+(L.recoveryDay<=14?'前两周先恢复基本句法和辨音；之后提高到四级常考词汇与材料，不因基础弱就一直停留在简单题。':esc(L.gate.message))+'</div><p class="mini muted">衔接参考：近7天至少3天完成词汇、听力理解、语法和阅读；词汇与语法≥80%，阅读≥75%，听力理解≥70%。这是练习调整参考，不是考试分数预测。12月13日为你指定的备考目标日；550分是冲刺目标，不作保证。</p>'+(selected>='2026-11-01'?'<p class="tip">当前网页内容是模拟练习，不是整套真题或正式模考。该阶段的四级真题与整卷需核验来源后准备。</p>':'')+'</section>'+
-      '<section class="card section"><div class="topline"><div><span class="pill">固定 '+L.all.length+' 词</span><h2>今天的具体词表</h2><p class="muted">'+esc(L.wordReviewRule)+'</p><p class="mini muted">点击单词卡片即可听发音；展开中文或选择文字不会自动播放。</p></div><button class="primary" data-go="words">进入双向默写</button></div><div class="grid">'+L.all.map(w=>studyWordCard(w,L.rev.some(x=>x.word===w.word))).join('')+'</div></section>'+
-      vocabularyScheduleNote(L)+'<details class="section"><summary>60分钟保底版（替换完整计划，不叠加）</summary><p>词汇15分钟：先做10道主动回忆。核心听力15分钟：完成2题理解，并从全文听写第1段开始。阅读10分钟：读文章并做2题。泛读口语15分钟：盲听一遍、跟读3个短语、用自己的话复述30—60秒。复盘5分钟：重测错词、补充难点。其他未完成项保留，不为完成率随便选答案。</p></details>';
+      app.innerHTML='<div class="hero"><section class="dark"><span class="pill">'+esc(selected)+' · 目标：2026年12月13日四级550分</span><h1>'+esc(L.title)+'</h1><p>训练第 '+L.recoveryDay+' 天 · '+esc(L.trainingName)+'<br>阅读：'+esc(L.reading.titleZh||L.reading.title)+' · 听力：'+esc(L.listening.titleZh||L.listening.title)+'<br>泛读：'+esc(L.extensive.titleZh||L.extensive.title)+'</p><p>'+ (L.weekly?'今天是阶段小测：共'+L.all.length+'词，不新增课程词；'+(L.nw.length?'先学'+L.nw.length+'个自选文章词，其余复习。':'用主动回忆检验旧知识。'):'今天 '+L.nw.length+' 个新/激活词＋'+L.rev.length+'个复习词；先新词、后复习，两种模式组内乱序。')+'</p><div class="stats"><div class="stat"><b>'+minutes+'</b><small>计划分钟</small></div><div class="stat"><b>'+p.wordErrors.length+'</b><small>今日错词</small></div><div class="stat"><b>'+p.completed.filter(x=>L.tasks.some(t=>t.id===x)).length+'/'+L.taskCount+'</b><small>完成模块</small></div></div></section><section class="card"><h2>按顺序完成</h2><div class="route" data-design-task-list>'+L.tasks.map((t,i)=>'<button data-design-task="'+(t.id==='sentences'?'sentence':t.id)+'" data-go="'+t.tab+'"><b>'+(p.completed.includes(t.id)?'✓ ':'□ ')+(i+1)+'. '+esc(t.label)+'</b><small>'+t.minutes+'分钟</small></button>').join('')+'</div></section></div>'+
+      dailySummary(L)+'<section class="card section"><h2>今天先掌握这一点</h2><div class="tip" data-design-section="studyTip">'+esc(L.grammarTip)+'</div><p class="muted">首次答案提交后自动保存；修改与重做不覆盖首次成绩。长句/表达使用规则初判，合理同义答案可共同复核。</p><p class="muted">'+esc(L.sourceNote)+'</p>'+(storageWarning?'<div class="answer bad">'+esc(storageWarning)+'</div>':'')+(userVocabWarning?'<div class="answer bad">'+esc(userVocabWarning)+'</div>':'')+'</section>'+
+      '<section class="card section" data-design-section="roadmap"><h2>按12月13日目标日倒排的路线</h2><div class="roadmap">'+ROADMAP.map(r=>'<div class="record '+(r.name===L.phase.name?'current-phase':'')+'"><small>'+r.from.slice(5)+'—'+r.to.slice(5)+'</small><b>'+r.name+'</b><p>'+r.goal+'</p></div>').join('')+'</div><p>日历阶段：'+L.phase.name+'；实际练习难度：'+L.trainingName+'。</p><div class="tip">'+(L.recoveryDay<=14?'前两周先恢复基本句法和辨音；之后提高到四级常考词汇与材料，不因基础弱就一直停留在简单题。':esc(L.gate.message))+'</div><p class="mini muted">衔接参考：近7天至少3天完成词汇、听力理解、语法和阅读；词汇与语法≥80%，阅读≥75%，听力理解≥70%。这是练习调整参考，不是考试分数预测。12月13日为你指定的备考目标日；550分是冲刺目标，不作保证。</p>'+(selected>='2026-11-01'?'<p class="tip">当前网页内容是模拟练习，不是整套真题或正式模考。该阶段的四级真题与整卷需核验来源后准备。</p>':'')+'</section>'+
+      '<section class="card section" data-design-section="wordList"><div class="topline"><div><span class="pill">固定 '+L.all.length+' 词</span><h2>今天的具体词表</h2><p class="muted">'+esc(L.wordReviewRule)+'</p><p class="mini muted">点击单词卡片即可听发音；展开中文或选择文字不会自动播放。</p></div><button class="primary" data-go="words">进入双向默写</button></div><div class="grid" data-design-word-grid>'+L.all.map(w=>studyWordCard(w,L.rev.some(x=>x.word===w.word))).join('')+'</div></section>'+
+      vocabularyScheduleNote(L)+'<details class="section" data-design-section="fallback"><summary>60分钟保底版（替换完整计划，不叠加）</summary><p>词汇15分钟：先做10道主动回忆。核心听力15分钟：完成2题理解，并从全文听写第1段开始。阅读10分钟：读文章并做2题。泛读口语15分钟：盲听一遍、跟读3个短语、用自己的话复述30—60秒。复盘5分钟：重测错词、补充难点。其他未完成项保留，不为完成率随便选答案。</p></details>';
       bindCommon();
     }
     function ensureWordPractice(L){
@@ -641,7 +653,7 @@ __WORD_SEARCH_ENGINE__
       document.querySelectorAll('[data-lookup-word]').forEach(b=>b.onclick=()=>openArticleWord(b.dataset.lookupWord,b.dataset.lookupSource,b));
       document.querySelectorAll('[data-user-remove]').forEach(b=>b.onclick=()=>{if(saveUserVocab(removeUserVocabulary(userVocab,b.dataset.userRemove)))render()});
     }
-    installArticleLookup();installWordSearch();restoreView();installAiAssistant();reset();render();setInterval(()=>{syncCalendar();if(tab==='words')renderMemoryReview(lesson())},60000);installLocalUpdates();
+    installArticleLookup();installWordSearch();restoreView();installAiAssistant();installPersonalDesigner();reset();render();setInterval(()=>{syncCalendar();if(tab==='words')renderMemoryReview(lesson())},60000);installLocalUpdates();
   })();
   </script>
 </body>

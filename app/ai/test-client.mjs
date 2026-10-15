@@ -18,19 +18,21 @@ function fixture({embedded=true,configured=false,failChat=false}={}){
     get childNodes(){return this.children}
   }
   for(const match of html.matchAll(/<(\w+)[^>]*id="([^"]+)"/g))ids.set(match[2],new Element(match[1]));
-  const controls=()=>[...ids.values()].filter(x=>['button','input','textarea'].includes(x.tag));
-  const document={getElementById:id=>ids.get(id),createElement:tag=>new Element(tag),querySelectorAll:s=>s==='button,input,textarea'?controls():[],activeElement:null};
+  const controls=()=>[...ids.values()].filter(x=>['button','input','textarea','select'].includes(x.tag));
+  const document={getElementById:id=>ids.get(id),createElement:tag=>new Element(tag),querySelectorAll:s=>s==='button,input,textarea,select'?controls():[],activeElement:null};
   const parent={postMessage:(data,origin)=>sent.push({data:JSON.parse(JSON.stringify(data)),origin})};
   const window={parent,addEventListener:(type,fn)=>events[type]=fn};if(!embedded)window.parent=window;
   let revision=0,applied=false;
   const proposal={id:'proposal-1',date:DATE,title:'模拟调整',summary:'仅用于测试',changes:{minutes:60,focus:'listening',note:'私密测试安排',practice:[]},status:'pending',baseRevision:0,appliedRevision:null};
   const state=date=>({date,configured,model:'gpt-4.1-mini',revision,plan:applied?{...proposal.changes}:{minutes:null,focus:null,note:'',practice:[]},messages:[],proposals:configured?[{...proposal}]:[]});
+  const workbench={revision:0,design:{version:1,theme:'forest',density:'comfortable',fontSize:18,wordColumns:3,wordMode:'cards',taskOrder:['words','listening','grammar','reading','sentence','extensive','review'],hiddenSections:[],widgets:[]},proposals:[]};
   const fetch=async(path,options)=>{
     const body=options.body?JSON.parse(options.body):null;requests.push({path,body});
     if(path==='/api/chat'&&failChat)return {ok:false,json:async()=>({error:{message:'模拟接口失败',code:'PROVIDER_ERROR'}})};
     if(path==='/api/config')configured=true;
     if(path==='/api/apply'){revision++;applied=true;proposal.status='applied';proposal.appliedRevision=revision;}
     if(path==='/api/undo'){revision++;applied=false;proposal.status='undone';}
+    if(path==='/api/workbench')return {ok:true,json:async()=>workbench};
     return {ok:true,json:async()=>state(new URL(path,'http://127.0.0.1:4318').searchParams.get('date')||DATE)};
   };
   const context=vm.createContext({document,window,location:{href:'http://127.0.0.1:4318/?date='+DATE,origin:'http://127.0.0.1:4318'},fetch,Map,URL,Date,console});
@@ -46,7 +48,7 @@ test('opaque file parents cannot load or receive private data without the epheme
   const f=fixture();await settle();assert.equal(f.requests.length,0);
   f.send(DATE,'');f.send(DATE,'b'.repeat(64));f.send(DATE,PAIR,'https://example.com');f.send(DATE,PAIR,'null',{});
   await settle();assert.equal(f.requests.length,0);assert.equal(f.sent.some(x=>x.data.type==='cet4-ai-plan'),false);
-  f.send();await settle();assert.equal(f.requests.length,1);assert.equal(f.requests[0].path,'/api/state?date='+DATE);
+  f.send();await settle();assert.equal(f.requests.length,2);assert.equal(f.requests[0].path,'/api/state?date='+DATE);assert.equal(f.requests[1].path,'/api/workbench');
   assert.equal(f.sent.filter(x=>x.data.type==='cet4-ai-plan').length,1);
   assert.doesNotMatch(source,/localStorage|sessionStorage|innerHTML|eval\(/);
 });
@@ -70,7 +72,7 @@ test('preview does not apply; explicit approval and undo update the same dated p
 });
 
 test('standalone client works without a parent and clears a typed mock key before sending',async()=>{
-  const f=fixture({embedded:false});await settle();assert.equal(f.requests.length,1);
+  const f=fixture({embedded:false});await settle();assert.equal(f.requests.length,2);
   f.ids.get('apiKey').value='mock-secret-never-a-real-key';f.ids.get('model').value='gpt-4.1-mini';f.submit('configForm');
   assert.equal(f.ids.get('apiKey').value,'');await settle();assert.equal(f.sent.length,0);
   assert.equal(f.ids.get('connection').textContent,'已配置，发送消息后验证');

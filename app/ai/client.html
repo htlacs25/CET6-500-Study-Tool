@@ -8,6 +8,7 @@
   <style>
     :root{color-scheme:light;--paper:#f5f1e8;--card:#fffdf8;--ink:#15231d;--green:#173f32;--orange:#d87343;--line:#d8d0c1;--muted:#68736d}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 "Microsoft YaHei","PingFang SC",Arial,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer;border:1px solid var(--line);background:#fff;border-radius:11px;padding:9px 14px;color:var(--ink);font-weight:700}button:hover:not(:disabled){border-color:var(--green)}button:disabled{opacity:.55;cursor:default}button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #d8734370;outline-offset:2px}input,textarea{border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);padding:10px 12px;max-width:100%}textarea{resize:vertical;width:100%;min-height:104px}label{display:block;font-weight:700;margin-bottom:5px}p{margin:7px 0}h1,h2,h3{line-height:1.4}h1{font-size:25px;margin:0}h2{font-size:19px;margin:0 0 12px}h3{font-size:16px;margin:0 0 8px}small,.muted{color:var(--muted)}small{font-size:12px}summary{cursor:pointer;font-weight:700}details>summary+*{margin-top:13px}[hidden]{display:none!important}.page{max-width:1160px;padding:22px 18px 36px;margin:auto}.heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:16px}.heading p{font-size:13px;color:var(--muted)}.date{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.date label{margin:0}.card{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:20px;margin-bottom:16px}.setting-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:14px;margin:15px 0}.setting-grid input{width:100%}.actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}.primary{background:var(--green);border-color:var(--green);color:#fff}.confirm{background:var(--orange);border-color:var(--orange);color:#fff}.layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,1fr);align-items:start;gap:18px}.tag{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px;background:#e7efe9;color:#245e40}.notice{border-left:3px solid var(--orange);background:#fff5e9;padding:10px 13px;border-radius:8px;margin:12px 0;font-size:13px}.status{min-height:26px;margin:10px 0 14px;white-space:pre-wrap;overflow-wrap:anywhere}.status.error{color:#94452d}.status.success{color:#245e40}.chat{display:flex;flex-direction:column;gap:13px;max-height:440px;min-height:140px;overflow:auto;padding:3px 4px 12px}.message{border-radius:13px;padding:12px 14px;max-width:96%;background:#eeeee6;overflow-wrap:anywhere}.message.user{align-self:flex-end;background:#e5eee8}.message.assistant{align-self:flex-start;background:#f3ede3}.message strong{display:block;font-size:12px;color:var(--muted);margin-bottom:4px}.message p{white-space:pre-wrap;margin:0}.empty{padding:16px 0;color:var(--muted);font-size:14px}.composer{border-top:1px solid var(--line);padding-top:16px;margin-top:12px}.check{display:flex;gap:8px;align-items:flex-start;font-weight:400;margin:12px 0;font-size:13px}.check input{margin:5px 0 0;accent-color:var(--green)}.privacy{background:#f6f0e6;border-radius:11px;padding:11px 12px;margin:12px 0}.privacy textarea{min-height:72px;margin-top:9px}.helper{font-size:12px;color:var(--muted)}.summary-list{padding:0;margin:0;list-style:none}.summary-list li{padding:7px 0;border-bottom:1px solid #e8e1d6;overflow-wrap:anywhere}.summary-list b{font-size:13px;display:block;color:var(--muted)}.summary-list span{white-space:pre-wrap}.proposal{border-top:1px solid var(--line);margin-top:15px;padding-top:15px}.proposal:first-child{border:0;margin-top:0;padding-top:0}.proposal .tag{margin-bottom:8px}.proposal p{white-space:pre-wrap;overflow-wrap:anywhere}.change{border:1px solid #eadac7;background:#fff9ee;border-radius:12px;padding:12px;margin:11px 0}.change-row{margin:7px 0}.change-row b{display:block;font-size:12px;color:#805037}.change-row span{white-space:pre-wrap;overflow-wrap:anywhere}.practice{padding:12px 0;border-top:1px solid var(--line);margin-top:12px}.practice p{white-space:pre-wrap;overflow-wrap:anywhere}.practice details{background:#f3ede3;border-radius:9px;padding:10px}.history{margin-top:16px;border-top:1px solid var(--line);padding-top:14px}.history-item{padding:10px 0;border-top:1px solid #e8e1d6;font-size:13px}.history-item b{display:block}.revision{font-size:12px;color:var(--muted)}
     @media(max-width:780px){.layout,.setting-grid{grid-template-columns:1fr}.page{padding:14px 10px 28px}.card{padding:16px;border-radius:16px}.chat{max-height:360px}.heading{gap:9px}.date{width:100%}.date input{flex:1;min-width:140px}h1{font-size:22px}}
+    .mode-tabs{display:flex;gap:8px;margin:0 0 18px;flex-wrap:wrap}.mode-tabs button[aria-selected="true"]{background:var(--green);color:#fff;border-color:var(--green)}.designer-grid{display:grid;grid-template-columns:minmax(280px,.9fr) minmax(0,1.25fr);gap:18px;align-items:start}.editor-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.editor-fields select{width:100%}select{font:inherit;border:1px solid var(--line);border-radius:10px;padding:8px;background:white;color:var(--ink);max-width:100%}.wide{grid-column:1/-1}.order-row,.widget-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;border-top:1px solid var(--line);padding:8px 0}.order-row span,.widget-row strong{flex:1;min-width:95px}.order-row button,.widget-row button{padding:4px 10px}.preview-frame{border:1px solid var(--line);border-radius:16px;overflow:hidden;min-height:100px;margin:12px 0;background:white}.design-reply{white-space:pre-wrap;overflow-wrap:anywhere}.widget-builder{background:#f5f1e8;border:1px solid var(--line);padding:13px;border-radius:12px;margin:12px 0}.widget-builder input,.widget-builder select{width:100%;margin-bottom:8px}.widget-builder textarea{min-height:72px}.examples{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.examples button{font-size:12px;padding:6px 9px}.design-diff{font-size:13px;padding-left:20px}.design-diff li{margin:6px 0}.compact-checks{display:flex;gap:12px;flex-wrap:wrap}.compact-checks .check{margin:6px 0}.preview-disclaimer{font-size:12px;color:var(--muted);margin-bottom:10px}.editor-dirty{font-size:12px;color:#805037}.design-proposal{padding-top:16px;border-top:1px solid var(--line);margin-top:16px}.design-proposal:first-child{padding-top:0;border-top:0;margin-top:0}@media(max-width:880px){.designer-grid{grid-template-columns:1fr}}@media(max-width:430px){.editor-fields{grid-template-columns:1fr}.wide{grid-column:auto}}
   </style>
 </head>
 <body>
@@ -29,7 +30,8 @@
     <p class="helper">输入的密钥不写入网页、浏览器存储或项目文件；后台重启后需重新输入。不要把密钥写进下方聊天。</p>
   </details>
   <p class="status" id="status" role="status" aria-live="polite">正在连接本机服务……</p>
-  <div class="layout">
+  <nav class="mode-tabs" aria-label="AI 工作模式"><button type="button" id="learnMode" aria-selected="true">学习助教</button><button type="button" id="designMode" aria-selected="false">改页面与功能</button></nav>
+  <div class="layout" id="learningWorkspace">
     <section class="card" aria-labelledby="chatHeading">
       <h2 id="chatHeading">和助教讨论</h2>
       <div class="notice">当前可调整当日学习时长、训练侧重点、学习备注，以及添加不计分练习。修改网页代码、评分规则或历史记录的请求只会讨论，不会自动执行。</div>
@@ -48,7 +50,22 @@
       <section class="card" aria-labelledby="proposalHeading"><h2 id="proposalHeading">待确认的修改</h2><div id="proposals"></div><details class="history"><summary>修改记录与撤回</summary><div id="historyItems"></div></details></section>
     </aside>
   </div>
+  <section id="designWorkspace" hidden aria-label="我的页面与功能工作台">
+    <div class="card"><h2>我的页面与功能</h2><p>描述想要的效果，或直接动手调整。先试用修改后的页面，再确认应用到自己的学习页；不改所有人的网站，不改原课程成绩。</p><p class="revision" id="designRevision">正在读取个人页面设置……</p><p class="helper">支持布局、任务顺序与便签、清单、翻卡、问答、计时器。新增任意代码、联网服务或账户系统仍需开发，不会自动执行 AI 生成的程序。</p></div>
+    <div class="designer-grid">
+      <div>
+        <section class="card"><h2>用一句话改页面</h2><form id="designForm"><label for="designMessage">你希望怎么改？</label><textarea id="designMessage" maxlength="4000" required placeholder="例如：页面紧凑一点，单词改成列表，把听力放在最前面，再加一个 15 分钟计时器。"></textarea><div class="examples"><button type="button" data-example="页面紧凑一点，单词改成列表，字体调到 18。">更紧凑</button><button type="button" data-example="把听力放在最前面，再加一个 15 分钟专注计时器。">听力优先</button><button type="button" data-example="加一个口语练习清单，包含盲听、影子跟读、脱稿复述。">口语清单</button></div><label class="check"><input id="designIncludeCourse" type="checkbox"><span>本次允许发送当前日期的公共课程内容给 AI（不含成绩、草稿）。</span></label><div class="actions"><button type="submit" class="primary" id="designSend">让 AI 生成修改方案</button></div><p class="helper">只有点此按钮才调用收费 API；下方手动编辑不需要 API Key。</p></form><p class="design-reply" id="designReply" aria-live="polite"></p></section>
+        <section class="card"><h2>自己动手改 · 免费</h2><p class="helper">调整只进入草稿，点“生成修改预览”后再确认生效。预览里的操作只用于试用，不会提交学习成绩。</p><p id="manualDirty" class="editor-dirty"></p>
+          <form id="manualDesignForm"><div class="editor-fields"><div><label for="editTheme">配色</label><select id="editTheme"><option value="forest">森林绿</option><option value="ocean">海洋蓝</option><option value="warm">暖橙色</option></select></div><div><label for="editDensity">页面疏密</label><select id="editDensity"><option value="comfortable">舒适</option><option value="compact">紧凑</option></select></div><div><label for="editFontSize">正文字号</label><input id="editFontSize" type="number" min="16" max="22" value="18"></div><div><label for="editWordColumns">单词卡列数</label><select id="editWordColumns"><option value="1">1 列</option><option value="2">2 列</option><option value="3">3 列</option></select></div><div class="wide"><label for="editWordMode">单词展示</label><select id="editWordMode"><option value="cards">卡片</option><option value="list">列表</option></select></div></div><h3 style="margin-top:18px">任务顺序</h3><div id="editTaskOrder"></div><h3 style="margin-top:18px">可收起的辅助内容</h3><div id="editHiddenSections" class="compact-checks"></div><h3 style="margin-top:18px">我的功能组件（最多 8 个）</h3><div id="editWidgets"></div>
+          <details class="widget-builder" id="widgetBuilder"><summary>添加或编辑一个组件</summary><label for="widgetTitle">组件标题</label><input id="widgetTitle" maxlength="80" placeholder="例如：今日口语练习"><label for="widgetType">组件类型</label><select id="widgetType"><option value="note">便签</option><option value="checklist">待办清单</option><option value="flashcards">翻面卡片</option><option value="quiz">自测问答</option><option value="timer">倒计时</option></select><label for="widgetText">说明或便签正文</label><textarea id="widgetText" maxlength="4000" placeholder="仅添加到你的补充区域，不替换原课程。"></textarea><label for="widgetItems">条目（每行一条，最多 20 条）</label><textarea id="widgetItems" maxlength="24000" placeholder="清单：每行一个任务&#10;翻卡或问答：问题 | 答案&#10;例如：improve | 提高；改善"></textarea><label for="widgetMinutes">倒计时分钟数</label><input id="widgetMinutes" type="number" min="1" max="120" value="15"><div class="actions"><button id="saveWidget" type="button">加入草稿</button><button id="cancelWidget" type="button">取消编辑</button></div><p class="helper">这些组件是个人练习，不写入原课程分数。翻卡、问答必须填写“问题 | 答案”。</p></details>
+          <div class="actions"><button type="submit" class="primary">生成修改预览</button><button type="button" id="resetManual">从已应用设置重置草稿</button></div></form>
+        </section>
+      </div>
+      <div><section class="card"><h2>草稿效果 · 可直接试用</h2><p class="preview-disclaimer">下面使用演示课程展示真实组件；颜色、布局、交互与你确认后使用的同一套实现。示例单词和题目不代表当天课程。</p><div id="manualPreview" class="preview-frame"></div></section><section class="card"><h2>修改方案与确认</h2><div id="designProposals"></div><details class="history"><summary>我的页面修改记录与撤回</summary><div id="designHistory"></div></details></section></div>
+    </div>
+  </section>
 </main>
+<script src="/design-runtime.js"></script>
 <script>
 (() => {
   'use strict';
@@ -59,6 +76,13 @@
   const statusNames = {pending:'待确认',applied:'已应用',rejected:'已放弃',undone:'已撤回',superseded:'已过期'};
   const drafts = new Map();
   let state = null, busy = false, parentOrigin = null, pendingParentDate = null;
+  let workbench = null, manualDesign = null, manualDirty = false, editingWidgetId = null, previewDisposers = [], manualPreviewDisposer = null;
+  const triedDesigns = new Set(), previewState = new Map();
+  const taskNames = {words:'单词学习',listening:'听力听写',grammar:'语法',reading:'阅读',sentence:'句子与翻译',extensive:'泛读口语',review:'错题复盘'};
+  const hiddenNames = {roadmap:'学习路线',studyTip:'学习提示',wordList:'单词卡列表',fallback:'60 分钟保底版'};
+  const themeNames = {forest:'森林绿',ocean:'海洋蓝',warm:'暖橙色'}, widgetNames = {note:'便签',checklist:'清单',flashcards:'翻卡',quiz:'问答',timer:'计时器'};
+  const defaultDesign = () => ({version:1,theme:'forest',density:'comfortable',fontSize:18,wordColumns:3,wordMode:'cards',taskOrder:Object.keys(taskNames),hiddenSections:[],widgets:[]});
+  const copy = value => JSON.parse(JSON.stringify(value));
   function validDate(value) {
     if (typeof value !== 'string' || !/^2026-\d{2}-\d{2}$/.test(value)) return false;
     const date = new Date(value + 'T00:00:00Z');
@@ -79,9 +103,9 @@
   function notify(message, kind = '') {$('status').textContent = message; $('status').className = 'status' + (kind ? ' ' + kind : '');}
   function setBusy(value) {
     busy = value;
-    document.querySelectorAll('button,input,textarea').forEach(control => {control.disabled = value;});
+    document.querySelectorAll('button,input,textarea,select').forEach(control => {control.disabled = value;});
     $('chatForm').setAttribute('aria-busy',String(value));
-    if (!value) {$('send').disabled = !state?.configured; document.querySelectorAll('[data-unavailable="true"]').forEach(control => {control.disabled = true;});}
+    if (!value) {$('send').disabled = !state?.configured; $('designSend').disabled = !state?.configured; document.querySelectorAll('[data-unavailable="true"]').forEach(control => {control.disabled = true;});}
   }
   async function request(path, body) {
     const options = {method:body === undefined ? 'GET' : 'POST',credentials:'same-origin',cache:'no-store',headers:{Authorization:'Bearer ' + token}};
@@ -93,7 +117,7 @@
     if (!response.ok) {const error = new Error(result?.error?.message || '请求未完成，请检查连接后重试。'); error.code = result?.error?.code; throw error;}
     return result;
   }
-  async function loadState() {state = await request('/api/state?date=' + encodeURIComponent(selectedDate)); render(); postPlan();}
+  async function loadState() {state = await request('/api/state?date=' + encodeURIComponent(selectedDate)); render(); postPlan(); if (!workbench) await loadWorkbench();}
   async function run(action, message) {
     if (busy) return;
     setBusy(true); notify(message || '正在处理……');
@@ -185,6 +209,110 @@
       history.append(item);
     }
   }
+  async function loadWorkbench() {
+    const next = await request('/api/workbench');
+    if (!next || !Number.isInteger(next.revision) || !next.design || !Array.isArray(next.proposals)) throw new Error('页面工作台返回格式不完整，请重启服务后重试。');
+    workbench = next;
+    if (!manualDesign) {manualDesign = copy(workbench.design); populateManual();}
+    renderWorkbench(); postDesign();
+  }
+  function postDesign() {if (window.parent === window || parentOrigin === null || !workbench) return; window.parent.postMessage({type:'cet4-ai-design',revision:workbench.revision,design:copy(workbench.design)},parentOrigin === 'null' ? '*' : parentOrigin);}
+  function setMode(design) {
+    $('learningWorkspace').hidden = design; $('designWorkspace').hidden = !design;
+    $('learnMode').setAttribute('aria-selected',String(!design)); $('designMode').setAttribute('aria-selected',String(design));
+    if (design && manualDesign) {renderManualPreview(); renderDesignProposals();}
+    if (!design) {disposePreviews(); if (manualPreviewDisposer) {manualPreviewDisposer(); manualPreviewDisposer = null;}}
+  }
+  function disposePreviews() {previewDisposers.forEach(dispose => dispose()); previewDisposers = [];}
+  function dirty() {manualDirty = true; $('manualDirty').textContent = '有未确认的个人页面草稿；切换日期或工作模式不会丢失。';}
+  function populateManual() {
+    const design = manualDesign || defaultDesign();
+    $('editTheme').value = design.theme; $('editDensity').value = design.density; $('editFontSize').value = design.fontSize; $('editWordColumns').value = String(design.wordColumns); $('editWordMode').value = design.wordMode;
+    $('manualDirty').textContent = manualDirty ? '有未确认的个人页面草稿。' : '当前草稿来自已应用的个人设置。';
+    renderManualLists(); if (!$('designWorkspace').hidden) renderManualPreview();
+  }
+  function renderManualLists() {
+    const order = $('editTaskOrder'); order.replaceChildren();
+    manualDesign.taskOrder.forEach((task,index) => {const row = el('div',null,'order-row'); row.append(el('span',taskNames[task]),actionButton('上移',() => moveTask(index,-1),'',index === 0),actionButton('下移',() => moveTask(index,1),'',index === manualDesign.taskOrder.length - 1)); order.append(row);});
+    const hidden = $('editHiddenSections'); hidden.replaceChildren();
+    for (const [name,label] of Object.entries(hiddenNames)) {const check = el('label',null,'check'), input = el('input'); input.type = 'checkbox'; input.checked = manualDesign.hiddenSections.includes(name); input.addEventListener('change',() => {manualDesign.hiddenSections = input.checked ? [...new Set([...manualDesign.hiddenSections,name])] : manualDesign.hiddenSections.filter(item => item !== name); dirty(); renderManualPreview();}); check.append(input,el('span','收起' + label)); hidden.append(check);}
+    const widgets = $('editWidgets'); widgets.replaceChildren();
+    if (!manualDesign.widgets.length) widgets.append(el('p','还没有个人组件。可以在下面添加，原课程不会受影响。','helper'));
+    manualDesign.widgets.forEach(widget => {const row = el('div',null,'widget-row'); row.append(el('strong',widget.title),el('small',widgetNames[widget.type]),actionButton('编辑',() => editWidget(widget)),actionButton('移除',() => {manualDesign.widgets = manualDesign.widgets.filter(item => item.id !== widget.id); if (editingWidgetId === widget.id) resetWidget(); dirty(); renderManualLists(); renderManualPreview();})); widgets.append(row);});
+  }
+  function moveTask(index,offset) {const next = index + offset; if (next < 0 || next >= manualDesign.taskOrder.length) return; [manualDesign.taskOrder[index],manualDesign.taskOrder[next]] = [manualDesign.taskOrder[next],manualDesign.taskOrder[index]]; dirty(); renderManualLists(); renderManualPreview();}
+  function readManualFields() {
+    if (!manualDesign) manualDesign = defaultDesign();
+    const fontSize = Number($('editFontSize').value), columns = Number($('editWordColumns').value);
+    if (!Number.isInteger(fontSize) || fontSize < 16 || fontSize > 22) throw new Error('正文字号需要是 16 到 22 之间的整数。');
+    if (![1,2,3].includes(columns)) throw new Error('单词卡列数需要是 1、2 或 3。');
+    manualDesign.theme = $('editTheme').value; manualDesign.density = $('editDensity').value; manualDesign.fontSize = fontSize; manualDesign.wordColumns = columns; manualDesign.wordMode = $('editWordMode').value;
+    return copy(manualDesign);
+  }
+  function renderManualPreview() {
+    if ($('designWorkspace').hidden) return;
+    if (manualPreviewDisposer) {manualPreviewDisposer(); manualPreviewDisposer = null;}
+    const root = $('manualPreview'); root.replaceChildren();
+    if (!window.Cet4Designer?.renderPreview) {root.append(el('p','预览组件尚未加载，请重启 AI 服务并刷新页面。','empty')); return;}
+    try {manualPreviewDisposer = window.Cet4Designer.renderPreview(root,readManualFields(),{stateStore:previewState,stateKey:'manual-draft'});}
+    catch (error) {root.append(el('p',error.message || '请检查编辑字段。','empty'));}
+  }
+  function resetWidget() {editingWidgetId = null; $('widgetTitle').value = ''; $('widgetType').value = 'note'; $('widgetText').value = ''; $('widgetItems').value = ''; $('widgetMinutes').value = '15'; $('saveWidget').textContent = '加入草稿';}
+  function editWidget(widget) {editingWidgetId = widget.id; $('widgetTitle').value = widget.title; $('widgetType').value = widget.type; $('widgetText').value = widget.text; $('widgetItems').value = widget.items.map(item => item.front + (item.back ? ' | ' + item.back : '')).join('\n'); $('widgetMinutes').value = String(widget.minutes); $('saveWidget').textContent = '保存组件到草稿'; $('widgetBuilder').open = true;}
+  function saveWidget() {
+    const title = $('widgetTitle').value.trim(), type = $('widgetType').value, text = $('widgetText').value.trim(), minutes = Number($('widgetMinutes').value);
+    if (!title) throw new Error('请给组件填一个标题。');
+    if (!editingWidgetId && manualDesign.widgets.length >= 8) throw new Error('最多添加 8 个组件，请先移除不需要的组件。');
+    if (!Number.isInteger(minutes) || minutes < 1 || minutes > 120) throw new Error('计时分钟数需要是 1 到 120 之间的整数。');
+    const lines = $('widgetItems').value.split(/\r?\n/).map(line => line.trim()).filter(Boolean);
+    if (lines.length > 20) throw new Error('每个组件最多 20 条内容。');
+    const items = lines.map(line => {const split = line.indexOf('|'); return {front:(split < 0 ? line : line.slice(0,split)).trim(),back:split < 0 ? '' : line.slice(split + 1).trim()};});
+    if (items.some(item => !item.front || item.front.length > 300 || item.back.length > 1000)) throw new Error('每条正面需为 1–300 字，背面最多 1000 字。');
+    if (['checklist','flashcards','quiz'].includes(type) && !items.length) throw new Error('这个组件至少需要填写一条内容。');
+    if (['flashcards','quiz'].includes(type) && items.some(item => !item.back)) throw new Error('翻卡和问答的每一条都需要填写“问题 | 答案”。');
+    let id = editingWidgetId;
+    if (!id) {let next = 1; while (manualDesign.widgets.some(item => item.id === 'personal-' + next)) next++; id = 'personal-' + next;}
+    const widget = {id,title,type,text,items,minutes};
+    if (editingWidgetId) manualDesign.widgets = manualDesign.widgets.map(item => item.id === editingWidgetId ? widget : item); else manualDesign.widgets.push(widget);
+    resetWidget(); dirty(); renderManualLists(); renderManualPreview(); notify('组件已加入草稿，还没有改变实际学习页。','success');
+  }
+  function describeChanges(before,after) {
+    const rows = [];
+    const fields = [['theme','配色',value => themeNames[value]],['density','疏密',value => value === 'compact' ? '紧凑' : '舒适'],['fontSize','字号',String],['wordColumns','单词卡列数',String],['wordMode','单词展示',value => value === 'list' ? '列表' : '卡片']];
+    for (const [key,label,format] of fields) if (before[key] !== after[key]) rows.push(label + '：' + format(before[key]) + ' → ' + format(after[key]));
+    if (JSON.stringify(before.taskOrder) !== JSON.stringify(after.taskOrder)) rows.push('任务顺序：' + after.taskOrder.map(task => taskNames[task]).join(' → '));
+    if (JSON.stringify(before.hiddenSections) !== JSON.stringify(after.hiddenSections)) rows.push('收起辅助内容：' + (after.hiddenSections.map(name => hiddenNames[name]).join('、') || '全部展开'));
+    for (const widget of after.widgets) {const previous = before.widgets.find(item => item.id === widget.id); if (!previous) rows.push('新增' + widgetNames[widget.type] + '：' + widget.title); else if (JSON.stringify(previous) !== JSON.stringify(widget)) rows.push('修改组件：' + widget.title);}
+    for (const widget of before.widgets) if (!after.widgets.some(item => item.id === widget.id)) rows.push('移除组件：' + widget.title);
+    return rows.length ? rows : ['与当前页面设置相同；不会改变原课程与成绩。'];
+  }
+  function renderWorkbench() {$('designRevision').textContent = '仅我的页面 · 已应用版本 ' + workbench.revision + ' · 与课程日期独立'; renderDesignProposals();}
+  async function mutateDesign(path,proposal,success) {
+    await request(path,path === '/api/design/reject' ? {id:proposal.id} : {id:proposal.id,revision:workbench.revision});
+    await loadWorkbench(); notify(success,'success');
+  }
+  function renderDesignProposals() {
+    if (!workbench) return;
+    disposePreviews(); const root = $('designProposals'), history = $('designHistory'); root.replaceChildren(); history.replaceChildren();
+    const pending = workbench.proposals.filter(proposal => proposal.status === 'pending');
+    if (!pending.length) root.append(el('p','描述想改的效果，或手动编辑后生成预览。没有确认前，实际学习页不变。','empty'));
+    for (const proposal of pending) {
+      const stale = proposal.baseRevision !== workbench.revision, card = el('article',null,'design-proposal'), diff = el('ul',null,'design-diff'), preview = el('div',null,'preview-frame'); preview.hidden = true;
+      card.append(el('span',stale ? '旧版本方案' : '待试用与确认','tag'),el('h3',proposal.title),el('p',proposal.summary));
+      describeChanges(workbench.design,proposal.design).forEach(line => diff.append(el('li',line))); card.append(diff);
+      if (stale) card.append(el('p','已应用版本发生变化，请根据最新设置重新生成方案。','helper'));
+      const apply = actionButton('确认应用到我的页面',() => run(() => mutateDesign('/api/design/apply',proposal,'已应用到你的学习页，原课程与成绩保持不变。'),'正在应用个人页面设置……'),'confirm',stale || !triedDesigns.has(proposal.id));
+      const tryButton = actionButton('试用修改后的页面',() => {
+        if (!window.Cet4Designer?.renderPreview) {notify('预览组件未加载，请重启服务后刷新。未应用任何修改。','error'); return;}
+        try {preview.hidden = false; preview.replaceChildren(); const dispose = window.Cet4Designer.renderPreview(preview,proposal.design,{stateStore:previewState,stateKey:'proposal-' + proposal.id}); previewDisposers.push(dispose); triedDesigns.add(proposal.id); if (!stale) {apply.disabled = false; apply.dataset.unavailable = 'false';} tryButton.disabled = true; tryButton.dataset.unavailable = 'true'; tryButton.textContent = '已展开试用预览'; notify('请试用下方组件；满意后再点“确认应用到我的页面”。');} catch (error) {notify(error.message || '预览失败，未应用修改。','error');}
+      });
+      const actions = el('div',null,'actions'); actions.append(tryButton,apply,actionButton('这次不改',() => run(() => mutateDesign('/api/design/reject',proposal,'已放弃该方案，实际页面未改变。'))));
+      card.append(actions,preview); root.append(card);
+    }
+    const completed = workbench.proposals.filter(proposal => proposal.status !== 'pending'), latest = completed.filter(proposal => proposal.status === 'applied').sort((a,b) => (b.appliedRevision || 0) - (a.appliedRevision || 0))[0];
+    if (!completed.length) history.append(el('p','还没有已处理的个人页面修改。','helper'));
+    for (const proposal of completed) {const row = el('div',null,'history-item'); row.append(el('b',proposal.title),el('span',statusNames[proposal.status] || proposal.status),el('p',proposal.summary)); if (proposal.id === latest?.id) row.append(actionButton('撤回这次页面修改',() => run(() => mutateDesign('/api/design/undo',proposal,'已恢复修改前的个人页面设置，学习成绩未改变。'),'正在撤回个人页面修改……'))); history.append(row);}
+  }
   function trustedParent(origin) {return origin === 'null' || origin === location.origin || origin === 'http://localhost:3000' || origin === 'http://127.0.0.1:3000';}
   function postPlan() {if (window.parent === window || parentOrigin === null || !state) return; window.parent.postMessage({type:'cet4-ai-plan',date:selectedDate,plan:state.plan || null},parentOrigin === 'null' ? '*' : parentOrigin);}
   window.addEventListener('message',event => {
@@ -196,7 +324,7 @@
     }
     parentOrigin = event.origin;
     if (busy) {pendingParentDate = event.data.date; return;}
-    if (selectedDate === event.data.date && state) {postPlan(); return;}
+    if (selectedDate === event.data.date && state) {postPlan(); postDesign(); return;}
     switchDate(event.data.date);
   });
   $('configForm').addEventListener('submit',event => {event.preventDefault(); run(async () => {
@@ -218,7 +346,26 @@
   $('message').addEventListener('keydown',event => {if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) {event.preventDefault(); if (!busy && state?.configured) $('chatForm').requestSubmit();}});
   ['message','sharedText','includeCourse'].forEach(id => $(id).addEventListener('input',saveDraft));
   $('courseDate').addEventListener('change',() => switchDate($('courseDate').value));
-  $('refresh').addEventListener('click',() => run(async () => {await loadState(); notify('已刷新本机 AI 状态。');}));
+  $('refresh').addEventListener('click',() => run(async () => {const wasLoaded = Boolean(workbench); await loadState(); if (wasLoaded) await loadWorkbench(); notify('已刷新本机 AI 状态；未确认的编辑草稿保持不变。');}));
+  $('learnMode').addEventListener('click',() => setMode(false));
+  $('designMode').addEventListener('click',() => setMode(true));
+  document.querySelectorAll('[data-example]').forEach(button => button.addEventListener('click',() => {$('designMessage').value = button.dataset.example; $('designMessage').focus();}));
+  $('designForm').addEventListener('submit',event => {event.preventDefault(); run(async () => {
+    const message = $('designMessage').value.trim(); if (!message) throw new Error('请描述你想改的页面或功能。'); if (!state?.configured) throw new Error('请先配置 API Key，或使用下方免费的手动编辑器。');
+    const result = await request('/api/design',{date:selectedDate,message,includeCourse:$('designIncludeCourse').checked});
+    $('designReply').textContent = result.reply || '修改方案已生成，请检查差异并试用。'; $('designIncludeCourse').checked = false;
+    await loadWorkbench(); notify('方案已生成，实际页面尚未改变。请先试用预览，再确认应用。','success');
+  },'AI 正在生成页面修改方案，不会直接改动实际学习页……');});
+  ['editTheme','editDensity','editFontSize','editWordColumns','editWordMode'].forEach(id => $(id).addEventListener('input',() => {dirty(); renderManualPreview();}));
+  $('manualDesignForm').addEventListener('submit',event => {event.preventDefault(); run(async () => {
+    const design = readManualFields(); if (!workbench) throw new Error('请先连接本机工作台。');
+    if (window.Cet4Designer?.normalizeDesign) window.Cet4Designer.normalizeDesign(design);
+    await request('/api/design/manual',{title:'我的页面调整',summary:describeChanges(workbench.design,design).join('；'),design}); await loadWorkbench(); notify('手动方案已保存为待确认预览，没有调用收费 AI 接口。','success');
+  },'正在保存个人页面修改预览……');});
+  $('resetManual').addEventListener('click',() => {if (!workbench) return; manualDesign = copy(workbench.design); manualDirty = false; resetWidget(); populateManual(); notify('编辑草稿已恢复为当前已应用设置，实际页面未变。');});
+  $('saveWidget').addEventListener('click',() => {try {saveWidget();} catch (error) {notify(error.message,'error');}});
+  $('cancelWidget').addEventListener('click',resetWidget);
+  window.addEventListener('pagehide',() => {disposePreviews(); if (manualPreviewDisposer) manualPreviewDisposer();});
   if (window.parent !== window) window.parent.postMessage({type:'cet4-ai-ready'},'*');
   if (window.parent === window) {
     run(async () => {await loadState(); notify(state.configured ? '本机服务已连接。API 可用性将在发送消息时验证。' : '本机服务已连接，请展开连接设置填写 API Key。');});

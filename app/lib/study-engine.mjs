@@ -792,7 +792,10 @@ function chooseLegacyDailyLesson(date,p,fresh){
 }
 export function chooseDailyLesson(date,p,fresh){
   const chosen=chooseLegacyDailyLesson(date,p,fresh),old=p?.lessonSnapshot,round=p?.wordPractice?.daily||p?.draft?.ws;
-  if(!fresh.reviewPlanVersion||!old||chosen.cacheDateMismatch||chosen.cacheContentMismatch||old.reviewPlanVersion===fresh.reviewPlanVersion||round?.done||p.wordTotal>=40)return chosen;
+  // A version identifies the algorithm, not the learner's current due queue.
+  // Yesterday's answers can change tomorrow's reviews after a preview was saved.
+  // Reconcile only untouched reviews even when both snapshots use the same version.
+  if(!fresh.reviewPlanVersion||!old||chosen.cacheDateMismatch||chosen.cacheContentMismatch||round?.done||p.wordTotal>=40)return chosen;
   if(allDictationWords(chosen).length!==40)return chosen;
   const cut=(round?.i||0)+(round&&(round.input||round.meaningInput||round.phase&&round.phase!=='try')?1:0);
   const pinned=new Set([...(round?.order||[]).slice(0,cut).map(w=>w.word),...allDictationWords(old).filter(w=>firstWordAttempt(p,old,w.word)).map(w=>w.word)]);
