@@ -1,5 +1,72 @@
 [
   {
+    "date": "2026-10-18",
+    "title": "The House Notice Nobody Could Find",
+    "titleZh": "找不到的合租房通知",
+    "category": "Everyday life — shared spaces and communication",
+    "sourceType": "original news-style",
+    "sourceNote": "原创报刊风格教学短文；合租房、人物与事件均为虚构，不是实时新闻。Original educational news-style fiction, not a report of a real event.",
+    "text": "In a fictional shared house, four students use the same kitchen and washing machine. They are friendly, but small problems often lead to long messages. Someone moves a cleaning bottle, another forgets when the machine is being repaired, and a third person misses a note hidden under a shopping list.\n\nAt first, the students create a large online group and send more reminders. This does not solve the problem. Important messages soon disappear among jokes and photographs. A student who joins late has no easy way to know which arrangements are still current.\n\nThe housemates then try a smaller change. They put one board beside the kitchen door and divide it into three parts: current arrangements, questions waiting for an answer, and completed tasks. Each note includes a date and the name of the person who wrote it. Old notes move to an envelope instead of staying on the board forever.\n\nAfter two weeks, the students still disagree about some household tasks. The board has not made them identical or removed the need to talk. However, they spend less time searching for basic information. Their experience suggests that good communication is not always about sending more messages. Sometimes it begins with making a few important messages easier to find.",
+    "textZh": "在一所虚构的合租房里，四名学生共用厨房和洗衣机。他们相处友好，但小问题经常引出很长的消息。有人挪动清洁剂，有人忘了洗衣机什么时候维修，还有人没看到压在购物清单下面的便条。\n\n起初，学生们建立了一个大的线上群组，并发出更多提醒。但这没有解决问题。重要消息很快淹没在笑话和照片之中。较晚加入的学生也不容易知道哪些安排仍然有效。\n\n随后，室友们尝试了一个更小的改变。他们在厨房门边放上一块板，并分为三部分：当前安排、等待答复的问题以及已完成的任务。每张便条都写明日期和书写人的姓名。旧便条被放进信封，而不是永远留在板上。\n\n两周后，学生们对一些家务仍有分歧。这块板并没有使他们想法一致，也没有消除交谈的必要。不过，他们查找基本信息所花的时间减少了。这段经历表明，良好的沟通并不总是意味着发送更多消息。有时，它始于让少数重要消息更容易被找到。",
+    "listeningTip": "盲听抓住问题—无效尝试—新办法—有限效果；带文听清at first、then、however。选三个关键短语所在句做三组影子跟读，最后用30—60秒复述。合成朗读支持暂停、继续和停止。",
+    "speakingPrompt": "In 30–60 seconds, describe the communication problem in the house, explain how the board works, and mention one problem it does not solve.",
+    "speakingPromptZh": "用30—60秒描述合租房的沟通问题，解释信息板如何使用，并指出一个它不能解决的问题。",
+    "keyPhrases": [
+      {
+        "en": "current arrangements",
+        "zh": "当前有效的安排"
+      },
+      {
+        "en": "waiting for an answer",
+        "zh": "等待答复"
+      },
+      {
+        "en": "removed the need to talk",
+        "zh": "消除了交谈的必要"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why did sending more online reminders fail?",
+        "promptZh": "为什么多发线上提醒没有解决问题？",
+        "options": [
+          "The students had no internet access.",
+          "Important messages became difficult to find among other posts.",
+          "All the students refused to read any messages.",
+          "The kitchen door was always locked."
+        ],
+        "optionsZh": [
+          "学生无法上网。",
+          "重要消息混在其他内容中，变得难以找到。",
+          "所有学生都拒绝阅读消息。",
+          "厨房门总是锁着。"
+        ],
+        "answer": 1,
+        "explanation": "第二段说明重要提醒很快淹没在笑话和照片中，问题在于信息的可查找性，并非缺少消息。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "What does the writer say about the board's effect?",
+        "promptZh": "作者如何评价信息板的效果？",
+        "options": [
+          "It ended every disagreement in the house.",
+          "It made conversation unnecessary.",
+          "It helped students find information but did not solve every problem.",
+          "It required students to keep every old note on display."
+        ],
+        "optionsZh": [
+          "它终结了合租房的所有分歧。",
+          "它使交谈变得不必要。",
+          "它帮助学生查找信息，但没有解决所有问题。",
+          "它要求学生把每张旧便条一直展示着。"
+        ],
+        "answer": 2,
+        "explanation": "最后一段同时写出好处和局限：找信息更快，但仍有分歧、仍需交流。旧便条则移入信封。",
+        "tag": "extensive"
+      }
+    ]
+  },
+  {
     "date": "2026-08-28",
     "title": "Alice and the Impossible Hallway",
     "titleZh": "爱丽丝与不可能的走廊",

@@ -971,6 +971,44 @@
       "zh": "工作人员不能在公开评论区回答个人问题。"
     }
   ],
+  "2026-10-18": [
+    {
+      "text": "This is a message for everyone living in the west building.",
+      "zh": "这是一则给西楼所有住户的通知。"
+    },
+    {
+      "text": "On Tuesday, workers will repair a water pipe in the basement.",
+      "zh": "周二，工作人员将维修地下室的一根水管。"
+    },
+    {
+      "text": "Water will be unavailable from nine until eleven in the morning.",
+      "zh": "上午九点到十一点将暂停供水。"
+    },
+    {
+      "text": "The heating will continue to work normally.",
+      "zh": "供暖将继续正常运行。"
+    },
+    {
+      "text": "Please collect any water you need before nine.",
+      "zh": "请在九点前接好所需的水。"
+    },
+    {
+      "text": "You can still use the kitchen in the east building.",
+      "zh": "你仍然可以使用东楼的厨房。"
+    },
+    {
+      "text": "The path between the buildings will remain open.",
+      "zh": "两栋楼之间的道路将保持开放。"
+    },
+    {
+      "text": "If the repair takes longer, a message will appear beside the entrance.",
+      "zh": "如果维修需要更久，入口旁会张贴一则通知。"
+    },
+    {
+      "text": "Do not assume the work is finished just because the workers leave.",
+      "zh": "不要仅因工人离开就认为维修已经结束。"
+    }
+  ],
   "2026-10-17": [
     {
       "text": "Welcome to the museum's workshop on reading food labels.",

@@ -16199,6 +16199,552 @@
       }
     ]
   },
+  "2026-10-18": {
+    "title": "居住与信息：从照片印象转向可比较的具体条件",
+    "grammarTip": "四级专项衔接：阅读辨别图片能说明什么、不能说明什么；听力抓住停水时段、正常供暖和维修通知。巩固不可数名词、定语从句、被动语态以及形容词前的be。材料是虚构语言练习，不提供租赁法律建议。",
+    "words": [
+      {
+        "word": "housing",
+        "phonetic": "/ˈhaʊzɪŋ/",
+        "pos": "n.",
+        "meaning": "住房；住房供给",
+        "phrase": "student housing",
+        "example": "The college offers housing near the campus.",
+        "exampleZh": "学院在校园附近提供住房。"
+      },
+      {
+        "word": "apartment",
+        "phonetic": "/əˈpɑːrtmənt/",
+        "pos": "n.",
+        "meaning": "公寓；一套住房",
+        "phrase": "share an apartment",
+        "example": "Two students share a small apartment.",
+        "exampleZh": "两名学生合住一套小公寓。"
+      },
+      {
+        "word": "flat",
+        "phonetic": "/flæt/",
+        "pos": "n.; adj.",
+        "meaning": "公寓（英式）；平坦的",
+        "phrase": "a flat surface",
+        "example": "Put the box on a flat surface.",
+        "exampleZh": "把箱子放在平坦的表面上。"
+      },
+      {
+        "word": "landlord",
+        "phonetic": "/ˈlændlɔːrd/",
+        "pos": "n.",
+        "meaning": "房东",
+        "phrase": "contact the landlord",
+        "example": "The tenant called the landlord about the broken door.",
+        "exampleZh": "租客就损坏的门联系了房东。"
+      },
+      {
+        "word": "tenant",
+        "phonetic": "/ˈtenənt/",
+        "pos": "n.",
+        "meaning": "租客；承租人",
+        "phrase": "a new tenant",
+        "example": "The new tenant asked where to put the rubbish.",
+        "exampleZh": "新租客询问应把垃圾放在哪里。"
+      },
+      {
+        "word": "contract",
+        "phonetic": "/ˈkɑːntrækt/",
+        "pos": "n.",
+        "meaning": "合同；契约",
+        "phrase": "sign a contract",
+        "example": "Read the contract before signing it.",
+        "exampleZh": "签字前先阅读合同。"
+      },
+      {
+        "word": "lease",
+        "phonetic": "/liːs/",
+        "pos": "n.; v.",
+        "meaning": "租约；租用；出租",
+        "phrase": "a one-year lease",
+        "example": "They discussed a one-year lease for the apartment.",
+        "exampleZh": "他们讨论了这套公寓的一年租约。"
+      },
+      {
+        "word": "furniture",
+        "phonetic": "/ˈfɜːrnɪtʃər/",
+        "pos": "n.",
+        "meaning": "家具（不可数）",
+        "phrase": "a piece of furniture",
+        "example": "The furniture fits the small room well.",
+        "exampleZh": "这些家具很适合这个小房间。"
+      },
+      {
+        "word": "furnish",
+        "phonetic": "/ˈfɜːrnɪʃ/",
+        "pos": "v.",
+        "meaning": "为……配备家具；提供",
+        "phrase": "furnish a room",
+        "example": "They used second-hand chairs to furnish the room.",
+        "exampleZh": "他们用二手椅子布置房间。"
+      },
+      {
+        "word": "spacious",
+        "phonetic": "/ˈspeɪʃəs/",
+        "pos": "adj.",
+        "meaning": "宽敞的",
+        "phrase": "a spacious kitchen",
+        "example": "The kitchen is spacious enough for four people.",
+        "exampleZh": "厨房足够宽敞，可容纳四个人。"
+      },
+      {
+        "word": "narrow",
+        "phonetic": "/ˈnæroʊ/",
+        "pos": "adj.; v.",
+        "meaning": "狭窄的；缩小",
+        "phrase": "a narrow corridor",
+        "example": "The corridor is too narrow for this table.",
+        "exampleZh": "走廊太窄，这张桌子过不去。"
+      },
+      {
+        "word": "ceiling",
+        "phonetic": "/ˈsiːlɪŋ/",
+        "pos": "n.",
+        "meaning": "天花板；上限",
+        "phrase": "a high ceiling",
+        "example": "The room has a high ceiling and large windows.",
+        "exampleZh": "这个房间天花板高，窗户也大。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "floor",
+        "phonetic": "/flɔːr/",
+        "pos": "n.",
+        "meaning": "地板；楼层",
+        "phrase": "the ground floor",
+        "example": "Please leave wet shoes on the floor by the door.",
+        "exampleZh": "请把湿鞋放在门旁的地板上。"
+      },
+      {
+        "word": "balcony",
+        "phonetic": "/ˈbælkəni/",
+        "pos": "n.",
+        "meaning": "阳台",
+        "phrase": "a small balcony",
+        "example": "She grows flowers on the balcony.",
+        "exampleZh": "她在阳台上种花。"
+      },
+      {
+        "word": "corridor",
+        "phonetic": "/ˈkɔːrɪdɔːr/",
+        "pos": "n.",
+        "meaning": "走廊；通道",
+        "phrase": "along the corridor",
+        "example": "The notice is at the end of the corridor.",
+        "exampleZh": "通知在走廊尽头。"
+      },
+      {
+        "word": "staircase",
+        "phonetic": "/ˈsterkeɪs/",
+        "pos": "n.",
+        "meaning": "楼梯",
+        "phrase": "a wooden staircase",
+        "example": "A wooden staircase leads to the upper floor.",
+        "exampleZh": "木楼梯通向楼上。"
+      },
+      {
+        "word": "basement",
+        "phonetic": "/ˈbeɪsmənt/",
+        "pos": "n.",
+        "meaning": "地下室",
+        "phrase": "in the basement",
+        "example": "The bicycles are stored in the basement.",
+        "exampleZh": "自行车存放在地下室。"
+      },
+      {
+        "word": "heating",
+        "phonetic": "/ˈhiːtɪŋ/",
+        "pos": "n.",
+        "meaning": "供暖；暖气设备",
+        "phrase": "central heating",
+        "example": "The heating keeps the rooms warm in winter.",
+        "exampleZh": "供暖设备使房间在冬天保持温暖。"
+      },
+      {
+        "word": "household",
+        "phonetic": "/ˈhaʊshoʊld/",
+        "pos": "n.; adj.",
+        "meaning": "家庭；一家人；家庭的",
+        "phrase": "household tasks",
+        "example": "They share household tasks each week.",
+        "exampleZh": "他们每周分担家务。"
+      },
+      {
+        "word": "neighborhood",
+        "phonetic": "/ˈneɪbərhʊd/",
+        "pos": "n.",
+        "meaning": "街区；社区；附近地区",
+        "phrase": "a quiet neighborhood",
+        "example": "The neighborhood is quiet after ten at night.",
+        "exampleZh": "这个街区晚上十点后很安静。"
+      },
+      {
+        "word": "maintenance",
+        "phonetic": "/ˈmeɪntənəns/",
+        "pos": "n.",
+        "meaning": "维护；保养；维修",
+        "phrase": "regular maintenance",
+        "example": "Regular maintenance helps keep the building in good condition.",
+        "exampleZh": "定期维护有助于使建筑保持良好状态。"
+      },
+      {
+        "word": "tap",
+        "phonetic": "/tæp/",
+        "pos": "n.; v.",
+        "meaning": "水龙头；轻敲；轻拍",
+        "phrase": "turn off the tap",
+        "example": "Please turn off the tap after washing your hands.",
+        "exampleZh": "洗完手后请关上水龙头。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The furniture in these rooms ___ in good condition.",
+        "promptZh": "这些房间里的家具状况良好。",
+        "options": [
+          "are",
+          "is",
+          "have",
+          "do"
+        ],
+        "optionsZh": [
+          "是（复数）",
+          "是（单数）",
+          "有",
+          "做"
+        ],
+        "answer": 1,
+        "explanation": "furniture是不可数名词，作主语时按单数处理，用is；in these rooms不改变主语的数。",
+        "tag": "agreement"
+      },
+      {
+        "prompt": "The room that faces the garden ___ spacious.",
+        "promptZh": "朝向花园的房间很宽敞。",
+        "options": [
+          "looks",
+          "look",
+          "looking",
+          "are"
+        ],
+        "optionsZh": [
+          "看起来（单数）",
+          "看起来（原形）",
+          "看起来（非谓语形式）",
+          "是（复数）"
+        ],
+        "answer": 0,
+        "explanation": "主句为The room looks spacious；that faces the garden是定语从句。faces不是主句谓语。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "The water pipe ___ on Tuesday.",
+        "promptZh": "水管将在周二维修。",
+        "options": [
+          "will repair",
+          "will be repairing",
+          "will be repaired",
+          "will repaired"
+        ],
+        "optionsZh": [
+          "将维修（主动）",
+          "将正在维修",
+          "将被维修",
+          "错误的被动形式"
+        ],
+        "answer": 2,
+        "explanation": "pipe是被维修的对象，将来时被动用will be repaired，不能漏掉be。",
+        "tag": "passive"
+      },
+      {
+        "prompt": "The two rooms ___ quiet, but one receives less daylight.",
+        "promptZh": "两个房间都很安静，但其中一个采光更少。",
+        "options": [
+          "is",
+          "do",
+          "has",
+          "are"
+        ],
+        "optionsZh": [
+          "是（单数）",
+          "做",
+          "有",
+          "是（复数）"
+        ],
+        "answer": 3,
+        "explanation": "quiet是形容词，主语two rooms为复数，因此用are quiet。",
+        "tag": "be-adjective"
+      },
+      {
+        "prompt": "Please compare the measurements ___ before moving your desk.",
+        "promptZh": "搬书桌前请仔细比较尺寸。",
+        "options": [
+          "careful",
+          "carefully",
+          "care",
+          "cares"
+        ],
+        "optionsZh": [
+          "仔细的",
+          "仔细地",
+          "关心；照顾",
+          "关心（单数）"
+        ],
+        "answer": 1,
+        "explanation": "修饰动词compare要用副词carefully，不用形容词careful。",
+        "tag": "adverb"
+      },
+      {
+        "prompt": "I ___ the information on the notice board every day.",
+        "promptZh": "我每天检查公告栏上的信息。",
+        "options": [
+          "checking",
+          "am check",
+          "check",
+          "checks"
+        ],
+        "optionsZh": [
+          "检查（非谓语形式）",
+          "错误的动词组合",
+          "检查（原形）",
+          "检查（第三人称单数）"
+        ],
+        "answer": 2,
+        "explanation": "I后面的一般现在时谓语用check。every day是时间状语；everyday则作形容词修饰名词。",
+        "tag": "everyday"
+      }
+    ],
+    "reading": {
+      "title": "A Room Is More Than a Photograph",
+      "titleZh": "房间不止是一张照片",
+      "level": "四级专项衔接 · 原创分级模拟",
+      "topic": "信息比较与个人需要",
+      "passage": "A college housing office noticed that students often chose rooms from photographs alone. Wide camera angles made small rooms look spacious, while photographs taken in bright sunshine hid how little daylight some rooms received in winter. The pictures were not necessarily false, but they did not answer every practical question.\n\nThe office invited students to design a better room description. Their first version listed floor area, furniture, heating, and travel time to campus. It also included a simple drawing with measurements. Students could check whether their own desks would fit, rather than guessing from a photograph.\n\nOne student wanted to give every room a single score. Others disagreed: a quiet neighborhood mattered greatly to some students, while a short journey mattered more to others. The final page kept the separate details instead. A useful description, the group concluded, should help people compare rooms according to their needs, not choose for them.",
+      "passageZh": "一所大学的住房办公室发现，学生经常只凭照片选房。广角镜头让小房间显得宽敞，而在明亮阳光下拍的照片掩盖了有些房间冬季采光不足的问题。这些图片未必是假的，但并没有回答所有实际问题。\n\n办公室邀请学生设计更好的房间介绍。第一版列出了地板面积、家具、供暖情况和到校园的通勤时间，还附有一幅标注尺寸的简图。学生可以检查自己的书桌是否放得下，而不用根据照片猜测。\n\n一名学生想给每个房间打一个总分。其他人不同意：有些学生非常看重安静的街区，另一些人则更看重路程短。最终页面保留了各项独立的信息。小组得出结论：有用的介绍应帮助人们根据自己的需要比较房间，而不是替他们做选择。",
+      "questions": [
+        {
+          "prompt": "What problem did the housing office notice?",
+          "promptZh": "住房办公室发现了什么问题？",
+          "options": [
+            "Students never looked at room photographs.",
+            "Students relied too heavily on photographs when choosing rooms.",
+            "Every room photograph was deliberately false.",
+            "Students refused to compare travel times."
+          ],
+          "optionsZh": [
+            "学生从不看房间照片。",
+            "学生选房时过于依赖照片。",
+            "每张房间照片都是故意造假的。",
+            "学生拒绝比较通勤时间。"
+          ],
+          "answer": 1,
+          "explanation": "首段指出学生常只凭照片选房；not necessarily false明确否定了所有照片都是假的这种绝对判断。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Why did the new description include a drawing with measurements?",
+          "promptZh": "新介绍为什么包含标注尺寸的简图？",
+          "options": [
+            "To show whether students' furniture would fit.",
+            "To make every room appear larger.",
+            "To replace all written information with pictures.",
+            "To decide which student could rent a room."
+          ],
+          "optionsZh": [
+            "帮助判断学生的家具能否放下。",
+            "让所有房间看上去更大。",
+            "用图片替代所有文字信息。",
+            "决定哪个学生可以租房。"
+          ],
+          "answer": 0,
+          "explanation": "第二段说学生可以检查自己的书桌能否放下，因此尺寸图提供具体可用的信息。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Why did some students oppose giving each room one score?",
+          "promptZh": "为什么有些学生反对给每个房间一个总分？",
+          "options": [
+            "No student cared about the neighborhood.",
+            "Scores would always be too low.",
+            "Different students valued different features.",
+            "All the rooms were exactly the same."
+          ],
+          "optionsZh": [
+            "没有学生在意街区。",
+            "分数总会太低。",
+            "不同学生看重的条件不同。",
+            "所有房间完全一样。"
+          ],
+          "answer": 2,
+          "explanation": "末段对比安静街区与较短路程，说明人们重视的条件并不相同。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What is the main purpose of the final page?",
+          "promptZh": "最终页面的主要目的是什么？",
+          "options": [
+            "To choose a room for every student.",
+            "To prove that photographs have no value.",
+            "To encourage everyone to live close to campus.",
+            "To support comparisons based on individual needs."
+          ],
+          "optionsZh": [
+            "替每个学生选房。",
+            "证明照片毫无价值。",
+            "鼓励所有人住在校园附近。",
+            "帮助人们按个人需要进行比较。"
+          ],
+          "answer": 3,
+          "explanation": "末句直接给出目的：帮助比较，而不是代替选择。文章没有否定照片的一切价值。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "Water Repairs in the West Building",
+      "titleZh": "西楼停水维修通知",
+      "tip": "先盲听抓住事件和九点到十一点；再带文区分water与heating，听清替代厨房和延期通知。选三句各做一组影子跟读，最后脱稿复述安排。",
+      "level": "四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "passage": "This is a message for everyone living in the west building. On Tuesday, workers will repair a water pipe in the basement. Water will be unavailable from nine until eleven in the morning. The heating will continue to work normally. Please collect any water you need before nine. You can still use the kitchen in the east building. The path between the buildings will remain open. If the repair takes longer, a message will appear beside the entrance. Do not assume the work is finished just because the workers leave.",
+      "passageZh": "这是一则给西楼所有住户的通知。周二，工作人员将维修地下室的一根水管。上午九点到十一点将暂停供水。供暖将继续正常运行。请在九点前接好所需的水。你仍然可以使用东楼的厨房。两栋楼之间的道路将保持开放。如果维修需要更久，入口旁会张贴一则通知。不要仅因工人离开就认为维修已经结束。",
+      "dictation": [
+        "Water will be unavailable from nine until eleven in the morning.",
+        "The heating will continue to work normally."
+      ],
+      "dictationZh": [
+        "上午九点到十一点将暂停供水。",
+        "供暖将继续正常运行。"
+      ],
+      "questions": [
+        {
+          "prompt": "Which service will be unavailable on Tuesday morning?",
+          "promptZh": "周二上午哪项服务会暂停？",
+          "options": [
+            "Heating in both buildings.",
+            "The path between the buildings.",
+            "Water in the west building.",
+            "The east building's kitchen."
+          ],
+          "optionsZh": [
+            "两栋楼的供暖。",
+            "楼间道路。",
+            "西楼供水。",
+            "东楼厨房。"
+          ],
+          "answer": 2,
+          "explanation": "通知说明九点到十一点西楼停水，供暖、道路及东楼厨房仍可正常使用。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "How can residents find out if the repair takes longer?",
+          "promptZh": "住户如何得知维修是否延长？",
+          "options": [
+            "Check for a message beside the entrance.",
+            "Wait until all workers have left.",
+            "Look at the clock in the kitchen.",
+            "Ask students to close the path."
+          ],
+          "optionsZh": [
+            "查看入口旁的通知。",
+            "等所有工人离开。",
+            "看厨房的钟。",
+            "让学生关闭道路。"
+          ],
+          "answer": 0,
+          "explanation": "原文说延期会在入口旁贴通知，并提醒不能因工人离开就推断已完成。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The drawing that shows the room's measurements is useful because students can check whether their furniture will fit.",
+      "main": "The drawing is useful because students can check whether their furniture will fit.",
+      "mainZh": "这张图很有用，因为学生可以检查自己的家具能否放得下。",
+      "translation": "标明房间尺寸的图很有用，因为学生可以检查自己的家具能否放得下。",
+      "core": [
+        "drawing",
+        "is",
+        "useful",
+        "students",
+        "can check",
+        "furniture",
+        "will fit"
+      ],
+      "keywords": [
+        "图",
+        "尺寸",
+        "有用",
+        "学生",
+        "检查",
+        "家具",
+        "放得下"
+      ],
+      "structure": "主句The drawing is useful；that shows the room's measurements修饰drawing；because引导原因状语从句；whether their furniture will fit是check的宾语从句。",
+      "grammar": [
+        "shows属于定语从句，主句谓语是is；useful前不能漏掉be。",
+        "furniture为不可数名词；whether表示能否，不是时间连接词。"
+      ],
+      "examTip": "先抽出The drawing is useful，再逐层补回定语、原因和宾语从句。",
+      "level": "四级句法衔接",
+      "topic": "定语从句、原因状语从句与宾语从句"
+    },
+    "trans": [
+      {
+        "source": "标明房间尺寸的图很有用，因为它能帮助学生比较不同的房间。",
+        "answer": "The drawing that shows the room's measurements is useful because it helps students compare different rooms.",
+        "alternative": "The drawing which shows the measurements of the room is useful because it helps students compare different rooms.",
+        "acceptedAnswers": [
+          "The drawing that shows the room's measurements is useful because it helps students compare different rooms.",
+          "The drawing which shows the measurements of the room is useful because it helps students compare different rooms."
+        ],
+        "keywords": [
+          "drawing",
+          "measurements",
+          "is useful",
+          "helps",
+          "compare"
+        ],
+        "grammar": "主句谓语is useful；that/which引导定语从句；because引导原因状语从句。",
+        "chunks": [
+          "the drawing that shows",
+          "is useful because",
+          "compare different rooms"
+        ],
+        "level": "四级衔接表达",
+        "topic": "主句与定语从句"
+      },
+      {
+        "source": "这些家具状况良好，但在搬进房间前我们需要检查尺寸。",
+        "answer": "The furniture is in good condition, but we need to check its size before moving it into the room.",
+        "alternative": "The furniture is in good condition, but we need to check its measurements before moving it into the room.",
+        "acceptedAnswers": [
+          "The furniture is in good condition, but we need to check its size before moving it into the room.",
+          "The furniture is in good condition, but we need to check its measurements before moving it into the room."
+        ],
+        "keywords": [
+          "furniture",
+          "is in good condition",
+          "need to check",
+          "before",
+          "moving"
+        ],
+        "grammar": "furniture不可数，用is和it；before作介词时后接moving。",
+        "chunks": [
+          "in good condition",
+          "need to check",
+          "before moving it"
+        ],
+        "level": "四级衔接表达",
+        "topic": "不可数名词与非谓语"
+      }
+    ]
+  },
   "2026-10-17": {
     "title": "菜单与标签：区分配料信息、选择理由和证据",
     "grammarTip": "四级专项衔接：阅读区分观察到的销量变化与原因，听力抓住地点变化、时间不变和预约要求。巩固定语从句与主句谓语、被动语态、形容词前的be和副词。餐饮场景为虚构语言练习，不提供个人饮食建议。",
