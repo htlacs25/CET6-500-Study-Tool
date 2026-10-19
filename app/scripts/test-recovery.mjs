@@ -893,6 +893,7 @@ function runtime(initial={},browserMode=false,speechOptions={}){
     id,innerHTML:'',textContent:'',value:'',disabled:false,dataset:{},style:{},hidden:false,isConnected:true,
     focus(options){this.focusOptions=options},getBoundingClientRect(){return {left:100,top:120,right:460,bottom:440,width:360,height:320}},
     querySelector(selector){const child=selector.slice(1);if(!this.innerHTML.includes('id="'+child+'"'))return null;const found=element(child);found.parentElement=this;return found},
+    querySelectorAll(){return []},
     contains(target){return target===this||target?.parentElement===this}
   });return elements.get(id)};
   const document={getElementById:element,querySelectorAll:()=>[],querySelector:()=>null,createElement:()=>({click(){},remove(){}}),head:{appendChild:s=>beacons.push(s)},addEventListener:(name,fn)=>events[name]=fn,hidden:false};

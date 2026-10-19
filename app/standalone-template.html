@@ -19,6 +19,8 @@
     .word-study{cursor:pointer;transition:border-color .15s,background-color .15s}.word-study:hover{border-color:var(--orange);background:#fffaf1}.word-study:focus-within{outline:2px solid var(--orange);outline-offset:2px}.word-study>span{min-width:0}.word-study .reveal{cursor:auto}.word-study .example{overflow-wrap:anywhere}
     .utility-bar{flex-wrap:wrap;align-items:center}.speech-status{flex:1 1 260px;margin:0;font-size:12px;line-height:1.5;color:#90452c}.speech-status[hidden]{display:none!important}
     .word .study-review-action{margin-top:12px}.word .study-review-action button{padding:7px 12px;font-size:13px;border:1px solid var(--line);border-radius:9px}.word .study-review-action button:disabled{opacity:.7;cursor:default}
+    .study-view-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:0 0 14px}.study-view-choices,.study-mask-controls,.study-mask-actions{display:flex;gap:8px;flex-wrap:wrap}.study-view-toolbar button{padding:8px 12px;font-size:14px}.study-view-choices button[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:white}.study-mask-help{flex-basis:100%;margin:0;font-size:12px;line-height:1.7;color:var(--muted)}.word-mask{align-items:stretch;gap:10px}.word-mask>span{flex:1}.word-mask .study-mask-heading{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.word-mask .study-mask-heading small{margin:0}.word-mask .study-mask-content{margin-top:10px;padding:10px;border:1px dashed var(--line);border-radius:10px;overflow-wrap:anywhere;line-height:1.7}.word-mask [data-mask-content][hidden]{display:none!important}.word-mask .study-mask-actions{margin-top:12px}.word-mask .study-mask-actions button{border:1px solid var(--line);border-radius:9px;padding:7px 10px;font-size:13px;background:#fffaf1}.word-mask .study-mask-placeholder{margin:10px 0 0;padding:12px;border:1px dashed var(--line);border-radius:10px;color:var(--muted);font-size:13px}.word-mask .study-mask-placeholder[hidden]{display:none!important}.word-mask>.study-mask-audio{align-self:flex-start;min-width:38px;min-height:38px;font-size:19px;border:1px solid var(--line);border-radius:10px}.study-view-toolbar button:focus-visible,.word-mask button:focus-visible{outline:3px solid var(--orange);outline-offset:2px}@media(max-width:620px){#studyWordView .grid{grid-template-columns:minmax(0,1fr)}.study-view-choices,.study-mask-controls{width:100%}.study-view-choices button,.study-mask-controls button{flex:1}.study-mask-controls button{font-size:13px}.study-mask-actions button{flex:1}}
+    .task-route-item{border:1px solid var(--line);border-radius:16px;background:white;overflow:hidden}.route .task-route-link{width:100%;border:0;border-radius:0;background:transparent}.task-timer{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 13px;border-top:1px solid var(--line);font-size:13px}.task-timer output{font-size:20px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--green)}.task-timer button,.route .task-timer button{padding:7px 11px;border:1px solid var(--line);border-radius:9px;background:white;font-size:13px;min-height:36px}.task-timer [data-timer-status]{flex:1;min-width:90px;color:var(--muted)}.task-timer[data-timer-state="done"] output{color:#a44c28}.task-timer-label{flex-basis:100%;font-weight:700}.task-timer-bar{border:1px solid var(--line);border-radius:18px;background:var(--card);margin-bottom:18px;overflow:hidden}.task-timer-bar .task-timer:first-child{border-top:0}.task-timer-note{margin:0;padding:9px 13px;font-size:12px;color:var(--muted);line-height:1.6}.task-timer button:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
     #aiPanel[hidden],#aiPlanNotice[hidden]{display:none!important}#aiPanel{padding:18px;max-width:1180px;margin:auto}#aiPanel iframe{width:100%;height:calc(100dvh - 230px);min-height:520px;border:1px solid var(--line);border-radius:18px;background:var(--card)}#aiPlanNotice{max-width:1144px;margin:18px auto 0;padding:14px 18px;border-left:4px solid var(--green);background:#e7efe9;white-space:pre-line;line-height:1.7}#aiPanel .ai-help{line-height:1.7;font-size:14px}#aiPanel .actions{flex-wrap:wrap}
   </style>
 </head>
@@ -49,6 +51,84 @@ __DESIGN_HOST__
     try{const raw=localStorage.getItem(USER_VOCAB_STORAGE_KEY);userVocab=normalizeUserVocabulary(raw?JSON.parse(raw):{})}catch(e){userVocabWarning='自选文章词记录读取异常，本次不会覆盖原记录；其他成绩仍可正常保存。'}
     let store={...legacyStore,...recoveryStore},today=dateKey(new Date()),selected=today,tab='plan',rate=.8;
     let ws={i:0,input:'',meaningInput:'',phase:'try',score:0,hadError:false},ls={i:0,input:'',checked:false,score:0,answers:{},submitted:false,show:false},ps={answers:{},submitted:false,sent:{},trans:{}},er={answers:{},submitted:false,shadowDone:false,retellDone:false},articleLookup=null;
+    // TASK_TIMER_BEGIN: independent UI timing; never writes learning or completion records.
+    const TASK_TIMER_STORAGE_KEY='cet4-task-countdowns-v1';
+    function createTaskCountdowns(storage,now=()=>Date.now()){
+      let data={version:1,entries:{}},warning='',writable=true;
+      function load(){
+        if(!writable)return;
+        try{
+          const raw=storage.getItem(TASK_TIMER_STORAGE_KEY);
+          if(!raw)return;
+          const value=JSON.parse(raw);
+          if(value?.version!==1||!value.entries||typeof value.entries!=='object'||Array.isArray(value.entries))throw Error('invalid timer data');
+          for(const [key,e] of Object.entries(value.entries))if(!/^\d{4}-\d{2}-\d{2}\|[a-z][a-z0-9_-]*$/i.test(key)||!e||!Number.isFinite(e.durationMs)||e.durationMs<=0||!Number.isFinite(e.remainingMs)||e.remainingMs<0||e.remainingMs>e.durationMs||(e.startedAt!==null&&(!Number.isFinite(e.startedAt)||e.startedAt<0)))throw Error('invalid timer entry');
+          data=value;
+        }catch{warning='倒计时记录暂不可用，为保护原记录已停用计时；学习内容不受影响。';writable=false}
+      }
+      function save(){if(!writable)return;try{storage.setItem(TASK_TIMER_STORAGE_KEY,JSON.stringify(data))}catch{warning='倒计时无法保存，请保留本页；刷新后可能无法恢复。';writable=false}}
+      function remaining(e,time=now()){return Math.max(0,e.remainingMs-(e.startedAt===null?0:Math.max(0,time-e.startedAt)))}
+      function settle(){const time=now();let changed=false;for(const e of Object.values(data.entries))if(e.startedAt!==null&&remaining(e,time)===0){e.remainingMs=0;e.startedAt=null;changed=true}if(changed)save()}
+      function valid(date,task){return /^\d{4}-\d{2}-\d{2}$/.test(date)&&/^[a-z][a-z0-9_-]*$/i.test(task?.id||'')&&Number.isFinite(task.minutes)&&task.minutes>0}
+      function view(date,task){
+        if(!valid(date,task))return null;
+        const e=data.entries[date+'|'+task.id],left=e?remaining(e):task.minutes*60000;
+        return {remainingMs:left,state:left===0?'done':e?.startedAt!=null?'running':e?'paused':'ready',warning};
+      }
+      function act(date,task){
+        if(!valid(date,task)||warning)return;
+        load();if(warning)return;settle();
+        const key=date+'|'+task.id,time=now(),prior=data.entries[key];
+        if(prior&&remaining(prior,time)===0)return; // An elapsed task cannot be restarted.
+        if(prior?.startedAt!=null){prior.remainingMs=remaining(prior,time);prior.startedAt=null}
+        else{
+          for(const e of Object.values(data.entries))if(e.startedAt!==null){e.remainingMs=remaining(e,time);e.startedAt=null}
+          const e=prior||{durationMs:task.minutes*60000,remainingMs:task.minutes*60000,startedAt:null};
+          e.startedAt=time;data.entries[key]=e;
+        }
+        save();
+      }
+      load();settle();
+      return {view,act,refresh(){load();settle()}};
+    }
+    let taskCountdowns=null;
+    function taskTimerManager(){
+      if(!taskCountdowns){let storage;try{storage=localStorage}catch{}taskCountdowns=createTaskCountdowns(storage)}
+      return taskCountdowns;
+    }
+    function taskTimerHtml(task,withLabel=false){
+      return '<div class="task-timer" data-task-timer="'+esc(task.id)+'" data-timer-date="'+esc(selected)+'" data-timer-minutes="'+task.minutes+'">'+(withLabel?'<span class="task-timer-label">'+esc(task.label)+'</span>':'')+'<output aria-label="'+esc(task.label)+'剩余时间" data-timer-clock></output><span role="status" data-timer-status></span><button type="button" data-timer-action>开始</button></div>';
+    }
+    function updateTaskTimerDisplays(){
+      const manager=taskTimerManager();manager.refresh();
+      document.querySelectorAll('[data-task-timer]').forEach(host=>{
+        const task={id:host.dataset.taskTimer,minutes:Number(host.dataset.timerMinutes)},state=manager.view(host.dataset.timerDate,task);if(!state)return;
+        const seconds=Math.ceil(state.remainingMs/1000),clock=host.querySelector('[data-timer-clock]'),status=host.querySelector('[data-timer-status]'),button=host.querySelector('[data-timer-action]');
+        if(!clock||!status||!button)return;
+        clock.textContent=String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0');
+        host.dataset.timerState=state.state;
+        const message=state.warning||(state.state==='done'?'时间到，可继续学习，不自动标记完成':state.state==='running'?'计时中':state.state==='paused'?'已暂停':'尚未开始');
+        if(status.textContent!==message)status.textContent=message;
+        button.textContent=state.state==='running'?'暂停':state.state==='paused'?'继续':state.state==='done'?'已结束':'开始';
+        button.disabled=state.state==='done'||Boolean(state.warning);
+        button.onclick=event=>{event?.stopPropagation?.();manager.act(host.dataset.timerDate,task);updateTaskTimerDisplays()};
+      });
+    }
+    function bindTaskTimers(L){
+      if(!Array.isArray(L.tasks)||L.unprepared)return;
+      if(tab!=='plan'){
+        const tasks=L.tasks.filter(t=>t.tab===tab);
+        if(tasks.length&&typeof app.insertAdjacentHTML==='function')app.insertAdjacentHTML('afterbegin','<section class="task-timer-bar" aria-label="当前任务倒计时">'+tasks.map(t=>taskTimerHtml(t,true)).join('')+'<p class="task-timer-note">可暂停、继续，不支持重置。切页或关闭页面仍计时；开始其他任务会暂停原任务。</p></section>');
+      }
+      updateTaskTimerDisplays();
+    }
+    function installTaskTimers(){
+      setInterval(updateTaskTimerDisplays,1000);
+      document.addEventListener('visibilitychange',updateTaskTimerDisplays);
+      window.addEventListener('pageshow',updateTaskTimerDisplays);
+      window.addEventListener('storage',event=>{if(event.key===TASK_TIMER_STORAGE_KEY)updateTaskTimerDisplays()});
+    }
+    // TASK_TIMER_END
     function dateKey(d){const p=Object.fromEntries(new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(d).map(x=>[x.type,x.value]));return `${p.year}-${p.month}-${p.day}`}
     function parse(k){const [y,m,d]=k.split('-').map(Number);return {y,m,d,u:Date.UTC(y,m-1,d)}}function add(k,n){const x=new Date(parse(k).u+n*864e5);return `${x.getUTCFullYear()}-${String(x.getUTCMonth()+1).padStart(2,'0')}-${String(x.getUTCDate()).padStart(2,'0')}`}
     function day(k){return Math.max(0,Math.floor((parse(k).u-START)/864e5))}function at(i){return DATA.WORDS[((i%DATA.WORDS.length)+DATA.WORDS.length)%DATA.WORDS.length]}function uniq(a){return [...new Set(a)]}function word(n){return RECOVERY.words.find(x=>x.word.toLowerCase()===n.toLowerCase())||DATA.WORDS.find(x=>x.word.toLowerCase()===n.toLowerCase())}function norm(s){return normEnglish(s)}function normZh(s){return String(s).replace(/[\s；;，,。、：:]/g,'')}function meaningOk(input,meaning){const n=normZh(input);return n.length>0&&String(meaning).split(/[；;、，,]/).map(normZh).filter(Boolean).some(x=>n.includes(x)||x.includes(n)&&n.length>=2)}function spellHint(s){return s.length<=2?s[0]+' _':`${s[0]} ${Array.from({length:s.length-2},()=>'_').join(' ')} ${s.at(-1)}（${s.length}个字母）`}function meaningHint(s){const x=String(s).split(/[；;、，,]/)[0];return `${x[0]}…（核心义共${x.length}个汉字）`}function tokens(s){return new Set(norm(s).split(' ').filter(x=>x.length>2))}function overlap(a,b){const A=tokens(a),B=tokens(b);return B.size?[...B].filter(x=>A.has(x)).length/B.size:0}function hiddenZh(text,label='查看隐藏中文'){return text?`<details class="reveal"><summary>${label}</summary><p class="bilingual">${esc(text)}</p></details>`:''}function preparedLessons(){return[...RECOVERY.lessons,...Object.values(RECOVERY.datedLessons||{})]}function sentenceZh(text){for(const l of preparedLessons()){const item=fullDictationItems(l.listening).find(x=>x.text===text);if(item)return item.zh||l.listening.passageZh}for(let i=0;i<DATA.LISTENINGS.length;i++){const n=DATA.LISTENINGS[i].dictation.indexOf(text);if(n>=0)return DATA.LISTENING_SUPPORT[i].dictationZh[n]}return''}function questionZh(text){for(const l of preparedLessons()){const q=[...l.grammar,...l.reading.questions,...l.listening.questions,...(l.extensive?.questions||[])].find(q=>q.prompt===text);if(q)return q.promptZh}for(const r of DATA.CET_READINGS){const q=r.questions.find(x=>x.prompt===text);if(q)return q.promptZh}for(let i=0;i<DATA.LISTENINGS.length;i++){const n=DATA.LISTENINGS[i].questions.findIndex(x=>x.prompt===text);if(n>=0)return DATA.LISTENING_QUESTION_ZH[i][n].promptZh}const n=DATA.GRAMMAR_QUESTIONS.findIndex(x=>x.prompt===text);return n>=0?DATA.GRAMMAR_ZH[n]:''}
@@ -74,6 +154,52 @@ __DESIGN_HOST__
       };
     }
     function bindSpeechButton(button){button.onclick=()=>button.closest?.('[data-study-word]')?speakStudyWord(button.dataset.speak):speak(button.dataset.speak)}
+    // This independent display preference never changes a course, learning record, or dictation draft.
+    const STUDY_WORD_VIEW_KEY='cet4-word-card-view-v1';
+    function readStudyWordView(){try{return localStorage.getItem(STUDY_WORD_VIEW_KEY)==='masked'?'masked':'normal'}catch{return'normal'}}
+    let studyWordView=readStudyWordView(),studyMaskDate='',studyMaskDefaults={en:false,zh:false};
+    const studyMaskOverrides=new Map();
+    function ensureStudyMaskDate(){if(studyMaskDate!==selected){studyMaskDate=selected;studyMaskDefaults={en:false,zh:false};studyMaskOverrides.clear()}}
+    function studyWordMaskState(w){ensureStudyMaskDate();return {...studyMaskDefaults,...studyMaskOverrides.get(w.word)}}
+    function maskedStudyWordCard(w,isReview,index){
+      const state=studyWordMaskState(w),id='study-mask-'+index,enrolled=Boolean(userVocab.items[w.word]?.active&&userVocab.items[w.word]?.reviewOnly);
+      return '<div class="word word-study word-mask" data-study-word="'+esc(w.word)+'" data-mask-index="'+index+'" title="点击卡片听读音；显隐和加入复习按钮不会触发朗读"><span><span class="study-mask-heading"><span class="pill '+(isReview?'source-review':'source-new')+'">'+(isReview?'复习/激活':'新/激活')+'</span><small>第 '+(index+1)+' 词</small></span><p class="study-mask-placeholder"'+(state.en||state.zh?' hidden':'')+'>先听读音，回想拼写与含义</p><div id="'+id+'-en" class="study-mask-content" data-mask-content="en"'+(state.en?'':' hidden')+' lang="en"><b>'+esc(w.word)+'</b><small>'+esc(w.phonetic)+'</small>'+wordPosHtml(w)+(w.example?'<p class="example">'+esc(w.example)+'</p>':'')+'</div><div id="'+id+'-zh" class="study-mask-content bilingual" data-mask-content="zh"'+(state.zh?'':' hidden')+' lang="zh-CN">'+esc(w.meaning)+(w.exampleZh?'<p class="example">例句：'+esc(w.exampleZh)+'</p>':'')+'</div><div class="study-mask-actions"><button type="button" data-mask-toggle="en" aria-controls="'+id+'-en" aria-expanded="'+state.en+'">'+(state.en?'隐藏英文':'查看英文')+'</button><button type="button" data-mask-toggle="zh" aria-controls="'+id+'-zh" aria-expanded="'+state.zh+'">'+(state.zh?'隐藏中文':'查看中文')+'</button></div><div class="study-review-action"><button type="button" class="secondary" data-study-review="'+esc(w.word)+'" data-review-entry="'+esc(JSON.stringify({word:w.word,meaning:w.meaning,phonetic:w.phonetic,phrase:w.phrase}))+'"'+(enrolled?' disabled':'')+'>'+(enrolled?'已加入复习':'加入复习')+'</button></div></span><button type="button" class="study-mask-audio" aria-label="听第 '+(index+1)+' 词的读音" data-speak="'+esc(w.word)+'">▶</button></div>';
+    }
+    function studyWordListHtml(L){
+      ensureStudyMaskDate();
+      const masked=studyWordView==='masked';
+      return '<div class="study-view-toolbar"><div class="study-view-choices" role="group" aria-label="背单词显示版本"><button type="button" class="secondary" data-study-view="normal" aria-pressed="'+!masked+'">普通版</button><button type="button" class="secondary" data-study-view="masked" aria-pressed="'+masked+'">遮挡自测版</button></div>'+(masked?'<div class="study-mask-controls" role="group" aria-label="整组词卡显隐"><button type="button" class="secondary" data-mask-all="en">'+(studyMaskDefaults.en?'隐藏全部英文':'显示全部英文')+'</button><button type="button" class="secondary" data-mask-all="zh">'+(studyMaskDefaults.zh?'隐藏全部中文':'显示全部中文')+'</button></div><p class="study-mask-help">中英可分别隐藏。点卡片听读音，再按需查看；自由回想不计分，不改变默写和复习安排。</p>':'')+'</div><div class="grid" data-design-word-grid>'+L.all.map((w,i)=>masked?maskedStudyWordCard(w,L.rev.some(x=>x.word===w.word),i):studyWordCard(w,L.rev.some(x=>x.word===w.word))).join('')+'</div>';
+    }
+    function updateStudyMaskCard(card){
+      const state=studyWordMaskState({word:card.dataset.studyWord});
+      for(const language of ['en','zh']){
+        card.querySelector('[data-mask-content="'+language+'"]').hidden=!state[language];
+        const button=card.querySelector('[data-mask-toggle="'+language+'"]');button.setAttribute('aria-expanded',String(state[language]));button.textContent=(state[language]?'隐藏':'查看')+(language==='en'?'英文':'中文');
+      }
+      card.querySelector('.study-mask-placeholder').hidden=state.en||state.zh;
+    }
+    function bindStudyWordView(L){
+      const host=document.getElementById('studyWordView');if(!host)return;
+      host.querySelectorAll('[data-study-word]').forEach(bindStudyWordCard);
+      host.querySelectorAll('[data-study-review]').forEach(bindStudyReviewButton);
+      host.querySelectorAll('[data-speak]').forEach(bindSpeechButton);
+      host.querySelectorAll('[data-study-view]').forEach(button=>button.onclick=()=>{
+        const next=button.dataset.studyView;if(next===studyWordView)return;
+        studyWordView=next;
+        if(next==='masked'){studyMaskDefaults={en:false,zh:false};studyMaskOverrides.clear()}
+        try{localStorage.setItem(STUDY_WORD_VIEW_KEY,next)}catch{/* The view still works when storage is unavailable. */}
+        host.innerHTML=studyWordListHtml(L);bindStudyWordView(L);host.querySelector('[data-study-view="'+next+'"]')?.focus({preventScroll:true});
+      });
+      host.querySelectorAll('[data-mask-toggle]').forEach(button=>button.onclick=e=>{
+        e?.stopPropagation?.();const card=button.closest('[data-study-word]'),state=studyWordMaskState({word:card.dataset.studyWord});
+        state[button.dataset.maskToggle]=!state[button.dataset.maskToggle];studyMaskOverrides.set(card.dataset.studyWord,state);updateStudyMaskCard(card);
+      });
+      host.querySelectorAll('[data-mask-all]').forEach(button=>button.onclick=()=>{
+        const language=button.dataset.maskAll;studyMaskDefaults[language]=!studyMaskDefaults[language];
+        for(const [key,state] of studyMaskOverrides){delete state[language];if(!Object.keys(state).length)studyMaskOverrides.delete(key)}
+        host.querySelectorAll('[data-mask-index]').forEach(updateStudyMaskCard);button.textContent=(studyMaskDefaults[language]?'隐藏全部':'显示全部')+(language==='en'?'英文':'中文');
+      });
+    }
     function articleEntry(surface){
       const key=String(surface||'').toLowerCase().replace(/[’‘]/g,"'"),entries=RECOVERY.articleGlossary?.entries||{},get=k=>Object.hasOwn(entries,k)&&String(entries[k]?.meaning||'').trim()?entries[k]:null,display=get(key)||get(key.endsWith("'s")?key.slice(0,-2):key);
       if(!display)return null;
@@ -382,12 +508,12 @@ __DESIGN_HOST__
     function renderPlan(L){
       if(!L.recovery){legacyRenderPlan(L);return}
       const p=progress(),minutes=L.tasks.reduce((n,t)=>n+t.minutes,0);
-      app.innerHTML='<div class="hero"><section class="dark"><span class="pill">'+esc(selected)+' · 目标：2026年12月13日四级550分</span><h1>'+esc(L.title)+'</h1><p>训练第 '+L.recoveryDay+' 天 · '+esc(L.trainingName)+'<br>阅读：'+esc(L.reading.titleZh||L.reading.title)+' · 听力：'+esc(L.listening.titleZh||L.listening.title)+'<br>泛读：'+esc(L.extensive.titleZh||L.extensive.title)+'</p><p>'+ (L.weekly?'今天是阶段小测：共'+L.all.length+'词，不新增课程词；'+(L.nw.length?'先学'+L.nw.length+'个自选文章词，其余复习。':'用主动回忆检验旧知识。'):'今天 '+L.nw.length+' 个新/激活词＋'+L.rev.length+'个复习词；先新词、后复习，两种模式组内乱序。')+'</p><div class="stats"><div class="stat"><b>'+minutes+'</b><small>计划分钟</small></div><div class="stat"><b>'+p.wordErrors.length+'</b><small>今日错词</small></div><div class="stat"><b>'+p.completed.filter(x=>L.tasks.some(t=>t.id===x)).length+'/'+L.taskCount+'</b><small>完成模块</small></div></div></section><section class="card"><h2>按顺序完成</h2><div class="route" data-design-task-list>'+L.tasks.map((t,i)=>'<button data-design-task="'+(t.id==='sentences'?'sentence':t.id)+'" data-go="'+t.tab+'"><b>'+(p.completed.includes(t.id)?'✓ ':'□ ')+(i+1)+'. '+esc(t.label)+'</b><small>'+t.minutes+'分钟</small></button>').join('')+'</div></section></div>'+
+      app.innerHTML='<div class="hero"><section class="dark"><span class="pill">'+esc(selected)+' · 目标：2026年12月13日四级550分</span><h1>'+esc(L.title)+'</h1><p>训练第 '+L.recoveryDay+' 天 · '+esc(L.trainingName)+'<br>阅读：'+esc(L.reading.titleZh||L.reading.title)+' · 听力：'+esc(L.listening.titleZh||L.listening.title)+'<br>泛读：'+esc(L.extensive.titleZh||L.extensive.title)+'</p><p>'+ (L.weekly?'今天是阶段小测：共'+L.all.length+'词，不新增课程词；'+(L.nw.length?'先学'+L.nw.length+'个自选文章词，其余复习。':'用主动回忆检验旧知识。'):'今天 '+L.nw.length+' 个新/激活词＋'+L.rev.length+'个复习词；先新词、后复习，两种模式组内乱序。')+'</p><div class="stats"><div class="stat"><b>'+minutes+'</b><small>计划分钟</small></div><div class="stat"><b>'+p.wordErrors.length+'</b><small>今日错词</small></div><div class="stat"><b>'+p.completed.filter(x=>L.tasks.some(t=>t.id===x)).length+'/'+L.taskCount+'</b><small>完成模块</small></div></div></section><section class="card"><h2>按顺序完成</h2><div class="route" data-design-task-list>'+L.tasks.map((t,i)=>'<div class="task-route-item" data-design-task="'+(t.id==='sentences'?'sentence':t.id)+'"><button type="button" class="task-route-link" data-go="'+t.tab+'"><b>'+(p.completed.includes(t.id)?'✓ ':'□ ')+(i+1)+'. '+esc(t.label)+'</b><small>'+t.minutes+'分钟</small></button>'+taskTimerHtml(t)+'</div>').join('')+'</div><p class="task-timer-note">手动开始，可暂停、继续，不支持重置。开始另一个任务会暂停原任务；时间到不影响作答。</p></section></div>'+
       dailySummary(L)+'<section class="card section"><h2>今天先掌握这一点</h2><div class="tip" data-design-section="studyTip">'+esc(L.grammarTip)+'</div><p class="muted">首次答案提交后自动保存；修改与重做不覆盖首次成绩。长句/表达使用规则初判，合理同义答案可共同复核。</p><p class="muted">'+esc(L.sourceNote)+'</p>'+(storageWarning?'<div class="answer bad">'+esc(storageWarning)+'</div>':'')+(userVocabWarning?'<div class="answer bad">'+esc(userVocabWarning)+'</div>':'')+'</section>'+
       '<section class="card section" data-design-section="roadmap"><h2>按12月13日目标日倒排的路线</h2><div class="roadmap">'+ROADMAP.map(r=>'<div class="record '+(r.name===L.phase.name?'current-phase':'')+'"><small>'+r.from.slice(5)+'—'+r.to.slice(5)+'</small><b>'+r.name+'</b><p>'+r.goal+'</p></div>').join('')+'</div><p>日历阶段：'+L.phase.name+'；实际练习难度：'+L.trainingName+'。</p><div class="tip">'+(L.recoveryDay<=14?'前两周先恢复基本句法和辨音；之后提高到四级常考词汇与材料，不因基础弱就一直停留在简单题。':esc(L.gate.message))+'</div><p class="mini muted">衔接参考：近7天至少3天完成词汇、听力理解、语法和阅读；词汇与语法≥80%，阅读≥75%，听力理解≥70%。这是练习调整参考，不是考试分数预测。12月13日为你指定的备考目标日；550分是冲刺目标，不作保证。</p>'+(selected>='2026-11-01'?'<p class="tip">当前网页内容是模拟练习，不是整套真题或正式模考。该阶段的四级真题与整卷需核验来源后准备。</p>':'')+'</section>'+
-      '<section class="card section" data-design-section="wordList"><div class="topline"><div><span class="pill">固定 '+L.all.length+' 词</span><h2>今天的具体词表</h2><p class="muted">'+esc(L.wordReviewRule)+'</p><p class="mini muted">点击单词卡片即可听发音；展开中文或选择文字不会自动播放。</p></div><button class="primary" data-go="words">进入双向默写</button></div><div class="grid" data-design-word-grid>'+L.all.map(w=>studyWordCard(w,L.rev.some(x=>x.word===w.word))).join('')+'</div></section>'+
+      '<section class="card section" data-design-section="wordList"><div class="topline"><div><span class="pill">固定 '+L.all.length+' 词</span><h2>今天的具体词表</h2><p class="muted">'+esc(L.wordReviewRule)+'</p><p class="mini muted">点击单词卡片即可听发音；展开中文或选择文字不会自动播放。</p></div><button class="primary" data-go="words">进入双向默写</button></div><div id="studyWordView">'+studyWordListHtml(L)+'</div></section>'+
       vocabularyScheduleNote(L)+'<details class="section" data-design-section="fallback"><summary>60分钟保底版（替换完整计划，不叠加）</summary><p>词汇15分钟：先做10道主动回忆。核心听力15分钟：完成2题理解，并从全文听写第1段开始。阅读10分钟：读文章并做2题。泛读口语15分钟：盲听一遍、跟读3个短语、用自己的话复述30—60秒。复盘5分钟：重测错词、补充难点。其他未完成项保留，不为完成率随便选答案。</p></details>';
-      bindCommon();
+      bindCommon();bindTaskTimers(L);bindStudyWordView(L);
     }
     function ensureWordPractice(L){
       if(wordPractice?.version===2&&wordPractice.courseKey===courseKey(L)&&wordPractice.daily?.order?.length){
@@ -491,7 +617,7 @@ __DESIGN_HOST__
         '<section class="card section"><h2>今日错词重默</h2><p class="muted">'+(mistakes.length?'所选日期 '+selected+' 共记录'+mistakes.length+'个错词。点击后就在下面重默，不打开新窗口；原来的全部默写进度会保留。':'今天还没有记录到错词。默写出错后，这里会自动出现重练入口。')+'</p><div class="actions" style="flex-wrap:wrap"><button id="startWrongRound" class="primary" '+(!mistakes.length||retry&&!retry.done?'disabled':'')+'>'+(retry&&!retry.done?'正在下方重默':retry?'再默一轮错词（重新乱序）':'开始今日错词重默')+'</button><button id="reshuffleAllWords" class="secondary" '+(!ws.done?'disabled':'')+'>全部再默一遍（重新乱序）</button></div>'+
         (retry?'<div class="practice-block" style="margin-top:18px">'+wordQuestionHtml(retry,'retry',L)+'</div>':'')+'<p class="mini muted">错词重默单独记录本轮结果，不改首次正确率，不清除历史错误，也不额外推进当天的间隔复习。</p></section>';
       app.innerHTML+='<section class="card section" id="memoryReviewPanel"></section>';
-      bindCommon();bindWordRound(L,ws,'daily');bindWordRound(L,retry,'retry');renderMemoryReview(L);
+      bindCommon();bindTaskTimers(L);bindWordRound(L,ws,'daily');bindWordRound(L,retry,'retry');renderMemoryReview(L);
       document.getElementById('rateInput').oninput=e=>{rate=+e.target.value;document.getElementById('rateLabel').textContent=rate.toFixed(1)+'×';persistDraft()};
       document.getElementById('startWrongRound').onclick=()=>{
         if(!mistakes.length||wordPractice.retry&&!wordPractice.retry.done)return;
@@ -507,7 +633,7 @@ __DESIGN_HOST__
       const X=L.listening,items=fullDictationItems(X),index=Math.min(ls.i,Math.max(0,items.length-1)),item=items[index]||{text:'',zh:''},s=item.text,sZh=item.zh;
       ls.i=index;
       app.innerHTML=`<section class="dark"><div class="levelrow"><span class="pill">${X.level}</span><span class="pill">四级常考听力主题</span></div><h1>${esc(X.title)}</h1>${hiddenZh(X.titleZh,'查看标题中文')}<p>先听全文抓大意，再完成理解题和全文分段听写。今天的原文全部进入听写，共${items.length}段。</p><div class="tip">${esc(X.tip)}</div><div class="speedbox"><label>播放语速 <b id="listenRateLabel">${rate.toFixed(1)}×</b><input id="listenRate" type="range" min=".5" max="1.3" step=".1" value="${rate}"></label><small>建议：首遍0.8×抓主旨，第二遍1.0×做题，复盘时1.1×跟读。</small></div><div class="actions"><button class="primary" data-speak="${esc(X.passage)}">▶ 播放全文</button><button id="showText" class="secondary">${ls.show?'隐藏英文原文':'完成后查看英文原文'}</button></div>${audioControls()}${ls.show?`<div class="answer" style="color:#15231d"><p class="article-help">原文中的任意英文词都可以点：先只显示该词中文，再由你决定是否加入后续背诵。</p>${parallelArticle(X.passage,X.passageZh,'listening')}</div>`:''}</section><div class="two section"><section class="card"><h2>全文分段听写 ${index+1}/${items.length}</h2><p class="muted">每段都是当天听力全文的一部分；可反复播放、随时暂停或继续，并在网页内输入。</p><button class="audio" data-speak="${esc(s)}">▶</button>${audioControls()}<textarea id="listenInput" class="textinput" placeholder="输入听到的完整英文内容">${esc(ls.input)}</textarea>${ls.checked?`<div class="answer ${norm(ls.input)===norm(s)?'good':'bad'}"><b>${norm(ls.input)===norm(s)?'完全正确':'请对照修改：'}</b>${parallelArticle(s,sZh,'listening',[],'dictation-'+index)}<p class="mini muted">听写漏词不会自动加入单词复习；需要时点击参考中的词，再自己选择。</p></div>`:''}<div class="actions"><button id="checkListen" class="secondary" ${!ls.input||ls.checked?'disabled':''}>核对并修改</button><button id="nextListen" class="primary" ${!ls.checked?'disabled':''}>${index===items.length-1?'保存全文听写成绩':'下一段'}</button></div></section><section>${X.questions.map((q,i)=>qHtml(q,i,ls.answers,ls.submitted,'lq')).join('')}<button id="submitListen" class="primary full" ${ls.submitted||Object.keys(ls.answers).length!==X.questions.length?'disabled':''}>提交并查看听力答案</button></section></div>`;
-      bindCommon();
+      bindCommon();bindTaskTimers(L);
       document.getElementById('listenRate').oninput=e=>{rate=+e.target.value;document.getElementById('listenRateLabel').textContent=rate.toFixed(1)+'×';persistDraft()};
       document.getElementById('showText').onclick=()=>{ls.show=!ls.show;persistDraft();renderListening(L)};
       document.getElementById('listenInput').oninput=e=>{ls.input=e.target.value;ls.checked=false;document.getElementById('checkListen').disabled=!ls.input;persistDraft()};
@@ -525,7 +651,7 @@ __DESIGN_HOST__
       <section class="card section"><h2>四步听说提升法</h2><div class="method-grid"><div class="method-step"><b>1 · 盲听</b><span>先不看正文听一遍，只抓人物、地点、转折和结论。</span></div><div class="method-step"><b>2 · 精读</b><span>看正文核对；不认识的词点一下，只把真正需要的词加入复习。</span></div><div class="method-step"><b>3 · 影子跟读</b><span>播放3个关键短语，落后半拍模仿重音和连读，每个3遍。</span></div><div class="method-step"><b>4 · 复述</b><span>关掉中文，用自己的句子说30—60秒；信息完整比口音更重要。</span></div></div></section>
       <section class="card section"><div class="topline"><div><span class="pill">每日加读</span><h2>${esc(X.title)}</h2></div><button class="secondary" data-speak="${esc(X.text)}">▶ 再听正文</button></div><p class="article-help">正文中的任意英文词都可点击查看中文；查看不会自动加入后续背诵。</p>${parallelArticle(X.text,X.textZh,'extensive')}<details><summary>查看材料说明</summary><p>${esc(X.sourceNote)}</p><p>${X.sourceType==='public-domain adaptation'?'中文说明：本文根据公版名著重新编写，控制在四级词汇和句式范围内，并非复制原作长段落。':'中文说明：本文是为四级学习原创的报刊风格短文，不是实时新闻或转载。'}</p></details></section>
       <div class="two section"><section>${questions.map((q,i)=>qHtml(q,i,er.answers,er.submitted,'eq')).join('')}<button id="submitExtensive" class="primary full" ${er.submitted||Object.keys(er.answers).length!==questions.length?'disabled':''}>提交2题并查看答案</button></section><section class="card"><h2>跟读与复述</h2><div class="phrase-grid">${X.keyPhrases.map((x,i)=>`<div class="phrase-card"><b>${i+1}. ${esc(x.en)}</b>${hiddenZh(x.zh,'查看短语中文')}<button class="secondary full" data-speak="${esc(x.en)}">▶ 跟读3遍</button></div>`).join('')}</div><button id="shadowDone" class="${er.shadowDone?'primary':'secondary'} full" style="margin-top:12px">${er.shadowDone?'✓ 已完成3组影子跟读':'完成后点：3组短语各跟读3遍'}</button><article class="practice-block"><span class="pill">30—60秒脱稿</span><h3>${esc(X.speakingPrompt)}</h3>${hiddenZh(X.speakingPromptZh,'查看口语任务中文')}<p class="muted">不用写全文，也不要求像英国人一样的口音。先说清“发生了什么—为什么—我的看法”，卡住时换简单词继续。</p><button id="retellDone" class="${er.retellDone?'primary':'secondary'} full">${er.retellDone?'✓ 已完成脱稿复述':'说完后点：我已复述30—60秒'}</button></article><div class="answer ${er.submitted&&er.shadowDone&&er.retellDone?'good':''}">${er.submitted&&er.shadowDone&&er.retellDone?'本篇听、读、跟读和复述已完成。':'完成理解题、跟读和复述后，本模块才计为完成。'}</div></section></div>`;
-      bindCommon();
+      bindCommon();bindTaskTimers(L);
       document.getElementById('extensiveRate').oninput=e=>{rate=+e.target.value;document.getElementById('extensiveRateLabel').textContent=rate.toFixed(1)+'×';persistDraft()};
       document.querySelectorAll('[data-eq]').forEach(b=>b.onclick=()=>{if(er.submitted)return;er.answers[b.dataset.q]=+b.dataset.eq;persistDraft();renderExtensive(L)});
       document.getElementById('submitExtensive').onclick=()=>{if(er.submitted)return;questions.forEach((q,i)=>record('extensive',i,er.answers[i]===q.answer,{label:'泛读：'+q.prompt,tag:'extensive',answer:q.options[er.answers[i]],expected:q.options[q.answer]}));er.submitted=true;markExtensive();persistDraft();renderExtensive(L)};
@@ -546,7 +672,7 @@ __DESIGN_HOST__
       '<button class="primary" data-check-trans="'+i+'" '+(!s.input?'disabled':'')+'>'+(s.checked?'订正后核对（不改首次成绩）':'提交并查看解析')+'</button></article>';
     }
     function renderPractice(L){const Q=questions(L);app.innerHTML=`<section class="card"><div class="levelrow"><span class="pill">${L.reading.level}</span><span class="pill">${esc(L.reading.topic)}</span><span class="pill">原创分级模拟（非真题）</span></div><h2>${esc(L.reading.title)}</h2>${hiddenZh(L.reading.titleZh,'查看标题中文')}<p class="article-help">文章中不认识的英文词可以逐个点击查看中文；查看不会自动加入复习。</p>${parallelArticle(L.reading.passage,L.reading.passageZh,'reading')}</section><section><div class="tip">${esc(L.grammarTip||'先独立完成，再核对解析。')}</div>${Q.map((q,i)=>qHtml(q,i,ps.answers,ps.submitted)).join('')}<button id="submitPractice" class="primary full" ${ps.submitted||Object.keys(ps.answers).length!==Q.length?'disabled':''}>全部做完，提交并查看答案</button></section><div class="two section"><section class="card"><span class="pill">每天${L.sent.length}句</span><h2>句子：找主干＋理解＋纠错</h2><p class="muted">先独立写主干和译文。系统会检查主干词组重合度、中文关键点，并给出针对性修改。</p>${L.sent.map(sentenceHtml).join('')}</section><section class="card"><span class="pill">每天2句</span><h2>表达：完整句子＋规则检查</h2><p class="muted">答案不要求逐字相同；系统检查关键表达与基础结构，合理同义句可共同复核。</p>${L.trans.map(translationHtml).join('')}</section></div>`;
-      bindCommon();
+      bindCommon();bindTaskTimers(L);
       document.querySelectorAll('[data-pq]').forEach(b=>b.onclick=()=>{if(ps.submitted)return;ps.answers[b.dataset.q]=+b.dataset.pq;persistDraft();renderPractice(L)});
       document.getElementById('submitPractice').onclick=()=>{if(ps.submitted)return;Q.forEach((q,i)=>record(q.section==='语法'?'grammar':q.section==='阅读'?'reading':'vocab',i,ps.answers[i]===q.answer,{label:q.prompt,tag:q.tag||q.section,answer:q.options[ps.answers[i]],expected:q.options[q.answer],targetWord:q.targetWord}));ps.submitted=true;if(L.recovery)mark('grammar');mark('reading');persistDraft();renderPractice(L)};
       document.querySelectorAll('[data-sent-main]').forEach(e=>e.oninput=()=>{const i=+e.dataset.sentMain;ps.sent[i]={...(ps.sent[i]||{}),main:e.value,checked:false};document.querySelector('[data-check-sent="'+i+'"]').disabled=!e.value||!document.querySelector('[data-sent-trans="'+i+'"]').value;persistDraft()});
@@ -570,7 +696,7 @@ __DESIGN_HOST__
       '<section class="card section"><h2>2026-08-28 对话摸底（单独保留）</h2><p>'+esc(diag.source)+'</p><p>基础客观小项：7/8（87.5%）；讲解后巩固：3/3，另有拼写错误 imporve → improve。样本很小，不代表整体等级，也不等于四级分数。</p><p>'+esc(diag.listening)+'</p><ul>'+diag.focus.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>'+diag.examples.map(x=>'<details><summary>查看对话中的原句与订正</summary><p>原句：'+esc(x.input)+'</p><p>订正：'+esc(x.answer)+'</p>'+hiddenZh(x.zh,'查看中文')+'<p>'+esc(x.explanation)+'</p></details>').join('')+'</section>'+
       '<section class="card section"><h2>'+selected+' 错题与听写记录</h2>'+p.errorDetails.map(e=>'<details><summary>'+esc(e.label)+'</summary><p>你的首次答案：'+esc(e.answer)+'</p><p>参考：'+esc(e.expected)+'</p>'+hiddenZh(questionZh(e.label)||sentenceZh(e.expected),'查看中文')+'</details>').join('')+(p.errorDetails.length?'':'<p class="muted">本版暂无逐题错误记录；未读取的历史数据不视为零分。</p>')+(p.listeningErrors.length?'<h3>听写错句</h3>'+p.listeningErrors.map(x=>'<div class="answer"><button class="secondary" data-speak="'+esc(x)+'">▶ '+esc(x)+'</button>'+hiddenZh(sentenceZh(x),'查看中文')+'</div>').join(''):'')+'</section>'+
       archiveHtml+(oldSame?'<details class="section"><summary>'+selected+' 旧版记录（未覆盖）</summary><p>单词：'+(oldSame.wordCorrect||0)+'/'+(oldSame.wordTotal||0)+'；听写：'+(oldSame.listeningCorrect||0)+'/'+(oldSame.listeningTotal||0)+'；选择：'+(oldSame.quizCorrect||0)+'/'+(oldSame.quizTotal||0)+'</p><p>旧难点：'+esc(oldSame.notes||'未填写')+'</p><p>旧错词：'+esc((oldSame.wordErrors||[]).join('、'))+'</p></details>':'');
-      bindCommon();document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>{selected=b.dataset.open;tab='plan';reset();render()});
+      bindCommon();bindTaskTimers(L);document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>{selected=b.dataset.open;tab='plan';reset();render()});
       document.getElementById('notes').oninput=e=>save({notes:e.target.value});
       document.getElementById('saveNotes').onclick=()=>{save({notes:document.getElementById('notes').value});mark('review');renderRecords(L)};
       document.getElementById('exportRecords').onclick=()=>{const data={version:3,exportedAt:new Date().toISOString(),legacy:legacyStore,recovery:recoveryStore,userVocabulary:userVocab,diagnostic:diag};const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='CET4学习记录-'+today+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)};
@@ -663,7 +789,7 @@ __DESIGN_HOST__
       document.querySelectorAll('[data-lookup-word]').forEach(b=>b.onclick=()=>openArticleWord(b.dataset.lookupWord,b.dataset.lookupSource,b));
       document.querySelectorAll('[data-user-remove]').forEach(b=>b.onclick=()=>{if(saveUserVocab(removeUserVocabulary(userVocab,b.dataset.userRemove)))render()});
     }
-    installArticleLookup();installWordSearch();restoreView();installAiAssistant();installPersonalDesigner();reset();render();setInterval(()=>{syncCalendar();if(tab==='words')renderMemoryReview(lesson())},60000);installLocalUpdates();
+    installArticleLookup();installWordSearch();restoreView();installAiAssistant();installPersonalDesigner();reset();render();installTaskTimers();setInterval(()=>{syncCalendar();if(tab==='words')renderMemoryReview(lesson())},60000);installLocalUpdates();
   })();
   </script>
 </body>
