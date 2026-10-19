@@ -1046,5 +1046,122 @@
       "text": "The workshop is free, but each participant must reserve a place.",
       "zh": "活动免费，但每位参加者都必须预约名额。"
     }
+  ],
+  "2026-10-19": [
+    {
+      "text": "Here are the instructions for Saturday's clothing repair class.",
+      "zh": "以下是周六衣物修补课的说明。"
+    },
+    {
+      "text": "The session starts at ten and lasts ninety minutes.",
+      "zh": "课程十点开始，持续九十分钟。"
+    },
+    {
+      "text": "Bring one clean garment with a loose button or a small hole.",
+      "zh": "请带一件有松动纽扣或小破洞的干净衣服。"
+    },
+    {
+      "text": "Please avoid leather coats, since our tools are designed for lighter fabric.",
+      "zh": "请不要带皮外套，因为我们的工具适用于较轻薄的布料。"
+    },
+    {
+      "text": "We provide needles and thread, but matching buttons may not be available.",
+      "zh": "我们提供针和线，但未必有与你衣服相配的纽扣。"
+    },
+    {
+      "text": "If you need a particular color, bring your own button.",
+      "zh": "如果需要特定颜色的纽扣，请自行携带。"
+    },
+    {
+      "text": "Everyone will practice on spare cotton before working on personal clothing.",
+      "zh": "大家会先用备用棉布练习，再动手修补自己的衣物。"
+    },
+    {
+      "text": "A tutor must check your first stitches before you continue.",
+      "zh": "继续缝之前，须由导师检查你最初缝的针脚。"
+    },
+    {
+      "text": "You may watch the demonstration if you prefer not to use a needle.",
+      "zh": "如果不想用针，你可以观看示范。"
+    },
+    {
+      "text": "The final fifteen minutes are reserved for questions about washing and storage.",
+      "zh": "最后十五分钟留给大家询问洗涤和收纳的问题。"
+    },
+    {
+      "text": "Please collect all pins before leaving your table.",
+      "zh": "离开桌子前，请收好所有别针。"
+    },
+    {
+      "text": "Your finished garment will be photographed only if you agree.",
+      "zh": "只有征得你的同意，才会给你修补好的衣物拍照。"
+    }
+  ],
+  "2026-10-20": [
+    {
+      "text": "Welcome to our practice interview workshop for students who will graduate soon.",
+      "zh": "欢迎参加我们为即将毕业的学生举办的模拟面试工作坊。"
+    },
+    {
+      "text": "This is a learning activity, not an interview for an actual vacancy.",
+      "zh": "这是一项学习活动，并非针对真实空缺职位的面试。"
+    },
+    {
+      "text": "First, read the sample job advertisement and underline two important duties.",
+      "zh": "首先，阅读招聘广告样例，并在两项重要职责下画线。"
+    },
+    {
+      "text": "You have five minutes to prepare an example from your own experience.",
+      "zh": "你有五分钟时间，从自己的经历中准备一个例子。"
+    },
+    {
+      "text": "Then work in pairs and take turns asking and answering questions.",
+      "zh": "然后两人一组，轮流提问和回答。"
+    },
+    {
+      "text": "Each practice interview lasts four minutes, and then you exchange roles.",
+      "zh": "每次模拟面试持续四分钟，之后交换角色。"
+    },
+    {
+      "text": "Your partner should note one clear example and one point needing detail.",
+      "zh": "你的搭档应记录一个清楚的例子和一处需要补充细节的地方。"
+    },
+    {
+      "text": "After both rounds, a tutor will discuss how to improve your answers.",
+      "zh": "两轮结束后，导师会讨论如何改进你们的回答。"
+    },
+    {
+      "text": "The feedback concerns your explanations, rather than your chances of getting hired.",
+      "zh": "反馈针对的是你的解释，而不是你获得工作的可能性。"
+    },
+    {
+      "text": "Please keep the notes and revise one answer before next week's session.",
+      "zh": "请保留笔记，并在下周的课程之前修改一个答案。"
+    }
+  ],
+  "2026-10-21": [
+    {"text":"This announcement is for students joining Saturday's island visit by ferry.","zh":"本通知面向参加周六乘渡轮游览岛屿活动的学生。"},
+    {"text":"The connecting bus will leave the east campus gate at eight fifteen.","zh":"接驳巴士将在八点十五分从校园东门出发。"},
+    {"text":"Please arrive ten minutes early and show your booking message to the guide.","zh":"请提前十分钟到达，并向带队人员出示预约消息。"},
+    {"text":"The bus takes about twenty minutes to reach the ferry terminal.","zh":"巴士大约需要二十分钟到达渡轮码头。"},
+    {"text":"Our ferry leaves at nine, so there is time to collect tickets.","zh":"我们的渡轮九点出发，所以有时间领取船票。"},
+    {"text":"Keep your small bag with you; larger baggage goes in the lower compartment.","zh":"小包请随身携带，较大的行李则放在巴士下部的行李舱内。"},
+    {"text":"Remember to take all your belongings when you get off.","zh":"下车时记得带走所有随身物品。"},
+    {"text":"At the terminal, wait beside the information desk for the group tickets.","zh":"在码头，请在问讯处旁边等待领取团体船票。"},
+    {"text":"Do not join the boarding line until the guide calls your group.","zh":"在带队人员叫到你们这一组之前，不要加入登船队伍。"},
+    {"text":"If you miss the bus, contact the guide before arranging another journey.","zh":"如果你错过了巴士，请先联系带队人员，再安排其他行程。"}
+  ],
+  "2026-10-22": [
+    {"text":"This message explains the plan for Thursday's weekly study review session.","zh":"本消息说明周四每周学习复盘课的安排。"},
+    {"text":"Please bring one page of notes from a recent lesson.","zh":"请带来最近一节课的一页笔记。"},
+    {"text":"The session begins at four in the usual second floor classroom.","zh":"课程四点开始，地点是平时使用的二楼教室。"},
+    {"text":"First, read your notes for three minutes and then close the page.","zh":"首先，阅读笔记三分钟，然后合上这一页。"},
+    {"text":"Write a short explanation of the main idea without looking back.","zh":"不回看笔记，简要解释主要观点。"},
+    {"text":"You may leave a space for a detail you cannot remember.","zh":"对于记不起的细节，你可以留出空白。"},
+    {"text":"After five minutes, compare your explanation with your original notes.","zh":"五分钟后，将自己的解释与原始笔记进行比较。"},
+    {"text":"Mark any missing connections, not just spelling mistakes or unclear handwriting.","zh":"标记所有缺失的联系，而不仅仅是拼写错误或不清楚的字迹。"},
+    {"text":"Then use a different color to add one example of your own.","zh":"然后用另一种颜色补充一个自己的例子。"},
+    {"text":"Keep both versions so you can check them again next week.","zh":"保留两个版本，以便下周再次检查。"},
+    {"text":"This practice will not change the grades you have already received.","zh":"这项练习不会改变你已经获得的成绩。"}
   ]
 }

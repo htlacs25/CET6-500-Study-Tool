@@ -3376,5 +3376,273 @@
         "tag": "extensive"
       }
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "title": "A Patch Worth Keeping in View",
+    "titleZh": "值得留在明处的一块补丁",
+    "category": "Everyday life — clothing repair and practical skills",
+    "sourceType": "original news-style",
+    "sourceNote": "原创报刊风格教学短文；人物、学校与事件均为虚构，不是真实或实时新闻。Original educational news-style fiction, not a report of a real event.",
+    "text": "At a fictional college, a clothing repair workshop has opened with an unusual display: jackets and trousers whose repairs are easy to see. Bright patches cover small holes, while colored thread marks places where fabric has been strengthened. The organizers want students to consider whether a useful garment must always look new.\n\nDuring the first session, student Lena brings a shirt with a torn pocket. She expects a volunteer to repair it for her. Instead, the volunteer demonstrates a few stitches on a spare piece of cloth, then guides Lena as she tries them herself. Progress is slower, but Lena leaves with both a repaired pocket and a skill she can practice.\n\nParticipants can choose thread that matches their clothes or a contrasting color. A visible repair is an option, not a rule. Some students prefer a quiet change because they wear the garment to work; others enjoy making the repair part of its design.\n\nThe team plans to ask participants a month later whether they are still wearing their repaired clothes. A completed patch alone cannot show that a garment has gained a longer useful life. The workshop's aim is to help people keep wearing things they value, while giving them more confidence to handle the next small tear.",
+    "textZh": "在一所虚构的大学，一场衣物修补工作坊以一组不寻常的展品开场：修补痕迹清晰可见的夹克和长裤。鲜艳的补丁盖住小洞，彩色缝线标出了布料经过加固的地方。组织者希望学生思考，一件仍然有用的衣物是否必须一直看起来像新的。\n\n第一场活动中，学生莉娜带来一件口袋撕破的衬衫。她原以为志愿者会替她修好。但志愿者先在一块备用布料上演示了几针，然后在莉娜自己尝试时给予指导。进度虽然慢一些，莉娜离开时却既带走了修好的口袋，也学会了一项可以继续练习的技能。\n\n参与者可以选择与衣服颜色相配的线，也可以选择对比鲜明的颜色。让修补痕迹可见是一种选择，而非规定。一些学生要穿这件衣服去上班，因此希望改动不太显眼；另一些人则乐于把修补变成衣服设计的一部分。\n\n团队计划一个月后询问参与者，是否仍在穿修补过的衣服。仅仅补好一个补丁，并不能说明衣物的实际使用寿命已经延长。工作坊的目标是帮助人们继续穿自己珍视的衣物，同时让他们更有信心处理下一处小裂口。",
+    "listeningTip": "先不看原文，听莉娜原本期待什么、实际学到了什么；带文精听instead、both…and和an option, not a rule。把三个关键短语放回原句做影子跟读，最后脱稿复述30—60秒。合成朗读支持暂停、继续和停止。",
+    "speakingPrompt": "In 30–60 seconds, describe how Lena learns to repair her shirt, explain why participants can choose different thread colors, and say what the team wants to check a month later.",
+    "speakingPromptZh": "用30—60秒描述莉娜如何学习修补衬衫，解释为什么参与者可以选择不同颜色的缝线，并说明团队一个月后想核实什么。",
+    "keyPhrases": [
+      {
+        "en": "a spare piece of cloth",
+        "zh": "一块备用布料"
+      },
+      {
+        "en": "a contrasting color",
+        "zh": "一种对比鲜明的颜色"
+      },
+      {
+        "en": "a longer useful life",
+        "zh": "更长的实际使用寿命"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why does the volunteer guide Lena to make the stitches herself?",
+        "promptZh": "志愿者为什么指导莉娜自己缝针？",
+        "options": [
+          "To make her shirt look exactly like a new one.",
+          "To help her repair the pocket and learn a reusable skill.",
+          "To finish every repair as quickly as possible.",
+          "To require her to use brightly colored thread."
+        ],
+        "optionsZh": [
+          "让她的衬衫看起来与新衣完全一样。",
+          "帮助她修好口袋，并学会一项可以再次使用的技能。",
+          "尽可能快地完成每一处修补。",
+          "要求她使用颜色鲜艳的缝线。"
+        ],
+        "answer": 1,
+        "explanation": "第二段指出莉娜既带走了修好的口袋，也学会了可以继续练习的技能，因此B正确。A并非活动目标；C与进度更慢相反；第三段说明缝线颜色可以自选，所以D不成立。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "Why will the team contact participants a month later?",
+        "promptZh": "团队为什么要在一个月后联系参与者？",
+        "options": [
+          "To choose the most fashionable patch for a prize.",
+          "To ask everyone to replace their repaired clothes.",
+          "To check whether the repaired garments remain in use.",
+          "To make all participants use the same thread color."
+        ],
+        "optionsZh": [
+          "评选最时髦的补丁并颁奖。",
+          "要求大家换掉修补过的衣服。",
+          "检查修补过的衣物是否仍在使用。",
+          "让所有参与者使用同一种颜色的缝线。"
+        ],
+        "answer": 2,
+        "explanation": "末段说团队要询问参与者是否仍穿修补过的衣服，因为补丁完成不等于衣物的实际使用寿命已经延长。因此C正确；A的评奖未提及，B违背继续穿着的目标，D违背颜色自选的原则。",
+        "tag": "extensive"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-20",
+    "title": "A Newcomer's Questions Find a Next Step",
+    "titleZh": "新员工的疑问有了下一步",
+    "category": "Working life — asking questions and following up",
+    "sourceType": "original news-style",
+    "sourceNote": "原创报刊风格教学短文；人物、公司与事件均为虚构，不是真实或实时新闻。Original educational news-style fiction, not a report of a real event or live news.",
+    "text": "A small publishing company in this fictional report is testing a notebook for questions that new employees hesitate to ask. On her first Monday, assistant Nora writes, \"Which folder should I use?\" She worries that asking several basic questions will make her seem unprepared.\n\nHer supervisor, Luis, explains that the note needs more detail before anyone can answer it. Together, they add the task Nora was doing, the two folders she found, and what she had already checked. The revised question asks where to save a corrected cover image after a designer approves it.\n\nThe notebook then turns each open question into a small action. Nora will ask the designer for one approved example before lunch. Luis will confirm the storage rule by the end of the day. Each note includes a person responsible and a time to follow up, so a friendly promise does not disappear into a busy afternoon.\n\nBy Friday, several answers have become short instructions for the next newcomer. Other questions remain open because different teams use different methods. The company does not count unanswered entries as failures. Instead, it checks whether the next step is clear. Nora still asks for help immediately when a deadline is at risk; the notebook supports conversations rather than postponing them. For her, confidence begins with knowing how to make uncertainty useful.",
+    "textZh": "这篇虚构报道中的一家小型出版社正在试用一本笔记本，用来记录新员工不敢开口问的问题。入职后的第一个周一，助理诺拉写下：“我应该用哪个文件夹？”她担心，接连问几个基础问题会让自己显得准备不足。\n\n她的主管路易斯解释说，这条记录需要更多细节，别人才有办法回答。他们一起补上了诺拉当时正在做的任务、她找到的两个文件夹，以及她已经核查过的内容。修改后的问题是：设计师批准修改过的封面图片后，应该把图片保存在哪里？\n\n接着，这本笔记本把每个尚未解决的问题变成一项小行动。诺拉会在午饭前向设计师索取一个已获批准的示例。路易斯会在当天结束前确认文件存储规则。每条记录都写明负责人和跟进时间，这样，一句友好的承诺就不会消失在忙碌的下午。\n\n到了周五，其中几个问题的答案已经变成供下一位新人使用的简短说明。其他问题仍未解决，因为不同团队采用的方法不同。公司不会把尚未得到回答的记录视为失败，而是检查下一步是否明确。如果某项任务有无法按期完成的风险，诺拉仍会立即求助；这本笔记本帮助大家沟通，而不是把沟通往后拖。对她而言，信心始于知道如何让不确定之处发挥作用。",
+    "listeningTip": "盲听：先不看原文，听诺拉最初的问题和她担心什么。精听：带文核对问题补充了哪些细节，特别留意before lunch、by the end of the day和rather than。跟读：把三个关键短语放回原句，按“已批准的示例→跟进时间→截止日期风险”分成三组，每组先听一句再影子跟读一句。最后隐藏原文，用30—60秒复述问题怎样变成具体行动。合成朗读支持暂停、继续和停止。",
+    "speakingPrompt": "In 30–60 seconds, explain how Nora makes her first question more specific. Describe her next action and her supervisor's next action, including when each will happen. Finish by explaining when she should ask for help immediately.",
+    "speakingPromptZh": "用30—60秒说明诺拉如何把最初的问题变得更具体，描述她和主管各自的下一步行动及完成时间，最后解释她在什么情况下应该立即求助。",
+    "keyPhrases": [
+      {
+        "en": "one approved example",
+        "zh": "一个已获批准的示例"
+      },
+      {
+        "en": "a time to follow up",
+        "zh": "一个跟进的时间"
+      },
+      {
+        "en": "a deadline is at risk",
+        "zh": "有无法按期完成的风险"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why do Nora and Luis add details to the original folder question?",
+        "promptZh": "诺拉和路易斯为什么要为最初的文件夹问题补充细节？",
+        "options": [
+          "To make the notebook look more formal.",
+          "To record every file stored by the company.",
+          "To show what Nora is trying to do and what she has checked.",
+          "To avoid asking the designer any questions."
+        ],
+        "optionsZh": [
+          "让笔记本看起来更正式。",
+          "记录公司保存的每一个文件。",
+          "说明诺拉想完成什么，以及她已经核查了什么。",
+          "避免向设计师提出任何问题。"
+        ],
+        "answer": 2,
+        "explanation": "第二段补充了当时的任务、找到的两个文件夹和已核查的内容，使别人能够理解并回答问题，因此C正确。A的形式要求和B的全面文件记录均未提及；第三段明确说诺拉还要向设计师索取示例，所以D不成立。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "What makes the notebook useful even when some questions remain unanswered?",
+        "promptZh": "即使有些问题仍未得到回答，什么仍使这本笔记本有用？",
+        "options": [
+          "It makes the next action, the person responsible, and the follow-up time clear.",
+          "It requires all teams to use exactly the same method.",
+          "It allows urgent questions to wait until the end of the week.",
+          "It proves that newcomers should already know every answer."
+        ],
+        "optionsZh": [
+          "它明确了下一步行动、负责人和跟进时间。",
+          "它要求所有团队使用完全相同的方法。",
+          "它允许紧急问题等到周末再处理。",
+          "它证明新人本来就应当知道所有答案。"
+        ],
+        "answer": 0,
+        "explanation": "第三段写明每条记录包含负责人和跟进时间，末段强调检查下一步是否明确，因此A概括了提问本的作用。B与团队方法不同相反；C与截止日期有风险时立即求助相反；D既未被支持，也违背帮助新人提问的目的。",
+        "tag": "extensive"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-21",
+    "title": "The Minutes Between the Moving Parts",
+    "titleZh": "旅途中那些没有在乘车的分钟",
+    "category": "Travel and learning — understanding a complete journey",
+    "sourceType": "original news-style",
+    "sourceNote": "原创报刊风格教学短文；人物、学校与事件均为虚构，不是真实或实时新闻。Original educational news-style fiction, not a report of a real event or live news.",
+    "text": "For a class project at a fictional college, student Erin keeps a travel diary for one week. A transport app says that her bus journey takes twelve minutes. Yet she often leaves her room half an hour before class and still feels rushed.\n\nInstead of timing only the moving bus, Erin records when she leaves her room, reaches the stop, boards the bus, and enters the classroom. Walking and waiting explain much of the difference. On Wednesday, she also spends several minutes finding a different entrance because her usual door is closed.\n\nHer classmate Joel cycles to college. His shortest trip is quicker than Erin's, but he includes time to park his bicycle and walk from the bicycle racks. The pair compare their complete journeys, rather than presenting the fastest part of each as the whole experience.\n\nTheir teacher asks them to keep observations separate from predictions. Five days of notes can reveal questions, but cannot prove that a route will always take the same time. Weather, traffic, and personal circumstances may change.\n\nFor the next week, Erin plans to leave a little earlier and check transport notices before setting out. Joel will record a second week before changing his routine. Neither student has found a perfect route. Both have learned to describe a journey more honestly, including the minutes between its obvious stages.",
+    "textZh": "在一所虚构的大学，为完成一项课堂项目，学生艾琳连续一周记录出行日志。一个交通应用显示，她的公交车程为十二分钟。然而，她常常提前半小时离开房间去上课，却仍然觉得时间紧张。\n\n艾琳不再只计算公交车行驶的时间，而是记录自己离开房间、到达车站、上车和走进教室的时刻。步行和等车解释了其中很大一部分时间差。周三，因为她通常经过的门关着，她还花了几分钟寻找另一个入口。\n\n她的同学乔尔骑自行车上学。他耗时最短的一次比艾琳更快，但他也把停车以及从自行车架走到教室的时间算了进去。两人比较完整行程，而不是把各自行程中最快的部分当成整个出行体验。\n\n老师要求他们把观察记录与预测分开。五天的笔记可以帮助发现问题，但不能证明一条路线总是需要相同的时间。天气、交通以及个人的具体情况都可能变化。\n\n接下来的一周，艾琳计划稍早出门，并在出发前查看交通通知。乔尔则打算再记录一周，然后再决定是否改变自己的习惯。两位学生都没有找到完美路线，但他们都学会了更加如实地描述一段旅程，包括那些明显的行程阶段之间花掉的时间。",
+    "listeningTip": "盲听：先不看原文，听应用显示多少分钟，以及艾琳为什么仍觉得赶时间。精听：带文找出步行、等车、停车和入口变化这些细节，区分已经观察到的情况与下周计划。影子跟读：分别用三个关键短语所在的原句做三组跟读，每组先听一句，再跟读一句。最后隐藏原文，用30—60秒脱稿说明如何更完整地计算一次出行。合成朗读支持暂停、继续和停止。",
+    "speakingPrompt": "In 30–60 seconds, explain why Erin's whole journey takes longer than the bus ride shown in the app. Describe one extra stage Joel includes, and explain why five days of notes cannot guarantee next week's travel time.",
+    "speakingPromptZh": "用30—60秒解释，为什么艾琳的完整行程比应用显示的公交车程长；说出乔尔额外计入的一个阶段，并解释为什么五天的记录不能保证下周的出行时间。",
+    "keyPhrases": [
+      {
+        "en": "their complete journeys",
+        "zh": "他们的完整行程"
+      },
+      {
+        "en": "keep observations separate from predictions",
+        "zh": "把观察记录与预测分开"
+      },
+      {
+        "en": "before setting out",
+        "zh": "在出发前"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why does Erin record several moments between leaving her room and entering the classroom?",
+        "promptZh": "艾琳为什么要记录离开房间到进入教室之间的几个时刻？",
+        "options": [
+          "To find out how walking and waiting contribute to her total journey time.",
+          "To prove that the bus always takes exactly half an hour.",
+          "To show that cycling is always slower than taking a bus.",
+          "To avoid checking transport information in the future."
+        ],
+        "optionsZh": [
+          "了解步行和等待在总出行时间中占多少。",
+          "证明公交车每次恰好行驶半小时。",
+          "证明骑车总是比乘公交慢。",
+          "以后不必再查看交通信息。"
+        ],
+        "answer": 0,
+        "explanation": "第二段将离开房间、到站、上车和进教室分别记录，并指出步行和等待解释了大部分时间差，因此A正确。B把完整行程与车程混为一谈；C没有得到支持；最后一段说艾琳仍会查看交通通知，排除D。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "What does the teacher want the students to understand about their notes?",
+        "promptZh": "老师希望学生怎样理解他们的出行记录？",
+        "options": [
+          "The fastest journey provides a reliable time for every future trip.",
+          "Only time spent on a moving vehicle should be recorded.",
+          "A week's notes are useless unless they identify a perfect route.",
+          "Past observations help them ask questions but do not promise an unchanged travel time."
+        ],
+        "optionsZh": [
+          "最快的一次行程可以可靠地代表以后每次的时间。",
+          "只有车辆行驶中的时间才应该记录。",
+          "如果不能找到完美路线，一周的记录就毫无用处。",
+          "过去的观察有助于提出问题，却不能保证出行时间始终不变。"
+        ],
+        "answer": 3,
+        "explanation": "第四段要求区分观察与预测：五天记录能发现问题，但天气、交通和个人情况可能改变，所以不能据此保证未来行程用时不变，D正确。A把最快记录当保证；B漏掉步行等待等阶段；C与末段没有完美路线仍有收获相反。",
+        "tag": "extensive"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-22",
+    "title": "More Than the Color of an Umbrella",
+    "titleZh": "认领雨伞，不只看颜色",
+    "category": "Community life — describing details and checking a match",
+    "sourceType": "original news-style",
+    "sourceNote": "原创报刊风格教学短文；社区中心、人物与事件均为虚构，不是真实或实时新闻。Original educational news-style fiction, not a report of a real event or live news.",
+    "text": "At a fictional community center, volunteers receive three blue umbrellas after a weekend event. A notice saying \"blue umbrella found\" brings several visitors to the desk. Each person believes that one of the umbrellas may be theirs, but color alone cannot settle the question.\n\nVolunteer Amy changes the process. Instead of showing every detail, she asks each visitor to describe an unusual feature before seeing the items. One visitor remembers a small repair near the handle. Another mentions a thin white line inside the cover. These details help the volunteers compare each description with the object.\n\nThey also ask when and where the umbrella was last used. An uncertain answer does not automatically mean someone is dishonest; people can forget ordinary events. When the information is not enough, the volunteers keep the item and arrange another conversation.\n\nThe center's public notice remains simple. It names the kind of object and gives the desk's opening hours, but it does not publish the details used to check a claim. Visitors are not asked to announce personal information in front of the room.\n\nBy the end of the afternoon, two umbrellas have been returned. The third stays safely behind the desk. For Amy, a careful match matters more than an empty shelf.",
+    "textZh": "在一个虚构的社区中心，志愿者在周末活动结束后收到了三把蓝色雨伞。一则写着“捡到蓝色雨伞”的启事吸引了几位访客来到服务台。每个人都认为其中可能有自己的伞，但仅凭颜色无法解决这个问题。\n\n志愿者艾米改变了认领流程。她不先展示每一个细节，而是请每位访客在看到物品之前描述一处特别的特征。一位访客记得伞柄附近有一处小修补，另一位提到伞面内侧有一条细细的白线。这些细节帮助志愿者把每个人的描述与实物进行比较。\n\n他们还会询问雨伞上一次使用的时间和地点。回答不确定，并不自动意味着一个人不诚实；人们可能忘记日常发生的事情。如果信息还不充分，志愿者就暂时保管物品，并安排再次沟通。\n\n中心对外发布的启事仍然简洁。它说明物品种类和服务台的开放时间，但不公开那些用于核对认领情况的细节。访客也不需要当着屋里所有人的面说出个人信息。\n\n下午结束时，两把雨伞已经归还，第三把仍安全地放在服务台后面。对艾米来说，认真核对、物归原主比让架子空下来更重要。",
+    "listeningTip": "盲听：先不看原文，听社区中心收到了什么，以及为什么仅凭颜色不够。精听：带文核对两处特别的细节，留意描述应在看到物品之前给出，以及信息不足时的处理。影子跟读：把三个关键短语放回原句，各做一组跟读，共三组，每组先听再紧跟朗读。最后隐藏原文，用30—60秒脱稿复述认领过程。使用浏览器合成朗读，可调速并暂停、继续或停止，不是真题录音。",
+    "speakingPrompt": "In 30–60 seconds, explain why the color of the umbrellas is not enough to identify their owners. Describe two details that help, what happens when information is insufficient, and why some details stay out of the public notice.",
+    "speakingPromptZh": "用30—60秒解释为什么雨伞的颜色不足以确认主人；说出两处有帮助的细节、信息不足时如何处理，以及为什么有些细节不写进公开启事。",
+    "keyPhrases": [
+      {
+        "en": "before seeing the items",
+        "zh": "在看到这些物品之前"
+      },
+      {
+        "en": "compare each description with the object",
+        "zh": "把每一项描述与实物进行比较"
+      },
+      {
+        "en": "arrange another conversation",
+        "zh": "安排再次沟通"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why does Amy ask visitors to describe an unusual feature before seeing the umbrellas?",
+        "promptZh": "艾米为什么请访客在看到雨伞之前描述一处特别的特征？",
+        "options": [
+          "To decide which umbrella needs the most expensive repair.",
+          "To compare details they remember with the actual objects.",
+          "To encourage every visitor to choose a different color.",
+          "To make visitors publish their personal information."
+        ],
+        "optionsZh": [
+          "判断哪把雨伞的维修费最高。",
+          "将他们记得的细节与实物进行比较。",
+          "鼓励每位访客选择不同的颜色。",
+          "让访客公开自己的个人信息。"
+        ],
+        "answer": 1,
+        "explanation": "第二段说先描述特别的特征，再把描述与实物比较；修补处和白线就是例子，因此B正确。文章没有比较维修费用，也不是让人重新选伞；第四段明确不要求公开个人信息，排除其他选项。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "What do the volunteers do when the available information is not enough?",
+        "promptZh": "现有信息不足时，志愿者会怎么做？",
+        "options": [
+          "They give the umbrella to the first person who asks.",
+          "They decide immediately that the visitor is dishonest.",
+          "They publish every identifying detail in a new notice.",
+          "They keep the item and arrange to talk again."
+        ],
+        "optionsZh": [
+          "把雨伞交给第一个提出认领的人。",
+          "立即断定访客不诚实。",
+          "在新启事中公布所有可用于识别的细节。",
+          "暂时保管物品，并安排再次沟通。"
+        ],
+        "answer": 3,
+        "explanation": "第三段明确说明，信息不足时会保管物品并安排再次沟通，D正确。同段也提醒回答不确定不等于不诚实；第四段说核对认领用的细节不会公开，文章也没有采用先到先领的办法。",
+        "tag": "extensive"
+      }
+    ]
   }
 ]

@@ -17291,5 +17291,1247 @@
         "topic": "现在完成时与被动语态"
       }
     ]
+  },
+  "2026-10-19": {
+    "title": "衣物与选择：交换数量之外的实际使用",
+    "grammarTip": "四级专项衔接：阅读区分交换数量与衣物是否真正得到使用；听力把握修补课的材料、操作顺序和参与方式。练习主句与定语从句的谓语、形容词前的be、被动语态及副词。材料为原创分级模拟。",
+    "words": [
+      {
+        "word": "clothing",
+        "phonetic": "/ˈkloʊðɪŋ/",
+        "pos": "n.",
+        "meaning": "衣服；衣物（不可数）",
+        "phrase": "warm clothing",
+        "example": "The charity collects warm clothing for families in winter.",
+        "exampleZh": "这家慈善机构在冬季为家庭募集保暖衣物。"
+      },
+      {
+        "word": "garment",
+        "phonetic": "/ˈɡɑːrmənt/",
+        "pos": "n.",
+        "meaning": "一件衣服；服装",
+        "phrase": "a clean garment",
+        "example": "Check each garment before placing it on the exchange table.",
+        "exampleZh": "把衣服放上交换桌前，先逐件检查。"
+      },
+      {
+        "word": "fabric",
+        "phonetic": "/ˈfæbrɪk/",
+        "pos": "n.",
+        "meaning": "布料；织物",
+        "phrase": "soft fabric",
+        "example": "This soft fabric is comfortable against the skin.",
+        "exampleZh": "这种柔软的布料贴身穿着很舒适。"
+      },
+      {
+        "word": "cotton",
+        "phonetic": "/ˈkɑːtən/",
+        "pos": "n.",
+        "meaning": "棉；棉花；棉织物",
+        "phrase": "made of cotton",
+        "example": "The label says that the shirt is made of cotton.",
+        "exampleZh": "标签上写着这件衬衫是棉制的。"
+      },
+      {
+        "word": "wool",
+        "phonetic": "/wʊl/",
+        "pos": "n.",
+        "meaning": "羊毛；毛织物",
+        "phrase": "a wool sweater",
+        "example": "Read the washing instructions before cleaning a wool sweater.",
+        "exampleZh": "清洗羊毛衫前先阅读洗涤说明。"
+      },
+      {
+        "word": "silk",
+        "phonetic": "/sɪlk/",
+        "pos": "n.",
+        "meaning": "丝；丝绸",
+        "phrase": "a silk scarf",
+        "example": "She folded the silk scarf and put it in a drawer.",
+        "exampleZh": "她把丝巾折好，放进抽屉里。"
+      },
+      {
+        "word": "leather",
+        "phonetic": "/ˈleðər/",
+        "pos": "n.",
+        "meaning": "皮革",
+        "phrase": "a leather jacket",
+        "example": "He replaced the broken button on his leather jacket.",
+        "exampleZh": "他换掉了皮夹克上那颗坏掉的纽扣。"
+      },
+      {
+        "word": "collar",
+        "phonetic": "/ˈkɑːlər/",
+        "pos": "n.",
+        "meaning": "衣领；领口",
+        "phrase": "a shirt collar",
+        "example": "The shirt collar is worn, although the rest looks new.",
+        "exampleZh": "衬衫的衣领磨损了，虽然其他部分看起来还很新。"
+      },
+      {
+        "word": "sleeve",
+        "phonetic": "/sliːv/",
+        "pos": "n.",
+        "meaning": "袖子",
+        "phrase": "a long sleeve",
+        "example": "One sleeve has a small hole near the wrist.",
+        "exampleZh": "一只袖子靠近手腕的地方有个小洞。"
+      },
+      {
+        "word": "pocket",
+        "phonetic": "/ˈpɑːkɪt/",
+        "pos": "n.",
+        "meaning": "口袋；衣袋",
+        "phrase": "an inside pocket",
+        "example": "Keep the receipt in the inside pocket of your coat.",
+        "exampleZh": "把收据放在外套的内袋里。"
+      },
+      {
+        "word": "button",
+        "phonetic": "/ˈbʌtən/",
+        "pos": "n.; v.",
+        "meaning": "纽扣；按钮；扣上纽扣",
+        "phrase": "a loose button",
+        "example": "A loose button can fall off if you ignore it.",
+        "exampleZh": "如果不管，松动的纽扣可能会掉下来。"
+      },
+      {
+        "word": "zipper",
+        "phonetic": "/ˈzɪpər/",
+        "pos": "n.",
+        "meaning": "拉链",
+        "phrase": "a broken zipper",
+        "example": "The bag is still useful after we replace its broken zipper.",
+        "exampleZh": "换掉坏拉链后，这个包仍然能用。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "sew",
+        "phonetic": "/soʊ/",
+        "pos": "v.",
+        "meaning": "缝；缝制",
+        "phrase": "sew on a button",
+        "example": "My brother taught me how to sew on a button.",
+        "exampleZh": "哥哥教我怎样缝纽扣。"
+      },
+      {
+        "word": "needle",
+        "phonetic": "/ˈniːdəl/",
+        "pos": "n.",
+        "meaning": "针；缝衣针",
+        "phrase": "a sewing needle",
+        "example": "Put the needle back in its case after use.",
+        "exampleZh": "用完后把针放回针盒。"
+      },
+      {
+        "word": "thread",
+        "phonetic": "/θred/",
+        "pos": "n.; v.",
+        "meaning": "线；穿线",
+        "phrase": "a piece of thread",
+        "example": "Choose thread that matches the color of the shirt.",
+        "exampleZh": "选与衬衫颜色相配的线。"
+      },
+      {
+        "word": "stitch",
+        "phonetic": "/stɪtʃ/",
+        "pos": "n.; v.",
+        "meaning": "针脚；一针；缝",
+        "phrase": "small stitches",
+        "example": "Small, even stitches help hold the fabric together.",
+        "exampleZh": "细小均匀的针脚有助于把布料缝牢。"
+      },
+      {
+        "word": "knit",
+        "phonetic": "/nɪt/",
+        "pos": "v.",
+        "meaning": "编织；针织",
+        "phrase": "knit a scarf",
+        "example": "She learned to knit a scarf during the winter holiday.",
+        "exampleZh": "她在寒假学会了织围巾。"
+      },
+      {
+        "word": "loose",
+        "phonetic": "/luːs/",
+        "pos": "adj.",
+        "meaning": "松的；松动的；宽松的",
+        "phrase": "a loose shirt",
+        "example": "He prefers a loose shirt when working in the garden.",
+        "exampleZh": "他在花园干活时喜欢穿宽松的衬衫。"
+      },
+      {
+        "word": "tight",
+        "phonetic": "/taɪt/",
+        "pos": "adj.",
+        "meaning": "紧的；紧身的",
+        "phrase": "too tight",
+        "example": "These trousers are too tight around the waist.",
+        "exampleZh": "这条裤子的腰部太紧了。"
+      },
+      {
+        "word": "shrink",
+        "phonetic": "/ʃrɪŋk/",
+        "pos": "v.",
+        "meaning": "缩水；缩小",
+        "phrase": "shrink in the wash",
+        "example": "Some wool clothes may shrink in the wash.",
+        "exampleZh": "有些羊毛衣物洗涤时可能缩水。"
+      },
+      {
+        "word": "fade",
+        "phonetic": "/feɪd/",
+        "pos": "v.",
+        "meaning": "褪色；逐渐减弱",
+        "phrase": "fade in sunlight",
+        "example": "The dark fabric may fade in strong sunlight.",
+        "exampleZh": "深色布料在强烈日光下可能褪色。"
+      },
+      {
+        "word": "wrinkle",
+        "phonetic": "/ˈrɪŋkəl/",
+        "pos": "n.; v.",
+        "meaning": "皱褶；皱纹；起皱",
+        "phrase": "remove wrinkles",
+        "example": "Hang the shirt carefully to reduce wrinkles.",
+        "exampleZh": "把衬衫仔细挂好，以减少皱褶。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The garment that has a blue collar ___ ready for exchange.",
+        "promptZh": "那件有蓝色衣领的衣服已经可以用于交换。",
+        "options": [
+          "are",
+          "being",
+          "is",
+          "have"
+        ],
+        "optionsZh": [
+          "是（复数）",
+          "是（非谓语形式）",
+          "是（单数）",
+          "有（原形）"
+        ],
+        "answer": 2,
+        "explanation": "主句是The garment is ready；that has a blue collar是定语从句，has不是主句谓语。单数garment与is一致。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "These sleeves ___ too tight for me.",
+        "promptZh": "这些袖子对我来说太紧了。",
+        "options": [
+          "are",
+          "do",
+          "has",
+          "be"
+        ],
+        "optionsZh": [
+          "是（复数）",
+          "做",
+          "有（单数）",
+          "是（原形）"
+        ],
+        "answer": 0,
+        "explanation": "tight是形容词，需要系动词be构成谓语；主语These sleeves为复数，因此用are。",
+        "tag": "be-adjective"
+      },
+      {
+        "prompt": "Every garment must ___ before the exchange begins.",
+        "promptZh": "交换开始前，每件衣物都必须接受检查。",
+        "options": [
+          "check",
+          "checking",
+          "be check",
+          "be checked"
+        ],
+        "optionsZh": [
+          "检查（原形）",
+          "检查（非谓语形式）",
+          "错误的被动形式",
+          "被检查"
+        ],
+        "answer": 3,
+        "explanation": "garment是被检查的对象；情态动词must后用be加过去分词checked构成被动语态。",
+        "tag": "passive"
+      },
+      {
+        "prompt": "Please examine the zipper ___ before accepting the coat.",
+        "promptZh": "接受这件外套之前，请仔细检查拉链。",
+        "options": [
+          "careful",
+          "carefully",
+          "care",
+          "carefulness"
+        ],
+        "optionsZh": [
+          "仔细的",
+          "仔细地",
+          "关心；照顾",
+          "仔细；认真"
+        ],
+        "answer": 1,
+        "explanation": "修饰动词examine需要副词carefully；careful是形容词，carefulness是名词。",
+        "tag": "adverb"
+      },
+      {
+        "prompt": "The clothing on those tables ___ clean and dry.",
+        "promptZh": "那些桌子上的衣物干净而且干燥。",
+        "options": [
+          "are",
+          "have",
+          "is",
+          "do"
+        ],
+        "optionsZh": [
+          "是（复数）",
+          "有",
+          "是（单数）",
+          "做"
+        ],
+        "answer": 2,
+        "explanation": "clothing是不可数名词，作主语时用单数谓语is；on those tables中的复数tables不决定谓语的数。",
+        "tag": "agreement"
+      },
+      {
+        "prompt": "Practice on spare fabric before ___ your own shirt.",
+        "promptZh": "修补自己的衬衫之前，先用备用布料练习。",
+        "options": [
+          "repair",
+          "repairs",
+          "repaired",
+          "repairing"
+        ],
+        "optionsZh": [
+          "修补（原形）",
+          "修补（第三人称单数）",
+          "修补（过去式或过去分词）",
+          "修补（动名词形式）"
+        ],
+        "answer": 3,
+        "explanation": "此处before作介词，后面接动名词repairing。也可以用完整从句before you repair your own shirt。",
+        "tag": "nonfinite"
+      }
+    ],
+    "reading": {
+      "title": "When Does a Clothing Swap Help?",
+      "titleZh": "衣物交换何时才有帮助？",
+      "level": "四级专项衔接 · 原创分级模拟",
+      "topic": "衣物交换、质量标准与实际使用",
+      "passage": "At a student clothing swap, volunteers recorded forty-eight exchanges in one afternoon. The organizers were pleased, but one volunteer asked a different question: how many of those garments would actually be worn? Moving an unused shirt from one cupboard to another would not necessarily reduce waste.\n\nFor the next event, the group introduced clear quality rules. Clothing had to be clean and dry, and zippers had to work. A missing button was acceptable only if it was clearly marked and a replacement was attached. These rules helped visitors judge what they could use, without suggesting that every garment should look new.\n\nThe group also stopped giving extra exchange tickets to people who brought large bags. Each person could take up to three items, so visitors had a reason to choose carefully. Volunteers reminded them that leaving with nothing was reasonable if no garment fitted their needs.\n\nOne student proposed marking every accepted item with the words \"a good choice.\" The organizers rejected the phrase. Passing an inspection could not guarantee a good fit or regular use. The final labels therefore listed the checks and any known defect. Visitors were encouraged to try garments on before using a ticket. The organizers reported the exchange count as a measure of activity, while avoiding claims about how much waste the event had prevented.",
+      "passageZh": "在一次学生衣物交换活动中，志愿者记录了一个下午四十八次交换。组织者很高兴，但一名志愿者提出了另一个问题：这些衣物中有多少会真正被穿上？把一件闲置衬衫从一个衣柜移到另一个衣柜，未必会减少浪费。\n\n为下一次活动，小组制定了明确的质量规则。衣物必须干净、干燥，拉链必须能正常使用。缺少纽扣的衣物只有在明确标注并附上替换纽扣时才能被接受。这些规则帮助参加者判断哪些衣物适合自己使用，同时并不要求每件衣物都像新的一样。\n\n小组也不再给带来大袋衣物的人额外的交换券。每人最多可以带走三件，因此参加者有理由认真选择。志愿者提醒大家，如果没有衣物符合需要，一件也不带走同样合理。\n\n一名学生提议给每件被接受的衣物标上“好选择”几个字。组织者没有采用这个说法。通过检查并不能保证衣物合身或会被经常穿用。因此，最终标签列出了检查项目和已知的缺陷。参加者被鼓励在使用交换券前先试穿衣物。组织者将交换次数作为活动参与情况的一项指标公布，同时避免宣称活动减少了多少浪费。",
+      "questions": [
+        {
+          "prompt": "Under the new rules, when could a garment with a missing button be accepted?",
+          "promptZh": "按照新规则，缺少纽扣的衣物在什么情况下可以被接受？",
+          "options": [
+            "When it was placed beside a new garment.",
+            "When the missing button was clearly marked and a replacement was attached.",
+            "When its owner brought a large bag of clothing.",
+            "When the volunteers agreed to repair it during the event."
+          ],
+          "optionsZh": [
+            "放在一件新衣服旁边时。",
+            "明确标注缺少纽扣，并附有替换纽扣时。",
+            "衣物主人带来一大袋衣服时。",
+            "志愿者同意在活动期间修好它时。"
+          ],
+          "answer": 1,
+          "explanation": "第二段明确列出两个条件：clearly marked和a replacement was attached。文章没有说由志愿者在现场修补。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Why did the volunteers say that leaving with nothing was reasonable?",
+          "promptZh": "志愿者为什么说一件也不带走同样合理？",
+          "options": [
+            "Visitors were expected to bring clothes without taking any.",
+            "The event was intended only for people who could sew.",
+            "The group wanted to keep all the best garments.",
+            "Taking an unsuitable item might simply create more unused clothing."
+          ],
+          "optionsZh": [
+            "参加者应当只带来衣物而不带走任何衣物。",
+            "活动只面向会缝纫的人。",
+            "小组想留下所有最好的衣物。",
+            "带走不合适的衣物可能只是增加闲置衣物。"
+          ],
+          "answer": 3,
+          "explanation": "第三段强调按需要选择，结合首段衣物从一个衣柜移到另一个衣柜未必减少浪费，可推断带走不需要的衣物并无实际益处。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Why did the organizers reject the label \"a good choice\"?",
+          "promptZh": "组织者为什么没有采用“好选择”这个标签？",
+          "options": [
+            "Meeting the quality rules did not mean a garment would suit every visitor.",
+            "The volunteers were unable to check any of the garments.",
+            "Every accepted garment had to be completely new.",
+            "Visitors were not allowed to read labels before exchanging items."
+          ],
+          "optionsZh": [
+            "符合质量规则并不意味着衣物适合每位参加者。",
+            "志愿者无法检查任何衣物。",
+            "每件被接受的衣物都必须是全新的。",
+            "参加者不被允许在交换前查看标签。"
+          ],
+          "answer": 0,
+          "explanation": "末段指出Passing an inspection could not guarantee a good fit or regular use。检查确认的是活动规定的质量条件，不能替每个人判断是否合身、是否会经常穿。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Which statement best expresses the passage's main idea?",
+          "promptZh": "哪一项最能概括文章主旨？",
+          "options": [
+            "A successful swap requires all garments to look new.",
+            "The total number of exchanges is enough to measure reduced waste.",
+            "Clear quality information helps people choose, but exchange counts alone do not prove less waste.",
+            "Quality checks can guarantee that every visitor finds suitable clothing."
+          ],
+          "optionsZh": [
+            "成功的交换活动要求所有衣物看起来都像新的。",
+            "仅凭交换总数就足以衡量浪费是否减少。",
+            "清楚的质量信息有助于选择，但仅凭交换次数不能证明浪费减少。",
+            "质量检查能保证每位参加者都找到合适的衣物。"
+          ],
+          "answer": 2,
+          "explanation": "文章用质量规则、缺陷标注和试穿帮助参加者选择，同时指出交换量只反映活动情况，不能直接证明衣物得到使用或浪费减少。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "Getting Ready for a Clothing Repair Class",
+      "titleZh": "衣物修补课的准备与操作安排",
+      "tip": "先盲听抓住课程时长和适合携带的衣物，再带文梳理先练习、再修补、检查针脚后继续的顺序。注意工具与纽扣的提供范围；选三句各做一组影子跟读，最后脱稿复述准备事项。",
+      "level": "四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "passage": "Here are the instructions for Saturday's clothing repair class. The session starts at ten and lasts ninety minutes. Bring one clean garment with a loose button or a small hole. Please avoid leather coats, since our tools are designed for lighter fabric. We provide needles and thread, but matching buttons may not be available. If you need a particular color, bring your own button. Everyone will practice on spare cotton before working on personal clothing. A tutor must check your first stitches before you continue. You may watch the demonstration if you prefer not to use a needle. The final fifteen minutes are reserved for questions about washing and storage. Please collect all pins before leaving your table. Your finished garment will be photographed only if you agree.",
+      "passageZh": "以下是周六衣物修补课的说明。课程十点开始，持续九十分钟。请带一件有松动纽扣或小破洞的干净衣服。请不要带皮外套，因为我们的工具适用于较轻薄的布料。我们提供针和线，但未必有与你衣服相配的纽扣。如果需要特定颜色的纽扣，请自行携带。大家会先用备用棉布练习，再动手修补自己的衣物。继续缝之前，须由导师检查你最初缝的针脚。如果不想用针，你可以观看示范。最后十五分钟留给大家询问洗涤和收纳的问题。离开桌子前，请收好所有别针。只有征得你的同意，才会给你修补好的衣物拍照。",
+      "dictation": [
+        "The session starts at ten and lasts ninety minutes.",
+        "A tutor must check your first stitches before you continue."
+      ],
+      "dictationZh": [
+        "课程十点开始，持续九十分钟。",
+        "继续缝之前，须由导师检查你最初缝的针脚。"
+      ],
+      "questions": [
+        {
+          "prompt": "Why are participants asked not to bring leather coats?",
+          "promptZh": "为什么参加者被要求不要带皮外套？",
+          "options": [
+            "Leather coats must be washed during the class.",
+            "The tools are intended for lighter fabric.",
+            "The tutor accepts only new garments.",
+            "Leather coats have too many pockets."
+          ],
+          "optionsZh": [
+            "皮外套必须在课上洗涤。",
+            "现有工具适用于较轻薄的布料。",
+            "导师只接受新衣物。",
+            "皮外套的口袋太多。"
+          ],
+          "answer": 1,
+          "explanation": "听力用since解释原因：our tools are designed for lighter fabric，关键是工具的适用范围。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "What must learners do before continuing after making their first stitches?",
+          "promptZh": "缝好最初几针后，学员继续操作前必须做什么？",
+          "options": [
+            "Choose another garment from the table.",
+            "Photograph the finished clothing.",
+            "Wait until the final fifteen minutes.",
+            "Have a tutor check the stitches."
+          ],
+          "optionsZh": [
+            "从桌上再选一件衣物。",
+            "给修补好的衣物拍照。",
+            "等到最后十五分钟。",
+            "请导师检查针脚。"
+          ],
+          "answer": 3,
+          "explanation": "原文明确说A tutor must check your first stitches before you continue，考查操作顺序；最后十五分钟用于询问洗涤和收纳问题。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The garments that pass the quality check are suitable for exchange, but their new owners may still leave them unused.",
+      "main": "The garments are suitable for exchange, but their new owners may still leave them unused.",
+      "mainZh": "这些衣物适合交换，但新主人仍可能把它们闲置起来。",
+      "translation": "通过质量检查的衣物适合交换，但新主人仍可能把它们闲置起来。",
+      "core": [
+        "garments",
+        "are",
+        "suitable",
+        "owners",
+        "may leave",
+        "them",
+        "unused"
+      ],
+      "keywords": [
+        "衣物",
+        "通过",
+        "质量检查",
+        "适合",
+        "交换",
+        "新主人",
+        "闲置"
+      ],
+      "structure": "but连接两个并列分句：The garments are suitable for exchange和their new owners may still leave them unused。that pass the quality check是修饰garments的定语从句；unused是宾语them的补足语。",
+      "grammar": [
+        "pass属于定语从句；第一个主句的谓语是are，形容词suitable前不能省略be。",
+        "第二个分句中may后接动词原形leave；leave them unused表示让这些衣物处于未被使用的状态。"
+      ],
+      "examTip": "先找出are与may leave两个主句谓语，再识别that引导的修饰部分，最后理解but表达的转折。",
+      "level": "四级句法衔接",
+      "topic": "定语从句、并列分句与宾语补足语"
+    },
+    "trans": [
+      {
+        "source": "通过质量检查的衣物适合交换，但交换数量并不能说明每件衣物是否被穿过。",
+        "answer": "The garments that pass the quality check are suitable for exchange, but the number of exchanges does not show whether every garment has been worn.",
+        "alternative": "The garments which pass the quality check are suitable for exchange, but the exchange count does not tell us whether each garment has been worn.",
+        "acceptedAnswers": [
+          "The garments that pass the quality check are suitable for exchange, but the number of exchanges does not show whether every garment has been worn.",
+          "The garments which pass the quality check are suitable for exchange, but the exchange count does not tell us whether each garment has been worn."
+        ],
+        "keywords": [
+          "garments",
+          "quality check",
+          "suitable for exchange",
+          "does not",
+          "whether",
+          "has been worn"
+        ],
+        "grammar": "that/which引导定语从句；主句用are suitable。the number of exchanges按单数处理，用does not；whether引导宾语从句，has been worn为现在完成时被动。",
+        "chunks": [
+          "pass the quality check",
+          "are suitable for exchange",
+          "the number of exchanges",
+          "whether every garment has been worn"
+        ],
+        "level": "四级衔接表达",
+        "topic": "主句谓语、宾语从句与被动语态"
+      },
+      {
+        "source": "我们提供针和线，但参加者在修补自己的衣物之前必须先用备用布料练习。",
+        "answer": "We provide needles and thread, but participants must practice on spare fabric before repairing their own clothing.",
+        "alternative": "We provide needles and thread, but participants must practice on spare fabric before they repair their own clothing.",
+        "acceptedAnswers": [
+          "We provide needles and thread, but participants must practice on spare fabric before repairing their own clothing.",
+          "We provide needles and thread, but participants must practice on spare fabric before they repair their own clothing."
+        ],
+        "keywords": [
+          "provide",
+          "needles and thread",
+          "must practice",
+          "spare fabric",
+          "before",
+          "clothing"
+        ],
+        "grammar": "must后接动词原形practice；before可以作介词接repairing，也可以作连词接they repair完整从句；clothing是不可数名词。",
+        "chunks": [
+          "provide needles and thread",
+          "practice on spare fabric",
+          "before repairing their own clothing"
+        ],
+        "level": "四级衔接表达",
+        "topic": "情态动词与before后的两种结构"
+      }
+    ]
+  },
+  "2026-10-20": {
+    "title": "职业与招聘：用具体职责说明一份工作",
+    "grammarTip": "四级专项衔接：阅读辨别招聘广告中的具体职责、必要条件和培训安排；听力梳理模拟面试的准备、轮换与反馈。练习主句和定语从句的谓语、形容词前的be、条件从句、被动语态与副词。材料为原创分级模拟。",
+    "words": [
+      {
+        "word": "staff",
+        "phonetic": "/stæf/",
+        "pos": "n.",
+        "meaning": "全体员工；工作人员",
+        "phrase": "a staff member",
+        "example": "A staff member will show you how to use the booking system.",
+        "exampleZh": "一名工作人员会向你演示如何使用预约系统。"
+      },
+      {
+        "word": "colleague",
+        "phonetic": "/ˈkɑːliːɡ/",
+        "pos": "n.",
+        "meaning": "同事",
+        "phrase": "a new colleague",
+        "example": "My new colleague helped me prepare the weekly report.",
+        "exampleZh": "我的新同事帮我准备了每周报告。"
+      },
+      {
+        "word": "vacancy",
+        "phonetic": "/ˈveɪkənsi/",
+        "pos": "n.",
+        "meaning": "职位空缺；空位",
+        "phrase": "a job vacancy",
+        "example": "The notice describes a vacancy for a library assistant.",
+        "exampleZh": "这则启事说明了一个图书馆助理的空缺职位。"
+      },
+      {
+        "word": "diploma",
+        "phonetic": "/dɪˈploʊmə/",
+        "pos": "n.",
+        "meaning": "毕业文凭；毕业证书",
+        "phrase": "a high school diploma",
+        "example": "The position requires a high school diploma and basic computer skills.",
+        "exampleZh": "这个职位要求有高中文凭和基本的计算机技能。"
+      },
+      {
+        "word": "certificate",
+        "phonetic": "/sərˈtɪfɪkət/",
+        "pos": "n.",
+        "meaning": "证书；证明",
+        "phrase": "a training certificate",
+        "example": "She received a certificate after completing the training course.",
+        "exampleZh": "她完成培训课程后获得了一张证书。"
+      },
+      {
+        "word": "bonus",
+        "phonetic": "/ˈboʊnəs/",
+        "pos": "n.",
+        "meaning": "奖金；额外的好处",
+        "phrase": "an annual bonus",
+        "example": "The manager explained how the annual bonus was calculated.",
+        "exampleZh": "经理解释了年度奖金的计算方式。"
+      },
+      {
+        "word": "pension",
+        "phonetic": "/ˈpenʃən/",
+        "pos": "n.",
+        "meaning": "养老金；退休金",
+        "phrase": "receive a pension",
+        "example": "My grandfather receives a pension every month.",
+        "exampleZh": "我爷爷每月领取养老金。"
+      },
+      {
+        "word": "promotion",
+        "phonetic": "/prəˈmoʊʃən/",
+        "pos": "n.",
+        "meaning": "晋升；促销；推广",
+        "phrase": "earn a promotion",
+        "example": "She earned a promotion after leading several successful projects.",
+        "exampleZh": "她带领团队完成几个成功的项目后获得了晋升。"
+      },
+      {
+        "word": "retire",
+        "phonetic": "/rɪˈtaɪər/",
+        "pos": "v.",
+        "meaning": "退休；退役",
+        "phrase": "retire from work",
+        "example": "He plans to retire from work and spend more time painting.",
+        "exampleZh": "他计划退休，把更多时间用于画画。"
+      },
+      {
+        "word": "retirement",
+        "phonetic": "/rɪˈtaɪərmənt/",
+        "pos": "n.",
+        "meaning": "退休；退休生活",
+        "phrase": "after retirement",
+        "example": "After retirement, she became a volunteer at the local library.",
+        "exampleZh": "退休后，她成为当地图书馆的一名志愿者。"
+      },
+      {
+        "word": "candidate",
+        "phonetic": "/ˈkændɪdət/",
+        "pos": "n.",
+        "meaning": "候选人；求职者；应试者",
+        "phrase": "a suitable candidate",
+        "example": "Each candidate was asked to describe a time they solved a problem.",
+        "exampleZh": "每位求职者都被要求描述一次解决问题的经历。"
+      },
+      {
+        "word": "recruit",
+        "phonetic": "/rɪˈkruːt/",
+        "pos": "v.",
+        "meaning": "招聘；招收；招募",
+        "phrase": "recruit new staff",
+        "example": "The company plans to recruit two assistants this autumn.",
+        "exampleZh": "公司计划今年秋天招聘两名助理。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "recruitment",
+        "phonetic": "/rɪˈkruːtmənt/",
+        "pos": "n.",
+        "meaning": "招聘；招募",
+        "phrase": "the recruitment process",
+        "example": "The website explains each stage of the recruitment process.",
+        "exampleZh": "该网站解释了招聘流程的各个阶段。"
+      },
+      {
+        "word": "labor",
+        "phonetic": "/ˈleɪbər/",
+        "pos": "n.",
+        "meaning": "劳动；劳动力（美式拼写）",
+        "phrase": "skilled labor",
+        "example": "The factory needs skilled labor to operate its new machines.",
+        "exampleZh": "这家工厂需要熟练劳动力来操作新机器。"
+      },
+      {
+        "word": "workforce",
+        "phonetic": "/ˈwɜːrkfɔːrs/",
+        "pos": "n.",
+        "meaning": "全体员工；劳动力",
+        "phrase": "a skilled workforce",
+        "example": "The company offers regular training to its workforce.",
+        "exampleZh": "这家公司定期为全体员工提供培训。"
+      },
+      {
+        "word": "ambition",
+        "phonetic": "/æmˈbɪʃən/",
+        "pos": "n.",
+        "meaning": "抱负；雄心；志向",
+        "phrase": "achieve an ambition",
+        "example": "Her ambition is to become an engineer who designs safer bridges.",
+        "exampleZh": "她的志向是成为一名设计更安全桥梁的工程师。"
+      },
+      {
+        "word": "graduate",
+        "phonetic": "/ˈɡrædʒueɪt/",
+        "pos": "v.",
+        "meaning": "毕业（此处学习动词读音）",
+        "phrase": "graduate from college",
+        "example": "He hopes to work in a museum after he graduates from college.",
+        "exampleZh": "他希望大学毕业后在博物馆工作。"
+      },
+      {
+        "word": "appoint",
+        "phonetic": "/əˈpɔɪnt/",
+        "pos": "v.",
+        "meaning": "任命；委派；确定（时间等）",
+        "phrase": "appoint a manager",
+        "example": "The company will appoint a new manager next month.",
+        "exampleZh": "公司将于下个月任命一位新经理。"
+      },
+      {
+        "word": "apprentice",
+        "phonetic": "/əˈprentɪs/",
+        "pos": "n.",
+        "meaning": "学徒；徒弟",
+        "phrase": "work as an apprentice",
+        "example": "The apprentice learns practical skills from an experienced technician.",
+        "exampleZh": "这名学徒向一位经验丰富的技术人员学习实用技能。"
+      },
+      {
+        "word": "supervisor",
+        "phonetic": "/ˈsuːpərvaɪzər/",
+        "pos": "n.",
+        "meaning": "主管；监督者；指导者",
+        "phrase": "ask a supervisor",
+        "example": "Ask your supervisor for help if you are unsure about a task.",
+        "exampleZh": "如果不确定该如何完成一项任务，请向主管求助。"
+      },
+      {
+        "word": "resign",
+        "phonetic": "/rɪˈzaɪn/",
+        "pos": "v.",
+        "meaning": "辞职；辞去（职务）",
+        "phrase": "resign from a position",
+        "example": "She decided to resign from her position and return to college.",
+        "exampleZh": "她决定辞去职位，回到大学学习。"
+      },
+      {
+        "word": "personnel",
+        "phonetic": "/ˌpɜːrsəˈnel/",
+        "pos": "n.",
+        "meaning": "全体人员；员工；人事部门",
+        "phrase": "the personnel department",
+        "example": "The personnel department keeps a record of each employee's training.",
+        "exampleZh": "人事部门保存着每位员工的培训记录。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The candidate who has two years of experience ___ ready for the interview.",
+        "promptZh": "那位有两年经验的求职者已经准备好参加面试了。",
+        "options": [
+          "have",
+          "being",
+          "is",
+          "are"
+        ],
+        "optionsZh": [
+          "有（原形）",
+          "是（非谓语形式）",
+          "是（单数）",
+          "是（复数）"
+        ],
+        "answer": 2,
+        "explanation": "主句是The candidate is ready。who has two years of experience是定语从句，其中has不是主句谓语；主语candidate是单数，用is。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "The training instructions ___ clear and helpful.",
+        "promptZh": "这些培训说明清楚而且有帮助。",
+        "options": [
+          "are",
+          "do",
+          "has",
+          "be"
+        ],
+        "optionsZh": [
+          "是（复数）",
+          "做",
+          "有（单数）",
+          "是（原形）"
+        ],
+        "answer": 0,
+        "explanation": "clear和helpful是形容词，需要系动词be构成谓语。主语instructions是复数，使用are，不能直接用形容词作谓语。",
+        "tag": "be-adjective"
+      },
+      {
+        "prompt": "If a new colleague ___ help tomorrow, the supervisor will explain the task again.",
+        "promptZh": "如果新同事明天需要帮助，主管会再解释一遍这项任务。",
+        "options": [
+          "will need",
+          "needing",
+          "need",
+          "needs"
+        ],
+        "optionsZh": [
+          "将需要",
+          "需要（非谓语形式）",
+          "需要（原形）",
+          "需要（第三人称单数）"
+        ],
+        "answer": 3,
+        "explanation": "表示将来可能发生的情况时，if条件从句通常用一般现在时，主句用will加动词原形。a new colleague是单数，所以用needs。",
+        "tag": "conditional"
+      },
+      {
+        "prompt": "Each candidate must ___ about the interview time.",
+        "promptZh": "必须通知每位求职者面试时间。",
+        "options": [
+          "inform",
+          "be informed",
+          "informed",
+          "be inform"
+        ],
+        "optionsZh": [
+          "通知（原形）",
+          "被通知",
+          "通知（过去式或过去分词）",
+          "错误的被动形式"
+        ],
+        "answer": 1,
+        "explanation": "candidate是接受通知的人，需要被动语态。must后接be加过去分词informed，即must be informed。",
+        "tag": "passive"
+      },
+      {
+        "prompt": "The supervisor explained the booking system ___ to the new staff member.",
+        "promptZh": "主管向新员工清楚地解释了预约系统。",
+        "options": [
+          "clear",
+          "clarity",
+          "clearly",
+          "clearness"
+        ],
+        "optionsZh": [
+          "清楚的",
+          "清楚；清晰（名词）",
+          "清楚地",
+          "清楚；清晰（名词）"
+        ],
+        "answer": 2,
+        "explanation": "这里修饰动词explained，说明解释得如何，因此需要副词clearly；clear是形容词，clarity和clearness是名词。",
+        "tag": "adverb"
+      },
+      {
+        "prompt": "The supervisor who ___ new staff is in the meeting room.",
+        "promptZh": "负责培训新员工的那位主管在会议室里。",
+        "options": [
+          "trains",
+          "train",
+          "training",
+          "to train"
+        ],
+        "optionsZh": [
+          "培训（第三人称单数）",
+          "培训（原形）",
+          "培训（非谓语形式）",
+          "培训（不定式）"
+        ],
+        "answer": 0,
+        "explanation": "主句谓语is已经完整，但who引导的定语从句也需要谓语。who指代单数supervisor，故用trains，不能因后面的staff而改用复数形式。",
+        "tag": "relative-clause"
+      }
+    ],
+    "reading": {
+      "title": "What Should a Job Advertisement Tell You?",
+      "titleZh": "招聘广告应该告诉你什么？",
+      "level": "四级专项衔接 · 原创分级模拟",
+      "topic": "招聘广告、具体职责与培训信息",
+      "passage": "During a careers workshop, students examined a fictional advertisement for a library assistant. It asked for a positive, hardworking person with strong ambition. Although these qualities sounded attractive, the advertisement said little about the work. Could a candidate understand the position from those words alone?\n\nThe class rewrote the advertisement by starting with duties. The assistant would answer visitors' questions, update booking records, and prepare a short weekly report. Previous library experience was welcome but not required. A school diploma and basic computer skills were essential, while a particular training certificate was optional.\n\nNext, students clarified how a new colleague would learn. During the first two weeks, a supervisor would demonstrate each task and review completed work. New staff would practice the booking system before serving visitors independently. Instead of promising rapid promotion, the advertisement explained that progress would be discussed at a review after six months.\n\nFinally, the class checked every sentence against a simple question: what could an applicant do with this information? Working hours helped candidates compare the vacancy with their schedules. Clear training details helped them identify skills they could develop. General praise did neither. The teacher concluded that an effective advertisement gives people enough detail to decide whether to apply, without suggesting that everyone will have the same career.",
+      "passageZh": "在一次职业指导工作坊中，学生们研究了一则虚构的图书馆助理招聘广告。广告要求应聘者积极、勤奋而且有很强的进取心。虽然这些品质听起来很有吸引力，广告却很少说明实际工作内容。仅凭这些词语，求职者能了解这个职位吗？\n\n全班从工作职责入手改写了广告。助理需要回答来访者的问题、更新预约记录，并准备一份简短的每周报告。有图书馆工作经验会受到欢迎，但不是必要条件。学校毕业文凭和基本的计算机技能是必需的，而某种培训证书则属于可选条件。\n\n接下来，学生们明确了新同事将如何学习。前两周，主管会演示每项任务，并检查已经完成的工作。新员工会先练习使用预约系统，再独立接待来访者。广告没有承诺快速晋升，而是说明会在六个月后的一次评估中讨论工作进展。\n\n最后，全班用一个简单的问题检查每句话：求职者能利用这条信息做什么？工作时间可以帮助求职者判断这个空缺职位是否符合自己的时间安排。清楚的培训细节可以帮助他们了解自己能发展哪些技能。泛泛的赞美对这两点都没有帮助。老师总结说，有效的招聘广告应提供足够的细节，让人们决定是否申请，同时避免暗示每个人都会有相同的职业发展。",
+      "questions": [
+        {
+          "prompt": "Which item was optional in the rewritten advertisement?",
+          "promptZh": "改写后的招聘广告中，哪一项属于可选条件？",
+          "options": [
+            "Basic computer skills.",
+            "A particular training certificate.",
+            "A school diploma.",
+            "The ability to carry out the listed duties."
+          ],
+          "optionsZh": [
+            "基本的计算机技能。",
+            "某种培训证书。",
+            "学校毕业文凭。",
+            "完成所列职责的能力。"
+          ],
+          "answer": 1,
+          "explanation": "第二段用essential与optional作对比：文凭和基本计算机技能是必需的，a particular training certificate则是可选条件。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What would a supervisor do during the first two weeks?",
+          "promptZh": "主管会在前两周做什么？",
+          "options": [
+            "Ask new staff to train all other colleagues.",
+            "Choose a new career for each staff member.",
+            "Leave new staff to learn entirely by themselves.",
+            "Show how tasks are done and review completed work."
+          ],
+          "optionsZh": [
+            "要求新员工培训所有其他同事。",
+            "为每位员工选择新的职业。",
+            "让新员工完全独自学习。",
+            "演示任务的做法，并检查已完成的工作。"
+          ],
+          "answer": 3,
+          "explanation": "第三段明确说明主管会demonstrate each task and review completed work，即演示任务并检查完成情况。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What does the six-month review mean in the advertisement?",
+          "promptZh": "广告中六个月后的评估意味着什么？",
+          "options": [
+            "There will be a discussion of progress, but promotion is not promised.",
+            "Every new staff member will become a supervisor.",
+            "Training will only begin after six months.",
+            "The job will automatically end after six months."
+          ],
+          "optionsZh": [
+            "届时会讨论工作进展，但没有承诺晋升。",
+            "每位新员工都会成为主管。",
+            "培训要等到六个月后才会开始。",
+            "这份工作会在六个月后自动结束。"
+          ],
+          "answer": 0,
+          "explanation": "第三段把promising rapid promotion与discussed at a review区分开来。广告给出评估安排，不能据此推断届时一定晋升、才开始培训或结束工作。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What is the main purpose of rewriting the advertisement?",
+          "promptZh": "改写这则招聘广告的主要目的是什么？",
+          "options": [
+            "To make every applicant expect the same career path.",
+            "To remove all requirements so that anyone can do the job.",
+            "To help applicants decide by explaining duties, requirements, and training.",
+            "To make ambition the only quality considered in recruitment."
+          ],
+          "optionsZh": [
+            "让每位求职者期待相同的职业道路。",
+            "取消所有要求，让任何人都能做这份工作。",
+            "通过说明职责、条件和培训，帮助求职者作出决定。",
+            "让进取心成为招聘时考虑的唯一品质。"
+          ],
+          "answer": 2,
+          "explanation": "文章逐步补充职责、必要与可选条件以及培训和评估安排，末段明确指出这些细节是为了让求职者决定whether to apply。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "Practicing for an Interview",
+      "titleZh": "模拟面试的练习安排",
+      "tip": "先盲听确认这次活动的性质，再记录准备时间、每轮时长和角色轮换。带文听时抓住反馈记录的两项内容；选三句各做一组影子跟读，最后用自己的话复述从准备到修改答案的流程。",
+      "level": "四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "passage": "Welcome to our practice interview workshop for students who will graduate soon. This is a learning activity, not an interview for an actual vacancy. First, read the sample job advertisement and underline two important duties. You have five minutes to prepare an example from your own experience. Then work in pairs and take turns asking and answering questions. Each practice interview lasts four minutes, and then you exchange roles. Your partner should note one clear example and one point needing detail. After both rounds, a tutor will discuss how to improve your answers. The feedback concerns your explanations, rather than your chances of getting hired. Please keep the notes and revise one answer before next week's session.",
+      "passageZh": "欢迎参加我们为即将毕业的学生举办的模拟面试工作坊。这是一项学习活动，并非针对真实空缺职位的面试。首先，阅读招聘广告样例，并在两项重要职责下画线。你有五分钟时间，从自己的经历中准备一个例子。然后两人一组，轮流提问和回答。每次模拟面试持续四分钟，之后交换角色。你的搭档应记录一个清楚的例子和一处需要补充细节的地方。两轮结束后，导师会讨论如何改进你们的回答。反馈针对的是你的解释，而不是你获得工作的可能性。请保留笔记，并在下周的课程之前修改一个答案。",
+      "dictation": [
+        "Each practice interview lasts four minutes, and then you exchange roles.",
+        "Your partner should note one clear example and one point needing detail."
+      ],
+      "dictationZh": [
+        "每次模拟面试持续四分钟，之后交换角色。",
+        "你的搭档应记录一个清楚的例子和一处需要补充细节的地方。"
+      ],
+      "questions": [
+        {
+          "prompt": "What happens after each four-minute practice interview?",
+          "promptZh": "每次四分钟的模拟面试结束后会发生什么？",
+          "options": [
+            "The tutor offers the student a real job.",
+            "The partners exchange roles.",
+            "Everyone leaves without receiving feedback.",
+            "The partners write a new job advertisement."
+          ],
+          "optionsZh": [
+            "导师给学生提供一份真实工作。",
+            "搭档之间交换角色。",
+            "所有人未收到反馈就离开。",
+            "搭档共同写一则新的招聘广告。"
+          ],
+          "answer": 1,
+          "explanation": "听力明确说Each practice interview lasts four minutes, and then you exchange roles。五分钟用于事先准备例子，四分钟用于一轮模拟面试，注意区分。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "What should a partner record during the practice?",
+          "promptZh": "练习过程中，搭档应该记录什么？",
+          "options": [
+            "A salary offer and a starting date.",
+            "The applicant's chances of getting hired.",
+            "Every word in the sample advertisement.",
+            "One clear example and one point that needs more detail."
+          ],
+          "optionsZh": [
+            "一份薪资报价和一个入职日期。",
+            "求职者获得工作的可能性。",
+            "广告样例中的每一个词。",
+            "一个清楚的例子和一处需要更多细节的地方。"
+          ],
+          "answer": 3,
+          "explanation": "记录要求包含one clear example和one point needing detail两个部分。后文进一步说明反馈针对解释的质量；这次活动不对应真实招聘。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The advertisement that describes daily duties is useful because applicants can decide whether the position matches their skills.",
+      "main": "The advertisement is useful because applicants can decide whether the position matches their skills.",
+      "mainZh": "这则广告很有用，因为求职者能判断这个职位是否与自己的技能相符。",
+      "translation": "说明日常职责的这则广告很有用，因为求职者能判断这个职位是否与自己的技能相符。",
+      "core": [
+        "advertisement",
+        "is",
+        "useful",
+        "applicants",
+        "can decide",
+        "position",
+        "matches",
+        "skills"
+      ],
+      "keywords": [
+        "广告",
+        "说明",
+        "日常职责",
+        "有用",
+        "求职者",
+        "判断",
+        "职位",
+        "技能"
+      ],
+      "structure": "主句为The advertisement is useful；that describes daily duties是修饰advertisement的定语从句；because引导原因状语从句；whether the position matches their skills是decide的宾语从句。",
+      "grammar": [
+        "describes属于定语从句，不能代替主句的is；useful是形容词，前面需要系动词be。",
+        "can后用动词原形decide；whether引导表示是否的宾语从句，从句主语position为单数，因此谓语用matches。"
+      ],
+      "examTip": "先找The advertisement is useful，再区分that、because与whether引导的三层结构，避免把从句谓语误认为主句谓语。",
+      "level": "四级句法衔接",
+      "topic": "主句谓语、定语从句与宾语从句"
+    },
+    "trans": [
+      {
+        "source": "说明日常职责的招聘广告很有用，因为它能帮助求职者判断是否应该申请这个职位。",
+        "answer": "The job advertisement that describes daily duties is useful because it helps applicants decide whether they should apply for the position.",
+        "alternative": "The job advertisement which describes daily duties is useful because it helps applicants decide whether to apply for the position.",
+        "acceptedAnswers": [
+          "The job advertisement that describes daily duties is useful because it helps applicants decide whether they should apply for the position.",
+          "The job advertisement which describes daily duties is useful because it helps applicants decide whether to apply for the position."
+        ],
+        "keywords": [
+          "job advertisement",
+          "daily duties",
+          "is useful",
+          "helps applicants",
+          "whether",
+          "apply for"
+        ],
+        "grammar": "that/which引导定语从句，主句仍需is useful作谓语；help后接宾语加动词原形decide；whether可接完整从句，也可接不定式to apply。",
+        "chunks": [
+          "the job advertisement that describes daily duties",
+          "is useful because",
+          "helps applicants decide",
+          "apply for the position"
+        ],
+        "level": "四级衔接表达",
+        "topic": "定语从句、形容词谓语与whether结构"
+      },
+      {
+        "source": "如果新员工需要帮助，主管会在他们独立工作之前仔细检查他们的工作。",
+        "answer": "If new staff members need help, the supervisor will check their work carefully before they work independently.",
+        "alternative": "If new staff members need help, the supervisor will carefully review their work before they start working independently.",
+        "acceptedAnswers": [
+          "If new staff members need help, the supervisor will check their work carefully before they work independently.",
+          "If new staff members need help, the supervisor will carefully review their work before they start working independently."
+        ],
+        "keywords": [
+          "if",
+          "staff members",
+          "need help",
+          "supervisor",
+          "carefully",
+          "before",
+          "independently"
+        ],
+        "grammar": "if条件从句用一般现在时need，主句用will check；表示将来时间的before从句也用一般现在时；carefully修饰check或review，independently修饰work。",
+        "chunks": [
+          "if new staff members need help",
+          "the supervisor will check their work carefully",
+          "before they work independently"
+        ],
+        "level": "四级衔接表达",
+        "topic": "条件与时间从句、副词修饰动词"
+      }
+    ]
+  },
+  "2026-10-21": {
+    "title": "交通与运输：分清进度提示和送达承诺",
+    "grammarTip": "四级专项衔接：阅读区分包裹扫码、配送时间窗口和实际送达；听力抓住接驳车与渡轮各自的时间、地点和行李要求。强化主句与定语从句谓语、形容词前的be、被动语态和时间从句。材料为原创分级模拟。",
+    "words": [
+      {"word":"engine","phonetic":"/ˈendʒɪn/","pos":"n.","meaning":"发动机；引擎","phrase":"start the engine","example":"The driver checked the engine before leaving the terminal.","exampleZh":"司机离开总站前检查了发动机。"},
+      {"word":"brake","phonetic":"/breɪk/","pos":"n.; v.","meaning":"刹车；制动器；刹车减速","phrase":"check the brakes","example":"The mechanic checked the brakes before the test drive.","exampleZh":"机械师在试驾前检查了刹车。"},
+      {"word":"wheel","phonetic":"/wiːl/","pos":"n.","meaning":"轮子；方向盘","phrase":"the front wheel","example":"The front wheel of my bicycle needs repair.","exampleZh":"我的自行车前轮需要修理。"},
+      {"word":"tire","phonetic":"/ˈtaɪər/","pos":"n.","meaning":"轮胎（美式拼写；此处学习名词用法）","phrase":"a flat tire","example":"A flat tire delayed the delivery truck.","exampleZh":"一个漏气的轮胎耽误了送货卡车。"},
+      {"word":"signal","phonetic":"/ˈsɪɡnəl/","pos":"n.; v.","meaning":"信号；发信号；示意","phrase":"a traffic signal","example":"The traffic signal turned red before we reached the crossing.","exampleZh":"我们到达路口之前，交通信号灯变成了红色。"},
+      {"word":"lane","phonetic":"/leɪn/","pos":"n.","meaning":"车道；小路","phrase":"a bicycle lane","example":"Keep the bicycle lane clear so that cyclists can pass safely.","exampleZh":"请保持自行车道畅通，让骑车人能够安全通过。"},
+      {"word":"license","phonetic":"/ˈlaɪsəns/","pos":"n.; v.","meaning":"执照；许可证；准许；授权（美式拼写）","phrase":"a driver's license","example":"You need a valid driver's license to rent a car.","exampleZh":"租车需要有效的驾驶执照。"},
+      {"word":"gasoline","phonetic":"/ˈɡæsəliːn/","pos":"n.","meaning":"汽油（美式常用词）","phrase":"save gasoline","example":"Planning a shorter route can help the driver save gasoline.","exampleZh":"规划一条更短的路线可以帮助司机节省汽油。"},
+      {"word":"bicycle","phonetic":"/ˈbaɪsɪkəl/","pos":"n.","meaning":"自行车","phrase":"ride a bicycle","example":"She rides a bicycle to campus when the weather is fine.","exampleZh":"天气好时，她骑自行车去学校。"},
+      {"word":"motorcycle","phonetic":"/ˈmoʊtərsaɪkəl/","pos":"n.","meaning":"摩托车","phrase":"a motorcycle helmet","example":"The rider put on a helmet before starting the motorcycle.","exampleZh":"骑手发动摩托车前戴上了头盔。"},
+      {"word":"truck","phonetic":"/trʌk/","pos":"n.","meaning":"卡车；货车","phrase":"a delivery truck","example":"The delivery truck stopped outside the station to unload parcels.","exampleZh":"送货卡车停在站外卸下包裹。"},
+      {"word":"highway","phonetic":"/ˈhaɪweɪ/","pos":"n.","meaning":"公路；干道","phrase":"a busy highway","example":"Heavy rain slowed traffic on the highway.","exampleZh":"大雨使公路上的车辆行驶缓慢。"}
+    ],
+    "additionalWords": [
+      {"word":"ferry","phonetic":"/ˈferi/","pos":"n.; v.","meaning":"渡轮；渡船；运送；摆渡","phrase":"take a ferry","example":"Visitors can take a ferry from the terminal to the island.","exampleZh":"游客可以从码头乘渡轮前往岛上。"},
+      {"word":"terminal","phonetic":"/ˈtɜːrmɪnəl/","pos":"n.","meaning":"航站楼；交通总站；终端","phrase":"the ferry terminal","example":"Please wait inside the ferry terminal until boarding begins.","exampleZh":"请在渡轮码头候船楼内等待，直到开始登船。"},
+      {"word":"boarding","phonetic":"/ˈbɔːrdɪŋ/","pos":"n.","meaning":"登机；登船；上车","phrase":"a boarding pass","example":"Show your boarding pass before you enter the plane.","exampleZh":"登机前请出示登机牌。"},
+      {"word":"baggage","phonetic":"/ˈbæɡɪdʒ/","pos":"n.","meaning":"行李（不可数名词）","phrase":"collect your baggage","example":"Please collect your baggage before leaving the terminal.","exampleZh":"离开航站楼前，请取走自己的行李。"},
+      {"word":"cargo","phonetic":"/ˈkɑːrɡoʊ/","pos":"n.","meaning":"货物；船货；机载货物","phrase":"load the cargo","example":"Workers loaded the cargo onto the ship before noon.","exampleZh":"工人在中午前把货物装上了船。"},
+      {"word":"freight","phonetic":"/freɪt/","pos":"n.","meaning":"货物；货运；运费","phrase":"rail freight","example":"The company uses rail freight to move goods over long distances.","exampleZh":"这家公司使用铁路货运来长距离运输货物。"},
+      {"word":"delivery","phonetic":"/dɪˈlɪvəri/","pos":"n.","meaning":"递送；交付；送货","phrase":"a delivery window","example":"The delivery window gives a range of possible arrival times.","exampleZh":"配送时间窗口给出了可能到达的时间范围。"},
+      {"word":"parcel","phonetic":"/ˈpɑːrsəl/","pos":"n.","meaning":"包裹；小包","phrase":"send a parcel","example":"Write the complete address before you send the parcel.","exampleZh":"寄出包裹前，请写上完整地址。"},
+      {"word":"border","phonetic":"/ˈbɔːrdər/","pos":"n.; v.","meaning":"边界；国境；边缘；与……接壤","phrase":"cross the border","example":"The truck carried goods across the border.","exampleZh":"这辆卡车运载货物穿过了边境。"},
+      {"word":"visa","phonetic":"/ˈviːzə/","pos":"n.","meaning":"签证","phrase":"apply for a visa","example":"Check whether you need a visa before planning an international trip.","exampleZh":"计划国际旅行前，请确认自己是否需要签证。"}
+    ],
+    "grammar": [
+      {"prompt":"The parcel that arrived this morning ___ ready for collection.","promptZh":"今天早上到达的包裹已经可以领取了。","options":["are","be","is","arrive"],"optionsZh":["是（复数）","是（原形）","是（单数）","到达（原形）"],"answer":2,"explanation":"主句是The parcel is ready。that arrived this morning是定语从句，arrived不能代替主句谓语；parcel是单数，形容词ready前使用is。","tag":"main-verb"},
+      {"prompt":"The signs near the boarding gate ___ clear and easy to read.","promptZh":"登船口附近的标志清楚而且容易阅读。","options":["are","do","has","being"],"optionsZh":["是（复数）","做","有（单数）","是（非谓语形式）"],"answer":0,"explanation":"clear和easy是形容词，前面需要系动词be。主语The signs是复数，所以用are；near the boarding gate只是修饰signs的短语。","tag":"be-adjective"},
+      {"prompt":"All baggage must ___ before the bus leaves.","promptZh":"所有行李必须在巴士出发前接受检查。","options":["check","checked","be check","be checked"],"optionsZh":["检查（原形）","检查（过去式或过去分词）","错误的被动形式","被检查"],"answer":3,"explanation":"baggage是被检查的对象，要用被动语态。情态动词must后接be加过去分词checked，构成must be checked。","tag":"passive"},
+      {"prompt":"Please wait inside the terminal until boarding ___ tomorrow.","promptZh":"明天请在候船楼内等待，直到开始登船。","options":["will begin","begins","beginning","begin"],"optionsZh":["将开始","开始（第三人称单数）","开始（非谓语形式）","开始（原形）"],"answer":1,"explanation":"until引导表示将来时间的状语从句时，通常用一般现在时。boarding在这里是表示登船活动的名词，作单数主语，使用begins。","tag":"time-clause"},
+      {"prompt":"The driver who ___ parcels to this building knows the entrance well.","promptZh":"给这栋楼送包裹的司机很熟悉入口。","options":["deliver","delivering","delivers","to deliver"],"optionsZh":["递送（原形）","递送（非谓语形式）","递送（第三人称单数）","递送（不定式）"],"answer":2,"explanation":"主句谓语是knows；who引导的定语从句也需要谓语。who指代单数driver，因此用delivers。parcels是从句中的宾语，不决定谓语的单复数。","tag":"relative-clause"},
+      {"prompt":"The new message explains the delivery process more ___ than the old one.","promptZh":"新消息比旧消息更清楚地解释了配送流程。","options":["clearly","clear","clarity","clearness"],"optionsZh":["清楚地","清楚的","清晰（名词）","清楚（名词）"],"answer":0,"explanation":"这里修饰动词explains，要用副词clearly。more clearly表示更清楚地；不能用形容词clear或名词clarity、clearness修饰这个动作。","tag":"adverb"}
+    ],
+    "reading": {
+      "title":"A Message Is Not a Delivery",
+      "titleZh":"收到提示不等于包裹送达",
+      "level":"四级专项衔接 · 原创分级模拟",
+      "topic":"配送状态、时间窗口与证据边界",
+      "passage":"In a fictional campus delivery project, students tested two messages for people expecting parcels. The old message said, \"Your parcel has arrived.\" However, it appeared when a driver scanned a parcel at the local station, not when the parcel reached its owner. Several students left class to collect items that were still on a truck.\n\nThe project team changed the first message to explain the actual stage: the parcel had reached the station and was waiting for local delivery. A second message would be sent only after the parcel was placed in a collection locker. It would include the locker number and a collection code.\n\nThe team also added an expected delivery window, from two to five in the afternoon. This was a useful estimate, not a promise of arrival at exactly two. If the route changed, the window would be updated, with a short explanation.\n\nDuring a one-week trial, fewer students made unnecessary trips to the lockers. Yet the team did not claim that transport had become faster. The number of parcels and the distance traveled were similar, and drivers followed the same route. The change mainly helped people understand when to act. Clear information, the students concluded, should name the completed step, explain what comes next, and avoid turning an estimate into a guarantee.",
+      "passageZh":"在一个虚构的校园配送项目中，学生们为等待包裹的人测试了两种消息。旧消息写着：“你的包裹已到达。”然而，司机在本地站点扫描包裹时就会出现这条消息，并不是在包裹交到收件人手中时。有几个学生离开课堂去取件，物品却仍然在卡车上。\n\n项目团队修改了第一条消息，说明实际进度：包裹已到达站点，正在等待本地配送。只有在包裹被放进取件柜之后，才会发送第二条消息。第二条消息会包含柜号和取件码。\n\n团队还增加了预计配送时间窗口，即下午两点到五点。这是一个有用的估计，不是承诺恰好两点送达。如果路线发生变化，时间窗口会更新，并附上一段简短说明。\n\n在为期一周的试用中，白跑取件柜的学生减少了。但团队没有宣称运输变快了。包裹数量和运输距离与以前相近，司机走的也是同一条路线。这项改变主要帮助人们理解何时该采取行动。学生们得出结论：清楚的信息应说明已经完成的步骤，解释接下来会发生什么，并避免把估计变成保证。",
+      "questions": [
+        {"prompt":"When did the old message appear?","promptZh":"旧消息在什么时候出现？","options":["When an owner opened the collection locker.","When a driver scanned the parcel at the local station.","When a parcel was first ordered online.","When a driver finished every delivery on the route."],"optionsZh":["收件人打开取件柜时。","司机在本地站点扫描包裹时。","首次在网上下单购买包裹中的物品时。","司机完成该路线上的全部配送时。"],"answer":1,"explanation":"第一段明确区分在local station扫码与包裹到达收件人手中。旧消息在前一个环节就出现，因而造成误解。","tag":"reading"},
+        {"prompt":"What should happen before the second message is sent?","promptZh":"发送第二条消息之前应该发生什么？","options":["The owner must leave class.","The route must become shorter.","Every parcel on the truck must be delivered.","The parcel must be put in a collection locker."],"optionsZh":["收件人必须离开课堂。","路线必须变短。","卡车上的每个包裹都必须送达。","包裹必须被放进取件柜。"],"answer":3,"explanation":"第二段中的only after限定发送条件：包裹放入取件柜之后才发送第二条消息，并提供柜号与取件码。","tag":"reading"},
+        {"prompt":"How should people understand the two-to-five delivery window?","promptZh":"人们应该如何理解两点到五点的配送时间窗口？","options":["It is an estimate that may be updated if the route changes.","It guarantees that the parcel will arrive at exactly two.","It means collection is forbidden after five.","It proves that all drivers finish work at five."],"optionsZh":["它是一个估计，如果路线改变，时间窗口可能更新。","它保证包裹恰好在两点到达。","它表示五点之后禁止取件。","它证明所有司机都在五点下班。"],"answer":0,"explanation":"第三段明确说这是estimate而非恰好两点到达的promise，并说明路线变化时会更新。文章没有规定取件截止时间或司机下班时间。","tag":"reading"},
+        {"prompt":"What conclusion is best supported by the trial?","promptZh":"试用结果最能支持哪一项结论？","options":["The trucks transported every parcel more quickly.","The number of parcels fell sharply.","Clearer messages helped reduce unnecessary collection trips.","Drivers needed a completely different route."],"optionsZh":["卡车运输每个包裹都更快了。","包裹数量急剧减少。","更清楚的消息有助于减少不必要的取件行程。","司机需要一条完全不同的路线。"],"answer":2,"explanation":"末段观察到白跑取件柜的人减少，但包裹数量、距离和路线没有相应的大变化，因此不能把信息更清楚等同于运输更快。","tag":"reading"}
+      ]
+    },
+    "listening": {
+      "title":"The Bus Connection to the Ferry",
+      "titleZh":"前往渡轮码头的接驳巴士",
+      "tip":"先盲听判断通知的交通安排，分清巴士与渡轮两个时间。带文精听核对集合地点、票证和行李；选三句各做一组影子跟读，再脱稿用30—60秒复述从集合到登船的流程。音频为浏览器合成朗读，不是真题录音。",
+      "level":"四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "passage":"This announcement is for students joining Saturday's island visit by ferry. The connecting bus will leave the east campus gate at eight fifteen. Please arrive ten minutes early and show your booking message to the guide. The bus takes about twenty minutes to reach the ferry terminal. Our ferry leaves at nine, so there is time to collect tickets. Keep your small bag with you; larger baggage goes in the lower compartment. Remember to take all your belongings when you get off. At the terminal, wait beside the information desk for the group tickets. Do not join the boarding line until the guide calls your group. If you miss the bus, contact the guide before arranging another journey.",
+      "passageZh":"本通知面向参加周六乘渡轮游览岛屿活动的学生。接驳巴士将在八点十五分从校园东门出发。请提前十分钟到达，并向带队人员出示预约消息。巴士大约需要二十分钟到达渡轮码头。我们的渡轮九点出发，所以有时间领取船票。小包请随身携带，较大的行李则放在巴士下部的行李舱内。下车时记得带走所有随身物品。在码头，请在问讯处旁边等待领取团体船票。在带队人员叫到你们这一组之前，不要加入登船队伍。如果你错过了巴士，请先联系带队人员，再安排其他行程。",
+      "dictation":["The connecting bus will leave the east campus gate at eight fifteen.","Do not join the boarding line until the guide calls your group."],
+      "dictationZh":["接驳巴士将在八点十五分从校园东门出发。","在带队人员叫到你们这一组之前，不要加入登船队伍。"],
+      "questions":[
+        {"prompt":"When and where will the connecting bus leave?","promptZh":"接驳巴士将在何时何地出发？","options":["At nine from the ferry terminal.","At eight fifteen from the east campus gate.","At eight fifteen from the west campus gate.","At nine from the information desk."],"optionsZh":["九点，从渡轮码头出发。","八点十五分，从校园东门出发。","八点十五分，从校园西门出发。","九点，从问讯处出发。"],"answer":1,"explanation":"通知说巴士八点十五分从east campus gate出发；九点是渡轮的出发时间。提前十分钟到达是集合要求，不是改变巴士时刻。","tag":"listeningChoice"},
+        {"prompt":"What should students do at the terminal before joining the boarding line?","promptZh":"在码头加入登船队伍之前，学生应该做什么？","options":["Buy a second bus ticket and leave the group.","Leave all their belongings on the bus.","Go directly to the line without waiting.","Wait near the information desk and follow the guide's call."],"optionsZh":["再买一张巴士票并离开团队。","把所有物品留在巴士上。","直接排队，不必等待。","在问讯处附近等待，并听从带队人员的叫号。"],"answer":3,"explanation":"通知要求在information desk旁等待团体船票，并且要等guide叫到本组后再加入boarding line。下车时应带走物品。","tag":"listeningChoice"}
+      ]
+    },
+    "sent": {
+      "text":"The message that appears after a parcel is scanned is useful only if it explains which stage of delivery has been completed.",
+      "main":"The message is useful only if it explains which stage of delivery has been completed.",
+      "mainZh":"只有这条消息解释了配送的哪个阶段已经完成，它才有用。",
+      "translation":"包裹扫描后出现的消息，只有在解释配送的哪个阶段已经完成时才有用。",
+      "core":["message","is","useful","explains","stage","has been completed"],
+      "keywords":["消息","出现","扫描","有用","只有","解释","配送阶段","已经完成"],
+      "structure":"主句为The message is useful；that appears after a parcel is scanned是修饰message的定语从句，其中after引导时间状语从句；only if引导必要条件；which stage of delivery has been completed是explains的宾语从句。",
+      "grammar":["appears属于定语从句，主句仍然需要is useful，不能省掉形容词useful前的be。","is scanned是一般现在时被动语态；has been completed是现在完成时被动语态，说明某个配送阶段已经完成。"],
+      "examTip":"先划出The message is useful，再辨认that、after和only if各自引导的结构；注意only if是只有在……条件下，不等于if only表示的但愿。",
+      "level":"四级句法衔接",
+      "topic":"主句与从句谓语、必要条件和被动语态"
+    },
+    "trans": [
+      {"source":"只有当包裹被放进取件柜后，系统才会发送包含取件码的消息。","answer":"The system will send a message that includes a collection code only after the parcel is placed in a collection locker.","alternative":"The system will send a message with a collection code only after the parcel has been placed in a collection locker.","acceptedAnswers":["The system will send a message that includes a collection code only after the parcel is placed in a collection locker.","The system will send a message with a collection code only after the parcel has been placed in a collection locker."],"keywords":["system","send a message","collection code","only after","parcel","collection locker"],"grammar":"主句用will send；that includes a collection code修饰message，也可用with短语。表示将来的after从句不用will，包裹是被放入的对象，用is placed或has been placed。","chunks":["send a message that includes a collection code","only after","the parcel is placed in a collection locker"],"level":"四级衔接表达","topic":"定语从句、时间从句和被动语态"},
+      {"source":"如果路线发生变化，司机会更新预计送达时间，并清楚地解释原因。","answer":"If the route changes, the driver will update the expected delivery time and explain the reason clearly.","alternative":"If there is a change in the route, the driver will update the estimated arrival time and clearly explain why.","acceptedAnswers":["If the route changes, the driver will update the expected delivery time and explain the reason clearly.","If there is a change in the route, the driver will update the estimated arrival time and clearly explain why."],"keywords":["if","route","driver","update","time","explain","clearly"],"grammar":"if从句表示将来条件时用一般现在时changes，主句使用will；and连接并列动词update和explain，两者共用will。clearly是副词，修饰explain。","chunks":["if the route changes","update the expected delivery time","explain the reason clearly"],"level":"四级衔接表达","topic":"条件从句、并列谓语与副词"}
+    ]
+  },
+  "2026-10-22": {
+    "title": "周复盘：从看着熟悉到独立解释",
+    "grammarTip": "周复盘不新增课程词，默认40词复习；有到期首次学习自选词时按固定容量安排。先限时独立作答，再检查主句与定语从句的谓语、形容词前be、被动语态和副词。听读区分熟悉感、实际表现与证据范围。原创分级模拟，不是真题。",
+    "words": [],
+    "grammar": [
+      {"prompt":"The notes that contain several examples ___ useful during revision.","promptZh":"包含几个例子的那些笔记在复习时很有用。","options":["is","are","has","being"],"optionsZh":["是（单数）","是（复数）","有（第三人称单数）","是（非限定形式）"],"answer":1,"explanation":"主句主语是复数notes，形容词useful前需要are。that contain several examples是修饰notes的定语从句，contain不是主句谓语。","tag":"main-verb"},
+      {"prompt":"Explaining the idea without notes ___ difficult at first.","promptZh":"起初不看笔记解释这个想法很难。","options":["are","does","has","is"],"optionsZh":["是（复数）","助动词第三人称单数","有（第三人称单数）","是（单数）"],"answer":3,"explanation":"动名词短语Explaining the idea without notes整体作单数主语。difficult是形容词，不能直接作谓语，前面要用is。","tag":"be-verb"},
+      {"prompt":"The missing details should ___ before the next discussion.","promptZh":"在下一次讨论之前，遗漏的细节应该被补上。","options":["be added","added","adding","add"],"optionsZh":["被补上（被动语态）","补上（过去式或过去分词）","补上（非限定形式）","补上（原形）"],"answer":0,"explanation":"details是被补充的内容；情态动词should后接be added，构成情态动词的被动语态。只有added会缺少be。","tag":"passive"},
+      {"prompt":"The student explained the connection ___ enough for a partner to follow.","promptZh":"这名学生把其中的联系解释得足够清楚，搭档能够听懂。","options":["clear","clearness","clearly","clearing"],"optionsZh":["清楚的","清楚（名词）","清楚地","清理（非限定形式）"],"answer":2,"explanation":"修饰动词explained需要副词clearly；enough放在它修饰的副词之后。clear是形容词。","tag":"adverb"},
+      {"prompt":"Yesterday, the group ___ both methods before choosing one for the next task.","promptZh":"昨天，小组先比较了两种方法，再为下一项任务选择一种。","options":["compare","compared","has compared","comparing"],"optionsZh":["比较（原形）","比较（一般过去时）","已经比较（现在完成时）","比较（非限定形式）"],"answer":1,"explanation":"Yesterday明确表示已结束的过去时间，应使用一般过去时compared，不能用现在完成时has compared。","tag":"tense"},
+      {"prompt":"Which sentence correctly describes a daily learning habit?","promptZh":"哪句话正确描述了每天的学习习惯？","options":["I think one thing I can improve every day.","I thing about one think I can improve every day.","I think about one thing I can improve everyday.","I think about one thing I can improve every day."],"optionsZh":["想一个可改进之处，但think后缺少介词about。","把动词think与名词thing混淆。","把形容词everyday误作时间状语。","我每天思考一件可以改进的事。"],"answer":3,"explanation":"think about表示思考，thing是名词“事情”；can后用动词原形improve。every day分开写表示“每天”，不是形容词everyday。","tag":"every-day"}
+    ],
+    "reading": {
+      "title":"When Familiar Notes Are Not Enough",
+      "titleZh":"当熟悉的笔记还不够时",
+      "level":"四级专项衔接 · 原创分级模拟",
+      "topic":"笔记方法、独立解释与证据范围",
+      "passage":"In a campus study workshop, students compared two ways of reviewing notes. For one short section, they copied important sentences and used colors to mark terms. For another, they closed the notebook and wrote a short explanation, then reopened it to check what was missing.\n\nAt first, many preferred the colorful pages. The sentences looked familiar, and the pages were easy to read. However, when a partner asked them to explain a connection without looking, some could repeat a term but could not say why it mattered. A familiar page had not always produced an independent explanation.\n\nThe second activity often felt less comfortable. Students left gaps, confused two ideas, or discovered that an example was incomplete. Checking these problems gave them a specific reason to return to the material. They added missing connections rather than copying the whole section again.\n\nThe tutor warned against turning this small activity into a rule for everyone. The sections were different, and students brought different background knowledge. Their experience did not prove that colorful notes were useless or that one method always worked best.\n\nFor the following week, each student chose one difficult topic and planned a short check without notes. The aim was not to make every page look complete, but to find out what could be explained and what still needed attention.",
+      "passageZh":"在一次校园学习工作坊中，学生比较了两种复习笔记的方法。对于一个较短的章节，他们抄下重要句子，并用不同颜色标记术语。对于另一个章节，他们合上笔记本，写出简短解释，然后重新打开笔记本检查遗漏之处。\n\n起初，很多人更喜欢彩色页面。这些句子看起来很熟悉，页面也容易阅读。然而，当搭档要求他们不看笔记解释某种联系时，有些人能重复一个术语，却说不出它为何重要。熟悉的页面并不总能带来独立的解释。\n\n第二项活动常让人觉得不太自在。学生留出了空白、混淆了两个想法，或发现某个例子并不完整。检查这些问题让他们有了返回材料的具体理由。他们补充缺失的联系，而不是把整个章节重新抄一遍。\n\n导师提醒大家，不要把这项小活动变成适用于每个人的规则。两个章节不同，学生原有的背景知识也不同。他们的体验不能证明彩色笔记没有用，也不能证明某一种方法永远最好。\n\n在接下来的一周，每名学生选定一个困难主题，计划进行一次不看笔记的简短检查。目标不是让每一页都显得完整，而是弄清楚哪些内容能够解释，哪些仍需关注。",
+      "questions":[
+        {"prompt":"Why did many students initially prefer the colorful pages?","promptZh":"为什么很多学生起初更喜欢彩色页面？","options":["The pages contained no unfamiliar ideas.","The tutor had promised them higher grades.","The sentences looked familiar and were easy to read.","Their partners had already explained every connection."],"optionsZh":["页面中没有任何陌生想法。","导师曾承诺给他们更高的分数。","句子看起来熟悉，而且容易阅读。","搭档已经解释了所有联系。"],"answer":2,"explanation":"第二段直接说明熟悉感和易读性是最初的吸引力。看着熟悉不等于没有陌生想法，也不等于已经能独立解释。","tag":"reading"},
+        {"prompt":"What did checking the second activity help students do?","promptZh":"检查第二项活动帮助学生做了什么？","options":["Locate missing connections and review them specifically.","Avoid returning to the original material.","Copy every sentence into a new notebook.","Prove that their first explanations were always correct."],"optionsZh":["定位缺失的联系，并有针对性地复习。","不再返回原始材料。","把每句话抄进一本新笔记本。","证明第一次解释总是正确的。"],"answer":0,"explanation":"第三段指出，发现空白和混淆后，学生有了返回材料的具体理由，补充的是missing connections，而不是重新抄写整个章节。","tag":"reading"},
+        {"prompt":"Why did the tutor limit the conclusion drawn from the activity?","promptZh":"导师为什么限制了从这项活动中得出的结论？","options":["No student had used colors before.","The activity had already tested every possible method.","All students had exactly the same background knowledge.","The sections and students' background knowledge were different."],"optionsZh":["没有学生以前用过彩色标记。","活动已经测试了所有可能的方法。","所有学生的背景知识完全相同。","章节和学生的背景知识都不同。"],"answer":3,"explanation":"第四段给出了两个限制：学习的章节不同，参与者的背景知识不同。因此不能据此断言某种方法对所有人永远最好。","tag":"reading"},
+        {"prompt":"What was the main purpose of the following week's check?","promptZh":"下一周检查的主要目的是什么？","options":["Make all notebooks equally colorful.","Distinguish what students could explain from what needed more work.","Replace every lesson with copying practice.","Ensure that nobody ever left a gap in an answer."],"optionsZh":["让所有笔记本都一样色彩丰富。","区分能解释的内容和仍需继续学习的内容。","用抄写练习替代每节课。","确保任何人的答案都永远没有空白。"],"answer":1,"explanation":"末段明确把目标从页面看起来完整转向能否解释内容，以及找出仍需关注的部分。空白可以暴露困难，不需要掩盖。","tag":"reading"}
+      ]
+    },
+    "listening": {
+      "title":"Checking Notes Without Looking",
+      "titleZh":"不看原文检查笔记掌握情况",
+      "tip":"先盲听抓住“合上笔记后独立解释”的活动目的。带文精听区分三分钟阅读与五分钟独立解释，核对先后顺序；选三句各做一组影子跟读，最后用30—60秒脱稿复述检查步骤。浏览器合成朗读，不是真题录音。",
+      "level":"四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "passage":"This message explains the plan for Thursday's weekly study review session. Please bring one page of notes from a recent lesson. The session begins at four in the usual second floor classroom. First, read your notes for three minutes and then close the page. Write a short explanation of the main idea without looking back. You may leave a space for a detail you cannot remember. After five minutes, compare your explanation with your original notes. Mark any missing connections, not just spelling mistakes or unclear handwriting. Then use a different color to add one example of your own. Keep both versions so you can check them again next week. This practice will not change the grades you have already received.",
+      "passageZh":"本消息说明周四每周学习复盘课的安排。请带来最近一节课的一页笔记。课程四点开始，地点是平时使用的二楼教室。首先，阅读笔记三分钟，然后合上这一页。不回看笔记，简要解释主要观点。对于记不起的细节，你可以留出空白。五分钟后，将自己的解释与原始笔记进行比较。标记所有缺失的联系，而不仅仅是拼写错误或不清楚的字迹。然后用另一种颜色补充一个自己的例子。保留两个版本，以便下周再次检查。这项练习不会改变你已经获得的成绩。",
+      "dictation":["First, read your notes for three minutes and then close the page.","After five minutes, compare your explanation with your original notes."],
+      "dictationZh":["首先，阅读笔记三分钟，然后合上这一页。","五分钟后，将自己的解释与原始笔记进行比较。"],
+      "questions":[
+        {"prompt":"What should students do immediately after reading their notes for three minutes?","promptZh":"阅读笔记三分钟后，学生紧接着应该做什么？","options":["Copy every sentence in a different color.","Close the page and explain the main idea without looking.","Give their original notes to a teacher for a grade.","Leave the classroom without keeping their work."],"optionsZh":["用另一种颜色抄写每句话。","合上笔记，不看原文解释主要观点。","将原始笔记交给老师评分。","不保留作业就离开教室。"],"answer":1,"explanation":"通知先要求阅读三分钟，再close the page，接着without looking back写出主要观点的简短解释。补充例子和核对笔记发生在后面。","tag":"listeningChoice"},
+        {"prompt":"What should students focus on when comparing the two versions?","promptZh":"比较两个版本时，学生应重点关注什么？","options":["Whether both pages use exactly the same color.","Whether the classroom is on a different floor.","Missing connections as well as surface errors.","How to replace the grades they have already received."],"optionsZh":["两页是否使用完全相同的颜色。","教室是否换到了另一楼层。","除了表面错误之外，还要关注缺失的联系。","如何替换已经获得的成绩。"],"answer":2,"explanation":"通知强调Mark any missing connections, not just spelling mistakes or unclear handwriting，即不能只看拼写和字迹。最后也明确原有成绩不变。","tag":"listeningChoice"}
+      ]
+    },
+    "sent": {
+      "text":"The students who closed their notebooks discovered gaps that they had not noticed while the familiar sentences were in front of them.",
+      "main":"The students discovered gaps.",
+      "mainZh":"学生发现了遗漏。",
+      "translation":"那些合上笔记本的学生发现了遗漏，而这些遗漏是熟悉的句子摆在面前时他们没有注意到的。",
+      "core":["students","discovered","gaps"],
+      "keywords":["学生","合上","笔记本","发现","遗漏","没有注意","熟悉","句子","面前"],
+      "structure":"主句The students discovered gaps；who closed their notebooks修饰students。that they had not noticed修饰gaps；while the familiar sentences were in front of them说明过去未注意到遗漏时的情境。",
+      "grammar":["closed属于修饰students的定语从句，discovered才是主句谓语。","had not noticed表示先于discovered的过去情况；while从句的谓语是were，句中各分句都有自己的限定谓语。"],
+      "examTip":"先括起who和that引导的两个定语从句，再用“谁—发现—什么”找出主干，不要把closed误当主句谓语。",
+      "level":"四级衔接句法",
+      "topic":"两个定语从句、主句谓语与时间关系"
+    },
+    "trans": [
+      {"source":"看起来很熟悉的笔记，不一定能帮助你独立解释一个想法。","answer":"Notes that look familiar do not necessarily help you explain an idea independently.","alternative":"Familiar notes do not always help you explain an idea on your own.","acceptedAnswers":["Notes that look familiar do not necessarily help you explain an idea independently.","Familiar notes do not always help you explain an idea on your own."],"keywords":["notes","familiar","not","help","explain","idea"],"grammar":"that look familiar修饰复数notes；主句谓语为do not necessarily help。“不一定”不是完全否定，用not necessarily或not always。independently是副词，也可用on your own。","chunks":["notes that look familiar","do not necessarily help","explain an idea independently"],"level":"四级衔接表达","topic":"定语从句、部分否定与副词"},
+      {"source":"如果你发现某个联系遗漏了，就应当在下次讨论前把它补上。","answer":"If you find that a connection is missing, you should add it before the next discussion.","alternative":"If you notice a missing connection, you should add it before the next discussion.","acceptedAnswers":["If you find that a connection is missing, you should add it before the next discussion.","If you notice a missing connection, you should add it before the next discussion."],"keywords":["if","connection","missing","should add","before","discussion"],"grammar":"if从句用一般现在时find；that a connection is missing中，missing表示缺失状态，前面需要is。should后接动词原形add，it指前面的connection。","chunks":["a connection is missing","should add it","before the next discussion"],"level":"四级衔接表达","topic":"条件句、形容词前be与指代"}
+    ]
   }
 }
