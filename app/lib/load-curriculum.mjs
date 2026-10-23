@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { RECOVERY } from './recovery-data.mjs';
+import { validateExtensiveSource } from './extensive-source.mjs';
 
 // Optional dated additions are authored by the daily task, never fetched from the internet by the page.
 export function loadCurriculum(){
@@ -32,7 +33,7 @@ export function loadCurriculum(){
     const hasCjk=value=>/[\u3400-\u9fff]/.test(String(value||''));
     const validQuestions=Array.isArray(article?.questions)&&article.questions.length===2&&article.questions.every(q=>String(q?.prompt||'').trim()&&hasCjk(q.promptZh)&&Array.isArray(q.options)&&q.options.length===4&&q.options.every(x=>String(x||'').trim())&&Array.isArray(q.optionsZh)&&q.optionsZh.length===4&&q.optionsZh.every(hasCjk)&&Number.isInteger(q.answer)&&q.answer>=0&&q.answer<4&&hasCjk(q.explanation));
     const validPhrases=Array.isArray(article?.keyPhrases)&&article.keyPhrases.length===3&&article.keyPhrases.every(x=>String(x?.en||'').trim()&&hasCjk(x.zh));
-    if(!article||article.date!==date||!String(article.title||'').trim()||!hasCjk(article.titleZh)||!String(article.category||'').trim()||!['public-domain adaptation','original news-style'].includes(article.sourceType)||wordCount<180||wordCount>240||!hasCjk(article.textZh)||!String(article.sourceNote||'').trim()||!hasCjk(article.listeningTip)||!String(article.speakingPrompt||'').trim()||!hasCjk(article.speakingPromptZh)||!validQuestions||!validPhrases)throw new Error('Invalid extensive reading: '+date);
+    if(!article||article.date!==date||!String(article.title||'').trim()||!hasCjk(article.titleZh)||!String(article.category||'').trim()||!validateExtensiveSource(article,date)||wordCount<180||wordCount>240||!hasCjk(article.textZh)||!String(article.sourceNote||'').trim()||!hasCjk(article.listeningTip)||!String(article.speakingPrompt||'').trim()||!hasCjk(article.speakingPromptZh)||!validQuestions||!validPhrases)throw new Error('Invalid extensive reading: '+date);
     return {...lesson,extensive:{...article,date}};
   };
   const attachFullDictation=(lesson,date)=>{
@@ -48,7 +49,7 @@ export function loadCurriculum(){
   const missingGlosses=[];
   for(const lesson of lessons){
     for(const [section,passage] of [['reading',lesson.reading?.passage],['listening',lesson.listening?.passage],['extensive',lesson.extensive?.text]]){
-      const tokens=String(passage||'').toLowerCase().match(tokenPattern)||[];
+      const tokens=String(passage||'').replace(/[’‘]/g,"'").toLowerCase().match(tokenPattern)||[];
       for(const surface of tokens){
         const possessive=surface.endsWith("'s")?surface.slice(0,-2):surface;
         const hasMeaning=key=>Object.hasOwn(articleGlossary.entries,key)&&String(articleGlossary.entries[key]?.meaning||'').trim();

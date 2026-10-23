@@ -57,7 +57,7 @@ function inferBase(word){
   return [...new Set(candidates)].find(exists)||'';
 }
 
-const tokens=new Set(articles.flatMap(article=>(article.text.toLowerCase().match(/[a-z]+(?:'[a-z]+)?/g)||[])));
+const tokens=new Set(articles.flatMap(article=>(article.text.replace(/[’‘]/g,"'").toLowerCase().match(/[a-z]+(?:'[a-z]+)?/g)||[])));
 for(const surface of tokens){
   if(exists(surface))continue;
   const base=inferBase(surface);

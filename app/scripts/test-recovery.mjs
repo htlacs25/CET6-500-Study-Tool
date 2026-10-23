@@ -851,7 +851,7 @@ test('every prepared passage token has a Chinese gloss and reviewable IPA, and e
   const lessons=[...CURRICULUM.lessons,...Object.values(CURRICULUM.datedLessons)];
   for(const L of lessons){
     assertFullDictation({listening:L.listening},L.date||L.title);
-    for(const passage of [L.reading.passage,L.listening.passage,L.extensive.text])for(const token of passage.toLowerCase().match(tokenPattern)||[]){
+    for(const passage of [L.reading.passage,L.listening.passage,L.extensive.text])for(const token of passage.replace(/[’‘]/g,"'").toLowerCase().match(tokenPattern)||[]){
       const base=token.endsWith("'s")?token.slice(0,-2):token,entry=entries[token]||entries[base];
       assert.ok(entry?.meaning,`${L.date||L.title}: missing ${token}`);assert.match(entry.meaning,/[\u3400-\u9fff]/,`${token}: meaning needs Chinese`);
       const review=entry.base?entries[entry.base]:entry;assert.ok(review?.phonetic||entry.phonetic,`${token}: learner-selected word needs IPA`);seen.add(token);
@@ -903,10 +903,14 @@ function runtime(initial={},browserMode=false,speechOptions={}){
   let availableVoices=speechOptions.voices??[{name:'Test US',lang:'en-US',localService:true}],voiceReadCount=0;const speechEvents={};
   const speechSynthesis={speaking:false,pending:false,paused:false,cancel(){this.speaking=false;this.pending=false;audioEvents.push('cancel')},getVoices(){voiceReadCount++;return availableVoices},addEventListener(name,fn){speechEvents[name]=fn},speak(u){spoken.push(u);this.pending=Boolean(speechOptions.delayedStart)||this.paused;this.speaking=!this.pending;audioEvents.push('speak');if(this.speaking)u.onstart?.()},pause(){if(this.speaking||this.pending){this.paused=true;audioEvents.push('pause')}},resume(){if(this.paused){this.paused=false;audioEvents.push('resume')}}};
   const context=vm.createContext({...(browserMode?{window,sessionStorage:{getItem:k=>session.get(k)||null,setItem:(k,v)=>session.set(k,v),removeItem:k=>session.delete(k)}}:{}),Date:TestDate,document,app:element('app'),checkListen:element('checkListen'),listenRateLabel:element('listenRateLabel'),localStorage:{getItem:k=>saved.get(k)||null,setItem:(k,v)=>saved.set(k,v)},alert:m=>{throw new Error(m)},setInterval:fn=>timers.push(fn),setTimeout(){},speechSynthesis,SpeechSynthesisUtterance:function(t){this.text=t},Blob,URL,console});
+  // Even file:// pages have window; timers register pageshow/storage listeners.
+  if(!browserMode)context.window=window;
   let code=[...html.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)].map(x=>x[1]).join('\n');
-  const marker='reset();render();setInterval';assert.ok(code.includes(marker));
+  const marker='reset();render();installTaskTimers();setInterval';assert.ok(code.includes(marker));
   code=code.replace(marker,'globalThis.studyTest={findSearchWord,runWordSearch,openWordSearch,closeWordSearch,lesson,progress,rawProgress,courseKey,record,save,reset,render,renderWords,renderListening,renderPractice,renderExtensive,renderRecords,persistDraft,speak,pauseSpeech,resumeSpeech,stopSpeech,seven,checkLocalRelease,firstWordAttempt,makeWordRound,restoreDailyWordRound,todayMistakeWords,articleEntry,articleText,articlePairs,parallelArticle,toggleArticleTranslation,lookupPosition,lookupPanelHtml,openArticleWord,closeArticleWord,enrolArticleWord,saveUserVocab,userVocabulary:()=>userVocab,state:()=>({ws,ls,ps,er,rate,selected,today,articleLookup,wordPractice}),setDate:k=>{selected=k;reset()},setTab:k=>{tab=k}};reset();render();setInterval');
   code=code.replace('globalThis.studyTest={','globalThis.studyTest={bindStudyWordCard,bindSpeechButton,');
+  // Keep timer installation in the tested page startup, without changing its logic.
+  code=code.replace('};reset();render();setInterval','};'+marker);
   vm.runInContext(code,context);
   return {api:context.studyTest,saved,element,spoken,audioEvents,window,events,session,beacons,reloads:()=>reloadCount,voiceReads:()=>voiceReadCount,setVoices:rows=>{availableVoices=rows;speechEvents.voiceschanged?.()},startSpeech:()=>{speechSynthesis.pending=false;speechSynthesis.speaking=true;spoken.at(-1)?.onstart?.()},finishSpeech:()=>{speechSynthesis.pending=false;speechSynthesis.speaking=false;spoken.at(-1)?.onend?.()},advanceTime:iso=>{now=Date.parse(iso);timers.forEach(fn=>fn())}};
 }
