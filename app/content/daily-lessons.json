@@ -18533,5 +18533,2211 @@
       {"source":"看起来很熟悉的笔记，不一定能帮助你独立解释一个想法。","answer":"Notes that look familiar do not necessarily help you explain an idea independently.","alternative":"Familiar notes do not always help you explain an idea on your own.","acceptedAnswers":["Notes that look familiar do not necessarily help you explain an idea independently.","Familiar notes do not always help you explain an idea on your own."],"keywords":["notes","familiar","not","help","explain","idea"],"grammar":"that look familiar修饰复数notes；主句谓语为do not necessarily help。“不一定”不是完全否定，用not necessarily或not always。independently是副词，也可用on your own。","chunks":["notes that look familiar","do not necessarily help","explain an idea independently"],"level":"四级衔接表达","topic":"定语从句、部分否定与副词"},
       {"source":"如果你发现某个联系遗漏了，就应当在下次讨论前把它补上。","answer":"If you find that a connection is missing, you should add it before the next discussion.","alternative":"If you notice a missing connection, you should add it before the next discussion.","acceptedAnswers":["If you find that a connection is missing, you should add it before the next discussion.","If you notice a missing connection, you should add it before the next discussion."],"keywords":["if","connection","missing","should add","before","discussion"],"grammar":"if从句用一般现在时find；that a connection is missing中，missing表示缺失状态，前面需要is。should后接动词原形add，it指前面的connection。","chunks":["a connection is missing","should add it","before the next discussion"],"level":"四级衔接表达","topic":"条件句、形容词前be与指代"}
     ]
+  },
+  "2026-10-23": {
+    "title": "媒体与照片：图片的日期也是信息",
+    "grammarTip": "四级专项衔接：阅读区分照片真实与照片能否证明当前情况，核对拍摄日期、地点及说明；听力辨认投稿截止时间与说明更正步骤。继续巩固主句和定语从句的谓语、形容词前的be、被动语态、副词与every day/everyday。材料为原创分级模拟，不是实时新闻或真题。",
+    "words": [
+      {
+        "word": "newspaper",
+        "phonetic": "/ˈnuːzpeɪpər/",
+        "pos": "n.",
+        "meaning": "报纸",
+        "phrase": "a local newspaper",
+        "example": "The local newspaper printed a correction below the photograph.",
+        "exampleZh": "当地报纸在照片下方刊登了一则更正。"
+      },
+      {
+        "word": "magazine",
+        "phonetic": "/ˈmæɡəziːn/",
+        "pos": "n.",
+        "meaning": "杂志；期刊",
+        "phrase": "a monthly magazine",
+        "example": "The monthly magazine includes a column about campus life.",
+        "exampleZh": "这本月刊设有一个有关校园生活的专栏。"
+      },
+      {
+        "word": "journalist",
+        "phonetic": "/ˈdʒɜːrnəlɪst/",
+        "pos": "n.",
+        "meaning": "新闻工作者；记者",
+        "phrase": "a young journalist",
+        "example": "The journalist checked the date before using the picture.",
+        "exampleZh": "记者在使用图片前核查了日期。"
+      },
+      {
+        "word": "publisher",
+        "phonetic": "/ˈpʌblɪʃər/",
+        "pos": "n.",
+        "meaning": "出版者；出版商；出版社",
+        "phrase": "a book publisher",
+        "example": "The publisher asked the author to check the final text.",
+        "exampleZh": "出版社请作者检查最终文本。"
+      },
+      {
+        "word": "publication",
+        "phonetic": "/ˌpʌblɪˈkeɪʃən/",
+        "pos": "n.",
+        "meaning": "出版；发表；出版物",
+        "phrase": "the date of publication",
+        "example": "The date of publication was later than the date of the interview.",
+        "exampleZh": "发表日期晚于采访日期。"
+      },
+      {
+        "word": "broadcast",
+        "phonetic": "/ˈbrɔːdkæst/",
+        "pos": "n.; v.",
+        "meaning": "广播；播出；广播节目",
+        "phrase": "a live broadcast",
+        "example": "The radio station will broadcast the interview tomorrow.",
+        "exampleZh": "广播电台明天将播出这次采访。"
+      },
+      {
+        "word": "press",
+        "phonetic": "/pres/",
+        "pos": "n.; v.",
+        "meaning": "新闻界；报刊；按；压（结合原句判断）",
+        "phrase": "a press conference",
+        "example": "The museum invited the press to view its new collection.",
+        "exampleZh": "博物馆邀请新闻界参观其新藏品。"
+      },
+      {
+        "word": "media",
+        "phonetic": "/ˈmiːdiə/",
+        "pos": "n.",
+        "meaning": "媒体；大众传播媒介（medium的复数形式）",
+        "phrase": "social media",
+        "example": "Check the source before sharing a photograph on social media.",
+        "exampleZh": "在社交媒体上分享照片之前，请核查来源。"
+      },
+      {
+        "word": "reporter",
+        "phonetic": "/rɪˈpɔːrtər/",
+        "pos": "n.",
+        "meaning": "记者；报道者",
+        "phrase": "a newspaper reporter",
+        "example": "The reporter asked who had taken the original photograph.",
+        "exampleZh": "记者询问了原始照片是谁拍摄的。"
+      },
+      {
+        "word": "column",
+        "phonetic": "/ˈkɑːləm/",
+        "pos": "n.",
+        "meaning": "专栏；栏；柱",
+        "phrase": "a weekly column",
+        "example": "Her weekly column answers readers' questions about science.",
+        "exampleZh": "她的每周专栏回答读者有关科学的问题。"
+      },
+      {
+        "word": "subscribe",
+        "phonetic": "/səbˈskraɪb/",
+        "pos": "v.",
+        "meaning": "订阅；定期订购",
+        "phrase": "subscribe to a magazine",
+        "example": "You can subscribe to the magazine through its website.",
+        "exampleZh": "你可以通过该杂志的网站订阅。"
+      },
+      {
+        "word": "subscription",
+        "phonetic": "/səbˈskrɪpʃən/",
+        "pos": "n.",
+        "meaning": "订阅；订阅费",
+        "phrase": "an annual subscription",
+        "example": "An annual subscription gives readers access to twelve issues.",
+        "exampleZh": "年度订阅让读者可以阅读十二期杂志。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "photograph",
+        "phonetic": "/ˈfoʊtəɡræf/",
+        "pos": "n.; v.",
+        "meaning": "照片；拍照",
+        "phrase": "take a photograph",
+        "example": "The photograph shows the bridge before the repair work ended.",
+        "exampleZh": "这张照片展示了修缮工程结束之前的桥。"
+      },
+      {
+        "word": "photography",
+        "phonetic": "/fəˈtɑːɡrəfi/",
+        "pos": "n.",
+        "meaning": "摄影；摄影术",
+        "phrase": "a photography club",
+        "example": "The photography club teaches students to write accurate captions.",
+        "exampleZh": "摄影社团教学生撰写准确的图片说明。"
+      },
+      {
+        "word": "camera",
+        "phonetic": "/ˈkæmərə/",
+        "pos": "n.",
+        "meaning": "照相机；摄像机",
+        "phrase": "a digital camera",
+        "example": "Check the date setting on your camera before the trip.",
+        "exampleZh": "出行前，请检查相机的日期设置。"
+      },
+      {
+        "word": "photographer",
+        "phonetic": "/fəˈtɑːɡrəfər/",
+        "pos": "n.",
+        "meaning": "摄影师；拍摄照片的人",
+        "phrase": "a professional photographer",
+        "example": "The photographer explained when and where she took the picture.",
+        "exampleZh": "摄影师说明了她拍摄这张照片的时间和地点。"
+      },
+      {
+        "word": "radio",
+        "phonetic": "/ˈreɪdioʊ/",
+        "pos": "n.",
+        "meaning": "广播；无线电；收音机",
+        "phrase": "a radio station",
+        "example": "The radio station interviewed students about the exhibition.",
+        "exampleZh": "广播电台就展览采访了学生。"
+      },
+      {
+        "word": "channel",
+        "phonetic": "/ˈtʃænəl/",
+        "pos": "n.",
+        "meaning": "频道；渠道；水道",
+        "phrase": "a news channel",
+        "example": "The news channel corrected the location shown below the video.",
+        "exampleZh": "新闻频道更正了视频下方显示的地点。"
+      },
+      {
+        "word": "statement",
+        "phonetic": "/ˈsteɪtmənt/",
+        "pos": "n.",
+        "meaning": "声明；陈述；说法",
+        "phrase": "make a statement",
+        "example": "The club issued a statement explaining the change in opening hours.",
+        "exampleZh": "社团发布了一份声明，解释开放时间的调整。"
+      },
+      {
+        "word": "quote",
+        "phonetic": "/kwoʊt/",
+        "pos": "v.; n.",
+        "meaning": "引用；引述；引文",
+        "phrase": "quote a source",
+        "example": "If you quote a speaker, keep the original meaning clear.",
+        "exampleZh": "如果引用发言者的话，应准确传达原意。"
+      },
+      {
+        "word": "rumor",
+        "phonetic": "/ˈruːmər/",
+        "pos": "n.",
+        "meaning": "传闻；谣言（美式拼写）",
+        "phrase": "spread a rumor",
+        "example": "A rumor is not reliable evidence that an event has happened.",
+        "exampleZh": "传闻不是某件事已经发生的可靠证据。"
+      },
+      {
+        "word": "caption",
+        "phonetic": "/ˈkæpʃən/",
+        "pos": "n.; v.",
+        "meaning": "图片说明；给图片配说明",
+        "phrase": "write a caption",
+        "example": "The caption gives the photograph's date, location, and source.",
+        "exampleZh": "图片说明提供了照片的拍摄日期、地点和来源。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The photograph that shows workers on the bridge ___ several years old.",
+        "promptZh": "那张展示桥上工人的照片已有好几年历史。",
+        "options": [
+          "are",
+          "show",
+          "is",
+          "being"
+        ],
+        "optionsZh": [
+          "是（复数）",
+          "展示（原形）",
+          "是（单数）",
+          "是（非谓语形式）"
+        ],
+        "answer": 2,
+        "explanation": "主句是The photograph is several years old。that shows workers on the bridge是定语从句，shows不是主句谓语；主语photograph为单数，因此用is。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "The dates printed below the two pictures ___ different.",
+        "promptZh": "印在这两张图片下方的日期不同。",
+        "options": [
+          "do",
+          "is",
+          "have",
+          "are"
+        ],
+        "optionsZh": [
+          "做",
+          "是（单数）",
+          "有",
+          "是（复数）"
+        ],
+        "answer": 3,
+        "explanation": "different是形容词，需要系动词be。主语是复数dates，printed below the two pictures是修饰dates的过去分词短语，不能代替主句的are。",
+        "tag": "be-adjective"
+      },
+      {
+        "prompt": "The source of every photograph should ___ before publication.",
+        "promptZh": "每张照片的来源都应在发表前被核查。",
+        "options": [
+          "be checked",
+          "check",
+          "be checking",
+          "checked"
+        ],
+        "optionsZh": [
+          "被核查",
+          "核查（原形）",
+          "正在核查",
+          "核查（过去式或过去分词）"
+        ],
+        "answer": 0,
+        "explanation": "source是被核查的对象，因此用被动语态。情态动词should后使用be加过去分词checked，组成should be checked。",
+        "tag": "passive"
+      },
+      {
+        "prompt": "The revised caption explains the location more ___ than the first one.",
+        "promptZh": "修改后的图片说明比第一版更准确地解释了地点。",
+        "options": [
+          "accurate",
+          "accurately",
+          "accuracy",
+          "inaccurate"
+        ],
+        "optionsZh": [
+          "准确的",
+          "准确地",
+          "准确性",
+          "不准确的"
+        ],
+        "answer": 1,
+        "explanation": "修饰动词explains需要副词accurately；more accurately表示更准确地。accurate和inaccurate是形容词，accuracy是名词。",
+        "tag": "adverb"
+      },
+      {
+        "prompt": "The reporter checks messages ___ and writes about ___ life on campus.",
+        "promptZh": "这名记者每天查看消息，并报道校园日常生活。",
+        "options": [
+          "everyday; every day",
+          "everyday; everyday",
+          "every day; every day",
+          "every day; everyday"
+        ],
+        "optionsZh": [
+          "日常的；每天",
+          "日常的；日常的",
+          "每天；每天",
+          "每天；日常的"
+        ],
+        "answer": 3,
+        "explanation": "第一空说明查看消息的频率，用分开的every day，意为每天；第二空修饰名词life，用形容词everyday，意为日常的。",
+        "tag": "word-form"
+      },
+      {
+        "prompt": "The photographer who ___ the original file can explain its background.",
+        "promptZh": "保留了原始文件的摄影师能够解释照片的背景。",
+        "options": [
+          "keep",
+          "keeping",
+          "keeps",
+          "to keep"
+        ],
+        "optionsZh": [
+          "保留（原形）",
+          "保留（非谓语形式）",
+          "保留（第三人称单数）",
+          "保留（不定式）"
+        ],
+        "answer": 2,
+        "explanation": "主句谓语是can explain；who引导的定语从句也需要谓语。who指单数photographer，因此用keeps。不能因为主句已有谓语就省略从句谓语。",
+        "tag": "relative-clause"
+      }
+    ],
+    "reading": {
+      "title": "An Old Photograph in a New Story",
+      "titleZh": "新报道中的旧照片",
+      "level": "四级专项衔接 · 原创分级模拟",
+      "topic": "照片语境、时间与图片说明",
+      "passage": "In a fictional college newsroom, an editor chose a striking photograph for a story about a riverside bridge. Workers stood behind a fence, and part of the road was closed. The picture was sharp and genuine, so she believed it was suitable for publication.\n\nBefore the page appeared, a student reporter checked the original file. The photograph had been taken three years earlier, during a repair project. The fence had since been removed, and the new story concerned a walking route beside the bridge. Without a date, readers might assume that the road was still closed.\n\nThe editor considered deleting the photograph. The reporter suggested another option: use it in a small section about the bridge's history, with a caption stating the date, place, and reason for the closure. For the main story, they could request a recent picture of the walking route.\n\nThe team then added a question to its checklist: Does this image show the situation described in this part of the article? Checking whether a picture is real is important, but it is not the same as checking whether it fits the story. An older photograph can remain valuable when its background is clear. The problem begins when readers are encouraged to treat a past scene as evidence of a present condition.",
+      "passageZh": "在一个虚构的大学新闻编辑室里，一名编辑为一篇有关河边桥梁的报道选了一张引人注目的照片。工人们站在围栏后面，一部分道路处于封闭状态。图片清晰而且真实，因此她认为适合发表。\n\n在页面发布之前，一名学生记者检查了原始文件。这张照片拍摄于三年前的一次修缮工程期间。后来围栏已经拆除，而新报道讨论的是桥边的一条步行路线。如果不注明日期，读者可能会以为道路仍然封闭。\n\n编辑考虑删掉这张照片。记者提出了另一种选择：把它用于一个介绍桥梁历史的小栏目，配上说明拍摄日期、地点和封路原因的图片说明。对于主要报道，他们可以请求提供一张步行路线的近期照片。\n\n随后，团队在检查清单中增加了一个问题：这张图片展示的是否就是文章这一部分所描述的情况？核查图片是否真实很重要，但这与核查图片是否符合报道语境并不是一回事。当背景交代清楚时，一张旧照片仍然可以很有价值。问题始于读者被引导把过去的场景当作当前状况的证据。",
+      "questions": [
+        {
+          "prompt": "Why did the editor first consider the photograph suitable?",
+          "promptZh": "编辑最初为什么认为这张照片适合使用？",
+          "options": [
+            "It had been taken that morning.",
+            "It was clear and showed a real scene.",
+            "It included a map of the new walking route.",
+            "It showed that all repair work was finished."
+          ],
+          "optionsZh": [
+            "它是当天早上拍摄的。",
+            "它清晰且展示了真实场景。",
+            "它包含了新步行路线的地图。",
+            "它表明所有修缮工作都已完成。"
+          ],
+          "answer": 1,
+          "explanation": "第一段中的sharp and genuine说明编辑关注的是清晰度和真实性，但她当时还没有核对照片的时间是否符合新报道。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What might readers wrongly believe if the date were missing?",
+          "promptZh": "如果缺少日期，读者可能产生什么误解？",
+          "options": [
+            "The bridge was being built for the first time.",
+            "The walking route did not belong to the college.",
+            "The reporter had taken the photograph herself.",
+            "The road near the bridge was still closed."
+          ],
+          "optionsZh": [
+            "这座桥正在首次修建。",
+            "步行路线不属于这所大学。",
+            "这张照片是记者本人拍摄的。",
+            "桥附近的道路仍然封闭。"
+          ],
+          "answer": 3,
+          "explanation": "第二段明确指出，没有日期会让读者以为道路仍然封闭；实际上照片拍于三年前，围栏后来已经拆除。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "How did the reporter suggest using the older photograph?",
+          "promptZh": "记者建议如何使用这张旧照片？",
+          "options": [
+            "Place it in a history section with an informative caption.",
+            "Use it as the main image without any changes.",
+            "Remove the fence from the picture digitally.",
+            "Change its date to match the publication date."
+          ],
+          "optionsZh": [
+            "把它放在历史栏目中，并配上提供必要信息的说明。",
+            "不作任何调整，直接将它用作主图。",
+            "用数字编辑方式去掉图片中的围栏。",
+            "把拍摄日期改成发表日期。"
+          ],
+          "answer": 0,
+          "explanation": "第三段建议保留其历史价值，并标明日期、地点与封路原因；主要报道另找近期照片。文中没有建议修改画面或伪造日期。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What is the main lesson of the passage?",
+          "promptZh": "本文的主要启示是什么？",
+          "options": [
+            "Older photographs should never appear in new publications.",
+            "A sharp photograph always explains a current event correctly.",
+            "A genuine photograph still needs context to fit a story.",
+            "A publication date tells readers when every photograph was taken."
+          ],
+          "optionsZh": [
+            "旧照片永远不应出现在新出版物中。",
+            "一张清晰的照片总能正确解释当前事件。",
+            "真实照片仍需要语境信息，才能恰当地用于报道。",
+            "发表日期能告诉读者每张照片的拍摄时间。"
+          ],
+          "answer": 2,
+          "explanation": "末段区分了真实性与语境适配。旧照片并非不能用，但不能让读者误把过去场景当作当前证据；发表时间也不等于拍摄时间。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "Correcting a Photo Exhibition Caption",
+      "titleZh": "更正摄影展的图片说明",
+      "tip": "先盲听确定这是投稿与更正说明，记录截止时间和提交方式。带文精听核对日期、地点、作者与更正编号；选三句各做一组影子跟读，再用30—60秒脱稿复述投稿后发现说明错误应如何处理。音频为浏览器合成朗读，不是真题录音。",
+      "level": "四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "passage": "Here is a reminder for students entering the campus photography exhibition. Upload your original photograph through the club website by four on Friday. Printed copies are not required at this stage. Each picture needs a caption giving the date, location, and photographer's name. If you discover an error after submitting, open the correction form. Enter your submission number and write the corrected caption in full. Please do not upload the same photograph again as a new entry. A volunteer will check the change and send you a confirmation message. This message confirms the correction, not acceptance into the exhibition. The final selection will be posted on Monday afternoon. Contact the club office if you cannot find your submission number.",
+      "passageZh": "这里提醒准备参加校园摄影展的学生：请在周五四点前通过社团网站上传原始照片。现阶段不要求提交打印件。每张照片都需要一段图片说明，注明拍摄日期、地点和摄影者姓名。如果提交后发现错误，请打开更正表格。输入你的投稿编号，并完整写出更正后的说明。请不要把同一张照片再次作为新作品上传。一名志愿者将核查修改，并向你发送确认消息。这条消息确认的是说明已更正，并不表示作品已入选展览。最终入选名单将在周一下午发布。如果找不到投稿编号，请联系社团办公室。",
+      "dictation": [
+        "Printed copies are not required at this stage.",
+        "This message confirms the correction, not acceptance into the exhibition."
+      ],
+      "dictationZh": [
+        "现阶段不要求提交打印件。",
+        "这条消息确认的是说明已更正，并不表示作品已入选展览。"
+      ],
+      "questions": [
+        {
+          "prompt": "What should students submit by four on Friday?",
+          "promptZh": "学生应该在周五四点前提交什么？",
+          "options": [
+            "A printed copy at the club office.",
+            "A final selection list on the website.",
+            "An original photograph through the club website.",
+            "A new photograph every time a caption changes."
+          ],
+          "optionsZh": [
+            "向社团办公室提交打印件。",
+            "在网站上提交最终入选名单。",
+            "通过社团网站提交原始照片。",
+            "每次修改说明都提交一张新照片。"
+          ],
+          "answer": 2,
+          "explanation": "通知要求在周五四点前通过club website上传original photograph，并明确说现阶段不需要打印件。周一下午发布的是最终入选名单。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "What does the message sent after a caption change confirm?",
+          "promptZh": "修改图片说明后发送的消息确认了什么？",
+          "options": [
+            "The correction has been checked, but the work is not necessarily selected.",
+            "The photograph is definitely accepted into the exhibition.",
+            "The original photograph must be uploaded again.",
+            "The exhibition has been moved to Friday."
+          ],
+          "optionsZh": [
+            "更正已经核查，但作品不一定入选。",
+            "照片已经确定入选展览。",
+            "必须再次上传原始照片。",
+            "展览已改到周五。"
+          ],
+          "answer": 0,
+          "explanation": "重点听not acceptance：志愿者核查更正后发确认消息，只说明更正已处理，不代表入选。入选结果要等周一下午的最终名单。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "A photograph that was taken during an earlier repair project can mislead readers if its caption does not explain when the scene was recorded.",
+      "main": "A photograph can mislead readers if its caption does not explain when the scene was recorded.",
+      "mainZh": "如果图片说明没有解释场景记录于何时，一张照片就可能误导读者。",
+      "translation": "一张在较早的一次修缮工程期间拍摄的照片，如果图片说明没有解释场景记录于何时，就可能误导读者。",
+      "core": [
+        "photograph",
+        "can mislead",
+        "readers",
+        "caption",
+        "does not explain",
+        "was recorded"
+      ],
+      "keywords": [
+        "照片",
+        "较早",
+        "修缮工程",
+        "误导",
+        "读者",
+        "图片说明",
+        "解释",
+        "何时",
+        "记录"
+      ],
+      "structure": "主句为A photograph can mislead readers；that was taken during an earlier repair project是修饰photograph的定语从句；if引导条件状语从句；when the scene was recorded是explain的宾语从句。",
+      "grammar": [
+        "was taken属于定语从句，主句仍需要can mislead。定语从句中的that指代被拍摄的photograph，因此使用被动语态。",
+        "when the scene was recorded是宾语从句，使用陈述语序the scene was recorded，不能改成疑问语序was the scene recorded。"
+      ],
+      "examTip": "先识别photograph—can mislead—readers这一主干，再补充拍摄背景和if条件；不要把定语从句中的was taken当成全句唯一谓语。",
+      "level": "四级句法衔接",
+      "topic": "主句与定语从句、条件从句和宾语从句"
+    },
+    "trans": [
+      {
+        "source": "一张没有注明拍摄日期的旧照片可能会让读者误解当前情况。",
+        "answer": "An old photograph without the date it was taken may cause readers to misunderstand the current situation.",
+        "alternative": "An older photograph that does not show when it was taken may lead readers to misunderstand the present situation.",
+        "acceptedAnswers": [
+          "An old photograph without the date it was taken may cause readers to misunderstand the current situation.",
+          "An older photograph that does not show when it was taken may lead readers to misunderstand the present situation."
+        ],
+        "keywords": [
+          "photograph",
+          "date",
+          "taken",
+          "readers",
+          "misunderstand",
+          "situation"
+        ],
+        "grammar": "主语是An old photograph，谓语是may cause；without短语补充缺少日期这一条件。cause somebody to do或lead somebody to do表示使某人做某事；was taken表示照片被拍摄。",
+        "chunks": [
+          "an old photograph without the date it was taken",
+          "cause readers to misunderstand",
+          "the current situation"
+        ],
+        "level": "四级衔接表达",
+        "topic": "照片语境、被动语态与动词搭配"
+      },
+      {
+        "source": "在发表照片之前，记者应该核查来源，并清楚地说明拍摄地点。",
+        "answer": "Before publishing a photograph, the reporter should check its source and clearly state where it was taken.",
+        "alternative": "Before the photograph is published, the reporter should check its source and clearly explain where it was taken.",
+        "acceptedAnswers": [
+          "Before publishing a photograph, the reporter should check its source and clearly state where it was taken.",
+          "Before the photograph is published, the reporter should check its source and clearly explain where it was taken."
+        ],
+        "keywords": [
+          "before",
+          "photograph",
+          "reporter",
+          "check",
+          "source",
+          "clearly",
+          "where",
+          "taken"
+        ],
+        "grammar": "before后可以接动名词publishing，逻辑主语与主句reporter一致；也可使用before引导的被动从句。should后并列使用check和state；clearly修饰说明的动作，where从句使用陈述语序。",
+        "chunks": [
+          "before publishing a photograph",
+          "check its source",
+          "clearly state where it was taken"
+        ],
+        "level": "四级衔接表达",
+        "topic": "并列谓语、副词与宾语从句"
+      }
+    ]
+  },
+  "2026-10-24": {
+    "title": "天气与观察：让比较发生在相同条件下",
+    "grammarTip": "四级专项衔接：阅读识别测量地点、时间与结论的范围；听力抓住活动转移的条件和最终集合通知。继续区分主句与定语从句谓语，检查形容词前的be、被动语态和词形。材料为原创分级模拟，校园与事件均为虚构，不是实时天气预报或真题。",
+    "words": [
+      {
+        "word": "weather",
+        "phonetic": "/ˈweðər/",
+        "pos": "n.",
+        "meaning": "天气",
+        "phrase": "a change in the weather",
+        "example": "A change in the weather may affect our outdoor activity.",
+        "exampleZh": "天气变化可能影响我们的户外活动。"
+      },
+      {
+        "word": "atmosphere",
+        "phonetic": "/ˈætməsfɪr/",
+        "pos": "n.",
+        "meaning": "大气；气氛",
+        "phrase": "the earth's atmosphere",
+        "example": "The atmosphere contains gases that surround the earth.",
+        "exampleZh": "大气包含环绕地球的气体。"
+      },
+      {
+        "word": "rainfall",
+        "phonetic": "/ˈreɪnfɔːl/",
+        "pos": "n.",
+        "meaning": "降雨；降雨量",
+        "phrase": "annual rainfall",
+        "example": "The chart compares annual rainfall in two regions.",
+        "exampleZh": "图表比较了两个地区的年降雨量。"
+      },
+      {
+        "word": "storm",
+        "phonetic": "/stɔːrm/",
+        "pos": "n.",
+        "meaning": "暴风雨；风暴",
+        "phrase": "a sudden storm",
+        "example": "A sudden storm forced the team to move indoors.",
+        "exampleZh": "一场突如其来的暴风雨迫使团队转移到室内。"
+      },
+      {
+        "word": "thunder",
+        "phonetic": "/ˈθʌndər/",
+        "pos": "n.; v.",
+        "meaning": "雷；打雷",
+        "phrase": "the sound of thunder",
+        "example": "We heard thunder before the rain reached the campus.",
+        "exampleZh": "雨到达校园之前，我们听到了雷声。"
+      },
+      {
+        "word": "lightning",
+        "phonetic": "/ˈlaɪtnɪŋ/",
+        "pos": "n.",
+        "meaning": "闪电",
+        "phrase": "a flash of lightning",
+        "example": "A flash of lightning appeared above the distant hills.",
+        "exampleZh": "远处的山丘上方出现了一道闪电。"
+      },
+      {
+        "word": "breeze",
+        "phonetic": "/briːz/",
+        "pos": "n.",
+        "meaning": "微风",
+        "phrase": "a gentle breeze",
+        "example": "A gentle breeze moved the leaves outside the window.",
+        "exampleZh": "一阵微风吹动了窗外的树叶。"
+      },
+      {
+        "word": "cloudy",
+        "phonetic": "/ˈklaʊdi/",
+        "pos": "adj.",
+        "meaning": "多云的；阴天的",
+        "phrase": "a cloudy afternoon",
+        "example": "The afternoon was cloudy, but no rain was recorded.",
+        "exampleZh": "下午多云，但没有记录到降雨。"
+      },
+      {
+        "word": "sunshine",
+        "phonetic": "/ˈsʌnʃaɪn/",
+        "pos": "n.",
+        "meaning": "阳光",
+        "phrase": "bright sunshine",
+        "example": "The bench near the entrance was in bright sunshine.",
+        "exampleZh": "入口附近的长椅处在明亮的阳光下。"
+      },
+      {
+        "word": "frost",
+        "phonetic": "/frɔːst/",
+        "pos": "n.",
+        "meaning": "霜；霜冻",
+        "phrase": "a layer of frost",
+        "example": "A thin layer of frost covered the grass in the morning.",
+        "exampleZh": "早晨，草地上覆盖着一层薄霜。"
+      },
+      {
+        "word": "freeze",
+        "phonetic": "/friːz/",
+        "pos": "v.",
+        "meaning": "结冰；冻结",
+        "phrase": "freeze overnight",
+        "example": "Water in the shallow container may freeze overnight.",
+        "exampleZh": "浅容器中的水可能在夜间结冰。"
+      },
+      {
+        "word": "melt",
+        "phonetic": "/melt/",
+        "pos": "v.",
+        "meaning": "融化；熔化",
+        "phrase": "melt in the sun",
+        "example": "The ice began to melt as the morning grew warmer.",
+        "exampleZh": "随着早晨逐渐变暖，冰开始融化。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "forecast",
+        "phonetic": "/ˈfɔːrkæst/",
+        "pos": "n.; v.",
+        "meaning": "预测；预报",
+        "phrase": "a weather forecast",
+        "example": "The forecast suggests that rain may arrive in the afternoon.",
+        "exampleZh": "天气预报显示，下午可能会下雨。"
+      },
+      {
+        "word": "humidity",
+        "phonetic": "/hjuːˈmɪdəti/",
+        "pos": "n.",
+        "meaning": "湿度；潮湿",
+        "phrase": "high humidity",
+        "example": "High humidity can make the air feel uncomfortable.",
+        "exampleZh": "高湿度会使空气让人感觉不舒服。"
+      },
+      {
+        "word": "humid",
+        "phonetic": "/ˈhjuːmɪd/",
+        "pos": "adj.",
+        "meaning": "潮湿的；湿热的",
+        "phrase": "hot and humid",
+        "example": "The room became hot and humid after the windows were closed.",
+        "exampleZh": "窗户关上后，房间变得又热又潮湿。"
+      },
+      {
+        "word": "mild",
+        "phonetic": "/maɪld/",
+        "pos": "adj.",
+        "meaning": "温和的；不严寒的；轻微的",
+        "phrase": "a mild winter",
+        "example": "A mild winter does not mean that every day will be warm.",
+        "exampleZh": "温和的冬季并不意味着每一天都暖和。"
+      },
+      {
+        "word": "severe",
+        "phonetic": "/səˈvɪr/",
+        "pos": "adj.",
+        "meaning": "严重的；恶劣的；严厉的",
+        "phrase": "severe weather",
+        "example": "The outdoor event was canceled because of severe weather.",
+        "exampleZh": "由于恶劣天气，户外活动被取消了。"
+      },
+      {
+        "word": "tropical",
+        "phonetic": "/ˈtrɑːpɪkəl/",
+        "pos": "adj.",
+        "meaning": "热带的",
+        "phrase": "a tropical forest",
+        "example": "The book describes plants that grow in tropical forests.",
+        "exampleZh": "这本书描述了生长在热带森林中的植物。"
+      },
+      {
+        "word": "polar",
+        "phonetic": "/ˈpoʊlər/",
+        "pos": "adj.",
+        "meaning": "极地的；两极的",
+        "phrase": "the polar regions",
+        "example": "The class compared the polar regions with warmer areas.",
+        "exampleZh": "课堂上比较了极地地区与较温暖的地区。"
+      },
+      {
+        "word": "ocean",
+        "phonetic": "/ˈoʊʃən/",
+        "pos": "n.",
+        "meaning": "海洋；大洋",
+        "phrase": "cross the ocean",
+        "example": "The research ship crossed the ocean to collect information.",
+        "exampleZh": "这艘科考船横渡海洋去收集信息。"
+      },
+      {
+        "word": "island",
+        "phonetic": "/ˈaɪlənd/",
+        "pos": "n.",
+        "meaning": "岛；岛屿",
+        "phrase": "a small island",
+        "example": "A small island appeared on the map near the coast.",
+        "exampleZh": "地图上靠近海岸的位置有一座小岛。"
+      },
+      {
+        "word": "continent",
+        "phonetic": "/ˈkɑːntənənt/",
+        "pos": "n.",
+        "meaning": "洲；大陆",
+        "phrase": "across the continent",
+        "example": "Weather conditions vary greatly across the continent.",
+        "exampleZh": "整个大陆各地的天气状况差异很大。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The student who records the temperature every morning ___ responsible for the chart.",
+        "promptZh": "那名每天早晨记录温度的学生负责这张图表。",
+        "options": [
+          "are",
+          "is",
+          "record",
+          "being"
+        ],
+        "optionsZh": [
+          "是（复数）",
+          "是（单数）",
+          "记录（原形）",
+          "是（非谓语形式）"
+        ],
+        "answer": 1,
+        "explanation": "主句是The student is responsible for the chart。who records the temperature every morning是定语从句，records不能替代主句谓语；单数student后用is，构成be responsible for。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "The readings taken at different times ___ not directly comparable.",
+        "promptZh": "在不同时间取得的读数不能直接比较。",
+        "options": [
+          "do",
+          "is",
+          "have",
+          "are"
+        ],
+        "optionsZh": [
+          "做",
+          "是（单数）",
+          "有",
+          "是（复数）"
+        ],
+        "answer": 3,
+        "explanation": "comparable是形容词，需要be。主语readings是复数，用are；taken at different times是修饰readings的过去分词短语，不是主句谓语。",
+        "tag": "be-adjective"
+      },
+      {
+        "prompt": "The location of each instrument must ___ in the notebook.",
+        "promptZh": "每台仪器的位置都必须记录在笔记本中。",
+        "options": [
+          "be recorded",
+          "record",
+          "be recording",
+          "recorded"
+        ],
+        "optionsZh": [
+          "被记录",
+          "记录（原形）",
+          "正在记录",
+          "记录（过去式或过去分词）"
+        ],
+        "answer": 0,
+        "explanation": "location是被记录的对象，因此用被动语态。must后接be recorded，不能省略be或使用主动形式record。",
+        "tag": "passive"
+      },
+      {
+        "prompt": "The group compared the two sets of results ___.",
+        "promptZh": "小组仔细地比较了两组结果。",
+        "options": [
+          "careful",
+          "care",
+          "carefully",
+          "careless"
+        ],
+        "optionsZh": [
+          "仔细的",
+          "照料；小心",
+          "仔细地",
+          "粗心的"
+        ],
+        "answer": 2,
+        "explanation": "这里修饰动词compared，需要副词carefully。careful和careless是形容词，care是名词或动词，不能在此承担方式状语。",
+        "tag": "adverb"
+      },
+      {
+        "prompt": "The air felt very ___ after the rain.",
+        "promptZh": "雨后空气感觉很潮湿。",
+        "options": [
+          "humidity",
+          "humid",
+          "humidly",
+          "humidify"
+        ],
+        "optionsZh": [
+          "湿度（名词）",
+          "潮湿的（形容词）",
+          "潮湿地（副词）",
+          "使湿润（动词）"
+        ],
+        "answer": 1,
+        "explanation": "felt在这里是系动词，后接形容词humid描述air的状态。humidity是湿度这一名词，humidify是使湿润的动词。",
+        "tag": "word-form"
+      },
+      {
+        "prompt": "The instruments that ___ near the wall give higher readings at noon.",
+        "promptZh": "位于墙边的仪器在中午给出的读数更高。",
+        "options": [
+          "stands",
+          "standing",
+          "to stand",
+          "stand"
+        ],
+        "optionsZh": [
+          "位于（第三人称单数）",
+          "位于（非谓语形式）",
+          "位于（不定式）",
+          "位于（原形）"
+        ],
+        "answer": 3,
+        "explanation": "主句谓语是give。that引导的定语从句也需要谓语，that指代复数instruments，因而用stand，不用单数stands或非谓语形式。",
+        "tag": "relative-clause"
+      }
+    ],
+    "reading": {
+      "title": "Two Readings, Two Different Conditions",
+      "titleZh": "两个读数，两种不同条件",
+      "level": "四级专项衔接 · 原创分级模拟",
+      "topic": "温度观察、比较条件与结论范围",
+      "passage": "At a fictional college, a weather club compared temperatures near a brick wall and beside a lawn. The wall reading was higher, and one member proposed a striking headline: the whole city was becoming hotter. Another member asked when the readings had been taken.\n\nThe lawn measurement came from nine in the morning, while the wall measurement came from noon. The instruments had also been placed at different heights. With several conditions changing together, the group could not tell how much of the difference was related to location.\n\nThey redesigned their observation. Two matching instruments were placed at the same height, with similar protection from direct sunshine. Students recorded both readings at the same times for five days. They also noted cloud cover and whether the ground was wet. The wall location remained warmer on some afternoons, but the difference was smaller on cloudy days.\n\nIn their report, the students described the places and hours they had observed. They did not claim that two campus locations represented every neighborhood. They also avoided describing five days of measurements as a long history of changing weather.\n\nThe final chart looked less dramatic than the first headline. However, a reader could now see what had been compared and what remained unknown. The club kept the earlier notes to explain why its first comparison had been unfair.",
+      "passageZh": "在一所虚构的大学，天气社团比较了砖墙附近与草坪旁的温度。墙边的读数更高，一位成员提出了一个醒目的标题：整座城市正在变热。另一位成员问，这些读数是什么时候取得的。\n\n草坪旁的测量是在早晨九点进行的，而墙边的测量是在中午进行的。仪器还被放在不同高度。多个条件同时发生变化，因此小组无法判断差异中有多少与位置有关。\n\n他们重新设计了观察方法。两台相同型号的仪器被放在同样高度，并采取相似的遮挡措施，避免阳光直射。学生连续五天在相同的时刻记录两处读数。他们还记下了云量以及地面是否潮湿。墙边在某些下午仍然更暖，但阴天时差异较小。\n\n在报告中，学生描述了他们观察的地点和时段。他们没有声称校园中的两处位置能代表每个社区，也没有把五天的测量描述成长期的天气变化记录。\n\n最终图表不如最初的标题引人注目。然而，读者现在能够看清比较了什么，以及哪些方面仍不清楚。社团保留了先前的笔记，用来解释第一次比较为什么不公平。",
+      "questions": [
+        {
+          "prompt": "What was one problem with the club's first comparison?",
+          "promptZh": "社团第一次比较存在什么问题？",
+          "options": [
+            "Both instruments were used inside a classroom.",
+            "The readings were taken at different times of day.",
+            "The lawn temperature was never recorded.",
+            "The students measured every neighborhood."
+          ],
+          "optionsZh": [
+            "两台仪器都在教室内使用。",
+            "读数是在一天中的不同时刻取得的。",
+            "草坪温度从未被记录。",
+            "学生测量了每个社区。"
+          ],
+          "answer": 1,
+          "explanation": "第二段指出草坪读数来自早晨九点，墙边读数来自中午，仪器高度也不同。时间与位置等条件同时变化，不能把全部差异归因于位置。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "How did the students improve their observation?",
+          "promptZh": "学生如何改进观察方法？",
+          "options": [
+            "They removed all notes about cloudy weather.",
+            "They chose only the highest reading each day.",
+            "They used matching instruments at the same height and times.",
+            "They replaced the measurements with a newspaper headline."
+          ],
+          "optionsZh": [
+            "他们删除了所有关于多云天气的笔记。",
+            "他们每天只选取最高读数。",
+            "他们使用同型号仪器，在相同高度和时刻测量。",
+            "他们用报纸标题代替了测量。"
+          ],
+          "answer": 2,
+          "explanation": "第三段列出了匹配仪器、相同高度、类似遮挡和相同观测时间这些改进，并继续记录云量与地面状况，而不是删去天气信息。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Why did the report avoid a conclusion about the whole city?",
+          "promptZh": "报告为什么没有对整座城市作出结论？",
+          "options": [
+            "Two campus locations were not enough to represent every neighborhood.",
+            "The students knew that all neighborhoods had identical temperatures.",
+            "No one was allowed to compare temperatures on campus.",
+            "The instruments could only show cloud cover."
+          ],
+          "optionsZh": [
+            "校园中两个位置不足以代表每个社区。",
+            "学生知道所有社区的温度完全相同。",
+            "校园里不允许任何人比较温度。",
+            "仪器只能显示云量。"
+          ],
+          "answer": 0,
+          "explanation": "第四段明确限制了结论的适用范围：两处校园位置不能代表所有社区，五天也不能代表长期变化。没有证据不等于各处完全相同。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What is the main benefit of the final report?",
+          "promptZh": "最终报告的主要优点是什么？",
+          "options": [
+            "It proves that dramatic headlines are always false.",
+            "It predicts the weather for the whole next year.",
+            "It hides the mistakes in the first observation.",
+            "It makes the comparison and its limits clear."
+          ],
+          "optionsZh": [
+            "它证明醒目的标题总是错误的。",
+            "它预测了下一整年的天气。",
+            "它隐藏了最初观察中的错误。",
+            "它清楚说明了比较方法及其局限。"
+          ],
+          "answer": 3,
+          "explanation": "末段强调读者能看清比较了什么、仍有哪些未知；保留原笔记也让最初的问题可追溯。文章没有给出全年预报，也没有一概否定醒目标题。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "A Weather Backup for Saturday's Activity",
+      "titleZh": "周六活动的天气备用安排",
+      "tip": "盲听先确定活动是否取消，再记转移条件、集合时间和地点。带文精听核对if、by nine和ten；选三句分别进行一组影子跟读，再用30—60秒说明室外与室内两种安排。浏览器合成朗读不是实时天气预报，也不是真题录音。",
+      "level": "四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "passage": "Here is an update about Saturday's outdoor activity for the campus nature club. The current forecast suggests rain, but we have not canceled the event. If heavy rain is expected, we will use the science building instead. Please check the club notice by nine on Saturday morning. It will confirm the final location before you leave your room. If we move indoors, meet at the science building entrance at ten. Otherwise, meet at the garden gate at the same time. Bring your notebook, but leave the outdoor equipment at home if necessary. Indoor groups will examine photographs and discuss their observations from last week. Do not go to the garden first when the notice says indoors.",
+      "passageZh": "这里更新校园自然社团周六户外活动的安排。目前的天气预报显示可能有雨，但我们尚未取消活动。如果预计会有大雨，我们将改用科学楼。请在周六早晨九点前查看社团通知。通知会在你离开房间之前确认最终地点。如果活动转到室内，请十点在科学楼入口集合。否则，请在相同时间到花园大门集合。带上笔记本，但必要时请把户外器材留在住处。室内小组将查看照片，并讨论上周的观察情况。当通知说明在室内举行时，不要先去花园。",
+      "dictation": [
+        "Please check the club notice by nine on Saturday morning.",
+        "If we move indoors, meet at the science building entrance at ten."
+      ],
+      "dictationZh": [
+        "请在周六早晨九点前查看社团通知。",
+        "如果活动转到室内，请十点在科学楼入口集合。"
+      ],
+      "questions": [
+        {
+          "prompt": "What should students do by nine on Saturday morning?",
+          "promptZh": "学生应该在周六早晨九点前做什么？",
+          "options": [
+            "Meet at the garden gate.",
+            "Collect outdoor equipment at the science building.",
+            "Check the club notice for the final location.",
+            "Cancel their membership in the nature club."
+          ],
+          "optionsZh": [
+            "在花园大门集合。",
+            "在科学楼领取户外器材。",
+            "查看社团通知，确认最终地点。",
+            "取消自然社团的会员资格。"
+          ],
+          "answer": 2,
+          "explanation": "九点前是查看通知的时间，集合时间是十点。通知将确认最终地点；当前预报可能有雨不等于活动已经取消。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "Where should students meet if the activity moves indoors?",
+          "promptZh": "如果活动转到室内，学生应该在哪里集合？",
+          "options": [
+            "At the science building entrance at ten.",
+            "At the garden gate at nine.",
+            "Inside their rooms at ten.",
+            "At the garden first and then at the science building."
+          ],
+          "optionsZh": [
+            "十点在科学楼入口。",
+            "九点在花园大门。",
+            "十点在各自房间内。",
+            "先到花园，再到科学楼。"
+          ],
+          "answer": 0,
+          "explanation": "通知给出的室内方案是十点到科学楼入口。最后一句特别说明，通知写明室内时不要先去花园；花园大门是室外方案的集合点。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The readings that students collect at the same time are easier to compare because fewer conditions change between the two observations.",
+      "main": "The readings are easier to compare because fewer conditions change between the two observations.",
+      "mainZh": "这些读数更容易比较，因为两次观察之间变化的条件更少。",
+      "translation": "学生在同一时刻采集的读数更容易比较，因为两次观察之间变化的条件更少。",
+      "core": [
+        "readings",
+        "are",
+        "easier to compare",
+        "conditions",
+        "change"
+      ],
+      "keywords": [
+        "读数",
+        "学生",
+        "采集",
+        "相同时间",
+        "容易",
+        "比较",
+        "因为",
+        "条件",
+        "变化",
+        "观察"
+      ],
+      "structure": "主句是The readings are easier to compare；that students collect at the same time是修饰readings的定语从句，that在从句中作collect的宾语；because引导原因状语从句，主语是fewer conditions，谓语是change。",
+      "grammar": [
+        "collect属于定语从句，不能代替主句中的are。easier是形容词比较级，前面保留系动词are，与复数readings一致。",
+        "fewer修饰可数名词复数conditions；because后接完整从句，不能只保留一个名词短语。"
+      ],
+      "examTip": "先找readings—are—easier to compare，再将定语从句放回去，最后读取because后面的原因；不要见到collect就认为主句已有谓语。",
+      "level": "四级句法衔接",
+      "topic": "主句与定语从句、形容词前be和原因从句"
+    },
+    "trans": [
+      {
+        "source": "为了公平地比较两个地点，学生应该在相同的时间记录温度。",
+        "answer": "To compare the two locations fairly, students should record the temperature at the same time.",
+        "alternative": "Students should record temperatures at the same time to make a fair comparison between the two locations.",
+        "acceptedAnswers": [
+          "To compare the two locations fairly, students should record the temperature at the same time.",
+          "Students should record temperatures at the same time to make a fair comparison between the two locations."
+        ],
+        "keywords": [
+          "compare",
+          "locations",
+          "fairly",
+          "students",
+          "record",
+          "temperature",
+          "same",
+          "time"
+        ],
+        "grammar": "句首不定式To compare表示目的，其逻辑主语是students；fairly为副词，修饰compare。should后接动词原形record，at the same time表示在相同时间。",
+        "chunks": [
+          "compare the two locations fairly",
+          "record the temperature",
+          "at the same time"
+        ],
+        "level": "四级衔接表达",
+        "topic": "目的表达、副词与时间短语"
+      },
+      {
+        "source": "如果预计会有大雨，活动将在室内举行，但集合时间不变。",
+        "answer": "If heavy rain is expected, the activity will be held indoors, but the meeting time will remain the same.",
+        "alternative": "The activity will take place indoors if heavy rain is expected, but students will meet at the same time.",
+        "acceptedAnswers": [
+          "If heavy rain is expected, the activity will be held indoors, but the meeting time will remain the same.",
+          "The activity will take place indoors if heavy rain is expected, but students will meet at the same time."
+        ],
+        "keywords": [
+          "heavy",
+          "rain",
+          "expected",
+          "activity",
+          "indoors",
+          "meeting",
+          "time",
+          "same"
+        ],
+        "grammar": "if条件从句用一般现在时is expected表示未来条件，主句用will be held。be held是被动语态；remain the same表示保持不变，but连接转折信息。",
+        "chunks": [
+          "if heavy rain is expected",
+          "be held indoors",
+          "the meeting time will remain the same"
+        ],
+        "level": "四级衔接表达",
+        "topic": "条件从句、被动语态与转折"
+      }
+    ]
+  },
+  "2026-10-25": {
+    "title": "音乐与排练：先解决难点，再连接整体",
+    "grammarTip": "四级专项衔接：阅读比较完整练习与局部练习的不同作用，识别做法改变的原因；听力区分技术彩排与正式演出的日期、入场安排及服装领取步骤。继续巩固主句与定语从句的谓语、形容词前的be、被动语态及词形。原创虚构分级材料，不是实时新闻或真题。",
+    "words": [
+      {
+        "word": "concert",
+        "phonetic": "/ˈkɑːnsərt/",
+        "pos": "n.",
+        "meaning": "音乐会；演奏会",
+        "phrase": "a student concert",
+        "example": "The student concert will begin at seven on Saturday.",
+        "exampleZh": "学生音乐会将于周六七点开始。"
+      },
+      {
+        "word": "orchestra",
+        "phonetic": "/ˈɔːrkɪstrə/",
+        "pos": "n.",
+        "meaning": "管弦乐队",
+        "phrase": "play in an orchestra",
+        "example": "She plays the violin in the college orchestra.",
+        "exampleZh": "她在大学管弦乐队中拉小提琴。"
+      },
+      {
+        "word": "piano",
+        "phonetic": "/piˈænoʊ/",
+        "pos": "n.",
+        "meaning": "钢琴",
+        "phrase": "play the piano",
+        "example": "The piano supports the melody with a steady rhythm.",
+        "exampleZh": "钢琴以稳定的节奏衬托旋律。"
+      },
+      {
+        "word": "violin",
+        "phonetic": "/ˌvaɪəˈlɪn/",
+        "pos": "n.",
+        "meaning": "小提琴",
+        "phrase": "a violin lesson",
+        "example": "During her violin lesson, she practiced one difficult phrase.",
+        "exampleZh": "在小提琴课上，她练习了一个较难的乐句。"
+      },
+      {
+        "word": "guitar",
+        "phonetic": "/ɡɪˈtɑːr/",
+        "pos": "n.",
+        "meaning": "吉他",
+        "phrase": "an electric guitar",
+        "example": "The electric guitar was too loud for the small room.",
+        "exampleZh": "电吉他的音量对这个小房间来说太大了。"
+      },
+      {
+        "word": "flute",
+        "phonetic": "/fluːt/",
+        "pos": "n.",
+        "meaning": "长笛",
+        "phrase": "a flute player",
+        "example": "The flute player waited for the leader's signal.",
+        "exampleZh": "长笛演奏者等待着领队的信号。"
+      },
+      {
+        "word": "drum",
+        "phonetic": "/drʌm/",
+        "pos": "n.; v.",
+        "meaning": "鼓；打鼓；连续敲击（结合原句判断）",
+        "phrase": "beat a drum",
+        "example": "A student beat a drum to help the group keep time.",
+        "exampleZh": "一名学生敲鼓，帮助小组保持节拍。"
+      },
+      {
+        "word": "melody",
+        "phonetic": "/ˈmelədi/",
+        "pos": "n.",
+        "meaning": "旋律；曲调",
+        "phrase": "a familiar melody",
+        "example": "The familiar melody became clearer when the group slowed down.",
+        "exampleZh": "当小组放慢速度时，熟悉的旋律变得更加清晰。"
+      },
+      {
+        "word": "rhythm",
+        "phonetic": "/ˈrɪðəm/",
+        "pos": "n.",
+        "meaning": "节奏；韵律",
+        "phrase": "a steady rhythm",
+        "example": "Clapping helped the students understand the rhythm.",
+        "exampleZh": "拍手帮助学生理解了节奏。"
+      },
+      {
+        "word": "musician",
+        "phonetic": "/mjuˈzɪʃən/",
+        "pos": "n.",
+        "meaning": "音乐家；乐手",
+        "phrase": "a young musician",
+        "example": "Each musician listened carefully to the other players.",
+        "exampleZh": "每位乐手都仔细聆听其他人的演奏。"
+      },
+      {
+        "word": "composer",
+        "phonetic": "/kəmˈpoʊzər/",
+        "pos": "n.",
+        "meaning": "作曲家",
+        "phrase": "a famous composer",
+        "example": "The composer explained why the ending should be quiet.",
+        "exampleZh": "作曲家解释了为什么结尾应该轻柔。"
+      },
+      {
+        "word": "compose",
+        "phonetic": "/kəmˈpoʊz/",
+        "pos": "v.",
+        "meaning": "创作；作曲；组成",
+        "phrase": "compose a song",
+        "example": "They plan to compose a short song for the festival.",
+        "exampleZh": "他们计划为这个节日创作一首短歌。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "composition",
+        "phonetic": "/ˌkɑːmpəˈzɪʃən/",
+        "pos": "n.",
+        "meaning": "作品；作曲；作文；组成（结合原句判断）",
+        "phrase": "a musical composition",
+        "example": "Her first musical composition was written for two guitars.",
+        "exampleZh": "她的第一首音乐作品是为两把吉他创作的。"
+      },
+      {
+        "word": "rehearsal",
+        "phonetic": "/rɪˈhɜːrsəl/",
+        "pos": "n.",
+        "meaning": "排练；彩排",
+        "phrase": "a technical rehearsal",
+        "example": "The technical rehearsal is for checking lights and sound.",
+        "exampleZh": "技术彩排用于检查灯光和音响。"
+      },
+      {
+        "word": "rehearse",
+        "phonetic": "/rɪˈhɜːrs/",
+        "pos": "v.",
+        "meaning": "排练；预演",
+        "phrase": "rehearse a scene",
+        "example": "The actors will rehearse the final scene after lunch.",
+        "exampleZh": "演员们将在午饭后排练最后一场戏。"
+      },
+      {
+        "word": "actor",
+        "phonetic": "/ˈæktər/",
+        "pos": "n.",
+        "meaning": "演员（可泛指演员，也可特指男演员，结合语境判断）",
+        "phrase": "a leading actor",
+        "example": "The leading actor checked where to stand on the stage.",
+        "exampleZh": "主演确认了在舞台上应该站的位置。"
+      },
+      {
+        "word": "actress",
+        "phonetic": "/ˈæktrəs/",
+        "pos": "n.",
+        "meaning": "女演员",
+        "phrase": "a talented actress",
+        "example": "The actress explained the reason for her character's decision.",
+        "exampleZh": "这位女演员解释了她所扮演的角色作出决定的原因。"
+      },
+      {
+        "word": "curtain",
+        "phonetic": "/ˈkɜːrtən/",
+        "pos": "n.",
+        "meaning": "窗帘；帷幕；幕布",
+        "phrase": "raise the curtain",
+        "example": "The curtain will rise after the audience is seated.",
+        "exampleZh": "观众就座后，幕布将升起。"
+      },
+      {
+        "word": "costume",
+        "phonetic": "/ˈkɑːstuːm/",
+        "pos": "n.",
+        "meaning": "戏服；服装",
+        "phrase": "collect a costume",
+        "example": "Please collect your costume from the room beside the stage.",
+        "exampleZh": "请从舞台旁的房间领取你的戏服。"
+      },
+      {
+        "word": "comedy",
+        "phonetic": "/ˈkɑːmədi/",
+        "pos": "n.",
+        "meaning": "喜剧；喜剧作品",
+        "phrase": "a short comedy",
+        "example": "The club chose a short comedy for its first performance.",
+        "exampleZh": "社团选择了一部短喜剧作为首次演出的作品。"
+      },
+      {
+        "word": "tragedy",
+        "phonetic": "/ˈtrædʒədi/",
+        "pos": "n.",
+        "meaning": "悲剧；悲惨事件",
+        "phrase": "a classical tragedy",
+        "example": "The tragedy explores the consequences of a difficult choice.",
+        "exampleZh": "这部悲剧探讨了一个艰难选择带来的后果。"
+      },
+      {
+        "word": "classical",
+        "phonetic": "/ˈklæsɪkəl/",
+        "pos": "adj.",
+        "meaning": "古典的；古典风格的",
+        "phrase": "classical music",
+        "example": "The concert includes both classical music and modern songs.",
+        "exampleZh": "这场音乐会既包括古典音乐，也包括现代歌曲。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The musician who leads the group ___ ready to begin.",
+        "promptZh": "带领这个小组的乐手准备好开始了。",
+        "options": [
+          "are",
+          "is",
+          "lead",
+          "being"
+        ],
+        "optionsZh": [
+          "是（复数）",
+          "是（单数）",
+          "带领（原形）",
+          "是（非谓语形式）"
+        ],
+        "answer": 1,
+        "explanation": "主句是The musician is ready to begin。who leads the group是定语从句，其中的leads不能代替主句谓语。单数主语musician与is搭配，ready是形容词。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "The instructions beside the costume room ___ clear.",
+        "promptZh": "戏服室旁边的说明很清楚。",
+        "options": [
+          "have",
+          "does",
+          "is",
+          "are"
+        ],
+        "optionsZh": [
+          "有",
+          "做（第三人称单数）",
+          "是（单数）",
+          "是（复数）"
+        ],
+        "answer": 3,
+        "explanation": "clear在这里是形容词，需要系动词be；主语instructions为复数，因此用are。beside the costume room是介词短语，不改变主语的单复数。",
+        "tag": "be-adjective"
+      },
+      {
+        "prompt": "The students who ___ the final scene will arrive early.",
+        "promptZh": "排练最后一场戏的学生将提前到达。",
+        "options": [
+          "rehearses",
+          "rehearsing",
+          "rehearse",
+          "to rehearse"
+        ],
+        "optionsZh": [
+          "排练（第三人称单数）",
+          "排练（非谓语形式）",
+          "排练（原形）",
+          "排练（不定式）"
+        ],
+        "answer": 2,
+        "explanation": "主句谓语是will arrive，who引导的定语从句也需要谓语。who指复数students，故用rehearse。rehearsing与to rehearse不能独立充当这个从句的谓语。",
+        "tag": "relative-clause"
+      },
+      {
+        "prompt": "All costumes must ___ after the performance.",
+        "promptZh": "演出后必须归还所有戏服。",
+        "options": [
+          "be returned",
+          "return",
+          "be returning",
+          "returned"
+        ],
+        "optionsZh": [
+          "被归还",
+          "归还（原形）",
+          "正在归还",
+          "归还（过去式或过去分词）"
+        ],
+        "answer": 0,
+        "explanation": "costumes是被归还的对象，情态动词must后应使用be加过去分词returned，构成被动语态。",
+        "tag": "passive"
+      },
+      {
+        "prompt": "The group played the difficult passage more ___ after practicing it slowly.",
+        "promptZh": "慢速练习之后，小组更加准确地演奏了这个较难的片段。",
+        "options": [
+          "accurate",
+          "accurately",
+          "accuracy",
+          "inaccurate"
+        ],
+        "optionsZh": [
+          "准确的",
+          "准确地",
+          "准确性",
+          "不准确的"
+        ],
+        "answer": 1,
+        "explanation": "修饰played这一动作需要副词accurately；more accurately表示更加准确地。不能使用形容词accurate或名词accuracy。",
+        "tag": "adverb"
+      },
+      {
+        "prompt": "She practices ___, and music has become part of her ___ life.",
+        "promptZh": "她每天练习，音乐已成为她日常生活的一部分。",
+        "options": [
+          "everyday; every day",
+          "everyday; everyday",
+          "every day; everyday",
+          "every day; every day"
+        ],
+        "optionsZh": [
+          "日常的；每天",
+          "日常的；日常的",
+          "每天；日常的",
+          "每天；每天"
+        ],
+        "answer": 2,
+        "explanation": "第一空作时间状语，表示每天，使用every day；第二空修饰名词life，使用形容词everyday。注意分写与连写在句中的不同作用。",
+        "tag": "word-form"
+      }
+    ],
+    "reading": {
+      "title": "Practice the Difficult Part, Then Reconnect the Whole",
+      "titleZh": "先练难点，再连接整体",
+      "level": "四级专项衔接 · 原创分级模拟",
+      "topic": "局部练习与完整演奏的不同作用",
+      "passage": "At a fictional college, a student music group began every rehearsal by playing its concert piece from the first note. The opening became smooth, but the same difficult passage near the end still caused trouble. When someone made a mistake, the group often returned to the beginning.\n\nTheir leader recorded one rehearsal and noticed an imbalance. The students spent most of their time on music they could already play. The difficult passage received only a few hurried attempts, usually when everyone was tired. Playing the piece again felt productive because the group was busy, but activity was not the same as improvement.\n\nFor the next rehearsal, the leader changed the order. First, the players identified the exact point where their rhythm separated. They practiced a short section slowly, listened to one another, and gradually increased the speed. They then added the sections immediately before and after it.\n\nFinally, they played the complete piece without stopping. This revealed a new problem: a successful local repair did not automatically produce a smooth transition. Full performances helped them connect sections and manage their energy, while focused practice helped them correct specific weaknesses.\n\nThe group kept both methods. Its new rule was not to avoid starting at the beginning, but to know why a complete performance was useful at that moment. A practice plan should respond to the problem, rather than simply repeat a familiar routine.",
+      "passageZh": "在一所虚构的大学，一个学生音乐小组每次排练都从第一个音开始演奏音乐会曲目。开头变得很流畅，但接近结尾的同一个难点片段仍然出问题。有人出错时，小组常常又回到开头。\n\n领队录下了一次排练，发现了时间分配不均的问题。学生们把大部分时间花在已经会演奏的部分上。难点片段只得到了几次匆忙的尝试，而且通常是在大家疲惫的时候。再次演奏整首曲子让人感觉有效率，因为小组一直在忙碌，但忙碌不等于进步。\n\n下一次排练时，领队改变了顺序。首先，演奏者找出节奏不一致的具体位置。他们慢速练习一个短片段，互相聆听，并逐渐加快速度。然后，他们加入了紧邻这个片段前后的部分。\n\n最后，他们不停顿地演奏了整首曲子。这暴露了一个新问题：局部问题解决了，并不会自动带来流畅的过渡。完整演奏帮助他们连接各部分并分配精力，而集中练习帮助他们纠正具体的薄弱环节。\n\n小组保留了这两种方法。新规则不是避免从开头演奏，而是清楚当下为什么需要一次完整演奏。练习计划应该针对问题，而不是简单重复熟悉的惯例。",
+      "questions": [
+        {
+          "prompt": "Why did the difficult passage remain a problem at first?",
+          "promptZh": "最初，为什么那个难点片段一直没有得到解决？",
+          "options": [
+            "The students refused to play the opening.",
+            "The group spent too little focused time on it.",
+            "The leader had removed it from the concert.",
+            "The players were using different pieces of music."
+          ],
+          "optionsZh": [
+            "学生拒绝演奏开头。",
+            "小组用于集中练习它的时间太少。",
+            "领队已经把它从音乐会曲目中删去。",
+            "演奏者使用的是不同的曲子。"
+          ],
+          "answer": 1,
+          "explanation": "第二段指出，大部分时间用于已经会的部分，难点只得到几次疲惫时的匆忙尝试。问题在于练习时间和注意力分配，而不是拒绝演奏或曲目不同。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What did the group do before increasing the speed?",
+          "promptZh": "加快速度之前，小组做了什么？",
+          "options": [
+            "It canceled the complete performance.",
+            "It replaced every musician in the group.",
+            "It played the opening repeatedly at full speed.",
+            "It practiced a short section slowly and listened to other players."
+          ],
+          "optionsZh": [
+            "取消了完整演奏。",
+            "更换了小组中的每一位乐手。",
+            "反复以全速演奏开头。",
+            "慢速练习一个短片段，并聆听其他人的演奏。"
+          ],
+          "answer": 3,
+          "explanation": "第三段按顺序说明：找出具体问题后，先慢速练习、互相聆听，再逐渐加快速度，随后连接前后部分。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What did the complete performance help the group discover?",
+          "promptZh": "完整演奏帮助小组发现了什么？",
+          "options": [
+            "Improving one section did not guarantee a smooth connection.",
+            "Focused practice was always a waste of time.",
+            "The opening was the only part worth practicing.",
+            "The concert piece had to be made shorter."
+          ],
+          "optionsZh": [
+            "改进一个片段并不保证各部分衔接流畅。",
+            "集中练习总是在浪费时间。",
+            "开头是唯一值得练习的部分。",
+            "音乐会曲目必须缩短。"
+          ],
+          "answer": 0,
+          "explanation": "第四段的not automatically produce a smooth transition说明局部改进不等于整体衔接自然。完整演奏与局部练习解决的问题不同，二者互补。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Which statement best expresses the group's new approach?",
+          "promptZh": "哪种说法最能概括小组的新方法？",
+          "options": [
+            "Never begin a piece from its first note.",
+            "Keep repeating the easiest part until it is perfect.",
+            "Choose a practice method according to the problem being solved.",
+            "Judge improvement only by the number of complete performances."
+          ],
+          "optionsZh": [
+            "永远不要从第一个音开始演奏。",
+            "一直重复最简单的部分，直到它完美。",
+            "根据需要解决的问题选择练习方法。",
+            "只凭完整演奏的次数判断进步。"
+          ],
+          "answer": 2,
+          "explanation": "末段强调计划要回应具体问题，而不是机械重复熟悉的惯例。小组没有否定完整演奏，而是同时保留两种方法，并明确各自用途。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "Two Different Times at the Theater",
+      "titleZh": "剧场里的两个不同时间",
+      "tip": "盲听先区分技术彩排和正式演出，记下两者的日期与时间。带文精听核对侧门、证件、戏服室和灯光检查；选三句各做一组影子跟读，再用30—60秒脱稿说明演员周五到场后的步骤。使用浏览器合成朗读，可调速并暂停、继续、停止，不是真题录音。",
+      "level": "四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "passage": "This announcement is for everyone performing in the college play. Friday's technical rehearsal begins at five, not seven. The public performance is on Saturday at seven. Please enter through the side door and show your student card. The main entrance will remain closed during the rehearsal. Collect your costume from Room Three before going onto the stage. If its size is wrong, tell the assistant there immediately. Do not exchange costumes with another performer without checking first. At five, we will test the lights and sound before practicing any scenes. You may need to wait quietly while the equipment is adjusted. Friends cannot attend this rehearsal, but they can book tickets for Saturday's performance through the theater website.",
+      "passageZh": "这则通知面向所有参加大学话剧演出的人。周五的技术彩排五点开始，不是七点。面向公众的正式演出在周六七点。请从侧门进入，并出示学生证。彩排期间正门将保持关闭。上台之前，请到三号房间领取戏服。如果尺寸不合适，请立即告诉那里的助手。未经事先核实，不要与其他演员交换戏服。五点钟，我们会先测试灯光和音响，再练习任何场景。设备调整时，你可能需要安静等待。朋友不能参加这次彩排，但可以通过剧场网站预订周六正式演出的门票。",
+      "dictation": [
+        "Friday's technical rehearsal begins at five, not seven.",
+        "The public performance is on Saturday at seven."
+      ],
+      "dictationZh": [
+        "周五的技术彩排五点开始，不是七点。",
+        "面向公众的正式演出在周六七点。"
+      ],
+      "questions": [
+        {
+          "prompt": "When does the technical rehearsal begin?",
+          "promptZh": "技术彩排什么时候开始？",
+          "options": [
+            "At seven on Friday.",
+            "At five on Saturday.",
+            "At five on Friday.",
+            "At seven on Saturday."
+          ],
+          "optionsZh": [
+            "周五七点。",
+            "周六五点。",
+            "周五五点。",
+            "周六七点。"
+          ],
+          "answer": 2,
+          "explanation": "通知明确说Friday's technical rehearsal begins at five, not seven。周六七点是面向公众的正式演出，不能把两个活动的时间混淆。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "What should a performer do if a costume does not fit?",
+          "promptZh": "如果戏服不合身，演员应该怎么做？",
+          "options": [
+            "Tell the assistant in Room Three immediately.",
+            "Exchange it with another performer without asking.",
+            "Leave it at the closed main entrance.",
+            "Wait until the Saturday performance has finished."
+          ],
+          "optionsZh": [
+            "立即告诉三号房间的助手。",
+            "不询问就和其他演员交换。",
+            "把它留在关闭的正门处。",
+            "等到周六演出结束。"
+          ],
+          "answer": 0,
+          "explanation": "领取地点是Room Three，尺寸不对时应立即告知那里的助手。随后通知特别提醒不要未经核实自行交换戏服。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "A group that spends most of its time on familiar sections may remain busy without solving the problem that prevents a smooth performance.",
+      "main": "A group may remain busy without solving the problem.",
+      "mainZh": "一个小组可能一直忙碌，却没有解决问题。",
+      "translation": "一个把大部分时间花在熟悉片段上的小组，可能一直很忙，却没有解决妨碍流畅演奏的问题。",
+      "core": [
+        "group",
+        "may remain",
+        "busy",
+        "spends",
+        "problem",
+        "prevents"
+      ],
+      "keywords": [
+        "小组",
+        "大部分时间",
+        "熟悉",
+        "片段",
+        "忙碌",
+        "解决",
+        "问题",
+        "妨碍",
+        "流畅",
+        "演奏"
+      ],
+      "structure": "主句为A group may remain busy；第一个that引导定语从句，修饰group；without solving the problem是介词短语；第二个that引导定语从句，修饰problem。",
+      "grammar": [
+        "spends属于修饰group的定语从句；主句谓语是may remain，busy作表语。不能把spends当作主句唯一谓语。",
+        "without是介词，后接动名词solving。第二个that指单数problem，所以定语从句谓语使用prevents。"
+      ],
+      "examTip": "先找group—may remain—busy，再区分两个that从句各自修饰的名词；without表示未做成某事，不等于主句没有发生。",
+      "level": "四级句法衔接",
+      "topic": "主句与两个定语从句、系表结构、介词加动名词"
+    },
+    "trans": [
+      {
+        "source": "只重复熟悉的部分，可能会让学生很忙，却不能帮助他们解决真正的难点。",
+        "answer": "Repeating only the familiar parts may keep students busy without helping them overcome the real difficulty.",
+        "alternative": "Students may stay busy by repeating only familiar sections, but this may not help them overcome the actual difficulty.",
+        "acceptedAnswers": [
+          "Repeating only the familiar parts may keep students busy without helping them overcome the real difficulty.",
+          "Students may stay busy by repeating only familiar sections, but this may not help them overcome the actual difficulty."
+        ],
+        "keywords": [
+          "repeating",
+          "familiar",
+          "students",
+          "busy",
+          "help",
+          "difficulty"
+        ],
+        "grammar": "Repeating only the familiar parts是动名词短语作主语；may keep是谓语，keep students busy使用宾语加形容词结构。without后用helping，help somebody do表示帮助某人做某事。",
+        "chunks": [
+          "repeat the familiar parts",
+          "keep students busy",
+          "without helping them overcome the real difficulty"
+        ],
+        "level": "四级衔接表达",
+        "topic": "动名词主语、宾语补足语与介词短语"
+      },
+      {
+        "source": "在完整演奏之前，乐手们应该慢慢练习那个他们经常出错的片段。",
+        "answer": "Before playing the whole piece, the musicians should slowly practice the section where they often make mistakes.",
+        "alternative": "The musicians should slowly practice the section in which they often make mistakes before performing the complete piece.",
+        "acceptedAnswers": [
+          "Before playing the whole piece, the musicians should slowly practice the section where they often make mistakes.",
+          "The musicians should slowly practice the section in which they often make mistakes before performing the complete piece."
+        ],
+        "keywords": [
+          "before",
+          "whole",
+          "musicians",
+          "practice",
+          "slowly",
+          "section",
+          "mistakes"
+        ],
+        "grammar": "before后使用动名词playing，逻辑主语与musicians一致。slowly是修饰practice的副词；where或in which引导定语从句，表示在这个片段中出错。",
+        "chunks": [
+          "before playing the whole piece",
+          "practice the section slowly",
+          "make mistakes"
+        ],
+        "level": "四级衔接表达",
+        "topic": "时间介词、定语从句与副词"
+      }
+    ]
+  },
+  "2026-10-26": {
+    "title": "社区与公共生活：发言多不等于覆盖广",
+    "grammarTip": "四级专项衔接：阅读区分参与人数、发言次数与意见的覆盖范围，注意措施的作用及局限；听力抓住捐赠物品、时间、地点和登记要求。继续练习主句与定语从句的谓语、形容词前的be、被动语态和词形。社区、人物和安排均为虚构教学情境，不是现实政策或实时新闻。",
+    "words": [
+      {
+        "word": "population",
+        "phonetic": "/ˌpɑːpjəˈleɪʃən/",
+        "pos": "n.",
+        "meaning": "人口；某地区的全体居民",
+        "phrase": "the local population",
+        "example": "The survey reached only a small part of the local population.",
+        "exampleZh": "这项调查只覆盖了当地居民中的一小部分。"
+      },
+      {
+        "word": "district",
+        "phonetic": "/ˈdɪstrɪkt/",
+        "pos": "n.",
+        "meaning": "地区；区域",
+        "phrase": "a residential district",
+        "example": "The new center serves a residential district near the river.",
+        "exampleZh": "这个新中心为河边的一个住宅区提供服务。"
+      },
+      {
+        "word": "region",
+        "phonetic": "/ˈriːdʒən/",
+        "pos": "n.",
+        "meaning": "地区；区域；地带",
+        "phrase": "a coastal region",
+        "example": "Students compared transport needs in different parts of the region.",
+        "exampleZh": "学生比较了该地区不同地方的交通需求。"
+      },
+      {
+        "word": "council",
+        "phonetic": "/ˈkaʊnsəl/",
+        "pos": "n.",
+        "meaning": "委员会；议事会；地方议会（结合语境判断）",
+        "phrase": "a community council",
+        "example": "The community council invited residents to describe their concerns.",
+        "exampleZh": "社区议事会邀请居民说明他们关心的问题。"
+      },
+      {
+        "word": "committee",
+        "phonetic": "/kəˈmɪti/",
+        "pos": "n.",
+        "meaning": "委员会",
+        "phrase": "an organizing committee",
+        "example": "The organizing committee reviewed the written comments after the meeting.",
+        "exampleZh": "组织委员会在会议后查看了书面意见。"
+      },
+      {
+        "word": "mayor",
+        "phonetic": "/ˈmeɪər/",
+        "pos": "n.",
+        "meaning": "市长",
+        "phrase": "the city mayor",
+        "example": "In the fictional story, the mayor visits a community workshop.",
+        "exampleZh": "在这个虚构故事中，市长参观了一间社区工作坊。"
+      },
+      {
+        "word": "government",
+        "phonetic": "/ˈɡʌvərnmənt/",
+        "pos": "n.",
+        "meaning": "政府；治理",
+        "phrase": "local government",
+        "example": "The textbook describes several ways local government can collect feedback.",
+        "exampleZh": "这本教材描述了地方政府收集反馈的几种方式。"
+      },
+      {
+        "word": "authority",
+        "phonetic": "/əˈθɔːrəti/",
+        "pos": "n.",
+        "meaning": "权力；职权；当局；权威",
+        "phrase": "have the authority to decide",
+        "example": "The volunteer does not have the authority to approve the budget.",
+        "exampleZh": "这名志愿者没有批准预算的权限。"
+      },
+      {
+        "word": "official",
+        "phonetic": "/əˈfɪʃəl/",
+        "pos": "adj.; n.",
+        "meaning": "官方的；正式的；官员（结合原句判断）",
+        "phrase": "an official announcement",
+        "example": "Wait for an official announcement before changing the meeting time.",
+        "exampleZh": "在更改会议时间之前，请等候正式通知。"
+      },
+      {
+        "word": "election",
+        "phonetic": "/ɪˈlekʃən/",
+        "pos": "n.",
+        "meaning": "选举",
+        "phrase": "a student election",
+        "example": "The student election will choose a new club representative.",
+        "exampleZh": "这次学生选举将选出一名新的社团代表。"
+      },
+      {
+        "word": "elect",
+        "phonetic": "/ɪˈlekt/",
+        "pos": "v.",
+        "meaning": "选举；推选",
+        "phrase": "elect a representative",
+        "example": "Club members will elect a representative at the next meeting.",
+        "exampleZh": "社团成员将在下次会议上选出一名代表。"
+      },
+      {
+        "word": "vote",
+        "phonetic": "/voʊt/",
+        "pos": "n.; v.",
+        "meaning": "投票；票；表决",
+        "phrase": "vote for a proposal",
+        "example": "Members read the details before they vote for a proposal.",
+        "exampleZh": "成员在投票支持一项提案之前会阅读详细内容。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "voter",
+        "phonetic": "/ˈvoʊtər/",
+        "pos": "n.",
+        "meaning": "投票人；选民",
+        "phrase": "an eligible voter",
+        "example": "Each eligible voter in the club election receives one ballot.",
+        "exampleZh": "在这次社团选举中，每位符合资格的投票人会收到一张选票。"
+      },
+      {
+        "word": "policy",
+        "phonetic": "/ˈpɑːləsi/",
+        "pos": "n.",
+        "meaning": "政策；方针；规定",
+        "phrase": "a clear policy",
+        "example": "The club needs a clear policy for lending its equipment.",
+        "exampleZh": "社团需要一项明确的设备借用规定。"
+      },
+      {
+        "word": "society",
+        "phonetic": "/səˈsaɪəti/",
+        "pos": "n.",
+        "meaning": "社会；社团；协会",
+        "phrase": "a student society",
+        "example": "The student society organized a discussion about public spaces.",
+        "exampleZh": "学生社团组织了一场关于公共空间的讨论。"
+      },
+      {
+        "word": "social",
+        "phonetic": "/ˈsoʊʃəl/",
+        "pos": "adj.",
+        "meaning": "社会的；社交的",
+        "phrase": "social activities",
+        "example": "The center offers social activities for residents of different ages.",
+        "exampleZh": "该中心为不同年龄的居民提供社交活动。"
+      },
+      {
+        "word": "equality",
+        "phonetic": "/iˈkwɑːləti/",
+        "pos": "n.",
+        "meaning": "平等；相等",
+        "phrase": "equality of opportunity",
+        "example": "The discussion focused on equality of opportunity in education.",
+        "exampleZh": "这场讨论聚焦教育机会平等。"
+      },
+      {
+        "word": "equal",
+        "phonetic": "/ˈiːkwəl/",
+        "pos": "adj.; v.",
+        "meaning": "相等的；平等的；等于（结合原句判断）",
+        "phrase": "equal access",
+        "example": "A website alone may not provide equal access to information.",
+        "exampleZh": "仅靠一个网站可能无法让所有人平等地获取信息。"
+      },
+      {
+        "word": "welfare",
+        "phonetic": "/ˈwelfer/",
+        "pos": "n.",
+        "meaning": "福利；福祉；健康和幸福",
+        "phrase": "student welfare",
+        "example": "The adviser asked how the new schedule would affect student welfare.",
+        "exampleZh": "指导老师询问新时间表会怎样影响学生的福祉。"
+      },
+      {
+        "word": "charity",
+        "phonetic": "/ˈtʃærəti/",
+        "pos": "n.",
+        "meaning": "慈善；慈善机构",
+        "phrase": "a local charity",
+        "example": "A local charity helped the volunteers sort the donated coats.",
+        "exampleZh": "一家当地慈善机构帮助志愿者整理捐赠的外套。"
+      },
+      {
+        "word": "donation",
+        "phonetic": "/doʊˈneɪʃən/",
+        "pos": "n.",
+        "meaning": "捐赠；捐赠物；捐款",
+        "phrase": "make a donation",
+        "example": "Please read the list of accepted items before making a donation.",
+        "exampleZh": "捐赠前请阅读可以接收的物品清单。"
+      },
+      {
+        "word": "donate",
+        "phonetic": "/ˈdoʊneɪt/",
+        "pos": "v.",
+        "meaning": "捐赠；捐献",
+        "phrase": "donate clean clothes",
+        "example": "Residents can donate clean clothes during the collection event.",
+        "exampleZh": "居民可以在募集活动期间捐赠干净的衣物。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The residents who speak at the meeting ___ different concerns.",
+        "promptZh": "在会议上发言的居民有不同的关切。",
+        "options": [
+          "has",
+          "having",
+          "have",
+          "to have"
+        ],
+        "optionsZh": [
+          "有（第三人称单数）",
+          "有（非谓语形式）",
+          "有（原形）",
+          "有（不定式）"
+        ],
+        "answer": 2,
+        "explanation": "主语residents为复数，主句谓语用have。who speak at the meeting是修饰residents的定语从句，其中的speak不能代替主句谓语。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "The written feedback that arrived yesterday ___ useful.",
+        "promptZh": "昨天收到的书面反馈很有用。",
+        "options": [
+          "is",
+          "are",
+          "does",
+          "being"
+        ],
+        "optionsZh": [
+          "是（单数）",
+          "是（复数）",
+          "做（第三人称单数）",
+          "是（非谓语形式）"
+        ],
+        "answer": 0,
+        "explanation": "useful是形容词，前面需要系动词be；feedback通常为不可数名词，因此用is。that arrived yesterday是定语从句，不能充当主句谓语。",
+        "tag": "be-adjective"
+      },
+      {
+        "prompt": "All donated blankets must ___ before they are placed on the tables.",
+        "promptZh": "所有捐赠的毯子在放上桌子之前都必须接受检查。",
+        "options": [
+          "checking",
+          "check",
+          "checked",
+          "be checked"
+        ],
+        "optionsZh": [
+          "检查（非谓语形式）",
+          "检查（原形）",
+          "检查（过去式或过去分词）",
+          "被检查"
+        ],
+        "answer": 3,
+        "explanation": "blankets是被检查的对象，因此使用被动语态；情态动词must后接be加过去分词，组成must be checked。",
+        "tag": "passive"
+      },
+      {
+        "prompt": "The committee described the limits of the survey ___.",
+        "promptZh": "委员会清楚地说明了这项调查的局限。",
+        "options": [
+          "clear",
+          "clearly",
+          "clarity",
+          "clearness"
+        ],
+        "optionsZh": [
+          "清楚的",
+          "清楚地",
+          "清晰；清楚（名词）",
+          "清楚；清晰度（名词）"
+        ],
+        "answer": 1,
+        "explanation": "空格修饰动词described，应使用副词clearly。clear是形容词，clarity和clearness是名词，不能直接修饰此处的动作。",
+        "tag": "adverb"
+      },
+      {
+        "prompt": "The volunteer who ___ the registration forms can answer your question.",
+        "promptZh": "负责核查登记表的那名志愿者能够回答你的问题。",
+        "options": [
+          "checking",
+          "check",
+          "checks",
+          "to check"
+        ],
+        "optionsZh": [
+          "核查（非谓语形式）",
+          "核查（原形）",
+          "核查（第三人称单数）",
+          "核查（不定式）"
+        ],
+        "answer": 2,
+        "explanation": "主句谓语是can answer；who引导的定语从句也需要谓语。who指单数volunteer，因此用checks，不用非谓语形式checking或to check。",
+        "tag": "relative-clause"
+      },
+      {
+        "prompt": "The committee checks the box ___ to learn about residents' ___ concerns.",
+        "promptZh": "委员会每天检查意见箱，以了解居民日常的关切。",
+        "options": [
+          "everyday; every day",
+          "everyday; everyday",
+          "every day; every day",
+          "every day; everyday"
+        ],
+        "optionsZh": [
+          "日常的；每天",
+          "日常的；日常的",
+          "每天；每天",
+          "每天；日常的"
+        ],
+        "answer": 3,
+        "explanation": "第一空说明检查的频率，使用分开的every day；第二空修饰名词concerns，使用形容词everyday。",
+        "tag": "word-form"
+      }
+    ],
+    "reading": {
+      "title": "Counting Voices, Not Just Speeches",
+      "titleZh": "不只数发言，也要看谁被听见",
+      "level": "四级专项衔接 · 原创分级模拟",
+      "topic": "居民参与、证据范围与措施局限",
+      "passage": "In a fictional neighborhood, a community council invited residents to discuss changes to a small public garden. The meeting lasted two hours, and its record contained thirty comments. The organizing committee first described this as strong evidence that local opinions had been widely collected.\n\nHowever, a volunteer noticed that six residents had made most of the comments. Several people had left early to collect children, while others had listened without speaking. Counting speeches showed how active the discussion was, but it did not show how many different experiences the council had heard.\n\nFor the next stage, the committee placed a simple feedback form in the community center and offered an online version. Residents could describe how they used the garden and suggest one improvement. Paper copies helped people who preferred not to use a website. A box remained available for a week, giving those with different schedules another chance to respond.\n\nThe committee also changed its report. It listed the number of individual contributors separately from the number of comments and explained how feedback had been collected. Written responses broadened participation, but they did not guarantee that every group was represented. People who rarely visited the center might still be missing. Rather than claiming to speak for everyone, the committee identified this limit and planned to ask which residents had not yet had a practical chance to contribute.",
+      "passageZh": "在一个虚构的街区，社区议事会邀请居民讨论一座小型公共花园的调整。会议持续了两个小时，记录中有三十条意见。组织委员会起初把这描述为已经广泛收集当地意见的有力证据。\n\n然而，一名志愿者注意到，大多数意见都来自六位居民。有些人为了接孩子提前离开，另一些人只是听而没有发言。统计发言次数可以显示讨论有多活跃，却不能说明议事会听到了多少种不同的经历。\n\n在下一阶段，委员会在社区中心放置了一份简单的反馈表，并提供了在线版本。居民可以说明自己怎样使用花园，并提出一项改进建议。纸质表格方便了不愿使用网站的人。意见箱持续开放了一周，让作息不同的人也有机会回应。\n\n委员会还修改了报告，把独立参与者的人数和意见条数分别列出，并解释了收集反馈的方式。书面回应扩大了参与范围，但并不能保证每个群体都有代表。很少到社区中心的人仍可能没有被覆盖。委员会没有声称自己代表所有人，而是指出了这一局限，并计划了解哪些居民还没有真正便利的参与机会。",
+      "questions": [
+        {
+          "prompt": "Why did the committee initially consider the meeting successful?",
+          "promptZh": "委员会最初为什么认为会议取得了成功？",
+          "options": [
+            "Every resident had attended the discussion.",
+            "The meeting produced thirty recorded comments.",
+            "The garden had already been rebuilt.",
+            "All comments supported the same proposal."
+          ],
+          "optionsZh": [
+            "每位居民都参加了讨论。",
+            "会议产生了三十条有记录的意见。",
+            "花园已经完成改建。",
+            "所有意见都支持同一项提案。"
+          ],
+          "answer": 1,
+          "explanation": "第一段中，委员会把三十条意见当作广泛收集意见的证据。但后文说明发言条数不能直接说明覆盖了多少不同的人。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What did the volunteer discover about the comments?",
+          "promptZh": "志愿者发现这些意见有什么特点？",
+          "options": [
+            "Most were submitted through a website.",
+            "None concerned the public garden.",
+            "They were made by thirty different residents.",
+            "Most came from a small number of residents."
+          ],
+          "optionsZh": [
+            "大多数通过网站提交。",
+            "没有一条涉及公共花园。",
+            "它们来自三十位不同的居民。",
+            "大多数来自少数几位居民。"
+          ],
+          "answer": 3,
+          "explanation": "第二段明确指出，六位居民提出了大多数意见。发言频繁与参与者覆盖广是不同的概念。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "How did the feedback arrangements offer another chance to participate?",
+          "promptZh": "新的反馈安排怎样提供了更多参与机会？",
+          "options": [
+            "They provided paper and online forms and allowed a week for responses.",
+            "They required everyone to speak at another two-hour meeting.",
+            "They accepted comments only from previous speakers.",
+            "They replaced all written forms with a single website."
+          ],
+          "optionsZh": [
+            "提供纸质和在线表格，并留出一周回应时间。",
+            "要求每个人在另一场两小时的会议上发言。",
+            "只接受之前发过言的人提出意见。",
+            "用一个网站取代了所有纸质表格。"
+          ],
+          "answer": 0,
+          "explanation": "第三段的两种表格照顾了不同的使用习惯，一周的开放时间也适应了不同作息。它们扩大机会，但不代表所有人必然参与。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Which conclusion best reflects the final report?",
+          "promptZh": "哪一结论最符合最终报告的态度？",
+          "options": [
+            "Written feedback proves that everyone has been represented.",
+            "The number of speeches should be the only measure of participation.",
+            "Participation became broader, but some residents might still be missing.",
+            "People who do not visit the center have no relevant opinions."
+          ],
+          "optionsZh": [
+            "书面反馈证明所有人都已得到代表。",
+            "发言次数应是衡量参与的唯一标准。",
+            "参与范围扩大了，但仍可能遗漏部分居民。",
+            "不到社区中心的人没有相关意见。"
+          ],
+          "answer": 2,
+          "explanation": "末段说明书面回应扩大了参与，却不能保证每个群体都被覆盖；很少到中心的人仍可能缺席。因此报告应承认局限，而不是作出全覆盖的断言。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "Preparing for a Community Donation Event",
+      "titleZh": "准备社区捐赠活动",
+      "tip": "盲听先记活动的目的、时间与地点；带文精听区分可接收与不可接收物品，并核对登记要求。选择三句各做一组影子跟读，再用30—60秒复述参加活动的步骤。安排为虚构教学情境；使用浏览器合成朗读，不是真题录音。",
+      "level": "四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "passage": "Here is an update about Saturday's donation event at the community center. Please bring clean winter coats, blankets, or unopened notebooks. We cannot accept electrical equipment or food at this event. Donations will be received from ten until noon in the west hall. The main entrance is closed for repairs, so use the garden gate. Before arriving, complete the registration form on the center's website. List the types of items you plan to bring. You do not need to enter their prices. If your plans change, update the form rather than creating another entry. Volunteers will check donations before placing them on the tables. Registration helps us prepare space, but it does not guarantee that everything is accepted.",
+      "passageZh": "这里更新一下周六社区中心捐赠活动的信息。请带来干净的冬季外套、毯子或未拆封的笔记本。本次活动不接收电器设备或食品。捐赠物品将于上午十点至中午在西厅接收。正门因维修关闭，因此请使用花园门。到达之前，请在中心网站填写登记表。列出你打算带来的物品种类，不需要填写价格。如果计划有变，请修改表格，而不要新建一条登记。志愿者会先检查捐赠物品，再把它们放到桌子上。登记可以帮助我们准备空间，但并不保证每件物品都能被接收。",
+      "dictation": [
+        "You do not need to enter their prices.",
+        "The main entrance is closed for repairs, so use the garden gate."
+      ],
+      "dictationZh": [
+        "不需要填写物品价格。",
+        "正门因维修关闭，因此请使用花园门。"
+      ],
+      "questions": [
+        {
+          "prompt": "Where and when will donations be received?",
+          "promptZh": "活动将在什么时间、地点接收捐赠物品？",
+          "options": [
+            "At the main entrance from noon until two.",
+            "In the west hall from ten until noon.",
+            "At the garden gate on Friday evening.",
+            "In the east hall throughout Saturday."
+          ],
+          "optionsZh": [
+            "在正门，中午至下午两点。",
+            "在西厅，上午十点至中午。",
+            "在花园门，周五晚上。",
+            "在东厅，周六全天。"
+          ],
+          "answer": 1,
+          "explanation": "通知明确说from ten until noon in the west hall。花园门是入场入口，不是接收物品的大厅；正门因维修关闭。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "What should people do before bringing their donations?",
+          "promptZh": "人们带来捐赠物品前应该做什么？",
+          "options": [
+            "Attach a price label to every item.",
+            "Create a separate entry each time their plans change.",
+            "Assume that registration guarantees acceptance.",
+            "Complete an online form listing the types of items."
+          ],
+          "optionsZh": [
+            "给每件物品贴上价格标签。",
+            "每次计划改变都新建一条登记。",
+            "认为登记就保证物品被接收。",
+            "在线填写表格，列出物品种类。"
+          ],
+          "answer": 3,
+          "explanation": "通知要求到达前填写网站登记表，列出物品种类，不需要价格；计划变化时修改原表。登记只帮助准备空间，不代表所有物品都会被接收。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The written responses that residents submitted after the meeting helped the committee understand concerns that had not been raised during the discussion.",
+      "main": "The written responses helped the committee understand concerns.",
+      "mainZh": "这些书面回应帮助委员会了解了关切。",
+      "translation": "居民在会议之后提交的书面回应，帮助委员会了解了讨论期间没有被提出的关切。",
+      "core": [
+        "responses",
+        "helped",
+        "committee",
+        "understand",
+        "concerns"
+      ],
+      "keywords": [
+        "书面回应",
+        "居民",
+        "提交",
+        "会议之后",
+        "帮助",
+        "委员会",
+        "了解",
+        "关切",
+        "没有被提出",
+        "讨论期间"
+      ],
+      "structure": "主干是The written responses helped the committee understand concerns；第一个that引导定语从句，修饰responses；第二个that引导定语从句，修饰concerns。help somebody do something表示帮助某人做某事。",
+      "grammar": [
+        "submitted是第一个定语从句的谓语，helped才是主句谓语；不能因出现submitted就漏掉helped。",
+        "that had not been raised during the discussion使用过去完成时的被动形式，说明这些关切在此前的讨论中没有被提出；that指concerns。"
+      ],
+      "examTip": "先圈出responses—helped—committee understand concerns，再补充两处that从句分别修饰的对象，避免把所有谓语混成一层。",
+      "level": "四级句法衔接",
+      "topic": "主句与双重定语从句、help搭配和被动语态"
+    },
+    "trans": [
+      {
+        "source": "增加书面反馈可以让更多居民参与，但不能保证每个群体都被覆盖。",
+        "answer": "Adding written feedback can allow more residents to participate, but it cannot guarantee that every group is represented.",
+        "alternative": "Offering written feedback forms can help more residents take part, but it does not ensure that every group is represented.",
+        "acceptedAnswers": [
+          "Adding written feedback can allow more residents to participate, but it cannot guarantee that every group is represented.",
+          "Offering written feedback forms can help more residents take part, but it does not ensure that every group is represented."
+        ],
+        "keywords": [
+          "written",
+          "feedback",
+          "more",
+          "residents",
+          "but",
+          "every",
+          "group",
+          "represented"
+        ],
+        "grammar": "动名词短语Adding written feedback作主语；allow somebody to do和help somebody do均可表达促进参与。but后说明局限；every group是单数，使用is represented。",
+        "chunks": [
+          "add written feedback",
+          "allow more residents to participate",
+          "every group is represented"
+        ],
+        "level": "四级衔接表达",
+        "topic": "措施作用与局限、动名词主语和被动语态"
+      },
+      {
+        "source": "捐赠物品之前，请填写登记表，并确认哪些物品可以被接收。",
+        "answer": "Before donating items, please complete the registration form and check which items can be accepted.",
+        "alternative": "Before you donate any items, please fill in the registration form and confirm which items are accepted.",
+        "acceptedAnswers": [
+          "Before donating items, please complete the registration form and check which items can be accepted.",
+          "Before you donate any items, please fill in the registration form and confirm which items are accepted."
+        ],
+        "keywords": [
+          "before",
+          "items",
+          "registration",
+          "form",
+          "which",
+          "accepted"
+        ],
+        "grammar": "before后可接动名词donating，也可接完整从句。祈使句中complete和check由and并列；which items can be accepted为宾语从句，物品是被接收的对象，使用被动语态。",
+        "chunks": [
+          "before donating items",
+          "complete the registration form",
+          "check which items can be accepted"
+        ],
+        "level": "四级衔接表达",
+        "topic": "顺序说明、并列祈使句与宾语从句"
+      }
+    ]
   }
 }

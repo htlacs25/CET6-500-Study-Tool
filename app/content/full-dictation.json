@@ -1163,5 +1163,189 @@
     {"text":"Then use a different color to add one example of your own.","zh":"然后用另一种颜色补充一个自己的例子。"},
     {"text":"Keep both versions so you can check them again next week.","zh":"保留两个版本，以便下周再次检查。"},
     {"text":"This practice will not change the grades you have already received.","zh":"这项练习不会改变你已经获得的成绩。"}
+  ],
+  "2026-10-23": [
+    {
+      "text": "Here is a reminder for students entering the campus photography exhibition.",
+      "zh": "这里提醒准备参加校园摄影展的学生。"
+    },
+    {
+      "text": "Upload your original photograph through the club website by four on Friday.",
+      "zh": "请在周五四点前通过社团网站上传原始照片。"
+    },
+    {
+      "text": "Printed copies are not required at this stage.",
+      "zh": "现阶段不要求提交打印件。"
+    },
+    {
+      "text": "Each picture needs a caption giving the date, location, and photographer's name.",
+      "zh": "每张照片都需要一段图片说明，注明拍摄日期、地点和摄影者姓名。"
+    },
+    {
+      "text": "If you discover an error after submitting, open the correction form.",
+      "zh": "如果提交后发现错误，请打开更正表格。"
+    },
+    {
+      "text": "Enter your submission number and write the corrected caption in full.",
+      "zh": "输入你的投稿编号，并完整写出更正后的说明。"
+    },
+    {
+      "text": "Please do not upload the same photograph again as a new entry.",
+      "zh": "请不要把同一张照片再次作为新作品上传。"
+    },
+    {
+      "text": "A volunteer will check the change and send you a confirmation message.",
+      "zh": "一名志愿者将核查修改，并向你发送确认消息。"
+    },
+    {
+      "text": "This message confirms the correction, not acceptance into the exhibition.",
+      "zh": "这条消息确认的是说明已更正，并不表示作品已入选展览。"
+    },
+    {
+      "text": "The final selection will be posted on Monday afternoon.",
+      "zh": "最终入选名单将在周一下午发布。"
+    },
+    {
+      "text": "Contact the club office if you cannot find your submission number.",
+      "zh": "如果找不到投稿编号，请联系社团办公室。"
+    }
+  ],
+  "2026-10-24": [
+    {
+      "text": "Here is an update about Saturday's outdoor activity for the campus nature club.",
+      "zh": "这里更新校园自然社团周六户外活动的安排。"
+    },
+    {
+      "text": "The current forecast suggests rain, but we have not canceled the event.",
+      "zh": "目前的天气预报显示可能有雨，但我们尚未取消活动。"
+    },
+    {
+      "text": "If heavy rain is expected, we will use the science building instead.",
+      "zh": "如果预计会有大雨，我们将改用科学楼。"
+    },
+    {
+      "text": "Please check the club notice by nine on Saturday morning.",
+      "zh": "请在周六早晨九点前查看社团通知。"
+    },
+    {
+      "text": "It will confirm the final location before you leave your room.",
+      "zh": "通知会在你离开房间之前确认最终地点。"
+    },
+    {
+      "text": "If we move indoors, meet at the science building entrance at ten.",
+      "zh": "如果活动转到室内，请十点在科学楼入口集合。"
+    },
+    {
+      "text": "Otherwise, meet at the garden gate at the same time.",
+      "zh": "否则，请在相同时间到花园大门集合。"
+    },
+    {
+      "text": "Bring your notebook, but leave the outdoor equipment at home if necessary.",
+      "zh": "带上笔记本，但必要时请把户外器材留在住处。"
+    },
+    {
+      "text": "Indoor groups will examine photographs and discuss their observations from last week.",
+      "zh": "室内小组将查看照片，并讨论上周的观察情况。"
+    },
+    {
+      "text": "Do not go to the garden first when the notice says indoors.",
+      "zh": "当通知说明在室内举行时，不要先去花园。"
+    }
+  ],
+  "2026-10-25": [
+    {
+      "text": "This announcement is for everyone performing in the college play.",
+      "zh": "这则通知面向所有参加大学话剧演出的人。"
+    },
+    {
+      "text": "Friday's technical rehearsal begins at five, not seven.",
+      "zh": "周五的技术彩排五点开始，不是七点。"
+    },
+    {
+      "text": "The public performance is on Saturday at seven.",
+      "zh": "面向公众的正式演出在周六七点。"
+    },
+    {
+      "text": "Please enter through the side door and show your student card.",
+      "zh": "请从侧门进入，并出示学生证。"
+    },
+    {
+      "text": "The main entrance will remain closed during the rehearsal.",
+      "zh": "彩排期间正门将保持关闭。"
+    },
+    {
+      "text": "Collect your costume from Room Three before going onto the stage.",
+      "zh": "上台之前，请到三号房间领取戏服。"
+    },
+    {
+      "text": "If its size is wrong, tell the assistant there immediately.",
+      "zh": "如果尺寸不合适，请立即告诉那里的助手。"
+    },
+    {
+      "text": "Do not exchange costumes with another performer without checking first.",
+      "zh": "未经事先核实，不要与其他演员交换戏服。"
+    },
+    {
+      "text": "At five, we will test the lights and sound before practicing any scenes.",
+      "zh": "五点钟，我们会先测试灯光和音响，再练习任何场景。"
+    },
+    {
+      "text": "You may need to wait quietly while the equipment is adjusted.",
+      "zh": "设备调整时，你可能需要安静等待。"
+    },
+    {
+      "text": "Friends cannot attend this rehearsal,",
+      "zh": "朋友不能参加这次彩排，"
+    },
+    {
+      "text": "but they can book tickets for Saturday's performance through the theater website.",
+      "zh": "但可以通过剧场网站预订周六正式演出的门票。"
+    }
+  ],
+  "2026-10-26": [
+    {
+      "text": "Here is an update about Saturday's donation event at the community center.",
+      "zh": "这里更新一下周六社区中心捐赠活动的信息。"
+    },
+    {
+      "text": "Please bring clean winter coats, blankets, or unopened notebooks.",
+      "zh": "请带来干净的冬季外套、毯子或未拆封的笔记本。"
+    },
+    {
+      "text": "We cannot accept electrical equipment or food at this event.",
+      "zh": "本次活动不接收电器设备或食品。"
+    },
+    {
+      "text": "Donations will be received from ten until noon in the west hall.",
+      "zh": "捐赠物品将于上午十点至中午在西厅接收。"
+    },
+    {
+      "text": "The main entrance is closed for repairs, so use the garden gate.",
+      "zh": "正门因维修关闭，因此请使用花园门。"
+    },
+    {
+      "text": "Before arriving, complete the registration form on the center's website.",
+      "zh": "到达之前，请在中心网站填写登记表。"
+    },
+    {
+      "text": "List the types of items you plan to bring.",
+      "zh": "列出你打算带来的物品种类。"
+    },
+    {
+      "text": "You do not need to enter their prices.",
+      "zh": "不需要填写它们的价格。"
+    },
+    {
+      "text": "If your plans change, update the form rather than creating another entry.",
+      "zh": "如果计划有变，请修改表格，而不要新建一条登记。"
+    },
+    {
+      "text": "Volunteers will check donations before placing them on the tables.",
+      "zh": "志愿者会先检查捐赠物品，再把它们放到桌子上。"
+    },
+    {
+      "text": "Registration helps us prepare space, but it does not guarantee that everything is accepted.",
+      "zh": "登记帮助我们准备空间，但不保证每件物品都能被接收。"
+    }
   ]
 }

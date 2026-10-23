@@ -2614,9 +2614,18 @@
     "speakingPrompt": "Retell the museum display in 30–60 seconds. Explain why the ordinary ticket matters, give one example of a past journey, and describe why transport changes may help people differently.",
     "speakingPromptZh": "用30—60秒复述这个展览。解释普通车票为什么有意义，举出一例过去的出行，并说明交通变化为什么可能对不同人产生不同影响。",
     "keyPhrases": [
-      { "en": "the starting point for an exhibition", "zh": "一次展览的切入点" },
-      { "en": "compare these journeys with their own", "zh": "把这些旅程与他们自己的出行作比较" },
-      { "en": "encourage conversations between generations", "zh": "鼓励不同代人之间的交流" }
+      {
+        "en": "the starting point for an exhibition",
+        "zh": "一次展览的切入点"
+      },
+      {
+        "en": "compare these journeys with their own",
+        "zh": "把这些旅程与他们自己的出行作比较"
+      },
+      {
+        "en": "encourage conversations between generations",
+        "zh": "鼓励不同代人之间的交流"
+      }
     ],
     "questions": [
       {
@@ -2670,9 +2679,18 @@
     "speakingPrompt": "In 30–60 seconds, explain the coffee shop's communication problem and how the picture card was used. Say why asking questions and observing real handovers still matter.",
     "speakingPromptZh": "用30—60秒解释咖啡店的沟通问题，以及图示卡的使用方式。说明为什么提问和观察真实交接仍然重要。",
     "keyPhrases": [
-      { "en": "pass the order to a colleague", "zh": "把订单交给同事" },
-      { "en": "give specific feedback", "zh": "给出具体反馈" },
-      { "en": "reach the right person", "zh": "传到正确的人那里" }
+      {
+        "en": "pass the order to a colleague",
+        "zh": "把订单交给同事"
+      },
+      {
+        "en": "give specific feedback",
+        "zh": "给出具体反馈"
+      },
+      {
+        "en": "reach the right person",
+        "zh": "传到正确的人那里"
+      }
     ],
     "questions": [
       {
@@ -3644,5 +3662,301 @@
         "tag": "extensive"
       }
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "title": "The Secret Garden — Chapter VIII (Opening Excerpt)",
+    "titleZh": "《秘密花园》第八章开篇原文节选",
+    "category": "Public-domain classic — curiosity and imagination",
+    "sourceType": "public-domain excerpt",
+    "sourceUrl": "https://www.gutenberg.org/files/113/113-h/113-h.htm",
+    "author": "Frances Hodgson Burnett",
+    "work": "The Secret Garden",
+    "chapter": "Chapter VIII. The Robin Who Showed the Way",
+    "sourceVerifiedOn": "2026-10-23",
+    "rightsNote": "英文取自 Project Gutenberg 第 113 号电子书，站点将该作品标为美国公版；保留作者与作品出处。这里的中文译文和配套练习为本课程自行撰写，未复制现成中文译本。",
+    "sourceNote": "真实出版名著原文节选，非改写、非自编故事。Frances Hodgson Burnett《The Secret Garden》（《秘密花园》，1911），第八章“The Robin Who Showed the Way”开头连续两段。英文逐句保留原文；中文为本课程自译，理解题为原创。背景：玛丽找到一把旧钥匙后，想知道它是否能打开关闭已久的花园。原作是小说，不将小说情节当成真实新闻。已于 2026-10-23 核对 Project Gutenberg 原文。",
+    "text": "She looked at the key quite a long time. She turned it over and over, and thought about it. As I have said before, she was not a child who had been trained to ask permission or consult her elders about things. All she thought about the key was that if it was the key to the closed garden, and she could find out where the door was, she could perhaps open it and see what was inside the walls, and what had happened to the old rose-trees. It was because it had been shut up so long that she wanted to see it.\n\nIt seemed as if it must be different from other places and that something strange must have happened to it during ten years. Besides that, if she liked it she could go into it every day and shut the door behind her, and she could make up some play of her own and play it quite alone, because nobody would ever know where she was, but would think the door was still locked and the key buried in the earth. The thought of that pleased her very much.",
+    "textZh": "她盯着钥匙看了好久，把它翻来覆去地看，一边想着它。正如我前面说过的，她不是那种受过教导、做事前会征求许可或向长辈请教的孩子。对于这把钥匙，她心里想的只是：如果它真是那座封闭花园的钥匙，而且她能找到门在哪里，也许就能把门打开，看看围墙里是什么样子，看看那些老玫瑰树后来怎么样了。正因为花园关闭了那么久，她才想进去看看。\n\n她觉得，它一定和别的地方不一样，而且在这十年里，一定发生过某种奇异的变化。再说，如果她喜欢那里，就可以每天进去，把门关在身后，自己想出一个游戏，独自在里面玩，因为谁也不会知道她在哪里，只会以为门依旧锁着，钥匙依旧埋在土里。想到这里，她高兴极了。",
+    "listeningTip": "盲听：抓住玛丽手中的物品，以及她为什么想进入花园。带文精听：把“All she thought about the key was that...”的主干与后面的if条件分开。三组影子跟读：第一组跟读开头两句；第二组跟读“It was because it had been shut up so long that she wanted to see it.”；第三组跟读最后一句。每组先听清，再跟读三遍。随后隐藏原文，用30—60秒复述她的想法。音频为浏览器合成朗读，可调速、暂停、继续、停止，不是名著有声书或四级真题录音。 跟读训练以页面列出的三个关键短语为三组，放回各自原句理解后，每组跟读三遍。",
+    "speakingPrompt": "In 30–60 seconds, explain why Mary wants to find the garden door. Mention what she hopes to see and why she likes the idea of being alone there. Use one detail from each paragraph.",
+    "speakingPromptZh": "用30—60秒说明玛丽为什么想找到花园的门。说出她希望看到什么，以及她为什么喜欢独自在里面玩；每一段至少引用一个细节。",
+    "keyPhrases": [
+      {
+        "en": "ask permission",
+        "zh": "征求许可"
+      },
+      {
+        "en": "find out where the door was",
+        "zh": "弄清楚门在哪里"
+      },
+      {
+        "en": "shut the door behind her",
+        "zh": "把身后的门关上"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why does Mary especially want to see inside the garden?",
+        "promptZh": "玛丽为什么特别想看看花园里面？",
+        "options": [
+          "She has been told to repair the old walls.",
+          "It has been closed for a long time, which makes her curious.",
+          "Her elders have asked her to look for the key.",
+          "She knows that other children are waiting there."
+        ],
+        "optionsZh": [
+          "有人让她修理旧围墙。",
+          "花园已经关闭很久，这使她很好奇。",
+          "长辈让她去寻找钥匙。",
+          "她知道有其他孩子正在里面等她。"
+        ],
+        "answer": 1,
+        "explanation": "第一段末句直接给出原因：正因为花园关闭了那么久，她才想看看里面。前文提到她想观察围墙内的情况和老玫瑰树，并没有修墙、长辈委托或其他孩子在等待的内容。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "What pleases Mary about the possibility of playing in the garden?",
+        "promptZh": "可能在花园里玩这件事，哪一点让玛丽高兴？",
+        "options": [
+          "Everyone will praise her for opening the door.",
+          "She will be able to sell the old roses.",
+          "She can invent her own play without anyone knowing where she is.",
+          "She will no longer need to carry the key."
+        ],
+        "optionsZh": [
+          "所有人都会夸奖她打开了门。",
+          "她将能够出售老玫瑰树上的花。",
+          "她可以自己编出游戏玩，而且没人知道她在哪里。",
+          "她将不再需要带着钥匙。"
+        ],
+        "answer": 2,
+        "explanation": "第二段写到，她可以自己想出玩法、独自玩耍，别人仍以为门锁着、钥匙埋在土里。最后一句说这个想法让她很高兴，因此答案是自主且隐秘的玩耍空间；原文没有赞扬、售花或丢下钥匙的情节。",
+        "tag": "extensive"
+      }
+    ],
+    "sourceExcerptSha256": "9e07af5545d15e04c7f825f258b3f82c4c6b4fb987bc6c2e2c2fe8e26d98cf5b"
+  },
+  {
+    "date": "2026-10-24",
+    "title": "Anne of Green Gables — Chapter II (The Lake's Name)",
+    "titleZh": "《绿山墙的安妮》第二章原文节选：给湖起名",
+    "category": "Public-domain classic — imagination and meaning in dialogue",
+    "sourceType": "public-domain excerpt",
+    "sourceUrl": "https://www.gutenberg.org/files/45/45-h/45-h.htm",
+    "author": "Lucy Maud Montgomery",
+    "work": "Anne of Green Gables",
+    "chapter": "Chapter II. Matthew Cuthbert Is Surprised",
+    "sourceVerifiedOn": "2026-10-23",
+    "rightsNote": "英文取自 Project Gutenberg 第 45 号电子书，站点将该作品标为美国公版；保留作者与作品出处。这里的中文译文和配套练习为本课程自行撰写，未复制现成中文译本。",
+    "sourceNote": "真实出版名著原文节选，非改写、非自编故事。Lucy Maud Montgomery《Anne of Green Gables》（《绿山墙的安妮》，1908），第二章“Matthew Cuthbert Is Surprised”中从“That’s Barry’s pond”至“What a perfectly lovely name!”的连续对话。英文保留原著用词，包括人物口语；中文为本课程自译，理解题为原创。背景：安妮和马修在前往绿山墙的途中谈论眼前的池塘。原作是小说，不将小说情节当成真实新闻。已于 2026-10-23 核对 Project Gutenberg 原文。",
+    "text": "“That’s Barry’s pond,” said Matthew.\n\n“Oh, I don’t like that name, either. I shall call it—let me see—the Lake of Shining Waters. Yes, that is the right name for it. I know because of the thrill. When I hit on a name that suits exactly it gives me a thrill. Do things ever give you a thrill?”\n\nMatthew ruminated.\n\n“Well now, yes. It always kind of gives me a thrill to see them ugly white grubs that spade up in the cucumber beds. I hate the look of them.”\n\n“Oh, I don’t think that can be exactly the same kind of a thrill. Do you think it can? There doesn’t seem to be much connection between grubs and lakes of shining waters, does there? But why do other people call it Barry’s pond?”\n\n“I reckon because Mr. Barry lives up there in that house. Orchard Slope’s the name of his place. If it wasn’t for that big bush behind it you could see Green Gables from here. But we have to go over the bridge and round by the road, so it’s near half a mile further.”\n\n“Has Mr. Barry any little girls? Well, not so very little either—about my size.”\n\n“He’s got one about eleven. Her name is Diana.”\n\n“Oh!” with a long indrawing of breath. “What a perfectly lovely name!”",
+    "textZh": "“那是巴里的池塘。”马修说。\n\n“哦，我也不喜欢这个名字。我要叫它——让我想想——闪光之湖。对，这个名字才适合它。我知道，因为它让我心里一阵激动。每当我想到一个恰好合适的名字，就会有这种激动的感觉。有什么东西也会让您心里一动吗？”\n\n马修沉思了一下。\n\n“嗯，有啊。看到黄瓜畦里翻出来的那些难看的白虫子，我总会有那么一种心里一震的感觉。我讨厌它们的样子。”\n\n“哦，我觉得那恐怕不完全是同一种感觉。您觉得会一样吗？虫子和闪光的湖水之间，似乎没有什么联系，对吧？不过，为什么别人叫它巴里的池塘呢？”\n\n“我想是因为巴里先生住在上面那栋房子里吧。他家那个地方叫果园坡。要不是后面有那丛大灌木，你从这里就能看到绿山墙。不过我们得过桥，再沿着路绕过去，所以还得多走将近半英里。”\n\n“巴里先生有小女儿吗？嗯，也不是那么小的——差不多像我这么大。”\n\n“他有个大约十一岁的女儿，名叫黛安娜。”\n\n“哦！”她长长地吸了一口气，“多么美好的名字啊！”",
+    "listeningTip": "盲听：听出两个人对thrill的不同理解，以及池塘旧名字的由来。带文精听：注意安妮的兴奋语气与马修朴实的回答。原文them ugly等属于人物口语，不作为现代标准语法范句；现代书面语可说those ugly white grubs。三组影子跟读：第一组跟读“When I hit on a name that suits exactly it gives me a thrill.”；第二组跟读“There doesn’t seem to be much connection between grubs and lakes of shining waters, does there?”；第三组跟读“He’s got one about eleven. Her name is Diana.”。每组先听清，再跟读三遍。最后隐藏原文，做30—60秒复述。音频为浏览器合成朗读，可调速、暂停、继续、停止，不是名著有声书或四级真题录音。 跟读训练以页面列出的三个关键短语为三组，放回各自原句理解后，每组跟读三遍。",
+    "speakingPrompt": "In 30–60 seconds, compare Anne's and Matthew's reactions to the word thrill. Explain why Anne chooses a new name for the pond and why other people call it Barry's pond. End by naming one place you would like to rename and giving a reason.",
+    "speakingPromptZh": "用30—60秒比较安妮和马修所说的thrill有何不同；解释安妮为什么给池塘起新名字、别人为什么叫它巴里的池塘。最后说一个你想重新命名的地方，并给出理由。",
+    "keyPhrases": [
+      {
+        "en": "hit on a name",
+        "zh": "突然想到一个名字"
+      },
+      {
+        "en": "gives me a thrill",
+        "zh": "使我心里一阵激动；具体感受需结合语境"
+      },
+      {
+        "en": "go over the bridge",
+        "zh": "过桥"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why does Anne choose the name the Lake of Shining Waters?",
+        "promptZh": "安妮为什么选择“闪光之湖”这个名字？",
+        "options": [
+          "Matthew tells her that it is the official name.",
+          "She wants to name it after Mr. Barry's daughter.",
+          "She has seen the same name on a road sign.",
+          "She feels that it suits the place and gives her a thrill."
+        ],
+        "optionsZh": [
+          "马修告诉她这是正式名称。",
+          "她想用巴里先生女儿的名字来命名。",
+          "她在路牌上看到过同样的名字。",
+          "她觉得这个名字很贴切，而且让她激动。"
+        ],
+        "answer": 3,
+        "explanation": "安妮说这个名字才是合适的名字，并解释每当想到一个恰好合适的名字，就会有thrill的感觉。因此依据是她自己的感受和想象，不是官方名称、路牌或黛安娜的姓名。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "What contrast is suggested by the two speakers' use of thrill?",
+        "promptZh": "两个人对thrill的使用表现了什么对比？",
+        "options": [
+          "Anne describes pleased excitement, while Matthew describes an unpleasant reaction to grubs.",
+          "Both speakers are frightened by the beauty of the pond.",
+          "Matthew is excited by a new name, while Anne dislikes the white grubs.",
+          "Both speakers use it only to describe a long journey."
+        ],
+        "optionsZh": [
+          "安妮说的是愉快的激动，而马修说的是看到虫子时不舒服的反应。",
+          "两个人都被池塘的美丽吓到了。",
+          "马修因新名字而兴奋，安妮则讨厌白虫子。",
+          "两个人都只用这个词形容长途旅行。"
+        ],
+        "answer": 0,
+        "explanation": "安妮想到贴切的名字时感到激动；马修却举出翻土看见难看白虫子的例子，并说自己讨厌它们的样子。安妮随即指出，这恐怕不是同一种thrill。对话用同一个词的不同情绪色彩产生幽默，不宜将两处都机械译为愉快的兴奋。",
+        "tag": "extensive"
+      }
+    ],
+    "sourceExcerptSha256": "13fdf39cc456034487c135e1c529260416bafb3e332eed037a4a4def5c5b14bb"
+  },
+  {
+    "date": "2026-10-25",
+    "title": "Little Women — Playing Pilgrims (Original Excerpt)",
+    "titleZh": "《小妇人》：四姐妹的圣诞心愿（原文节选）",
+    "category": "Public-domain classic — family, wishes, and sacrifice",
+    "sourceType": "public-domain excerpt",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/514/pg514-images.html",
+    "author": "Louisa May Alcott",
+    "work": "Little Women",
+    "chapter": "Part 1, Chapter One — Playing Pilgrims",
+    "sourceVerifiedOn": "2026-10-23",
+    "rightsNote": "英文选自 Project Gutenberg eBook #514；来源书目将该英文作品标为美国公版。作者 Louisa May Alcott（1832—1888），作品首刊于1868—1869年。本页只节选作品正文，中文译文和配套练习为本课程新作；不作全球版权状态承诺。",
+    "sourceNote": "真实已出版名著原文，非AI改写：Louisa May Alcott《Little Women》（《小妇人》），第一部第一章 Playing Pilgrims 开头连续六段。英文按 Project Gutenberg #514 原文节选，未改写单词或标点，仅调整网页换行；2026-10-23核验。中文为本课程自行翻译，题目与听说练习为原创。作品本身是小说，不将小说情节当作新闻事实。",
+    "text": "“Christmas won’t be Christmas without any presents,” grumbled Jo, lying on the rug.\n\n“It’s so dreadful to be poor!” sighed Meg, looking down at her old dress.\n\n“I don’t think it’s fair for some girls to have plenty of pretty things, and other girls nothing at all,” added little Amy, with an injured sniff.\n\n“We’ve got Father and Mother, and each other,” said Beth contentedly from her corner.\n\nThe four young faces on which the firelight shone brightened at the cheerful words, but darkened again as Jo said sadly, “We haven’t got Father, and shall not have him for a long time.” She didn’t say “perhaps never,” but each silently added it, thinking of Father far away, where the fighting was.\n\nNobody spoke for a minute; then Meg said in an altered tone, “You know the reason Mother proposed not having any presents this Christmas was because it is going to be a hard winter for everyone; and she thinks we ought not to spend money for pleasure, when our men are suffering so in the army. We can’t do much, but we can make our little sacrifices, and ought to do it gladly. But I am afraid I don’t,” and Meg shook her head, as she thought regretfully of all the pretty things she wanted.",
+    "textZh": "“没有礼物的圣诞节，就不算圣诞节了。”乔躺在地毯上抱怨道。\n\n“穷真是太糟糕了！”梅格低头看着自己的旧裙子，叹了口气。\n\n“有些女孩子有那么多漂亮的东西，另一些却什么也没有，我觉得这不公平。”小艾米委屈地吸了吸鼻子，接着说道。\n\n“我们有爸爸妈妈，还有彼此呀。”贝丝在角落里心满意足地说。\n\n炉火映照着四张年轻的脸，听到这番令人振奋的话，她们的神情明亮起来；可乔又伤心地说：“爸爸不在我们身边，而且很长时间都不会在。”四张脸随即又黯淡了。她没有说“也许永远不会”，但每个人心里都默默补上了这句话，想到远在战场上的父亲。\n\n有一分钟谁也没说话；随后梅格换了种语气说：“你们知道，妈妈提议今年圣诞节不送礼物，是因为这个冬天对大家来说都会很艰难。她觉得，当我们的人在军队里受苦时，我们不该把钱花在享乐上。我们做不了太多，但可以作出一点小小的牺牲，而且应该高高兴兴地去做。可我恐怕自己并不高兴。”想到所有自己想要的漂亮东西，梅格遗憾地摇了摇头。",
+    "listeningTip": "先盲听，辨别四姐妹对没有礼物的不同态度；再带文精听，注意but前后情绪变化，以及Mother提出不送礼物的原因。做三组影子跟读：①Beth说“We’ve got Father and Mother, and each other”的整句；②从“The four young faces”到“for a long time”的两种情绪；③从“We can’t do much”到“do it gladly”的整句。每组先听一遍，再紧跟朗读三遍，最后隐藏原文做30—60秒复述。浏览器合成朗读尽量采用美式英语，可调速并暂停、继续、停止；不是原著有声书录音或四级真题录音。 跟读训练以页面列出的三个关键短语为三组，放回各自原句理解后，每组跟读三遍。",
+    "speakingPrompt": "In 30–60 seconds, compare Beth’s response with the wishes of her sisters. Explain why their mother suggested having no Christmas presents and why Meg finds that difficult. Use one detail from the excerpt.",
+    "speakingPromptZh": "用30—60秒比较贝丝的反应与姐妹们的心愿，解释妈妈为什么提议圣诞节不送礼物，以及梅格为什么觉得难以做到。至少引用节选中的一个细节。",
+    "keyPhrases": [
+      {
+        "en": "plenty of pretty things",
+        "zh": "很多漂亮的东西；plenty of后可接可数名词复数"
+      },
+      {
+        "en": "in an altered tone",
+        "zh": "换了一种语气"
+      },
+      {
+        "en": "make our little sacrifices",
+        "zh": "作出我们力所能及的小小牺牲"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "How does Beth respond to her sisters’ complaints about presents?",
+        "promptZh": "贝丝怎样回应姐妹们对没有礼物的抱怨？",
+        "options": [
+          "She suggests that they ask their father for more money.",
+          "She reminds them that they have their parents and one another.",
+          "She promises to buy a new dress for each sister.",
+          "She argues that every girl should receive the same presents."
+        ],
+        "optionsZh": [
+          "她建议她们向父亲多要一些钱。",
+          "她提醒她们，她们还有父母和彼此。",
+          "她答应为每个姐妹买一条新裙子。",
+          "她认为每个女孩子都应该收到相同的礼物。"
+        ],
+        "answer": 1,
+        "explanation": "贝丝说她们有父母，也有彼此。她强调家庭关系带来的满足，而不是提出买礼物的办法。随后乔补充父亲远在战场，四人的情绪因此再次低落。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "What do Meg’s final words and action suggest?",
+        "promptZh": "梅格最后的话和摇头的动作说明了什么？",
+        "options": [
+          "She thinks their mother has forgotten the family.",
+          "She has already lost interest in pretty things.",
+          "She believes the army can solve every difficulty.",
+          "She understands the reason for sacrifice but still wants things for herself."
+        ],
+        "optionsZh": [
+          "她认为妈妈已经忘记了这个家。",
+          "她已经对漂亮东西失去了兴趣。",
+          "她相信军队能解决所有困难。",
+          "她理解作出牺牲的理由，但内心仍想拥有自己喜欢的东西。"
+        ],
+        "answer": 3,
+        "explanation": "梅格先解释妈妈的理由，并说她们应该高兴地作出小小牺牲；但她承认自己做不到高兴，随后想到想要的漂亮东西而摇头。这是理解道理与个人愿望之间的矛盾，不能推断她完全反对妈妈。",
+        "tag": "extensive"
+      }
+    ],
+    "sourceExcerptSha256": "c036df473dd85478bc18fe01647917cb1dc5580bf092293c523ed7da89a74a8b"
+  },
+  {
+    "date": "2026-10-26",
+    "title": "Alice’s Adventures in Wonderland — Down the Rabbit-Hole (Original Excerpt)",
+    "titleZh": "《爱丽丝漫游奇境》：落井时的观察（原文节选）",
+    "category": "Public-domain classic — observation, curiosity, and narrative humour",
+    "sourceType": "public-domain excerpt",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/11/pg11-images.html",
+    "author": "Lewis Carroll",
+    "work": "Alice’s Adventures in Wonderland",
+    "chapter": "Chapter I — Down the Rabbit-Hole",
+    "sourceVerifiedOn": "2026-10-23",
+    "rightsNote": "英文选自 Project Gutenberg eBook #11；来源书目将该英文作品标为美国公版。作者 Lewis Carroll（1832—1898），作品出版于1865年。本页只节选作品正文，中文译文和配套练习为本课程新作；不作全球版权状态承诺。",
+    "sourceNote": "真实已出版名著原文，非AI改写：Lewis Carroll《Alice’s Adventures in Wonderland》（《爱丽丝漫游奇境》），第一章 Down the Rabbit-Hole，爱丽丝落入深井后的连续两段。英文按 Project Gutenberg #11 原文节选，未改写单词或标点，仅调整网页换行；2026-10-23核验。中文为本课程自行翻译，题目与听说练习为原创。原著保留labelled等英式拼写；本文是幻想小说，不是真实新闻或安全指导。",
+    "text": "Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled “ORANGE MARMALADE”, but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody underneath, so managed to put it into one of the cupboards as she fell past it.\n\n“Well!” thought Alice to herself, “after such a fall as this, I shall think nothing of tumbling down stairs! How brave they’ll all think me at home! Why, I wouldn’t say anything about it, even if I fell off the top of the house!” (Which was very likely true.)",
+    "textZh": "不是井太深，就是她落得很慢，因为她往下落时有充裕的时间环顾四周，猜想接下来会发生什么。起初，她试着向下看，想辨认自己将落到什么地方，但下面太黑，什么也看不见。于是她又看向井壁，发现两侧满是橱柜和书架，间或还看见挂在钉子上的地图和图画。经过一个架子时，她从上面取下了一个罐子；罐上标着“橘子酱”，可令她十分失望的是，里面空空如也。她不愿把罐子扔下去，担心砸死下面的什么人，便设法在落过一个橱柜时把罐子放了进去。\n\n“嗯！”爱丽丝心想，“经历了这样一次坠落，我以后从楼梯上滚下去也会觉得没什么了！家里人都会觉得我多么勇敢呀！哼，就算我从屋顶掉下去，也绝不会吭一声！”（这话很可能是真的。）",
+    "listeningTip": "先盲听抓住三件事：爱丽丝看到了什么、罐子里有什么、她怎样处理罐子。带文精听First、then和so连接的动作，辨认叙述者与人物自言自语的转换。做三组影子跟读：①从“Either the well was very deep”到“happen next”；②从“She took down a jar”到“it was empty”；③从“How brave they’ll all think me at home”到“top of the house”。每组先听一遍，再紧跟朗读三遍；最后隐藏原文做30—60秒复述。注意这是幻想小说，结尾的夸张与旁白带有幽默，不是现实中的安全判断。使用浏览器合成朗读，尽量采用美式英语，可调速、暂停、继续和停止；不是真题或原著有声书录音。 跟读训练以页面列出的三个关键短语为三组，放回各自原句理解后，每组跟读三遍。",
+    "speakingPrompt": "In 30–60 seconds, describe what Alice notices while falling and explain why she puts the empty jar into a cupboard. Then say what her thoughts about bravery reveal about her imagination. Treat the scene as fantasy, not real-world advice.",
+    "speakingPromptZh": "用30—60秒描述爱丽丝下落时的观察，解释她为什么把空罐子放进橱柜，再说明她对勇敢的想法怎样表现了她的想象力。将这个场景作为幻想文学来讲述，而不是现实建议。",
+    "keyPhrases": [
+      {
+        "en": "make out what she was coming to",
+        "zh": "辨认自己将落到什么地方；make out在这里表示看清、辨认"
+      },
+      {
+        "en": "to her great disappointment",
+        "zh": "令她十分失望的是"
+      },
+      {
+        "en": "for fear of killing somebody underneath",
+        "zh": "因为担心砸死下面的人；for fear of表示唯恐、担心"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why does Alice put the jar into a cupboard instead of dropping it?",
+        "promptZh": "爱丽丝为什么把罐子放进橱柜，而不是扔下去？",
+        "options": [
+          "She is afraid it might kill somebody below her.",
+          "She wants to save the orange marmalade for later.",
+          "She plans to climb back up and take the jar home.",
+          "She has been told to keep every cupboard tidy."
+        ],
+        "optionsZh": [
+          "她担心罐子可能砸死下面的人。",
+          "她想把橘子酱留到以后再吃。",
+          "她计划爬回去，把罐子带回家。",
+          "有人要求她保持每个橱柜整洁。"
+        ],
+        "answer": 0,
+        "explanation": "原文明确说for fear of killing somebody underneath：她怕扔下罐子伤及下面的人。罐子实际上是空的，不能据罐上的标签推断里面有橘子酱。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "What do Alice’s thoughts about falling down stairs mainly show?",
+        "promptZh": "爱丽丝关于从楼梯上滚落的想法主要表现了什么？",
+        "options": [
+          "She knows exactly how deep the well is.",
+          "She has decided to stop exploring unusual places.",
+          "She imagines that this strange experience will make her seem brave at home.",
+          "She has learned that falling from any height is safe."
+        ],
+        "optionsZh": [
+          "她准确知道井有多深。",
+          "她已经决定不再探索奇怪的地方。",
+          "她想象这次奇特经历会让家里人觉得她很勇敢。",
+          "她已经知道从任何高度掉下去都安全。"
+        ],
+        "answer": 2,
+        "explanation": "爱丽丝想到家里人会觉得自己勇敢，将眼前不寻常的下落与日常的楼梯作了夸张比较。这个想法表现了人物的童真与想象，不能把小说中的自言自语当作事实或安全结论。",
+        "tag": "extensive"
+      }
+    ],
+    "sourceExcerptSha256": "4d0fac47c046077de6ccfc5e63ab66892d26ff61f34475cfb6368f4fa282c25c"
   }
 ]
