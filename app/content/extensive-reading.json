@@ -3958,5 +3958,227 @@
       }
     ],
     "sourceExcerptSha256": "4d0fac47c046077de6ccfc5e63ab66892d26ff61f34475cfb6368f4fa282c25c"
+  },
+  {
+    "date": "2026-10-27",
+    "title": "The Wonderful Wizard of Oz — The Gray Prairie (Original Excerpt)",
+    "titleZh": "《绿野仙踪》：灰色的草原（原文节选）",
+    "category": "Public-domain classic — setting, imagery, and contrast",
+    "sourceType": "public-domain excerpt",
+    "sourceUrl": "https://www.gutenberg.org/files/55/55-h/55-h.htm",
+    "author": "L. Frank Baum",
+    "work": "The Wonderful Wizard of Oz",
+    "chapter": "Chapter I — The Cyclone",
+    "sourceVerifiedOn": "2026-10-24",
+    "rightsNote": "英文选自Project Gutenberg eBook #55；来源书目将该英文作品标为美国公版。作者L. Frank Baum（1856—1919），作品出版于1900年。本页只节选正文，中文翻译和配套练习为本课程新作；不作全球版权状态承诺。",
+    "sourceNote": "真实已出版名著原文，非AI改写：L. Frank Baum《The Wonderful Wizard of Oz》（《绿野仙踪》），第一章The Cyclone，从When Dorothy stood in the doorway开始、到anything to laugh at结束的连续四段。2026-10-24实际打开Project Gutenberg #55核验；英文保留原句，只调整网页换行。中文为课程自行翻译，理解题与听说练习为原创配套。这是文学小说中的描写，不是现实新闻报道。",
+    "text": "When Dorothy stood in the doorway and looked around, she could see nothing but the great gray prairie on every side. Not a tree nor a house broke the broad sweep of flat country that reached to the edge of the sky in all directions. The sun had baked the plowed land into a gray mass, with little cracks running through it. Even the grass was not green, for the sun had burned the tops of the long blades until they were the same gray color to be seen everywhere.\n\nOnce the house had been painted, but the sun blistered the paint and the rains washed it away, and now the house was as dull and gray as everything else.\n\nWhen Aunt Em came there to live she was a young, pretty wife. The sun and wind had changed her, too. They had taken the sparkle from her eyes and left them a sober gray; they had taken the red from her cheeks and lips, and they were gray also. She was thin and gaunt, and never smiled now.\n\nWhen Dorothy, who was an orphan, first came to her, Aunt Em had been so startled by the child’s laughter that she would scream and press her hand upon her heart whenever Dorothy’s merry voice reached her ears; and she still looked at the little girl with wonder that she could find anything to laugh at.",
+    "textZh": "多萝西站在门口环顾四周时，所见只有四面延伸的广阔灰色草原。平坦的原野向各个方向一直延伸到天边，没有一棵树或一座房屋打断这片辽阔的景象。太阳把犁过的土地烤成了灰色的一片，上面布满细小的裂缝。就连草也不是绿色的，因为太阳灼焦了长长草叶的尖端，使它们变得和随处可见的景色一样灰暗。\n\n房子曾经刷过油漆，但太阳把漆晒得起了泡，雨水又将它冲掉，如今房子也像周围的一切那样暗淡而灰白。\n\n爱姆婶婶来到这里生活时，还是一位年轻漂亮的妻子。太阳和风也改变了她。它们夺去了她眼里的光彩，留下沉郁的灰色；也夺去了她脸颊和嘴唇的红润，使它们同样变得灰白。她瘦削而憔悴，如今从不微笑了。\n\n多萝西是个孤儿。她刚来到婶婶身边时，孩子的笑声让爱姆婶婶吃惊极了：每当多萝西欢快的声音传到她耳边，她都会惊叫一声，把手按在胸口。直到现在，她看着这个小女孩仍会感到惊奇，不明白她竟还能找到让自己发笑的事情。",
+    "listeningTip": "盲听先找反复出现的颜色词gray，抓住原野—房屋—人物三个描写层次。带文精听nothing but、as dull and gray as以及had taken的重复。三组影子跟读使用下方三个关键短语所在原句，每组先听一遍再跟读三遍；最后隐藏原文，用30—60秒复述环境与人物的联系。浏览器合成朗读尽量采用美式英语，可调速、暂停、继续、停止；不是真题或有声书录音。",
+    "speakingPrompt": "In 30–60 seconds, describe the prairie, the house, and Aunt Em. Explain how the repeated color gray connects these three descriptions. Do not add events that are not in the excerpt.",
+    "speakingPromptZh": "用30—60秒描述草原、房屋和爱姆婶婶，并说明反复出现的灰色如何连接这三层描写。不要添加节选中没有的情节。",
+    "keyPhrases": [
+      {
+        "en": "nothing but the great gray prairie",
+        "zh": "只有广阔的灰色草原；nothing but表示只有、除……之外没有"
+      },
+      {
+        "en": "as dull and gray as everything else",
+        "zh": "像其他一切那样暗淡而灰白；as…as表示同等程度"
+      },
+      {
+        "en": "taken the sparkle from her eyes",
+        "zh": "夺去了她眼里的光彩；这里把自然环境的影响写得像人的动作"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What has happened to the paint on the house?",
+        "promptZh": "房屋的油漆发生了什么变化？",
+        "options": [
+          "Dorothy has painted it green.",
+          "It has become brighter in the sunshine.",
+          "It has been damaged by the sun and washed away by rain.",
+          "Aunt Em has covered it with pictures."
+        ],
+        "optionsZh": [
+          "多萝西把它刷成了绿色。",
+          "它在阳光下变得更加鲜亮。",
+          "它被太阳晒坏，又被雨水冲掉了。",
+          "爱姆婶婶用图画遮住了它。"
+        ],
+        "answer": 2,
+        "explanation": "第二段直接说明the sun blistered the paint and the rains washed it away，即太阳晒得油漆起泡，雨水将其冲掉。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "What is the main effect of repeating the color gray?",
+        "promptZh": "反复描写灰色的主要作用是什么？",
+        "options": [
+          "It connects the bleak surroundings with the changes in Aunt Em.",
+          "It proves that Dorothy cannot recognize any colors.",
+          "It shows that the family has just built a new house.",
+          "It explains why Aunt Em enjoys painting landscapes."
+        ],
+        "optionsZh": [
+          "把荒凉暗淡的环境与爱姆婶婶的变化联系起来。",
+          "证明多萝西无法辨认任何颜色。",
+          "说明这家人刚建了一所新房子。",
+          "解释爱姆婶婶为什么喜欢画风景。"
+        ],
+        "answer": 0,
+        "explanation": "灰色从草原、土地和草叶延伸到房屋，再到爱姆婶婶的眼睛、脸颊和嘴唇，连接环境与人物的消沉变化。这是依据描写作出的文学理解，不是医学因果判断。",
+        "tag": "extensive"
+      }
+    ],
+    "sourceExcerptSha256": "40fa4eab7efaeb2106bf4eac10f97daaf4b2d86969d533daceadf51a88068019"
+  },
+  {
+    "date": "2026-10-28",
+    "title": "Black Beauty — My Early Home (Original Excerpt)",
+    "titleZh": "《黑骏马》：童年的家（原文节选）",
+    "author": "Anna Sewell",
+    "work": "Black Beauty",
+    "chapter": "Part I, Chapter 1 — My Early Home",
+    "sourceUrl": "https://www.gutenberg.org/files/271/271-h/271-h.htm",
+    "sourceType": "public-domain excerpt",
+    "sourceVerifiedOn": "2026-10-26",
+    "rightsNote": "英文选自Project Gutenberg所收录的十九世纪公版名著；保留原文，仅调整换行。中文翻译和配套理解题、听说练习为课程自行编写。 作者Anna Sewell（1820—1878）；来源书目eBook #271标明Public domain in the USA。",
+    "sourceNote": "真实已出版名著连续原文节选：Anna Sewell《Black Beauty》，Part I, Chapter 1 — My Early Home。2026-10-26实际打开原文链接核验。英文不改写、不跨段拼接；中文与练习是原创配套内容。属于文学作品，不是实时新闻。",
+    "category": "Public-domain classic — original excerpt",
+    "text": "The first place that I can well remember was a large pleasant meadow with a pond of clear water in it. Some shady trees leaned over it, and rushes and water-lilies grew at the deep end. Over the hedge on one side we looked into a plowed field, and on the other we looked over a gate at our master's house, which stood by the roadside; at the top of the meadow was a grove of fir trees, and at the bottom a running brook overhung by a steep bank.\n\nWhile I was young I lived upon my mother's milk, as I could not eat grass. In the daytime I ran by her side, and at night I lay down close by her. When it was hot we used to stand by the pond in the shade of the trees, and when it was cold we had a nice warm shed near the grove.\n\nAs soon as I was old enough to eat grass my mother used to go out to work in the daytime, and come back in the evening.",
+    "textZh": "我能清楚记得的第一个地方，是一片宽阔而宜人的草地，里面有一个水质清澈的池塘。几棵浓荫树木俯向池塘，深水的一端长着灯心草和睡莲。越过一侧的树篱，可以看到犁过的田地；从另一侧越过大门，可以看见主人在路旁的房子。草地高处有一小片冷杉林，低处有一条流动的小溪，陡岸悬在溪边。\n\n小时候，我靠母乳生活，因为还不能吃草。白天我在母亲身边跑，晚上紧挨着她躺下。天气热时，我们常站在池塘边的树荫里；天气冷时，我们在树林附近有一间舒服暖和的棚舍。\n\n等我长到能吃草的时候，母亲便白天出去干活，晚上回来。",
+    "keyPhrases": [
+      {
+        "en": "in the shade of the trees",
+        "zh": "在树荫下"
+      },
+      {
+        "en": "close by her",
+        "zh": "紧挨着她；在她近旁"
+      },
+      {
+        "en": "As soon as I was old enough to eat grass",
+        "zh": "一到我长得足以吃草的时候；as soon as表示一……就……"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Where did the young horse stay during hot weather?",
+        "promptZh": "炎热时，小马待在哪里？",
+        "options": [
+          "In the plowed field.",
+          "Inside the master's house.",
+          "Under the steep bank.",
+          "By the pond in the shade."
+        ],
+        "optionsZh": [
+          "犁过的田地里。",
+          "主人屋里。",
+          "陡岸下面。",
+          "池塘边的树荫里。"
+        ],
+        "answer": 3,
+        "explanation": "第二段明确说明天气热时站在池塘边树荫下。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "What changed when the narrator could eat grass?",
+        "promptZh": "叙述者能吃草后，发生了什么变化？",
+        "options": [
+          "The pond disappeared.",
+          "His mother began going out to work during the day.",
+          "The family moved to a town.",
+          "He stopped returning to the meadow."
+        ],
+        "optionsZh": [
+          "池塘消失了。",
+          "母亲开始白天出去工作。",
+          "一家搬到镇上。",
+          "他不再回草地。"
+        ],
+        "answer": 1,
+        "explanation": "末段写母亲白天出去干活、晚上回来，未提搬家等变化。",
+        "tag": "extensive"
+      }
+    ],
+    "listeningTip": "先盲听抓场景与叙述者感受；带文精听并点击查词。选择三个关键短语所在原句，各做一组影子跟读；最后隐藏原文，用30—60秒脱稿复述。浏览器合成朗读，可调速、暂停、继续、停止；不是真题或有声书录音。",
+    "speakingPrompt": "Describe the meadow and explain how the narrator's early routine changed as he grew. Speak for 30–60 seconds using only details from the excerpt.",
+    "speakingPromptZh": "用30—60秒描述草地，并说明叙述者成长后生活规律如何变化；只使用节选中的细节。",
+    "sourceExcerptSha256": "adc77b9d2356cc1ade7feb17eb23653fef6a32ae59740d4695669c1e63673ad2"
+  },
+  {
+    "date": "2026-10-29",
+    "title": "Tom Sawyer — A Bright Morning and a Long Fence (Original Excerpt)",
+    "titleZh": "《汤姆·索亚历险记》：晴朗早晨与长围栏（原文节选）",
+    "author": "Mark Twain",
+    "work": "The Adventures of Tom Sawyer",
+    "chapter": "Chapter II",
+    "sourceUrl": "https://www.gutenberg.org/files/74/74-h/74-h.htm",
+    "sourceType": "public-domain excerpt",
+    "sourceVerifiedOn": "2026-10-26",
+    "rightsNote": "英文选自Project Gutenberg所收录的十九世纪公版名著；保留原文，仅调整换行。中文翻译和配套理解题、听说练习为课程自行编写。 作者Mark Twain（1835—1910）；来源书目eBook #74标明Public domain in the USA。",
+    "sourceNote": "真实已出版名著连续原文节选：Mark Twain《The Adventures of Tom Sawyer》，Chapter II。2026-10-26实际打开原文链接核验。英文不改写、不跨段拼接；中文与练习是原创配套内容。属于文学作品，不是实时新闻。",
+    "category": "Public-domain classic — original excerpt",
+    "text": "Saturday morning was come, and all the summer world was bright and fresh, and brimming with life. There was a song in every heart; and if the heart was young the music issued at the lips. There was cheer in every face and a spring in every step. The locust-trees were in bloom and the fragrance of the blossoms filled the air. Cardiff Hill, beyond the village and above it, was green with vegetation and it lay just far enough away to seem a Delectable Land, dreamy, reposeful, and inviting.\n\nTom appeared on the sidewalk with a bucket of whitewash and a long-handled brush. He surveyed the fence, and all gladness left him and a deep melancholy settled down upon his spirit. Thirty yards of board fence nine feet high. Life to him seemed hollow, and existence but a burden.\n\nSighing, he dipped his brush and passed it along the topmost plank; repeated the operation; did it again; compared the insignificant whitewashed streak with the far-reaching continent of unwhitewashed fence, and sat down on a tree-box discouraged. Jim came skipping out at the gate with a tin pail, and singing Buffalo Gals. Bringing water from the town pump had always been hateful work in Tom’s eyes, before, but now it did not strike him so. He remembered that there was company at the pump.",
+    "textZh": "星期六早晨到了，整个夏日世界明亮清新，洋溢着生机。每颗心里都有一首歌；若那颗心还年轻，歌声就会从嘴边流出。每张脸上都有欢喜，每一步都轻快有劲。刺槐开着花，花香充满空气。村外高处的卡迪夫山一片葱绿，距离恰好足以让它显得像一片令人向往的乐土，梦幻、宁静而诱人。\n\n汤姆提着一桶石灰水，拿着一把长柄刷子出现在人行道上。他打量着围栏，喜悦全消，一阵深深的忧郁落到心头。三十码长、九英尺高的木板围栏。他觉得生活空洞，活着也成了负担。\n\n他叹着气，把刷子蘸了蘸，刷过最上面一块木板，又重复一次，再来一次；他把那道微不足道的白痕与像大陆般延伸的未刷围栏一比，便沮丧地坐到护树箱上。吉姆提着锡桶，唱着《Buffalo Gals》，蹦蹦跳跳地出了大门。以前，从镇上水泵那里打水在汤姆眼中一直是讨厌的活儿，但现在他不再这么想了。他想起水泵旁有人作伴。",
+    "keyPhrases": [
+      {
+        "en": "brimming with life",
+        "zh": "充满生机"
+      },
+      {
+        "en": "a spring in every step",
+        "zh": "步步轻快有劲；spring此处指弹性、活力"
+      },
+      {
+        "en": "it did not strike him so",
+        "zh": "他不再那么认为；strike在这里表示给人某种印象"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "How does Tom's mood differ from the opening description?",
+        "promptZh": "汤姆的心情与开篇环境描写有何不同？",
+        "options": [
+          "He feels discouraged despite the cheerful morning.",
+          "He is as cheerful as everyone around him.",
+          "He is frightened by a storm.",
+          "He cannot see the fence."
+        ],
+        "optionsZh": [
+          "早晨欢快，他却感到沮丧。",
+          "他与周围所有人一样欢快。",
+          "他被暴风雨吓到了。",
+          "他看不到围栏。"
+        ],
+        "answer": 0,
+        "explanation": "开篇明亮欢快，随后all gladness left him与discouraged形成反差。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "Why does fetching water seem less unpleasant to Tom now?",
+        "promptZh": "为什么汤姆现在觉得打水没那么讨厌？",
+        "options": [
+          "He has finished painting the fence.",
+          "The pump has moved closer.",
+          "He remembers that there is company at the pump.",
+          "Jim has promised to paint everything."
+        ],
+        "optionsZh": [
+          "他已经刷完围栏。",
+          "水泵移近了。",
+          "他想起水泵旁有人作伴。",
+          "吉姆已答应刷完全部围栏。"
+        ],
+        "answer": 2,
+        "explanation": "节选最后一句说明there was company at the pump；其他事件并未在此发生。",
+        "tag": "extensive"
+      }
+    ],
+    "listeningTip": "先盲听抓场景与叙述者感受；带文精听并点击查词。选择三个关键短语所在原句，各做一组影子跟读；最后隐藏原文，用30—60秒脱稿复述。浏览器合成朗读，可调速、暂停、继续、停止；不是真题或有声书录音。",
+    "speakingPrompt": "Explain the contrast between the bright morning and Tom's feelings. Then explain why he begins to view fetching water differently. Speak for 30–60 seconds.",
+    "speakingPromptZh": "用30—60秒解释晴朗早晨与汤姆心情的对比，再说明他为什么开始改变对打水的看法。",
+    "sourceExcerptSha256": "902c0e4541dfe860c40c0981c1cfea033d39a7ac7b2b3292370ba6b50bfe3114"
   }
 ]

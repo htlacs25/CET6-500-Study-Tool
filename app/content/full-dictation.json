@@ -1347,5 +1347,139 @@
       "text": "Registration helps us prepare space, but it does not guarantee that everything is accepted.",
       "zh": "登记帮助我们准备空间，但不保证每件物品都能被接收。"
     }
+  ],
+  "2026-10-27": [
+    {
+      "text": "This message is for students helping in the greenhouse tomorrow.",
+      "zh": "这条通知发给明天在温室帮忙的学生。"
+    },
+    {
+      "text": "Please arrive at nine and collect the notebook from the gardener.",
+      "zh": "请九点到达，并向园丁领取笔记本。"
+    },
+    {
+      "text": "We normally begin beside the entrance, but that area was watered this afternoon.",
+      "zh": "我们通常从入口旁开始，但那个区域今天下午已经浇过水。"
+    },
+    {
+      "text": "Start at the far end instead, where the young plants are kept.",
+      "zh": "这次改从摆放幼苗的远端开始。"
+    },
+    {
+      "text": "Check the soil before adding any water.",
+      "zh": "加水前先检查土壤。"
+    },
+    {
+      "text": "Do not water every pot simply because it is on your list.",
+      "zh": "不要仅因为花盆在清单上就给它浇水。"
+    },
+    {
+      "text": "If a label is missing, write down the pot's position and ask for help.",
+      "zh": "如果标签丢失，记下花盆的位置并寻求帮助。"
+    },
+    {
+      "text": "Do not guess its name or replace the label yourself.",
+      "zh": "不要猜测它的名称，也不要自行更换标签。"
+    },
+    {
+      "text": "After checking the plants, record what you actually did in the notebook.",
+      "zh": "检查植物之后，在笔记本中记录你实际完成的工作。"
+    },
+    {
+      "text": "Put suggestions for the next team on a separate page.",
+      "zh": "给下一组的建议请写在单独的一页上。"
+    },
+    {
+      "text": "The gardener will review those suggestions before anyone acts on them.",
+      "zh": "在任何人付诸行动之前，园丁会先审核这些建议。"
+    }
+  ],
+  "2026-10-28": [
+    {
+      "text": "Welcome to the student laboratory tour on Wednesday afternoon.",
+      "zh": "欢迎参加周三下午的学生实验室参观。"
+    },
+    {
+      "text": "The visit starts at two, but please arrive ten minutes early.",
+      "zh": "参观两点开始，但请提前十分钟到达。"
+    },
+    {
+      "text": "Leave your bags in the lockers outside the main entrance.",
+      "zh": "请把包放在正门外的储物柜中。"
+    },
+    {
+      "text": "We will first watch a demonstration of a microscope.",
+      "zh": "我们将先观看显微镜演示。"
+    },
+    {
+      "text": "You may draw what you see, but do not move the specimens.",
+      "zh": "你可以画出看到的东西，但不要移动标本。"
+    },
+    {
+      "text": "After that, a guide will explain the records beside each instrument.",
+      "zh": "随后，讲解员会解释每台仪器旁的记录。"
+    },
+    {
+      "text": "One column shows a prediction, while another shows the actual measurement.",
+      "zh": "其中一列显示预测，另一列显示实际测量结果。"
+    },
+    {
+      "text": "If the numbers differ, ask how the team checks possible causes.",
+      "zh": "如果数字不同，请问团队如何检查可能的原因。"
+    },
+    {
+      "text": "Do not erase a result simply because it seems surprising.",
+      "zh": "不要仅仅因为结果令人意外就将其擦掉。"
+    },
+    {
+      "text": "The final discussion takes place in the classroom across the corridor.",
+      "zh": "最后的讨论在走廊对面的教室进行。"
+    },
+    {
+      "text": "Please bring your questions there rather than testing any equipment yourself.",
+      "zh": "请把问题带到那里，而不要自行测试设备。"
+    }
+  ],
+  "2026-10-29": [
+    {
+      "text": "Here are the instructions for Thursday's weekly reading review.",
+      "zh": "以下是周四每周阅读复盘的说明。"
+    },
+    {
+      "text": "You will receive two short notices about the same evening event.",
+      "zh": "你会收到两则关于同一晚间活动的简短通知。"
+    },
+    {
+      "text": "The second notice was issued after the organizers changed the room.",
+      "zh": "第二则通知是在组织者更换房间后发布的。"
+    },
+    {
+      "text": "Read both notices before answering the four questions on your sheet.",
+      "zh": "回答答题纸上的四道题之前，先阅读两则通知。"
+    },
+    {
+      "text": "Underline the details that remain correct and circle the ones that changed.",
+      "zh": "给仍然正确的细节画下划线，圈出发生改变的细节。"
+    },
+    {
+      "text": "You have eight minutes for this first part of the review.",
+      "zh": "复盘的第一部分限时八分钟。"
+    },
+    {
+      "text": "Then compare your reasons with a partner for five minutes.",
+      "zh": "然后用五分钟和搭档比较作答理由。"
+    },
+    {
+      "text": "Keep your first answers visible when you add corrections in another color.",
+      "zh": "用另一种颜色补充订正时，保留第一次答案，让它们仍可见。"
+    },
+    {
+      "text": "A correct guess is not enough if you cannot locate the evidence.",
+      "zh": "如果找不到依据，仅仅猜对答案还不够。"
+    },
+    {
+      "text": "At the end, write one checking step to use next week.",
+      "zh": "最后，写下一条准备在下周使用的检查步骤。"
+    }
   ]
 }

@@ -20739,5 +20739,1436 @@
         "topic": "顺序说明、并列祈使句与宾语从句"
       }
     ]
+  },
+  "2026-10-27": {
+    "title": "植物与观察：让记录帮助下一位接手的人",
+    "grammarTip": "四级专项衔接：阅读追踪问题—措施—结果，区分已经完成的工作与计划中的工作；听力抓住调整后的顺序和禁止事项。重点巩固主句与定语从句的谓语、形容词前的be、介词后动名词及think/thing。核心阅读与听力为虚构教学情境，不是新闻；泛读另用真实名著原文。",
+    "words": [
+      {
+        "word": "plant",
+        "phonetic": "/plænt/",
+        "pos": "n.; v.",
+        "meaning": "植物；工厂；种植（结合原句判断）",
+        "phrase": "plant a tree",
+        "example": "Students plant a tree beside the path.",
+        "exampleZh": "学生在小路旁种下一棵树。"
+      },
+      {
+        "word": "root",
+        "phonetic": "/ruːt/",
+        "pos": "n.; v.",
+        "meaning": "根；根源；生根（结合原句判断）",
+        "phrase": "the roots of a plant",
+        "example": "The roots of a plant take up water from the soil.",
+        "exampleZh": "植物的根从土壤中吸收水分。"
+      },
+      {
+        "word": "leaf",
+        "phonetic": "/liːf/",
+        "pos": "n.",
+        "meaning": "叶；叶片（复数leaves）",
+        "phrase": "a green leaf",
+        "example": "A small green leaf appeared above the soil.",
+        "exampleZh": "一片小绿叶冒出了土壤。"
+      },
+      {
+        "word": "branch",
+        "phonetic": "/bræntʃ/",
+        "pos": "n.; v.",
+        "meaning": "树枝；分支；分岔（结合原句判断）",
+        "phrase": "a low branch",
+        "example": "A low branch partly covered the sign.",
+        "exampleZh": "一根低垂的树枝遮住了部分标牌。"
+      },
+      {
+        "word": "stem",
+        "phonetic": "/stem/",
+        "pos": "n.; v.",
+        "meaning": "茎；词干；起源于；阻止（结合原句判断）",
+        "phrase": "a strong stem",
+        "example": "The young plant has a strong stem.",
+        "exampleZh": "这株幼苗有一根强壮的茎。"
+      },
+      {
+        "word": "trunk",
+        "phonetic": "/trʌŋk/",
+        "pos": "n.",
+        "meaning": "树干；象鼻；汽车后备厢（结合语境判断）",
+        "phrase": "the trunk of a tree",
+        "example": "The label was tied loosely around the trunk of the tree.",
+        "exampleZh": "标签被松松地系在树干上。"
+      },
+      {
+        "word": "bark",
+        "phonetic": "/bɑːrk/",
+        "pos": "n.; v.",
+        "meaning": "树皮；吠声；吠叫（结合原句判断）",
+        "phrase": "rough bark",
+        "example": "The old tree has thick, rough bark.",
+        "exampleZh": "这棵老树有厚而粗糙的树皮。"
+      },
+      {
+        "word": "blossom",
+        "phonetic": "/ˈblɑːsəm/",
+        "pos": "n.; v.",
+        "meaning": "花；开花；兴旺发展（结合原句判断）",
+        "phrase": "apple blossom",
+        "example": "Apple blossom covered the branches in spring.",
+        "exampleZh": "春天，苹果花开满了枝头。"
+      },
+      {
+        "word": "bloom",
+        "phonetic": "/bluːm/",
+        "pos": "n.; v.",
+        "meaning": "花；开花；繁盛（结合原句判断）",
+        "phrase": "in full bloom",
+        "example": "The flowers near the gate are in full bloom.",
+        "exampleZh": "门边的花正盛开。"
+      },
+      {
+        "word": "agricultural",
+        "phonetic": "/ˌæɡrɪˈkʌltʃərəl/",
+        "pos": "adj.",
+        "meaning": "农业的；农用的",
+        "phrase": "agricultural research",
+        "example": "The exhibition introduces several methods used in agricultural research.",
+        "exampleZh": "展览介绍了农业研究中使用的几种方法。"
+      },
+      {
+        "word": "orchard",
+        "phonetic": "/ˈɔːrtʃərd/",
+        "pos": "n.",
+        "meaning": "果园",
+        "phrase": "an apple orchard",
+        "example": "A narrow path leads to the apple orchard.",
+        "exampleZh": "一条狭窄的小路通向苹果园。"
+      },
+      {
+        "word": "cultivate",
+        "phonetic": "/ˈkʌltɪveɪt/",
+        "pos": "v.",
+        "meaning": "耕作；栽培；培养",
+        "phrase": "cultivate useful habits",
+        "example": "Keeping a garden can help students cultivate useful habits.",
+        "exampleZh": "照料花园可以帮助学生培养有用的习惯。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "cultivation",
+        "phonetic": "/ˌkʌltɪˈveɪʃən/",
+        "pos": "n.",
+        "meaning": "耕作；栽培；培养",
+        "phrase": "the cultivation of crops",
+        "example": "The course explains how water affects the cultivation of crops.",
+        "exampleZh": "这门课程解释水如何影响农作物的栽培。"
+      },
+      {
+        "word": "weed",
+        "phonetic": "/wiːd/",
+        "pos": "n.; v.",
+        "meaning": "杂草；除草（结合原句判断）",
+        "phrase": "remove weeds",
+        "example": "Ask the gardener before you remove an unfamiliar plant as a weed.",
+        "exampleZh": "在把不认识的植物当杂草拔除之前，先问园丁。"
+      },
+      {
+        "word": "insect",
+        "phonetic": "/ˈɪnsekt/",
+        "pos": "n.",
+        "meaning": "昆虫",
+        "phrase": "observe an insect",
+        "example": "The students observed an insect without touching it.",
+        "exampleZh": "学生在不触碰昆虫的情况下观察了它。"
+      },
+      {
+        "word": "organic",
+        "phonetic": "/ɔːrˈɡænɪk/",
+        "pos": "adj.",
+        "meaning": "有机的；有机种植的；生物体的（结合语境判断）",
+        "phrase": "organic matter",
+        "example": "The lesson explains why organic matter is important in soil.",
+        "exampleZh": "这节课解释了有机质为什么对土壤很重要。"
+      },
+      {
+        "word": "irrigate",
+        "phonetic": "/ˈɪrɪɡeɪt/",
+        "pos": "v.",
+        "meaning": "灌溉",
+        "phrase": "irrigate a field",
+        "example": "The farmer uses a simple system to irrigate the field.",
+        "exampleZh": "农民使用一套简单的系统灌溉田地。"
+      },
+      {
+        "word": "sunlight",
+        "phonetic": "/ˈsʌnlaɪt/",
+        "pos": "n.",
+        "meaning": "阳光；日光",
+        "phrase": "direct sunlight",
+        "example": "The two pots receive different amounts of direct sunlight.",
+        "exampleZh": "这两个花盆接收到的直射阳光不同。"
+      },
+      {
+        "word": "moisture",
+        "phonetic": "/ˈmɔɪstʃər/",
+        "pos": "n.",
+        "meaning": "水分；湿气",
+        "phrase": "soil moisture",
+        "example": "The gardener checked the soil moisture before watering.",
+        "exampleZh": "园丁在浇水前检查了土壤湿度。"
+      },
+      {
+        "word": "sprout",
+        "phonetic": "/spraʊt/",
+        "pos": "n.; v.",
+        "meaning": "芽；新芽；发芽（结合原句判断）",
+        "phrase": "begin to sprout",
+        "example": "The seeds began to sprout after several days.",
+        "exampleZh": "几天后，种子开始发芽。"
+      },
+      {
+        "word": "greenhouse",
+        "phonetic": "/ˈɡriːnhaʊs/",
+        "pos": "n.",
+        "meaning": "温室；暖房",
+        "phrase": "inside the greenhouse",
+        "example": "Record the temperature inside the greenhouse at the same time each day.",
+        "exampleZh": "每天在同一时间记录温室里的温度。"
+      },
+      {
+        "word": "gardener",
+        "phonetic": "/ˈɡɑːrdənər/",
+        "pos": "n.",
+        "meaning": "园丁；园艺爱好者",
+        "phrase": "an experienced gardener",
+        "example": "An experienced gardener showed the students how to read the plant labels.",
+        "exampleZh": "一位经验丰富的园丁教学生怎样阅读植物标签。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The notes that the previous team left ___ useful information.",
+        "promptZh": "上一组留下的笔记包含有用的信息。",
+        "options": [
+          "contains",
+          "contain",
+          "containing",
+          "to contain"
+        ],
+        "optionsZh": [
+          "包含（第三人称单数）",
+          "包含（原形）",
+          "包含（非谓语形式）",
+          "包含（不定式）"
+        ],
+        "answer": 1,
+        "explanation": "主语notes为复数，主句谓语用contain。that the previous team left是修饰notes的定语从句；left是从句谓语，不能代替主句谓语。",
+        "tag": "main-verb"
+      },
+      {
+        "prompt": "The soil near the window ___ dry today.",
+        "promptZh": "窗边的土壤今天很干。",
+        "options": [
+          "does",
+          "being",
+          "are",
+          "is"
+        ],
+        "optionsZh": [
+          "做（助动词或实义动词）",
+          "是（非谓语形式）",
+          "是（复数）",
+          "是（单数）"
+        ],
+        "answer": 3,
+        "explanation": "dry在这里是形容词，需要系动词be；soil为不可数名词，使用is，不能写成The soil dry。",
+        "tag": "be-adjective"
+      },
+      {
+        "prompt": "Before ___ a label, check the plant's number in the notebook.",
+        "promptZh": "更换标签之前，先核对笔记本中植物的编号。",
+        "options": [
+          "replace",
+          "replaced",
+          "replacing",
+          "to replace"
+        ],
+        "optionsZh": [
+          "更换（原形）",
+          "更换（过去式或过去分词）",
+          "更换（动名词）",
+          "更换（不定式）"
+        ],
+        "answer": 2,
+        "explanation": "此处before为介词，后接动名词replacing；也可以改用完整从句before you replace a label。",
+        "tag": "gerund"
+      },
+      {
+        "prompt": "The updated map will ___ beside the greenhouse door tomorrow.",
+        "promptZh": "更新后的地图明天将被挂在温室门旁。",
+        "options": [
+          "be displayed",
+          "display",
+          "displayed",
+          "displaying"
+        ],
+        "optionsZh": [
+          "被展示",
+          "展示（原形）",
+          "展示（过去式或过去分词）",
+          "展示（非谓语形式）"
+        ],
+        "answer": 0,
+        "explanation": "map是被展示的对象，一般将来时的被动语态为will be displayed；will后不能直接接过去分词displayed。",
+        "tag": "passive"
+      },
+      {
+        "prompt": "The student who ___ the notebook is responsible for recording today's work.",
+        "promptZh": "保管笔记本的那位学生负责记录今天的工作。",
+        "options": [
+          "keep",
+          "keeps",
+          "keeping",
+          "to keep"
+        ],
+        "optionsZh": [
+          "保管（原形）",
+          "保管（第三人称单数）",
+          "保管（非谓语形式）",
+          "保管（不定式）"
+        ],
+        "answer": 1,
+        "explanation": "主句谓语是is；who引导的定语从句也需要谓语。who指单数student，因此用keeps。",
+        "tag": "relative-clause"
+      },
+      {
+        "prompt": "I ___ the most important ___ is to record the date.",
+        "promptZh": "我认为最重要的事情是记录日期。",
+        "options": [
+          "thing; think",
+          "think; think",
+          "thing; thing",
+          "think; thing"
+        ],
+        "optionsZh": [
+          "事情；认为",
+          "认为；认为",
+          "事情；事情",
+          "认为；事情"
+        ],
+        "answer": 3,
+        "explanation": "think是动词，表示认为；thing是名词，表示事情。注意think末尾是nk，thing末尾是ng；不要因读音接近而混写。",
+        "tag": "word-form"
+      }
+    ],
+    "reading": {
+      "title": "A Garden Record That Survives Its Gardener",
+      "titleZh": "让花园记录不因人员离开而中断",
+      "level": "四级专项衔接 · 原创分级模拟",
+      "topic": "团队交接、记录用途与信息分类",
+      "passage": "At an imaginary college, a gardening club changed its volunteer team each term. The plants stayed, but much of the knowledge left with the experienced members. New volunteers could see which beds looked healthy, yet they often did not know what had been planted or when the soil had last been watered.\n\nOne departing member offered to write a long account of everything she remembered. Another suggested a simpler approach: record information while the work was taking place, in a form that the next person could quickly use. The club tested a notebook with a map of the garden and a number for each bed. Every entry included a date, the bed number, and a brief description of the action taken.\n\nThe volunteers kept completed work separate from future plans. Writing that seeds should be planted on Friday was not the same as confirming that someone had planted them. They also recorded observations without turning them immediately into instructions. A yellow leaf, for example, was something to investigate rather than an automatic request for more water.\n\nAt the next change of team, the notebook gave newcomers a starting point for asking questions. It did not replace practical experience or advice from a skilled gardener. Its value was more modest: people no longer had to rebuild the basic history of every bed before deciding what to do next.",
+      "passageZh": "在一所虚构的大学里，园艺社团每学期都会更换志愿者团队。植物留了下来，但许多经验却随着有经验的成员离开而流失。新志愿者能看出哪些种植畦长势良好，却常常不知道里面种了什么，也不知道土壤上次是什么时候浇的水。\n\n一名即将离开的成员提出，把自己记得的事情写成长篇记录。另一人建议采用更简单的方式：工作进行时就记录信息，并使用下一位接手者能快速利用的格式。社团试用了一本笔记本，里面附有花园地图，每块种植畦都有编号。每条记录包括日期、畦的编号，以及已采取行动的简短说明。\n\n志愿者把已完成的工作与未来计划分开记录。写下周五应当播种，并不等于确认有人已经播种。他们也记录观察结果，而不立即把它们变成操作指令。例如，一片黄叶是需要调查的现象，而不是自动意味着应该多浇水。\n\n下一次团队交接时，笔记本为新成员提问提供了起点。它并没有取代实践经验或熟练园丁的建议。它的价值更为有限而实在：人们不再需要先重建每块种植畦的基本历史，才能决定下一步做什么。",
+      "questions": [
+        {
+          "prompt": "What problem occurred when experienced members left?",
+          "promptZh": "有经验的成员离开时出现了什么问题？",
+          "options": [
+            "All the plants were moved to a different garden.",
+            "New volunteers lost access to useful information about earlier work.",
+            "The college stopped allowing students to grow plants.",
+            "Every bed had to be watered at exactly the same time."
+          ],
+          "optionsZh": [
+            "所有植物被移到了另一个花园。",
+            "新志愿者缺少有关此前工作的有用信息。",
+            "学校不再允许学生种植植物。",
+            "每块种植畦都必须在完全相同的时间浇水。"
+          ],
+          "answer": 1,
+          "explanation": "首段说明植物仍在，但经验随成员离开而流失；新成员不清楚种植内容和最近的浇水时间。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Why did the club include bed numbers in its notebook?",
+          "promptZh": "社团为什么在笔记本中记录种植畦编号？",
+          "options": [
+            "To rank volunteers by the amount of work they did.",
+            "To replace all written descriptions with photographs.",
+            "To make every plant grow at the same speed.",
+            "To connect each entry with a particular place in the garden."
+          ],
+          "optionsZh": [
+            "按照工作量给志愿者排名。",
+            "用照片替换所有文字描述。",
+            "让每株植物以相同的速度生长。",
+            "把每条记录与花园中的具体位置对应起来。"
+          ],
+          "answer": 3,
+          "explanation": "第二段把地图、种植畦编号和每条记录联系起来。编号帮助下一位读者知道行动发生在哪一处。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What does the example of Friday's planting illustrate?",
+          "promptZh": "周五播种的例子说明了什么？",
+          "options": [
+            "A planned action should not be treated as a completed action.",
+            "Seeds can be planted only at the end of the week.",
+            "Future plans should never appear in a notebook.",
+            "The same person must complete every task."
+          ],
+          "optionsZh": [
+            "计划中的行动不能被当成已经完成的行动。",
+            "种子只能在一周结束时播种。",
+            "未来计划绝不应出现在笔记本中。",
+            "每项任务都必须由同一个人完成。"
+          ],
+          "answer": 0,
+          "explanation": "第三段明确对比should be planted和someone had planted：计划与完成情况需要分别记录。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "How does the writer assess the notebook's value?",
+          "promptZh": "作者怎样评价这本笔记本的价值？",
+          "options": [
+            "It makes experienced gardeners unnecessary.",
+            "It guarantees that no plants will become unhealthy.",
+            "It preserves basic history while leaving room for further judgment.",
+            "It gives a fixed solution to every gardening problem."
+          ],
+          "optionsZh": [
+            "它让有经验的园丁变得不再必要。",
+            "它保证所有植物都不会长势变差。",
+            "它保存基本历史，同时仍需要进一步判断。",
+            "它为所有园艺问题提供固定答案。"
+          ],
+          "answer": 2,
+          "explanation": "末段明确说笔记本不能代替经验或建议，但能保存每块种植畦的基本历史，帮助接手者开始判断。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "A New Route Through the Greenhouse",
+      "titleZh": "温室值班的新路线",
+      "level": "四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "tip": "盲听抓住值班人员、先后顺序和禁止事项；带文精听比较旧路线与新路线，核对两区的不同处理。选三句各跟读三遍，再用30—60秒脱稿说明值班步骤。虚构教学通知，使用浏览器合成朗读，尽量采用美式英语，不是真题录音。",
+      "passage": "This message is for students helping in the greenhouse tomorrow. Please arrive at nine and collect the notebook from the gardener. We normally begin beside the entrance, but that area was watered this afternoon. Start at the far end instead, where the young plants are kept. Check the soil before adding any water. Do not water every pot simply because it is on your list. If a label is missing, write down the pot's position and ask for help. Do not guess its name or replace the label yourself. After checking the plants, record what you actually did in the notebook. Put suggestions for the next team on a separate page. The gardener will review those suggestions before anyone acts on them.",
+      "passageZh": "这条通知发给明天在温室帮忙的学生。请九点到达，并向园丁领取笔记本。我们通常从入口旁开始，但那个区域今天下午已经浇过水了。因此，这次要从摆放幼苗的远端开始。加水前先检查土壤。不要仅仅因为某个花盆在清单上，就给它浇水。如果标签丢失，记下花盆的位置并寻求帮助。不要猜测植物名称，也不要自行更换标签。检查植物之后，在笔记本中记录你实际完成的工作。给下一组的建议请写在单独的一页上。在任何人付诸行动之前，园丁会先审核这些建议。",
+      "dictation": [
+        "Do not guess its name or replace the label yourself.",
+        "Put suggestions for the next team on a separate page."
+      ],
+      "dictationZh": [
+        "不要猜测它的名称，也不要自行更换标签。",
+        "给下一组的建议请写在单独的一页上。"
+      ],
+      "questions": [
+        {
+          "prompt": "Why should students start at the far end of the greenhouse?",
+          "promptZh": "为什么学生应该从温室远端开始？",
+          "options": [
+            "The notebook has been left at the far end.",
+            "The entrance will be locked until noon.",
+            "The area beside the entrance has already been watered.",
+            "All the plants near the entrance have been removed."
+          ],
+          "optionsZh": [
+            "笔记本被放在了远端。",
+            "入口要到中午才开门。",
+            "入口旁的区域已经浇过水。",
+            "入口附近的植物都已被移走。"
+          ],
+          "answer": 2,
+          "explanation": "通知说入口旁区域今天下午已浇水，因此改从摆放幼苗的远端开始；并不是入口关闭。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "What should a student do if a label is missing?",
+          "promptZh": "标签丢失时，学生应该怎么办？",
+          "options": [
+            "Record the pot's location and ask for help.",
+            "Choose a likely name and make a new label.",
+            "Move the plant to the entrance immediately.",
+            "Water it twice before writing any notes."
+          ],
+          "optionsZh": [
+            "记录花盆位置并寻求帮助。",
+            "猜一个可能的名称并制作新标签。",
+            "立即把植物移到入口。",
+            "先浇两遍水再写笔记。"
+          ],
+          "answer": 0,
+          "explanation": "原文要求write down the pot's position and ask for help，并明确禁止猜名称或自行换标签。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The notebook that experienced volunteers left in the greenhouse helped the new team understand which tasks had already been completed.",
+      "main": "The notebook helped the new team understand which tasks had already been completed.",
+      "mainZh": "这本笔记本帮助新团队了解哪些任务已经完成。",
+      "translation": "有经验的志愿者留在温室里的笔记本，帮助新团队了解哪些任务已经完成。",
+      "core": [
+        "notebook",
+        "helped",
+        "team",
+        "understand",
+        "tasks",
+        "completed"
+      ],
+      "keywords": [
+        "笔记本",
+        "有经验的",
+        "志愿者",
+        "留在",
+        "温室",
+        "帮助",
+        "新团队",
+        "了解",
+        "任务",
+        "已经完成"
+      ],
+      "structure": "主语The notebook，主句谓语helped；that experienced volunteers left in the greenhouse是修饰notebook的定语从句。helped the new team understand之后的which tasks had already been completed是understand的宾语从句。",
+      "grammar": [
+        "left是定语从句谓语，helped才是主句谓语；删去定语从句后仍有完整主干。",
+        "which tasks在宾语从句中作主语，had already been completed为过去完成时的被动形式，表示在了解之前已经完成。"
+      ],
+      "examTip": "先找notebook—helped，再分别划出that定语从句与which宾语从句；不要把两个从句混成同一种成分。",
+      "level": "四级句法衔接",
+      "topic": "定语从句、宾语从句与过去完成时被动语态"
+    },
+    "trans": [
+      {
+        "source": "请把已经完成的工作和未来计划分开记录。",
+        "answer": "Please record completed work separately from future plans.",
+        "alternative": "Please keep records of completed work separate from future plans.",
+        "acceptedAnswers": [
+          "Please record completed work separately from future plans.",
+          "Please keep records of completed work separate from future plans."
+        ],
+        "keywords": [
+          "please",
+          "completed",
+          "work",
+          "future",
+          "plans"
+        ],
+        "grammar": "record something separately from something使用副词separately；keep something separate from something使用形容词separate作宾补。completed修饰work，表示已完成的。",
+        "chunks": [
+          "completed work",
+          "record separately from",
+          "future plans"
+        ],
+        "level": "四级衔接表达",
+        "topic": "记录分类、副词与宾补"
+      },
+      {
+        "source": "留在温室里的笔记本帮助新志愿者了解植物的历史。",
+        "answer": "The notebook left in the greenhouse helps new volunteers understand the history of the plants.",
+        "alternative": "The notebook that was left in the greenhouse helps new volunteers learn about the plants' history.",
+        "acceptedAnswers": [
+          "The notebook left in the greenhouse helps new volunteers understand the history of the plants.",
+          "The notebook that was left in the greenhouse helps new volunteers learn about the plants' history."
+        ],
+        "keywords": [
+          "notebook",
+          "greenhouse",
+          "helps",
+          "new",
+          "volunteers",
+          "history"
+        ],
+        "grammar": "left in the greenhouse是过去分词短语作后置定语，也可展开为that was left in the greenhouse。主语notebook为单数，主句仍要有谓语helps。",
+        "chunks": [
+          "the notebook left in the greenhouse",
+          "help new volunteers understand",
+          "the history of the plants"
+        ],
+        "level": "四级衔接表达",
+        "topic": "过去分词后置定语与主句谓语"
+      }
+    ]
+  },
+  "2026-10-28": {
+    "title": "实验与证据：预测不同于测量",
+    "grammarTip": "今天训练主句谓语、定语从句和比较结构；区分预测、观察与结论。阅读先限时8分钟独立作答，再定位依据。核心听读为原创分级模拟，不是真题。",
+    "words": [
+      {
+        "word": "biology",
+        "phonetic": "/baɪˈɑːlədʒi/",
+        "pos": "n.",
+        "meaning": "生物学",
+        "phrase": "a biology class",
+        "example": "The biology class examines how plants grow.",
+        "exampleZh": "生物课研究植物如何生长。"
+      },
+      {
+        "word": "biological",
+        "phonetic": "/ˌbaɪəˈlɑːdʒɪkəl/",
+        "pos": "adj.",
+        "meaning": "生物的；生物学的",
+        "phrase": "biological research",
+        "example": "The museum explains several methods of biological research.",
+        "exampleZh": "博物馆介绍了几种生物学研究方法。"
+      },
+      {
+        "word": "chemistry",
+        "phonetic": "/ˈkemɪstri/",
+        "pos": "n.",
+        "meaning": "化学",
+        "phrase": "study chemistry",
+        "example": "She studies chemistry in a laboratory near the library.",
+        "exampleZh": "她在图书馆附近的实验室学习化学。"
+      },
+      {
+        "word": "physics",
+        "phonetic": "/ˈfɪzɪks/",
+        "pos": "n.",
+        "meaning": "物理学",
+        "phrase": "a physics experiment",
+        "example": "The physics experiment measures the movement of a small ball.",
+        "exampleZh": "这项物理实验测量一个小球的运动。"
+      },
+      {
+        "word": "experimental",
+        "phonetic": "/ɪkˌsperɪˈmentəl/",
+        "pos": "adj.",
+        "meaning": "实验的；试验性的",
+        "phrase": "experimental results",
+        "example": "The team compared its experimental results with an earlier prediction.",
+        "exampleZh": "团队将实验结果与先前的预测进行了比较。"
+      },
+      {
+        "word": "theoretical",
+        "phonetic": "/ˌθiːəˈretɪkəl/",
+        "pos": "adj.",
+        "meaning": "理论的；理论上的",
+        "phrase": "a theoretical model",
+        "example": "A theoretical model can help researchers explain a pattern.",
+        "exampleZh": "理论模型可以帮助研究人员解释某种规律。"
+      },
+      {
+        "word": "prove",
+        "phonetic": "/pruːv/",
+        "pos": "v.",
+        "meaning": "证明；证实",
+        "phrase": "prove a claim",
+        "example": "One successful test does not prove that a device always works.",
+        "exampleZh": "一次成功的测试不能证明某个设备总能正常工作。"
+      },
+      {
+        "word": "measurement",
+        "phonetic": "/ˈmeʒərmənt/",
+        "pos": "n.",
+        "meaning": "测量；测量结果",
+        "phrase": "repeat a measurement",
+        "example": "Repeat the measurement before reporting an unusual result.",
+        "exampleZh": "报告异常结果之前，再测量一次。"
+      },
+      {
+        "word": "apparatus",
+        "phonetic": "/ˌæpəˈrætəs/",
+        "pos": "n.",
+        "meaning": "仪器；装置；设备",
+        "phrase": "laboratory apparatus",
+        "example": "The teacher checked the laboratory apparatus before the class began.",
+        "exampleZh": "上课之前，老师检查了实验仪器。"
+      },
+      {
+        "word": "observation",
+        "phonetic": "/ˌɑːbzərˈveɪʃən/",
+        "pos": "n.",
+        "meaning": "观察；观察结果",
+        "phrase": "careful observation",
+        "example": "Careful observation may reveal a small change in color.",
+        "exampleZh": "仔细观察可能发现颜色的细微变化。"
+      },
+      {
+        "word": "microscope",
+        "phonetic": "/ˈmaɪkrəskoʊp/",
+        "pos": "n.",
+        "meaning": "显微镜",
+        "phrase": "under a microscope",
+        "example": "Students examined a leaf under a microscope.",
+        "exampleZh": "学生用显微镜观察了一片叶子。"
+      },
+      {
+        "word": "telescope",
+        "phonetic": "/ˈtelɪskoʊp/",
+        "pos": "n.",
+        "meaning": "望远镜",
+        "phrase": "look through a telescope",
+        "example": "Visitors looked through a telescope at the moon.",
+        "exampleZh": "参观者通过望远镜观察月亮。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "specimen",
+        "phonetic": "/ˈspesɪmən/",
+        "pos": "n.",
+        "meaning": "样本；标本",
+        "phrase": "a plant specimen",
+        "example": "Each plant specimen has a label showing where it was collected.",
+        "exampleZh": "每份植物标本都有标签，注明采集地点。"
+      },
+      {
+        "word": "analysis",
+        "phonetic": "/əˈnæləsɪs/",
+        "pos": "n.",
+        "meaning": "分析",
+        "phrase": "a detailed analysis",
+        "example": "The report includes a detailed analysis of the measurements.",
+        "exampleZh": "报告包含对测量结果的详细分析。"
+      },
+      {
+        "word": "analyze",
+        "phonetic": "/ˈænəlaɪz/",
+        "pos": "v.",
+        "meaning": "分析（英式拼写为analyse）",
+        "phrase": "analyze the data",
+        "example": "We need to analyze the data before drawing a conclusion.",
+        "exampleZh": "得出结论之前，我们需要分析数据。"
+      },
+      {
+        "word": "molecule",
+        "phonetic": "/ˈmɑːlɪkjuːl/",
+        "pos": "n.",
+        "meaning": "分子",
+        "phrase": "a water molecule",
+        "example": "The diagram shows a model of a water molecule.",
+        "exampleZh": "图示展示了一个水分子模型。"
+      },
+      {
+        "word": "atom",
+        "phonetic": "/ˈætəm/",
+        "pos": "n.",
+        "meaning": "原子",
+        "phrase": "the structure of an atom",
+        "example": "The chapter introduces the structure of an atom.",
+        "exampleZh": "这一章介绍原子的结构。"
+      },
+      {
+        "word": "atomic",
+        "phonetic": "/əˈtɑːmɪk/",
+        "pos": "adj.",
+        "meaning": "原子的；原子能的",
+        "phrase": "atomic structure",
+        "example": "Students used a simple drawing to discuss atomic structure.",
+        "exampleZh": "学生用一幅简单的图讨论原子结构。"
+      },
+      {
+        "word": "oxygen",
+        "phonetic": "/ˈɑːksɪdʒən/",
+        "pos": "n.",
+        "meaning": "氧；氧气",
+        "phrase": "oxygen in the air",
+        "example": "The lesson explains the role of oxygen in the air.",
+        "exampleZh": "这节课解释空气中氧气的作用。"
+      },
+      {
+        "word": "hydrogen",
+        "phonetic": "/ˈhaɪdrədʒən/",
+        "pos": "n.",
+        "meaning": "氢；氢气",
+        "phrase": "a hydrogen atom",
+        "example": "The model represents a hydrogen atom with a colored ball.",
+        "exampleZh": "模型用一个彩色小球表示氢原子。"
+      },
+      {
+        "word": "carbon",
+        "phonetic": "/ˈkɑːrbən/",
+        "pos": "n.",
+        "meaning": "碳",
+        "phrase": "carbon dioxide",
+        "example": "The class discussed how carbon dioxide moves through the environment.",
+        "exampleZh": "课堂讨论了二氧化碳如何在环境中流动。"
+      },
+      {
+        "word": "nitrogen",
+        "phonetic": "/ˈnaɪtrədʒən/",
+        "pos": "n.",
+        "meaning": "氮；氮气",
+        "phrase": "nitrogen in the soil",
+        "example": "The researcher measured nitrogen in the soil.",
+        "exampleZh": "研究人员测量了土壤中的氮。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The measurements that the group collected ___ different from its prediction.",
+        "promptZh": "小组收集的测量结果与预测不同。",
+        "options": [
+          "was",
+          "were",
+          "being",
+          "be"
+        ],
+        "optionsZh": [
+          "是（单数过去式）",
+          "是（复数过去式）",
+          "是（非谓语）",
+          "是（原形）"
+        ],
+        "answer": 1,
+        "explanation": "主语是复数measurements；that the group collected是定语从句，其谓语collected不替代主句的were。",
+        "tag": "subject-verb"
+      },
+      {
+        "prompt": "The apparatus ___ ready for use after the teacher checked it.",
+        "promptZh": "老师检查后，仪器已可使用。",
+        "options": [
+          "being",
+          "ready",
+          "was",
+          "to be"
+        ],
+        "optionsZh": [
+          "是（非谓语）",
+          "准备好的",
+          "是（过去式）",
+          "是（不定式）"
+        ],
+        "answer": 2,
+        "explanation": "ready是形容词，句中需要限定动词was；不能用ready自身作谓语。",
+        "tag": "be-adjective"
+      },
+      {
+        "prompt": "Before ___ a conclusion, the students examined the records again.",
+        "promptZh": "得出结论之前，学生再次检查记录。",
+        "options": [
+          "draw",
+          "drew",
+          "drawn",
+          "drawing"
+        ],
+        "optionsZh": [
+          "得出（原形）",
+          "得出（过去式）",
+          "得出（过去分词）",
+          "得出（动名词）"
+        ],
+        "answer": 3,
+        "explanation": "before在这里是介词，后接动名词drawing；也可使用完整从句before they drew a conclusion。",
+        "tag": "gerund"
+      },
+      {
+        "prompt": "A microscope makes small objects look ___ than they do to the naked eye.",
+        "promptZh": "显微镜让小物体看起来比肉眼看到的更大。",
+        "options": [
+          "larger",
+          "largest",
+          "largely",
+          "large"
+        ],
+        "optionsZh": [
+          "更大的",
+          "最大的",
+          "主要地",
+          "大的"
+        ],
+        "answer": 0,
+        "explanation": "than提示比较级larger；look在这里是系动词，后接形容词作表语。",
+        "tag": "comparison"
+      },
+      {
+        "prompt": "The student who ___ the data will present the results tomorrow.",
+        "promptZh": "分析数据的那名学生明天将展示结果。",
+        "options": [
+          "analyzing",
+          "analyze",
+          "analyzes",
+          "to analyze"
+        ],
+        "optionsZh": [
+          "分析（非谓语）",
+          "分析（原形）",
+          "分析（第三人称单数）",
+          "分析（不定式）"
+        ],
+        "answer": 2,
+        "explanation": "who指单数student，定语从句谓语用analyzes；主句谓语是will present。",
+        "tag": "relative-clause"
+      },
+      {
+        "prompt": "Which sentence correctly describes a routine?",
+        "promptZh": "哪句话正确描述了日常习惯？",
+        "options": [
+          "We improve our everyday by checking work.",
+          "We check our work every day to improve our accuracy.",
+          "We check our work everyday to improve our accuracy.",
+          "We check our work every day to improvement our accuracy."
+        ],
+        "optionsZh": [
+          "把everyday误作名词。",
+          "我们每天检查工作以提高准确性。",
+          "把everyday误作时间状语。",
+          "把名词improvement误放在to后。"
+        ],
+        "answer": 1,
+        "explanation": "every day分写作时间状语；to improve表示目的，improve拼写为i-m-p-r-o-v-e。",
+        "tag": "every-day"
+      }
+    ],
+    "reading": {
+      "title": "When the Numbers Do Not Match",
+      "titleZh": "当数字与预测不一致",
+      "level": "四级专项衔接 · 原创分级模拟",
+      "topic": "实验记录、证据与结论边界",
+      "passage": "In an imaginary science workshop, students used a simple device to measure how far a small cart travelled down a slope. Before starting, each group wrote a prediction. The teacher asked them to keep this prediction beside the measurements, even if the numbers later disagreed.\n\nOne group obtained a much shorter distance than expected. A member wanted to remove the result because it made the table look untidy. Another argued that an unexpected number was still part of their observation. They recorded it and checked whether the cart had started from the same position.\n\nThey discovered that a loose strip of paper had touched one wheel. After removing it, they repeated the measurement. The later distances were closer together, but the group kept the earlier result and added a note explaining the change in conditions. A reader could now understand both what happened and why the procedure changed.\n\nThe teacher did not ask the class to claim that every unusual result had the same cause. A different group might need to check the surface, the device, or the way a distance was read. Repeating an experiment without considering these possibilities would not automatically make a conclusion reliable.\n\nFor their final report, students had to separate what they predicted, what they observed, and what they could reasonably conclude. A neat table mattered less than a clear account of the evidence.",
+      "passageZh": "在一次虚构的科学工作坊中，学生用简单装置测量小车沿斜坡滑行的距离。开始前，每组写下预测。老师要求他们把预测保留在测量结果旁边，即使后来的数字不一致也要如此。\n\n一组测出的距离比预期短很多。一名成员想删除这个结果，因为它让表格显得不整齐。另一人认为，意外数字仍是观察结果的一部分。他们记录下来，并检查小车是否从相同位置出发。\n\n他们发现一条松动的纸碰到了一只车轮。移走纸条后，他们再次测量。后来的距离更接近，但小组保留了先前的结果，并加注说明条件发生了什么变化。这样，读者既能理解发生了什么，也能理解为什么改变步骤。\n\n老师没有要求全班声称每个异常结果都有同样的原因。其他小组可能需要检查表面、装置或距离读数的方法。如果不考虑这些可能性，重复实验并不会自动让结论可靠。\n\n最终报告要求学生区分预测、观察结果和可以合理得出的结论。整齐的表格不如对证据的清楚说明重要。",
+      "questions": [
+        {
+          "prompt": "Why did one student want to remove the first result?",
+          "promptZh": "为什么一名学生想删掉最初的结果？",
+          "options": [
+            "It had been copied from another group.",
+            "The teacher had forbidden short distances.",
+            "It made the table look untidy.",
+            "The cart had never moved."
+          ],
+          "optionsZh": [
+            "它抄自另一组。",
+            "老师不允许短距离。",
+            "它让表格显得不整齐。",
+            "小车从未移动。"
+          ],
+          "answer": 2,
+          "explanation": "第二段直接给出原因because it made the table look untidy；其他选项文中没有依据。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What did the group do after finding the paper?",
+          "promptZh": "发现纸条后，小组做了什么？",
+          "options": [
+            "Removed it, repeated the measurement, and documented the change.",
+            "Discarded every result without an explanation.",
+            "Changed its prediction to match the first number.",
+            "Stopped the experiment permanently."
+          ],
+          "optionsZh": [
+            "移走纸条、重测并记录变化。",
+            "不作解释地丢弃所有结果。",
+            "修改预测，使其符合第一个数字。",
+            "永久停止实验。"
+          ],
+          "answer": 0,
+          "explanation": "第三段包含移除、重测、保留旧结果和附注四个连续动作。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What does the teacher warn against?",
+          "promptZh": "老师提醒大家避免什么？",
+          "options": [
+            "Recording conditions in a report.",
+            "Using more than one measurement.",
+            "Checking the starting position.",
+            "Assuming that repetition alone guarantees reliability."
+          ],
+          "optionsZh": [
+            "在报告中记录条件。",
+            "进行不止一次测量。",
+            "检查出发位置。",
+            "认为仅凭重复就能保证可靠性。"
+          ],
+          "answer": 3,
+          "explanation": "第四段最后一句说明，不考虑潜在原因的重复，不会自动使结论可靠。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Which title best expresses the main lesson?",
+          "promptZh": "哪个标题最能表达主要启示？",
+          "options": [
+            "Always Make Results Agree",
+            "Explain the Evidence, Including Surprises",
+            "Avoid Making Any Predictions",
+            "The Shortest Distance Is Always Wrong"
+          ],
+          "optionsZh": [
+            "永远使结果一致",
+            "解释证据，包括意外结果",
+            "避免作任何预测",
+            "最短的距离总是错的"
+          ],
+          "answer": 1,
+          "explanation": "全文强调保留不同结果，解释条件与证据，区分预测、观察和结论。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "A Laboratory Tour with Questions",
+      "titleZh": "带着问题参观实验室",
+      "level": "四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "tip": "先盲听抓目的与顺序，再带文精听核对时间和转折；完成全文分段听写，选三句做三组影子跟读，最后脱稿复述30—60秒。合成朗读可调速、暂停、继续、停止，不是真题录音。",
+      "passage": "Welcome to the student laboratory tour on Wednesday afternoon. The visit starts at two, but please arrive ten minutes early. Leave your bags in the lockers outside the main entrance. We will first watch a demonstration of a microscope. You may draw what you see, but do not move the specimens. After that, a guide will explain the records beside each instrument. One column shows a prediction, while another shows the actual measurement. If the numbers differ, ask how the team checks possible causes. Do not erase a result simply because it seems surprising. The final discussion takes place in the classroom across the corridor. Please bring your questions there rather than testing any equipment yourself.",
+      "passageZh": "欢迎参加周三下午的学生实验室参观。参观两点开始，但请提前十分钟到达。请把包放在正门外的储物柜中。我们将先观看显微镜演示。你可以画出看到的东西，但不要移动标本。随后，讲解员会解释每台仪器旁的记录。其中一列显示预测，另一列显示实际测量结果。如果数字不同，请问团队如何检查可能的原因。不要仅仅因为结果令人意外就将其擦掉。最后的讨论在走廊对面的教室进行。请把问题带到那里，而不要自行测试设备。",
+      "dictation": [
+        "Welcome to the student laboratory tour on Wednesday afternoon.",
+        "The visit starts at two, but please arrive ten minutes early."
+      ],
+      "dictationZh": [
+        "欢迎参加周三下午的学生实验室参观。",
+        "参观两点开始，但请提前十分钟到达。"
+      ],
+      "questions": [
+        {
+          "prompt": "When should visitors arrive?",
+          "promptZh": "参观者应何时到达？",
+          "options": [
+            "At two ten.",
+            "At one fifty.",
+            "At two thirty.",
+            "At one thirty."
+          ],
+          "optionsZh": [
+            "两点十分。",
+            "一点五十分。",
+            "两点半。",
+            "一点半。"
+          ],
+          "answer": 1,
+          "explanation": "参观两点开始，提前十分钟到达，因此是1:50。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "What should visitors do with a surprising measurement?",
+          "promptZh": "遇到意外的测量结果，参观者应做什么？",
+          "options": [
+            "Erase it immediately.",
+            "Change the prediction.",
+            "Ask how possible causes are checked.",
+            "Test the equipment without permission."
+          ],
+          "optionsZh": [
+            "立刻擦掉。",
+            "修改预测。",
+            "询问如何检查可能原因。",
+            "未经允许自行测试设备。"
+          ],
+          "answer": 2,
+          "explanation": "听力要求ask how the team checks possible causes，同时明确不要擦掉结果或自行测试设备。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The group that kept the unexpected result explained why the conditions had changed before the measurement was repeated.",
+      "main": "The group explained why the conditions had changed.",
+      "mainZh": "小组解释了条件为什么改变。",
+      "translation": "保留了意外结果的那个小组解释了在再次测量之前条件为什么发生了变化。",
+      "core": [
+        "group",
+        "explained"
+      ],
+      "keywords": [
+        "小组",
+        "保留",
+        "意外",
+        "结果",
+        "解释",
+        "条件",
+        "改变",
+        "测量"
+      ],
+      "structure": "主句The group explained why...；that kept the unexpected result修饰group；why the conditions had changed是explained的宾语从句；before引导时间状语从句。",
+      "grammar": [
+        "kept是定语从句谓语，explained是主句谓语。",
+        "had changed表示先于再次测量的变化；was repeated是一般过去时被动语态。"
+      ],
+      "examTip": "先找group—explained，再判断why后整个从句充当宾语。不要把kept选成主句谓语。",
+      "level": "四级衔接句法",
+      "topic": "定语从句、宾语从句与先后关系"
+    },
+    "trans": [
+      {
+        "source": "我们应当保留意外的结果，而不是立即把它删除。",
+        "answer": "We should keep an unexpected result instead of deleting it immediately.",
+        "alternative": "We should retain an unexpected result rather than delete it at once.",
+        "acceptedAnswers": [
+          "We should keep an unexpected result instead of deleting it immediately.",
+          "We should retain an unexpected result rather than delete it at once."
+        ],
+        "keywords": [
+          "should",
+          "result",
+          "instead of",
+          "deleting"
+        ],
+        "grammar": "should后用原形keep；instead of后用动名词deleting。",
+        "chunks": [
+          "keep an unexpected result",
+          "instead of deleting it"
+        ],
+        "level": "四级衔接表达",
+        "topic": "准确表达与句式迁移"
+      },
+      {
+        "source": "那些看起来很整齐的表格不一定提供可靠的证据。",
+        "answer": "Tables that look neat do not necessarily provide reliable evidence.",
+        "alternative": "Neat tables do not always provide reliable evidence.",
+        "acceptedAnswers": [
+          "Tables that look neat do not necessarily provide reliable evidence.",
+          "Neat tables do not always provide reliable evidence."
+        ],
+        "keywords": [
+          "tables",
+          "not",
+          "provide",
+          "evidence"
+        ],
+        "grammar": "复数tables对应look和do；not necessarily表示不一定，不是完全否定。",
+        "chunks": [
+          "tables that look neat",
+          "do not necessarily",
+          "reliable evidence"
+        ],
+        "level": "四级衔接表达",
+        "topic": "准确表达与句式迁移"
+      }
+    ]
+  },
+  "2026-10-29": {
+    "title": "周复盘：追踪变更，保留第一次判断",
+    "grammarTip": "周复盘固定40词，不新增课程词；待首次学习自选词由浏览器按原规则分配。阅读先限时8分钟，检查新旧通知的适用范围；复盘主句谓语、be动词、时态、think/thing与every day。核心听读是原创模拟。",
+    "words": [],
+    "grammar": [
+      {
+        "prompt": "The notice that appeared yesterday ___ the correct room number.",
+        "promptZh": "昨天出现的通知包含正确的房间号。",
+        "options": [
+          "contain",
+          "containing",
+          "contains",
+          "to contain"
+        ],
+        "optionsZh": [
+          "包含（原形）",
+          "包含（非谓语）",
+          "包含（第三人称单数）",
+          "包含（不定式）"
+        ],
+        "answer": 2,
+        "explanation": "主句主语notice为单数，用contains；appeared属于that引导的定语从句。",
+        "tag": "relative-clause"
+      },
+      {
+        "prompt": "The earlier instructions ___ still useful, but the room has changed.",
+        "promptZh": "较早的说明仍然有用，但房间变了。",
+        "options": [
+          "are",
+          "being",
+          "useful",
+          "to be"
+        ],
+        "optionsZh": [
+          "是（复数现在时）",
+          "是（非谓语）",
+          "有用的",
+          "是（不定式）"
+        ],
+        "answer": 0,
+        "explanation": "复数instructions作主语，useful是形容词，需要are构成谓语。",
+        "tag": "be-adjective"
+      },
+      {
+        "prompt": "By the time the visitors arrived, the organizers ___ the new notice.",
+        "promptZh": "参观者到达时，组织者已经张贴了新通知。",
+        "options": [
+          "post",
+          "have posted",
+          "posting",
+          "had posted"
+        ],
+        "optionsZh": [
+          "张贴（原形）",
+          "已经张贴（现在完成时）",
+          "张贴（非谓语）",
+          "已经张贴（过去完成时）"
+        ],
+        "answer": 3,
+        "explanation": "张贴发生在过去的arrived之前，用过去完成时had posted。",
+        "tag": "tense"
+      },
+      {
+        "prompt": "Read both versions carefully ___ you choose an answer.",
+        "promptZh": "选择答案之前，仔细读两个版本。",
+        "options": [
+          "unless",
+          "before",
+          "despite",
+          "during"
+        ],
+        "optionsZh": [
+          "除非",
+          "在……之前",
+          "尽管（介词）",
+          "在……期间（介词）"
+        ],
+        "answer": 1,
+        "explanation": "before后接完整从句you choose an answer，表达步骤先后；during不能这样直接接从句。",
+        "tag": "conjunction"
+      },
+      {
+        "prompt": "I ___ the most useful ___ is to check what changed.",
+        "promptZh": "我认为最有用的事情是检查哪些内容变了。",
+        "options": [
+          "think; thing",
+          "thing; think",
+          "think; think",
+          "thing; thing"
+        ],
+        "optionsZh": [
+          "认为；事情",
+          "事情；认为",
+          "认为；认为",
+          "事情；事情"
+        ],
+        "answer": 0,
+        "explanation": "第一空是动词think，第二空是名词thing；注意词尾nk与ng。",
+        "tag": "word-form"
+      },
+      {
+        "prompt": "Checking one ___ task carefully can help us improve ___ .",
+        "promptZh": "仔细检查一项日常任务可以帮助我们每天进步。",
+        "options": [
+          "every day; everyday",
+          "everyday; everyday",
+          "every day; every day",
+          "everyday; every day"
+        ],
+        "optionsZh": [
+          "每天；日常的",
+          "日常的；日常的",
+          "每天；每天",
+          "日常的；每天"
+        ],
+        "answer": 3,
+        "explanation": "everyday是形容词修饰task；every day是时间状语，修饰improve。",
+        "tag": "every-day"
+      }
+    ],
+    "reading": {
+      "title": "Which Notice Should You Follow?",
+      "titleZh": "应该依照哪一则通知？",
+      "level": "四级专项衔接 · 原创周复盘模拟",
+      "topic": "信息更新、范围限定与依据定位",
+      "passage": "In a fictional college, the history society announced an evening talk in Room 204. Its first notice gave the starting time, the room number, and a request to bring a notebook. Two days later, the organizers discovered that the room would be used for another event. They moved the talk to Room 306 and posted an updated notice.\n\nSeveral students saw only a photograph of the first notice in a group conversation. Others saw the second notice but assumed that every detail had changed. One student arrived an hour early, although the starting time was exactly the same on both notices.\n\nThe organizers responded by placing the two versions side by side. They marked the changed room number and added a short sentence confirming that the time and the request about notebooks remained unchanged. They also put the date of the update near the title, where readers could find it quickly.\n\nDuring a later reading workshop, students used these notices to discuss a common mistake: treating new information as a complete replacement for everything read before. Sometimes a new message changes only one condition. Readers need to identify that condition rather than invent additional changes.\n\nThe workshop leader asked each student to support an answer with a line from the notices. This made it easier to distinguish a reasoned decision from a lucky guess, even when both produced the same answer.",
+      "passageZh": "在一所虚构大学，历史社团通知大家到204室参加晚间讲座。第一则通知列出了开始时间、房间号，并要求带笔记本。两天后，组织者发现房间将用于另一场活动，于是把讲座移至306室，张贴了更新通知。\n\n一些学生只在群聊里看到第一则通知的照片。另一些学生看到了第二则，却以为每个细节都变了。一名学生提前一小时到达，虽然两则通知上的开始时间完全相同。\n\n组织者把两个版本并排展示，标记改变后的房间号，又加了一句简短说明，确认时间和带笔记本的要求保持不变。他们还将更新日期放在标题附近，让读者能迅速找到。\n\n后来一次阅读工作坊使用这两则通知，讨论一种常见错误：把新信息当作对先前一切信息的完全替换。有时新消息只改变一个条件，读者需要识别这个条件，而不要想象额外的变化。\n\n主持者要求每名学生用通知中的一句话支持自己的答案。这使大家更容易区分有依据的判断与碰巧猜对，即使两者给出了相同答案。",
+      "questions": [
+        {
+          "prompt": "Why was the talk moved?",
+          "promptZh": "为什么讲座换了房间？",
+          "options": [
+            "The students needed more notebooks.",
+            "Room 204 was needed for another event.",
+            "The talk was cancelled.",
+            "Room 306 was closer to every student."
+          ],
+          "optionsZh": [
+            "学生需要更多笔记本。",
+            "204室要用于另一场活动。",
+            "讲座取消了。",
+            "306室离所有学生都更近。"
+          ],
+          "answer": 1,
+          "explanation": "首段明确说明原房间将用于另一场活动，所以更换地点；没有取消讲座。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Which information stayed the same?",
+          "promptZh": "哪些信息保持不变？",
+          "options": [
+            "The room and update date.",
+            "Only the photograph.",
+            "The starting time and the request to bring a notebook.",
+            "Every detail in the title."
+          ],
+          "optionsZh": [
+            "房间号和更新日期。",
+            "只有照片。",
+            "开始时间和带笔记本的要求。",
+            "标题中的每一个细节。"
+          ],
+          "answer": 2,
+          "explanation": "第三段确认time和request about notebooks未变。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What reading mistake is discussed?",
+          "promptZh": "文章讨论了哪种阅读错误？",
+          "options": [
+            "Assuming that a new notice changes every previous detail.",
+            "Comparing two versions carefully.",
+            "Looking for the date near a title.",
+            "Finding a line to support an answer."
+          ],
+          "optionsZh": [
+            "以为新通知会改变先前所有细节。",
+            "仔细比较两个版本。",
+            "在标题附近找日期。",
+            "寻找支持答案的句子。"
+          ],
+          "answer": 0,
+          "explanation": "第四段用complete replacement概括该错误；其他选项是有帮助的做法。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Why must students provide evidence for their answers?",
+          "promptZh": "为什么要求学生提供答题依据？",
+          "options": [
+            "To make all answers longer.",
+            "To avoid reading the notices.",
+            "To change their original grades.",
+            "To distinguish reasoning from a lucky guess."
+          ],
+          "optionsZh": [
+            "使所有答案更长。",
+            "避免阅读通知。",
+            "更改原有成绩。",
+            "区分有依据的判断与碰巧猜对。"
+          ],
+          "answer": 3,
+          "explanation": "末段说明，即使答案相同，也要区分reasoned decision和lucky guess。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "Comparing Two Versions",
+      "titleZh": "比较两个版本",
+      "level": "四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "tip": "先盲听抓目的与顺序，再带文精听核对时间和转折；完成全文分段听写，选三句做三组影子跟读，最后脱稿复述30—60秒。合成朗读可调速、暂停、继续、停止，不是真题录音。",
+      "passage": "Here are the instructions for Thursday's weekly reading review. You will receive two short notices about the same evening event. The second notice was issued after the organizers changed the room. Read both notices before answering the four questions on your sheet. Underline the details that remain correct and circle the ones that changed. You have eight minutes for this first part of the review. Then compare your reasons with a partner for five minutes. Keep your first answers visible when you add corrections in another color. A correct guess is not enough if you cannot locate the evidence. At the end, write one checking step to use next week.",
+      "passageZh": "以下是周四每周阅读复盘的说明。你会收到两则关于同一晚间活动的简短通知。第二则通知是在组织者更换房间后发布的。回答答题纸上的四道题之前，先阅读两则通知。给仍然正确的细节画下划线，圈出发生改变的细节。复盘的第一部分限时八分钟。然后用五分钟和搭档比较作答理由。用另一种颜色补充订正时，保留第一次答案，让它们仍可见。如果找不到依据，仅仅猜对答案还不够。最后，写下一条准备在下周使用的检查步骤。",
+      "dictation": [
+        "Here are the instructions for Thursday's weekly reading review.",
+        "You will receive two short notices about the same evening event."
+      ],
+      "dictationZh": [
+        "以下是周四每周阅读复盘的说明。",
+        "你会收到两则关于同一晚间活动的简短通知。"
+      ],
+      "questions": [
+        {
+          "prompt": "How long is the first part of the review?",
+          "promptZh": "复盘的第一部分有多长时间？",
+          "options": [
+            "Five minutes.",
+            "Ten minutes.",
+            "Eight minutes.",
+            "Thirteen minutes."
+          ],
+          "optionsZh": [
+            "五分钟。",
+            "十分钟。",
+            "八分钟。",
+            "十三分钟。"
+          ],
+          "answer": 2,
+          "explanation": "先独立阅读作答八分钟，之后搭档讨论五分钟；不要混淆阶段。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "What should students do when making corrections?",
+          "promptZh": "订正时学生应该怎么做？",
+          "options": [
+            "Keep the first answers visible and use another color.",
+            "Erase all their first answers.",
+            "Copy a partner without discussing reasons.",
+            "Replace the notices with a new story."
+          ],
+          "optionsZh": [
+            "保留第一次答案，使用另一种颜色。",
+            "擦掉全部第一次答案。",
+            "不讨论理由，直接抄搭档。",
+            "用新故事替换通知。"
+          ],
+          "answer": 0,
+          "explanation": "通知明确Keep your first answers visible，并要求用另一种颜色补充订正。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "Students who assumed that every detail had changed overlooked the sentence which confirmed that the starting time was unchanged.",
+      "main": "Students overlooked the sentence.",
+      "mainZh": "学生忽略了那句话。",
+      "translation": "那些以为所有细节都变了的学生，忽略了确认开始时间不变的那句话。",
+      "core": [
+        "students",
+        "overlooked",
+        "sentence"
+      ],
+      "keywords": [
+        "学生",
+        "以为",
+        "每个",
+        "细节",
+        "改变",
+        "忽略",
+        "句子",
+        "确认",
+        "开始",
+        "时间",
+        "不变"
+      ],
+      "structure": "主句Students overlooked the sentence；who assumed...修饰students；which confirmed...修饰sentence；两个that引导的宾语从句分别跟在assumed与confirmed后。",
+      "grammar": [
+        "主句谓语是overlooked，不是assumed或confirmed。",
+        "was unchanged中unchanged作表语，be动词was不能省略。"
+      ],
+      "examTip": "先括起两个定语从句，读出“学生忽略了句子”，再逐层补充内容。",
+      "level": "四级衔接句法",
+      "topic": "多层从句与主干提取"
+    },
+    "trans": [
+      {
+        "source": "新的通知只改变了地点，没有改变开始时间。",
+        "answer": "The new notice changed only the location, not the starting time.",
+        "alternative": "Only the location changed in the new notice; the starting time stayed the same.",
+        "acceptedAnswers": [
+          "The new notice changed only the location, not the starting time.",
+          "Only the location changed in the new notice; the starting time stayed the same."
+        ],
+        "keywords": [
+          "notice",
+          "changed",
+          "location",
+          "starting time"
+        ],
+        "grammar": "一般过去时changed说明已经发生的变更；only限定location。",
+        "chunks": [
+          "changed only the location",
+          "not the starting time"
+        ],
+        "level": "四级衔接表达",
+        "topic": "准确表达与句式迁移"
+      },
+      {
+        "source": "如果我们每天核对依据，就能逐步提高阅读的准确性。",
+        "answer": "If we check the evidence every day, we can gradually improve our reading accuracy.",
+        "alternative": "We can gradually improve our reading accuracy if we check the evidence every day.",
+        "acceptedAnswers": [
+          "If we check the evidence every day, we can gradually improve our reading accuracy.",
+          "We can gradually improve our reading accuracy if we check the evidence every day."
+        ],
+        "keywords": [
+          "if",
+          "evidence",
+          "every day",
+          "improve",
+          "reading accuracy"
+        ],
+        "grammar": "if从句用一般现在时；can后用improve，every day分写作时间状语。",
+        "chunks": [
+          "check the evidence",
+          "every day",
+          "gradually improve"
+        ],
+        "level": "四级衔接表达",
+        "topic": "准确表达与句式迁移"
+      }
+    ]
   }
 }
