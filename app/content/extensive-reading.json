@@ -4180,5 +4180,79 @@
     "speakingPrompt": "Explain the contrast between the bright morning and Tom's feelings. Then explain why he begins to view fetching water differently. Speak for 30–60 seconds.",
     "speakingPromptZh": "用30—60秒解释晴朗早晨与汤姆心情的对比，再说明他为什么开始改变对打水的看法。",
     "sourceExcerptSha256": "902c0e4541dfe860c40c0981c1cfea033d39a7ac7b2b3292370ba6b50bfe3114"
+  },
+  {
+    "date": "2026-10-30",
+    "title": "The Wind in the Willows — A First Boat Trip (Original Excerpt)",
+    "titleZh": "《柳林风声》：第一次乘船（原文节选）",
+    "author": "Kenneth Grahame",
+    "work": "The Wind in the Willows",
+    "chapter": "Chapter I — The River Bank",
+    "sourceUrl": "https://www.gutenberg.org/files/27805/27805-h/27805-h.htm",
+    "sourceType": "public-domain excerpt",
+    "sourceVerifiedOn": "2026-10-27",
+    "rightsNote": "英文采用Kenneth Grahame（1859—1932）的公版作品连续原文；Project Gutenberg书目#27805标明Public domain in the USA。仅调整段落换行；中文翻译、理解题与听说练习为自行编写的配套内容。",
+    "sourceNote": "实际打开Project Gutenberg原文与书目，核对Chapter I — The River Bank，从“Then the two animals stood”至“in all my life.”的连续原文。原作是1908年出版的文学作品，含拟人化动物角色，并非新闻。",
+    "category": "Public-domain classic — original excerpt",
+    "text": "Then the two animals stood and regarded each other cautiously.\n\n\"Hullo, Mole!\" said the Water Rat.\n\n\"Hullo, Rat!\" said the Mole.\n\n\"Would you like to come over?\" enquired the Rat presently.\n\n\"Oh, it's all very well to talk,\" said the Mole rather pettishly, he being new to a river and riverside life and its ways.\n\nThe Rat said nothing, but stooped and unfastened a rope and hauled on it; then lightly stepped into a little boat which the Mole had not observed. It was painted blue outside and white within, and was just the size for two animals; and the Mole's whole heart went out to it at once, even though he did not yet fully understand its uses.\n\nThe Rat sculled smartly across and made fast. Then he held up his fore-paw as the Mole stepped gingerly down. \"Lean on that!\" he said. \"Now then, step lively!\" and the Mole to his surprise and rapture found himself actually seated in the stern of a real boat.\n\n\"This has been a wonderful day!\" said he, as the Rat shoved off and took to the sculls again. \"Do you know, I've never been in a boat before in all my life.\"",
+    "textZh": "随后，两只动物站在那里，小心地打量着彼此。\n\n“你好，鼹鼠！”水鼠说。\n\n“你好，水鼠！”鼹鼠说。\n\n“你愿意过来吗？”水鼠过了一会儿问。\n\n“哦，说起来倒很容易，”鼹鼠颇有些不耐烦地说。他对河流、河边的生活以及那里的种种做法还很陌生。\n\n水鼠没有说话，只是弯下腰，解开一根绳子，把它拉了拉，然后轻轻踏进一只鼹鼠先前没有注意到的小船。船外面漆成蓝色，里面是白色，大小刚好能坐下两只动物。鼹鼠立刻全心喜欢上了它，尽管还没有完全弄懂它的用途。\n\n水鼠利落地划到这边，把船系牢。鼹鼠小心翼翼地往下走时，水鼠伸出前爪。“扶着它！”他说，“来吧，动作利落些！”鼹鼠惊喜万分，发现自己竟然已经坐在一只真正的小船的船尾。\n\n“今天真是美妙的一天！”水鼠把船撑离岸边、再次拿起双桨时，鼹鼠说道，“你知道吗，我这辈子以前从没坐过船。”",
+    "keyPhrases": [
+      {
+        "en": "made fast",
+        "zh": "系牢；在此指把船固定好，不是“使速度变快”"
+      },
+      {
+        "en": "stepped gingerly down",
+        "zh": "小心翼翼地往下走"
+      },
+      {
+        "en": "shoved off",
+        "zh": "把船撑离岸边；开船"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why is the Mole uncertain at first?",
+        "promptZh": "鼹鼠起初为什么有些不知所措？",
+        "options": [
+          "He cannot see the color of the boat.",
+          "He is unfamiliar with life beside a river.",
+          "He has already taken too many boat trips.",
+          "He wants the Rat to leave immediately."
+        ],
+        "optionsZh": [
+          "他看不清船的颜色。",
+          "他不熟悉河边的生活。",
+          "他已经乘船太多次了。",
+          "他想让水鼠立刻离开。"
+        ],
+        "answer": 1,
+        "explanation": "第二段明确he being new to a river and riverside life and its ways；结尾又说明这是他第一次乘船。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "What does the Rat do to help the Mole enter the boat?",
+        "promptZh": "水鼠怎样帮助鼹鼠上船？",
+        "options": [
+          "He paints the boat white.",
+          "He explains every use of the boat.",
+          "He tells the Mole to swim across.",
+          "He holds up a fore-paw for the Mole to lean on."
+        ],
+        "optionsZh": [
+          "他把船漆成白色。",
+          "他解释了船的每种用途。",
+          "他让鼹鼠游过河。",
+          "他伸出前爪，让鼹鼠扶着。"
+        ],
+        "answer": 3,
+        "explanation": "原文held up his fore-paw并说Lean on that，体现了具体的帮助动作。",
+        "tag": "extensive"
+      }
+    ],
+    "listeningTip": "先盲听辨认两个角色与情绪变化，再带文精听、点击查词。将邀请、上船帮助、惊喜感叹分成三组影子跟读，最后隐藏原文复述。浏览器合成朗读支持调速、暂停、继续、停止，不是真题或有声书录音。",
+    "speakingPrompt": "Retell the Mole’s first boat trip in 30–60 seconds. Describe what is unfamiliar, how the Rat helps, and how the Mole feels at the end.",
+    "speakingPromptZh": "用30—60秒复述鼹鼠第一次乘船：他对什么感到陌生，水鼠怎样帮助他，他最后有什么感受。",
+    "sourceExcerptSha256": "644cbae04120da5483bf5b9314b0f9f0f1367d82619b0d084318f667d79bec90"
   }
 ]

@@ -22170,5 +22170,549 @@
         "topic": "准确表达与句式迁移"
       }
     ]
+  },
+  "2026-10-30": {
+    "title": "收入与支出：数字需要明确的含义",
+    "grammarTip": "区分收入、成本与剩余金额，练习数字比较和推断边界。阅读先限时8分钟作答，再定位依据。核心听读均为原创分级模拟，不是真题，也不报道真实活动。",
+    "words": [
+      {
+        "word": "economy",
+        "phonetic": "/ɪˈkɒnəmi/",
+        "pos": "n.",
+        "meaning": "经济；节约",
+        "phrase": "the local economy",
+        "example": "Small shops play a part in the local economy.",
+        "exampleZh": "小商店在当地经济中发挥作用。"
+      },
+      {
+        "word": "economic",
+        "phonetic": "/ˌiːkəˈnɒmɪk/",
+        "pos": "adj.",
+        "meaning": "经济的；经济学的",
+        "phrase": "economic activity",
+        "example": "The report describes economic activity in the town.",
+        "exampleZh": "报告描述了镇上的经济活动。"
+      },
+      {
+        "word": "economics",
+        "phonetic": "/ˌiːkəˈnɒmɪks/",
+        "pos": "n.",
+        "meaning": "经济学",
+        "phrase": "study economics",
+        "example": "She studies economics at university.",
+        "exampleZh": "她在大学学习经济学。"
+      },
+      {
+        "word": "economist",
+        "phonetic": "/ɪˈkɒnəmɪst/",
+        "pos": "n.",
+        "meaning": "经济学家",
+        "phrase": "an economist",
+        "example": "An economist explained the chart to the class.",
+        "exampleZh": "一位经济学家向全班解释了图表。"
+      },
+      {
+        "word": "revenue",
+        "phonetic": "/ˈrevənjuː/",
+        "pos": "n.",
+        "meaning": "收入；收益（未扣除成本）",
+        "phrase": "sales revenue",
+        "example": "Sales revenue is not the same as profit.",
+        "exampleZh": "销售收入不等于利润。"
+      },
+      {
+        "word": "invest",
+        "phonetic": "/ɪnˈvest/",
+        "pos": "v.",
+        "meaning": "投资；投入时间或精力",
+        "phrase": "invest time in learning",
+        "example": "We invest time in learning useful skills.",
+        "exampleZh": "我们投入时间学习实用技能。"
+      },
+      {
+        "word": "investor",
+        "phonetic": "/ɪnˈvestə/",
+        "pos": "n.",
+        "meaning": "投资者",
+        "phrase": "a potential investor",
+        "example": "A potential investor asked about the costs.",
+        "exampleZh": "一位潜在投资者询问了成本。"
+      },
+      {
+        "word": "commerce",
+        "phonetic": "/ˈkɒmɜːs/",
+        "pos": "n.",
+        "meaning": "商业；贸易",
+        "phrase": "international commerce",
+        "example": "The chapter discusses international commerce.",
+        "exampleZh": "这一章讨论国际贸易。"
+      },
+      {
+        "word": "commercial",
+        "phonetic": "/kəˈmɜːʃəl/",
+        "pos": "adj.; n.",
+        "meaning": "商业的；商业广告",
+        "phrase": "a commercial district",
+        "example": "The station is near a busy commercial district.",
+        "exampleZh": "车站靠近一个繁忙的商业区。"
+      },
+      {
+        "word": "merchant",
+        "phonetic": "/ˈmɜːtʃənt/",
+        "pos": "n.",
+        "meaning": "商人",
+        "phrase": "a local merchant",
+        "example": "A local merchant supplied the paper bags.",
+        "exampleZh": "一位当地商人提供了纸袋。"
+      },
+      {
+        "word": "inflation",
+        "phonetic": "/ɪnˈfleɪʃən/",
+        "pos": "n.",
+        "meaning": "通货膨胀；物价总体上涨",
+        "phrase": "a period of inflation",
+        "example": "The textbook explains how inflation affects prices.",
+        "exampleZh": "课本解释了通货膨胀如何影响价格。"
+      },
+      {
+        "word": "recession",
+        "phonetic": "/rɪˈseʃən/",
+        "pos": "n.",
+        "meaning": "经济衰退",
+        "phrase": "an economic recession",
+        "example": "The article describes employment during a recession.",
+        "exampleZh": "文章描述了经济衰退期间的就业状况。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "taxation",
+        "phonetic": "/tækˈseɪʃən/",
+        "pos": "n.",
+        "meaning": "征税；税收制度",
+        "phrase": "a system of taxation",
+        "example": "The course introduces basic ideas about taxation.",
+        "exampleZh": "课程介绍有关税收的基本概念。"
+      },
+      {
+        "word": "wealthy",
+        "phonetic": "/ˈwelθi/",
+        "pos": "adj.",
+        "meaning": "富有的",
+        "phrase": "a wealthy family",
+        "example": "The story follows a child from a wealthy family.",
+        "exampleZh": "故事讲述一个富裕家庭中孩子的经历。"
+      },
+      {
+        "word": "poverty",
+        "phonetic": "/ˈpɒvəti/",
+        "pos": "n.",
+        "meaning": "贫困；贫乏",
+        "phrase": "reduce poverty",
+        "example": "The students discussed ways to reduce poverty.",
+        "exampleZh": "学生讨论了减少贫困的方法。"
+      },
+      {
+        "word": "bargain",
+        "phonetic": "/ˈbɑːɡɪn/",
+        "pos": "n.; v.",
+        "meaning": "便宜货；协议；讨价还价",
+        "phrase": "a real bargain",
+        "example": "The second-hand desk was a real bargain.",
+        "exampleZh": "这张二手书桌确实很划算。"
+      },
+      {
+        "word": "expenditure",
+        "phonetic": "/ɪkˈspendɪtʃə/",
+        "pos": "n.",
+        "meaning": "支出；花费",
+        "phrase": "total expenditure",
+        "example": "Total expenditure includes transport and printing costs.",
+        "exampleZh": "总支出包括运输和印刷费用。"
+      },
+      {
+        "word": "funding",
+        "phonetic": "/ˈfʌndɪŋ/",
+        "pos": "n.",
+        "meaning": "资金；经费",
+        "phrase": "funding for a project",
+        "example": "The club applied for funding for its reading project.",
+        "exampleZh": "社团为阅读项目申请了经费。"
+      },
+      {
+        "word": "stock",
+        "phonetic": "/stɒk/",
+        "pos": "n.; v.",
+        "meaning": "库存；股票；储备；备有货品",
+        "phrase": "books in stock",
+        "example": "The shop has twenty copies in stock.",
+        "exampleZh": "这家店有二十本现货。"
+      },
+      {
+        "word": "consumption",
+        "phonetic": "/kənˈsʌmpʃən/",
+        "pos": "n.",
+        "meaning": "消费；消耗",
+        "phrase": "energy consumption",
+        "example": "The new lights reduced energy consumption.",
+        "exampleZh": "新灯具减少了能源消耗。"
+      },
+      {
+        "word": "production",
+        "phonetic": "/prəˈdʌkʃən/",
+        "pos": "n.",
+        "meaning": "生产；制作；产量",
+        "phrase": "food production",
+        "example": "The exhibition explains several stages of food production.",
+        "exampleZh": "展览介绍了食品生产的几个阶段。"
+      },
+      {
+        "word": "productivity",
+        "phonetic": "/ˌprɒdʌkˈtɪvəti/",
+        "pos": "n.",
+        "meaning": "生产率；工作效率",
+        "phrase": "improve productivity",
+        "example": "Clear instructions can improve productivity without extending working hours.",
+        "exampleZh": "清晰的说明能提高效率，而不延长工作时间。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The money that the volunteers collected ___ not all profit.",
+        "promptZh": "志愿者收取的款项并非全部都是利润。",
+        "options": [
+          "were",
+          "was",
+          "being",
+          "be"
+        ],
+        "optionsZh": [
+          "是（复数过去式）",
+          "是（单数过去式）",
+          "是（非谓语）",
+          "是（原形）"
+        ],
+        "answer": 1,
+        "explanation": "主语money为不可数名词，主句用was；collected属于that引导的定语从句。",
+        "tag": "subject-verb"
+      },
+      {
+        "prompt": "The figures on the first page ___ clear, but the labels need revision.",
+        "promptZh": "第一页的数字很清楚，但标签需要修改。",
+        "options": [
+          "being",
+          "clearly",
+          "are",
+          "to be"
+        ],
+        "optionsZh": [
+          "是（非谓语）",
+          "清楚地",
+          "是（复数现在式）",
+          "是（不定式）"
+        ],
+        "answer": 2,
+        "explanation": "figures为复数；clear是形容词，需要主句谓语are，不能省略be。",
+        "tag": "be-adjective"
+      },
+      {
+        "prompt": "Before ___ the total, check whether transport costs are included.",
+        "promptZh": "公布总额之前，检查是否计入了运输成本。",
+        "options": [
+          "announce",
+          "announced",
+          "to announce",
+          "announcing"
+        ],
+        "optionsZh": [
+          "公布（原形）",
+          "公布（过去式）",
+          "公布（不定式）",
+          "公布（动名词）"
+        ],
+        "answer": 3,
+        "explanation": "before在此为介词，后接动名词announcing。",
+        "tag": "gerund"
+      },
+      {
+        "prompt": "Although revenue increased, the club had ___ money left than before.",
+        "promptZh": "虽然收入增加了，社团剩余的钱却比以前少。",
+        "options": [
+          "less",
+          "fewer",
+          "few",
+          "little"
+        ],
+        "optionsZh": [
+          "更少的（不可数）",
+          "更少的（可数复数）",
+          "少数的（可数）",
+          "少量的（不可数，原级）"
+        ],
+        "answer": 0,
+        "explanation": "money不可数，than提示比较级less；fewer修饰可数名词复数。",
+        "tag": "comparison"
+      },
+      {
+        "prompt": "The receipts ___ were kept in the envelope helped explain the costs.",
+        "promptZh": "保存在信封里的收据帮助说明了成本。",
+        "options": [
+          "who",
+          "where",
+          "which",
+          "when"
+        ],
+        "optionsZh": [
+          "指人",
+          "指地点",
+          "指物",
+          "指时间"
+        ],
+        "answer": 2,
+        "explanation": "which指receipts，在定语从句中作主语；主句谓语为helped。",
+        "tag": "relative-clause"
+      },
+      {
+        "prompt": "Choose the sentence with correct word choice and spelling.",
+        "promptZh": "选择用词和拼写正确的一句。",
+        "options": [
+          "I thing we can improve our records every day.",
+          "I think we can improve our records every day.",
+          "I think we can inprove our records everyday.",
+          "I think we can improvement our records every day."
+        ],
+        "optionsZh": [
+          "将动词think误写为名词thing。",
+          "我认为我们可以每天改进记录。",
+          "improve拼写错误且everyday误作状语。",
+          "将名词improvement误放在can后。"
+        ],
+        "answer": 1,
+        "explanation": "think是动词“认为”，thing是名词“事情”；can后用improve；every day分写作时间状语。",
+        "tag": "spelling"
+      }
+    ],
+    "reading": {
+      "title": "What the Sales Total Does Not Tell You",
+      "titleZh": "销售总额没有告诉你的事",
+      "level": "四级专项衔接 · 原创分级模拟",
+      "topic": "收入、成本与比较依据",
+      "passage": "In a fictional campus project, a student club sold used books to support a reading corner. Its first report proudly announced that sales revenue had risen from eight hundred yuan to one thousand yuan. Some members immediately called the event more successful than the previous sale.\n\nHowever, the student responsible for the accounts asked them to examine expenditure as well. The earlier sale had cost two hundred yuan to organize, while the new one had cost five hundred. Transport was more expensive, and the club had paid for extra printed signs. Although more money had come in, less remained for the reading corner.\n\nThis did not mean that the second sale had no value. It had attracted new volunteers and made the project better known. Those benefits deserved a place in the report, but they did not change the calculation. The club needed to explain different kinds of results separately.\n\nThe members revised the report to show revenue, costs, and the amount left. They also recorded how many books remained in stock, so the next team could plan without buying unnecessary supplies.\n\nThe experience taught them to ask what a number actually measures before comparing it with another number. A larger total may sound encouraging, yet a useful judgment depends on the question being asked. Clear labels and complete records made their discussion more accurate.",
+      "passageZh": "在一个虚构的校园项目中，学生社团出售旧书，为阅读角筹款。第一份报告自豪地宣布，销售收入从八百元增加到了一千元。一些成员立刻称这次活动比上一次售书更成功。\n\n然而，负责账目的学生请大家也检查支出。上一次活动的组织成本为两百元，而这一次为五百元。运输更贵了，社团还花钱印了额外的标牌。尽管收进来的钱更多，留给阅读角的钱却更少。\n\n这并不意味着第二次售书没有价值。它吸引了新志愿者，也提高了项目的知名度。这些好处值得写进报告，但不能改变计算结果。社团需要分别解释不同类型的成果。\n\n成员修改了报告，列出收入、成本和剩余金额。他们还记录了库存中剩下的书本数量，让下一组人不必购买不必要的物资就能做好计划。\n\n这次经历教会他们，在将一个数字与另一个比较之前，先问数字到底衡量什么。更大的总额听起来可能令人鼓舞，但有用的判断取决于正在回答什么问题。清晰的标签和完整的记录使讨论更加准确。",
+      "questions": [
+        {
+          "prompt": "How much money remained after the second sale?",
+          "promptZh": "第二次售书扣除成本后剩余多少钱？",
+          "options": [
+            "Two hundred yuan.",
+            "Three hundred yuan.",
+            "Five hundred yuan.",
+            "One thousand yuan."
+          ],
+          "optionsZh": [
+            "两百元。",
+            "三百元。",
+            "五百元。",
+            "一千元。"
+          ],
+          "answer": 2,
+          "explanation": "第二次收入1000元，成本500元，剩余500元；上一次剩余800－200＝600元。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Why did the first report give an incomplete picture?",
+          "promptZh": "为什么第一份报告反映的情况不完整？",
+          "options": [
+            "It highlighted revenue without considering the costs.",
+            "It counted all unsold books as income.",
+            "It claimed there were no volunteers.",
+            "It forgot the name of the reading corner."
+          ],
+          "optionsZh": [
+            "它强调收入，却没有考虑成本。",
+            "它把所有未售出的书计入收入。",
+            "它声称没有志愿者。",
+            "它忘记了阅读角的名字。"
+          ],
+          "answer": 0,
+          "explanation": "前两段的转折在于收入增加但支出也增加，仅报告收入不能说明筹得的净额。其他选项并非文中原因。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What does the writer say about the new volunteers?",
+          "promptZh": "作者如何看待新志愿者的加入？",
+          "options": [
+            "They made the cost calculation unnecessary.",
+            "They proved the earlier sale was useless.",
+            "They caused every additional expense.",
+            "They were a benefit that should be reported separately."
+          ],
+          "optionsZh": [
+            "他们使成本计算不再必要。",
+            "他们证明上一次活动毫无用处。",
+            "所有新增费用都是他们造成的。",
+            "这是应当另行说明的一项好处。"
+          ],
+          "answer": 3,
+          "explanation": "第三段肯定吸引志愿者的价值，但说明这些好处不改变财务计算，应分开呈现。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What is the main lesson of the passage?",
+          "promptZh": "文章的主要启示是什么？",
+          "options": [
+            "Choose the largest number in every report.",
+            "Understand what each number measures before judging results.",
+            "Avoid mentioning benefits that cannot be counted.",
+            "Stop keeping records after a successful event."
+          ],
+          "optionsZh": [
+            "在每份报告中选择最大的数字。",
+            "判断结果之前先弄清各个数字衡量什么。",
+            "避免提及无法计数的好处。",
+            "活动成功后不再保留记录。"
+          ],
+          "answer": 1,
+          "explanation": "末段概括主旨：比较前先明确指标含义，判断需符合所问问题；并非只追求大数字。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "Records for the Student Book Sale",
+      "titleZh": "学生售书活动的记录要求",
+      "level": "四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "tip": "盲听抓活动目的、到达和开始时间；带文精听并查词，完成全文分段听写；选三句做三组影子跟读，最后脱稿复述30—60秒。合成朗读可调速、暂停、继续、停止，不是真题录音。",
+      "passage": "Here is a reminder for volunteers at the student book sale. Please arrive at the east hall at nine on Friday morning. The sale begins at half past nine and ends at noon. One person at each table should record the number of books sold. Another person should collect the money and give customers a receipt. Keep the receipts for transport and printed signs in a separate envelope. We need these records to calculate the amount left after costs. Do not describe all the money collected as a donation yet. After the sale, count the unsold books before packing them. The final total will be announced once both records have been checked.",
+      "passageZh": "这是给学生售书活动志愿者的一则提醒。请于周五上午九点到达东大厅。售书活动九点半开始，中午结束。每张桌旁应有一人记录售出的书本数量。另一人负责收款并向顾客提供收据。请把运输和印刷标牌的费用凭证放在单独的信封里。我们需要这些记录，计算扣除成本后剩余的金额。现在还不要把收取的全部款项称为捐款。售书结束后，先清点未售出的书，再将其打包。两类记录都检查完毕后，将公布最终金额。",
+      "dictation": [
+        "Here is a reminder for volunteers at the student book sale.",
+        "Please arrive at the east hall at nine on Friday morning."
+      ],
+      "dictationZh": [
+        "这是给学生售书活动志愿者的一则提醒。",
+        "请于周五上午九点到达东大厅。"
+      ],
+      "questions": [
+        {
+          "prompt": "When should the volunteers arrive?",
+          "promptZh": "志愿者应该何时到达？",
+          "options": [
+            "At nine.",
+            "At half past nine.",
+            "At noon.",
+            "After the final total is announced."
+          ],
+          "optionsZh": [
+            "九点。",
+            "九点半。",
+            "中午。",
+            "最终金额公布后。"
+          ],
+          "answer": 0,
+          "explanation": "到达时间是九点；九点半是售书开始时间，中午是结束时间。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "Why should volunteers keep the expense receipts?",
+          "promptZh": "为什么志愿者要保留费用凭证？",
+          "options": [
+            "To count the number of visitors.",
+            "To replace the unsold books.",
+            "To calculate the money remaining after costs.",
+            "To avoid checking the sales records."
+          ],
+          "optionsZh": [
+            "为了统计来访人数。",
+            "为了替换未售出的书。",
+            "为了计算扣除成本后剩余的钱。",
+            "为了免去检查销售记录。"
+          ],
+          "answer": 2,
+          "explanation": "原文明确说明凭证用于calculate the amount left after costs。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The report that the club revised showed that higher revenue did not necessarily mean more money was available for the reading corner.",
+      "main": "The report showed something.",
+      "mainZh": "报告说明了一件事。",
+      "translation": "社团修改后的报告表明，更高的收入并不一定意味着有更多的钱可用于阅读角。",
+      "core": [
+        "report",
+        "showed"
+      ],
+      "keywords": [
+        "报告",
+        "修改",
+        "表明",
+        "更高",
+        "收入",
+        "不一定",
+        "更多",
+        "可用",
+        "阅读角"
+      ],
+      "structure": "主句The report showed...；that the club revised修饰report；showed后的that引导宾语从句，其谓语为did not necessarily mean；mean后省略that，money was available是从句。",
+      "grammar": [
+        "主句谓语是showed，revised属于定语从句。",
+        "not necessarily表示“不一定”，不等于“必然不”。",
+        "available是形容词，在money was available中不可省略was。"
+      ],
+      "examTip": "先找report的谓语showed，再依次还原“报告说明什么”与“收入意味着什么”。",
+      "level": "四级衔接句法",
+      "topic": "定语从句与宾语从句"
+    },
+    "trans": [
+      {
+        "source": "收入增加并不一定意味着有更多的钱可用于这个项目。",
+        "answer": "An increase in revenue does not necessarily mean that more money is available for the project.",
+        "alternative": "Higher revenue does not necessarily mean that the project has more money available.",
+        "acceptedAnswers": [
+          "An increase in revenue does not necessarily mean that more money is available for the project.",
+          "Higher revenue does not necessarily mean that the project has more money available."
+        ],
+        "keywords": [
+          "revenue",
+          "not necessarily",
+          "mean",
+          "money",
+          "project"
+        ],
+        "grammar": "not necessarily表达“不一定”；money is available中available前需要be动词。",
+        "chunks": [
+          "an increase in revenue",
+          "does not necessarily mean",
+          "available for the project"
+        ],
+        "level": "四级衔接表达",
+        "topic": "收入与支出"
+      },
+      {
+        "source": "我们应该保留收据，以便下一组人能够检查成本。",
+        "answer": "We should keep the receipts so that the next team can check the costs.",
+        "alternative": "We should retain the receipts so that the next group can examine the costs.",
+        "acceptedAnswers": [
+          "We should keep the receipts so that the next team can check the costs.",
+          "We should retain the receipts so that the next group can examine the costs."
+        ],
+        "keywords": [
+          "should",
+          "receipts",
+          "so that",
+          "team",
+          "costs"
+        ],
+        "grammar": "should后接原形；so that引导目的状语从句，从句can后接check。",
+        "chunks": [
+          "keep the receipts",
+          "so that",
+          "check the costs"
+        ],
+        "level": "四级衔接表达",
+        "topic": "记录与目的"
+      }
+    ]
   }
 }
