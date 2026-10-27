@@ -14,13 +14,13 @@ function fixture(initial={}){
   const values=new Map(Object.entries(initial)),writes=[],reads=[];
   const protectedData={grade:37,draft:'unfinished answer',firstAt:'original',completed:[]};
   const storage={getItem(key){reads.push(key);return values.get(key)??null},setItem(key,value){writes.push(key);values.set(key,value)}};
-  const hosts=[],listeners={},intervals=[];
+  const hosts=[],listeners={},intervals=[],bar={innerHTML:''};
   const app={inserted:[],insertAdjacentHTML(where,html){this.inserted.push([where,html])}};
-  const context=vm.createContext({localStorage:storage,document:{querySelectorAll:()=>hosts,addEventListener:(name,fn)=>{listeners[name]=fn}},window:{addEventListener:(name,fn)=>{listeners[name]=fn}},setInterval:(fn,ms)=>intervals.push([fn,ms]),Date:{now:()=>time},app,selected:date,tab:'plan',esc:value=>String(value).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;'),store:protectedData});
-  vm.runInContext(source+';globalThis.api={createTaskCountdowns,taskTimerHtml,updateTaskTimerDisplays,bindTaskTimers,installTaskTimers};',context);
+  const context=vm.createContext({localStorage:storage,document:{getElementById:id=>id==='globalTaskTimer'?bar:null,querySelectorAll:()=>hosts,addEventListener:(name,fn)=>{listeners[name]=fn}},window:{addEventListener:(name,fn)=>{listeners[name]=fn}},setInterval:(fn,ms)=>intervals.push([fn,ms]),Date:{now:()=>time},app,selected:date,tab:'plan',esc:value=>String(value).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;'),store:protectedData});
+  vm.runInContext(source+';globalThis.api={createTaskCountdowns,taskTimerHtml,updateTaskTimerDisplays,bindTaskTimers,bindGlobalTaskTimer,installTaskTimers};',context);
   const manager=()=>context.api.createTaskCountdowns(storage,()=>time);
   function host(t=task,d=date){const clock={textContent:''},status={textContent:''},button={textContent:'',disabled:false};const h={dataset:{taskTimer:t.id,timerDate:d,timerMinutes:String(t.minutes)},querySelector:s=>({'[data-timer-clock]':clock,'[data-timer-status]':status,'[data-timer-action]':button})[s],clock,status,button};hosts.push(h);return h;}
-  return {manager,storage,values,writes,reads,context,app,host,intervals,listeners,advance:ms=>{time+=ms},protectedData};
+  return {manager,storage,values,writes,reads,context,app,bar,host,intervals,listeners,advance:ms=>{time+=ms},protectedData};
 }
 
 test('timers start only on request and never read/write learning records',()=>{
@@ -49,7 +49,7 @@ test('expiry survives reload and is irreversible through all public actions',()=
   const f=fixture(),m=f.manager();m.act(date,task);f.advance(1800100);m.refresh();
   for(let i=0;i<3;i++){m.act(date,task);assert.equal(m.view(date,task).state,'done');assert.equal(m.view(date,task).remainingMs,0)}
   const reloaded=f.manager();reloaded.act(date,{...task,minutes:45});assert.equal(reloaded.view(date,task).remainingMs,0);assert.equal(reloaded.view(date,task).state,'done');
-  assert.deepEqual(Object.keys(m).sort(),['act','refresh','view']);assert.doesNotMatch(source,/removeItem|clear\(|reset\s*\(|restart\s*\(/);
+  assert.deepEqual(Object.keys(m).sort(),['act','focus','refresh','view']);assert.doesNotMatch(source,/removeItem|clear\(|reset\s*\(|restart\s*\(/);
 });
 test('a suspended/background page counts elapsed wall time and clamps at zero',()=>{
   const f=fixture(),m=f.manager();m.act(date,task);f.advance(7200000);assert.equal(m.view(date,task).remainingMs,0);m.refresh();
@@ -93,4 +93,36 @@ test('wake, tab visibility and shared timer storage events refresh only countdow
   const f=fixture();f.context.api.installTaskTimers();assert.equal(f.intervals.length,1);assert.equal(f.intervals[0][1],1000);
   const h=f.host();f.context.api.updateTaskTimerDisplays();h.button.onclick({});f.advance(60000);f.listeners.visibilitychange();assert.equal(h.clock.textContent,'29:00');
   f.advance(60000);f.listeners.pageshow();assert.equal(h.clock.textContent,'28:00');f.listeners.storage({key:KEY});assert.equal(h.clock.textContent,'28:00');assert.equal(f.protectedData.grade,37);
+});
+
+test('global timer remains on the active task across every module and pending dates',()=>{
+  const f=fixture(),api=f.context.api,h=f.host(second);
+  api.bindGlobalTaskTimer({tasks:[task,second]});assert.match(f.bar.innerHTML,/data-task-timer="words"/);assert.deepEqual(f.writes,[]);
+  h.button.onclick({});f.advance(90000);
+  for(const tab of ['words','listening','practice','extensive','records','ai','plan']){
+    f.context.tab=tab;f.context.selected='2026-10-20';api.bindGlobalTaskTimer({tasks:[task]});
+    assert.match(f.bar.innerHTML,/data-task-timer="reading"/);assert.match(f.bar.innerHTML,/data-timer-date="2026-10-19"/);assert.equal(h.clock.textContent,'18:30');
+  }
+  api.bindGlobalTaskTimer({unprepared:true});assert.match(f.bar.innerHTML,/data-task-timer="reading"/);
+  h.button.onclick({});api.bindGlobalTaskTimer({tasks:[task]});assert.match(f.bar.innerHTML,/data-task-timer="reading"/);assert.equal(h.clock.textContent,'18:30');
+  assert.ok(f.writes.every(k=>k===KEY));assert.equal(f.protectedData.grade,37);assert.equal(f.protectedData.draft,'unfinished answer');
+});
+
+test('global focus survives reload and expiry, supports old timer entries, and follows another tab',()=>{
+  const f=fixture(),m=f.manager();m.act(date,task);f.advance(5000);m.act(date,task);m.act(date,second);
+  let restored=f.manager();assert.equal(restored.focus().task.label,'阅读');assert.equal(restored.focus().task.id,'reading');
+  f.advance(1200000);restored.refresh();assert.equal(restored.focus().task.id,'reading');assert.equal(restored.view(date,second).state,'done');
+  const legacy=fixture({[KEY]:JSON.stringify({version:1,entries:{[date+'|words']:{durationMs:1800000,remainingMs:900000,startedAt:null}}})});
+  assert.equal(legacy.manager().focus().task.label,'词汇学习与默写');assert.deepEqual(legacy.writes,[]);
+  const h=f.host();f.context.api.bindGlobalTaskTimer({tasks:[task]});assert.match(f.bar.innerHTML,/data-task-timer="reading"/);
+  m.act('2026-10-20',task);f.context.api.updateTaskTimerDisplays();assert.match(f.bar.innerHTML,/data-timer-date="2026-10-20"/);
+});
+
+test('global bar is outside the scroll pane, hidden navigation, app and AI panel',()=>{
+  assert.match(template,/<\/header>\s*<section id="globalTaskTimer"[^>]*><\/section>\s*<div id="studyWorkspace"/);
+  assert.match(template,/#globalTaskTimer\{flex:none;/);
+  const render=template.slice(template.indexOf('function render(){'),template.indexOf('\n',template.indexOf('function render(){')));
+  assert.ok(render.indexOf('bindGlobalTaskTimer(L)')<render.indexOf("if(tab==='ai')"));
+  assert.ok(render.indexOf('bindGlobalTaskTimer(L)')<render.indexOf('renderPending(L)'));
+  const f=fixture();f.context.api.bindGlobalTaskTimer({unprepared:true});assert.match(f.bar.innerHTML,/尚未准备好/);assert.deepEqual(f.writes,[]);
 });

@@ -22,10 +22,12 @@
     .study-view-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:0 0 14px}.study-view-choices,.study-mask-controls,.study-mask-actions{display:flex;gap:8px;flex-wrap:wrap}.study-view-toolbar button{padding:8px 12px;font-size:14px}.study-view-choices button[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:white}.study-mask-help{flex-basis:100%;margin:0;font-size:12px;line-height:1.7;color:var(--muted)}.word-mask{align-items:stretch;gap:10px}.word-mask>span{flex:1}.word-mask .study-mask-heading{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.word-mask .study-mask-heading small{margin:0}.word-mask .study-mask-content{margin-top:10px;padding:10px;border:1px dashed var(--line);border-radius:10px;overflow-wrap:anywhere;line-height:1.7}.word-mask [data-mask-content][hidden]{display:none!important}.word-mask .study-mask-actions{margin-top:12px}.word-mask .study-mask-actions button{border:1px solid var(--line);border-radius:9px;padding:7px 10px;font-size:13px;background:#fffaf1}.word-mask .study-mask-placeholder{margin:10px 0 0;padding:12px;border:1px dashed var(--line);border-radius:10px;color:var(--muted);font-size:13px}.word-mask .study-mask-placeholder[hidden]{display:none!important}.word-mask>.study-mask-audio{align-self:flex-start;min-width:38px;min-height:38px;font-size:19px;border:1px solid var(--line);border-radius:10px}.study-view-toolbar button:focus-visible,.word-mask button:focus-visible{outline:3px solid var(--orange);outline-offset:2px}@media(max-width:620px){#studyWordView .grid{grid-template-columns:minmax(0,1fr)}.study-view-choices,.study-mask-controls{width:100%}.study-view-choices button,.study-mask-controls button{flex:1}.study-mask-controls button{font-size:13px}.study-mask-actions button{flex:1}}
     .task-route-item{border:1px solid var(--line);border-radius:16px;background:white;overflow:hidden}.route .task-route-link{width:100%;border:0;border-radius:0;background:transparent}.task-timer{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 13px;border-top:1px solid var(--line);font-size:13px}.task-timer output{font-size:20px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--green)}.task-timer button,.route .task-timer button{padding:7px 11px;border:1px solid var(--line);border-radius:9px;background:white;font-size:13px;min-height:36px}.task-timer [data-timer-status]{flex:1;min-width:90px;color:var(--muted)}.task-timer[data-timer-state="done"] output{color:#a44c28}.task-timer-label{flex-basis:100%;font-weight:700}.task-timer-bar{border:1px solid var(--line);border-radius:18px;background:var(--card);margin-bottom:18px;overflow:hidden}.task-timer-bar .task-timer:first-child{border-top:0}.task-timer-note{margin:0;padding:9px 13px;font-size:12px;color:var(--muted);line-height:1.6}.task-timer button:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
     #aiPanel[hidden],#aiPlanNotice[hidden]{display:none!important}#aiPanel{padding:18px;max-width:1180px;margin:auto}#aiPanel iframe{width:100%;height:calc(100dvh - 230px);min-height:520px;border:1px solid var(--line);border-radius:18px;background:var(--card)}#aiPlanNotice{max-width:1144px;margin:18px auto 0;padding:14px 18px;border-left:4px solid var(--green);background:#e7efe9;white-space:pre-line;line-height:1.7}#aiPanel .ai-help{line-height:1.7;font-size:14px}#aiPanel .actions{flex-wrap:wrap}
+    #globalTaskTimer{flex:none;border-bottom:1px solid var(--line);background:var(--card);z-index:5}#globalTaskTimer .task-timer{max-width:1180px;margin:auto;border:0;padding:7px 18px;flex-wrap:nowrap}#globalTaskTimer .task-timer-label{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#globalTaskTimer .task-timer-label small{display:block;font-weight:400;color:var(--muted);font-size:11px}#globalTaskTimer [data-timer-clock]{flex:none;font-size:24px}#globalTaskTimer [data-timer-status]{flex:0 1 auto;min-width:0;max-width:220px;font-size:12px}#globalTaskTimer button{flex:none}#globalTaskTimer .timer-empty{margin:0;padding:9px 18px;color:var(--muted);font-size:13px}@media(max-width:620px){#globalTaskTimer .task-timer{padding:6px 12px;gap:7px}#globalTaskTimer [data-timer-status]{max-width:96px;font-size:11px}#globalTaskTimer .task-timer-label{font-size:12px}#globalTaskTimer [data-timer-clock]{font-size:21px}}
   </style>
 </head>
 <body>
   <header id="studyHeader" data-collapsed="true"><div class="utility-bar"><button id="wordSearchToggle" class="word-search-toggle" type="button" aria-controls="wordSearchPanel" aria-expanded="false" title="查词（Alt + K；选中单词后可直接查）">查词</button><button id="headerToggle" class="header-toggle" type="button" aria-controls="headerPanel" aria-expanded="false">展开日期与导航 ▾</button></div><div id="headerPanel" hidden><div class="head"><div class="brand"><span class="logo">4</span><div><b>CET-4 · 550</b><small>每日听说读写训练包</small></div></div><nav id="desktopNav"></nav><div id="dateLabel"></div></div><div class="datebar" id="dateBar"></div><div id="syncBar" class="syncbar"></div></div></header>
+  <section id="globalTaskTimer" aria-label="全局任务倒计时"></section>
   <div id="studyWorkspace" data-search-open="false"><div id="studyMainPane"><main class="wrap" id="app"></main></div><aside id="wordSearchPanel" hidden aria-labelledby="wordSearchTitle"><div class="search-heading"><h2 id="wordSearchTitle">词汇搜索</h2><button id="wordSearchClose" type="button">收起</button></div><form id="wordSearchForm" class="word-search-form" role="search"><label for="wordSearchInput">英文单词 / 中文词义</label><div class="search-input-row"><input id="wordSearchInput" type="search" placeholder="例如：提高、学习、carefully、written" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="60"><button class="primary" type="submit">搜索</button></div></form><p id="wordSearchStatus" class="search-status" role="status" aria-live="polite">支持英查中、中查英；点英文结果可继续查词族与词形。可用 Alt + K 打开。</p><div id="wordSearchResults"></div></aside></div>
   <div class="mobile" id="mobileNav"></div>
   <aside id="articleLookupPopover" hidden role="dialog" aria-modal="false" aria-labelledby="lookupTitle" tabindex="-1"></aside>
@@ -86,23 +88,41 @@ __DESIGN_HOST__
           const e=prior||{durationMs:task.minutes*60000,remainingMs:task.minutes*60000,startedAt:null};
           e.startedAt=time;data.entries[key]=e;
         }
+        data.focus=key;data.entries[key].label=String(task.label||data.entries[key].label||task.id);
         save();
       }
       load();settle();
-      return {view,act,refresh(){load();settle()}};
+      function focus(){
+        const keys=Object.keys(data.entries),key=keys.find(k=>data.entries[k].startedAt!==null)||(Object.hasOwn(data.entries,data.focus)?data.focus:keys.at(-1));
+        if(!key)return null;
+        const e=data.entries[key],split=key.indexOf('|'),id=key.slice(split+1),labels={words:'词汇学习与默写',listening:'核心听力',grammar:'语法',reading:'核心阅读',sentences:'长难句与翻译',extensive:'泛读与口语',review:'错题复盘'};
+        return {date:key.slice(0,split),task:{id,minutes:e.durationMs/60000,label:e.label||labels[id]||id}};
+      }
+      return {view,act,focus,refresh(){load();settle()}};
     }
     let taskCountdowns=null;
     function taskTimerManager(){
       if(!taskCountdowns){let storage;try{storage=localStorage}catch{}taskCountdowns=createTaskCountdowns(storage)}
       return taskCountdowns;
     }
-    function taskTimerHtml(task,withLabel=false){
-      return '<div class="task-timer" data-task-timer="'+esc(task.id)+'" data-timer-date="'+esc(selected)+'" data-timer-minutes="'+task.minutes+'">'+(withLabel?'<span class="task-timer-label">'+esc(task.label)+'</span>':'')+'<output aria-label="'+esc(task.label)+'剩余时间" data-timer-clock></output><span role="status" data-timer-status></span><button type="button" data-timer-action>开始</button></div>';
+    function taskTimerHtml(task,withLabel=false,date=selected,global=false){
+      return '<div class="task-timer" data-task-timer="'+esc(task.id)+'" data-timer-label="'+esc(task.label)+'" data-timer-date="'+esc(date)+'" data-timer-minutes="'+task.minutes+'">'+(withLabel?'<span class="task-timer-label">'+esc(task.label)+(global?'<small>'+esc(date)+' · 不支持重置</small>':'')+'</span>':'')+'<output aria-label="'+esc(task.label)+'剩余时间" data-timer-clock></output><span role="status" data-timer-status></span><button type="button" data-timer-action>开始</button></div>';
+    }
+    let defaultGlobalTimer=null,globalTimerMarkup='';
+    function bindGlobalTaskTimer(L){
+      defaultGlobalTimer=!L.unprepared&&L.tasks?.length?{date:selected,task:L.tasks[0]}:null;
+      updateTaskTimerDisplays();
+    }
+    function updateGlobalTaskTimer(manager){
+      const bar=document.getElementById('globalTaskTimer');if(!bar)return;
+      const target=manager.focus()||defaultGlobalTimer;
+      const markup=target?taskTimerHtml(target.task,true,target.date,true):'<p class="timer-empty">任务倒计时：当前日期的课程尚未准备好。</p>';
+      if(globalTimerMarkup!==markup){bar.innerHTML=markup;globalTimerMarkup=markup}
     }
     function updateTaskTimerDisplays(){
-      const manager=taskTimerManager();manager.refresh();
+      const manager=taskTimerManager();manager.refresh();updateGlobalTaskTimer(manager);
       document.querySelectorAll('[data-task-timer]').forEach(host=>{
-        const task={id:host.dataset.taskTimer,minutes:Number(host.dataset.timerMinutes)},state=manager.view(host.dataset.timerDate,task);if(!state)return;
+        const task={id:host.dataset.taskTimer,minutes:Number(host.dataset.timerMinutes),label:host.dataset.timerLabel},state=manager.view(host.dataset.timerDate,task);if(!state)return;
         const seconds=Math.ceil(state.remainingMs/1000),clock=host.querySelector('[data-timer-clock]'),status=host.querySelector('[data-timer-status]'),button=host.querySelector('[data-timer-action]');
         if(!clock||!status||!button)return;
         clock.textContent=String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0');
@@ -455,7 +475,7 @@ __DESIGN_HOST__
       toggle.title=(headerExpanded?'收起顶部日期与导航':'展开顶部日期与导航')+'（当前课程：'+selected+'）';
       toggle.onclick=()=>{headerExpanded=!headerExpanded;try{localStorage.setItem(HEADER_PREFERENCE_KEY,String(headerExpanded))}catch{}renderHeaderState()};
     }
-    function render(){closeArticleWord();renderHeaderState();nav();renderSyncBar();document.getElementById('app').hidden=tab==='ai';const aiPanel=document.getElementById('aiPanel');if(aiPanel)aiPanel.hidden=tab!=='ai';renderAiNotice();renderPersonalDesign();if(tab==='ai'){openAiFrame();return}if(aiReady)aiFrame.contentWindow.postMessage({type:'cet4-ai-date',date:selected,pairing:AI_PAIRING},AI_ORIGIN);const L=lesson();if(L.unprepared&&tab!=='records'){renderPending(L);return}({plan:renderPlan,words:renderWords,listening:renderListening,practice:renderPractice,extensive:renderExtensive,records:renderRecords}[tab])(L);renderPersonalDesign()}
+    function render(){closeArticleWord();renderHeaderState();nav();renderSyncBar();document.getElementById('app').hidden=tab==='ai';const aiPanel=document.getElementById('aiPanel');if(aiPanel)aiPanel.hidden=tab!=='ai';renderAiNotice();renderPersonalDesign();const L=lesson();bindGlobalTaskTimer(L);if(tab==='ai'){openAiFrame();return}if(aiReady)aiFrame.contentWindow.postMessage({type:'cet4-ai-date',date:selected,pairing:AI_PAIRING},AI_ORIGIN);if(L.unprepared&&tab!=='records'){renderPending(L);return}({plan:renderPlan,words:renderWords,listening:renderListening,practice:renderPractice,extensive:renderExtensive,records:renderRecords}[tab])(L);renderPersonalDesign()}
     function renderAiNotice(){
       const notice=document.getElementById('aiPlanNotice');if(!notice)return;
       const plan=aiPlans.get(selected),focus={listening:'听力',reading:'阅读',speaking:'口语',vocabulary:'词汇',balanced:'均衡训练'};
