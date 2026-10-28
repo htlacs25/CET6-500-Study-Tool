@@ -406,60 +406,138 @@ __DESIGN_HOST__
     }
     function markListening(L){const p=progress();if(p.listeningTotal>=fullDictationItems(L.listening).length&&p.listeningChoiceTotal>=L.listening.questions.length)mark('listening')}
     function markExpression(L){if(Object.values(ps.sent).filter(x=>x.checked).length===L.sent.length&&Object.values(ps.trans).filter(x=>x.checked).length===L.trans.length)mark('sentences')}
-    let studyVoice=null,activeStudySpeech=null,activeOtherSpeech=null;
+    // SPEECH_CONTROLLER_BEGIN
+    let studyVoice=null,studyVoices=[],speechRequest=null,speechDrainUntil=0;
+    const failedSpeechVoices=new Set(),speechVoiceKey=v=>v?.voiceURI||[v?.name,v?.lang].join('|');
+    const SPEECH_SWITCH_MS=80,SPEECH_START_MS=1800,SPEECH_VOICES_MS=3000;
     function speechStatus(message=''){
       let status=document.getElementById('speechStatus');
       if(!status){status=document.createElement('p');status.id='speechStatus';status.className='speech-status';status.setAttribute('role','status');status.setAttribute('aria-live','polite');document.querySelector('.utility-bar').prepend(status)}
       status.textContent=message;status.hidden=!message;
     }
+    function clearSpeechTimers(request){
+      if(!request)return;
+      for(const name of ['timer','watchdog']){if(request[name]!=null)clearTimeout(request[name]);request[name]=null}
+    }
     function cacheStudyVoice(){
       if(typeof speechSynthesis==='undefined')return;
       try{
-        const voices=speechSynthesis.getVoices().filter(v=>/^en[-_](US|GB)$/i.test(v.lang));
-        // Prefer American English, then British; prefer a local voice within each accent.
-        const rank=v=>(/^en[-_]US$/i.test(v.lang)?8:0)+(v.localService?4:0)+(v.default?1:0);
-        studyVoice=voices.sort((a,b)=>rank(b)-rank(a))[0]||null;
-      }catch{studyVoice=null}
+        const rank=v=>(failedSpeechVoices.has(speechVoiceKey(v))?-32:0)+(/^en[-_]US$/i.test(v.lang)?8:0)+(v.localService?4:0)+(v.default?1:0);
+        studyVoices=speechSynthesis.getVoices().filter(v=>/^en[-_](US|GB)$/i.test(v.lang)).sort((a,b)=>rank(b)-rank(a));
+        studyVoice=studyVoices[0]||null;
+      }catch{studyVoice=null;studyVoices=[]}
+      const request=speechRequest;
+      if(studyVoice&&request?.phase==='voices'&&!request.paused){clearSpeechTimers(request);request.voice=studyVoice;queueSpeechRequest(request)}
     }
-    function readyStudyVoice(){
-      if(typeof speechSynthesis==='undefined'||typeof SpeechSynthesisUtterance==='undefined'){speechStatus('此浏览器不支持语音朗读，请使用支持英语朗读的浏览器。');return false}
+    function speechFailure(message='英语语音播放失败，请再点一次播放；若持续失败，请检查系统英语语音和网络连接。'){
+      const request=speechRequest;speechRequest=null;clearSpeechTimers(request);
+      // Clear the request before cancel: native cancellation callbacks may arrive late.
+      if(request?.utterance){speechDrainUntil=Date.now()+SPEECH_SWITCH_MS;try{speechSynthesis.cancel()}catch{}}
+      speechStatus(message);
+    }
+    function waitForStudyVoice(request){
+      request.phase='voices';speechStatus('正在准备英语语音…');
+      request.timer=setTimeout(()=>{
+        if(speechRequest!==request||request.paused)return;
+        request.timer=null;cacheStudyVoice();
+        if(speechRequest===request&&request.phase==='voices')speechFailure('尚未找到美式或英式英语语音，请启用系统英语语音后再点播放。');
+      },SPEECH_VOICES_MS);
+    }
+    function armSpeechStart(request,utterance){
+      if(request.watchdog!=null)clearTimeout(request.watchdog);
+      request.watchdog=setTimeout(()=>{
+        if(speechRequest!==request||request.utterance!==utterance||request.started||request.paused)return;
+        request.watchdog=null;recoverSpeechRequest(request);
+      },SPEECH_START_MS);
+    }
+    function recoverSpeechRequest(request,event){
+      if(speechRequest!==request)return;
+      // Never restart an already audible passage, or work the learner deliberately paused.
+      if(request.started||request.paused||request.retried||['not-allowed','text-too-long','invalid-argument'].includes(event?.error)){
+        speechFailure(event?.error==='not-allowed'?'浏览器未允许这次朗读，请再点一次播放。':'这次英语发音未能正常播放，请再点一次播放。');return;
+      }
+      clearSpeechTimers(request);request.retried=true;
+      const priorVoice=request.voice;request.utterance=null;
+      cacheStudyVoice();
+      const different=v=>speechVoiceKey(v)!==speechVoiceKey(priorVoice);
+      const alternatives=studyVoices.filter(different),healthy=alternatives.filter(v=>!failedSpeechVoices.has(speechVoiceKey(v)));
+      // Prefer a working alternative before considering a previously failed local voice.
+      request.voice=healthy.find(v=>v.localService)||healthy[0]||alternatives.find(v=>v.localService)||alternatives[0]||studyVoice||priorVoice;
+      if(different(request.voice)){failedSpeechVoices.add(speechVoiceKey(priorVoice));studyVoice=request.voice}
+      speechDrainUntil=Date.now()+SPEECH_SWITCH_MS;
+      try{speechSynthesis.cancel();if(speechSynthesis.paused)speechSynthesis.resume()}catch{speechFailure();return}
+      speechStatus('发音响应较慢，正在重试…');queueSpeechRequest(request);
+    }
+    function startSpeechRequest(request){
+      if(speechRequest!==request||request.paused)return;
+      request.timer=null;
+      if(!request.voice){waitForStudyVoice(request);return}
+      const utterance=new SpeechSynthesisUtterance(request.text);
+      request.utterance=utterance;request.phase='starting';request.started=false;
+      utterance.lang=request.voice.lang;utterance.rate=request.rate;utterance.voice=request.voice;
+      utterance.onstart=()=>{
+        if(speechRequest!==request||request.utterance!==utterance)return;
+        request.started=true;request.phase='playing';clearSpeechTimers(request);
+        if(request.paused){speechSynthesis.pause();speechStatus('朗读已暂停');return}
+        speechStatus(/^en[-_]GB$/i.test(request.voice.lang)?'当前使用英式英语合成朗读。':'');
+      };
+      utterance.onend=()=>{if(speechRequest===request&&request.utterance===utterance){clearSpeechTimers(request);speechRequest=null;speechStatus('')}};
+      utterance.onerror=event=>{if(speechRequest===request&&request.utterance===utterance)recoverSpeechRequest(request,event)};
+      armSpeechStart(request,utterance);
+      try{if(speechSynthesis.paused)speechSynthesis.resume();speechSynthesis.speak(utterance)}catch{recoverSpeechRequest(request)}
+    }
+    function queueSpeechRequest(request){
+      if(speechRequest!==request||request.paused)return;
+      if(request.timer!=null)clearTimeout(request.timer);
+      request.phase='queued';
+      const delay=Math.max(0,speechDrainUntil-Date.now());
+      if(delay)request.timer=setTimeout(()=>startSpeechRequest(request),delay);
+      else startSpeechRequest(request);
+    }
+    function requestStudySpeech(text){
+      const value=String(text||'').trim();if(!value)return;
+      if(typeof speechSynthesis==='undefined'||typeof SpeechSynthesisUtterance==='undefined'){speechStatus('此浏览器不支持语音朗读，请使用支持英语朗读的浏览器。');return}
+      const previous=speechRequest;
+      if(previous?.text===value&&!previous.started){if(previous.paused)resumeSpeech();return}
+      const nativeBusy=Boolean(previous?.utterance||speechSynthesis.speaking||speechSynthesis.pending||speechSynthesis.paused);
+      clearSpeechTimers(previous);speechRequest=null;
       if(!studyVoice)cacheStudyVoice();
-      if(!studyVoice){speechStatus('尚未找到美式或英式英语语音，请稍后重试；若仍无声音，请启用系统英语语音。不会用其他语言代读。');return false}
-      speechStatus(/^en[-_]GB$/i.test(studyVoice.lang)?'未找到可用美音，当前使用英式英语合成朗读。':'');return true;
+      const request={text:value,voice:studyVoice,rate,phase:'queued',started:false,paused:false,retried:false,utterance:null,timer:null,watchdog:null};
+      speechRequest=request;
+      // Idle playback stays synchronous. After cancel, let the native queue settle
+      // and collapse rapid clicks to the latest request instead of cancel storms.
+      if(nativeBusy&&Date.now()>=speechDrainUntil){
+        speechDrainUntil=Date.now()+SPEECH_SWITCH_MS;
+        try{speechSynthesis.cancel();if(speechSynthesis.paused)speechSynthesis.resume()}catch{speechFailure();return}
+      }
+      speechStatus('正在准备发音…');
+      if(!request.voice)waitForStudyVoice(request);else queueSpeechRequest(request);
     }
-    function speechFailed(event){
-      if(!['canceled','interrupted'].includes(event?.error))speechStatus('英语语音播放失败，请重试；若持续失败，请检查系统英语语音和网络连接。');
+    function speakStudyWord(text){requestStudySpeech(text)}
+    function speak(text){requestStudySpeech(text)}
+    function pauseSpeech(){
+      const request=speechRequest;
+      if(request){request.paused=true;clearSpeechTimers(request);speechStatus('朗读已暂停')}
+      if(typeof speechSynthesis!=='undefined'&&(speechSynthesis.speaking||speechSynthesis.pending)&&!speechSynthesis.paused)speechSynthesis.pause();
     }
-    function speakStudyWord(text){
-      const word=String(text||'').trim();if(!word)return;
-      // Do not keep restarting the same word while its first sound is pending.
-      if(activeStudySpeech?.text===word&&activeStudySpeech.waiting&&Date.now()-activeStudySpeech.requestedAt<1500)return;
-      if(!readyStudyVoice())return;
-      const busy=activeStudySpeech||activeOtherSpeech||speechSynthesis.speaking||speechSynthesis.pending||speechSynthesis.paused;
-      activeStudySpeech=null;activeOtherSpeech=null;
-      if(busy)speechSynthesis.cancel();
-      if(speechSynthesis.paused)speechSynthesis.resume();
-      const utterance=new SpeechSynthesisUtterance(word),request={text:word,waiting:true,requestedAt:Date.now(),utterance};
-      utterance.lang=studyVoice.lang;utterance.rate=rate;utterance.voice=studyVoice;
-      utterance.onstart=()=>{if(activeStudySpeech===request)request.waiting=false};
-      const finish=()=>{if(activeStudySpeech===request)activeStudySpeech=null};
-      utterance.onend=finish;utterance.onerror=event=>{if(activeStudySpeech===request){finish();speechFailed(event)}};activeStudySpeech=request;
-      try{speechSynthesis.speak(utterance)}catch{finish();speechFailed()}
+    function resumeSpeech(){
+      if(typeof speechSynthesis==='undefined')return;
+      const request=speechRequest;
+      if(!request){if(speechSynthesis.paused)speechSynthesis.resume();return}
+      if(!request.paused)return;
+      request.paused=false;
+      if(request.utterance){if(speechSynthesis.paused)speechSynthesis.resume();if(!request.started)armSpeechStart(request,request.utterance);speechStatus(request.started?'':'正在准备发音…')}
+      else{request.voice=studyVoice;if(request.voice)queueSpeechRequest(request);else waitForStudyVoice(request)}
+    }
+    function stopSpeech(){
+      const request=speechRequest;speechRequest=null;clearSpeechTimers(request);
+      if(typeof speechSynthesis!=='undefined'){speechDrainUntil=Date.now()+SPEECH_SWITCH_MS;try{speechSynthesis.cancel()}catch{}}
+      speechStatus('');
     }
     cacheStudyVoice();
     if(typeof speechSynthesis!=='undefined'&&typeof speechSynthesis.addEventListener==='function')speechSynthesis.addEventListener('voiceschanged',cacheStudyVoice);
-    function speak(text){
-      if(!String(text||'').trim()||!readyStudyVoice())return;
-      activeStudySpeech=null;activeOtherSpeech=null;speechSynthesis.cancel();
-      if(speechSynthesis.paused)speechSynthesis.resume();
-      const u=new SpeechSynthesisUtterance(text);u.lang=studyVoice.lang;u.rate=rate;u.voice=studyVoice;
-      u.onend=()=>{if(activeOtherSpeech===u)activeOtherSpeech=null};
-      u.onerror=event=>{if(activeOtherSpeech===u){activeOtherSpeech=null;speechFailed(event)}};activeOtherSpeech=u;
-      try{speechSynthesis.speak(u)}catch{activeOtherSpeech=null;speechFailed()}
-    }
-    function pauseSpeech(){if(typeof speechSynthesis!=='undefined'&&(speechSynthesis.speaking||speechSynthesis.pending)&&!speechSynthesis.paused&&typeof speechSynthesis.pause==='function')speechSynthesis.pause()}
-    function resumeSpeech(){if(typeof speechSynthesis!=='undefined'&&speechSynthesis.paused&&typeof speechSynthesis.resume==='function')speechSynthesis.resume()}
-    function stopSpeech(){activeStudySpeech=null;activeOtherSpeech=null;if(typeof speechSynthesis!=='undefined')speechSynthesis.cancel()}
+    // SPEECH_CONTROLLER_END
+
     function audioControls(){return '<div class="audio-controls"><button class="secondary" data-audio-pause>⏸ 暂停</button><button class="secondary" data-audio-resume>▶ 继续</button><button class="secondary" data-audio-stop>■ 停止</button></div>'}
     function legacyLesson(k=selected){const di=day(k),pre=DATA.DAY_PRESETS[k],dueErrors=Object.entries(store).filter(([k])=>k<k&&[1,3,7,14].includes(di-day(k))).sort(([a],[b])=>b.localeCompare(a)).flatMap(([,p])=>p.wordErrors||[]),rawNew=pre?pre.newWords.map(word).filter(Boolean):Array.from({length:12},(_,i)=>at(di*12+i)),nw=rawNew.slice(0,12),pr=pre?(pre.reviewWords||[]).map(word).filter(Boolean):[],spaced=[1,3,7,14].filter(g=>di>=g).flatMap(g=>Array.from({length:4},(_,i)=>at((di-g)*12+i))),baseline=Array.from({length:36},(_,i)=>at(240+di*5+i)),rev=[...dueErrors.map(word).filter(Boolean),...pr,...spaced,...baseline].filter((x,i,a)=>!nw.some(n=>n.word===x.word)&&a.findIndex(y=>y.word===x.word)===i).slice(0,12),quizWords=[...rev.slice(0,3),...nw.slice(0,3),...rev.slice(3,6),...nw.slice(3,6)],ri=pre?.readingIndex??di%DATA.CET_READINGS.length,li=pre?.listeningIndex??di%DATA.LISTENINGS.length,L0=DATA.LISTENINGS[li],LS=DATA.LISTENING_SUPPORT[li],listening={...L0,...LS,questions:L0.questions.map((q,i)=>({...q,...DATA.LISTENING_QUESTION_ZH[li][i]}))};return{di,nw,rev,quizWords,all:[...rev,...nw],reading:DATA.CET_READINGS[ri%DATA.CET_READINGS.length],listening,sent:Array.from({length:3},(_,i)=>DATA.CET_LONG_SENTENCES[(di*3+i)%DATA.CET_LONG_SENTENCES.length]),trans:Array.from({length:2},(_,i)=>DATA.CET_TRANSLATIONS[(di*2+i)%DATA.CET_TRANSLATIONS.length])}}
     function freshLesson(k=selected){return buildRecoveryLesson(DATA,RECOVERY,k,store,userVocab)||legacyLesson(k)}

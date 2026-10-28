@@ -116,62 +116,64 @@ test('study cards play on a card click without hijacking translation controls or
   }
 });
 
-test('study-card speech is immediate, prefers American voices and does not restart a pending identical word',()=>{
+test('study-card speech is immediate, keeps American voices and merges pending repeats',()=>{
   const remote={name:'Remote US',lang:'en-US',localService:false,default:true},local={name:'Local British',lang:'en-GB',localService:true};
   const rt=runtime({},true,{voices:[remote,local],delayedStart:true}),before=JSON.stringify([...rt.saved]);
-  assert.equal(rt.spoken.length,0,'initialisation must not play silent or audible warm-up speech');
-  assert.equal(rt.voiceReads(),1);
+  assert.equal(rt.spoken.length,0);assert.equal(rt.voiceReads(),1);
   const card={dataset:{studyWord:'cooperation'}};rt.api.bindStudyWordCard(card);
   const click=()=>card.onclick({target:{closest:()=>null}});
-  click();assert.deepEqual(rt.audioEvents,['speak'],'the first click calls speak synchronously without cancel or a timer');
-  assert.equal(rt.spoken[0].voice,remote);assert.equal(rt.spoken[0].lang,'en-US');assert.equal(rt.spoken[0].rate,0.8);
-  click();click();assert.equal(rt.spoken.length,1,'repeated clicks must not reset startup of the same word');
-  card.dataset.studyWord='purchase';click();assert.deepEqual(rt.audioEvents,['speak','cancel','speak']);
-  rt.spoken[0].onend();click();assert.equal(rt.spoken.length,2,'a late cancelled callback cannot discard the newer request');
-  rt.startSpeech();click();assert.equal(rt.spoken.length,3,'after speech starts, another click may replay it');
-  rt.finishSpeech();card.dataset.studyWord='shade';click();assert.equal(rt.audioEvents.at(-2),'speak','an idle engine is not cancelled');
-  assert.equal(rt.voiceReads(),1,'successive cards reuse the cached voice');
+  click();assert.deepEqual(rt.audioEvents,['speak']);assert.equal(rt.spoken[0].voice,remote);assert.equal(rt.spoken[0].rate,.8);
+  click();click();assert.equal(rt.spoken.length,1);
+  card.dataset.studyWord='purchase';click();assert.deepEqual(rt.audioEvents,['speak','cancel']);
+  rt.advanceSpeech(80);assert.deepEqual(rt.audioEvents,['speak','cancel','speak']);
+  rt.spoken[0].onend();click();assert.equal(rt.spoken.length,2,'obsolete end cannot clear current pending audio');
+  rt.startSpeech();click();rt.advanceSpeech(80);assert.equal(rt.spoken.length,3,'an already started word can be replayed');
+  rt.finishSpeech();card.dataset.studyWord='shade';click();assert.equal(rt.audioEvents.at(-2),'speak','idle playback needs no cancellation');
   const localUS={name:'Local US',lang:'en-US',localService:true};rt.setVoices([remote,local,localUS]);
   rt.finishSpeech();card.dataset.studyWord='temperature';click();assert.equal(rt.spoken.at(-1).voice,localUS);
-  assert.equal(rt.voiceReads(),2);assert.equal(JSON.stringify([...rt.saved]),before);
-  rt.api.speak('The listening passage uses the same English voice.');
-  assert.equal(rt.spoken.at(-1).voice,localUS,'cards, dictation and passages keep the same English voice');
-  assert.equal(rt.spoken.at(-1).lang,'en-US');assert.equal(rt.spoken.at(-1).rate,0.8);assert.equal(rt.voiceReads(),2);
-  rt.api.pauseSpeech();rt.api.resumeSpeech();assert.deepEqual(rt.audioEvents.slice(-2),['pause','resume'],'a queued remote voice can be paused even before its first sound');
+  rt.api.speak('The listening passage uses the same English voice.');rt.advanceSpeech(80);
+  assert.equal(rt.spoken.at(-1).voice,localUS);assert.equal(rt.spoken.at(-1).lang,'en-US');assert.equal(rt.spoken.at(-1).rate,.8);
+  rt.api.pauseSpeech();rt.api.resumeSpeech();assert.deepEqual(rt.audioEvents.slice(-2),['pause','resume']);
+  assert.equal(JSON.stringify([...rt.saved]),before);
 });
 
-test('study-card buttons share fast speech while unavailable voices and article controls remain safe',()=>{
+test('study-card buttons retain the latest click until English voices become available',()=>{
   const rt=runtime({},true,{voices:[],delayedStart:true}),button={dataset:{speak:'stand'},closest:()=>({})};
-  rt.api.bindSpeechButton(button);button.onclick();assert.equal(rt.spoken.length,0);
-  assert.equal(rt.element('speechStatus').hidden,false);assert.match(rt.element('speechStatus').textContent,/未找到美式或英式/);
-  rt.api.speak('Do not use a non-English default voice.');assert.equal(rt.spoken.length,0);
+  rt.api.bindSpeechButton(button);button.onclick();assert.equal(rt.spoken.length,0);assert.match(rt.element('speechStatus').textContent,/准备英语语音/);
   const local={name:'Local',lang:'en-US',localService:true};rt.setVoices([local]);
-  button.onclick();assert.equal(rt.spoken.at(-1).voice,local);assert.equal(rt.element('speechStatus').hidden,true);
-  const card={dataset:{studyWord:'stand'}};rt.api.bindStudyWordCard(card);
-  card.onclick({target:{closest:()=>button}});assert.equal(rt.spoken.length,1,'nested button click does not trigger the card again');
-  rt.api.stopSpeech();button.onclick();assert.equal(rt.spoken.length,2,'stop clears a pending card request');
-  const article={dataset:{speak:'This is a complete article.'},closest:()=>null};rt.api.bindSpeechButton(article);article.onclick();
+  assert.equal(rt.spoken.length,1,'the initial click plays when the voice list arrives');assert.equal(rt.spoken[0].text,'stand');
+  button.onclick();assert.equal(rt.spoken.length,1,'clicking while pending does not restart the voice');
+  const card={dataset:{studyWord:'stand'}};rt.api.bindStudyWordCard(card);card.onclick({target:{closest:()=>button}});
+  assert.equal(rt.spoken.length,1);rt.startSpeech();assert.equal(rt.element('speechStatus').hidden,true);
+  rt.api.stopSpeech();button.onclick();rt.advanceSpeech(80);assert.equal(rt.spoken.length,2);
+  const article={dataset:{speak:'This is a complete article.'},closest:()=>null};rt.api.bindSpeechButton(article);article.onclick();rt.advanceSpeech(80);
   rt.startSpeech();rt.api.pauseSpeech();rt.api.resumeSpeech();rt.api.stopSpeech();
   assert.deepEqual(rt.audioEvents.slice(-4),['speak','pause','resume','cancel']);
-  button.onclick();rt.spoken.at(-1).onerror({error:'audio-busy'});assert.match(rt.element('speechStatus').textContent,/播放失败/);
-  button.onclick();assert.equal(rt.spoken.at(-1).text,'stand','errors allow a user retry');assert.equal(rt.element('speechStatus').hidden,true);
-  const beforeRetry=rt.spoken.length;rt.advanceTime('2026-08-28T15:59:32Z');button.onclick();
-  assert.equal(rt.spoken.length,beforeRetry+1,'a missing browser start/error event cannot permanently block the same word');
 });
 
-test('speech restricts fallback to British English and resumes a paused engine before new playback',()=>{
+test('speech retries a failed start once and shows failure instead of waiting forever',()=>{
+  const rt=runtime({},true,{delayedStart:true}),button={dataset:{speak:'stand'},closest:()=>({})};rt.api.bindSpeechButton(button);
+  button.onclick();rt.spoken.at(-1).onerror({error:'audio-busy'});assert.match(rt.element('speechStatus').textContent,/正在重试/);
+  rt.advanceSpeech(80);assert.equal(rt.spoken.length,2);rt.spoken.at(-1).onerror({error:'audio-busy'});
+  assert.match(rt.element('speechStatus').textContent,/未能正常播放/);
+  button.onclick();rt.advanceSpeech(80);assert.equal(rt.spoken.length,3,'explicit retry remains possible after bounded failure');
+  rt.advanceSpeech(1800);rt.advanceSpeech(80);assert.equal(rt.spoken.length,4,'missing native start callback triggers one recovery');
+  rt.advanceSpeech(1800);button.onclick();rt.advanceSpeech(80);assert.equal(rt.spoken.length,5);
+});
+
+test('speech restricts fallback to British English and resumes a paused native engine',()=>{
   const other={name:'Other English',lang:'en-IN',localService:true,default:true},chinese={name:'Chinese',lang:'zh-CN',localService:true};
   const british={name:'British',lang:'en-GB',localService:false},localBritish={name:'Local British',lang:'en-GB',localService:true};
   const rt=runtime({},true,{voices:[other,chinese,british,localBritish]}),before=JSON.stringify([...rt.saved]);
   const card={dataset:{studyWord:'reserve'}};rt.api.bindStudyWordCard(card);const click=()=>card.onclick({target:{closest:()=>null}});
-  click();assert.equal(rt.spoken.at(-1).voice,localBritish);assert.equal(rt.spoken.at(-1).lang,'en-GB');assert.match(rt.element('speechStatus').textContent,/当前使用英式/);
-  rt.api.pauseSpeech();rt.api.stopSpeech();rt.api.speak('Please listen to this announcement.');
-  assert.deepEqual(rt.audioEvents.slice(-5),['pause','cancel','cancel','resume','speak'],'cancel must not silently reset the engine paused flag');
-  rt.api.pauseSpeech();click();assert.deepEqual(rt.audioEvents.slice(-4),['pause','cancel','resume','speak']);
-  const old=rt.spoken.at(-1);rt.api.speak('The next passage.');old.onerror({error:'audio-busy'});
-  assert.doesNotMatch(rt.element('speechStatus').textContent,/播放失败/,'obsolete cancellation callbacks cannot report an error for current audio');
-  rt.setVoices([other,chinese]);rt.api.stopSpeech();const count=rt.spoken.length;click();rt.api.speak('No supported voice.');assert.equal(rt.spoken.length,count);
-  assert.match(rt.element('speechStatus').textContent,/未找到美式或英式/);assert.equal(JSON.stringify([...rt.saved]),before);
+  click();assert.equal(rt.spoken.at(-1).voice,localBritish);assert.match(rt.element('speechStatus').textContent,/当前使用英式/);
+  rt.api.pauseSpeech();rt.api.stopSpeech();rt.api.speak('Please listen to this announcement.');rt.advanceSpeech(80);
+  assert.deepEqual(rt.audioEvents.slice(-4),['pause','cancel','resume','speak']);
+  rt.api.pauseSpeech();click();rt.advanceSpeech(80);assert.deepEqual(rt.audioEvents.slice(-4),['pause','cancel','resume','speak']);
+  const old=rt.spoken.at(-1);rt.api.speak('The next passage.');old.onerror({error:'audio-busy'});rt.advanceSpeech(80);
+  assert.doesNotMatch(rt.element('speechStatus').textContent,/失败|重试/);
+  rt.setVoices([other,chinese]);rt.api.stopSpeech();const count=rt.spoken.length;click();rt.api.speak('No supported voice.');rt.advanceSpeech(3000);
+  assert.equal(rt.spoken.length,count);assert.match(rt.element('speechStatus').textContent,/未找到美式或英式/);assert.equal(JSON.stringify([...rt.saved]),before);
 });
 
 test('article words enter next-day learning then only their own spaced review dates',()=>{
@@ -886,7 +888,7 @@ test('only explicitly added article words enter a fixed-size spaced review queue
 
 function runtime(initial={},browserMode=false,speechOptions={}){
   const saved=new Map(Object.entries(initial)),elements=new Map(),spoken=[],timers=[];
-  const session=new Map(),events={},beacons=[],audioEvents=[];let reloadCount=0;
+  const session=new Map(),events={},beacons=[],audioEvents=[],timeouts=new Map();let reloadCount=0,timeoutId=0;
   let now=Date.parse('2026-08-28T15:59:30Z');
   class TestDate extends Date {constructor(...args){super(...(args.length?args:[now]))}static now(){return now}}
   const element=id=>{if(!elements.has(id))elements.set(id,{
@@ -902,7 +904,7 @@ function runtime(initial={},browserMode=false,speechOptions={}){
   const window={location,innerWidth:1024,innerHeight:768,addEventListener:(name,fn)=>events[name]=fn};
   let availableVoices=speechOptions.voices??[{name:'Test US',lang:'en-US',localService:true}],voiceReadCount=0;const speechEvents={};
   const speechSynthesis={speaking:false,pending:false,paused:false,cancel(){this.speaking=false;this.pending=false;audioEvents.push('cancel')},getVoices(){voiceReadCount++;return availableVoices},addEventListener(name,fn){speechEvents[name]=fn},speak(u){spoken.push(u);this.pending=Boolean(speechOptions.delayedStart)||this.paused;this.speaking=!this.pending;audioEvents.push('speak');if(this.speaking)u.onstart?.()},pause(){if(this.speaking||this.pending){this.paused=true;audioEvents.push('pause')}},resume(){if(this.paused){this.paused=false;audioEvents.push('resume')}}};
-  const context=vm.createContext({...(browserMode?{window,sessionStorage:{getItem:k=>session.get(k)||null,setItem:(k,v)=>session.set(k,v),removeItem:k=>session.delete(k)}}:{}),Date:TestDate,document,app:element('app'),checkListen:element('checkListen'),listenRateLabel:element('listenRateLabel'),localStorage:{getItem:k=>saved.get(k)||null,setItem:(k,v)=>saved.set(k,v)},alert:m=>{throw new Error(m)},setInterval:fn=>timers.push(fn),setTimeout(){},speechSynthesis,SpeechSynthesisUtterance:function(t){this.text=t},Blob,URL,console});
+  const context=vm.createContext({...(browserMode?{window,sessionStorage:{getItem:k=>session.get(k)||null,setItem:(k,v)=>session.set(k,v),removeItem:k=>session.delete(k)}}:{}),Date:TestDate,document,app:element('app'),checkListen:element('checkListen'),listenRateLabel:element('listenRateLabel'),localStorage:{getItem:k=>saved.get(k)||null,setItem:(k,v)=>saved.set(k,v)},alert:m=>{throw new Error(m)},setInterval:fn=>timers.push(fn),setTimeout(fn,ms=0){const id=++timeoutId;timeouts.set(id,{fn,at:now+ms});return id},clearTimeout:id=>timeouts.delete(id),speechSynthesis,SpeechSynthesisUtterance:function(t){this.text=t},Blob,URL,console});
   // Even file:// pages have window; timers register pageshow/storage listeners.
   if(!browserMode)context.window=window;
   let code=[...html.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)].map(x=>x[1]).join('\n');
@@ -912,7 +914,8 @@ function runtime(initial={},browserMode=false,speechOptions={}){
   // Keep timer installation in the tested page startup, without changing its logic.
   code=code.replace('};reset();render();setInterval','};'+marker);
   vm.runInContext(code,context);
-  return {api:context.studyTest,saved,element,spoken,audioEvents,window,events,session,beacons,reloads:()=>reloadCount,voiceReads:()=>voiceReadCount,setVoices:rows=>{availableVoices=rows;speechEvents.voiceschanged?.()},startSpeech:()=>{speechSynthesis.pending=false;speechSynthesis.speaking=true;spoken.at(-1)?.onstart?.()},finishSpeech:()=>{speechSynthesis.pending=false;speechSynthesis.speaking=false;spoken.at(-1)?.onend?.()},advanceTime:iso=>{now=Date.parse(iso);timers.forEach(fn=>fn())}};
+  const advanceSpeech=ms=>{const until=now+ms;for(;;){const next=[...timeouts].filter(([,t])=>t.at<=until).sort((a,b)=>a[1].at-b[1].at)[0];if(!next)break;now=next[1].at;timeouts.delete(next[0]);next[1].fn()}now=until};
+  return {advanceSpeech,api:context.studyTest,saved,element,spoken,audioEvents,window,events,session,beacons,reloads:()=>reloadCount,voiceReads:()=>voiceReadCount,setVoices:rows=>{availableVoices=rows;speechEvents.voiceschanged?.()},startSpeech:()=>{speechSynthesis.pending=false;speechSynthesis.speaking=true;spoken.at(-1)?.onstart?.()},finishSpeech:()=>{speechSynthesis.pending=false;speechSynthesis.speaking=false;spoken.at(-1)?.onend?.()},advanceTime:iso=>{now=Date.parse(iso);timers.forEach(fn=>fn())}};
 }
 
 test('the header stays collapsible across navigation and reload without changing learning records',()=>{
