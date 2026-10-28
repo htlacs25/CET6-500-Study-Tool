@@ -22714,5 +22714,549 @@
         "topic": "记录与目的"
       }
     ]
+  },
+  "2026-10-31": {
+    "title": "运动与选择：让不同节奏的人都能参与",
+    "grammarTip": "练习目的、细节和推断边界：参与人数增加不等于已证明健康改善。阅读先限时8分钟，再核对依据；核心听读为原创分级模拟，不是真实新闻或医疗建议。",
+    "words": [
+      {
+        "word": "nutritional",
+        "phonetic": "/njuːˈtrɪʃənəl/",
+        "pos": "adj.",
+        "meaning": "营养的；与营养有关的",
+        "phrase": "nutritional information",
+        "example": "The label provides nutritional information about the food.",
+        "exampleZh": "标签提供有关这种食品的营养信息。"
+      },
+      {
+        "word": "nutrient",
+        "phonetic": "/ˈnjuːtriənt/",
+        "pos": "n.",
+        "meaning": "营养物；营养成分",
+        "phrase": "essential nutrients",
+        "example": "The lesson introduces several essential nutrients.",
+        "exampleZh": "这节课介绍几种必需营养成分。"
+      },
+      {
+        "word": "carbohydrate",
+        "phonetic": "/ˌkɑːbəʊˈhaɪdreɪt/",
+        "pos": "n.",
+        "meaning": "碳水化合物",
+        "phrase": "a source of carbohydrate",
+        "example": "The textbook describes rice as a source of carbohydrate.",
+        "exampleZh": "课本将米饭描述为碳水化合物的一种来源。"
+      },
+      {
+        "word": "digestion",
+        "phonetic": "/daɪˈdʒestʃən/",
+        "pos": "n.",
+        "meaning": "消化；消化过程",
+        "phrase": "the process of digestion",
+        "example": "The diagram shows the process of digestion.",
+        "exampleZh": "这张图展示了消化过程。"
+      },
+      {
+        "word": "muscle",
+        "phonetic": "/ˈmʌsəl/",
+        "pos": "n.",
+        "meaning": "肌肉",
+        "phrase": "a leg muscle",
+        "example": "The student identified a leg muscle on the model.",
+        "exampleZh": "学生在模型上指出了一块腿部肌肉。"
+      },
+      {
+        "word": "muscular",
+        "phonetic": "/ˈmʌskjələ/",
+        "pos": "adj.",
+        "meaning": "肌肉的；肌肉发达的",
+        "phrase": "muscular strength",
+        "example": "The chapter explains how muscular strength is measured.",
+        "exampleZh": "这一章解释如何测量肌肉力量。"
+      },
+      {
+        "word": "immune",
+        "phonetic": "/ɪˈmjuːn/",
+        "pos": "adj.",
+        "meaning": "免疫的；不受影响的",
+        "phrase": "the immune system",
+        "example": "The museum has an exhibition about the immune system.",
+        "exampleZh": "博物馆设有介绍免疫系统的展览。"
+      },
+      {
+        "word": "immunity",
+        "phonetic": "/ɪˈmjuːnəti/",
+        "pos": "n.",
+        "meaning": "免疫力；豁免",
+        "phrase": "a lesson on immunity",
+        "example": "Our biology teacher gave a lesson on immunity.",
+        "exampleZh": "我们的生物老师上了一节有关免疫的课。"
+      },
+      {
+        "word": "therapy",
+        "phonetic": "/ˈθerəpi/",
+        "pos": "n.",
+        "meaning": "治疗；疗法",
+        "phrase": "physical therapy",
+        "example": "The article introduces the work of a physical therapy team.",
+        "exampleZh": "文章介绍了物理治疗团队的工作。"
+      },
+      {
+        "word": "physician",
+        "phonetic": "/fɪˈzɪʃən/",
+        "pos": "n.",
+        "meaning": "医生；内科医生",
+        "phrase": "a physician",
+        "example": "A physician answered questions at the school event.",
+        "exampleZh": "一位医生在学校活动中回答了问题。"
+      },
+      {
+        "word": "surgeon",
+        "phonetic": "/ˈsɜːdʒən/",
+        "pos": "n.",
+        "meaning": "外科医生",
+        "phrase": "an experienced surgeon",
+        "example": "The interview describes the training of an experienced surgeon.",
+        "exampleZh": "采访介绍了一位有经验的外科医生所接受的训练。"
+      },
+      {
+        "word": "pharmacy",
+        "phonetic": "/ˈfɑːməsi/",
+        "pos": "n.",
+        "meaning": "药房；药学",
+        "phrase": "the hospital pharmacy",
+        "example": "The sign points to the hospital pharmacy.",
+        "exampleZh": "标牌指向医院药房。"
+      }
+    ],
+    "additionalWords": [
+      {
+        "word": "prescription",
+        "phonetic": "/prɪˈskrɪpʃən/",
+        "pos": "n.",
+        "meaning": "处方；处方药",
+        "phrase": "a prescription",
+        "example": "The pharmacist checked the prescription carefully.",
+        "exampleZh": "药剂师仔细核对了处方。"
+      },
+      {
+        "word": "prescribe",
+        "phonetic": "/prɪˈskraɪb/",
+        "pos": "v.",
+        "meaning": "开处方；规定",
+        "phrase": "prescribe medicine",
+        "example": "Only an appropriately qualified professional should prescribe medicine.",
+        "exampleZh": "药物应由具有相应资质的专业人员开具。"
+      },
+      {
+        "word": "heal",
+        "phonetic": "/hiːl/",
+        "pos": "v.",
+        "meaning": "愈合；治愈",
+        "phrase": "a wound begins to heal",
+        "example": "In the story, the small wound began to heal.",
+        "exampleZh": "在故事中，小伤口开始愈合。"
+      },
+      {
+        "word": "bandage",
+        "phonetic": "/ˈbændɪdʒ/",
+        "pos": "n.; v.",
+        "meaning": "绷带；用绷带包扎",
+        "phrase": "a clean bandage",
+        "example": "The nurse took a clean bandage from the box.",
+        "exampleZh": "护士从盒子里取出一条干净的绷带。"
+      },
+      {
+        "word": "hygiene",
+        "phonetic": "/ˈhaɪdʒiːn/",
+        "pos": "n.",
+        "meaning": "卫生；卫生习惯",
+        "phrase": "food hygiene",
+        "example": "The volunteers attended a food hygiene workshop.",
+        "exampleZh": "志愿者参加了食品卫生培训。"
+      },
+      {
+        "word": "fitness",
+        "phonetic": "/ˈfɪtnəs/",
+        "pos": "n.",
+        "meaning": "健康；体能；适合",
+        "phrase": "a fitness class",
+        "example": "Students can choose a fitness class that suits their interests.",
+        "exampleZh": "学生可以选择符合自己兴趣的健身课。"
+      },
+      {
+        "word": "fatigue",
+        "phonetic": "/fəˈtiːɡ/",
+        "pos": "n.; v.",
+        "meaning": "疲劳；使疲劳",
+        "phrase": "signs of fatigue",
+        "example": "The travel diary mentions signs of fatigue after the long journey.",
+        "exampleZh": "旅行日记提到长途旅行后的疲劳迹象。"
+      },
+      {
+        "word": "energetic",
+        "phonetic": "/ˌenəˈdʒetɪk/",
+        "pos": "adj.",
+        "meaning": "精力充沛的；充满活力的",
+        "phrase": "an energetic discussion",
+        "example": "The meeting ended with an energetic discussion.",
+        "exampleZh": "会议以一场热烈的讨论结束。"
+      },
+      {
+        "word": "relaxation",
+        "phonetic": "/ˌriːlækˈseɪʃən/",
+        "pos": "n.",
+        "meaning": "放松；休息；放宽",
+        "phrase": "time for relaxation",
+        "example": "She keeps some time for relaxation at the weekend.",
+        "exampleZh": "她周末留出一些时间放松。"
+      },
+      {
+        "word": "psychology",
+        "phonetic": "/saɪˈkɒlədʒi/",
+        "pos": "n.",
+        "meaning": "心理学；心理",
+        "phrase": "study psychology",
+        "example": "He wants to study psychology at university.",
+        "exampleZh": "他想在大学学习心理学。"
+      }
+    ],
+    "grammar": [
+      {
+        "prompt": "The students who prefer a slower pace ___ welcome to join the shorter walk.",
+        "promptZh": "喜欢较慢步速的学生也欢迎参加较短的步行活动。",
+        "options": [
+          "is",
+          "being",
+          "are",
+          "be"
+        ],
+        "optionsZh": [
+          "是（单数现在式）",
+          "是（非谓语）",
+          "是（复数现在式）",
+          "是（原形）"
+        ],
+        "answer": 2,
+        "explanation": "主句主语students为复数，谓语为are；who prefer...是定语从句，不能代替主句谓语。",
+        "tag": "subject-verb"
+      },
+      {
+        "prompt": "The route information ___ clear enough for new participants.",
+        "promptZh": "路线信息对新参与者来说足够清楚。",
+        "options": [
+          "was",
+          "were",
+          "clearly",
+          "being"
+        ],
+        "optionsZh": [
+          "是（单数过去式）",
+          "是（复数过去式）",
+          "清楚地",
+          "是（非谓语）"
+        ],
+        "answer": 0,
+        "explanation": "information不可数，用was；clear是形容词，需要be动词连接主语与表语。",
+        "tag": "be-adjective"
+      },
+      {
+        "prompt": "The team offered a shorter route so that more students ___ take part.",
+        "promptZh": "团队提供了一条更短的路线，以便更多学生能够参加。",
+        "options": [
+          "taking",
+          "could",
+          "to",
+          "taken"
+        ],
+        "optionsZh": [
+          "参加（非谓语）",
+          "能够（过去式）",
+          "不定式符号",
+          "参加（过去分词）"
+        ],
+        "answer": 1,
+        "explanation": "so that引导目的状语从句，过去时背景可用could，后接动词原形take。",
+        "tag": "purpose"
+      },
+      {
+        "prompt": "Instead of ___ everyone to walk at the same speed, the club offered a choice.",
+        "promptZh": "社团提供了选择，而没有要求所有人按相同步速行走。",
+        "options": [
+          "ask",
+          "asked",
+          "to ask",
+          "asking"
+        ],
+        "optionsZh": [
+          "要求（原形）",
+          "要求（过去式）",
+          "要求（不定式）",
+          "要求（动名词）"
+        ],
+        "answer": 3,
+        "explanation": "instead of是介词短语，后接动名词asking。",
+        "tag": "gerund"
+      },
+      {
+        "prompt": "The longer route takes twice as much time ___ the shorter one.",
+        "promptZh": "较长路线花费的时间是较短路线的两倍。",
+        "options": [
+          "than",
+          "like",
+          "as",
+          "that"
+        ],
+        "optionsZh": [
+          "比",
+          "像",
+          "和……一样",
+          "引导词"
+        ],
+        "answer": 2,
+        "explanation": "倍数表达可用twice as much...as...；不能将as...as与比较级than混用。",
+        "tag": "comparison"
+      },
+      {
+        "prompt": "Which sentence uses everyday and every day correctly?",
+        "promptZh": "哪句话正确使用了everyday和every day？",
+        "options": [
+          "An everyday walk can give friends time to talk every day.",
+          "An every day walk can give friends time to talk everyday.",
+          "An everyday walk can give friends time to talk everyday.",
+          "An every day walk can give friends time to talk every day."
+        ],
+        "optionsZh": [
+          "日常散步可以让朋友每天有时间聊天。",
+          "两个位置均误用。",
+          "末尾误把形容词当状语。",
+          "开头误把时间短语当形容词。"
+        ],
+        "answer": 0,
+        "explanation": "everyday为形容词，修饰walk；every day为时间状语，意为每天。",
+        "tag": "every-day"
+      }
+    ],
+    "reading": {
+      "title": "A Walking Group with More Than One Pace",
+      "titleZh": "不只有一种节奏的步行小组",
+      "level": "四级专项衔接 · 原创分级模拟",
+      "topic": "活动设计、参与选择与推断边界",
+      "passage": "In a fictional university project, a student club organized a weekly walk around campus. Its poster promised a friendly activity, but the first route was long and the group moved quickly. Several interested students left before the end, while others decided not to come the following week.\n\nThe organizers initially thought these students lacked interest in fitness. Instead of accepting that explanation, they invited comments. Some students had another class soon afterward. Others wanted a slower walk that allowed them to talk. The difficulty was not necessarily a lack of motivation; the activity offered only one way to participate.\n\nThe club then provided two routes with different lengths. Each had its own leader, and the poster clearly stated the expected time and pace. Students could choose either option without having to explain their choice. A short rest point was marked on both maps.\n\nMore students returned during the next month. The organizers welcomed this change, but they avoided claiming that the walks had improved everyone’s health. They had counted attendance and collected comments, not measured medical outcomes. Their evidence supported a narrower conclusion: the revised arrangements made participation more convenient for these students.\n\nThe club kept asking for suggestions. A flexible activity, they learned, did not require everyone to have identical needs. Clear choices could help people find a suitable way to join while preserving the shared purpose of spending time together.",
+      "passageZh": "在一个虚构的大学项目中，学生社团组织每周一次的校园步行活动。海报称这是一项友好的活动，但第一条路线较长，队伍走得也很快。几名原本有兴趣的学生提前离开，另一些人决定下周不再参加。\n\n组织者起初以为这些学生对健身缺乏兴趣。他们没有直接接受这种解释，而是征求意见。有的学生很快就要上下一节课；另一些人希望走慢一点，便于聊天。问题未必是缺乏动力，而是活动只提供了一种参与方式。\n\n于是社团提供了两条长度不同的路线。每条路线都有领队，海报明确写出预计用时和步速。学生可以任选一条，无须解释自己的选择。两张地图上都标出了短暂休息点。\n\n接下来一个月，回来参加的学生增多了。组织者欢迎这一变化，但没有宣称步行改善了每个人的健康。他们统计了出席人数并收集意见，却没有测量医疗结果。这些证据支持一个范围更小的结论：调整后的安排使这些学生参与起来更方便。\n\n社团继续征求建议。他们认识到，灵活的活动不要求每个人需求完全相同。清晰的选项可以帮助人们找到适合自己的参与方式，同时保留共度时光这一共同目的。",
+      "questions": [
+        {
+          "prompt": "Why did some students leave the first walk early?",
+          "promptZh": "为什么一些学生提前离开第一次步行活动？",
+          "options": [
+            "All of them disliked outdoor activities.",
+            "The arrangement did not fit some students’ time or preferred pace.",
+            "The route had no leader at all.",
+            "The university had cancelled the activity."
+          ],
+          "optionsZh": [
+            "他们全都不喜欢户外活动。",
+            "安排不符合部分学生的时间或步速偏好。",
+            "路线完全没有领队。",
+            "大学取消了活动。"
+          ],
+          "answer": 1,
+          "explanation": "第二段分别说明时间冲突和希望慢走聊天；不能据此推断所有学生都不爱户外活动。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What changed when the club revised the activity?",
+          "promptZh": "社团修改活动后发生了什么变化？",
+          "options": [
+            "Students had to explain why they chose a route.",
+            "Both routes became exactly the same length.",
+            "The club stopped describing the routes.",
+            "Students could choose between two clearly described routes."
+          ],
+          "optionsZh": [
+            "学生必须解释选路线的原因。",
+            "两条路线变得一样长。",
+            "社团不再介绍路线。",
+            "学生能在两条说明清楚的路线中选择。"
+          ],
+          "answer": 3,
+          "explanation": "第三段指出两条不同长度的路线及明确的时间、步速说明，并说明无需解释选择。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "Why did the organizers avoid making a claim about everyone’s health?",
+          "promptZh": "为什么组织者没有断言每个人的健康都得到了改善？",
+          "options": [
+            "They had not measured medical outcomes.",
+            "No one had attended the walks.",
+            "The students had refused to give comments.",
+            "Health was impossible to discuss in a report."
+          ],
+          "optionsZh": [
+            "他们没有测量医疗结果。",
+            "没有人参加活动。",
+            "学生拒绝给意见。",
+            "报告中完全不能讨论健康。"
+          ],
+          "answer": 0,
+          "explanation": "第四段区分attendance/comments和medical outcomes；出席信息不能直接证明健康变化。",
+          "tag": "reading"
+        },
+        {
+          "prompt": "What is the main idea of the passage?",
+          "promptZh": "文章主旨是什么？",
+          "options": [
+            "Every group should always choose the longest route.",
+            "Changing a poster guarantees better health.",
+            "Offering clear choices can make an activity easier to join.",
+            "A shared purpose requires identical personal needs."
+          ],
+          "optionsZh": [
+            "每个小组都应选择最长路线。",
+            "更改海报保证健康改善。",
+            "提供清晰选择可以让活动更容易参与。",
+            "共同目的要求个人需求完全相同。"
+          ],
+          "answer": 2,
+          "explanation": "文章从单一路线的问题转向多种选择，末段概括灵活安排与共同目标可以兼容。",
+          "tag": "reading"
+        }
+      ]
+    },
+    "listening": {
+      "title": "Two Routes for the Saturday Walk",
+      "titleZh": "周六步行活动的两条路线",
+      "level": "四级专项衔接 · 原创模拟 · 浏览器合成朗读",
+      "tip": "先盲听抓集合时间和路线区别，再带文精听核对数字；完成全文分段听写，选三句各做一组影子跟读，最后脱稿复述30—60秒。合成朗读可调速、暂停、继续、停止，不是真题录音。",
+      "passage": "This is an update for students joining our Saturday campus walk. Please meet outside the sports center at ten fifteen, not ten thirty. We need a few minutes to explain the two available routes. The shorter route follows the lake and returns after twenty minutes. The longer route also passes the library and takes about forty minutes. Choose either route according to your available time and preferred pace. Both groups will have a leader and finish at the same entrance. Bring some water, but you do not need to buy special equipment. If rain forces us to cancel, we will post a notice by nine. Please check the activity page before you leave your room. After the walk, tell us whether the route information was clear.",
+      "passageZh": "这是给参加周六校园步行活动的学生的一则更新。请于十点十五分在体育中心外集合，不是十点半。我们需要几分钟介绍两条可选路线。较短路线沿着湖边走，二十分钟后返回。较长路线还经过图书馆，大约需要四十分钟。请根据可用时间和喜欢的步速选择任意一条路线。两组都有领队，并在同一个入口结束。请带一些水，但不需要购买特殊装备。如果下雨导致取消，我们将在九点前发布通知。离开房间之前，请查看活动页面。步行结束后，请告诉我们路线信息是否清楚。",
+      "dictation": [
+        "This is an update for students joining our Saturday campus walk.",
+        "Please meet outside the sports center at ten fifteen, not ten thirty."
+      ],
+      "dictationZh": [
+        "这是给参加周六校园步行活动的学生的一则更新。",
+        "请于十点十五分在体育中心外集合，不是十点半。"
+      ],
+      "questions": [
+        {
+          "prompt": "What time should students meet?",
+          "promptZh": "学生应在什么时间集合？",
+          "options": [
+            "Nine o’clock.",
+            "Ten thirty.",
+            "Ten fifteen.",
+            "Eleven fifteen."
+          ],
+          "optionsZh": [
+            "九点。",
+            "十点半。",
+            "十点十五分。",
+            "十一点十五分。"
+          ],
+          "answer": 2,
+          "explanation": "通知特别强调ten fifteen, not ten thirty；九点是最晚发布取消通知的时间。",
+          "tag": "listeningChoice"
+        },
+        {
+          "prompt": "What should students do if they want to know whether rain has caused a cancellation?",
+          "promptZh": "如果想知道活动是否因雨取消，学生应该怎么做？",
+          "options": [
+            "Go directly to the library.",
+            "Check the activity page before leaving.",
+            "Buy special equipment first.",
+            "Wait for the forty-minute route to finish."
+          ],
+          "optionsZh": [
+            "直接去图书馆。",
+            "出门前查看活动页面。",
+            "先购买特殊装备。",
+            "等待四十分钟路线结束。"
+          ],
+          "answer": 1,
+          "explanation": "取消消息将在九点前发布，接着明确要求出门前查看活动页面。",
+          "tag": "listeningChoice"
+        }
+      ]
+    },
+    "sent": {
+      "text": "The students who chose the shorter route explained that the clear timetable made it easier for them to join without missing their next class.",
+      "main": "The students explained something.",
+      "mainZh": "学生解释了一件事。",
+      "translation": "选择较短路线的学生解释说，明确的时间表让他们更容易参加活动，而不耽误下一节课。",
+      "core": [
+        "students",
+        "explained"
+      ],
+      "keywords": [
+        "学生",
+        "选择",
+        "较短",
+        "路线",
+        "解释",
+        "明确",
+        "时间表",
+        "更容易",
+        "参加",
+        "错过",
+        "下一节课"
+      ],
+      "structure": "主句The students explained...；who chose the shorter route为定语从句；that后是宾语从句；made it easier for them to join中it为形式宾语，真正宾语为to join；without missing...表示不发生的伴随情况。",
+      "grammar": [
+        "主句谓语为explained，chose属于定语从句，made属于宾语从句。",
+        "without为介词，后接动名词missing。"
+      ],
+      "examTip": "先抓主句“学生解释”，再回答“哪些学生”和“解释了什么”。",
+      "level": "四级衔接句法",
+      "topic": "多层从句与形式宾语"
+    },
+    "trans": [
+      {
+        "source": "提供清晰的选择能让更多学生找到适合自己的参与方式。",
+        "answer": "Offering clear choices can help more students find a suitable way to participate.",
+        "alternative": "Providing clear options can help more students find a way to take part that suits them.",
+        "acceptedAnswers": [
+          "Offering clear choices can help more students find a suitable way to participate.",
+          "Providing clear options can help more students find a way to take part that suits them."
+        ],
+        "keywords": [
+          "choices",
+          "help",
+          "students",
+          "way",
+          "participate"
+        ],
+        "grammar": "动名词Offering作主语；help后接宾语students，再接省略to的不定式find。",
+        "chunks": [
+          "offering clear choices",
+          "help more students find",
+          "a suitable way to participate"
+        ],
+        "level": "四级衔接表达",
+        "topic": "活动与选择"
+      },
+      {
+        "source": "出席人数增加，并不一定意味着每个人都变得更健康。",
+        "answer": "An increase in attendance does not necessarily mean that everyone has become healthier.",
+        "alternative": "Higher attendance does not necessarily mean that every participant has become healthier.",
+        "acceptedAnswers": [
+          "An increase in attendance does not necessarily mean that everyone has become healthier.",
+          "Higher attendance does not necessarily mean that every participant has become healthier."
+        ],
+        "keywords": [
+          "attendance",
+          "not necessarily",
+          "mean",
+          "healthier"
+        ],
+        "grammar": "does not necessarily mean表示“不一定意味着”；everyone为单数，完成时用has become。",
+        "chunks": [
+          "an increase in attendance",
+          "does not necessarily mean",
+          "has become healthier"
+        ],
+        "level": "四级衔接表达",
+        "topic": "证据与推断边界"
+      }
+    ]
   }
 }

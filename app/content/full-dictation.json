@@ -1523,5 +1523,51 @@
       "text": "The final total will be announced once both records have been checked.",
       "zh": "两类记录都检查完毕后，将公布最终金额。"
     }
+  ],
+  "2026-10-31": [
+    {
+      "text": "This is an update for students joining our Saturday campus walk.",
+      "zh": "这是给参加周六校园步行活动的学生的一则更新。"
+    },
+    {
+      "text": "Please meet outside the sports center at ten fifteen, not ten thirty.",
+      "zh": "请于十点十五分在体育中心外集合，不是十点半。"
+    },
+    {
+      "text": "We need a few minutes to explain the two available routes.",
+      "zh": "我们需要几分钟介绍两条可选路线。"
+    },
+    {
+      "text": "The shorter route follows the lake and returns after twenty minutes.",
+      "zh": "较短路线沿着湖边走，二十分钟后返回。"
+    },
+    {
+      "text": "The longer route also passes the library and takes about forty minutes.",
+      "zh": "较长路线还经过图书馆，大约需要四十分钟。"
+    },
+    {
+      "text": "Choose either route according to your available time and preferred pace.",
+      "zh": "请根据可用时间和喜欢的步速选择任意一条路线。"
+    },
+    {
+      "text": "Both groups will have a leader and finish at the same entrance.",
+      "zh": "两组都有领队，并在同一个入口结束。"
+    },
+    {
+      "text": "Bring some water, but you do not need to buy special equipment.",
+      "zh": "请带一些水，但不需要购买特殊装备。"
+    },
+    {
+      "text": "If rain forces us to cancel, we will post a notice by nine.",
+      "zh": "如果下雨导致取消，我们将在九点前发布通知。"
+    },
+    {
+      "text": "Please check the activity page before you leave your room.",
+      "zh": "离开房间之前，请查看活动页面。"
+    },
+    {
+      "text": "After the walk, tell us whether the route information was clear.",
+      "zh": "步行结束后，请告诉我们路线信息是否清楚。"
+    }
   ]
 }

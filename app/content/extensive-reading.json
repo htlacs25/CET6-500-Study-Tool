@@ -4254,5 +4254,79 @@
     "speakingPrompt": "Retell the Mole’s first boat trip in 30–60 seconds. Describe what is unfamiliar, how the Rat helps, and how the Mole feels at the end.",
     "speakingPromptZh": "用30—60秒复述鼹鼠第一次乘船：他对什么感到陌生，水鼠怎样帮助他，他最后有什么感受。",
     "sourceExcerptSha256": "644cbae04120da5483bf5b9314b0f9f0f1367d82619b0d084318f667d79bec90"
+  },
+  {
+    "date": "2026-10-31",
+    "title": "The Secret Garden — Signs of Life (Original Excerpt)",
+    "titleZh": "《秘密花园》：生命的迹象（原文节选）",
+    "author": "Frances Hodgson Burnett",
+    "work": "The Secret Garden",
+    "chapter": "Chapter IX — The Strangest House Anyone Ever Lived In",
+    "sourceUrl": "https://www.gutenberg.org/files/113/113-h/113-h.htm",
+    "sourceType": "public-domain excerpt",
+    "sourceVerifiedOn": "2026-10-28",
+    "rightsNote": "英文来自Frances Hodgson Burnett（1849—1924）的公版作品；Project Gutenberg书目#113标明Public domain in the USA。保留连续原文，仅调整换行。中文翻译、题目、短语及听说任务为原创配套内容。",
+    "sourceNote": "2026-10-28实际打开Project Gutenberg原文和书目核验，选取Chapter IX中从“As she came near the second of these alcoves”至“there are other things alive.”的连续文字。配套背景：玛丽进入秘密花园，前文提到常绿树丛围出的凹处。原作是1911年出版的文学作品，不是新闻报道。",
+    "category": "Public-domain classic — original excerpt",
+    "text": "As she came near the second of these alcoves she stopped skipping. There had once been a flowerbed in it, and she thought she saw something sticking out of the black earth—some sharp little pale green points. She remembered what Ben Weatherstaff had said and she knelt down to look at them.\n\n“Yes, they are tiny growing things and they might be crocuses or snowdrops or daffodils,” she whispered.\n\nShe bent very close to them and sniffed the fresh scent of the damp earth. She liked it very much.\n\n“Perhaps there are some other ones coming up in other places,” she said. “I will go all over the garden and look.”\n\nShe did not skip, but walked. She went slowly and kept her eyes on the ground. She looked in the old border beds and among the grass, and after she had gone round, trying to miss nothing, she had found ever so many more sharp, pale green points, and she had become quite excited again.\n\n“It isn’t a quite dead garden,” she cried out softly to herself. “Even if the roses are dead, there are other things alive.”",
+    "textZh": "她走近这些凹处中的第二处时，停止了跳绳。那里曾有一个花坛，她觉得看到了有东西从黑色泥土中冒出来——一些尖尖的小小的淡绿色芽尖。她想起本·韦瑟斯塔夫说过的话，就跪下来观察它们。\n\n“是的，它们是正在生长的小东西，可能是番红花、雪花莲或者黄水仙，”她低声说。\n\n她俯身靠近它们，闻了闻湿润泥土的清新气味。她很喜欢这种气味。\n\n“也许其他地方还有一些正在冒出来，”她说，“我要在整个花园里找一找。”\n\n她不再跳绳，而是走路。她慢慢地走，眼睛一直看着地面。她在旧的花境和草丛间寻找，绕了一圈，尽量不漏掉任何地方后，她又找到了许多尖尖的淡绿色芽尖，于是再次变得很兴奋。\n\n“这并不是一个完全死去的花园，”她轻声对自己喊道，“即使玫瑰已经死了，仍有别的东西活着。”",
+    "keyPhrases": [
+      {
+        "en": "sticking out of the black earth",
+        "zh": "从黑色泥土中冒出来"
+      },
+      {
+        "en": "kept her eyes on the ground",
+        "zh": "眼睛一直看着地面"
+      },
+      {
+        "en": "Even if the roses are dead",
+        "zh": "即使玫瑰已经死了；even if表示假设，不断言玫瑰确实已死"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why does Mary stop skipping?",
+        "promptZh": "玛丽为什么停止跳绳？",
+        "options": [
+          "She thinks she sees small green points growing out of the earth.",
+          "She has lost her rope beside the door.",
+          "Ben asks her to leave the garden.",
+          "All the roses have suddenly opened."
+        ],
+        "optionsZh": [
+          "她觉得看见小绿芽从泥土里长出来。",
+          "她把跳绳丢在门边。",
+          "本要求她离开花园。",
+          "所有玫瑰突然开放了。"
+        ],
+        "answer": 0,
+        "explanation": "首段叙述她看见泥土中的pale green points，随后跪下观察；其他选项没有依据。",
+        "tag": "extensive"
+      },
+      {
+        "prompt": "Which conclusion is supported by Mary’s discovery?",
+        "promptZh": "玛丽的发现支持哪一个结论？",
+        "options": [
+          "Every rose in the garden is certainly dead.",
+          "All the green points are the same kind of flower.",
+          "Some things in the garden are still alive.",
+          "No plants need any room to grow."
+        ],
+        "optionsZh": [
+          "花园里的每株玫瑰肯定都死了。",
+          "所有绿芽都是同一种花。",
+          "花园中仍有一些东西活着。",
+          "所有植物都不需要生长空间。"
+        ],
+        "answer": 2,
+        "explanation": "末段说there are other things alive；even if是让步假设，不证明所有玫瑰已死。",
+        "tag": "extensive"
+      }
+    ],
+    "listeningTip": "先盲听抓玛丽的发现与心情变化，再带文精听并逐词查义；选三组动作句影子跟读，最后隐藏原文复述。浏览器合成朗读可调速、暂停、继续、停止，不是真题或有声书录音。",
+    "speakingPrompt": "Retell Mary’s discovery in 30–60 seconds. Describe what she notices, how she searches, and what she can and cannot conclude about the garden.",
+    "speakingPromptZh": "用30—60秒复述玛丽的发现：她注意到什么、怎样寻找，以及她能得出和还不能得出的结论。",
+    "sourceExcerptSha256": "2f6f918510a57af9aa259ccba1744f52d7c5a0b55638d9570d32984dc1a4aedc"
   }
 ]
